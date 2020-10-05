@@ -9,14 +9,13 @@ import Foundation
 import UIKit
 
 class Question {
-    
-    var number: String
-    var text: String
-    var initialText: String?
-    var image: UIImage?
-    var subtitle: String?
-    var options: [String:String]
-    var answer: String
+    private(set) var number: String
+    private(set) var text: String
+    private(set) var initialText: String?
+    private(set) var image: UIImage?
+    private(set) var subtitle: String?
+    private(set) var options: [String:String]
+    private(set) var answer: String
     
     init(number: String, text: String, initialText: String?, image: UIImage?, subtitle: String?, options: [String : String], answer: String) {
         self.number = number

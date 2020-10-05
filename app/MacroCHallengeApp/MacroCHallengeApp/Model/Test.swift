@@ -8,9 +8,9 @@
 import Foundation
 
 class Test {
-    var name: String
-    var year: String
-    var questions: [Question]
+    private(set) var name: String
+    private(set) var year: String
+    private(set) var questions: [Question]
     
     init(name: String, year: String, questions: [Question]) {
         self.name = name

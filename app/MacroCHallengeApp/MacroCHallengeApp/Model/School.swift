@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class School {
-    var name: String
-    var location: [String]
-    var logo: UIImage
-    var notice: [String:String]
-    var tests: [Test]
+    private(set) var name: String
+    private(set) var location: [String]
+    private(set) var logo: UIImage
+    private(set) var notice: [String:String]
+    private(set) var tests: [Test]
     
     init(name: String, location: [String], logo: UIImage, notice: [String:String], tests: [Test]) {
         self.name = name

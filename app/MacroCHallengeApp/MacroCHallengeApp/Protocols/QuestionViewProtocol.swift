@@ -14,8 +14,8 @@ protocol QuestionViewProtocol {
      também recebe o controlador da view.
      
      
-     -parameter data: Uma única questão que será exibida.
-     -parameter controller: Um controlador do tipo QuestionViewControllerProtocol.
+     - parameter data: Uma única questão que será exibida.
+     - parameter controller: Um controlador do tipo QuestionViewControllerProtocol.
      
      */
     

@@ -13,7 +13,7 @@ protocol QuestionViewControllerProtocol {
      Método que inicializa o controller para uma prova específica. Ele deve receber todas as questões da prova.
      
      
-     -parameter data: As questões da prova.
+     - parameter data: As questões da prova.
      
      */
     init(data: [Question])

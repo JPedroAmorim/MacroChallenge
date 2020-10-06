@@ -63,6 +63,58 @@ class MockSchoolsImplementationTests: XCTestCase {
         XCTAssertNotNil(finalResult)
     }
     
+    func testGetSchools_WhenReturns_SecondSchoolFirstTestFirstQuestionShouldHaveAnImage() throws {
+        // Given
+        let returnResult = testSubject.getSchools()
+        
+        // When
+        guard let secondSchool = returnResult.last else {
+            XCTFail("First school not found")
+            return
+        }
+        
+        guard let firstTest = secondSchool.tests.first else {
+            XCTFail("First test from first school not found")
+            return
+        }
+        
+        guard let firstQuestion = firstTest.questions.first else {
+            XCTFail("First question from first test not found")
+            return
+        }
+        
+        let finalResult = firstQuestion.image
+        
+        // Then
+        XCTAssertNotNil(finalResult)
+    }
+    
+    func testGetSchools_WhenReturns_SecondSchoolFirstTestSecondQuestionShouldHaveAnImage() throws {
+        // Given
+        let returnResult = testSubject.getSchools()
+        
+        // When
+        guard let secondSchool = returnResult.last else {
+            XCTFail("First school not found")
+            return
+        }
+        
+        guard let secondTest = secondSchool.tests.first else {
+            XCTFail("First test from first school not found")
+            return
+        }
+        
+        guard let secondQuestion = secondTest.questions.first else {
+            XCTFail("First question from first test not found")
+            return
+        }
+        
+        let finalResult = secondQuestion.image
+        
+        // Then
+        XCTAssertNotNil(finalResult)
+    }
+    
     func testGetSchools_WhenReturns_FirstSchoolShouldHaveALogoImage() {
         // Given
         let returnResult = testSubject.getSchools()
@@ -78,4 +130,21 @@ class MockSchoolsImplementationTests: XCTestCase {
         // Then
         XCTAssertNotNil(finalResult)
     }
+    
+    func testGetSchools_WhenReturns_SecondSchoolShouldHaveALogoImage() {
+        // Given
+        let returnResult = testSubject.getSchools()
+        
+        // When
+        guard let secondSchool = returnResult.last else {
+            XCTFail("Second school not found")
+            return
+        }
+        
+        let finalResult = secondSchool.logo
+        
+        // Then
+        XCTAssertNotNil(finalResult)
+    }
+
 }

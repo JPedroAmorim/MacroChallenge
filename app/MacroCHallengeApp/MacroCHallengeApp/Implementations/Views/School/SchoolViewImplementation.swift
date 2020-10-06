@@ -9,7 +9,10 @@ import UIKit
 
 class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - IBOutlets
-
+    @IBOutlet weak var noticeViewCard: UIView!
+    @IBOutlet weak var noticeLabel: UILabel!
+    @IBOutlet weak var noticeImage: UIImageView!
+    
     
     // MARK: - Dependencies
     var viewController: SchoolViewControllerProtocol

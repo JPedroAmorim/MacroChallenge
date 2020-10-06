@@ -9,10 +9,14 @@ import UIKit
 
 class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - IBOutlets
+    
+    // Notice
     @IBOutlet weak var noticeViewCard: UIView!
     @IBOutlet weak var noticeLabel: UILabel!
     @IBOutlet weak var noticeImage: UIImageView!
     
+    // Tests
+    @IBOutlet weak var testTableView: UITableView!
     
     // MARK: - Dependencies
     var viewController: SchoolViewControllerProtocol
@@ -26,7 +30,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
-        self.addingShadowOnElement(view: noticeViewCard)
+        self.addingShadowOnElement(view: self.noticeViewCard)
         self.setVisualElements()
     }
     
@@ -56,7 +60,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
     
     /**
      
-     Método responsável por adicionar sombras nos elementos.
+     Método responsável por adicionar sombras nos elementos UIView.
      
      */
     private func addingShadowOnElement(view: UIView) {

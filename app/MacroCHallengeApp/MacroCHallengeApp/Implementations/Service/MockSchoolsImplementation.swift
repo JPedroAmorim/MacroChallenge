@@ -18,12 +18,10 @@ class MockSchoolsImplementation: SchoolsProtocol {
      
      Método que retorna escolas a partir do hardcoding delas. É necessário fazer o hardcoding dos atributos da escola também: (provas, questões...)
      
-     -returns: Um array que contém todas as escolas hardcoded.
+     - returns: Um array que contém todas as escolas hardcoded.
      
      */
     
-    // TODO: Realmente isso aqui foi só um teste pra ver se funciona. Provavelmente uma ideia melhor é realmente copiar umas questões
-    // de uma prova de vestibulinho com imagens e tal.
     private func hardCodedSchools() -> [School] {
         let CtiFirstDummyQuestion = Question(number: "1",
                                           text: "O efeito de humor da tira ocorre com a interpretação equivo- cada que o segundo personagem faz do termo",

@@ -104,10 +104,7 @@ class MockSchoolsImplementationTests: XCTestCase {
             return
         }
         
-        guard let secondQuestion = secondTest.questions.first else {
-            XCTFail("First question from first test not found")
-            return
-        }
+        let secondQuestion = secondTest.questions[1]
         
         let finalResult = secondQuestion.image
         

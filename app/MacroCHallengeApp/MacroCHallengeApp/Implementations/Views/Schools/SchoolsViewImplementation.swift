@@ -50,6 +50,7 @@ class SchoolsViewImplementation: UIView, SchoolsViewProtocol {
             testLabel.text = firstSchool.name
         }
     }
+    
     @IBAction func testButtonPressed(_ sender: Any) {
         if let firstSchool = data.first {
             viewController.schoolWasSubmitted(firstSchool)

@@ -44,6 +44,7 @@
 		D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */; };
 		D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
 		D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
+		D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,10 +221,9 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */,
-				D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */,
-				D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */,
-				D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */,
+				D586B5AA252CA21100F4DF76 /* Questions */,
+				D586B5A9252CA1F700F4DF76 /* School */,
+				D586B5A8252CA1E700F4DF76 /* Schools */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +243,31 @@
 				D565EEE9252B813700426648 /* SceneDelegate.swift */,
 			);
 			path = "App and Scene Delegates";
+			sourceTree = "<group>";
+		};
+		D586B5A8252CA1E700F4DF76 /* Schools */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */,
+				D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */,
+			);
+			path = Schools;
+			sourceTree = "<group>";
+		};
+		D586B5A9252CA1F700F4DF76 /* School */ = {
+			isa = PBXGroup;
+			children = (
+				D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */,
+				D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */,
+			);
+			path = School;
+			sourceTree = "<group>";
+		};
+		D586B5AA252CA21100F4DF76 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +430,7 @@
 			files = (
 				D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
+				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */,

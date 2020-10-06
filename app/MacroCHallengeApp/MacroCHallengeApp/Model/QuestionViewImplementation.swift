@@ -55,14 +55,16 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     }
     
     // MARK: - Private functions
-    /// Popula a view com base nos parametros da questao recebida
+    /**
+     Popula a view com base nos parametros da questao recebidam
+     */
     private func setElements() {
         // Question number
         self.questionNumber.text = self.question.number
         
         //Question text
         self.quetionText.text = self.question.text
-
+        
         // Question initial text
         if let initialText = self.question.initialText {
             self.questionInitialText.isHidden = false
@@ -107,14 +109,21 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         }
     }
     
-    /// Cria uma imageView com a imagem especificada e a coloca na view de imagens
+    /**
+     Cria uma imageView com a imagem especificada e a coloca na view de imagens
+     - parameter img: A imagem que sera exibida pela imageView
+     */
     private func createImg(img: UIImage) {
         let imgView = UIImageView(image: img)
         self.imagesContainer.addSubview(imgView)
         //TODO: Constrains
     }
     
-    /// Cria um botao com um texto e chaves especificados e a coloca na view de opcoes
+    /**
+     Cria um botao com um texto e chaves especificados e a coloca na view de opcoes
+     - parameter key: Valor que representa a resposta
+     - parameter value: Texto da resposta
+     */
     private func createOption(key: String, value: String) {
         let btn = UIButton()
         btn.setTitle(value, for: .normal)
@@ -123,13 +132,21 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         //TODO: Constrains
     }
     
-    /// Func. chamada ao selectionar uma opcao
+
+    /**
+     Func. chamada ao selectionar uma opcao
+     - parameter sender: Botao que deu trigger na funcao
+     */
     @objc private func selectOption(sender: UIButton) {
         self.chosenOption = String(sender.tag)
         highlightBg(btn: sender)
     }
     
-    /// Trata de representar visualmente para o usuario qual opcao esta selecionada no momento
+
+    /**
+     Trata de representar visualmente para o usuario qual opcao esta selecionada no momento
+     -parameter btn: Botao que deve ser destacado
+     */
     func highlightBg(btn: UIButton) {
         for view in self.optionsContainer.subviews {
             if let b = view as? UIButton {

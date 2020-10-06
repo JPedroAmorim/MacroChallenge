@@ -12,12 +12,38 @@
 		4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
 		D565EEE8252B813700426648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EEE7252B813700426648 /* AppDelegate.swift */; };
 		D565EEEA252B813700426648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EEE9252B813700426648 /* SceneDelegate.swift */; };
-		D565EEEC252B813700426648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EEEB252B813700426648 /* ViewController.swift */; };
 		D565EEEF252B813700426648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D565EEED252B813700426648 /* Main.storyboard */; };
 		D565EEF1252B813900426648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D565EEF0252B813900426648 /* Assets.xcassets */; };
 		D565EEF4252B813900426648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D565EEF2252B813900426648 /* LaunchScreen.storyboard */; };
 		D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EEFE252B813A00426648 /* MacroCHallengeAppTests.swift */; };
 		D565EF0A252B813A00426648 /* MacroCHallengeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF09252B813A00426648 /* MacroCHallengeAppUITests.swift */; };
+		D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */; };
+		D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */; };
+		D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */; };
+		D565EF38252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */; };
+		D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF3C252BACCB00426648 /* SchoolsProtocol.swift */; };
+		D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF3C252BACCB00426648 /* SchoolsProtocol.swift */; };
+		D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF42252BADA200426648 /* SchoolsViewControllerImplementation.swift */; };
+		D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF42252BADA200426648 /* SchoolsViewControllerImplementation.swift */; };
+		D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */; };
+		D565EF51252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */; };
+		D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */; };
+		D565EF59252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */; };
+		D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */; };
+		D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */; };
+		D586B56D252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */; };
+		D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B571252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift */; };
+		D586B573252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B571252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift */; };
+		D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B577252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift */; };
+		D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B577252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift */; };
+		D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B57D252BFEEA00F4DF76 /* QuestionViewProtocol.swift */; };
+		D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B57D252BFEEA00F4DF76 /* QuestionViewProtocol.swift */; };
+		D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */; };
+		D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */; };
+		D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */; };
+		D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */; };
+		D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
+		D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +70,6 @@
 		D565EEE4252B813700426648 /* MacroCHallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroCHallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D565EEE7252B813700426648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D565EEE9252B813700426648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D565EEEB252B813700426648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D565EEEE252B813700426648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D565EEF0252B813900426648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D565EEF3252B813900426648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +80,20 @@
 		D565EF05252B813A00426648 /* MacroCHallengeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacroCHallengeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D565EF09252B813A00426648 /* MacroCHallengeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroCHallengeAppUITests.swift; sourceTree = "<group>"; };
 		D565EF0B252B813A00426648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewProtocol.swift; sourceTree = "<group>"; };
+		D565EF3C252BACCB00426648 /* SchoolsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsProtocol.swift; sourceTree = "<group>"; };
+		D565EF42252BADA200426648 /* SchoolsViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewControllerImplementation.swift; sourceTree = "<group>"; };
+		D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewImplementation.swift; sourceTree = "<group>"; };
+		D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsViewImplementation.xib; sourceTree = "<group>"; };
+		D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSchoolsImplementation.swift; sourceTree = "<group>"; };
+		D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewProtocol.swift; sourceTree = "<group>"; };
+		D586B571252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D586B577252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D586B57D252BFEEA00F4DF76 /* QuestionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewProtocol.swift; sourceTree = "<group>"; };
+		D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewControllerImplementation.swift; sourceTree = "<group>"; };
+		D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewImplementation.swift; sourceTree = "<group>"; };
+		D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolViewImplementation.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +154,10 @@
 		D565EEE6252B813700426648 /* MacroCHallengeApp */ = {
 			isa = PBXGroup;
 			children = (
+				D565EF48252BADA800426648 /* Implementations */,
+				D565EF2C252BAC1C00426648 /* Protocols */,
 				4FFF6B9D252BA3250015DFE7 /* Model */,
-				D565EEE7252B813700426648 /* AppDelegate.swift */,
-				D565EEE9252B813700426648 /* SceneDelegate.swift */,
-				D565EEEB252B813700426648 /* ViewController.swift */,
+				D586B567252BFABD00F4DF76 /* App and Scene Delegates */,
 				D565EEED252B813700426648 /* Main.storyboard */,
 				D565EEF0252B813900426648 /* Assets.xcassets */,
 				D565EEF2252B813900426648 /* LaunchScreen.storyboard */,
@@ -143,6 +182,67 @@
 				D565EF0B252B813A00426648 /* Info.plist */,
 			);
 			path = MacroCHallengeAppUITests;
+			sourceTree = "<group>";
+		};
+		D565EF2C252BAC1C00426648 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */,
+				D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */,
+				D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */,
+				D586B571252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift */,
+				D586B57D252BFEEA00F4DF76 /* QuestionViewProtocol.swift */,
+				D586B577252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift */,
+				D565EF3C252BACCB00426648 /* SchoolsProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D565EF48252BADA800426648 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D586B55C252BE75300F4DF76 /* Service */,
+				D565EF56252BAF6E00426648 /* Views */,
+				D565EF55252BAF6500426648 /* Controllers */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		D565EF55252BAF6500426648 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF42252BADA200426648 /* SchoolsViewControllerImplementation.swift */,
+				D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D565EF56252BAF6E00426648 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */,
+				D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */,
+				D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */,
+				D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D586B55C252BE75300F4DF76 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D586B567252BFABD00F4DF76 /* App and Scene Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D565EEE7252B813700426648 /* AppDelegate.swift */,
+				D565EEE9252B813700426648 /* SceneDelegate.swift */,
+			);
+			path = "App and Scene Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +350,9 @@
 			files = (
 				D565EEF4252B813900426648 /* LaunchScreen.storyboard in Resources */,
 				D565EEF1252B813900426648 /* Assets.xcassets in Resources */,
+				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,
+				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +360,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
+				D565EF59252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +379,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D565EEEC252B813700426648 /* ViewController.swift in Sources */,
+				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
+				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,
+				D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
+				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
+				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
+				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
+				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
+				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
+				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
+				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
+				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */,
 				D565EEEA252B813700426648 /* SceneDelegate.swift in Sources */,
+				D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +403,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
+				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
+				D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
+				D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */,
+				D586B56D252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
+				D565EF38252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
+				D565EF51252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
+				D586B573252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
+				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
+				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
+				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

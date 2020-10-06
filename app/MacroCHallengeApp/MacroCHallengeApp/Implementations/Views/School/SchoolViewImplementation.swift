@@ -63,6 +63,8 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
      
      Método responsável por adicionar sombras nos elementos UIView.
      
+     - parameter view :  view no qual a sombra vai ser adicionada.
+     
      */
     private func addingShadowOnElement(view: UIView) {
         view.layer.shadowColor = UIColor.black.cgColor

@@ -29,7 +29,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
         self.data = data
         self.viewController = controller
         super.init(frame: CGRect.zero)
-        initFromNib()
+        self.initFromNib()
         self.addingShadowOnElement(view: self.noticeViewCard)
         self.setVisualElements()
     }
@@ -71,4 +71,42 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
         view.layer.masksToBounds = false
     }
     
+    /**
+     
+     Método responsável por configurar a TableView das provas.
+     
+     */
+    
+    private func setupTableView() {
+        self.testTableView.delegate = self
+        self.testTableView.dataSource = self
+    }
+}
+
+// MARK: - Extension Table View Data Source Methods
+
+extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
+   
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.data.tests.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "TestTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TestTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of TestTableViewCell.")
+        }
+        
+        let test = self.data.tests[indexPath.row]
+        
+        cell.testLabel.text = "Prova \(test.year)"
+        
+        return cell
+    }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - IBOutlets
-    @IBOutlet var test: UILabel!
+
     
     // MARK: - Dependencies
     var viewController: SchoolViewControllerProtocol
@@ -47,15 +47,6 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
      
      */
     private func setVisualElements() {
-        // TODO: Realmente popular. O código abaixo é um exemplo.
-        if let firstLocation = data.location.first {
-            test.text = firstLocation
-        }
-    }
-    
-    @IBAction func testButtonPressed(_ sender: Any) {
-        if let exampleTest = data.tests.first {
-            viewController.testWasSubmitted(exampleTest)
-        }
+       
     }
 }

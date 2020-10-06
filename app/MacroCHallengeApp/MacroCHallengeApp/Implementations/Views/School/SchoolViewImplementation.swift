@@ -26,7 +26,8 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
-        setVisualElements()
+        self.addingShadowOnElement(view: noticeViewCard)
+        self.setVisualElements()
     }
     
     required init?(coder: NSCoder) {
@@ -50,6 +51,20 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
      
      */
     private func setVisualElements() {
-       
+        
     }
+    
+    /**
+     
+     Método responsável por adicionar sombras nos elementos.
+     
+     */
+    private func addingShadowOnElement(view: UIView) {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.25
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+        view.layer.shadowRadius = 1
+        view.layer.masksToBounds = false
+    }
+    
 }

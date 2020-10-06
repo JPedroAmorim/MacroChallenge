@@ -10,6 +10,8 @@
 		4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
 		4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
+		4FFF6BB7252CA6AB0015DFE7 /* QuestionViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BB6252CA6AB0015DFE7 /* QuestionViewImplementation.swift */; };
+		4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BBB252CA7480015DFE7 /* QuestionViewImplementation.xib */; };
 		D565EEE8252B813700426648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EEE7252B813700426648 /* AppDelegate.swift */; };
 		D565EEEA252B813700426648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EEE9252B813700426648 /* SceneDelegate.swift */; };
 		D565EEEF252B813700426648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D565EEED252B813700426648 /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		4FFF6B9E252BA3510015DFE7 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		4FFF6BA6252BA4720015DFE7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4FFF6BAB252BA4F10015DFE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		4FFF6BB6252CA6AB0015DFE7 /* QuestionViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionViewImplementation.swift; path = MacroCHallengeApp/Model/QuestionViewImplementation.swift; sourceTree = SOURCE_ROOT; };
+		4FFF6BBB252CA7480015DFE7 /* QuestionViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionViewImplementation.xib; path = MacroCHallengeApp/Model/QuestionViewImplementation.xib; sourceTree = SOURCE_ROOT; };
 		D565EEE4252B813700426648 /* MacroCHallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroCHallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D565EEE7252B813700426648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D565EEE9252B813700426648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 		D586B5AA252CA21100F4DF76 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				4FFF6BB6252CA6AB0015DFE7 /* QuestionViewImplementation.swift */,
+				4FFF6BBB252CA7480015DFE7 /* QuestionViewImplementation.xib */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
 				D565EEF4252B813900426648 /* LaunchScreen.storyboard in Resources */,
 				D565EEF1252B813900426648 /* Assets.xcassets in Resources */,
 				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
@@ -416,6 +423,7 @@
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
+				4FFF6BB7252CA6AB0015DFE7 /* QuestionViewImplementation.swift in Sources */,
 				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */,
 				D565EEEA252B813700426648 /* SceneDelegate.swift in Sources */,

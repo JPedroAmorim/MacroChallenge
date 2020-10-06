@@ -29,9 +29,10 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
         self.data = data
         self.viewController = controller
         super.init(frame: CGRect.zero)
-        self.initFromNib()
-        self.addingShadowOnElement(view: self.noticeViewCard)
-        self.setVisualElements()
+        initFromNib()
+        addingShadowOnElement(view: self.noticeViewCard)
+        setVisualElements()
+        setupTableView()
     }
     
     required init?(coder: NSCoder) {

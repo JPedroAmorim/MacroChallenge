@@ -4,16 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchoolViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
-                <outlet property="noticeImage" destination="zC1-D9-dzO" id="y6A-gE-hcJ"/>
-                <outlet property="noticeLabel" destination="Vnk-qg-bKX" id="eHo-dh-6nj"/>
-                <outlet property="noticeViewCard" destination="pvo-F2-21G" id="e7U-9i-gXE"/>
-                <outlet property="testTableView" destination="iPB-2l-wMy" id="FhS-mf-H0x"/>
+                <outlet property="testTableView" destination="iPB-2l-wMy" id="JMK-HV-z6P"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,60 +17,28 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvo-F2-21G" userLabel="noticeView">
-                    <rect key="frame" x="16" y="16" width="382" height="100"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edital XXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnk-qg-bKX">
-                            <rect key="frame" x="8" y="35.666666666666664" width="135" height="28.999999999999993"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zC1-D9-dzO">
-                            <rect key="frame" x="290" y="8" width="84" height="84"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="zC1-D9-dzO" secondAttribute="height" multiplier="1:1" id="WX5-fC-SAO"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="zC1-D9-dzO" secondAttribute="bottom" constant="8" id="WfB-WE-USZ"/>
-                        <constraint firstAttribute="height" constant="100" id="XJG-18-Tfa"/>
-                        <constraint firstAttribute="trailing" secondItem="zC1-D9-dzO" secondAttribute="trailing" constant="8" id="cBr-C3-R8N"/>
-                        <constraint firstItem="zC1-D9-dzO" firstAttribute="top" secondItem="pvo-F2-21G" secondAttribute="top" constant="8" id="clO-pX-b4q"/>
-                        <constraint firstItem="Vnk-qg-bKX" firstAttribute="centerY" secondItem="pvo-F2-21G" secondAttribute="centerY" id="d3S-oX-Wc7"/>
-                        <constraint firstItem="Vnk-qg-bKX" firstAttribute="leading" secondItem="pvo-F2-21G" secondAttribute="leading" constant="8" id="jSB-06-dyT"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="6"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPB-2l-wMy">
-                    <rect key="frame" x="16" y="140" width="382" height="580"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="24f-Al-Put">
+                    <rect key="frame" x="0.0" y="346" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="24f-Al-Put" id="mO9-tK-r35">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableViewCellContentView>
+                </tableViewCell>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPB-2l-wMy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="pvo-F2-21G" secondAttribute="trailing" constant="16" id="Nin-Kr-Hfy"/>
-                <constraint firstItem="pvo-F2-21G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Pzr-y9-gVM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iPB-2l-wMy" secondAttribute="trailing" constant="16" id="UNk-7F-7dt"/>
-                <constraint firstItem="iPB-2l-wMy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bDs-V7-eVG"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iPB-2l-wMy" secondAttribute="bottom" constant="16" id="dlO-13-aL1"/>
-                <constraint firstItem="pvo-F2-21G" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="gsX-kc-BPH"/>
-                <constraint firstItem="iPB-2l-wMy" firstAttribute="top" secondItem="pvo-F2-21G" secondAttribute="bottom" constant="24" id="rto-BY-XEx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iPB-2l-wMy" secondAttribute="bottom" id="MsR-Xc-KsT"/>
+                <constraint firstItem="iPB-2l-wMy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="OTg-7b-Wc4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iPB-2l-wMy" secondAttribute="trailing" id="Ufv-dI-twe"/>
+                <constraint firstItem="iPB-2l-wMy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="om8-34-03C"/>
             </constraints>
             <point key="canvasLocation" x="142" y="149"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

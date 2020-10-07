@@ -17,27 +17,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2q2-8m-vQd" userLabel="Card View">
-                        <rect key="frame" x="0.0" y="8" width="320" height="48"/>
+                        <rect key="frame" x="16" y="8" width="288" height="48"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prova XXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-UZ-Xet">
-                                <rect key="frame" x="8" y="14.5" width="93.5" height="19.5"/>
+                                <rect key="frame" x="8" y="14.5" width="93.5" height="19"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="48" id="Tpv-P5-Vso"/>
                             <constraint firstItem="KN5-UZ-Xet" firstAttribute="centerY" secondItem="2q2-8m-vQd" secondAttribute="centerY" id="kAW-cP-UVU"/>
                             <constraint firstItem="KN5-UZ-Xet" firstAttribute="leading" secondItem="2q2-8m-vQd" secondAttribute="leading" constant="8" id="xfm-Ta-yrb"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2q2-8m-vQd" secondAttribute="bottom" constant="8" id="AvU-Qp-Bud"/>
-                    <constraint firstAttribute="trailing" secondItem="2q2-8m-vQd" secondAttribute="trailing" id="Liy-MK-DvX"/>
-                    <constraint firstItem="2q2-8m-vQd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eOP-UZ-O3M"/>
+                    <constraint firstAttribute="trailing" secondItem="2q2-8m-vQd" secondAttribute="trailing" constant="16" id="Liy-MK-DvX"/>
+                    <constraint firstItem="2q2-8m-vQd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eOP-UZ-O3M"/>
                     <constraint firstItem="2q2-8m-vQd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oxh-Zh-v5X"/>
                 </constraints>
             </tableViewCellContentView>

@@ -9,13 +9,6 @@ import UIKit
 
 class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - IBOutlets
-    
-    // Notice
-    @IBOutlet weak var noticeViewCard: UIView!
-    @IBOutlet weak var noticeLabel: UILabel!
-    @IBOutlet weak var noticeImage: UIImageView!
-    
-    // Tests
     @IBOutlet weak var testTableView: UITableView!
     
     // MARK: - Dependencies
@@ -24,14 +17,14 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - Private attributes
     private var data: School
     
+    private let sectionHeaderTitleArray = ["", "Provas"]
+    
     // MARK: - Init methods
     required init(data: School, controller: SchoolViewControllerProtocol) {
         self.data = data
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
-        addingShadowOnElement(view: self.noticeViewCard)
-        setVisualElements()
         setupTableView()
     }
     
@@ -52,37 +45,26 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
     
     /**
      
-     Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
-     
-     */
-    private func setVisualElements() {
-        
-    }
-    
-    /**
-     
-     Método responsável por adicionar sombras nos elementos UIView.
-     
-     - parameter view :  view no qual a sombra vai ser adicionada.
-     
-     */
-    private func addingShadowOnElement(view: UIView) {
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.25
-        view.layer.shadowOffset = CGSize(width: 0, height: 4)
-        view.layer.shadowRadius = 1
-        view.layer.masksToBounds = false
-    }
-    
-    /**
-     
      Método responsável por configurar a TableView das provas.
      
      */
     
     private func setupTableView() {
-        self.testTableView.delegate = self
-        self.testTableView.dataSource = self
+        testTableView.delegate = self
+        testTableView.dataSource = self
+    }
+    
+    /**
+     
+     Método responsável por referenciar a XIB de uma determinada célula.
+     
+        - parameters nibName: nome do arquivo XIB da célula
+     
+     */
+    
+    private func referenceXib(nibName: String) {
+        let nib = UINib.init(nibName: nibName, bundle: nil)
+        self.testTableView.register(nib, forCellReuseIdentifier: nibName)
     }
 }
 
@@ -91,25 +73,64 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
 extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sectionHeaderTitleArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.tests.count
+        var numberOfRows = 0
+        
+        if section == 0 { // notice section
+            numberOfRows = 1
+        } else if section == 1 { // tests section
+            numberOfRows = data.tests.count
+        }
+        return numberOfRows
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionHeaderTitleArray[section] as String
+    }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.init(red: 242/255,
+                                                                                          green: 242/255,
+                                                                                          blue: 247/255,
+                                                                                          alpha: 1.0)
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.init(red: 123/255,
+                                                                                   green: 123/255,
+                                                                                   blue: 123/255,
+                                                                                   alpha: 1.0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cellIdentifier = String()
+        var finalCell = UITableViewCell()
         
-        let cellIdentifier = "TestTableViewCell"
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TestTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of TestTableViewCell.")
+        if indexPath.section == 0 { // notice
+            cellIdentifier = "NoticeTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NoticeTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
+            }
+            finalCell = cell
+            
+            cell.noticeLabel.text = "Edital YYYY"
+            //cell.logoImageView = UIImageView()
+            
+        } else if indexPath.section == 1 { // tests
+            cellIdentifier = "TestTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TestTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of TestTableViewCell.")
+            }
+            finalCell = cell
+            
+            let test = data.tests[indexPath.row]
+
+            cell.testLabel.text = "Prova \(test.year)"
         }
         
-        let test = self.data.tests[indexPath.row]
-        
-        cell.testLabel.text = "Prova \(test.year)"
-        
-        return cell
+        return finalCell
     }
 }

@@ -43,7 +43,10 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     
     // MARK: - SchoolViewControllerProtocol methods
     func testWasSubmitted(_ test: Test) {
-        
+        if let navController = self.navigationController {
+            let questionViewController = QuestionViewControllerImplementation(data: test.questions)
+            navController.pushViewController(questionViewController, animated: true)
+        }
     }
     
     func noticeWasSubmitted(_ notice: [String : String]) {

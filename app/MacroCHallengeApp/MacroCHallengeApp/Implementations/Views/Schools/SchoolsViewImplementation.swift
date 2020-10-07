@@ -56,10 +56,6 @@ extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 		tableViewSchools.dataSource = self
 
 		tableViewSchools.register(UINib(nibName: "SchoolsTableViewCell", bundle: nil), forCellReuseIdentifier: "SchoolsTableViewCell")
-
-//		guard (UIApplication.shared.delegate as? AppDelegate) != nil else {
-//			return
-//		}
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {

@@ -12,7 +12,6 @@ class SchoolsTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var schoolLabel: UILabel!
 	@IBOutlet weak var locationLabel: UILabel!
-
 	@IBOutlet weak var logoImageView: UIImageView!
 	@IBOutlet weak var bgView: UIView!
 

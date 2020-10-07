@@ -8,6 +8,13 @@
 import UIKit
 
 class OverviewViewImplementation: UIView, OverviewViewProtocol {
+	// MARK: -IBOutlets
+	@IBOutlet weak var questionsView: UIView!
+	@IBOutlet weak var questionsCollege: UICollectionView!
+
+	@IBOutlet weak var progressLabel: UILabel!
+	@IBOutlet weak var progressBar: UIView!
+
     // MARK: - Dependencies
     var viewController: OverviewViewControllerProtocol
     
@@ -20,6 +27,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
+		setVisualElements()
     }
     
     required init?(coder: NSCoder) {
@@ -34,4 +42,22 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             addSubview(nibView)
         }
     }
+
+	// MARK: - Private methods
+
+	/**
+	Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
+	*/
+
+	private func setVisualElements() {
+		questionsView.layer.cornerRadius = 8
+
+		progressBar.layer.cornerRadius = 4
+
+		let image = UIImageView()
+		image.tintColor = UIColor.red
+		image.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width/2, height: progressBar.frame.height)
+		image.layer.cornerRadius = 4
+		progressBar.addSubview(image)
+	}
 }

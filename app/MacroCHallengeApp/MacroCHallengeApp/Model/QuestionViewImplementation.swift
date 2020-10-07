@@ -145,7 +145,7 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
 
     /**
      Trata de representar visualmente para o usuario qual opcao esta selecionada no momento
-     -parameter btn: Botao que deve ser destacado
+     - parameter btn: Botao que deve ser destacado
      */
     func highlightBg(btn: UIButton) {
         for view in self.optionsContainer.subviews {

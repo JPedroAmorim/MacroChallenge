@@ -10,7 +10,10 @@ import UIKit
 class SchoolsTableViewCell: UITableViewCell {
 	// MARK: -IBOutlets
 
-	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var schoolLabel: UILabel!
+	@IBOutlet weak var locationLabel: UILabel!
+
+	@IBOutlet weak var logoImageView: UIImageView!
 	@IBOutlet weak var bgView: UIView!
 
 	// MARK: -Lifecyle

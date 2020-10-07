@@ -25,8 +25,8 @@ class SchoolsViewImplementation: UIView, SchoolsViewProtocol {
 		super.init(frame: CGRect.zero)
 		initFromNib()
 		setVisualElements()
-
-		dataTableview()
+		
+		setupDelegateTableview()
 	}
 
 	required init?(coder: NSCoder) {
@@ -65,7 +65,7 @@ class SchoolsViewImplementation: UIView, SchoolsViewProtocol {
 
 extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 
-	func dataTableview() {
+	func setupDelegateTableview() {
 
 		tableViewSchools.delegate = self
 		tableViewSchools.dataSource = self
@@ -82,26 +82,20 @@ extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3
+		return data.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-//		SchoolsTableViewCell
-
-//		let cell = UITableViewCell.init()
-//		cell.textLabel?.text = "asdasd"
-//		cell.detailTextLabel?.text = "222"
-//
-//		return cell
-
 		let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolsTableViewCell", for: indexPath) as! SchoolsTableViewCell
 
-		cell.titleLabel.text = "asdasdf"
+		cell.schoolLabel.text = data[indexPath.row].name
+		cell.locationLabel.text = data[indexPath.row].location.joined(separator: " ")
+		cell.logoImageView.image = data[indexPath.row].logo
 		return cell
 	}
 
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 150
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		viewController.schoolWasSubmitted(data[indexPath.row])
 	}
 }

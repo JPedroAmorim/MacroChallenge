@@ -77,6 +77,7 @@ extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableViewSchools.deselectRow(at: indexPath, animated: true)
 		viewController.schoolWasSubmitted(data[indexPath.row])
 	}
 }

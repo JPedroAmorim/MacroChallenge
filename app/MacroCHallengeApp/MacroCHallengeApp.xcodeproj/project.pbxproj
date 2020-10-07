@@ -10,6 +10,8 @@
 		4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
 		4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
+		C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */; };
+		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		D5276859252CB305003F0C70 /* MockSchoolsImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */; };
 		D527685D252CB51E003F0C70 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		D5276861252CB521003F0C70 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
@@ -72,6 +74,8 @@
 		4FFF6B9E252BA3510015DFE7 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		4FFF6BA6252BA4720015DFE7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4FFF6BAB252BA4F10015DFE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
+		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSchoolsImplementationTests.swift; sourceTree = "<group>"; };
 		D565EEE4252B813700426648 /* MacroCHallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroCHallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D565EEE7252B813700426648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 			children = (
 				D565EF4F252BAF5600426648 /* SchoolsViewImplementation.swift */,
 				D565EF57252BAF9100426648 /* SchoolsViewImplementation.xib */,
+				C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */,
+				C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */,
 			);
 			path = Schools;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
+				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +428,7 @@
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
+				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
 				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */,
@@ -619,7 +627,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QTB2MSNYGB;
+				DEVELOPMENT_TEAM = NZC6LC8NWM;
 				INFOPLIST_FILE = MacroCHallengeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,7 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QTB2MSNYGB;
+				DEVELOPMENT_TEAM = NZC6LC8NWM;
 				INFOPLIST_FILE = MacroCHallengeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

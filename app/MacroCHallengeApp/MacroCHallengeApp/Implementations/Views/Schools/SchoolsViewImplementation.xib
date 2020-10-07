@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchoolsViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
                 <outlet property="tableViewSchools" destination="YJW-pf-0pg" id="XaF-Gh-Od9"/>
-                <outlet property="testLabel" destination="xCi-eE-X2j" id="J8c-02-yU7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,36 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="myView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCi-eE-X2j">
-                    <rect key="frame" x="0.0" y="841" width="60" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-pf-0pg">
-                    <rect key="frame" x="0.0" y="44" width="414" height="787"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJK-Zj-pNf">
-                    <rect key="frame" x="368" y="832" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="testButtonPressed:" destination="-1" eventType="touchUpInside" id="8tE-a2-qmk"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="YJW-pf-0pg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7l5-Au-fdQ"/>
                 <constraint firstItem="YJW-pf-0pg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CMl-Pr-mmD"/>
-                <constraint firstItem="xCi-eE-X2j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Mpq-nh-Ofa"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xCi-eE-X2j" secondAttribute="bottom" id="RbL-vu-NFA"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RJK-Zj-pNf" secondAttribute="bottom" id="WOE-x6-xuS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YJW-pf-0pg" secondAttribute="bottom" id="EkP-9o-5C8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YJW-pf-0pg" secondAttribute="trailing" id="WQh-bB-o8m"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RJK-Zj-pNf" secondAttribute="trailing" id="mkY-hE-B7G"/>
-                <constraint firstItem="xCi-eE-X2j" firstAttribute="top" secondItem="YJW-pf-0pg" secondAttribute="bottom" constant="10" id="rFw-Y3-0d2"/>
             </constraints>
             <point key="canvasLocation" x="142" y="149"/>
         </view>

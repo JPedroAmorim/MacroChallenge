@@ -9,7 +9,6 @@ import UIKit
 
 class SchoolsViewImplementation: UIView, SchoolsViewProtocol {
 	// MARK: -IBOutlets
-	@IBOutlet var testLabel: UILabel!
 	@IBOutlet weak var tableViewSchools: UITableView!
 
 	// MARK: - Dependencies
@@ -24,7 +23,6 @@ class SchoolsViewImplementation: UIView, SchoolsViewProtocol {
 		self.viewController = controller
 		super.init(frame: CGRect.zero)
 		initFromNib()
-		setVisualElements()
 		
 		setupDelegateTableview()
 	}
@@ -33,30 +31,17 @@ class SchoolsViewImplementation: UIView, SchoolsViewProtocol {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	// MARK: - Private methods
+
+	/**
+	Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
+	*/
 	private func initFromNib() {
 		if let nib = Bundle.main.loadNibNamed("SchoolsViewImplementation", owner: self, options: nil),
 		   let nibView = nib.first as? UIView {
 			nibView.frame = bounds
 			nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 			addSubview(nibView)
-		}
-	}
-
-	// MARK: - Private methods
-
-	/**
-	Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
-	*/
-	private func setVisualElements() {
-		// TODO: Realmente popular. O código abaixo é um exemplo.
-		if let firstSchool = data.first {
-			testLabel.text = firstSchool.name
-		}
-	}
-
-	@IBAction func testButtonPressed(_ sender: Any) {
-		if let firstSchool = data.first {
-			viewController.schoolWasSubmitted(firstSchool)
 		}
 	}
 }

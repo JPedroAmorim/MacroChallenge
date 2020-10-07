@@ -58,7 +58,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
      
      Método responsável por referenciar a XIB de uma determinada célula.
      
-        - parameters nibName: nome do arquivo XIB da célula
+     - parameters nibName: nome do arquivo XIB da célula
      
      */
     
@@ -71,7 +71,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
 // MARK: - Extension Table View Data Source Methods
 
 extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
-   
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionHeaderTitleArray.count
     }
@@ -127,10 +127,25 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             finalCell = cell
             
             let test = data.tests[indexPath.row]
-
+            
             cell.testLabel.text = "Prova \(test.year)"
         }
         
         return finalCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            
+            switch cell {
+            case is NoticeTableViewCell:
+                viewController.noticeWasSubmitted(data.notice)
+            case is TestTableViewCell: break
+                viewController.testWasSubmitted(data.tests[indexPath.row])
+            default:
+                fatalError("Unexpected: the cell is not a custom cell.")
+            }
+            
+        }
     }
 }

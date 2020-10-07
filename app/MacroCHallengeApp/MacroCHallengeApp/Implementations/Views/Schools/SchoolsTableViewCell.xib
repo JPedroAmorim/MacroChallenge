@@ -51,7 +51,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="REw-xE-8SW" secondAttribute="bottom" constant="8" id="Akb-sW-GzZ"/>
                     <constraint firstAttribute="trailing" secondItem="REw-xE-8SW" secondAttribute="trailing" constant="8" id="dL7-tI-aT8"/>
@@ -60,7 +59,6 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="wVD-dY-6VI"/>
-            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="bgView" destination="REw-xE-8SW" id="VYg-kf-8jO"/>
                 <outlet property="locationLabel" destination="vTl-c6-OeO" id="Pbl-jP-8cs"/>

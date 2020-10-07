@@ -29,6 +29,7 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		navigationItem.title = "Colégios"
     }
     
     // MARK: - Setup methods
@@ -51,4 +52,16 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
             navController.pushViewController(schoolViewController, animated: true)
         }
     }
+}
+
+extension UITabBarController {
+	open override var childForStatusBarStyle: UIViewController? {
+		return selectedViewController?.childForStatusBarStyle ?? selectedViewController
+	}
+}
+
+extension UINavigationController {
+	open override var childForStatusBarStyle: UIViewController? {
+		return topViewController?.childForStatusBarStyle ?? topViewController
+	}
 }

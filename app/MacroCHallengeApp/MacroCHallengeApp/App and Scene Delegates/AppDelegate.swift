@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
 		// Change colors in NavigationBar
-		UINavigationBar.appearance().barTintColor = .blue
+		UINavigationBar.appearance().barTintColor = UIColor(named: "NavigationBarColor")
+		UINavigationBar.appearance().tintColor = .white
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 		UINavigationBar.appearance().isTranslucent = false
 

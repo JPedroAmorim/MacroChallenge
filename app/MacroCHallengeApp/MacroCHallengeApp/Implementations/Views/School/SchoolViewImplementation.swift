@@ -69,7 +69,6 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
 }
 
 // MARK: - Extension Table View Data Source Methods
-
 extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,6 +89,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionHeaderTitleArray[section] as String
     }
+    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.init(red: 242/255,
                                                                                           green: 242/255,
@@ -112,6 +112,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NoticeTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
             }
+            
             finalCell = cell
             
             cell.noticeLabel.text = "Edital YYYY"
@@ -124,6 +125,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TestTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of TestTableViewCell.")
             }
+            
             finalCell = cell
             
             let test = data.tests[indexPath.row]

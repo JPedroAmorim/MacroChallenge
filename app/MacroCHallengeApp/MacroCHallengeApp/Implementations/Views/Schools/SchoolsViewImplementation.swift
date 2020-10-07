@@ -68,12 +68,16 @@ extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-		let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolsTableViewCell", for: indexPath) as! SchoolsTableViewCell
-
-		cell.schoolLabel.text = data[indexPath.row].name
-		cell.locationLabel.text = data[indexPath.row].location.joined(separator: " ")
-		cell.logoImageView.image = data[indexPath.row].logo
-		return cell
+		if let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolsTableViewCell", for: indexPath) as? SchoolsTableViewCell {
+			cell.schoolLabel.text = data[indexPath.row].name
+			cell.locationLabel.text = data[indexPath.row].location.joined(separator: " ")
+			cell.logoImageView.image = data[indexPath.row].logo
+			return cell
+		} else {
+			let cell = UITableViewCell.init()
+			cell.textLabel?.text = data[indexPath.row].name
+			return cell
+		}
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

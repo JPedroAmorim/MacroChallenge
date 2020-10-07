@@ -234,22 +234,12 @@ class MockSchoolsImplementation: SchoolsProtocol {
                                             location: ["Campinas"],
                                             logo: UIImage(named: "logoCOTUCA")!,
                                             notice: ["date":"09.12.2018"],
-                                            tests: [dummyTest[1]]),
-                                     School(name: "COTUCA",
-                                            location: ["Campinas"],
-                                            logo: UIImage(named: "logoCOTUCA")!,
-                                            notice: ["date":"03.12.2017"],
-                                            tests: [dummyTest[2]]),
+                                            tests: [dummyTest[1], dummyTest[2]]),
                                      School(name: "ETEC",
                                             location: ["Estado de São Paulo"],
                                             logo: UIImage(named: "logoETEC")!,
                                             notice: ["date":"15.12.2019"],
-                                            tests: [dummyTest[3]]),
-                                     School(name: "ETEC",
-                                            location: ["Estado de São Paulo"],
-                                            logo: UIImage(named: "logoETEC")!,
-                                            notice: ["date":"16.12.2018"],
-                                            tests: [dummyTest[4]])]
+                                            tests: [dummyTest[3], dummyTest[4]])]
         
         return dummySchool
     }

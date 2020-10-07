@@ -70,6 +70,8 @@ extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 		tableViewSchools.delegate = self
 		tableViewSchools.dataSource = self
 
+		tableViewSchools.register(UINib(nibName: "SchoolsTableViewCell", bundle: nil), forCellReuseIdentifier: "SchoolsTableViewCell")
+
 //		guard (UIApplication.shared.delegate as? AppDelegate) != nil else {
 //			return
 //		}
@@ -85,10 +87,17 @@ extension SchoolsViewImplementation:UITableViewDataSource, UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-		let cell = UITableViewCell.init()
-		cell.textLabel?.text = "asdasd"
-		cell.detailTextLabel?.text = "222"
+//		SchoolsTableViewCell
 
+//		let cell = UITableViewCell.init()
+//		cell.textLabel?.text = "asdasd"
+//		cell.detailTextLabel?.text = "222"
+//
+//		return cell
+
+		let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolsTableViewCell", for: indexPath) as! SchoolsTableViewCell
+
+		cell.titleLabel.text = "asdasdf"
 		return cell
 	}
 

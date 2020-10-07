@@ -35,7 +35,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     }
     
     private func initFromNib() {
-        if let nib = Bundle.main.loadNibNamed("SchoolViewImplementation", owner: self, options: nil),
+        if let nib = Bundle.main.loadNibNamed("OverviewViewImplementation", owner: self, options: nil),
            let nibView = nib.first as? UIView {
             nibView.frame = bounds
             nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

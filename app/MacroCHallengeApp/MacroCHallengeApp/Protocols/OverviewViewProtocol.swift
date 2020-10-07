@@ -22,6 +22,5 @@ protocol OverviewViewProtocol {
     init(data: Test, controller: OverviewViewControllerProtocol)
     
     // Dependências
-    var viewController: OverviewViewControllerProtocol  {get set}
-    
+    var viewController: OverviewViewControllerProtocol {get set}
 }

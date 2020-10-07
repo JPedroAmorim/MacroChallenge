@@ -51,6 +51,8 @@
 		D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
 		D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
 		D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */; };
+		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
+		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,7 @@
 		D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewControllerImplementation.swift; sourceTree = "<group>"; };
 		D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewImplementation.swift; sourceTree = "<group>"; };
 		D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolViewImplementation.xib; sourceTree = "<group>"; };
+		D5BCC57F252E271200E181CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D560D7A8252E25CB000227CA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCC57F252E271200E181CB /* Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		D565EEDB252B813700426648 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +175,7 @@
 		D565EEE6252B813700426648 /* MacroCHallengeApp */ = {
 			isa = PBXGroup;
 			children = (
+				D560D7A8252E25CB000227CA /* Util */,
 				D565EF48252BADA800426648 /* Implementations */,
 				D565EF2C252BAC1C00426648 /* Protocols */,
 				4FFF6B9D252BA3250015DFE7 /* Model */,
@@ -424,6 +436,7 @@
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
 				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
+				D5BCC580252E271200E181CB /* Extensions.swift in Sources */,
 				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
@@ -443,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
+				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D527685D252CB51E003F0C70 /* Test.swift in Sources */,
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,

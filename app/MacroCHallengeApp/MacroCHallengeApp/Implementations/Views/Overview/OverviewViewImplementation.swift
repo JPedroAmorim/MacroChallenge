@@ -52,11 +52,11 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	private func setVisualElements() {
 		questionsView.layer.cornerRadius = 8
 
-		progressBar.layer.cornerRadius = 4
+		progressBar.layer.cornerRadius = 16
 
 		let image = UIImageView()
 		image.tintColor = UIColor.red
-		image.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width/2, height: progressBar.frame.height)
+		image.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width, height: progressBar.frame.height)
 		image.layer.cornerRadius = 4
 		progressBar.addSubview(image)
 	}

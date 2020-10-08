@@ -15,35 +15,40 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	@IBOutlet weak var progressLabel: UILabel!
 	@IBOutlet weak var progressBar: UIView!
 
-    // MARK: - Dependencies
-    var viewController: OverviewViewControllerProtocol
-    
-    // MARK: - Private attributes
-    private var data: Test
-    
-    // MARK: - Init methods
-    required init(data: Test, controller: OverviewViewControllerProtocol) {
-        self.data = data
-        self.viewController = controller
-        super.init(frame: CGRect.zero)
-        initFromNib()
+	// MARK: - Dependencies
+	var viewController: OverviewViewControllerProtocol
+
+	// MARK: - Private attributes
+	private var data: Test
+
+	// MARK: - Init methods
+	required init(data: Test, controller: OverviewViewControllerProtocol) {
+		self.data = data
+		self.viewController = controller
+		super.init(frame: CGRect.zero)
+		initFromNib()
 
 		setVisualElements()
 		setupDelegateCollectionview()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func initFromNib() {
-        if let nib = Bundle.main.loadNibNamed("OverviewViewImplementation", owner: self, options: nil),
-           let nibView = nib.first as? UIView {
-            nibView.frame = bounds
-            nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            addSubview(nibView)
-        }
-    }
+
+		for dat in data.questions {
+			print("----- New Question -----")
+			print(dat.number)
+		}
+	}
+
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	private func initFromNib() {
+		if let nib = Bundle.main.loadNibNamed("OverviewViewImplementation", owner: self, options: nil),
+		   let nibView = nib.first as? UIView {
+			nibView.frame = bounds
+			nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+			addSubview(nibView)
+		}
+	}
 
 	// MARK: - Private methods
 
@@ -75,18 +80,22 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		2
+		data.questions.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
-
-//		cell.sizeToFit()
-			return cell
+		cell.numberLabel.text = data.questions[indexPath.row].number
+		
+		return cell
 	}
 
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
 
+	func collectionView(_ collectionView: UICollectionView,
+						didSelectItemAt indexPath: IndexPath) {
+		print("Cell \(indexPath.row) clicked")
+	}
 }

@@ -54,10 +54,11 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
 		progressBar.layer.cornerRadius = 16
 
-		let image = UIImageView()
+		let image = UIView()
 		image.tintColor = UIColor.red
-		image.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width, height: progressBar.frame.height)
-		image.layer.cornerRadius = 4
+		image.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
+		image.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width/2, height: progressBar.frame.height)
+		image.layer.cornerRadius = 16
 		progressBar.addSubview(image)
 	}
 }

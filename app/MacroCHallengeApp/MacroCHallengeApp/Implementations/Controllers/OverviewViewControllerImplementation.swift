@@ -8,6 +8,11 @@
 import UIKit
 
 class OverviewViewControllerImplementation: UIViewController, OverviewViewControllerProtocol {
+
+	func questionWasSubmitted(_ question: Question) {
+		print("questionWasSubmitted")
+	}
+
     // MARK: - Dependencies
     var myView: OverviewViewProtocol?
     

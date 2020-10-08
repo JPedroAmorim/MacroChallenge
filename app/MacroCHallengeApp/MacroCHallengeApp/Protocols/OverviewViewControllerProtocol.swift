@@ -18,6 +18,16 @@ protocol OverviewViewControllerProtocol {
      */
     
     init(data: Test)
+
+	/**
+
+	Método pelo qual a view avisa o controller que uma questão foi selecionada.
+
+
+	- parameter question: A questão selecionada.
+
+	*/
+	func questionWasSubmitted(_ question: Question)
     
     // Dependências
     var myView: OverviewViewProtocol? {get set}

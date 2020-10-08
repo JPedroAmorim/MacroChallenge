@@ -27,7 +27,9 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
+
 		setVisualElements()
+		setupDelegateCollectionview()
     }
     
     required init?(coder: NSCoder) {
@@ -61,4 +63,30 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		image.layer.cornerRadius = 16
 		progressBar.addSubview(image)
 	}
+}
+
+// MARK: - Extension Table View Data Source Methods
+extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionViewDelegate {
+
+	func setupDelegateCollectionview() {
+		questionsCollege.delegate = self
+		questionsCollege.dataSource = self
+		questionsCollege.register(UINib(nibName: "OverviewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "OverviewCollectionCell")
+	}
+
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		2
+	}
+
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
+
+//		cell.sizeToFit()
+			return cell
+	}
+
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+	}
+
 }

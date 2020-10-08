@@ -11,13 +11,7 @@ import UIKit
 class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var questionNumber: UILabel!
-    @IBOutlet weak var quetionText: UILabel!
-    @IBOutlet weak var questionInitialText: UILabel!
-    @IBOutlet weak var imagesContainer: UIView!
-    @IBOutlet weak var questionSubtitle: UILabel!
-    @IBOutlet weak var optionsContainer: UIView!
-    
+    @IBOutlet weak var questionTableView: UITableView!
     
     // MARK: - Dependencies
     var controller: QuestionViewControllerProtocol
@@ -33,7 +27,8 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         self.chosenOption = nil
         super.init(frame: CGRect.zero)
         initFromNib()
-        setElements()
+        setupDelegateTableview()
+        //translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
@@ -51,114 +46,93 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     func overwrite(data: Question) {
         self.question = data
-        setElements()
     }
-    
-    // MARK: - Private functions
-    /**
-     Popula a view com base nos parametros da questao recebidam
-     */
-    private func setElements() {
-        // Question number
-        self.questionNumber.text = self.question.number
-        
-        //Question text
-        self.quetionText.text = self.question.text
-        
-        // Question initial text
-        if let initialText = self.question.initialText {
-            self.questionInitialText.isHidden = false
-            self.questionInitialText.text = initialText
-        }
-        else {
-            self.questionInitialText.isHidden = true
-        }
-        
-        // Question images
-        if let images = self.question.images {
-            self.imagesContainer.isHidden = false
-            // Clear previous images
-            for view in imagesContainer.subviews {
-                view.removeFromSuperview()
-            }
-            // Add new images
-            for img in images {
-                createImg(img: img)
-            }
-        }
-        else {
-            self.imagesContainer.isHidden = true
-        }
-        
-        // Question subtitle
-        if let subtitle = self.question.subtitle {
-            self.questionSubtitle.isHidden = false
-            self.questionSubtitle.text = subtitle
-        }
-        else {
-            self.questionSubtitle.isHidden = true
-        }
-        
-        // Question options
-        // Limpar opções anteriores
-        for view in self.optionsContainer.subviews {
-            view.removeFromSuperview()
-        }
-        for option in self.question.options {
-            createOption(key: option.key, value: option.value)
-        }
-    }
-    
-    /**
-     Cria uma imageView com a imagem especificada e a coloca na view de imagens
-     - parameter img: A imagem que sera exibida pela imageView
-     */
-    private func createImg(img: UIImage) {
-        let imgView = UIImageView(image: img)
-        self.imagesContainer.addSubview(imgView)
-        //TODO: Constrains
-    }
-    
-    /**
-     Cria um botao com um texto e chaves especificados e a coloca na view de opcoes
-     - parameter key: Valor que representa a resposta
-     - parameter value: Texto da resposta
-     */
-    private func createOption(key: String, value: String) {
-        let btn = UIButton()
-        btn.setTitle(value, for: .normal)
-        btn.tag = Int(key) ?? 0
-        btn.addTarget(nil, action: #selector(selectOption), for: .touchUpOutside)
-        //TODO: Constrains
-    }
-    
+}
 
-    /**
-     Func. chamada ao selectionar uma opcao
-     - parameter sender: Botao que deu trigger na funcao
-     */
-    @objc private func selectOption(sender: UIButton) {
-        self.chosenOption = String(sender.tag)
-        highlightBg(btn: sender)
+extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.question.options.count
     }
     
-
-    /**
-     Trata de representar visualmente para o usuario qual opcao esta selecionada no momento
-     - parameter btn: Botao que deve ser destacado
-     */
-    func highlightBg(btn: UIButton) {
-        for view in self.optionsContainer.subviews {
-            if let b = view as? UIButton {
-                if b == btn {
-                    b.backgroundColor = .green
-                }
-                else {
-                    b.backgroundColor = .clear
-                }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionOptionTableViewCell", for: indexPath) as? QuestionOptionTableViewCell {
+            let key = String(format: "%c", indexPath.row + 97)
+            if let text = self.question.options[key] {
+                cell.lblAnswer.text = text
+                cell.lblIndex.text = key + ") "
+            } else {
+                cell.lblAnswer.text = ""
+                cell.lblIndex.text = ""
             }
+            return cell
+        } else if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell{
+            /// 0 é para o texto da questao, 2 para legenda das imagens e 3 para o subenunciado
+            switch indexPath.section {
+            case 0:
+                cell.lblText.text = self.question.number + ") " + self.question.text
+            case 2:
+                if let text = self.question.subtitle {
+                    cell.lblText.text = text
+                } else {
+                    cell.isHidden = true
+                }
+            case 3:
+                if let text = self.question.subtitle {
+                    cell.lblText.text = text
+                } else {
+                    cell.isHidden = true
+                }
+            default:
+                cell.lblText.text = "Vei deu ruim"
+            }
+            return cell
+        } else if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionImageTableViewCell", for: indexPath) as? QuestionImageTableViewCell{
+            if let images = self.question.images {
+                cell.imgQuestionImage.image = images[indexPath.row]
+            } else {
+                cell.isHidden = true
+            }
+            
+            return cell
+        } else {
+            let cell = UITableViewCell.init()
+
+            return cell
         }
     }
     
+    func setupDelegateTableview() {
+        self.questionTableView.delegate = self
+        self.questionTableView.dataSource = self
+        self.questionTableView.register(UINib(nibName: "QuestionOptionTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionOptionTableViewCell")
+        self.questionTableView.register(UINib(nibName: "QuestionImageTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionOptionTableViewCell")
+        self.questionTableView.register(UINib(nibName: "QuestionTextTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionOptionTableViewCell")
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // Enunciado, imagens, legenda, subenunciado, respostas
+        return 5
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
+            chosenOption = String(format: "%c", indexPath.row + 97)
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.CardView.backgroundColor = .green
+                cell.lblAnswer.textColor = .white
+                cell.lblIndex.textColor = .white
+            })
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.CardView.backgroundColor = .white
+                cell.lblAnswer.textColor = .black
+                cell.lblIndex.textColor = .black
+            })
+        }
+    }
 }
 

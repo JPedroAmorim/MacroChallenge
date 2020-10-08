@@ -32,6 +32,16 @@ protocol QuestionViewControllerProtocol {
      */
     func previousWasSubmitted()
     
+    /**
+     
+     Método que alerta o controller que ele deve exibir uma questão em específico. Ao ser chamado, o controlador deve fazer a lógica para que os apontadores de previous e next fiquem
+     nas posições corretas.
+     
+     - parameter question: Questão que deve ser exibida.
+     
+     */
+    func displayQuestion(_ question: Question)
+    
     // Dependências
     var myView: QuestionViewProtocol? {get set}
 }

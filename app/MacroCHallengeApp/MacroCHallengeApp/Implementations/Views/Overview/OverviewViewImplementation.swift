@@ -28,7 +28,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		super.init(frame: CGRect.zero)
 		initFromNib()
 
-		setVisualElements(currentProgress: 0.7)
+		// To Do: novo parametro da classe para progresso atual
+		setupVisualElements(currentProgress: 0.7)
 		setupDelegateCollectionview()
 	}
 
@@ -51,7 +52,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
 	*/
 
-	private func setVisualElements(currentProgress: Float) {
+	private func setupVisualElements(currentProgress: Float) {
 		questionsView.layer.cornerRadius = 8
 		progressBar.layer.cornerRadius = 16
 
@@ -90,5 +91,6 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		print("Cell \(indexPath.row) clicked")
+		viewController.questionWasSubmitted(data.questions[indexPath.row])
 	}
 }

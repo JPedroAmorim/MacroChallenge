@@ -47,8 +47,6 @@ class OverviewControllerImplementationTests: XCTestCase {
         // Then
         XCTAssertEqual(33.00, testSubject.totalPercentageOfCorrectAnswers)
     }
-    
-    
 }
 
 // MARK: - Helper methods

@@ -75,7 +75,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
      
      Calcula a porcentagem total de acertos na prova (questões corretas/questões totais).
      
-     - returns A porcentagem de acertos como um double (exemplo: 44.33)
+     - returns A porcentagem de acertos como um double arredondado (exemplo: 44.00)
      
      */
     private func calculateTotalPercentage() -> Double {

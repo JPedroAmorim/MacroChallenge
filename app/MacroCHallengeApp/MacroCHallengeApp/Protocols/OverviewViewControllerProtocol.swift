@@ -10,10 +10,11 @@ import Foundation
 protocol OverviewViewControllerProtocol {
     /**
      
-     Método que inicializa o controller para a visão geral da prova. Ele deve receber a prova para ser realizada.
+     Método que inicializa o controller para a visão geral da prova. Ele deve receber a prova a ser realizada.
      
      
      - parameter data: A prova que será realizada.
+     - parameter questionController: Controlador da tela de questões.
      
      */
     
@@ -43,6 +44,15 @@ protocol OverviewViewControllerProtocol {
     
     func answerForQuestionWasSubmitted(question: Question, answer: String)
     
+    /**
+     
+     Método pelo qual o controller é avisado que a prova acabou.
+     
+     */
+    
+    func hasEnded()
+    
     // Dependências
     var myView: OverviewViewProtocol? {get set}
+    var questionController: QuestionViewControllerProtocol? {get set}
 }

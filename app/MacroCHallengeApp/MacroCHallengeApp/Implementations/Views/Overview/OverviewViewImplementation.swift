@@ -28,7 +28,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		super.init(frame: CGRect.zero)
 		initFromNib()
 
-		setVisualElements()
+		setVisualElements(currentProgress: 0.7)
 		setupDelegateCollectionview()
 	}
 
@@ -51,17 +51,16 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
 	*/
 
-	private func setVisualElements() {
+	private func setVisualElements(currentProgress: Float) {
 		questionsView.layer.cornerRadius = 8
-
 		progressBar.layer.cornerRadius = 16
 
-		let image = UIView()
-		image.tintColor = UIColor.red
-		image.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
-		image.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width/2, height: progressBar.frame.height)
-		image.layer.cornerRadius = 16
-		progressBar.addSubview(image)
+		let currentProgress = UIView()
+		currentProgress.tintColor = UIColor.red
+		currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
+		currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*0.7, height: progressBar.frame.height)
+		currentProgress.layer.cornerRadius = 16
+		progressBar.addSubview(currentProgress)
 	}
 }
 
@@ -89,8 +88,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		return 1
 	}
 
-	func collectionView(_ collectionView: UICollectionView,
-						didSelectItemAt indexPath: IndexPath) {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		print("Cell \(indexPath.row) clicked")
 	}
 }

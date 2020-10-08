@@ -20,6 +20,8 @@
 		4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
 		C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */; };
 		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
+		C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */; };
+		C4F885C2252F581D008FF2A0 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
 		D5276859252CB305003F0C70 /* MockSchoolsImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */; };
 		D527685D252CB51E003F0C70 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		D5276861252CB521003F0C70 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
@@ -100,6 +102,8 @@
 		4FFF6BAB252BA4F10015DFE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
+		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
+		C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionCell.swift; sourceTree = "<group>"; };
 		D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSchoolsImplementationTests.swift; sourceTree = "<group>"; };
 		D55446E0252F4020001793E0 /* OverviewViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewControllerImplementation.swift; sourceTree = "<group>"; };
 		D565EEE4252B813700426648 /* MacroCHallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroCHallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,8 +336,10 @@
 		D59E82FE252E2E37007E8CBD /* Overview */ = {
 			isa = PBXGroup;
 			children = (
-				D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */,
 				D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */,
+				D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */,
+				C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */,
+				C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,
 				2FF53935252E291500C0107B /* NoticeTableViewCell.xib in Resources */,
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
+				C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */,
 				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,9 +488,11 @@
 			files = (
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
+				C4F885C2252F581D008FF2A0 /* OverviewCollectionCell.swift in Sources */,
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,
 				D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
+				D55446C9252E5097001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D55446E1252F4020001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
@@ -533,6 +542,7 @@
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				D59E82F4252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
+				D55446CA252E5097001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 			);

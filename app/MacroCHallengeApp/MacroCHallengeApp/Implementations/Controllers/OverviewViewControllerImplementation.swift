@@ -23,6 +23,8 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     required init(data: Test) {
         self.data = data
         super.init(nibName: nil, bundle: nil)
+		navigationItem.title = self.data.name
+//		self.data
     }
     
     required init?(coder: NSCoder) {

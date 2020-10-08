@@ -30,11 +30,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
 		setVisualElements()
 		setupDelegateCollectionview()
-
-		for dat in data.questions {
-			print("----- New Question -----")
-			print(dat.number)
-		}
 	}
 
 	required init?(coder: NSCoder) {
@@ -86,7 +81,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
 		cell.numberLabel.text = data.questions[indexPath.row].number
-		
+
 		return cell
 	}
 

@@ -33,6 +33,10 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		}
 	}
 
+	// MARK: - Dependencies
+	var viewController: OverviewViewControllerProtocol
+
+	// MARK: - Alerts
 	func showAlert(title: String, msg: String) {
 		DispatchQueue.main.async {
 			let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -51,8 +55,17 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		}
 	}
 
-	// MARK: - Dependencies
-	var viewController: OverviewViewControllerProtocol
+	func showAlertStartSimulator(title: String, msg: String) {
+		DispatchQueue.main.async {
+			let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+
+			alert.addAction(UIAlertAction(title: "OK", style: .default))
+
+			if let viewController = self.viewController as? UIViewController {
+				viewController.present(alert, animated: true, completion: nil)
+			}
+		}
+	}
 
 	// MARK: - Private attributes
 	private var data: Test
@@ -149,6 +162,8 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if(simulatorStarted) {
 			viewController.questionWasSubmitted(data.questions[indexPath.row])
+		} else {
+			showAlertStartSimulator(title: "asdasd", msg: "asdasd")
 		}
 	}
 }

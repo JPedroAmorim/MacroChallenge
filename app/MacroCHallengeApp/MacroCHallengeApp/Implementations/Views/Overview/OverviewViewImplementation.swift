@@ -18,6 +18,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	@IBOutlet weak var progressLabel: UILabel!
 	@IBOutlet weak var progressBar: UIView!
 
+	@IBOutlet weak var startSimulatorButton: UIButton!
+
 	// MARK: - Dependencies
 	var viewController: OverviewViewControllerProtocol
 
@@ -57,6 +59,10 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	private func setupVisualElements() {
 		questionsView.layer.cornerRadius = 8
 		progressBar.layer.cornerRadius = 16
+
+		startSimulatorButton.layer.cornerRadius = 8
+		startSimulatorButton.layer.borderWidth = 3
+		startSimulatorButton.layer.borderColor = UIColor.systemBlue.cgColor
 		updatePercentage(percentage: 0.0)
 	}
     

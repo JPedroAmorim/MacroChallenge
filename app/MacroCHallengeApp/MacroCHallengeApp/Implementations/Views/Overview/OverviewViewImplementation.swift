@@ -8,6 +8,14 @@
 import UIKit
 
 class OverviewViewImplementation: UIView, OverviewViewProtocol {
+    func updatePercentage(percentage: Double) {
+        
+    }
+    
+    func updateAnsweredQuestions(questionsAnswered: [Int]) {
+        
+    }
+    
 	// MARK: -IBOutlets
 	@IBOutlet weak var questionsView: UIView!
 	@IBOutlet weak var questionsCollege: UICollectionView!

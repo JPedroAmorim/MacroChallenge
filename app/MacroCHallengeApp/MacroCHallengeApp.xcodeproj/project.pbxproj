@@ -75,6 +75,7 @@
 		D59E830A252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
 		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
+		D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -496,7 +497,6 @@
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,
 				D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
-				D55446C9252E5097001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
@@ -535,6 +535,7 @@
 				D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */,
+				D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */,
 				D586B56D252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				2FF53934252E291500C0107B /* NoticeTableViewCell.swift in Sources */,
 				D565EF38252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
@@ -546,7 +547,6 @@
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				D59E82F4252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
-				D55446CA252E5097001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* OverviewControllerImplementationTests.swift in Sources */,

@@ -20,7 +20,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     // MARK: - Init methods
     required init(data: Test) {
         self.data = data
-
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -63,6 +63,10 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     
     func answerForQuestionWasSubmitted(question: Question, answer: String) {
         questionsAnswered[question.number] = answer
+        let questionsAnsweredNumbersSorted: [Int] = dictKeysAsIntArray(questionsAnswered).sorted()
+        myView?.updateAnsweredQuestions(questionsAnswered: questionsAnsweredNumbersSorted)
+        let progressAsPercentage = calculateProgress()
+        myView?.updatePercentage(percentage: progressAsPercentage)
     }
     
     func hasEnded() {
@@ -96,5 +100,34 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         let roundedValue = (doubleValue * 100).rounded()
         
         return roundedValue
+    }
+    /**
+     
+     Mapeia as chaves de um dicionário para um vetor de inteiros. Caso ele não consiga mapear a chave, o resultado é zero.
+     
+     - parameter dict O dicionário que será mapeado
+     - returns Um vetor de inteiros com as chaves do dicionário como valores
+     
+     */
+    private func dictKeysAsIntArray(_ dict: [String:String]) -> [Int] {
+        return Array(dict.keys).map { (value) -> Int in
+            if let integerKey = Int(value) {
+                return integerKey
+            } else {
+                return 0
+            }
+        }
+    }
+    
+    /**
+     
+     Calcula o progresso feito (questões respondidas/questões totais) na forma de um Double arredondado que representa a porcentagem.
+     
+     - returns O valor arredondado do progresso em porcentagem (exemplo: 33.00)
+     
+     */
+    private func calculateProgress() -> Double {
+        let doubleValue: Double =  Double(questionsAnswered.count) / Double(data.questions.count)
+        return (doubleValue * 100).rounded()
     }
 }

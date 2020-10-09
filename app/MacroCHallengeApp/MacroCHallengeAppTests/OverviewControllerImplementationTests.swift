@@ -47,6 +47,57 @@ class OverviewControllerImplementationTests: XCTestCase {
         // Then
         XCTAssertEqual(33.00, testSubject.totalPercentageOfCorrectAnswers)
     }
+    
+    func testAnswerForQuestionWasSubmmited_whenAllCorrect_ShouldGiveRightNumbersForView() throws {
+        // Given
+        let testSubject = OverviewViewControllerImplementation(data: prepareMock())
+        let mockView = MockView(data: prepareMock(), controller: testSubject)
+        testSubject.myView = mockView
+        
+        // When
+        correctAnswers(toBeInjected: testSubject, questions: prepareMock().questions)
+        
+        // Then
+        var expectedResult: [Int] = []
+        for i in 1...30 {
+            expectedResult.append(i)
+        }
+        XCTAssertEqual(expectedResult, mockView.questionsAnsweredResult)
+    }
+    
+    func testAnswerForQuestionWasSubmitted_WhenOneThirdCorrect_ShouldGiveRightPercentage() throws {
+        // Given
+        let testSubject = OverviewViewControllerImplementation(data: prepareMock())
+        let mockView = MockView(data: prepareMock(), controller: testSubject)
+        testSubject.myView = mockView
+        
+        // When
+        oneThirdCorrectAnswers(toBeInjected: testSubject, questions: prepareMock().questions)
+        
+        // Then
+        let expectedResult: Double = 33.00
+        XCTAssertEqual(expectedResult, mockView.percentageResult)
+    }
+}
+
+// MARK: - Mock classes
+class MockView: OverviewViewProtocol {
+    required init(data: Test, controller: OverviewViewControllerProtocol) {
+        viewController = controller
+    }
+    
+    func updatePercentage(percentage: Double) {
+        percentageResult = percentage
+    }
+    
+    func updateAnsweredQuestions(questionsAnswered: [Int]) {
+        questionsAnsweredResult = questionsAnswered
+    }
+    
+    var viewController: OverviewViewControllerProtocol
+    
+    var percentageResult: Double = 0.0
+    var questionsAnsweredResult: [Int] = []
 }
 
 // MARK: - Helper methods

@@ -107,6 +107,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Iniciar Simulado"/>
+                    <connections>
+                        <action selector="startSimulatorButton:" destination="-1" eventType="touchUpInside" id="if3-Kl-Tl7"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

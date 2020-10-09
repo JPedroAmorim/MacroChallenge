@@ -9,7 +9,9 @@ import UIKit
 
 class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
+	// MARK: - Variables
 	var answeredQuestionsArray = [Int]()
+	var simulatorStarted = false
 
 	// MARK: -IBOutlets
 	@IBOutlet weak var questionsView: UIView!
@@ -19,6 +21,35 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	@IBOutlet weak var progressBar: UIView!
 
 	@IBOutlet weak var startSimulatorButton: UIButton!
+
+	// MARK: - IBAction
+	@IBAction func startSimulatorButton(_ sender: Any) {
+		if(simulatorStarted) {
+			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada")
+		} else {
+			simulatorStarted = true
+			startSimulatorButton.setTitle("Finalizar Simulado", for: .normal)
+			viewController.hasEnded()
+		}
+	}
+
+	func showAlert(title: String, msg: String) {
+		DispatchQueue.main.async {
+			let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+
+			alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+
+			alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+				self.viewController.hasEnded()
+				self.simulatorStarted = false
+				self.startSimulatorButton.setTitle("Iniciar Simulado", for: .normal)
+			}))
+
+			if let viewController = self.viewController as? UIViewController {
+				viewController.present(alert, animated: true, completion: nil)
+			}
+		}
+	}
 
 	// MARK: - Dependencies
 	var viewController: OverviewViewControllerProtocol
@@ -116,6 +147,8 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 	}
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		viewController.questionWasSubmitted(data.questions[indexPath.row])
+		if(simulatorStarted) {
+			viewController.questionWasSubmitted(data.questions[indexPath.row])
+		}
 	}
 }

@@ -98,7 +98,6 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		cell.numberLabel.text = data.questions[indexPath.row].number
 
 		if answeredQuestionsArray.contains(Int(data.questions[indexPath.row].number)!) {
-			print("passou")
 			cell.bgView.backgroundColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
 			cell.numberLabel.textColor = UIColor.white
 		}

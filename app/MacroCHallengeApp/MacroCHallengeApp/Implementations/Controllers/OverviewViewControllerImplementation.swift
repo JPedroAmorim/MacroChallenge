@@ -43,7 +43,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         let defaultView = OverviewViewImplementation(data: self.data, controller: self)
         self.myView = defaultView
         self.view = defaultView
-		defaultView.updateAnsweredQuestions(questionsAnswered: [16])
     }
     
     private func setupDefaultQuestionController() {

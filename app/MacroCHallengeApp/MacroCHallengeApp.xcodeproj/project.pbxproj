@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */; };
+		4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */; };
 		4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
 		4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionButtonsTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionButtonsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionButtonsTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionButtonsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6B9E252BA3510015DFE7 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		4FFF6BA6252BA4720015DFE7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4FFF6BAB252BA4F10015DFE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 				4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */,
 				4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */,
 				4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */,
+				4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */,
+				4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -424,6 +430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
 				4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */,
@@ -462,6 +469,7 @@
 			files = (
 				4FFF6BC1252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift in Sources */,
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
+				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,

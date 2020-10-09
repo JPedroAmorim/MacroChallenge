@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionTextTableViewCell" id="cQ8-B0-pZ9" customClass="QuestionTextTableViewCell" customModule="MacroCHallengeApp" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionTextTableViewCell" id="cQ8-B0-pZ9" customClass="QuestionTextTableViewCell" customModule="MacroCHallengeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cQ8-B0-pZ9" id="Zct-B4-Kci">
@@ -17,17 +17,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYV-iz-sea" userLabel="lblText">
-                        <rect key="frame" x="8" y="6" width="398" height="32"/>
+                        <rect key="frame" x="8" y="8" width="398" height="28"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="TYV-iz-sea" firstAttribute="top" secondItem="Zct-B4-Kci" secondAttribute="top" constant="8" id="5B7-bI-Z6S"/>
                     <constraint firstAttribute="trailing" secondItem="TYV-iz-sea" secondAttribute="trailing" constant="8" id="73s-Jq-zFb"/>
+                    <constraint firstAttribute="bottom" secondItem="TYV-iz-sea" secondAttribute="bottom" constant="8" id="F12-rp-kUP"/>
                     <constraint firstItem="TYV-iz-sea" firstAttribute="leading" secondItem="Zct-B4-Kci" secondAttribute="leading" constant="8" id="GgY-08-7S9"/>
-                    <constraint firstAttribute="bottom" secondItem="TYV-iz-sea" secondAttribute="bottom" constant="6" id="ToB-Tb-DvQ"/>
-                    <constraint firstItem="TYV-iz-sea" firstAttribute="top" secondItem="Zct-B4-Kci" secondAttribute="top" constant="6" id="dxV-vl-RMI"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

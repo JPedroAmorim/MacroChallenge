@@ -15,7 +15,7 @@ class Question {
     private(set) var images: [UIImage]?
     private(set) var subtitle: String?
     private(set) var options: [String:String]
-    private(set) var answer: String
+    private(set) var answer: String?
     
     init(number: String, text: String, initialText: String?, images: [UIImage]?, subtitle: String?, options: [String : String], answer: String) {
         self.number = number

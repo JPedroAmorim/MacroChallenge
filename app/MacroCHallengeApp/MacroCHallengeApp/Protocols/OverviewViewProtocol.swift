@@ -21,6 +21,28 @@ protocol OverviewViewProtocol {
     
     init(data: Test, controller: OverviewViewControllerProtocol)
     
+    /**
+     
+     Método que atualiza o progresso mostrado na barra de progresso no overview.
+     
+     
+     - parameter percentage: O progresso a ser mostrado.
+     
+     */
+    
+    func updatePercentage(percentage: Double)
+    
+    /**
+     
+     Método que indica visualmente no overview as questões respondidas.
+     
+     
+     - parameter questionsAnswered: Um vetor de inteiros com os números das questões já respondidas.
+     
+     */
+    
+    func updateAnsweredQuestions(questionsAnswered: [Int])
+    
     // Dependências
     var viewController: OverviewViewControllerProtocol  {get set}
 }

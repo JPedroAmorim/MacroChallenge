@@ -59,7 +59,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		progressBar.layer.cornerRadius = 16
 		updatePercentage(percentage: 0.0)
 	}
-
+    
+    // MARK: - OverviewViewProtocol methods
 	func updatePercentage(percentage: Double) {
 		let currentProgress = UIView()
 		currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")

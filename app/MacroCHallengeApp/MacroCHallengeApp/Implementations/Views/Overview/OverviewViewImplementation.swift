@@ -74,7 +74,9 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	}
 
 	func updateAnsweredQuestions(questionsAnswered: [Int]) {
+		print("updateAnsweredQuestions")
 		answeredQuestionsArray = questionsAnswered
+		questionsCollege.reloadData()
 	}
 }
 
@@ -95,8 +97,10 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
 		cell.numberLabel.text = data.questions[indexPath.row].number
 
-		if answeredQuestionsArray.contains(indexPath.row) {
-			cell.backgroundColor = UIColor.blue
+		if answeredQuestionsArray.contains(Int(data.questions[indexPath.row].number)!) {
+			print("passou")
+			cell.bgView.backgroundColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
+			cell.numberLabel.textColor = UIColor.white
 		}
 
 		return cell

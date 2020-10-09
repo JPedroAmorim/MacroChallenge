@@ -8,6 +8,9 @@
 import UIKit
 
 class OverviewViewImplementation: UIView, OverviewViewProtocol {
+
+	var answeredQuestionsArray = [Int]()
+
 	// MARK: -IBOutlets
 	@IBOutlet weak var questionsView: UIView!
 	@IBOutlet weak var questionsCollege: UICollectionView!
@@ -29,7 +32,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		initFromNib()
 
 		// To Do: novo parametro da classe para progresso atual
-		setupVisualElements(currentProgress: 0.7)
+		setupVisualElements()
 		setupDelegateCollectionview()
 	}
 
@@ -52,16 +55,26 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
 	*/
 
-	private func setupVisualElements(currentProgress: Float) {
+	private func setupVisualElements() {
 		questionsView.layer.cornerRadius = 8
 		progressBar.layer.cornerRadius = 16
+		updatePercentage(percentage: 0.0)
+	}
 
+	func updatePercentage(percentage: Double) {
 		let currentProgress = UIView()
-		currentProgress.tintColor = UIColor.red
 		currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
-		currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*0.7, height: progressBar.frame.height)
+		currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*CGFloat(percentage)*0.01, height: progressBar.frame.height)
 		currentProgress.layer.cornerRadius = 16
 		progressBar.addSubview(currentProgress)
+
+		progressLabel.text = String(format: "%02d",
+									Int(Double(data.questions.count)*Double(CGFloat(percentage))*0.01)) +
+									"/" + String(format: "%02d", data.questions.count)
+	}
+
+	func updateAnsweredQuestions(questionsAnswered: [Int]) {
+		answeredQuestionsArray = questionsAnswered
 	}
 }
 
@@ -82,6 +95,10 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
 		cell.numberLabel.text = data.questions[indexPath.row].number
 
+		if answeredQuestionsArray.contains(indexPath.row) {
+			cell.backgroundColor = UIColor.blue
+		}
+
 		return cell
 	}
 
@@ -90,7 +107,6 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 	}
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		print("Cell \(indexPath.row) clicked")
 		viewController.questionWasSubmitted(data.questions[indexPath.row])
 	}
 }

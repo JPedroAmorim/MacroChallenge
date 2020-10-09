@@ -31,7 +31,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		super.init(frame: CGRect.zero)
 		initFromNib()
 
-		// To Do: novo parametro da classe para progresso atual
 		setupVisualElements()
 		setupDelegateCollectionview()
 	}
@@ -68,13 +67,11 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		currentProgress.layer.cornerRadius = 16
 		progressBar.addSubview(currentProgress)
 
-		progressLabel.text = String(format: "%02d",
-									Int(Double(data.questions.count)*Double(CGFloat(percentage))*0.01)) +
-									"/" + String(format: "%02d", data.questions.count)
+		let curretQuestions = Int(Double(data.questions.count)*Double(CGFloat(percentage))*0.01)
+		progressLabel.text = String(format: "%02d", curretQuestions) + "/" + String(format: "%02d", data.questions.count)
 	}
 
 	func updateAnsweredQuestions(questionsAnswered: [Int]) {
-		print("updateAnsweredQuestions")
 		answeredQuestionsArray = questionsAnswered
 		questionsCollege.reloadData()
 	}
@@ -97,9 +94,11 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
 		cell.numberLabel.text = data.questions[indexPath.row].number
 
-		if answeredQuestionsArray.contains(Int(data.questions[indexPath.row].number)!) {
-			cell.bgView.backgroundColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
-			cell.numberLabel.textColor = UIColor.white
+		if let questionNumber = Int(data.questions[indexPath.row].number) {
+			if answeredQuestionsArray.contains(questionNumber) {
+				cell.bgView.backgroundColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
+				cell.numberLabel.textColor = UIColor.white
+			}
 		}
 
 		return cell

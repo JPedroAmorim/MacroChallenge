@@ -8,15 +8,15 @@
 import UIKit
 
 class QuestionViewControllerImplementation: UIViewController, QuestionViewControllerProtocol {
-    // MARK: - Dependencias
+    // MARK: - Dependencies
     var myView: QuestionViewProtocol?
     
-    // MARK: - Atributos privados
+    // MARK: - Private attributes
     private var data: [Question]
     private var currentQuestionIndex: Int
-    var chosenOption: String?
+    var chosenOption: String? // Ver se isso aqui é privado mesmo
     
-    // MARK: - Métodos de init
+    // MARK: - Init methods
     required init(data: [Question]) {
         self.data = data
         self.currentQuestionIndex = 0
@@ -40,40 +40,58 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setNavTitle(index: self.data[self.currentQuestionIndex].number)
+        setNavTitle(index: data[currentQuestionIndex].number)
     }
     
-    // MARK: - Métodos do protocolo
+    // MARK: - QuestionsViewControllerProtocolMethods
     func nextWasSubmitted() {
-        if (currentQuestionIndex < data.count - 1) {
+        if currentQuestionIndex < data.count - 1 {
             currentQuestionIndex += 1
-            myView?.overwrite(data: self.data[self.currentQuestionIndex])
-            setNavTitle(index: self.data[self.currentQuestionIndex].number)
+            myView?.overwrite(data: data[currentQuestionIndex])
+            setNavTitle(index: data[currentQuestionIndex].number)
         }
     }
     
     func previousWasSubmitted() {
-        if (currentQuestionIndex > 0) {
+        if currentQuestionIndex > 0 {
             currentQuestionIndex -= 1
-            myView?.overwrite(data: self.data[self.currentQuestionIndex])
-            setNavTitle(index: self.data[self.currentQuestionIndex].number)
+            myView?.overwrite(data: data[currentQuestionIndex])
+            setNavTitle(index: data[currentQuestionIndex].number)
         }
+    }
+    
+    func displayQuestion(_ question: Question) {
+        guard let questionNumberAsString = data.filter({$0.number == question.number}).first?.number else {
+            return
+        }
+        
+        guard let questionNumberAsInteger = Int(questionNumberAsString) else {
+            return
+        }
+        
+        currentQuestionIndex = questionNumberAsInteger - 1
+        
+        myView?.overwrite(data: data[currentQuestionIndex])
     }
     
     // MARK: - Métodos privados
     /**
-        Da display na primeira questão do array de questões
+     
+     Dá display na primeira questão do array de questões
+     
      */
     private func setupDefaultView() { 
-        let defaultView = QuestionViewImplementation(data: self.data[self.currentQuestionIndex], controller: self)
+        let defaultView = QuestionViewImplementation(data: data[currentQuestionIndex], controller: self)
         self.myView = defaultView
         self.view = defaultView
-        
     }
     
     /**
-        Seta o título da navbar de acordo com o parâmetro index
-        - parameter index: Índice da questão
+     
+     Seta o título da navbar de acordo com o parâmetro index
+     
+     - parameter index: Índice da questão
+     
      */
     private func setNavTitle(index: String) {
         guard let nav = self.navigationController else {return}

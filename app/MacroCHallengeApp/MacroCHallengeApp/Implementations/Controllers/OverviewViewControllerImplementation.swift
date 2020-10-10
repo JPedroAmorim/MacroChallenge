@@ -36,6 +36,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDefaultQuestionController()
     }
     
     // MARK: - Setup methods
@@ -47,7 +48,8 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     }
     
     private func setupDefaultQuestionController() {
-        // TODO: Depois de mergear com o papoti, implementar isso daqui.
+        let defaultQuestionController = QuestionViewControllerImplementation(data: data.questions)
+        self.questionController = defaultQuestionController
     }
     
     // MARK: - OverviewViewControllerProtocol methods

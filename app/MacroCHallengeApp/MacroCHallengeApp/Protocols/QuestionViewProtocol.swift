@@ -25,11 +25,18 @@ protocol QuestionViewProtocol {
      
      Método que irá sobrescrever os elementos visuais da questão atual com a questão fornecida.
      
-     -parameter data: A questão que agora será exibida.
+     - parameter data: A questão que agora será exibida.
      
      */
     
     func overwrite(data: Question)
+    
+    /**
+     
+     Método que irá sinalizar a view que a questão já foi respondida e ela deveria 
+     - parameter data: A questão que agora será exibida.
+     
+     */
     
     // Dependências
     var controller: QuestionViewControllerProtocol  {get set}

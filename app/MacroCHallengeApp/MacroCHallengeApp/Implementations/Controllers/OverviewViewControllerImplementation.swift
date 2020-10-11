@@ -44,7 +44,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         let defaultView = OverviewViewImplementation(data: self.data, controller: self)
         self.myView = defaultView
         self.view = defaultView
-
     }
     
     private func setupDefaultQuestionController() {
@@ -124,7 +123,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             }
         }
     }
-    
+
     /**
      
      Calcula o progresso feito (questões respondidas/questões totais) na forma de um Double arredondado que representa a porcentagem.

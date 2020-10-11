@@ -26,14 +26,17 @@ protocol QuestionViewProtocol {
      Método que irá sobrescrever os elementos visuais da questão atual com a questão fornecida.
      
      - parameter data: A questão que agora será exibida.
+     - parameter wasAlreadyAnswered: String opcional para indicar se uma questão já foi ou não respondida. Caso seu valor não
+     seja nil, quer dizer que a questão já foi respondida.
      
      */
     
-    func overwrite(data: Question)
+    func overwrite(data: Question, wasAlreadyAnswered: String?)
     
     /**
      
-     Método que irá sinalizar a view que a questão já foi respondida e ela deveria 
+     Método que irá sinalizar a view que a questão já foi respondida e ela deveria sinalizar a questão.
+     
      - parameter data: A questão que agora será exibida.
      
      */

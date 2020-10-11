@@ -46,6 +46,17 @@ protocol OverviewViewControllerProtocol {
     
     /**
      
+     Método pelo qual o controller é avisado que a reposta de uma questão foi deselecionada.
+     
+     
+     - parameter question: A questão cuja resposta foi deselecionada.
+     
+     */
+    
+    func questionWasUnsubmitted(question: Question)
+    
+    /**
+     
      Método pelo qual o controller é avisado que a prova acabou.
      
      */

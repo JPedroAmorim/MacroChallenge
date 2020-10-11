@@ -47,19 +47,25 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     // MARK: - Funções do protocolo
     /**
-        Método reponsavél por sobrescrever a view com uma nova questão
-        - parameter data: Questão que será utilizada para sobrescrever a view
+     Método reponsavél por sobrescrever a view com uma nova questão
+     - parameter data: Questão que será utilizada para sobrescrever a view
      */
-    func overwrite(data: Question) {
+    func overwrite(data: Question, wasAlreadyAnswered: String?) {
         self.question = data
-        self.chosenOption = nil
+        if let alreadyChosenOption = wasAlreadyAnswered {
+            self.chosenOption = alreadyChosenOption
+        } else {
+            self.chosenOption = nil
+        }
         self.questionTableView.reloadData()
     }
     
     // MARK: - Funções privadas
     /**
+     
      Função utilizada para registrar o arquivo .xib das celulas para serem utilizadas pela table view
      - parameter nibName: Nome que referencia o nome do xib
+     
      */
     func referenceXib(nibName: String) {
         let nib = UINib.init(nibName: nibName, bundle: nil)
@@ -97,7 +103,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         switch  (indexPath.section) {
         case 0: // Initial text + number
             let cellIdentifier = "QuestionTextTableViewCell"
@@ -107,7 +113,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 let myString = self.question.number + ") " + (question.initialText ?? "")
                 let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-
+                
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .black
                 
@@ -132,7 +138,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 let myString = self.question.subtitle ?? ""
                 let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-
+                
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .gray
                 
@@ -148,7 +154,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 let myString = self.question.text
                 let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-
+                
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .black
                 
@@ -189,19 +195,24 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             return UITableViewCell()
         }
     }
-
+    
     func tableView( _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
-            let option = String(format: "%c", indexPath.row + 97)
+            let option = String(format: "%c", indexPath.row + 97) // o que raios é essa conversão?
             if option == self.chosenOption {
                 self.chosenOption = nil
+                self.controller.answerWasUnsubmitted(question: self.question)
                 UIView.animate(withDuration: 0.3, animations: {
                     cell.CardView.backgroundColor = .white
                     cell.lblAnswer.textColor = .black
                     cell.lblIndex.textColor = .black
                 })
             } else {
+                if self.chosenOption != nil {
+                    unselectAlreadyChosenDisplay()
+                }
                 self.chosenOption = option
+                self.controller.answerWasSubmitted(question: self.question, answer: option)
                 UIView.animate(withDuration: 0.3, animations: {
                     cell.CardView.backgroundColor = .gray
                     cell.lblAnswer.textColor = .white
@@ -210,7 +221,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             }
         }
     }
-
+    
     func tableView( _ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
             UIView.animate(withDuration: 0.3, animations: {
@@ -218,6 +229,28 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.lblAnswer.textColor = .black
                 cell.lblIndex.textColor = .black
             })
+        }
+    }
+    
+    
+    /**
+     
+     Função auxiliar que deseleciona uma célula caso ela já tenha sido escolhida previamente.
+     
+     */
+    
+    private func unselectAlreadyChosenDisplay() {
+        for cell in questionTableView.visibleCells {
+            if let optionCell = cell as? QuestionOptionTableViewCell {
+                if let indexPath = questionTableView.indexPath(for: optionCell) {
+                    let option = String(format: "%c", indexPath.row + 97)
+                    if option == self.chosenOption {
+                        optionCell.CardView.backgroundColor = .white
+                        optionCell.lblAnswer.textColor = .black
+                        optionCell.lblIndex.textColor = .black
+                    }
+                }
+            }
         }
     }
 }

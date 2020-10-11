@@ -14,7 +14,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	// MARK: -IBOutlets
 	@IBOutlet weak var questionsView: UIView!
 	@IBOutlet weak var questionsCollege: UICollectionView!
-
 	@IBOutlet weak var progressLabel: UILabel!
 	@IBOutlet weak var progressBar: UIView!
 
@@ -55,6 +54,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	*/
 
 	private func setupVisualElements() {
+        progressLabel.text = "00" + "/" + String(format: "%02d", data.questions.count)
 		questionsView.layer.cornerRadius = 8
 		progressBar.layer.cornerRadius = 16
 		updatePercentage(percentage: 0.0)
@@ -63,14 +63,18 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     // MARK: - OverviewViewProtocol methods
 	func updatePercentage(percentage: Double) {
 		let currentProgress = UIView()
+        for view in progressBar.subviews { // Limpa subviews anteriores
+            view.removeFromSuperview()
+        }
 		currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
 		currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*CGFloat(percentage)*0.01, height: progressBar.frame.height)
 		currentProgress.layer.cornerRadius = 16
 		progressBar.addSubview(currentProgress)
-
-		let curretQuestions = Int(Double(data.questions.count)*Double(CGFloat(percentage))*0.01)
-		progressLabel.text = String(format: "%02d", curretQuestions) + "/" + String(format: "%02d", data.questions.count)
 	}
+    
+    func updateCurrentQuestionsLabel(questionsAnswered: Int) {
+        progressLabel.text = String(format: "%02d", questionsAnswered) + "/" + String(format: "%02d", data.questions.count)
+    }
 
 	func updateAnsweredQuestions(questionsAnswered: [Int]) {
 		answeredQuestionsArray = questionsAnswered
@@ -99,7 +103,10 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 			if answeredQuestionsArray.contains(questionNumber) {
 				cell.bgView.backgroundColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
 				cell.numberLabel.textColor = UIColor.white
-			}
+            } else {
+                cell.bgView.backgroundColor = UIColor.white
+                cell.numberLabel.textColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
+            }
 		}
 
 		return cell

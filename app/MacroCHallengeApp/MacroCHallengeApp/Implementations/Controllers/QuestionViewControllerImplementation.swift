@@ -10,15 +10,17 @@ import UIKit
 class QuestionViewControllerImplementation: UIViewController, QuestionViewControllerProtocol {
     // MARK: - Dependencies
     var myView: QuestionViewProtocol?
+    var parentController: OverviewViewControllerProtocol
     
     // MARK: - Private attributes
     private var data: [Question]
     private var currentQuestionIndex: Int
-    var chosenOption: String? // Ver se isso aqui é privado mesmo
+    private var answeredQuestions: [String : String] = [:]
     
     // MARK: - Init methods
-    required init(data: [Question]) {
+    required init(data: [Question], parentController: OverviewViewControllerProtocol) {
         self.data = data
+        self.parentController = parentController
         self.currentQuestionIndex = 0
         super.init(nibName: nil, bundle: nil)
     }
@@ -47,7 +49,8 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     func nextWasSubmitted() {
         if currentQuestionIndex < data.count - 1 {
             currentQuestionIndex += 1
-            myView?.overwrite(data: data[currentQuestionIndex])
+            let currentQuestionNumber = data[currentQuestionIndex].number
+            myView?.overwrite(data: data[currentQuestionIndex], wasAlreadyAnswered: answeredQuestions[currentQuestionNumber])
             setNavTitle(index: data[currentQuestionIndex].number)
         }
     }
@@ -55,7 +58,8 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     func previousWasSubmitted() {
         if currentQuestionIndex > 0 {
             currentQuestionIndex -= 1
-            myView?.overwrite(data: data[currentQuestionIndex])
+            let currentQuestionNumber = data[currentQuestionIndex].number
+            myView?.overwrite(data: data[currentQuestionIndex], wasAlreadyAnswered: answeredQuestions[currentQuestionNumber])
             setNavTitle(index: data[currentQuestionIndex].number)
         }
     }
@@ -71,7 +75,17 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
         
         currentQuestionIndex = questionNumberAsInteger - 1
         
-        myView?.overwrite(data: data[currentQuestionIndex])
+        myView?.overwrite(data: data[currentQuestionIndex], wasAlreadyAnswered: answeredQuestions[question.number])
+    }
+    
+    func answerWasSubmitted(question: Question, answer: String) {
+        answeredQuestions[question.number] = answer
+        parentController.answerForQuestionWasSubmitted(question: question, answer: answer)
+    }
+    
+    func answerWasUnsubmitted(question: Question) {
+        answeredQuestions[question.number] = nil
+        parentController.questionWasUnsubmitted(question: question)
     }
     
     // MARK: - Métodos privados
@@ -94,7 +108,7 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
      
      */
     private func setNavTitle(index: String) {
-        guard let nav = self.navigationController else {return}
+        guard let nav = self.navigationController else { return } 
         nav.navigationItem.title = "Questão " + index
     }
 }

@@ -34,6 +34,17 @@ protocol OverviewViewProtocol {
     
     /**
      
+     Método que atualiza a label que contém o número de já questões feitas.
+     
+     
+     - parameter questionsAnswered: Número de questões já feitas.
+     
+     */
+    
+    func updateCurrentQuestionsLabel(questionsAnswered: Int)
+    
+    /**
+     
      Método que indica visualmente no overview as questões respondidas.
      
      

@@ -48,7 +48,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     }
     
     private func setupDefaultQuestionController() {
-        let defaultQuestionController = QuestionViewControllerImplementation(data: data.questions)
+        let defaultQuestionController = QuestionViewControllerImplementation(data: data.questions, parentController: self)
         self.questionController = defaultQuestionController
     }
     
@@ -66,10 +66,12 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     
     func answerForQuestionWasSubmitted(question: Question, answer: String) {
         questionsAnswered[question.number] = answer
-        let questionsAnsweredNumbersSorted: [Int] = dictKeysAsIntArray(questionsAnswered).sorted()
-        myView?.updateAnsweredQuestions(questionsAnswered: questionsAnsweredNumbersSorted)
-        let progressAsPercentage = calculateProgress()
-        myView?.updatePercentage(percentage: progressAsPercentage)
+        updateView()
+    }
+    
+    func questionWasUnsubmitted(question: Question) {
+        questionsAnswered[question.number] = nil
+        updateView()
     }
     
     func hasEnded() {
@@ -104,6 +106,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         
         return roundedValue
     }
+    
     /**
      
      Mapeia as chaves de um dicionário para um vetor de inteiros. Caso ele não consiga mapear a chave, o resultado é zero.
@@ -132,5 +135,19 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     private func calculateProgress() -> Double {
         let doubleValue: Double =  Double(questionsAnswered.count) / Double(data.questions.count)
         return (doubleValue * 100).rounded()
+    }
+    
+    /**
+     
+     Atualiza o view sobre o status de questões respondidas/não respondidas.
+     
+     */
+    
+    private func updateView() {
+        let questionsAnsweredNumbersSorted: [Int] = dictKeysAsIntArray(questionsAnswered).sorted()
+        myView?.updateAnsweredQuestions(questionsAnswered: questionsAnsweredNumbersSorted)
+        let progressAsPercentage = calculateProgress()
+        myView?.updatePercentage(percentage: progressAsPercentage)
+        myView?.updateCurrentQuestionsLabel(questionsAnswered: questionsAnswered.count)
     }
 }

@@ -8,6 +8,10 @@
 import UIKit
 
 class OverviewViewControllerImplementation: UIViewController, OverviewViewControllerProtocol {
+    func hasBegun() {
+        
+    }
+    
     // MARK: - Dependencies
     var myView: OverviewViewProtocol?
     var questionController: QuestionViewControllerProtocol?

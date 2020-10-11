@@ -27,7 +27,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     // MARK: - IBActions
     @IBAction func startSimulatorButton(_ sender: Any) {
         if simulatorStarted {
-            showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", closure: ({ action in
+            showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
                 self.viewController.hasEnded()
                 self.simulatorStarted = false
                 self.startSimulatorButton.setTitle("Iniciar Simulado", for: .normal)
@@ -43,10 +43,12 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     var viewController: OverviewViewControllerProtocol
     
     // MARK: - Alerts
-    func showAlert(title: String, msg: String, closure: @escaping (UIAlertAction) -> Void) {
+    func showAlert(title: String, msg: String, shouldPresentCancel: Bool, closure: @escaping (UIAlertAction) -> Void) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
+        if shouldPresentCancel {
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: closure))
         
@@ -142,7 +144,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        self.clockLabel.text = String(format: "0%d", hours) + ":" + String(format: "0%d", minutes)
+                        self.clockLabel.text = String(format: "0%d", hours) + ":" + String(format: "%d", minutes)
                     }
                 }
             }
@@ -150,7 +152,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             if totalCounter == self.testDurationInSeconds {
                 timer.invalidate()
                 DispatchQueue.main.async {
-                    self.showAlert(title: "O tempo para o simulado acabou", msg: "O tempo dedicado à prova acabou. Mesmo assim, você ainda pode finalizar as suas questões", closure: ({action in}))
+                    self.showAlert(title: "O tempo para o simulado acabou", msg: "O tempo dedicado à prova acabou. Mesmo assim, você ainda pode finalizar as suas questões.", shouldPresentCancel: false, closure: ({action in}))
                 }
             }
         }

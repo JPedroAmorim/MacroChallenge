@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverviewViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
+                <outlet property="clockLabel" destination="CJL-4f-A3d" id="rbW-FC-Yfq"/>
                 <outlet property="progressBar" destination="bgv-Dp-xSD" id="jNF-Ma-ly7"/>
                 <outlet property="progressLabel" destination="cZi-Ju-tak" id="mXD-lv-9ZM"/>
                 <outlet property="questionsCollege" destination="Ghc-vp-oeF" id="0ve-vY-C4x"/>
@@ -29,8 +30,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-4f-A3d">
-                    <rect key="frame" x="355" y="52" width="43" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-4f-A3d">
+                    <rect key="frame" x="352" y="52" width="46" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
@@ -58,7 +59,7 @@
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="7Wl-9R-RwB">
-                    <rect key="frame" x="327" y="52.5" width="20" height="20"/>
+                    <rect key="frame" x="324" y="52.5" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="Qse-2u-BzU"/>
                         <constraint firstAttribute="width" secondItem="7Wl-9R-RwB" secondAttribute="height" multiplier="1:1" id="n8Z-vm-810"/>

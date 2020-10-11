@@ -57,6 +57,14 @@ protocol OverviewViewControllerProtocol {
     
     /**
      
+     Método pelo qual o controller é avisado que a prova começou.
+     
+     */
+    
+    func hasBegun()
+    
+    /**
+     
      Método pelo qual o controller é avisado que a prova acabou.
      
      */

@@ -25,8 +25,8 @@ class OverviewCollectionCell: UICollectionViewCell {
      
 	*/
 	private func setupCardView() {
-		bgView.layer.borderWidth = 6
+		bgView.layer.borderWidth = 3.5
 		bgView.layer.borderColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1).cgColor
-		bgView.layer.cornerRadius = 10
+		bgView.layer.cornerRadius = 5
 	}
 }

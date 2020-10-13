@@ -105,11 +105,12 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     private func setupVisualElements() {
         progressLabel.text = "00" + "/" + String(format: "%02d", data.questions.count)
         questionsView.layer.cornerRadius = 8
-        progressBar.layer.cornerRadius = 16
+		progressBar.layer.cornerRadius = progressBar.frame.height/2
         
         startSimulatorButton.layer.cornerRadius = 8
         startSimulatorButton.layer.borderWidth = 3
-        startSimulatorButton.layer.borderColor = UIColor.systemBlue.cgColor
+        startSimulatorButton.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
+		startSimulatorButton.titleLabel?.tintColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
         updatePercentage(percentage: 0.0)
     }
     
@@ -165,8 +166,14 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             view.removeFromSuperview()
         }
         currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
-        currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*CGFloat(percentage)*0.01, height: progressBar.frame.height)
-        currentProgress.layer.cornerRadius = 16
+
+		if(percentage == 0) {
+			currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.height, height: progressBar.frame.height)
+		} else {
+			currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*CGFloat(percentage)*0.01, height: progressBar.frame.height)
+		}
+
+        currentProgress.layer.cornerRadius = progressBar.frame.height/2
         progressBar.addSubview(currentProgress)
     }
     
@@ -199,7 +206,8 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
         
         if let questionNumber = Int(data.questions[indexPath.row].number) {
             if answeredQuestionsArray.contains(questionNumber) {
-                cell.bgView.backgroundColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
+                cell.bgView.backgroundColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
+				cell.bgView.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
                 cell.numberLabel.textColor = UIColor.white
             } else {
                 cell.bgView.backgroundColor = UIColor.white

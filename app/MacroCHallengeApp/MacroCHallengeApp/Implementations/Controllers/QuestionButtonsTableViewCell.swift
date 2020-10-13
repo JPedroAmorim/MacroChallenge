@@ -26,7 +26,7 @@ class QuestionButtonsTableViewCell: UITableViewCell {
     // MARK: - Lifecyle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // setupCardView()
+        setupCardView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,8 +36,9 @@ class QuestionButtonsTableViewCell: UITableViewCell {
     }
     
     private func setupCardView() {
-        cardAnterior.layer.borderWidth = 6
-        cardAnterior.layer.borderColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1).cgColor
+        cardAnterior.layer.borderWidth = 4
+        // 0x195fe6
+        cardAnterior.layer.borderColor = UIColor(red:19/255, green:95/255, blue:230/255, alpha: 1).cgColor
         cardAnterior.layer.cornerRadius = 10
     }
 }

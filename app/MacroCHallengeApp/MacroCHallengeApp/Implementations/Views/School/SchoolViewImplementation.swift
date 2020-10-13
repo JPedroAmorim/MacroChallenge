@@ -17,7 +17,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - Private attributes
     private var data: School
     
-    private let sectionHeaderTitleArray = ["", "Provas"]
+    private let sectionHeaderTitleArray = ["Provas", "Saiba mais sobre o edital"]
     
     // MARK: - Init methods
     required init(data: School, controller: SchoolViewControllerProtocol) {
@@ -78,10 +78,10 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var numberOfRows = 0
         
-        if section == 0 { // notice section
-            numberOfRows = 1
-        } else if section == 1 { // tests section
+        if section == 0 { // tests section
             numberOfRows = data.tests.count
+        } else if section == 1 { // notice section
+            numberOfRows = 1
         }
         return numberOfRows
     }
@@ -105,20 +105,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
         var cellIdentifier = String()
         var finalCell = UITableViewCell()
         
-        if indexPath.section == 0 { // notice
-            cellIdentifier = "NoticeTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NoticeTableViewCell  else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-            
-            finalCell = cell
-            
-            cell.noticeLabel.text = "Edital YYYY"
-            //cell.logoImageView = UIImageView()
-            
-        } else if indexPath.section == 1 { // tests
+        if indexPath.section == 0 { // tests
             cellIdentifier = "TestTableViewCell"
             referenceXib(nibName: cellIdentifier)
             
@@ -131,6 +118,19 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             let test = data.tests[indexPath.row]
             
             cell.testLabel.text = "Prova \(test.year)"
+            
+        } else if indexPath.section == 1 { // notice
+            cellIdentifier = "NoticeTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NoticeTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
+            }
+            
+            finalCell = cell
+            
+            cell.noticeLabel.text = "Edital 2021"
+            cell.logoImageView.image = UIImage(named: "logoCTI")
         }
         
         return finalCell

@@ -24,7 +24,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     // MARK: - Init methods
     required init(data: Test) {
         self.data = data
-        
         super.init(nibName: nil, bundle: nil)
     }
     

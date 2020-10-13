@@ -76,12 +76,16 @@
 		D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
 		D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */; };
 		D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */; };
-		D59A37602535DC7500AD14F1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A375F2535DC7500AD14F1 /* ResultsViewController.swift */; };
-		D59A37612535DC7500AD14F1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A375F2535DC7500AD14F1 /* ResultsViewController.swift */; };
+		D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */; };
+		D59A37612535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */; };
 		D59A37662535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */; };
 		D59A37672535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */; };
 		D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A376B2535DF8100AD14F1 /* ResultsData.swift */; };
 		D59A376D2535DF8100AD14F1 /* ResultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A376B2535DF8100AD14F1 /* ResultsData.swift */; };
+		D59A37782535F1E300AD14F1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A37772535F1E300AD14F1 /* ResultsViewController.swift */; };
+		D59A37792535F1E300AD14F1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A37772535F1E300AD14F1 /* ResultsViewController.swift */; };
+		D59A37812535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A37802535FB8100AD14F1 /* ResultsPerTopic.swift */; };
+		D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A37802535FB8100AD14F1 /* ResultsPerTopic.swift */; };
 		D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E82F2252E2D85007E8CBD /* OverviewViewProtocol.swift */; };
 		D59E82F4252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E82F2252E2D85007E8CBD /* OverviewViewProtocol.swift */; };
 		D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */; };
@@ -165,9 +169,11 @@
 		D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewControllerImplementation.swift; sourceTree = "<group>"; };
 		D586B58F252C064D00F4DF76 /* SchoolViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewImplementation.swift; sourceTree = "<group>"; };
 		D586B595252C0AF700F4DF76 /* SchoolViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolViewImplementation.xib; sourceTree = "<group>"; };
-		D59A375F2535DC7500AD14F1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewProtocol.swift; sourceTree = "<group>"; };
 		D59A376B2535DF8100AD14F1 /* ResultsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsData.swift; sourceTree = "<group>"; };
+		D59A37772535F1E300AD14F1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		D59A37802535FB8100AD14F1 /* ResultsPerTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPerTopic.swift; sourceTree = "<group>"; };
 		D59E82F2252E2D85007E8CBD /* OverviewViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewProtocol.swift; sourceTree = "<group>"; };
 		D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewImplementation.swift; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 				4FFF6BA6252BA4720015DFE7 /* Test.swift */,
 				4FFF6BAB252BA4F10015DFE7 /* Question.swift */,
 				D59A376B2535DF8100AD14F1 /* ResultsData.swift */,
+				D59A37802535FB8100AD14F1 /* ResultsPerTopic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,7 +294,7 @@
 				D565EF3C252BACCB00426648 /* SchoolsProtocol.swift */,
 				D59E82F2252E2D85007E8CBD /* OverviewViewProtocol.swift */,
 				D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */,
-				D59A375F2535DC7500AD14F1 /* ResultsViewController.swift */,
+				D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */,
 				D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */,
 			);
 			path = Protocols;
@@ -310,6 +317,7 @@
 				D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */,
 				D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */,
 				4FFF6BC0252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift */,
+				D59A37772535F1E300AD14F1 /* ResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -543,6 +551,7 @@
 			files = (
 				4FFF6BC1252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift in Sources */,
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
+				D59A37812535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
@@ -553,7 +562,7 @@
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
 				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
-				D59A37602535DC7500AD14F1 /* ResultsViewController.swift in Sources */,
+				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
@@ -564,6 +573,7 @@
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
+				D59A37782535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
@@ -586,11 +596,12 @@
 				D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
-				D59A37612535DC7500AD14F1 /* ResultsViewController.swift in Sources */,
+				D59A37612535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A37672535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				D527685D252CB51E003F0C70 /* Test.swift in Sources */,
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,
 				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
+				D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				D554471B252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
@@ -607,6 +618,7 @@
 				D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
+				D59A37792535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
 				D59E82F4252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,

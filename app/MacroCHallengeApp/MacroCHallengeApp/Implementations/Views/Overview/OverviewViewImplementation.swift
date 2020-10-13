@@ -106,11 +106,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     
     private func setupVisualElements() {
 
-//		let customView = UINib(nibName:"HorizontalChartView",bundle:.main).instantiate(withOwner: nil, options: nil).first as! UIView
-//		customView.frame = self.progressChart.bounds
-//		self.progressChart.addSubview(customView)
+		let customView = HorizontalChartView(title: "oi", correctQuestions: 50.0, totalQuestions: 50.0)
 
-		let customView = HorizontalChartView()
 		customView.frame = self.progressChart.bounds
 		self.progressChart.addSubview(customView)
 

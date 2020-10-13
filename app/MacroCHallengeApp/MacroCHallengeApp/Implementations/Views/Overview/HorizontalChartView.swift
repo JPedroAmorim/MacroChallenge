@@ -14,11 +14,13 @@ class HorizontalChartView: UIView {
 	@IBOutlet weak var performanceBarView: UIView!
 
 	// MARK: - Métodos de init
-	init() {
+	init(title: String, correctQuestions: Double, totalQuestions: Double) {
 		super.init(frame: CGRect.zero)
 
 		initFromNib()
-		setupCardView()
+
+		self.titleLabel.text = title
+		self.performanceLabel.text = String(Int(correctQuestions)) + "/" + String(totalQuestions)
 	}
 
 	required init?(coder: NSCoder) {
@@ -40,8 +42,5 @@ class HorizontalChartView: UIView {
 	Método responsável por definir qualidades visuais (sombra, corner radius) da célula.
 
 	*/
-	private func setupCardView() {
-		self.performanceLabel.text = "00/00"
-		self.titleLabel.text = "00/00"
-	}
+
 }

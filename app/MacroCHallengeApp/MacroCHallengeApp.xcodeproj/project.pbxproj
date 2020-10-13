@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2859F43CC46F9E6535B76157 /* Pods_MacroCHallengeApp_MacroCHallengeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2CAEB495A8493BF54AE16A /* Pods_MacroCHallengeApp_MacroCHallengeAppUITests.framework */; };
+		2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
+		2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
+		2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
+		2F9A67C82535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
 		2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53929252CBEF200C0107B /* TestTableViewCell.xib */; };
@@ -116,6 +120,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewImplementation.swift; sourceTree = "<group>"; };
+		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2FF53928252CBEF200C0107B /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2FF53929252CBEF200C0107B /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		2FF53931252E291500C0107B /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +221,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F9A67AD2535F219002EE9B2 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */,
+				2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		4FFF6B9D252BA3250015DFE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +251,6 @@
 				B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */,
 				B1018FB61C603ED420A9B2D7 /* Pods-MacroCHallengeAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -348,6 +362,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F9A67AD2535F219002EE9B2 /* Results */,
 				D59E82FE252E2E37007E8CBD /* Overview */,
 				D586B5AA252CA21100F4DF76 /* Questions */,
 				D586B5A9252CA1F700F4DF76 /* School */,
@@ -544,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
+				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
 				4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */,
@@ -570,6 +586,7 @@
 				2FF53936252E291500C0107B /* NoticeTableViewCell.xib in Resources */,
 				D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
 				D565EF59252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
+				2F9A67C82535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +728,7 @@
 				4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */,
 				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
+				2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
@@ -745,6 +763,7 @@
 				D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */,
+				2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */,
 				D586B56D252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				2FF53934252E291500C0107B /* NoticeTableViewCell.swift in Sources */,

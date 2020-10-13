@@ -19,12 +19,14 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     // MARK: -IBOutlets
     @IBOutlet weak var questionsView: UIView!
     @IBOutlet weak var questionsCollege: UICollectionView!
-    @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var progressBar: UIView!
+//    @IBOutlet weak var progressLabel: UILabel!
+//    @IBOutlet weak var progressBar: UIView!
     @IBOutlet weak var startSimulatorButton: UIButton!
     @IBOutlet var clockLabel: UILabel!
     
-    // MARK: - IBActions
+	@IBOutlet weak var progressChart: UIView!
+
+	// MARK: - IBActions
     @IBAction func startSimulatorButton(_ sender: Any) {
         if simulatorStarted {
             showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
@@ -103,10 +105,15 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
      */
     
     private func setupVisualElements() {
-        progressLabel.text = "00" + "/" + String(format: "%02d", data.questions.count)
-        questionsView.layer.cornerRadius = 8
-		progressBar.layer.cornerRadius = progressBar.frame.height/2
-        
+
+//		let customView = UINib(nibName:"HorizontalChartView",bundle:.main).instantiate(withOwner: nil, options: nil).first as! UIView
+//		customView.frame = self.progressChart.bounds
+//		self.progressChart.addSubview(customView)
+
+		let customView = HorizontalChartView()
+		customView.frame = self.progressChart.bounds
+		self.progressChart.addSubview(customView)
+
         startSimulatorButton.layer.cornerRadius = 8
         startSimulatorButton.layer.borderWidth = 3
         startSimulatorButton.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
@@ -162,23 +169,23 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     // MARK: - OverviewViewProtocol methods
     func updatePercentage(percentage: Double) {
         let currentProgress = UIView()
-        for view in progressBar.subviews { // Limpa subviews anteriores
-            view.removeFromSuperview()
-        }
-        currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
-
-		if(percentage == 0) {
-			currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.height, height: progressBar.frame.height)
-		} else {
-			currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*CGFloat(percentage)*0.01, height: progressBar.frame.height)
-		}
-
-        currentProgress.layer.cornerRadius = progressBar.frame.height/2
-        progressBar.addSubview(currentProgress)
+//        for view in progressBar.subviews { // Limpa subviews anteriores
+//            view.removeFromSuperview()
+//        }
+//        currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
+//
+//		if(percentage == 0) {
+//			currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.height, height: progressBar.frame.height)
+//		} else {
+//			currentProgress.frame = CGRect(x: 0, y: 0, width: progressBar.frame.width*CGFloat(percentage)*0.01, height: progressBar.frame.height)
+//		}
+//
+//        currentProgress.layer.cornerRadius = progressBar.frame.height/2
+//        progressBar.addSubview(currentProgress)
     }
     
     func updateCurrentQuestionsLabel(questionsAnswered: Int) {
-        progressLabel.text = String(format: "%02d", questionsAnswered) + "/" + String(format: "%02d", data.questions.count)
+//        progressLabel.text = String(format: "%02d", questionsAnswered) + "/" + String(format: "%02d", data.questions.count)
     }
     
     func updateAnsweredQuestions(questionsAnswered: [Int]) {

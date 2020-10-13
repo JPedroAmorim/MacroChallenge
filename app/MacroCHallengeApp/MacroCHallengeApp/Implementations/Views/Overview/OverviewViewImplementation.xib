@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,8 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverviewViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
                 <outlet property="clockLabel" destination="CJL-4f-A3d" id="rbW-FC-Yfq"/>
-                <outlet property="progressBar" destination="bgv-Dp-xSD" id="jNF-Ma-ly7"/>
-                <outlet property="progressLabel" destination="cZi-Ju-tak" id="mXD-lv-9ZM"/>
+                <outlet property="progressChart" destination="L1U-zq-hHX" id="Qh0-7m-mdH"/>
                 <outlet property="questionsCollege" destination="Ghc-vp-oeF" id="0ve-vY-C4x"/>
                 <outlet property="questionsView" destination="QxE-l1-qVZ" id="kbl-to-GdW"/>
                 <outlet property="startSimulatorButton" destination="CXQ-5l-mMb" id="8bK-iO-VvP"/>
@@ -72,37 +70,8 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX">
                     <rect key="frame" x="32" y="714" width="350" height="76"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzn-8w-zGS">
-                            <rect key="frame" x="8" y="8" width="102" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="M9f-WK-eGM"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-Ju-tak">
-                            <rect key="frame" x="288" y="8.5" width="54" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-Dp-xSD">
-                            <rect key="frame" x="8" y="41" width="334" height="27"/>
-                            <color key="backgroundColor" name="SecundaryGraphicsColor"/>
-                        </view>
-                    </subviews>
                     <constraints>
-                        <constraint firstItem="qzn-8w-zGS" firstAttribute="top" secondItem="L1U-zq-hHX" secondAttribute="topMargin" id="Cw4-Da-uWL"/>
-                        <constraint firstItem="bgv-Dp-xSD" firstAttribute="leading" secondItem="L1U-zq-hHX" secondAttribute="leading" constant="8" id="DWd-cP-PJF"/>
-                        <constraint firstItem="cZi-Ju-tak" firstAttribute="centerY" secondItem="qzn-8w-zGS" secondAttribute="centerY" id="QLQ-ZL-WJE"/>
-                        <constraint firstAttribute="trailing" secondItem="cZi-Ju-tak" secondAttribute="trailing" constant="8" id="Qfc-yE-g6k"/>
-                        <constraint firstAttribute="bottom" secondItem="bgv-Dp-xSD" secondAttribute="bottom" constant="8" id="jwL-z3-RUK"/>
                         <constraint firstAttribute="height" constant="76" id="o09-C3-XMW"/>
-                        <constraint firstItem="bgv-Dp-xSD" firstAttribute="top" secondItem="qzn-8w-zGS" secondAttribute="bottom" constant="8" id="sYm-NL-9BD"/>
-                        <constraint firstItem="qzn-8w-zGS" firstAttribute="leading" secondItem="L1U-zq-hHX" secondAttribute="leading" constant="8" id="udC-eP-BHi"/>
-                        <constraint firstAttribute="trailing" secondItem="bgv-Dp-xSD" secondAttribute="trailing" constant="8" id="vqV-Qi-ldJ"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXQ-5l-mMb">
@@ -135,9 +104,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="SecundaryGraphicsColor">
-            <color red="0.61960784313725492" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

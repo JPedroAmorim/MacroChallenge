@@ -29,6 +29,8 @@
 		4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */; };
 		4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */; };
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
+		C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44560CC2535F28C007D945C /* HorizontalChartView.xib */; };
+		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
 		C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */; };
 		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */; };
@@ -125,6 +127,8 @@
 		4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionImageTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionTextTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionTextTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionImageTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		C44560CC2535F28C007D945C /* HorizontalChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalChartView.xib; sourceTree = "<group>"; };
+		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
@@ -376,6 +380,8 @@
 			children = (
 				D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */,
 				D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */,
+				C44560CC2535F28C007D945C /* HorizontalChartView.xib */,
+				C44560D12535F292007D945C /* HorizontalChartView.swift */,
 				C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */,
 				C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */,
 			);
@@ -500,6 +506,7 @@
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
 				C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */,
 				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
+				C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +555,7 @@
 				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
+				C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */,
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,

@@ -18,4 +18,18 @@ protocol ResultsViewControllerProtocol {
      
      */
     init(test: Test, answeredQuestions: [String : String])
+    
+    /**
+     
+     Método pelo qual a view avisa o controller que uma questão foi selecionada.
+     
+     
+     - parameter question: A questão selecionada.
+     
+     */
+    
+    func questionWasSubmitted(_ question: Question)
+    
+    // Dependências
+    var myView: ResultsViewProtocol? {get set}
 }

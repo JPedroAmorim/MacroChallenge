@@ -18,8 +18,10 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCOTUCA" translatesAutoresizingMaskIntoConstraints="NO" id="xXm-Ch-rXs" userLabel="imgImage">
                         <rect key="frame" x="16" y="0.0" width="382" height="218"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstItem="xXm-Ch-rXs" firstAttribute="top" secondItem="XXh-eR-cpJ" secondAttribute="top" id="KYP-zi-eFh"/>
                     <constraint firstItem="xXm-Ch-rXs" firstAttribute="leading" secondItem="XXh-eR-cpJ" secondAttribute="leading" constant="16" id="O7I-OO-8WM"/>

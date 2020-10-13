@@ -5,43 +5,72 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="QuestionButtonsTableViewCell" customModule="MacroCHallengeApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="QuestionButtonsTableViewCell" customModule="MacroCHallengeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siK-il-ru5">
-                        <rect key="frame" x="227" y="7" width="69" height="30"/>
-                        <state key="normal" title="Próximo &gt;"/>
-                        <connections>
-                            <action selector="submitNext:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Yge-yX-2kl"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0X-Te-9mW">
-                        <rect key="frame" x="24" y="32" width="69" height="30"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6b-ah-cBo" userLabel="bgAnterior">
+                        <rect key="frame" x="32" y="32" width="120" height="44"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NxJ-J3-NmT" userLabel="bgProximo">
+                        <rect key="frame" x="168" y="32" width="120" height="44"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfo-ye-F7i" userLabel="btnAnterior">
+                        <rect key="frame" x="57.5" y="39" width="69" height="30"/>
                         <state key="normal" title="&lt; Anterior"/>
                         <connections>
-                            <action selector="submitPrevious:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5lK-Gr-0pM"/>
+                            <action selector="previousWasSubmited:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bxm-qn-rqz"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S41-6o-oTi" userLabel="btnProximo">
+                        <rect key="frame" x="194" y="39" width="68" height="30"/>
+                        <state key="normal" title="Próxima &gt;"/>
+                        <connections>
+                            <action selector="nextWasSubmited:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J2N-87-SbH"/>
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="siK-il-ru5" secondAttribute="trailing" constant="24" id="Ipg-RN-Ix2"/>
-                    <constraint firstAttribute="bottom" secondItem="f0X-Te-9mW" secondAttribute="bottom" constant="32" id="dG1-Nw-Tae"/>
-                    <constraint firstItem="siK-il-ru5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ikL-Iv-hV0"/>
-                    <constraint firstItem="f0X-Te-9mW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="nGz-ld-Ce8"/>
-                    <constraint firstItem="f0X-Te-9mW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="rKd-mU-wc2"/>
+                    <constraint firstItem="Rfo-ye-F7i" firstAttribute="centerX" secondItem="m6b-ah-cBo" secondAttribute="centerX" id="2DQ-VW-ccs"/>
+                    <constraint firstItem="NxJ-J3-NmT" firstAttribute="top" secondItem="m6b-ah-cBo" secondAttribute="top" id="9gA-Vu-D1r"/>
+                    <constraint firstItem="S41-6o-oTi" firstAttribute="centerX" secondItem="NxJ-J3-NmT" secondAttribute="centerX" id="OfK-t4-O08"/>
+                    <constraint firstItem="Rfo-ye-F7i" firstAttribute="centerY" secondItem="m6b-ah-cBo" secondAttribute="centerY" id="R2t-BD-OGO"/>
+                    <constraint firstItem="m6b-ah-cBo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Zsl-tW-YWU"/>
+                    <constraint firstItem="S41-6o-oTi" firstAttribute="centerY" secondItem="NxJ-J3-NmT" secondAttribute="centerY" id="cP4-H6-cSj"/>
+                    <constraint firstItem="m6b-ah-cBo" firstAttribute="trailing" secondItem="NxJ-J3-NmT" secondAttribute="leading" constant="-16" id="eJ1-Bv-bt0"/>
+                    <constraint firstItem="m6b-ah-cBo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="eTh-Fc-9d6"/>
+                    <constraint firstAttribute="bottom" secondItem="m6b-ah-cBo" secondAttribute="bottom" constant="32" id="faQ-r4-6b2"/>
+                    <constraint firstItem="m6b-ah-cBo" firstAttribute="width" secondItem="NxJ-J3-NmT" secondAttribute="width" id="hTA-jO-4aY"/>
+                    <constraint firstAttribute="trailing" secondItem="NxJ-J3-NmT" secondAttribute="trailing" constant="32" id="jdA-ZO-5Un"/>
+                    <constraint firstItem="NxJ-J3-NmT" firstAttribute="bottom" secondItem="m6b-ah-cBo" secondAttribute="bottom" id="wyy-69-T0Q"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="104"/>
+            <connections>
+                <outlet property="cardAnterior" destination="m6b-ah-cBo" id="0AW-po-EFs"/>
+                <outlet property="cardProximo" destination="NxJ-J3-NmT" id="gMf-Kw-LYN"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="125.22321428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

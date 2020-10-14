@@ -24,7 +24,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     // MARK: - Init methods
     required init(data: Test) {
         self.data = data
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -79,6 +78,10 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     
     func hasEnded() {
         totalPercentageOfCorrectAnswers = calculateTotalPercentage()
+        if let navCon = self.navigationController {
+            let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
+            navCon.pushViewController(resultsVC, animated: true)
+        }
     }
     
     // MARK: - Private methods

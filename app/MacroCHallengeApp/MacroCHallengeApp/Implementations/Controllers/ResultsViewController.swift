@@ -14,6 +14,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     // MARK: - Private attributes
     private var test: Test
     private var answeredQuestions: [String : String]
+    private var resultsData: ResultsData?
     
     // MARK: - Init methods
     required init(test: Test, answeredQuestions: [String : String]) {
@@ -30,17 +31,20 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     override func loadView() {
         super.loadView()
         setupResultsData()
+        setupDefaultView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // MARK: - Setup methods
-    //    private func setupDefaultView() {
-    //        let defaultView =
-    //        self.myView = defaultView
-    //        self.view = defaultView
-    //    }
+    private func setupDefaultView() {
+        if let resultsData = self.resultsData {
+            let defaultView = ResultsViewImplementation(data: resultsData, viewController: self)
+            self.myView = defaultView
+            self.view = defaultView
+        }
+    }
     
     
     private func setupResultsData() {
@@ -49,7 +53,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         let totalNumberOfAnsweredQuestions = answeredQuestions.count
         let totalNumberOfQuestions = test.questions.count
         let totalTimeElapsed = "todo" 
-        var resultsPerTopic: [String : ResultsPerTopic] = [:]
+        let resultsPerTopic: [String : ResultsPerTopic] = [:]
         
         let resultsData = ResultsData(totalPercentageOfCorrectAnswers: totalPercentageOfCorrectAnswers,
                                       totalNumberOfCorrectAnswers: totalNumberOfCorrectAnswers,
@@ -59,7 +63,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
                                       test: test,
                                       answeredQuestions: answeredQuestions,
                                       totalTimeElapsed: totalTimeElapsed)
-        
+        self.resultsData = resultsData
     }
     
     // MARK: - ResultsViewControllerProtocol methods

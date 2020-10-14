@@ -40,6 +40,8 @@
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
+		C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44560CC2535F28C007D945C /* HorizontalChartView.xib */; };
+		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
 		C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */; };
 		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */; };
@@ -158,6 +160,8 @@
 		AACB2A94AF164BB3EEB16172 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1018FB61C603ED420A9B2D7 /* Pods-MacroCHallengeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C44560CC2535F28C007D945C /* HorizontalChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalChartView.xib; sourceTree = "<group>"; };
+		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 			children = (
 				D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */,
 				D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */,
+				C44560CC2535F28C007D945C /* HorizontalChartView.xib */,
+				C44560D12535F292007D945C /* HorizontalChartView.swift */,
 				C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */,
 				C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */,
 			);
@@ -591,6 +597,7 @@
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
 				C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */,
 				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
+				C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +756,7 @@
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
 				2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
+				C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */,
 				D565EF50252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
 				D59A37782535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,

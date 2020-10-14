@@ -56,7 +56,6 @@ class HorizontalChartView: UIView {
 	Método responsável por update do estado de progresso
 	*/
 
-
 	func updatePercentage(percentage: Double) {
 
 		let currentProgress = UIView()

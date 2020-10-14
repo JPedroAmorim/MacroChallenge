@@ -1,13 +1,13 @@
 //
-//  OverviewViewImplementation.swift
+//  QuestionsCollectionView.swift
 //  MacroCHallengeApp
 //
-//  Created by João Pedro de Amorim on 07/10/20.
+//  Created by Joao Flores on 14/10/20.
 //
 
 import UIKit
 
-class OverviewViewImplementation: UIView, OverviewViewProtocol {
+class QuestionsCollectionView: UIView, OverviewViewProtocol {
 	// MARK: - Constants
 	// TODO: Ver como essa view de fato obterá essa informação
 	let testDurationInSeconds = 2 * 60 // Valor de teste: Dois minutos
@@ -18,27 +18,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	private var customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
 
 	// MARK: -IBOutlets
-	@IBOutlet weak var questionsView: UIView!
 	@IBOutlet weak var questionsCollege: UICollectionView!
-	@IBOutlet weak var startSimulatorButton: UIButton!
-	@IBOutlet var clockLabel: UILabel!
-
-	@IBOutlet weak var progressChart: UIView!
-
-	// MARK: - IBActions
-	@IBAction func startSimulatorButton(_ sender: Any) {
-		if simulatorStarted {
-			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
-				self.viewController.hasEnded()
-				self.simulatorStarted = false
-				self.startSimulatorButton.setTitle("Iniciar Simulado", for: .normal)
-			}))
-		} else {
-			setClock()
-			simulatorStarted = true
-			startSimulatorButton.setTitle("Finalizar Simulado", for: .normal)
-		}
-	}
 
 	// MARK: - Dependencies
 	var viewController: OverviewViewControllerProtocol
@@ -104,15 +84,9 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
 	private func setupVisualElements() {
 
-		customView.frame = self.progressChart.bounds
-		self.progressChart.addSubview(customView)
 		updatePercentage(percentage: 0.0)
 		updateCurrentQuestionsLabel(questionsAnswered: 0)
 
-		startSimulatorButton.layer.cornerRadius = 8
-		startSimulatorButton.layer.borderWidth = 3
-		startSimulatorButton.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
-		startSimulatorButton.titleLabel?.tintColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
 	}
 
 	/**
@@ -121,44 +95,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	testDurationInSeconds) é emitido um aviso sobre o ocorrido e o timer é invalidado.
 
 	*/
-	private func setClock() {
-		var totalCounter = 0
-		var minuteCounter = 0
-		var minutes = 0
-		var hours = 0
-
-		Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-			totalCounter += 1
-			minuteCounter += 1
-
-			if minuteCounter == 60 {
-				minutes += 1
-				minuteCounter = 0
-
-				if minutes == 60 {
-					hours += 1
-					minutes = 0
-				}
-
-				if minutes < 10 {
-					DispatchQueue.main.async {
-						self.clockLabel.text = String(format: "0%d", hours) + ":" + String(format: "0%d", minutes)
-					}
-				} else {
-					DispatchQueue.main.async {
-						self.clockLabel.text = String(format: "0%d", hours) + ":" + String(format: "%d", minutes)
-					}
-				}
-			}
-
-			if totalCounter == self.testDurationInSeconds {
-				timer.invalidate()
-				DispatchQueue.main.async {
-					self.showAlert(title: "O tempo para o simulado acabou", msg: "O tempo dedicado à prova acabou. Mesmo assim, você ainda pode finalizar as suas questões.", shouldPresentCancel: false, closure: ({action in}))
-				}
-			}
-		}
-	}
 
 	// MARK: - OverviewViewProtocol methods
 	func updatePercentage(percentage: Double) {
@@ -176,7 +112,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 }
 
 // MARK: - Extension Table View Data Source Methods
-extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionViewDelegate {
+extension QuestionsCollectionView:UICollectionViewDataSource, UICollectionViewDelegate {
 
 	func setupDelegateCollectionview() {
 		questionsCollege.delegate = self

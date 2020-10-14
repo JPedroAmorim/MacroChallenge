@@ -39,6 +39,9 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "MockSchoolsImplementationTests">
+               </Test>
+               <Test
                   Identifier = "OverviewViewControllerImplementation">
                </Test>
             </SkippedTests>

@@ -14,13 +14,14 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     // MARK: - Private attributes
     private var test: Test
     private var answeredQuestions: [String : String]
-    private var resultsData: ResultsData?
+    private(set) var resultsData: ResultsData?
     
     // MARK: - Init methods
     required init(test: Test, answeredQuestions: [String : String]) {
         self.test = test
         self.answeredQuestions = answeredQuestions
         super.init(nibName: nil, bundle: nil)
+        setupResultsData()
     }
     
     required init?(coder: NSCoder) {
@@ -30,7 +31,6 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
-        setupResultsData()
         setupDefaultView()
     }
     override func viewDidLoad() {

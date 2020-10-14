@@ -25,29 +25,27 @@ class PieChartTableViewCell: UITableViewCell {
     
     private var numberOfRightAnswers: Int = 0
     private var numberOfWrongAnswers: Int = 0
+    private var totalNumberOfQuestions: Int = 0
     
     // MARK: -Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        addingPieChartToView(pieChart: pieChartView)
-        setupPieChart(pieChart: pieChartView,
-                      numberOfRightAnswers: self.numberOfRightAnswers,
-                      numberOfWrongAnswers: self.numberOfWrongAnswers)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    init(numberOfRightAnswers: Int, numberOfWrongAnswers: Int) {
-        super.init(style: .default, reuseIdentifier: "PieChartTableViewCell")
+    // MARK: - Public Methods
+    
+    func updateView(numberOfRightAnswers: Int, numberOfWrongAnswers: Int, totalNumberOfQuestions: Int){
         self.numberOfRightAnswers = numberOfRightAnswers
         self.numberOfWrongAnswers = numberOfWrongAnswers
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        addingPieChartToView(pieChart: pieChartView)
+        setupPieChart(pieChart: pieChartView,
+                      numberOfRightAnswers: self.numberOfRightAnswers,
+                      numberOfWrongAnswers: self.numberOfWrongAnswers,
+                      totalNumberOfQuestions: self.totalNumberOfQuestions)
     }
     
     // MARK: - Private Methods
@@ -73,9 +71,10 @@ class PieChartTableViewCell: UITableViewCell {
      - parameter pieChart: PieChartView no qual será customizado e populado.
      - parameter numberOfRightAnswers: número de acertos de questões para o cálculo do gráfico de pizza.
      - parameter numberOfWrongAnswers: número de erros de questões para o cálculo do gráfico de pizza.
+     - parameter totalNumberOfQuestions: número de questões totais.
      */
     
-    func setupPieChart(pieChart: PieChartView, numberOfRightAnswers: Int, numberOfWrongAnswers: Int) {
+    func setupPieChart(pieChart: PieChartView, numberOfRightAnswers: Int, numberOfWrongAnswers: Int, totalNumberOfQuestions: Int) {
 
         let entry1 = PieChartDataEntry(value: Double(numberOfRightAnswers), label: "Acertos")
         let entry2 = PieChartDataEntry(value: Double(numberOfWrongAnswers), label: "Erros")
@@ -101,7 +100,7 @@ class PieChartTableViewCell: UITableViewCell {
         pieChart.holeRadiusPercent = 0.70
         pieChart.rotationEnabled = false
 
-        let myString = "\(numberOfRightAnswers)/\(numberOfRightAnswers + numberOfWrongAnswers)"
+        let myString = "\(numberOfRightAnswers)/\(totalNumberOfQuestions)"
         let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
         let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
         pieChart.centerAttributedText = myAttrString

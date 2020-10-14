@@ -15,7 +15,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	// MARK: - Variables
 	private var answeredQuestionsArray = [Int]()
 	private var simulatorStarted = false
-	private var customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 50, percentage: 0)
+	private var customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
 
 	// MARK: -IBOutlets
 	@IBOutlet weak var questionsView: UIView!
@@ -107,12 +107,13 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
 		customView.frame = self.progressChart.bounds
 		self.progressChart.addSubview(customView)
+		updatePercentage(percentage: 0.0)
+		updateCurrentQuestionsLabel(questionsAnswered: 0)
 
 		startSimulatorButton.layer.cornerRadius = 8
 		startSimulatorButton.layer.borderWidth = 3
 		startSimulatorButton.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
 		startSimulatorButton.titleLabel?.tintColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
-		updatePercentage(percentage: 0.0)
 	}
 
 	/**

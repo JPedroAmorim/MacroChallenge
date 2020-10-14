@@ -40,7 +40,17 @@ protocol QuestionViewProtocol {
      - parameter data: A questão que agora será exibida.
      
      */
+    // todo
+    
+    /**
+     
+     Método que irá sinalizar a view para atualizar a sua label do cronômetro.
+     
+     - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
+     
+     */
+    func updateTime(_ newTimeText: String)
     
     // Dependências
-    var controller: QuestionViewControllerProtocol  {get set}
+    var controller: QuestionViewControllerProtocol {get set}
 }

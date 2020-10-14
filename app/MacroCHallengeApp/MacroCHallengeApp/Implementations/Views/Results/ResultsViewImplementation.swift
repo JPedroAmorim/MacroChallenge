@@ -123,6 +123,19 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
             finalCell = cell
             
         } else if indexPath.section == 1 { // grade for subject
+            cellIdentifier = "ProgressBarTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ProgressBarTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of ProgressBarTableViewCell.")
+            }
+            
+            cell.updateView(topic: "Teste",
+                            numberOfRightAnswers: 36,
+                            totalNumberOfQuestions: 50,
+                            percetage: 36/50)
+            
+            finalCell = cell
             
         } else if indexPath.section == 2 { // questions
             

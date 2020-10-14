@@ -16,6 +16,8 @@
 		2F9A67CF2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */; };
 		2F9A67D02535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67CD2535FB37002EE9B2 /* PieChartTableViewCell.xib */; };
 		2F9A67D12535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67CD2535FB37002EE9B2 /* PieChartTableViewCell.xib */; };
+		2F9A67E0253780A5002EE9B2 /* ProgressBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */; };
+		2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */; };
 		2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53929252CBEF200C0107B /* TestTableViewCell.xib */; };
@@ -134,6 +136,8 @@
 		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
 		2F9A67CD2535FB37002EE9B2 /* PieChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartTableViewCell.xib; sourceTree = "<group>"; };
+		2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarTableViewCell.swift; sourceTree = "<group>"; };
+		2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarTableViewCell.xib; sourceTree = "<group>"; };
 		2FF53928252CBEF200C0107B /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2FF53929252CBEF200C0107B /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		2FF53931252E291500C0107B /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 				2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */,
 				2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */,
 				2F9A67CD2535FB37002EE9B2 /* PieChartTableViewCell.xib */,
+				2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */,
+				2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,
 				2FF53935252E291500C0107B /* NoticeTableViewCell.xib in Resources */,
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
+				2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */,
 				C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */,
 				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
 				C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */,
@@ -763,6 +770,7 @@
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
+				2F9A67E0253780A5002EE9B2 /* ProgressBarTableViewCell.swift in Sources */,
 				4FFF6BB7252CA6AB0015DFE7 /* QuestionViewImplementation.swift in Sources */,
 				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */,

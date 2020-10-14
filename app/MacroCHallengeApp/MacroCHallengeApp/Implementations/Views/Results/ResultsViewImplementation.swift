@@ -115,7 +115,7 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PieChartTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of PieChartTableViewCell.")
             }
-            
+            print(data.totalNumberOfQuestions)
             cell.updateView(numberOfRightAnswers: data.totalNumberOfCorrectAnswers,
                             numberOfWrongAnswers: data.totalNumberOfQuestions - data.totalNumberOfCorrectAnswers,
                             totalNumberOfQuestions: data.totalNumberOfQuestions)

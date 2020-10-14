@@ -10,7 +10,10 @@ import UIKit
 class ProgressBarTableViewCell: UITableViewCell {
 
     // MARK: -IBOutlets
-    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var topicLabel: UILabel!
+    @IBOutlet weak var finalGradeLabel: UILabel!
+    @IBOutlet weak var barView: UIView!
+    @IBOutlet weak var progressView: UIView!
     
     // MARK: - Private attributes
     private var topic = String()
@@ -35,8 +38,7 @@ class ProgressBarTableViewCell: UITableViewCell {
         self.totalNumberOfQuestions = totalNumberOfQuestions
         self.percetage = percetage
         
-        let customView = HorizontalChartView(title: topic, correctQuestions: numberOfRightAnswers, totalQuestions: totalNumberOfQuestions, percentage: percetage)
-        view.addSubview(customView)
+        
     }
     
     // MARK: - Private Methods

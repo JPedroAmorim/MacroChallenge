@@ -68,12 +68,6 @@
                         <constraint firstItem="xhW-Jv-XAF" firstAttribute="centerY" secondItem="Rmj-d4-jaB" secondAttribute="centerY" id="wsR-R4-skS"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX">
-                    <rect key="frame" x="32" y="714" width="350" height="76"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="76" id="o09-C3-XMW"/>
-                    </constraints>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXQ-5l-mMb">
                     <rect key="frame" x="40" y="806" width="334" height="48"/>
                     <constraints>
@@ -85,6 +79,12 @@
                         <action selector="startSimulatorButton:" destination="-1" eventType="touchUpInside" id="if3-Kl-Tl7"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX">
+                    <rect key="frame" x="0.0" y="714" width="414" height="76"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="76" id="o09-C3-XMW"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.95685106519999996" green="0.9568567872" blue="0.95687133069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,13 +92,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CXQ-5l-mMb" secondAttribute="trailing" constant="40" id="1HB-jx-Zph"/>
                 <constraint firstItem="QxE-l1-qVZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7D2-kh-lme"/>
                 <constraint firstItem="CXQ-5l-mMb" firstAttribute="top" secondItem="L1U-zq-hHX" secondAttribute="bottom" constant="16" id="7V4-U5-NH1"/>
-                <constraint firstItem="L1U-zq-hHX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="9pd-Ss-BmH"/>
+                <constraint firstItem="L1U-zq-hHX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9pd-Ss-BmH"/>
                 <constraint firstItem="QxE-l1-qVZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jas-NA-hTH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QxE-l1-qVZ" secondAttribute="trailing" id="mBf-nb-0ta"/>
                 <constraint firstItem="CXQ-5l-mMb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="mzx-IT-3s0"/>
                 <constraint firstItem="L1U-zq-hHX" firstAttribute="top" secondItem="QxE-l1-qVZ" secondAttribute="bottom" constant="8" id="snG-kF-0XX"/>
                 <constraint firstItem="CXQ-5l-mMb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="tKA-uz-fi9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L1U-zq-hHX" secondAttribute="trailing" constant="32" id="vY5-ak-qUq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L1U-zq-hHX" secondAttribute="trailing" id="vY5-ak-qUq"/>
             </constraints>
             <point key="canvasLocation" x="89.855072463768124" y="94.419642857142847"/>
         </view>

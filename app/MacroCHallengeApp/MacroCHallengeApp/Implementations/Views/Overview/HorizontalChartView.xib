@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-d7-UqB">
-                    <rect key="frame" x="16" y="0.0" width="102" height="25"/>
+                    <rect key="frame" x="40" y="0.0" width="102" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="Rjl-gv-Q5p"/>
                     </constraints>
@@ -31,34 +31,32 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPT-y3-2ye">
-                    <rect key="frame" x="344" y="0.0" width="54" height="25"/>
+                    <rect key="frame" x="320" y="0.0" width="54" height="25"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byb-xP-DQQ">
-                    <rect key="frame" x="16" y="33" width="382" height="24"/>
+                    <rect key="frame" x="40" y="33" width="334" height="28"/>
                     <color key="backgroundColor" name="SecundaryGraphicsColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="24" id="oNx-G5-x5f"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="q6t-Fa-eIB"/>
             <constraints>
+                <constraint firstItem="q6t-Fa-eIB" firstAttribute="bottom" secondItem="byb-xP-DQQ" secondAttribute="bottom" constant="16" id="33O-QM-6fS"/>
                 <constraint firstItem="byb-xP-DQQ" firstAttribute="top" secondItem="Hoa-d7-UqB" secondAttribute="bottom" constant="8" id="8TZ-70-GAZ"/>
-                <constraint firstItem="Hoa-d7-UqB" firstAttribute="leading" secondItem="q6t-Fa-eIB" secondAttribute="leading" constant="16" id="F9n-VA-W0U"/>
-                <constraint firstAttribute="trailing" secondItem="OPT-y3-2ye" secondAttribute="trailing" constant="16" id="NxF-Cz-DSp"/>
-                <constraint firstItem="byb-xP-DQQ" firstAttribute="leading" secondItem="q6t-Fa-eIB" secondAttribute="leading" constant="16" id="Vfo-sa-OJE"/>
+                <constraint firstItem="Hoa-d7-UqB" firstAttribute="leading" secondItem="q6t-Fa-eIB" secondAttribute="leading" constant="40" id="F9n-VA-W0U"/>
+                <constraint firstAttribute="trailing" secondItem="OPT-y3-2ye" secondAttribute="trailing" constant="40" id="NxF-Cz-DSp"/>
+                <constraint firstItem="byb-xP-DQQ" firstAttribute="leading" secondItem="q6t-Fa-eIB" secondAttribute="leading" constant="40" id="Vfo-sa-OJE"/>
                 <constraint firstItem="Hoa-d7-UqB" firstAttribute="top" secondItem="oeI-kk-eIW" secondAttribute="top" id="Zic-Yd-XGE"/>
-                <constraint firstItem="q6t-Fa-eIB" firstAttribute="trailing" secondItem="byb-xP-DQQ" secondAttribute="trailing" constant="16" id="Zy1-9U-wB7"/>
+                <constraint firstItem="q6t-Fa-eIB" firstAttribute="trailing" secondItem="byb-xP-DQQ" secondAttribute="trailing" constant="40" id="Zy1-9U-wB7"/>
                 <constraint firstItem="OPT-y3-2ye" firstAttribute="top" secondItem="oeI-kk-eIW" secondAttribute="top" id="soh-nN-m9D"/>
                 <constraint firstItem="OPT-y3-2ye" firstAttribute="centerY" secondItem="Hoa-d7-UqB" secondAttribute="centerY" id="zS8-j1-XYg"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-66.666666666666671" y="256.80803571428572"/>
+            <point key="canvasLocation" x="-301" y="242"/>
         </view>
     </objects>
     <resources>

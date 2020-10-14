@@ -5,11 +5,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
+                <outlet property="btnAnterior" destination="FaO-zy-Mvh" id="Wwg-hx-v71"/>
+                <outlet property="btnProximo" destination="Q3s-74-Zs0" id="Gl0-Wp-ZQW"/>
                 <outlet property="questionTableView" destination="Pg0-0h-mN5" id="Ur1-5w-597"/>
             </connections>
         </placeholder>
@@ -18,21 +21,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6A-Cl-Jl9" userLabel="buttonView">
+                    <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-zy-Mvh">
+                            <rect key="frame" x="16" y="15" width="69" height="30"/>
+                            <state key="normal" title="&lt; Anterior"/>
+                            <connections>
+                                <action selector="submitPrevious:" destination="-1" eventType="touchUpInside" id="ezt-4U-1AO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
+                            <rect key="frame" x="329" y="15" width="69" height="30"/>
+                            <state key="normal" title="Proximo &gt;"/>
+                            <connections>
+                                <action selector="submitNext:" destination="-1" eventType="touchUpInside" id="JCJ-BE-ISU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0N8-0r-qkC"/>
+                        <constraint firstAttribute="trailing" secondItem="Q3s-74-Zs0" secondAttribute="trailing" constant="16" id="2Bs-rw-yEr"/>
+                        <constraint firstItem="FaO-zy-Mvh" firstAttribute="centerY" secondItem="C6A-Cl-Jl9" secondAttribute="centerY" id="8Ie-Rt-V9I"/>
+                        <constraint firstItem="Q3s-74-Zs0" firstAttribute="centerY" secondItem="C6A-Cl-Jl9" secondAttribute="centerY" id="OJW-my-32T"/>
+                        <constraint firstItem="FaO-zy-Mvh" firstAttribute="leading" secondItem="C6A-Cl-Jl9" secondAttribute="leading" constant="16" id="xbn-eb-F2A"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pg0-0h-mN5" userLabel="QuestionsTableView">
-                    <rect key="frame" x="0.0" y="52" width="414" height="810"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="758"/>
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C6A-Cl-Jl9" secondAttribute="trailing" id="0mz-8Z-vR0"/>
+                <constraint firstItem="C6A-Cl-Jl9" firstAttribute="top" secondItem="Pg0-0h-mN5" secondAttribute="bottom" id="2Wi-xB-00l"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pg0-0h-mN5" secondAttribute="trailing" id="Itm-Ee-R0E"/>
                 <constraint firstItem="Pg0-0h-mN5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fg7-8H-FcS"/>
-                <constraint firstItem="Pg0-0h-mN5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="oFp-B1-YEe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pg0-0h-mN5" secondAttribute="bottom" id="uMf-bg-NmM"/>
+                <constraint firstItem="Pg0-0h-mN5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="oFp-B1-YEe"/>
+                <constraint firstItem="C6A-Cl-Jl9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qKg-9Q-bUz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="C6A-Cl-Jl9" secondAttribute="bottom" id="u3J-1C-9n2"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

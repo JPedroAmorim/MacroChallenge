@@ -338,7 +338,7 @@ open class PieChartRenderer: DataRenderer
         {
             guard let dataSet = dataSets[i] as? IPieChartDataSet else { continue }
 
-            let drawValues = dataSet.isDrawValuesEnabled
+            let drawValues = false
 
             if !drawValues && !drawEntryLabels && !dataSet.isDrawIconsEnabled
             {

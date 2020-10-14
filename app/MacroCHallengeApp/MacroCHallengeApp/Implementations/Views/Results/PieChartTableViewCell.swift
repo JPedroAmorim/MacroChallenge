@@ -41,6 +41,7 @@ class PieChartTableViewCell: UITableViewCell {
     func updateView(numberOfRightAnswers: Int, numberOfWrongAnswers: Int, totalNumberOfQuestions: Int){
         self.numberOfRightAnswers = numberOfRightAnswers
         self.numberOfWrongAnswers = numberOfWrongAnswers
+        self.totalNumberOfQuestions = totalNumberOfQuestions
         addingPieChartToView(pieChart: pieChartView)
         setupPieChart(pieChart: pieChartView,
                       numberOfRightAnswers: self.numberOfRightAnswers,
@@ -94,7 +95,7 @@ class PieChartTableViewCell: UITableViewCell {
         
         dataSet.colors =  colors
         dataSet.sliceSpace = 0
-
+        
         pieChart.drawHoleEnabled = true
         pieChart.transparentCircleColor = .white
         pieChart.holeRadiusPercent = 0.70
@@ -104,6 +105,8 @@ class PieChartTableViewCell: UITableViewCell {
         let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
         let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
         pieChart.centerAttributedText = myAttrString
+        
+        pieChart.drawEntryLabelsEnabled = false
         
         let l = pieChart.legend
         l.enabled = true

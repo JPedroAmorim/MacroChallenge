@@ -57,7 +57,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
                                                                   totalNumberOfQuestions: totalNumberOfQuestions)
         let totalNumberOfAnsweredQuestions = answeredQuestions.count
         let totalTimeElapsed = "todo" 
-        let resultsPerTopic: [String : ResultsPerTopic] = generateResultsPerTopicMock()
+        let resultsPerTopic: [String : ResultsPerTopic] = generateResultsForAllTopics()
         
         generateCorrectAndWrongUserAnswersAsIntArray()
         
@@ -116,46 +116,82 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         }
         return correctAnswers
     }
-    
-    // TODO: Remover isso daqui.
     /**
      
-     Faz um mock do parâmetro resultsPerTopic, parâmetro de resultsData
+     Função que retorna um conjunto (ou seja, sem elementos repetidos) de tópicos de questões da prova realizada
      
-     - returns Um mock de resultsPerTopic
+     - returns conjunto de tópicos das questões da prova realizada
      
      */
-    private func generateResultsPerTopicMock() -> [String : ResultsPerTopic] {
-        var resultsPerTopic: [String : ResultsPerTopic] = [:]
+    
+    private func getTopicsFromQuestions() -> Set<String> {
+        var returnSet: Set<String> = Set<String>()
         
-        let mathTotalCorrect = 30
-        let mathTotalAnswered = 40
-        let mathTotalNumber = 60
-        let mathPercentage = calculatePercentage(correctAnswers: mathTotalCorrect,
-                                                 totalNumberOfQuestions: mathTotalNumber)
+        for question in test.questions {
+            returnSet.insert(question.topic)
+        }
         
-        let mathResult = ResultsPerTopic(totalPercentageOfCorrectAnswers: mathPercentage,
-                                         totalNumberOfCorrectAnswers: mathTotalCorrect,
-                                         totalNumberOfAnsweredQuestions: mathTotalAnswered,
-                                         totalNumberOfQuestions: mathTotalNumber)
+        return returnSet
+    }
+    
+    /**
+     
+     Função que gera o data container ResultsPerTopic para um tópico (matéria) específico
+     
+     - returns o ResultsPerTopic daquela matéria
+     
+     */
+    private func generateResultsPerIndividualTopic(_ topic: String) -> ResultsPerTopic {
+        var topicTotalCorrect = 0
+        var topicTotalAnswered = 0
+        var topicTotal = 0
         
-        resultsPerTopic["Matemática"] = mathResult
+        let testQuestions = test.questions
         
-        let physicsTotalCorrect = 15
-        let physicsTotalAnswered = 40
-        let physicsTotalNumber = 60
-        let physicsPercentage = calculatePercentage(correctAnswers: physicsTotalCorrect,
-                                                    totalNumberOfQuestions: physicsTotalNumber)
+        for (questionNumber, answer) in answeredQuestions {
+            if let question = testQuestions.filter({ $0.number == questionNumber }).first {
+                if question.topic == topic {
+                    if question.answer == answer {
+                        topicTotalCorrect += 1
+                    }
+                    topicTotalAnswered += 1
+                }
+            }
+        }
         
-        let physicsResult = ResultsPerTopic(totalPercentageOfCorrectAnswers: physicsPercentage,
-                                            totalNumberOfCorrectAnswers: physicsTotalCorrect,
-                                            totalNumberOfAnsweredQuestions: physicsTotalAnswered,
-                                            totalNumberOfQuestions: physicsTotalNumber)
+        for question in testQuestions {
+            if question.topic == topic {
+                topicTotal += 1
+            }
+        }
         
-        resultsPerTopic["Física"] = physicsResult
+        let topicPercentage = calculatePercentage(correctAnswers: topicTotalCorrect, totalNumberOfQuestions: topicTotal)
         
         
-        return resultsPerTopic
+        let result = ResultsPerTopic(totalPercentageOfCorrectAnswers: topicPercentage,
+                                     totalNumberOfCorrectAnswers: topicTotalCorrect,
+                                     totalNumberOfAnsweredQuestions: topicTotalAnswered,
+                                     totalNumberOfQuestions: topicTotal)
+        
+        return result
+    }
+    /**
+     
+     Gera o dicionário que possui como chaves as matérias da prova e como valor os resultados daquela matéria.
+     
+     - returns O dicionário que será fornecido à view
+     
+     */
+    private func generateResultsForAllTopics() -> [String : ResultsPerTopic] {
+        let topics = getTopicsFromQuestions()
+        
+        var returnData: [String : ResultsPerTopic] = [:]
+        
+        for topic in topics {
+            returnData[topic] = generateResultsPerIndividualTopic(topic)
+        }
+        
+        return returnData
     }
     
     /**

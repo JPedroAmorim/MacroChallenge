@@ -77,7 +77,7 @@ class ProgressBarTableViewCell: UITableViewCell {
         
         currentProgress.frame = CGRect(x: 0,
                                        y: 0,
-                                       width: barView.frame.width * CGFloat(percentage),
+                                       width: barView.frame.width * CGFloat(percentage) * 0.01,
                                        height: barView.frame.height)
         
         settingCornerRadiusOnView(view: currentProgress)

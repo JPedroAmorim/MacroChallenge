@@ -25,8 +25,11 @@ class OverviewCollectionCell: UICollectionViewCell {
      
 	*/
 	private func setupCardView() {
-		bgView.layer.borderWidth = 3.5
-		bgView.layer.borderColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1).cgColor
+		bgView.layer.borderWidth = 3
 		bgView.layer.cornerRadius = 5
+
+		bgView.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
+		numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
+
 	}
 }

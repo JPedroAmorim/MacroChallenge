@@ -204,7 +204,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 				cell.numberLabel.textColor = UIColor.white
 			} else {
 				cell.bgView.backgroundColor = UIColor.white
-				cell.numberLabel.textColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
+				cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
 			}
 		}
 

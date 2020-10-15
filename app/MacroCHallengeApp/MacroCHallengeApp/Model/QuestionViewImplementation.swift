@@ -10,24 +10,32 @@ import UIKit
 
 class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
+    
     // MARK: - IBOutlets
+    
     @IBOutlet weak var questionTableView: UITableView!
-
     @IBOutlet weak var btnProximo: UIButton!
     @IBOutlet weak var btnAnterior: UIButton!
+    
+    
     // MARK: - Dependencias
+    
     var controller: QuestionViewControllerProtocol
     
+    
     // MARK: - Atributos privados
+    
     private var question: Question
     private var sectionHeaders: [String]
     private var chosenOption: String?
     
+    
     // MARK: - Métodos de init
+    
     required init(data: Question, controller: QuestionViewControllerProtocol) {
         self.question = data
         self.controller = controller
-        self.sectionHeaders = ["", "", "", "", "", ""]
+        self.sectionHeaders = ["", "", "", "", "", ""] // Strings estao vazias para não exibir os headers
         super.init(frame: CGRect.zero)
         initFromNib()
         self.questionTableView.delegate = self
@@ -51,10 +59,9 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     }
     
     // MARK: - Funções do protocolo
-    /**
-     Método reponsavél por sobrescrever a view com uma nova questão
-     - parameter data: Questão que será utilizada para sobrescrever a view
-     */
+    
+    /// Método reponsavél por sobrescrever a view com uma nova questão
+    /// - parameter data: Questão que será utilizada para sobrescrever a view
     func overwrite(data: Question, wasAlreadyAnswered: String?) {
         self.question = data
         if let alreadyChosenOption = wasAlreadyAnswered {
@@ -68,20 +75,19 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         self.questionTableView.reloadData()
     }
     
-    /**
 
-         Método que irá sinalizar a view para atualizar a sua label do cronômetro.
 
-         - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
-
-         */
+     ///Método que irá sinalizar a view para atualizar a sua label do cronômetro.
+     ///- parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
     func updateTime(_ newTimeText: String) {
-        let path = IndexPath(row: 0, section: 0)
+        let path = IndexPath(row: 0, section: 0) // A célula que con
         guard let cell = self.questionTableView.cellForRow(at: path) as? QuestionHeaderTableViewCell else {return}
         cell.lblTime.text = newTimeText
     }
     
+    
     // MARK: - Funções privadas
+    
     @IBAction func submitPrevious(_ sender: Any) {
         controller.previousWasSubmitted()
     }
@@ -89,20 +95,31 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         controller.nextWasSubmitted()
     }
     
-    /**
-     
-     Função utilizada para registrar o arquivo .xib das celulas para serem utilizadas pela table view
-     - parameter nibName: Nome que referencia o nome do xib
-     
-     */
+
+    /// Função utilizada para registrar o arquivo .xib das celulas para serem utilizadas pela table view
+    /// - parameter nibName: Nome que referencia o nome do xib
     func referenceXib(nibName: String) {
         let nib = UINib.init(nibName: nibName, bundle: nil)
         self.questionTableView.register(nib, forCellReuseIdentifier: nibName)
     }
 }
 
+
 // MARK: - Table view data source e delegate
+
 extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate {
+    
+    
+    // MARK: Enums
+    
+    enum TextCellType {
+        case initialText
+        case subtitle
+        case text
+    }
+    
+    
+    // MARK: TableViewDataSource methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.sectionHeaders.count
@@ -122,8 +139,6 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             numberOfRows = 1
         } else if section == 5 { // options
             numberOfRows = question.options.count
-//        } else if section == 6 { // buttons
-//            numberOfRows = 1
         }
         return numberOfRows
     }
@@ -133,171 +148,170 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch  (indexPath.section) {
-        case 0: // Question header
-            let cellIdentifier = "QuestionHeaderTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionHeaderTableViewCell", for: indexPath) as? QuestionHeaderTableViewCell {
-                
-                let myString = "Topico nao foi implementado ainda :("
-                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
-                let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-                
-                cell.lblTopic.attributedText = myAttrString
-                
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-        case 1: // Initial text
-            let cellIdentifier = "QuestionTextTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell {
-                
-                let myString = (question.initialText ?? "")
-                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-                let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-                
-                cell.lblText.attributedText = myAttrString
-                cell.lblText.textColor = .black
-                
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-        case 2: // Images
-            let cellIdentifier = "QuestionImageTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionImageTableViewCell", for: indexPath) as? QuestionImageTableViewCell {
-                cell.imgQuestionImage.image = self.question.images?[indexPath.row]
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-        case 3: // Subtitle
-            let cellIdentifier = "QuestionTextTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell {
-                
-                let myString = self.question.subtitle ?? ""
-                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
-                let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-                
-                cell.lblText.textAlignment = .center
-                cell.lblText.attributedText = myAttrString
-                cell.lblText.textColor = .gray
-                
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-        case 4: // Text
-            let cellIdentifier = "QuestionTextTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell {
-                
-                let myString = self.question.text
-                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-                let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
-                
-                cell.lblText.attributedText = myAttrString
-                cell.lblText.textColor = .black
-                
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-        case 5: // Options
-            let cellIdentifier = "QuestionOptionTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionOptionTableViewCell", for: indexPath) as? QuestionOptionTableViewCell {
-                let index = String(format: "%c", indexPath.row + 97)
-                cell.lblIndex.text = index.uppercased()
-                cell.lblAnswer.text = self.question.options[index]
-                if (index == self.chosenOption) {
-                    cell.CardView.backgroundColor = .gray
-                    cell.lblAnswer.textColor = .white
-                    cell.lblIndex.textColor = .white
-                } else {
-                    cell.CardView.backgroundColor = .white
-                    cell.lblAnswer.textColor = .black
-                    cell.lblIndex.textColor = .black
-                }
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
-//        case 6: // Buttons
-//            let cellIdentifier = "QuestionButtonsTableViewCell"
-//            referenceXib(nibName: cellIdentifier)
-//            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionButtonsTableViewCell", for: indexPath) as? QuestionButtonsTableViewCell {
-//                cell.controller = self.controller
-//                return cell
-//            } else {
-//                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-//            }
+        // Question header
+        case 0:
+            return setupQuestionHeaderCell(tableView: tableView, indexPath: indexPath, subject: "Placeholder")
+        // Initial text
+        case 1:
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: question.initialText ?? "", category: .initialText)
+        // Images
+        case 2:
+            let image = self.question.images?[indexPath.row] ?? UIImage()
+            return setupQuestionImageCell(tableView: tableView, indexPath: indexPath, image: image)
+        // Subtitle
+        case 3:
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: self.question.subtitle ?? "", category: .text)
+        // Text
+        case 4:
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: self.question.text, category: .text)
+        // Options
+        case 5:
+            return setupOptionCell(tableView: tableView, indexPath: indexPath)
         default:
             return UITableViewCell()
         }
     }
     
+    
+    // MARK: TableViewDelegate methods
+    
     func tableView( _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
-            let option = String(format: "%c", indexPath.row + 97) // o que raios é essa conversão?
-            if option == self.chosenOption {
+            let option = String(format: "%c", indexPath.row + 97) // Convert path.row index to a char. 97 is equivalent to 'a' in the ASCII table
+            if option == self.chosenOption { // Reselect cell to deselect it
                 self.chosenOption = nil
                 self.controller.answerWasUnsubmitted(question: self.question)
-                UIView.animate(withDuration: 0.3, animations: {
-                    cell.CardView.backgroundColor = .white
-                    cell.lblAnswer.textColor = .black
-                    cell.lblIndex.textColor = .black
-                })
-            } else {
-                if self.chosenOption != nil {
-                    unselectAlreadyChosenDisplay()
-                }
+                setOptionCell(cell: cell, selected: false)
+            } else { // Select a previous unselected cell
                 self.chosenOption = option
                 self.controller.answerWasSubmitted(question: self.question, answer: option)
-                UIView.animate(withDuration: 0.3, animations: {
-                    // 0xCBDAF8
-                    cell.CardView.backgroundColor = UIColor(red:203/255, green:218/255, blue:248/255, alpha: 1)
-                    cell.lblAnswer.textColor = .black
-                    cell.lblIndex.textColor = .black
-                })
+                setOptionCell(cell: cell, selected: true)
             }
         }
     }
     
     func tableView( _ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
-            UIView.animate(withDuration: 0.3, animations: {
-                cell.CardView.backgroundColor = .white
-                cell.lblAnswer.textColor = .black
-                cell.lblIndex.textColor = .black
-            })
+            setOptionCell(cell: cell, selected: false)
         }
     }
     
     
-    /**
-     
-     Função auxiliar que deseleciona uma célula caso ela já tenha sido escolhida previamente.
-     
-     */
+    // MARK: Private methods
     
-    private func unselectAlreadyChosenDisplay() {
-        for cell in questionTableView.visibleCells {
-            if let optionCell = cell as? QuestionOptionTableViewCell {
-                if let indexPath = questionTableView.indexPath(for: optionCell) {
-                    let option = String(format: "%c", indexPath.row + 97)
-                    if option == self.chosenOption {
-                        optionCell.CardView.backgroundColor = .white
-                        optionCell.lblAnswer.textColor = .black
-                        optionCell.lblIndex.textColor = .black
-                    }
-                }
+    /// Método responsavel pelas alterações visuais em uma célula de opção
+    /// - parameter cell: A célula que deve ser alterada
+    /// - parameter selected: Determina se a célula terá aparencia de selecionada ou não
+    private func setOptionCell(cell: QuestionOptionTableViewCell, selected: Bool) {
+        if selected {
+            UIView.animate(withDuration: 0.3, animations: {
+                // 0xCBDAF8
+                cell.CardView.backgroundColor = UIColor(red:203/255, green:218/255, blue:248/255, alpha: 1)
+                cell.lblAnswer.textColor = .black
+                cell.lblIndex.textColor = .black
+                cell.btnRadio.image = UIImage(systemName: "largecircle.fill.circle")
+            })
+        } else {
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.CardView.backgroundColor = .white
+                cell.lblAnswer.textColor = .black
+                cell.lblIndex.textColor = .black
+                cell.btnRadio.image = UIImage(systemName: "circle")
+            })
+        }
+    }
+    
+    /// Método responsável por setar a célula de cabeçalho
+    /// - parameter tableView: TableView que contém a célula
+    /// - parameter indexPath: Localização da célula
+    /// - parameter subject: Matéria da questão
+    private func setupQuestionHeaderCell(tableView: UITableView, indexPath: IndexPath, subject: String) -> UITableViewCell {
+        let cellIdentifier = "QuestionHeaderTableViewCell"
+        referenceXib(nibName: cellIdentifier)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionHeaderTableViewCell {
+            let myString = "Placeholder"
+            let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+            let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
+            
+            cell.lblTopic.attributedText = myAttrString
+            
+            return cell
+        } else {
+            fatalError("setupQuestionHeaderCell failed")
+        }
+    }
+    
+    /// Método responsável por setar células de texto
+    /// - parameter tableView: TableView que contém a célula
+    /// - parameter indexPath: Localização da célula
+    /// - parameter value: String que contém o texto
+    /// - parameter category: Define a formatação da célula
+    private func setupQuestionTextCell(tableView: UITableView, indexPath: IndexPath, value: String, category: TextCellType) -> UITableViewCell {
+        let cellIdentifier = "QuestionTextTableViewCell"
+        referenceXib(nibName: cellIdentifier)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionTextTableViewCell {
+            switch category {
+            case .initialText:
+                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+                let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
+                cell.lblText.textAlignment = .left
+                cell.lblText.attributedText = myAttrString
+                cell.lblText.textColor = .black
+            case .subtitle:
+                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
+                let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
+                cell.lblText.textAlignment = .center
+                cell.lblText.attributedText = myAttrString
+                cell.lblText.textColor = .gray
+            case .text:
+                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+                let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
+                cell.lblText.textAlignment = .left
+                cell.lblText.attributedText = myAttrString
+                cell.lblText.textColor = .black
             }
+            
+            return cell
+        } else {
+            fatalError("setupQuestionTextCell failed")
+        }
+    }
+    
+    /// Método responsável por setar células de imagem
+    /// - parameter tableView: TableView que contém a célula
+    /// - parameter indexPath: Localização da célula
+    /// - parameter image: Imagem que deve ser exibida
+    private func setupQuestionImageCell(tableView: UITableView, indexPath: IndexPath, image: UIImage) -> UITableViewCell {
+        let cellIdentifier = "QuestionImageTableViewCell"
+        referenceXib(nibName: cellIdentifier)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionImageTableViewCell {
+            cell.imgQuestionImage.image = image
+            return cell
+        } else {
+            fatalError("setupQuestionImageCell failed")
+        }
+    }
+    
+    /// Método responsável por setar células de resposta de questão
+    /// - parameter tableView: TableView que contém a célula
+    /// - parameter indexPath: Localização da célula
+    /// - parameter image: Imagem que deve ser exibida
+    private func setupOptionCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "QuestionOptionTableViewCell"
+        referenceXib(nibName: cellIdentifier)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionOptionTableViewCell {
+            let index = String(format: "%c", indexPath.row + 97)
+            cell.lblIndex.text = index.uppercased()
+            cell.lblAnswer.text = self.question.options[index]
+            if (index == self.chosenOption) {
+                setOptionCell(cell: cell, selected: true)
+            } else {
+                setOptionCell(cell: cell, selected: false)
+            }
+            return cell
+        } else {
+            fatalError("QuestionOptionTableViewCell failed")
         }
     }
 }

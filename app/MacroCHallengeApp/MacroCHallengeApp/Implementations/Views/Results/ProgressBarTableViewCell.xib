@@ -21,17 +21,15 @@
                         <rect key="frame" x="16" y="36" width="288" height="16"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-BJ-0gS">
-                                <rect key="frame" x="0.0" y="0.0" width="10" height="16"/>
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="16"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="10" id="qrh-dO-lJ1"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.61960784313725492" green="0.72549019607843135" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="CZU-tQ-2Qe"/>
                             <constraint firstItem="OVh-BJ-0gS" firstAttribute="top" secondItem="yLM-Nn-yf6" secondAttribute="top" id="H0v-ma-aPe"/>
+                            <constraint firstItem="OVh-BJ-0gS" firstAttribute="width" secondItem="yLM-Nn-yf6" secondAttribute="width" id="JtG-C9-obN"/>
                             <constraint firstAttribute="bottom" secondItem="OVh-BJ-0gS" secondAttribute="bottom" id="j2k-O6-5b1"/>
                             <constraint firstItem="OVh-BJ-0gS" firstAttribute="height" secondItem="yLM-Nn-yf6" secondAttribute="height" id="lFF-Ak-h99"/>
                             <constraint firstItem="OVh-BJ-0gS" firstAttribute="leading" secondItem="yLM-Nn-yf6" secondAttribute="leading" id="zjb-d2-CeS"/>
@@ -50,6 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="tC5-Tw-oeD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7Cs-RE-UZh"/>
                     <constraint firstItem="qxT-ye-2CF" firstAttribute="trailing" secondItem="yLM-Nn-yf6" secondAttribute="trailing" id="Dfa-Lc-rul"/>
@@ -66,6 +65,7 @@
                 <outlet property="barView" destination="yLM-Nn-yf6" id="IzA-rZ-QW5"/>
                 <outlet property="finalGradeLabel" destination="qxT-ye-2CF" id="lPh-ia-HM5"/>
                 <outlet property="progressView" destination="OVh-BJ-0gS" id="1lM-4q-LU7"/>
+                <outlet property="topicLabel" destination="tC5-Tw-oeD" id="vV3-cY-sbO"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="71.651785714285708"/>
         </tableViewCell>

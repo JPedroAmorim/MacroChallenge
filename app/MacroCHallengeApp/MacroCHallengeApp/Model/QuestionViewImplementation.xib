@@ -33,9 +33,9 @@
                                 <action selector="submitPrevious:" destination="-1" eventType="touchUpInside" id="ezt-4U-1AO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
+                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
                             <rect key="frame" x="320" y="19" width="78" height="22"/>
-                            <state key="normal" title="Proximo" image="chevron.forward" catalog="system">
+                            <state key="normal" title="Proximo" image="chevron.right" catalog="system">
                                 <color key="titleColor" systemColor="linkColor"/>
                             </state>
                             <connections>
@@ -73,8 +73,8 @@
         </view>
     </objects>
     <resources>
-        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

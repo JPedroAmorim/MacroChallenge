@@ -20,7 +20,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	// MARK: -IBOutlets
 	@IBOutlet weak var questionsView: UIView!
 	@IBOutlet weak var questionsCollege: UICollectionView!
-	@IBOutlet weak var startSimulatorButton: UIButton!
 	@IBOutlet var clockLabel: UILabel!
 
 	@IBOutlet weak var progressChart: UIView!
@@ -43,13 +42,16 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		if let viewController = self.viewController as? UIViewController {
 			viewController.present(alert, animated: true, completion: nil)
 		}
-
 	}
 
-	func showAlertStartSimulator(title: String, msg: String) {
+	func showAlertStartSimulator(title: String, msg: String, shouldPresentCancel: Bool, closure: @escaping (UIAlertAction) -> Void) {
 		let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
 
-		alert.addAction(UIAlertAction(title: "OK", style: .default))
+		if shouldPresentCancel {
+			alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+		}
+
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: closure))
 
 		if let viewController = self.viewController as? UIViewController {
 			viewController.present(alert, animated: true, completion: nil)
@@ -155,7 +157,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	*/
 
 	func updateFrame() {
-
 		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
 	}
 
@@ -168,6 +169,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		} else {
 			setClock()
 			simulatorStarted = true
+			self.viewController.hasStarted()
 		}
 	}
 
@@ -226,7 +228,14 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		if simulatorStarted {
 			viewController.questionWasSubmitted(data.questions[indexPath.row])
 		} else {
-			showAlertStartSimulator(title: "Inicie o simulado", msg: "É necessário iniciar o simulado para ver a questão")
+
+			DispatchQueue.main.async {
+				self.showAlert(title: "Deseja iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
+					self.setClock()
+					self.simulatorStarted = true
+					self.viewController.hasStarted()
+				}))
+			}
 		}
 	}
 	

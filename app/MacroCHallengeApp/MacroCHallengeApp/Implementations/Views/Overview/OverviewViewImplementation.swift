@@ -105,7 +105,12 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	private func setupVisualElements() {
 
 		customView.frame = self.progressChart.bounds
+		
 		self.progressChart.addSubview(customView)
+
+		customView.center = CGPoint(x: progressChart.frame.size.width  / 2,
+									y: progressChart.frame.size.height / 2)
+
 		updatePercentage(percentage: 0.0)
 		updateCurrentQuestionsLabel(questionsAnswered: 0)
 

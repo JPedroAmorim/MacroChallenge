@@ -24,16 +24,20 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6A-Cl-Jl9" userLabel="buttonView">
                     <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-zy-Mvh">
-                            <rect key="frame" x="16" y="15" width="69" height="30"/>
-                            <state key="normal" title="&lt; Anterior"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-zy-Mvh">
+                            <rect key="frame" x="16" y="19" width="78" height="22"/>
+                            <state key="normal" title="Anterior" image="chevron.left" catalog="system">
+                                <color key="titleColor" systemColor="linkColor"/>
+                            </state>
                             <connections>
                                 <action selector="submitPrevious:" destination="-1" eventType="touchUpInside" id="ezt-4U-1AO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
-                            <rect key="frame" x="329" y="15" width="69" height="30"/>
-                            <state key="normal" title="Proximo &gt;"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
+                            <rect key="frame" x="320" y="19" width="78" height="22"/>
+                            <state key="normal" title="Proximo" image="chevron.forward" catalog="system">
+                                <color key="titleColor" systemColor="linkColor"/>
+                            </state>
                             <connections>
                                 <action selector="submitNext:" destination="-1" eventType="touchUpInside" id="JCJ-BE-ISU"/>
                             </connections>
@@ -69,6 +73,11 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

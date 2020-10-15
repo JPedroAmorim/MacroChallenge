@@ -212,10 +212,12 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.lblIndex.textColor = .black
                 cell.btnRadio.image = UIImage(systemName: "largecircle.fill.circle")
                 // Deselect other options
-//                guard let tableView = cell.superview as? UITableView else {return}
-//                for c in tableView.cel {
-//
-//                }
+                guard let tableView = cell.superview as? UITableView else {return}
+                for auxCell in tableView.visibleCells {
+                    if let optionCell = auxCell as? QuestionOptionTableViewCell, auxCell != cell {
+                        self.setOptionCell(cell: optionCell, selected: false)
+                    }
+                }
             })
         } else {
             UIView.animate(withDuration: 0.3, animations: {

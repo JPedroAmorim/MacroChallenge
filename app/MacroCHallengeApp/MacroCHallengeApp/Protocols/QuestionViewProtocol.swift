@@ -34,15 +34,6 @@ protocol QuestionViewProtocol {
     func overwrite(data: Question, wasAlreadyAnswered: String?)
     
     /**
-
-         Método que irá sinalizar a view para atualizar a sua label do cronômetro.
-
-         - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
-
-         */
-    func updateTime(_ newTimeText: String)
-    
-    /**
      
      Método que irá sinalizar a view que a questão já foi respondida e ela deveria sinalizar a questão.
      

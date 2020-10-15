@@ -9,11 +9,6 @@ import Foundation
 import UIKit
 
 class QuestionViewImplementation: UIView, QuestionViewProtocol {
-    func updateTime(_ newTimeText: String) {
-        
-    }
-    
-    
     // MARK: - IBOutlets
     @IBOutlet weak var questionTableView: UITableView!
 
@@ -144,7 +139,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             referenceXib(nibName: cellIdentifier)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionHeaderTableViewCell", for: indexPath) as? QuestionHeaderTableViewCell {
                 
-                let myString = "Topico nao foi implementado ainda :("
+                let myString = "Matemática"
                 let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
                 

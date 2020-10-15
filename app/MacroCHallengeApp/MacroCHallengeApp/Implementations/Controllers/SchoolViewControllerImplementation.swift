@@ -39,6 +39,7 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
         let defaultView = SchoolViewImplementation(data: self.data, controller: self)
         self.myView = defaultView
         self.view = defaultView
+        self.title = data.name
     }
     
     // MARK: - SchoolViewControllerProtocol methods

@@ -41,7 +41,10 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         super.viewDidLoad()
         setupDefaultQuestionController()
     }
-    
+
+	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+		self.myView!.updateFrame()
+	}
     // MARK: - Setup methods
     private func setupDefaultView() {
         let defaultView = OverviewViewImplementation(data: self.data, controller: self)

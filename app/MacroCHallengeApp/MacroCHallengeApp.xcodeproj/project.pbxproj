@@ -42,6 +42,7 @@
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
 		C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44560CC2535F28C007D945C /* HorizontalChartView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
+		C445613025388653007D945C /* headerCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = C445612F25388653007D945C /* headerCollection.xib */; };
 		C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */; };
 		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */; };
@@ -162,6 +163,7 @@
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C44560CC2535F28C007D945C /* HorizontalChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalChartView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
+		C445612F25388653007D945C /* headerCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerCollection.xib; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			children = (
 				D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */,
 				D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */,
+				C445612F25388653007D945C /* headerCollection.xib */,
 				C44560CC2535F28C007D945C /* HorizontalChartView.xib */,
 				C44560D12535F292007D945C /* HorizontalChartView.swift */,
 				C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */,
@@ -590,6 +593,7 @@
 				D565EEF1252B813900426648 /* Assets.xcassets in Resources */,
 				D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */,
 				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
+				C445613025388653007D945C /* headerCollection.xib in Resources */,
 				2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */,
 				4FFF6BE8252F3D920015DFE7 /* QuestionOptionTableViewCell.xib in Resources */,
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,

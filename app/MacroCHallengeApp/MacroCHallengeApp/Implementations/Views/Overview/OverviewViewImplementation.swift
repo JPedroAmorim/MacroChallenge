@@ -104,6 +104,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
 	private func setupVisualElements() {
 
+		customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
 		customView.frame = self.progressChart.bounds
 		
 		self.progressChart.addSubview(customView)
@@ -187,10 +188,11 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		questionsCollege.delegate = self
 		questionsCollege.dataSource = self
 		questionsCollege.register(UINib(nibName: "OverviewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "OverviewCollectionCell")
+
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		data.questions.count
+		return data.questions.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -222,4 +224,10 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 			showAlertStartSimulator(title: "Inicie o simulado", msg: "É necessário iniciar o simulado para ver a questão")
 		}
 	}
+
+	func updateFrame() {
+
+		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
+	}
+	
 }

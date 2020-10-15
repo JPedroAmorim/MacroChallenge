@@ -56,4 +56,6 @@ protocol OverviewViewProtocol {
     
     // Dependências
     var viewController: OverviewViewControllerProtocol  {get set}
+
+	func updateFrame()
 }

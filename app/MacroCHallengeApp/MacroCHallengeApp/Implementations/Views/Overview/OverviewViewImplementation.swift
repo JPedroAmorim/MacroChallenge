@@ -16,25 +16,10 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     // MARK: -IBOutlets
     @IBOutlet weak var questionsView: UIView!
     @IBOutlet weak var questionsCollege: UICollectionView!
-    @IBOutlet weak var startSimulatorButton: UIButton!
     @IBOutlet var clockLabel: UILabel!
     
     @IBOutlet weak var progressChart: UIView!
     
-    // MARK: - IBActions
-    @IBAction func startSimulatorButton(_ sender: Any) {
-        if simulatorStarted {
-            showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
-                self.viewController.hasEnded()
-                self.simulatorStarted = false
-                self.startSimulatorButton.setTitle("Iniciar Simulado", for: .normal)
-            }))
-        } else {
-            viewController.hasBegun()
-            simulatorStarted = true
-            startSimulatorButton.setTitle("Finalizar Simulado", for: .normal)
-        }
-    }
     
     // MARK: - Dependencies
     var viewController: OverviewViewControllerProtocol
@@ -99,18 +84,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
      Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
      */
     
-    private func setupVisualElements() {
-        
-        customView.frame = self.progressChart.bounds
-        self.progressChart.addSubview(customView)
-        updatePercentage(percentage: 0.0)
-        updateCurrentQuestionsLabel(questionsAnswered: 0)
-        
-        startSimulatorButton.layer.cornerRadius = 8
-        startSimulatorButton.layer.borderWidth = 3
-        startSimulatorButton.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
-        startSimulatorButton.titleLabel?.tintColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
-    }
     
     // MARK: - OverviewViewProtocol methods
     func updatePercentage(percentage: Double) {
@@ -133,6 +106,34 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     func showTimeHasEndedAlert() {
         showAlert(title: "O tempo para o simulado acabou", msg: "O tempo dedicado à prova acabou. Mesmo assim, você ainda pode finalizar as suas questões.", shouldPresentCancel: false, closure: ({action in}))
     }
+	func updateFrame() {
+		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
+	}
+	func changeStatusSimulator() {
+		if simulatorStarted {
+			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
+				self.simulatorStarted = false
+				self.viewController.hasEnded()
+			}))
+		} else {
+			setClock()
+			simulatorStarted = true
+			self.viewController.hasStarted()
+		}
+	}
+	private func setupVisualElements() {
+
+		customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
+		customView.frame = self.progressChart.bounds
+		
+		self.progressChart.addSubview(customView)
+
+		customView.center = CGPoint(x: progressChart.frame.size.width  / 2,
+									y: progressChart.frame.size.height / 2)
+
+		updatePercentage(percentage: 0.0)
+		updateCurrentQuestionsLabel(questionsAnswered: 0)
+	}
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -159,7 +160,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
                 cell.numberLabel.textColor = UIColor.white
             } else {
                 cell.bgView.backgroundColor = UIColor.white
-                cell.numberLabel.textColor = UIColor(red:200/255, green:200/255, blue:200/255, alpha: 1)
+                cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
             }
         }
         
@@ -170,11 +171,20 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if simulatorStarted {
-            viewController.questionWasSubmitted(data.questions[indexPath.row])
-        } else {
-            showAlertStartSimulator(title: "Inicie o simulado", msg: "É necessário iniciar o simulado para ver a questão")
-        }
-    }
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if simulatorStarted {
+			viewController.questionWasSubmitted(data.questions[indexPath.row])
+		} else {
+
+			DispatchQueue.main.async {
+				self.showAlert(title: "Iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
+					self.setClock()
+					self.simulatorStarted = true
+					self.viewController.hasStarted()
+					self.viewController.questionWasSubmitted(self.data.questions[indexPath.row])
+				}))
+			}
+		}
+	}
+			
 }

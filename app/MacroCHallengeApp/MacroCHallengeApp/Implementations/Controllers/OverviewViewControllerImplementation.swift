@@ -39,10 +39,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         setupDefaultView()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupDefaultQuestionController()
-    }
     
     // MARK: - Setup methods
     private func setupDefaultView() {
@@ -184,4 +180,33 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             }
         }
     }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setupDefaultQuestionController()
+		
+		self.title = data.name
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Iniciar Prova", style: .plain, target: self, action: #selector(addTapped))
+	}
+	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+		if let view = self.myView {
+			view.updateFrame()
+		}
+	}
+	@objc func addTapped() {
+		if let view = self.myView {
+			view.changeStatusSimulator()
+		}
+	}
+	func hasEnded() {
+		totalPercentageOfCorrectAnswers = calculateTotalPercentage()
+		if let navCon = self.navigationController {
+			let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
+			navCon.pushViewController(resultsVC, animated: true)
+		}
+		
+		navigationItem.rightBarButtonItem?.title = "Iniciar Prova"
+	}
+	func hasStarted() {
+		navigationItem.rightBarButtonItem?.title = "Finalizar"
+	}
 }

@@ -161,7 +161,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             return setupQuestionImageCell(tableView: tableView, indexPath: indexPath, image: image)
         // Subtitle
         case 3:
-            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: self.question.subtitle ?? "", category: .text)
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: self.question.subtitle ?? "", category: .subtitle)
         // Text
         case 4:
             return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: self.question.text, category: .text)

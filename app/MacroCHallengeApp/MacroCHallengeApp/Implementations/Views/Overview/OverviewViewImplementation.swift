@@ -44,20 +44,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		}
 	}
 
-	func showAlertStartSimulator(title: String, msg: String, shouldPresentCancel: Bool, closure: @escaping (UIAlertAction) -> Void) {
-		let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-
-		if shouldPresentCancel {
-			alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-		}
-
-		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: closure))
-
-		if let viewController = self.viewController as? UIViewController {
-			viewController.present(alert, animated: true, completion: nil)
-		}
-	}
-
 	// MARK: - Private attributes
 	private var data: Test
 
@@ -163,8 +149,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	func changeStatusSimulator() {
 		if simulatorStarted {
 			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
-				self.viewController.hasEnded()
 				self.simulatorStarted = false
+				self.viewController.hasEnded()
 			}))
 		} else {
 			setClock()
@@ -230,10 +216,11 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		} else {
 
 			DispatchQueue.main.async {
-				self.showAlert(title: "Deseja iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
+				self.showAlert(title: "Iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
 					self.setClock()
 					self.simulatorStarted = true
 					self.viewController.hasStarted()
+					self.viewController.questionWasSubmitted(self.data.questions[indexPath.row])
 				}))
 			}
 		}

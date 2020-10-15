@@ -37,7 +37,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-vp-oeF">
-                            <rect key="frame" x="24" y="70" width="366" height="663"/>
+                            <rect key="frame" x="24" y="78" width="366" height="655"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gTb-Cp-EmZ">
                                 <size key="itemSize" width="44" height="44"/>
@@ -67,7 +67,7 @@
                         <constraint firstItem="Rmj-d4-jaB" firstAttribute="top" secondItem="QxE-l1-qVZ" secondAttribute="top" constant="16" id="NcD-VP-lTv"/>
                         <constraint firstItem="CJL-4f-A3d" firstAttribute="centerY" secondItem="Rmj-d4-jaB" secondAttribute="centerY" id="Sz3-j1-jJb"/>
                         <constraint firstAttribute="trailing" secondItem="CJL-4f-A3d" secondAttribute="trailing" constant="24" id="YMh-cf-hiI"/>
-                        <constraint firstItem="Ghc-vp-oeF" firstAttribute="top" secondItem="hag-lm-4WN" secondAttribute="bottom" constant="16" id="Z1P-Ag-Ddr"/>
+                        <constraint firstItem="Ghc-vp-oeF" firstAttribute="top" secondItem="hag-lm-4WN" secondAttribute="bottom" constant="24" id="Z1P-Ag-Ddr"/>
                         <constraint firstItem="hag-lm-4WN" firstAttribute="top" secondItem="Rmj-d4-jaB" secondAttribute="bottom" constant="16" id="dXt-fg-GvZ"/>
                         <constraint firstItem="Rmj-d4-jaB" firstAttribute="leading" secondItem="QxE-l1-qVZ" secondAttribute="leading" constant="24" id="g23-w5-Ghs"/>
                         <constraint firstAttribute="trailing" secondItem="Ghc-vp-oeF" secondAttribute="trailing" constant="24" id="sns-B5-P2f"/>

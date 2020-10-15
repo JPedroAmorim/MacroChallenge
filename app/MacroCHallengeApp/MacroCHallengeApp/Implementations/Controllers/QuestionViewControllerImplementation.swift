@@ -88,6 +88,10 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
         parentController.questionWasUnsubmitted(question: question)
     }
     
+    func updateTime(_ newTimeText: String) {
+        myView?.updateTime(newTimeText)
+    }
+    
     // MARK: - Métodos privados
     /**
      

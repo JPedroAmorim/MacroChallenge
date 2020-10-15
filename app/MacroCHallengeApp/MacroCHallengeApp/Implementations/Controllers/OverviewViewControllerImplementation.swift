@@ -21,6 +21,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     private var questionsAnswered: [String:String] = [:]
     private(set) var totalPercentageOfCorrectAnswers: Double = 0.0
     private var timeText: String = "00:00"
+    private var timer: Timer?
     
     // MARK: - Init methods
     required init(data: Test) {
@@ -78,7 +79,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     }
     
     func hasEnded() {
-        totalPercentageOfCorrectAnswers = calculateTotalPercentage()
+        timer?.invalidate()
         if let navCon = self.navigationController {
             let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
             navCon.pushViewController(resultsVC, animated: true)
@@ -90,33 +91,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     }
     
     // MARK: - Private methods
-    
-    /**
-     
-     Calcula a porcentagem total de acertos na prova (questões corretas/questões totais).
-     
-     - returns A porcentagem de acertos como um double arredondado (exemplo: 44.00)
-     
-     */
-    private func calculateTotalPercentage() -> Double {
-        let testQuestions = data.questions
-        let totalNumberOfQuestions = data.questions.count
-        var correctAnswers: Int = 0
-        
-        for (questionNumber, answer) in questionsAnswered {
-            if let question = testQuestions.filter({ $0.number == questionNumber }).first {
-                if question.answer == answer {
-                    correctAnswers += 1
-                }
-            }
-        }
-        
-        let doubleValue = Double(correctAnswers) / Double(totalNumberOfQuestions)
-        
-        let roundedValue = (doubleValue * 100).rounded()
-        
-        return roundedValue
-    }
     
     /**
      
@@ -174,7 +148,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         var minutes = 0
         var hours = 0
 
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             totalCounter += 1
             minuteCounter += 1
 
@@ -191,11 +165,13 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
                     DispatchQueue.main.async {
                         self.timeText = String(format: "0%d", hours) + ":" + String(format: "0%d", minutes)
                         self.myView?.updateTime(self.timeText)
+                        self.questionController?.updateTime(self.timeText)
                     }
                 } else {
                     DispatchQueue.main.async {
                         self.timeText = String(format: "0%d", hours) + ":" + String(format: "%d", minutes)
                         self.myView?.updateTime(self.timeText)
+                        self.questionController?.updateTime(self.timeText)
                     }
                 }
             }

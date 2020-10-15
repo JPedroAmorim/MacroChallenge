@@ -69,6 +69,15 @@ protocol QuestionViewControllerProtocol {
     
     func answerWasUnsubmitted(question: Question)
     
+    /**
+     
+     Método que irá sinalizar a view para atualizar a sua label do cronômetro.
+     
+     - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
+     
+     */
+    func updateTime(_ newTimeText: String)
+    
     // Dependências
     var myView: QuestionViewProtocol? {get set}
     var parentController: OverviewViewControllerProtocol {get set}

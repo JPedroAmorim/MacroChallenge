@@ -26,19 +26,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	@IBOutlet weak var progressChart: UIView!
 
 	// MARK: - IBActions
-	@IBAction func startSimulatorButton(_ sender: Any) {
-		if simulatorStarted {
-			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
-				self.viewController.hasEnded()
-				self.simulatorStarted = false
-				self.startSimulatorButton.setTitle("Iniciar Simulado", for: .normal)
-			}))
-		} else {
-			setClock()
-			simulatorStarted = true
-			startSimulatorButton.setTitle("Finalizar Simulado", for: .normal)
-		}
-	}
 
 	// MARK: - Dependencies
 	var viewController: OverviewViewControllerProtocol
@@ -114,11 +101,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 
 		updatePercentage(percentage: 0.0)
 		updateCurrentQuestionsLabel(questionsAnswered: 0)
-
-		startSimulatorButton.layer.cornerRadius = 8
-		startSimulatorButton.layer.borderWidth = 3
-		startSimulatorButton.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
-		startSimulatorButton.titleLabel?.tintColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
 	}
 
 	/**
@@ -175,6 +157,18 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 	func updateFrame() {
 
 		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
+	}
+
+	func changeStatusSimulator() {
+		if simulatorStarted {
+			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
+				self.viewController.hasEnded()
+				self.simulatorStarted = false
+			}))
+		} else {
+			setClock()
+			simulatorStarted = true
+		}
 	}
 
 	// MARK: - OverviewViewProtocol methods

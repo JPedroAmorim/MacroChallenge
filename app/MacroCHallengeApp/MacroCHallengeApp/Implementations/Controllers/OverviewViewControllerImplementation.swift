@@ -40,11 +40,23 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDefaultQuestionController()
+
+		self.title = data.name
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Iniciar", style: .plain, target: self, action: #selector(addTapped))
     }
 
 	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-		self.myView!.updateFrame()
+		if let view = self.myView {
+			view.updateFrame()
+		}
 	}
+
+	@objc func addTapped() {
+		if let view = self.myView {
+			view.changeStatusSimulator()
+		}
+	}
+	
     // MARK: - Setup methods
     private func setupDefaultView() {
         let defaultView = OverviewViewImplementation(data: self.data, controller: self)

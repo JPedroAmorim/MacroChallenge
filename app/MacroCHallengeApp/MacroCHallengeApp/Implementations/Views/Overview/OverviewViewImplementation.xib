@@ -14,7 +14,6 @@
                 <outlet property="progressChart" destination="L1U-zq-hHX" id="Qh0-7m-mdH"/>
                 <outlet property="questionsCollege" destination="Ghc-vp-oeF" id="0ve-vY-C4x"/>
                 <outlet property="questionsView" destination="QxE-l1-qVZ" id="kbl-to-GdW"/>
-                <outlet property="startSimulatorButton" destination="CXQ-5l-mMb" id="8bK-iO-VvP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxE-l1-qVZ">
-                    <rect key="frame" x="0.0" y="44" width="414" height="669"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="725"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questões" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmj-d4-jaB">
                             <rect key="frame" x="24" y="16" width="76" height="21"/>
@@ -38,7 +37,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-vp-oeF">
-                            <rect key="frame" x="24" y="70" width="366" height="599"/>
+                            <rect key="frame" x="24" y="70" width="366" height="655"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gTb-Cp-EmZ">
                                 <size key="itemSize" width="44" height="44"/>
@@ -78,19 +77,8 @@
                         <constraint firstItem="xhW-Jv-XAF" firstAttribute="centerY" secondItem="Rmj-d4-jaB" secondAttribute="centerY" id="wsR-R4-skS"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXQ-5l-mMb">
-                    <rect key="frame" x="40" y="806" width="334" height="48"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="48" id="xOM-Wj-yGs"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Iniciar Simulado"/>
-                    <connections>
-                        <action selector="startSimulatorButton:" destination="-1" eventType="touchUpInside" id="if3-Kl-Tl7"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX">
-                    <rect key="frame" x="0.0" y="721" width="414" height="77"/>
+                    <rect key="frame" x="0.0" y="777" width="414" height="77"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="77" id="o09-C3-XMW"/>
                     </constraints>
@@ -99,15 +87,12 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.95685106519999996" green="0.9568567872" blue="0.95687133069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CXQ-5l-mMb" secondAttribute="trailing" constant="40" id="1HB-jx-Zph"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="L1U-zq-hHX" secondAttribute="bottom" constant="8" id="111-SX-eYI"/>
                 <constraint firstItem="QxE-l1-qVZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7D2-kh-lme"/>
-                <constraint firstItem="CXQ-5l-mMb" firstAttribute="top" secondItem="L1U-zq-hHX" secondAttribute="bottom" constant="8" id="7V4-U5-NH1"/>
                 <constraint firstItem="L1U-zq-hHX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9pd-Ss-BmH"/>
                 <constraint firstItem="QxE-l1-qVZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jas-NA-hTH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QxE-l1-qVZ" secondAttribute="trailing" id="mBf-nb-0ta"/>
-                <constraint firstItem="CXQ-5l-mMb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="mzx-IT-3s0"/>
                 <constraint firstItem="L1U-zq-hHX" firstAttribute="top" secondItem="QxE-l1-qVZ" secondAttribute="bottom" constant="8" id="snG-kF-0XX"/>
-                <constraint firstItem="CXQ-5l-mMb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="tKA-uz-fi9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L1U-zq-hHX" secondAttribute="trailing" id="vY5-ak-qUq"/>
             </constraints>
             <point key="canvasLocation" x="89.855072463768124" y="94.419642857142847"/>

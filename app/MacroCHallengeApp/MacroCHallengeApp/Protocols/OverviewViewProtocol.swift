@@ -63,8 +63,18 @@ protocol OverviewViewProtocol {
 	Método que reorganiza os elementos para o modo landscape.
 
 
-	- parameter questionsAnswered: Um vetor de inteiros com os números das questões já respondidas.
+	- parameter questionsAnswered: sem parametros.
 
 	*/
 	func updateFrame()
+
+	/**
+
+	Método que altera o estado do simulador.
+
+
+	- parameter questionsAnswered: sem parametros.
+
+	*/
+	func changeStatusSimulator()
 }

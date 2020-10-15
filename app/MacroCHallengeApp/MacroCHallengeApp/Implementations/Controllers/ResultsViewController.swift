@@ -33,6 +33,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         super.loadView()
         setupDefaultView()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,12 +49,13 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     
     
     private func setupResultsData() {
-        let totalPercentageOfCorrectAnswers = calculateTotalPercentage()
-        let totalNumberOfCorrectAnswers = numberOfCorrectAnswers()
-        let totalNumberOfAnsweredQuestions = answeredQuestions.count
+        let totalNumberOfCorrectAnswers = getTotalNumberOfCorrectAnswers()
         let totalNumberOfQuestions = test.questions.count
+        let totalPercentageOfCorrectAnswers = calculatePercentage(correctAnswers: totalNumberOfCorrectAnswers ,
+                                                                  totalNumberOfQuestions: totalNumberOfQuestions)
+        let totalNumberOfAnsweredQuestions = answeredQuestions.count
         let totalTimeElapsed = "todo" 
-        let resultsPerTopic: [String : ResultsPerTopic] = [:]
+        let resultsPerTopic: [String : ResultsPerTopic] = generateResultsPerTopicMock()
         
         let resultsData = ResultsData(totalPercentageOfCorrectAnswers: totalPercentageOfCorrectAnswers,
                                       totalNumberOfCorrectAnswers: totalNumberOfCorrectAnswers,
@@ -73,16 +75,13 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     
     /**
      
-     Calcula a porcentagem total de acertos na prova (questões corretas/questões totais).
+     Calcula a porcentagem de acertos(questões corretas/questões totais).
      
      - returns A porcentagem de acertos como um double arredondado (exemplo: 44.00)
      
      */
     
-    private func calculateTotalPercentage() -> Double {
-        let correctAnswers = numberOfCorrectAnswers()
-        let totalNumberOfQuestions = test.questions.count
-        
+    private func calculatePercentage(correctAnswers: Int, totalNumberOfQuestions:Int) -> Double {
         let doubleValue = Double(correctAnswers) / Double(totalNumberOfQuestions)
         
         let roundedValue = (doubleValue * 100).rounded()
@@ -97,7 +96,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
      
      */
     
-    private func numberOfCorrectAnswers() -> Int {
+    private func getTotalNumberOfCorrectAnswers() -> Int {
         let testQuestions = test.questions
         var correctAnswers: Int = 0
         
@@ -110,4 +109,46 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         }
         return correctAnswers
     }
+    
+    // TODO: Remover isso daqui.
+    /**
+     
+     Faz um mock do parâmetro resultsPerTopic, parâmetro de resultsData
+     
+     - returns Um mock de resultsPerTopic
+     
+     */
+    private func generateResultsPerTopicMock() -> [String : ResultsPerTopic] {
+        var resultsPerTopic: [String : ResultsPerTopic] = [:]
+        
+        let mathTotalCorrect = 30
+        let mathTotalAnswered = 40
+        let mathTotalNumber = 60
+        let mathPercentage = calculatePercentage(correctAnswers: mathTotalCorrect,
+                                                 totalNumberOfQuestions: mathTotalNumber)
+        
+        let mathResult = ResultsPerTopic(totalPercentageOfCorrectAnswers: mathPercentage,
+                                         totalNumberOfCorrectAnswers: mathTotalCorrect,
+                                         totalNumberOfAnsweredQuestions: mathTotalAnswered,
+                                         totalNumberOfQuestions: mathTotalNumber)
+        
+        resultsPerTopic["Matemática"] = mathResult
+        
+        let physicsTotalCorrect = 15
+        let physicsTotalAnswered = 40
+        let physicsTotalNumber = 60
+        let physicsPercentage = calculatePercentage(correctAnswers: physicsTotalCorrect,
+                                                 totalNumberOfQuestions: physicsTotalNumber)
+        
+        let physicsResult = ResultsPerTopic(totalPercentageOfCorrectAnswers: physicsPercentage,
+                                         totalNumberOfCorrectAnswers: physicsTotalCorrect,
+                                         totalNumberOfAnsweredQuestions: physicsTotalAnswered,
+                                         totalNumberOfQuestions: physicsTotalNumber)
+        
+        resultsPerTopic["Física"] = physicsResult
+        
+        
+        return resultsPerTopic
+    }
+    
 }

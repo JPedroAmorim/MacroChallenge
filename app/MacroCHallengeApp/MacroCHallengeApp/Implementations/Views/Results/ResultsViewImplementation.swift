@@ -140,7 +140,7 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
             cell.updateView(topic: keyForRow,
                             numberOfRightAnswers: resultPerTopic.totalNumberOfCorrectAnswers,
                             totalNumberOfQuestions: resultPerTopic.totalNumberOfQuestions,
-                            percetage: 36/50)
+                            percetage: resultPerTopic.totalPercentageOfCorrectAnswers)
             
             finalCell = cell
             

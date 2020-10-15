@@ -166,6 +166,17 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
 		}
 	}
 
+	// MARK: - Public methods
+
+	/**
+	Método responsável por reorganizar os elementos no modo landscape
+	*/
+
+	func updateFrame() {
+
+		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
+	}
+
 	// MARK: - OverviewViewProtocol methods
 	func updatePercentage(percentage: Double) {
 		customView.updatePercentage(percentage: percentage)
@@ -223,11 +234,6 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
 		} else {
 			showAlertStartSimulator(title: "Inicie o simulado", msg: "É necessário iniciar o simulado para ver a questão")
 		}
-	}
-
-	func updateFrame() {
-
-		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
 	}
 	
 }

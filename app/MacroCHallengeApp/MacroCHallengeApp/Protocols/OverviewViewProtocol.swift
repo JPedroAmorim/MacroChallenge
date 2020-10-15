@@ -57,5 +57,14 @@ protocol OverviewViewProtocol {
     // Dependências
     var viewController: OverviewViewControllerProtocol  {get set}
 
+
+	/**
+
+	Método que reorganiza os elementos para o modo landscape.
+
+
+	- parameter questionsAnswered: Um vetor de inteiros com os números das questões já respondidas.
+
+	*/
 	func updateFrame()
 }

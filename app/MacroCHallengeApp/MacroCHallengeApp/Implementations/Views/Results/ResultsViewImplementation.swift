@@ -16,13 +16,14 @@ class ResultsViewImplementation: UIView, ResultsViewProtocol {
     
     // MARK: - Private attributes
     private var data: ResultsData
-    
     private let sectionHeaderTitleArray = ["Nota final", "Nota por matéria", "Questões"]
+    private var resultsPerTopicsKeys: [String]
     
     // MARK: - Init methods
     required init(data: ResultsData, viewController: ResultsViewControllerProtocol) {
         self.data = data
         self.viewController = viewController
+        resultsPerTopicsKeys = Array(data.resultsPerTopic.keys)
         super.init(frame: CGRect.zero)
         initFromNib()
         setupTableView()
@@ -82,7 +83,7 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
         if section == 0 { // final grade section
             numberOfRows = 1
         } else if section == 1 { // grade for subject section
-            numberOfRows = 1
+            numberOfRows = resultsPerTopicsKeys.count
         } else if section == 1 { // questions section
             numberOfRows = 1
         }
@@ -123,6 +124,25 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
             finalCell = cell
             
         } else if indexPath.section == 1 { // grade for subject
+            cellIdentifier = "ProgressBarTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ProgressBarTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of ProgressBarTableViewCell.")
+            }
+            
+            let keyForRow = resultsPerTopicsKeys[indexPath.row]
+            
+            guard let resultPerTopic = data.resultsPerTopic[keyForRow] else {
+                return UITableViewCell()
+            }
+            
+            cell.updateView(topic: keyForRow,
+                            numberOfRightAnswers: resultPerTopic.totalNumberOfCorrectAnswers,
+                            totalNumberOfQuestions: resultPerTopic.totalNumberOfQuestions,
+                            percetage: 36/50)
+            
+            finalCell = cell
             
         } else if indexPath.section == 2 { // questions
             

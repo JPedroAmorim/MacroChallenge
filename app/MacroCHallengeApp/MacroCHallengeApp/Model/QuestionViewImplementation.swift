@@ -77,8 +77,8 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
 
 
-     ///Método que irá sinalizar a view para atualizar a sua label do cronômetro.
-     ///- parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
+     /// Método que irá sinalizar a view para atualizar a sua label do cronômetro.
+     /// - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
     func updateTime(_ newTimeText: String) {
         let path = IndexPath(row: 0, section: 0) // A célula que con
         guard let cell = self.questionTableView.cellForRow(at: path) as? QuestionHeaderTableViewCell else {return}
@@ -211,6 +211,11 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.lblAnswer.textColor = .black
                 cell.lblIndex.textColor = .black
                 cell.btnRadio.image = UIImage(systemName: "largecircle.fill.circle")
+                // Deselect other options
+//                guard let tableView = cell.superview as? UITableView else {return}
+//                for c in tableView.cel {
+//
+//                }
             })
         } else {
             UIView.animate(withDuration: 0.3, animations: {

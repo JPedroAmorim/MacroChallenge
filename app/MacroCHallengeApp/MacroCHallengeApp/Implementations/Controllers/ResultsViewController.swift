@@ -15,6 +15,8 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     private var test: Test
     private var answeredQuestions: [String : String]
     private(set) var resultsData: ResultsData?
+    private var correctUserAnswers: [Int] = []
+    private var wrongUserAnswers: [Int] = []
     
     // MARK: - Init methods
     required init(test: Test, answeredQuestions: [String : String]) {
@@ -57,6 +59,8 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         let totalTimeElapsed = "todo" 
         let resultsPerTopic: [String : ResultsPerTopic] = generateResultsPerTopicMock()
         
+        generateCorrectAndWrongUserAnswersAsIntArray()
+        
         let resultsData = ResultsData(totalPercentageOfCorrectAnswers: totalPercentageOfCorrectAnswers,
                                       totalNumberOfCorrectAnswers: totalNumberOfCorrectAnswers,
                                       totalNumberOfAnsweredQuestions: totalNumberOfAnsweredQuestions,
@@ -64,7 +68,9 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
                                       resultsPerTopic: resultsPerTopic,
                                       test: test,
                                       answeredQuestions: answeredQuestions,
-                                      totalTimeElapsed: totalTimeElapsed)
+                                      totalTimeElapsed: totalTimeElapsed,
+                                      correctAnswers: correctUserAnswers,
+                                      wrongAnswers: wrongUserAnswers)
         self.resultsData = resultsData
     }
     
@@ -88,6 +94,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         
         return roundedValue
     }
+    
     /**
      
      Calcula o número de questões corretas em uma prova.
@@ -138,12 +145,12 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         let physicsTotalAnswered = 40
         let physicsTotalNumber = 60
         let physicsPercentage = calculatePercentage(correctAnswers: physicsTotalCorrect,
-                                                 totalNumberOfQuestions: physicsTotalNumber)
+                                                    totalNumberOfQuestions: physicsTotalNumber)
         
         let physicsResult = ResultsPerTopic(totalPercentageOfCorrectAnswers: physicsPercentage,
-                                         totalNumberOfCorrectAnswers: physicsTotalCorrect,
-                                         totalNumberOfAnsweredQuestions: physicsTotalAnswered,
-                                         totalNumberOfQuestions: physicsTotalNumber)
+                                            totalNumberOfCorrectAnswers: physicsTotalCorrect,
+                                            totalNumberOfAnsweredQuestions: physicsTotalAnswered,
+                                            totalNumberOfQuestions: physicsTotalNumber)
         
         resultsPerTopic["Física"] = physicsResult
         
@@ -151,4 +158,35 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         return resultsPerTopic
     }
     
+    /**
+     
+     Inicializa as variáveis de classe correctUserAnswers e wrongUserAnswers
+     
+     */
+    
+    private func generateCorrectAndWrongUserAnswersAsIntArray() {
+        let testQuestions = test.questions
+        
+        for (questionNumber, answer) in answeredQuestions {
+            if let question = testQuestions.filter({ $0.number == questionNumber }).first {
+                if let questionNumberAsInt = Int(questionNumber) {
+                    if question.answer == answer {
+                        correctUserAnswers.append(questionNumberAsInt)
+                    }
+                }
+            }
+        }
+        
+        correctUserAnswers.sort()
+        
+        for question in test.questions {
+            if let questionNumberAsInt = Int(question.number) {
+                if !correctUserAnswers.contains(questionNumberAsInt) {
+                    wrongUserAnswers.append(questionNumberAsInt)
+                }
+            }
+        }
+        
+        wrongUserAnswers.sort()
+    }
 }

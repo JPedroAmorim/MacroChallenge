@@ -16,11 +16,14 @@ class ResultsData {
     private(set) var test: Test
     private(set) var answeredQuestions: [String : String]
     private(set) var totalTimeElapsed: String
+    private(set) var correctAnswers: [Int]
+    private(set) var wrongAnswers: [Int]
     
     init(totalPercentageOfCorrectAnswers: Double, totalNumberOfCorrectAnswers: Int,
          totalNumberOfAnsweredQuestions: Int, totalNumberOfQuestions: Int,
          resultsPerTopic: [String: ResultsPerTopic], test: Test,
-         answeredQuestions: [String: String], totalTimeElapsed: String) {
+         answeredQuestions: [String: String], totalTimeElapsed: String,
+         correctAnswers: [Int], wrongAnswers: [Int]) {
         self.totalPercentageOfCorrectAnswers = totalPercentageOfCorrectAnswers
         self.totalNumberOfCorrectAnswers = totalNumberOfCorrectAnswers
         self.totalNumberOfAnsweredQuestions = totalNumberOfAnsweredQuestions
@@ -29,5 +32,7 @@ class ResultsData {
         self.test = test
         self.answeredQuestions = answeredQuestions
         self.totalTimeElapsed = totalTimeElapsed
+        self.correctAnswers = correctAnswers
+        self.wrongAnswers = wrongAnswers
     }
 }

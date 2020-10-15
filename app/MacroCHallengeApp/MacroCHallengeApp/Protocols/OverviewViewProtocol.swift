@@ -54,6 +54,25 @@ protocol OverviewViewProtocol {
     
     func updateAnsweredQuestions(questionsAnswered: [Int])
     
+    /**
+     
+     Método que irá sinalizar a view para atualizar a sua label do cronômetro.
+     
+     - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
+     
+     */
+    
+    func updateTime(_ newTimeText: String)
+
+    /**
+     
+     Método que irá sinalizar a view para mostrar o alerta de que o tempo acabou.
+     
+     
+     */
+    
+    func showTimeHasEndedAlert()
+    
     // Dependências
     var viewController: OverviewViewControllerProtocol  {get set}
 }

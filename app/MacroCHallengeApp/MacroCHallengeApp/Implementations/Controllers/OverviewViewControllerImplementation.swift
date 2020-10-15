@@ -8,9 +8,9 @@
 import UIKit
 
 class OverviewViewControllerImplementation: UIViewController, OverviewViewControllerProtocol {
-    func hasBegun() {
-        
-    }
+    // MARK: - Constants
+    // TODO: Ver como esse controller de fato obterá essa informação
+   private let testDurationInSeconds = 2 * 60 // Valor de teste: Dois minutos
     
     // MARK: - Dependencies
     var myView: OverviewViewProtocol?
@@ -20,6 +20,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     private var data: Test
     private var questionsAnswered: [String:String] = [:]
     private(set) var totalPercentageOfCorrectAnswers: Double = 0.0
+    private var timeText: String = "00:00"
     
     // MARK: - Init methods
     required init(data: Test) {
@@ -82,6 +83,10 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
             navCon.pushViewController(resultsVC, animated: true)
         }
+    }
+    
+    func hasBegun() {
+        setClock()
     }
     
     // MARK: - Private methods
@@ -155,5 +160,52 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         let progressAsPercentage = calculateProgress()
         myView?.updatePercentage(percentage: progressAsPercentage)
         myView?.updateCurrentQuestionsLabel(questionsAnswered: questionsAnswered.count)
+    }
+    
+    /**
+
+    Método responsável por gerir o tempo dedicado à uma prova. Ele é responsável por atualizar os elementos gráficos ligados ao tempo. Quando o tempo da prova acaba (definido pela constante
+    testDurationInSeconds) é emitido um aviso sobre o ocorrido e o timer é invalidado.
+
+    */
+    private func setClock() {
+        var totalCounter = 0
+        var minuteCounter = 0
+        var minutes = 0
+        var hours = 0
+
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            totalCounter += 1
+            minuteCounter += 1
+
+            if minuteCounter == 60 {
+                minutes += 1
+                minuteCounter = 0
+
+                if minutes == 60 {
+                    hours += 1
+                    minutes = 0
+                }
+
+                if minutes < 10 {
+                    DispatchQueue.main.async {
+                        self.timeText = String(format: "0%d", hours) + ":" + String(format: "0%d", minutes)
+                        self.myView?.updateTime(self.timeText)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.timeText = String(format: "0%d", hours) + ":" + String(format: "%d", minutes)
+                        self.myView?.updateTime(self.timeText)
+                    }
+                }
+            }
+
+            if totalCounter == self.testDurationInSeconds {
+                timer.invalidate()
+                DispatchQueue.main.async {
+                    self.myView?.showTimeHasEndedAlert()
+                }
+            }
+        }
     }
 }

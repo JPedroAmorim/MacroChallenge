@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 class QuestionViewImplementation: UIView, QuestionViewProtocol {
+    func updateTime(_ newTimeText: String) {
+        
+    }
+    
     
     // MARK: - IBOutlets
     @IBOutlet weak var questionTableView: UITableView!

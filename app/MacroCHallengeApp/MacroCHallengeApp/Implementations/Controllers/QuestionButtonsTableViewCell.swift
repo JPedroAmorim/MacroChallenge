@@ -12,18 +12,21 @@ class QuestionButtonsTableViewCell: UITableViewCell {
     var controller: QuestionViewControllerProtocol?
     
     // MARK: - Outlets
-    @IBAction func submitPrevious(_ sender: Any) {
-        controller?.previousWasSubmitted()
+
+    @IBAction func previousWasSubmited(_ sender: Any) {
+        self.controller?.previousWasSubmitted()
+    }
+    @IBAction func nextWasSubmited(_ sender: Any) {
+        self.controller?.nextWasSubmitted()
     }
     
-    @IBAction func submitNext(_ sender: Any) {
-        controller?.nextWasSubmitted()
-    }
+    @IBOutlet weak var cardAnterior: UIView!
+    @IBOutlet weak var cardProximo: UIView!
     
     // MARK: - Lifecyle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupCardView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,4 +35,10 @@ class QuestionButtonsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    private func setupCardView() {
+        cardAnterior.layer.borderWidth = 4
+        // 0x195fe6
+        cardAnterior.layer.borderColor = UIColor(red:19/255, green:95/255, blue:230/255, alpha: 1).cgColor
+        cardAnterior.layer.cornerRadius = 10
+    }
 }

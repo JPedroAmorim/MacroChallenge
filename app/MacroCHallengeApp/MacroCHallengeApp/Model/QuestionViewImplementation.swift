@@ -16,7 +16,9 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     // MARK: - IBOutlets
     @IBOutlet weak var questionTableView: UITableView!
-    
+
+    @IBOutlet weak var btnProximo: UIButton!
+    @IBOutlet weak var btnAnterior: UIButton!
     // MARK: - Dependencias
     var controller: QuestionViewControllerProtocol
     
@@ -34,6 +36,9 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         initFromNib()
         self.questionTableView.delegate = self
         self.questionTableView.dataSource = self
+        let currentQuestion = Int(data.number) ?? -10
+        self.btnAnterior.setTitle("Questão " + String(currentQuestion - 1), for: .normal)
+        self.btnProximo.setTitle("Questão " + String(currentQuestion + 1), for: .normal)
     }
     
     required init?(coder: NSCoder) {
@@ -61,10 +66,33 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         } else {
             self.chosenOption = nil
         }
+        let currentQuestion = Int(data.number) ?? -10
+        self.btnAnterior.setTitle("Questão " + String(currentQuestion - 1), for: .normal)
+        self.btnProximo.setTitle("Questão " + String(currentQuestion + 1), for: .normal)
         self.questionTableView.reloadData()
     }
     
+    /**
+
+         Método que irá sinalizar a view para atualizar a sua label do cronômetro.
+
+         - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
+
+         */
+    func updateTime(_ newTimeText: String) {
+        let path = IndexPath(row: 0, section: 0)
+        guard let cell = self.questionTableView.cellForRow(at: path) as? QuestionHeaderTableViewCell else {return}
+        cell.lblTime.text = newTimeText
+    }
+    
     // MARK: - Funções privadas
+    @IBAction func submitPrevious(_ sender: Any) {
+        controller.previousWasSubmitted()
+    }
+    @IBAction func submitNext(_ sender: Any) {
+        controller.nextWasSubmitted()
+    }
+    
     /**
      
      Função utilizada para registrar o arquivo .xib das celulas para serem utilizadas pela table view
@@ -86,18 +114,20 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var numberOfRows = 0
-        if section == 0 { // initialText + number
+        if section == 0 { // Question header
             numberOfRows = 1
-        } else if section == 1 { // images
+        } else if section == 1 { // Initial text
+            numberOfRows = (self.question.initialText == nil ? 0 : 1)
+        } else if section == 2 { // images
             numberOfRows = self.question.images?.count ?? 0
-        } else if section == 2 { // subtitle
+        } else if section == 3 { // subtitle
             numberOfRows = (self.question.subtitle == nil ? 0 : 1)
-        } else if section == 3 { // text
+        } else if section == 4 { // text
             numberOfRows = 1
-        } else if section == 4 { // options
+        } else if section == 5 { // options
             numberOfRows = question.options.count
-        } else if section == 5 { // buttons
-            numberOfRows = 1
+//        } else if section == 6 { // buttons
+//            numberOfRows = 1
         }
         return numberOfRows
     }
@@ -109,13 +139,28 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch  (indexPath.section) {
-        case 0: // Initial text + number
+        case 0: // Question header
+            let cellIdentifier = "QuestionHeaderTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionHeaderTableViewCell", for: indexPath) as? QuestionHeaderTableViewCell {
+                
+                let myString = "Topico nao foi implementado ainda :("
+                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+                let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
+                
+                cell.lblTopic.attributedText = myAttrString
+                
+                return cell
+            } else {
+                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
+            }
+        case 1: // Initial text
             let cellIdentifier = "QuestionTextTableViewCell"
             referenceXib(nibName: cellIdentifier)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell {
                 
-                let myString = self.question.number + ") " + (question.initialText ?? "")
-                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+                let myString = (question.initialText ?? "")
+                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
                 
                 cell.lblText.attributedText = myAttrString
@@ -125,7 +170,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             } else {
                 fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
             }
-        case 1: // Images
+        case 2: // Images
             let cellIdentifier = "QuestionImageTableViewCell"
             referenceXib(nibName: cellIdentifier)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionImageTableViewCell", for: indexPath) as? QuestionImageTableViewCell {
@@ -134,7 +179,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             } else {
                 fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
             }
-        case 2: // Subtitle
+        case 3: // Subtitle
             let cellIdentifier = "QuestionTextTableViewCell"
             referenceXib(nibName: cellIdentifier)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell {
@@ -143,6 +188,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
                 
+                cell.lblText.textAlignment = .center
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .gray
                 
@@ -150,13 +196,13 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             } else {
                 fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
             }
-        case 3: // Text
+        case 4: // Text
             let cellIdentifier = "QuestionTextTableViewCell"
             referenceXib(nibName: cellIdentifier)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTextTableViewCell", for: indexPath) as? QuestionTextTableViewCell {
                 
                 let myString = self.question.text
-                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
                 let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
                 
                 cell.lblText.attributedText = myAttrString
@@ -166,12 +212,12 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             } else {
                 fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
             }
-        case 4: // Options
+        case 5: // Options
             let cellIdentifier = "QuestionOptionTableViewCell"
             referenceXib(nibName: cellIdentifier)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionOptionTableViewCell", for: indexPath) as? QuestionOptionTableViewCell {
                 let index = String(format: "%c", indexPath.row + 97)
-                cell.lblIndex.text = "(" + index.uppercased() + ")"
+                cell.lblIndex.text = index.uppercased()
                 cell.lblAnswer.text = self.question.options[index]
                 if (index == self.chosenOption) {
                     cell.CardView.backgroundColor = .gray
@@ -186,15 +232,15 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             } else {
                 fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
             }
-        case 5: // Buttons
-            let cellIdentifier = "QuestionButtonsTableViewCell"
-            referenceXib(nibName: cellIdentifier)
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionButtonsTableViewCell", for: indexPath) as? QuestionButtonsTableViewCell {
-                cell.controller = self.controller
-                return cell
-            } else {
-                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
-            }
+//        case 6: // Buttons
+//            let cellIdentifier = "QuestionButtonsTableViewCell"
+//            referenceXib(nibName: cellIdentifier)
+//            if let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionButtonsTableViewCell", for: indexPath) as? QuestionButtonsTableViewCell {
+//                cell.controller = self.controller
+//                return cell
+//            } else {
+//                fatalError("The dequeued cell is not an instance of NoticeTableViewCell.")
+//            }
         default:
             return UITableViewCell()
         }
@@ -218,9 +264,10 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 self.chosenOption = option
                 self.controller.answerWasSubmitted(question: self.question, answer: option)
                 UIView.animate(withDuration: 0.3, animations: {
-                    cell.CardView.backgroundColor = .gray
-                    cell.lblAnswer.textColor = .white
-                    cell.lblIndex.textColor = .white
+                    // 0xCBDAF8
+                    cell.CardView.backgroundColor = UIColor(red:203/255, green:218/255, blue:248/255, alpha: 1)
+                    cell.lblAnswer.textColor = .black
+                    cell.lblIndex.textColor = .black
                 })
             }
         }

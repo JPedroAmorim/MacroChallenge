@@ -68,32 +68,18 @@ protocol OverviewViewProtocol {
      
      Método que irá sinalizar a view para mostrar o alerta de que o tempo acabou.
      
-     
      */
     
     func showTimeHasEndedAlert()
     
+    /**
+
+    Método que reorganiza os elementos para o modo landscape.
+
+    */
+    
+    func updateFrame()
+    
     // Dependências
     var viewController: OverviewViewControllerProtocol  {get set}
-
-
-	/**
-
-	Método que reorganiza os elementos para o modo landscape.
-
-
-	- parameter questionsAnswered: sem parametros.
-
-	*/
-	func updateFrame()
-
-	/**
-
-	Método que altera o estado do simulador.
-
-
-	- parameter questionsAnswered: sem parametros.
-
-	*/
-	func changeStatusSimulator()
 }

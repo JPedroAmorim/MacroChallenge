@@ -10,7 +10,7 @@ import UIKit
 class OverviewViewControllerImplementation: UIViewController, OverviewViewControllerProtocol {
     // MARK: - Constants
     // TODO: Ver como esse controller de fato obterá essa informação
-   private let testDurationInSeconds = 2 * 60 // Valor de teste: Dois minutos
+    private let testDurationInSeconds = 2 * 60 // Valor de teste: Dois minutos
     
     // MARK: - Dependencies
     var myView: OverviewViewProtocol?
@@ -39,6 +39,11 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         setupDefaultView()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupDefaultQuestionController()
+        self.title = data.name
+    }
     
     // MARK: - Setup methods
     private func setupDefaultView() {
@@ -50,6 +55,13 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     private func setupDefaultQuestionController() {
         let defaultQuestionController = QuestionViewControllerImplementation(data: data.questions, parentController: self)
         self.questionController = defaultQuestionController
+    }
+    
+    // MARK: - UIViewController overwritten methods
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        if let view = self.myView {
+            view.updateFrame()
+        }
     }
     
     // MARK: - OverviewViewControllerProtocol methods
@@ -80,10 +92,12 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
             navCon.pushViewController(resultsVC, animated: true)
         }
+        navigationItem.rightBarButtonItem?.title = "Iniciar Prova"
     }
     
     func hasBegun() {
         setClock()
+        navigationItem.rightBarButtonItem?.title = "Finalizar"
     }
     
     // MARK: - Private methods
@@ -105,7 +119,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             }
         }
     }
-
+    
     /**
      
      Calcula o progresso feito (questões respondidas/questões totais) na forma de um Double arredondado que representa a porcentagem.
@@ -123,7 +137,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
      Atualiza o view sobre o status de questões respondidas/não respondidas.
      
      */
-    
     private func updateView() {
         let questionsAnsweredNumbersSorted: [Int] = dictKeysAsIntArray(questionsAnswered).sorted()
         myView?.updateAnsweredQuestions(questionsAnswered: questionsAnsweredNumbersSorted)
@@ -133,30 +146,30 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     }
     
     /**
-
-    Método responsável por gerir o tempo dedicado à uma prova. Ele é responsável por atualizar os elementos gráficos ligados ao tempo. Quando o tempo da prova acaba (definido pela constante
-    testDurationInSeconds) é emitido um aviso sobre o ocorrido e o timer é invalidado.
-
-    */
+     
+     Método responsável por gerir o tempo dedicado à uma prova. Ele é responsável por atualizar os elementos gráficos ligados ao tempo. Quando o tempo da prova acaba (definido pela constante
+     testDurationInSeconds) é emitido um aviso sobre o ocorrido e o timer é invalidado.
+     
+     */
     private func setClock() {
         var totalCounter = 0
         var minuteCounter = 0
         var minutes = 0
         var hours = 0
-
+        
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             totalCounter += 1
             minuteCounter += 1
-
+            
             if minuteCounter == 60 {
                 minutes += 1
                 minuteCounter = 0
-
+                
                 if minutes == 60 {
                     hours += 1
                     minutes = 0
                 }
-
+                
                 if minutes < 10 {
                     DispatchQueue.main.async {
                         self.timeText = String(format: "0%d", hours) + ":" + String(format: "0%d", minutes)
@@ -171,7 +184,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
                     }
                 }
             }
-
+            
             if totalCounter == self.testDurationInSeconds {
                 timer.invalidate()
                 DispatchQueue.main.async {
@@ -180,33 +193,4 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             }
         }
     }
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		setupDefaultQuestionController()
-		
-		self.title = data.name
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Iniciar Prova", style: .plain, target: self, action: #selector(addTapped))
-	}
-	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-		if let view = self.myView {
-			view.updateFrame()
-		}
-	}
-	@objc func addTapped() {
-		if let view = self.myView {
-			view.changeStatusSimulator()
-		}
-	}
-	func hasEnded() {
-		totalPercentageOfCorrectAnswers = calculateTotalPercentage()
-		if let navCon = self.navigationController {
-			let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
-			navCon.pushViewController(resultsVC, animated: true)
-		}
-		
-		navigationItem.rightBarButtonItem?.title = "Iniciar Prova"
-	}
-	func hasStarted() {
-		navigationItem.rightBarButtonItem?.title = "Finalizar"
-	}
 }

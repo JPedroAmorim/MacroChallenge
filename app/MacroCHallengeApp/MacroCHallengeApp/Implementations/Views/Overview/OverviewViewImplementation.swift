@@ -8,7 +8,8 @@
 import UIKit
 
 class OverviewViewImplementation: UIView, OverviewViewProtocol {
-    // MARK: - Variables
+    // MARK: - Private attributes
+    private var data: Test
     private var answeredQuestionsArray = [Int]()
     private var simulatorStarted = false
     private var customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
@@ -17,42 +18,10 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     @IBOutlet weak var questionsView: UIView!
     @IBOutlet weak var questionsCollege: UICollectionView!
     @IBOutlet var clockLabel: UILabel!
-    
     @IBOutlet weak var progressChart: UIView!
-    
     
     // MARK: - Dependencies
     var viewController: OverviewViewControllerProtocol
-    
-    // MARK: - Alerts
-    func showAlert(title: String, msg: String, shouldPresentCancel: Bool, closure: @escaping (UIAlertAction) -> Void) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        
-        if shouldPresentCancel {
-            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        }
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: closure))
-        
-        if let viewController = self.viewController as? UIViewController {
-            viewController.present(alert, animated: true, completion: nil)
-        }
-        
-    }
-    
-    func showAlertStartSimulator(title: String, msg: String) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        
-        if let viewController = self.viewController as? UIViewController {
-            viewController.present(alert, animated: true, completion: nil)
-        }
-        
-    }
-    
-    // MARK: - Private attributes
-    private var data: Test
     
     // MARK: - Init methods
     required init(data: Test, controller: OverviewViewControllerProtocol) {
@@ -78,13 +47,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         }
     }
     
-    // MARK: - Private methods
-    
-    /**
-     Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
-     */
-    
-    
     // MARK: - OverviewViewProtocol methods
     func updatePercentage(percentage: Double) {
         customView.updatePercentage(percentage: percentage)
@@ -106,34 +68,81 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     func showTimeHasEndedAlert() {
         showAlert(title: "O tempo para o simulado acabou", msg: "O tempo dedicado à prova acabou. Mesmo assim, você ainda pode finalizar as suas questões.", shouldPresentCancel: false, closure: ({action in}))
     }
-	func updateFrame() {
-		customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
-	}
-	func changeStatusSimulator() {
-		if simulatorStarted {
-			showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
-				self.simulatorStarted = false
-				self.viewController.hasEnded()
-			}))
-		} else {
-			setClock()
-			simulatorStarted = true
-			self.viewController.hasStarted()
-		}
-	}
-	private func setupVisualElements() {
-
-		customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
-		customView.frame = self.progressChart.bounds
-		
-		self.progressChart.addSubview(customView)
-
-		customView.center = CGPoint(x: progressChart.frame.size.width  / 2,
-									y: progressChart.frame.size.height / 2)
-
-		updatePercentage(percentage: 0.0)
-		updateCurrentQuestionsLabel(questionsAnswered: 0)
-	}
+    
+    func updateFrame() {
+        customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
+    }
+    // MARK: - Private methods
+    
+    /**
+     
+     Método que apresenta alertas na view.
+     
+     - parameter title: Título do alerta
+     - parameter msg: Mensagem do alerta
+     - parameter shouldPresentCancel: Booleano que indica se o alarme deve mostrar o botão "cancelar"'
+     - parameter closure: Função executada ao ser pressionada a opção "ok"
+     
+     */
+    private func showAlert(title: String, msg: String, shouldPresentCancel: Bool, closure: @escaping (UIAlertAction) -> Void) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        if shouldPresentCancel {
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        }
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: closure))
+        
+        if let viewController = self.viewController as? UIViewController {
+            viewController.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    /**
+     
+     Método responsável, a partir da propriedade self.data, popular os elementos visuais da view.
+     
+     */
+    private func setupVisualElements() {
+        if let viewController = self.viewController as? UIViewController {
+            viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Iniciar Prova", style: .plain, target: self, action: #selector(StartOrFinishNavButtonTapped))
+        }
+        
+        customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
+        customView.frame = self.progressChart.bounds
+        
+        self.progressChart.addSubview(customView)
+        
+        customView.center = CGPoint(x: progressChart.frame.size.width  / 2,
+                                    y: progressChart.frame.size.height / 2)
+        
+        updatePercentage(percentage: 0.0)
+        updateCurrentQuestionsLabel(questionsAnswered: 0)
+    }
+    
+    /**
+     
+     Função executada quando o botão de começar/finalizar o simulado é pressionado.
+     
+     */
+    @objc private func StartOrFinishNavButtonTapped() {
+        if simulatorStarted {
+            showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
+                self.simulatorStarted = false
+                self.viewController.hasEnded()
+                if let viewController = self.viewController as? UIViewController {
+                    viewController.navigationItem.title = "Iniciar"
+                }
+            }))
+        } else {
+            self.simulatorStarted = true
+            self.viewController.hasBegun()
+            if let viewController = self.viewController as? UIViewController {
+                viewController.navigationItem.title = "Finalizar"
+            }
+        }
+    }
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -171,20 +180,16 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
         return 1
     }
     
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		if simulatorStarted {
-			viewController.questionWasSubmitted(data.questions[indexPath.row])
-		} else {
-
-			DispatchQueue.main.async {
-				self.showAlert(title: "Iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
-					self.setClock()
-					self.simulatorStarted = true
-					self.viewController.hasStarted()
-					self.viewController.questionWasSubmitted(self.data.questions[indexPath.row])
-				}))
-			}
-		}
-	}
-			
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if simulatorStarted {
+            viewController.questionWasSubmitted(data.questions[indexPath.row])
+        } else {
+            self.showAlert(title: "Iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
+                self.viewController.hasBegun()
+                self.simulatorStarted = true
+                self.viewController.hasBegun()
+                self.viewController.questionWasSubmitted(self.data.questions[indexPath.row])
+            }))
+        }
+    }
 }

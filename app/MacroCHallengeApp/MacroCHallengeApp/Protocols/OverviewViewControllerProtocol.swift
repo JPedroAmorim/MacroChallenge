@@ -70,14 +70,6 @@ protocol OverviewViewControllerProtocol {
      */
     
     func hasEnded()
-
-	/**
-
-	Método pelo qual o controller é avisado que a prova acabou.
-
-	*/
-
-	func hasStarted()
     
     // Dependências
     var myView: OverviewViewProtocol? {get set}

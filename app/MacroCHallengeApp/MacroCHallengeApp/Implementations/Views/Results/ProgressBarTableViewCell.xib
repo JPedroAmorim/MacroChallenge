@@ -21,7 +21,7 @@
                         <rect key="frame" x="16" y="36" width="288" height="16"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-BJ-0gS">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="16"/>
+                                <rect key="frame" x="0.0" y="0.0" width="144" height="16"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -29,7 +29,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="CZU-tQ-2Qe"/>
                             <constraint firstItem="OVh-BJ-0gS" firstAttribute="top" secondItem="yLM-Nn-yf6" secondAttribute="top" id="H0v-ma-aPe"/>
-                            <constraint firstItem="OVh-BJ-0gS" firstAttribute="width" secondItem="yLM-Nn-yf6" secondAttribute="width" id="JtG-C9-obN"/>
+                            <constraint firstItem="OVh-BJ-0gS" firstAttribute="width" secondItem="yLM-Nn-yf6" secondAttribute="width" multiplier="0.5" id="JtG-C9-obN"/>
                             <constraint firstAttribute="bottom" secondItem="OVh-BJ-0gS" secondAttribute="bottom" id="j2k-O6-5b1"/>
                             <constraint firstItem="OVh-BJ-0gS" firstAttribute="height" secondItem="yLM-Nn-yf6" secondAttribute="height" id="lFF-Ak-h99"/>
                             <constraint firstItem="OVh-BJ-0gS" firstAttribute="leading" secondItem="yLM-Nn-yf6" secondAttribute="leading" id="zjb-d2-CeS"/>

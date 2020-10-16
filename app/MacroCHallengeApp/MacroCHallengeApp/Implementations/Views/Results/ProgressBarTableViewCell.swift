@@ -68,23 +68,61 @@ class ProgressBarTableViewCell: UITableViewCell {
     
     private func settingProgress(view: UIView) {
         
-        let currentProgress = UIView()
         for view in barView.subviews { // Limpa subviews anteriores
             view.removeFromSuperview()
         }
+        
+        let currentProgress = UIView(frame: CGRect.zero)
+        currentProgress.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        let topConstraint = NSLayoutConstraint(item: currentProgress,
+                                               attribute: .top,
+                                               relatedBy: .equal,
+                                               toItem: barView,
+                                               attribute: .top,
+                                               multiplier: 1.0,
+                                               constant: 0)
+        let bottomConstraint = NSLayoutConstraint(item: currentProgress,
+                                                  attribute: .bottom,
+                                                  relatedBy: .equal,
+                                                  toItem: barView,
+                                                  attribute: .bottom,
+                                                  multiplier: 1.0,
+                                                  constant: 0)
+        let leadingConstraint = NSLayoutConstraint(item: currentProgress,
+                                                   attribute: .leading,
+                                                   relatedBy: .equal,
+                                                   toItem: barView,
+                                                   attribute: .leading,
+                                                   multiplier: 1,
+                                                   constant: 0)
+        let widthConstraint = NSLayoutConstraint(item: currentProgress,
+                                                 attribute: .width,
+                                                 relatedBy: .equal,
+                                                 toItem: barView,
+                                                 attribute: .width,
+                                                 multiplier: CGFloat(percentage) * 0.01,
+                                                 constant: 0)
+        let heightConstraint = NSLayoutConstraint(item: currentProgress,
+                                                 attribute: .height,
+                                                 relatedBy: .equal,
+                                                 toItem: barView,
+                                                 attribute: .height,
+                                                 multiplier: 1.0,
+                                                 constant: 0)
+        
+        settingCornerRadiusOnView(view: currentProgress)
         currentProgress.backgroundColor = UIColor.init(red: 14/255,
                                                        green: 173/255,
                                                        blue: 0/255,
                                                        alpha: 1.0)
-        
-        
-        currentProgress.frame = CGRect(x: 0,
-                                       y: 0,
-                                       width: barView.frame.width * CGFloat(percentage) * 0.01,
-                                       height: barView.frame.height)
-        
-        settingCornerRadiusOnView(view: currentProgress)
         barView.addSubview(currentProgress)
+        barView.addConstraints([topConstraint,
+                                        bottomConstraint,
+                                        leadingConstraint,
+                                        widthConstraint,
+                                        heightConstraint])
     }
     
     /**

@@ -14,8 +14,7 @@ protocol OverviewViewControllerProtocol {
      
      
      - parameter data: A prova que será realizada.
-     - parameter questionController: Controlador da tela de questões.
-     
+
      */
     
     init(data: Test)

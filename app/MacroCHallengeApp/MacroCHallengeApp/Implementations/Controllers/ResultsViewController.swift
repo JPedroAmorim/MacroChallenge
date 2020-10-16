@@ -17,11 +17,13 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     private(set) var resultsData: ResultsData?
     private var correctUserAnswers: [Int] = []
     private var wrongUserAnswers: [Int] = []
+    private var questionController: QuestionViewControllerProtocol
     
     // MARK: - Init methods
-    required init(test: Test, answeredQuestions: [String : String]) {
+    required init(test: Test, answeredQuestions: [String : String], questionController: QuestionViewControllerProtocol) {
         self.test = test
         self.answeredQuestions = answeredQuestions
+        self.questionController = questionController
         super.init(nibName: nil, bundle: nil)
         setupResultsData()
     }
@@ -48,7 +50,6 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
             self.view = defaultView
         }
     }
-    
     
     private func setupResultsData() {
         let totalNumberOfCorrectAnswers = getTotalNumberOfCorrectAnswers()
@@ -79,6 +80,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         
     }
     
+    // MARK: - Private methods
     /**
      
      Calcula a porcentagem de acertos(questões corretas/questões totais).

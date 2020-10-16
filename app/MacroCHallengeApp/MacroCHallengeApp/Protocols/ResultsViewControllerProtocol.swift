@@ -15,9 +15,10 @@ protocol ResultsViewControllerProtocol {
      
      - parameter Test: A prova realizada.
      - parameter answeredQuestions: As repostas fornecidas pelo usuário ao finalizar a prova.
+     - parameter questionController: O controlador de exibição de questões.
      
      */
-    init(test: Test, answeredQuestions: [String : String])
+    init(test: Test, answeredQuestions: [String : String], questionController: QuestionViewControllerProtocol)
     
     /**
      

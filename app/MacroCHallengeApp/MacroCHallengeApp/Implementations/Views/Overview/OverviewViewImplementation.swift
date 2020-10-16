@@ -164,7 +164,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     /**
      
      Método que monta o dicionário de seções, onde a chave é a seção e o valor é uma tupla. O primeiro valor da tupla é o número da seção que ela representa na Collection View e o segundo valor da tupla representa o número de questões dentro dessa seção.
-
+     
      */
     private func setupSectionDictionary() {
         let dictionaryKeys: [String] = setupSectionDictionaryKeys()
@@ -179,7 +179,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     /**
      
      Método que retorna o número da questão dentro de uma seção para que a OverView tenha questões do 1, 2,..., {número total de questões da prova}.
-
+     
      */
     private func giveCorrectQuestionNumberForIndexPath(section: Int) -> Int{
         var jumpAmount: Int = 0
@@ -285,5 +285,17 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
                 }
             }))
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.headerReferenceSize = CGSize(width: self.questionsView.frame.size.width,
+                                            height: 30)
+        questionsCollege.register(UINib(nibName: "SectionHeaderView", bundle: nil),
+                                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                  withReuseIdentifier: "SectionHeaderView")
+
+        return UICollectionReusableView()
     }
 }

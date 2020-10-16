@@ -151,7 +151,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         switch  (indexPath.section) {
         // Question header
         case 0:
-            return setupQuestionHeaderCell(tableView: tableView, indexPath: indexPath, subject: "Placeholder")
+            return setupQuestionHeaderCell(tableView: tableView, indexPath: indexPath, subject: question.topic)
         // Initial text
         case 1:
             return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: question.initialText ?? "", category: .initialText)
@@ -237,7 +237,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         let cellIdentifier = "QuestionHeaderTableViewCell"
         referenceXib(nibName: cellIdentifier)
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionHeaderTableViewCell {
-            let myString = "Placeholder"
+            let myString = subject
             let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
             let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
             

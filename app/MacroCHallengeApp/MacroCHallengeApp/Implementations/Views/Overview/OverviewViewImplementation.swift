@@ -131,11 +131,17 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
                 self.simulatorStarted = false
                 self.viewController.hasEnded()
+                if let viewController = self.viewController as? UIViewController {
+                    viewController.navigationItem.rightBarButtonItem?.title = "Iniciar"
+                }
             }))
         } else {
             self.simulatorStarted = true
             self.viewController.hasBegun()
             self.viewController.questionWasSubmitted(data.questions[0])
+            if let viewController = self.viewController as? UIViewController {
+                viewController.navigationItem.rightBarButtonItem?.title = "Finalizar"
+            }
         }
     }
 }
@@ -184,6 +190,9 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
                 self.simulatorStarted = true
                 self.viewController.hasBegun()
                 self.viewController.questionWasSubmitted(self.data.questions[indexPath.row])
+                if let viewController = self.viewController as? UIViewController {
+                    viewController.navigationItem.rightBarButtonItem?.title = "Finalizar"
+                }
             }))
         }
     }

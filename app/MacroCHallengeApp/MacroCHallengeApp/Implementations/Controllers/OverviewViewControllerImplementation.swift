@@ -92,12 +92,10 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
             let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered)
             navCon.pushViewController(resultsVC, animated: true)
         }
-        navigationItem.rightBarButtonItem?.title = "Iniciar Prova"
     }
     
     func hasBegun() {
         setClock()
-        navigationItem.rightBarButtonItem?.title = "Finalizar"
     }
     
     // MARK: - Private methods

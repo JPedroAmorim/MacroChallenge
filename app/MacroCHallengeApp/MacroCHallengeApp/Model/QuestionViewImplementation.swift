@@ -9,14 +9,7 @@ import Foundation
 import UIKit
 
 class QuestionViewImplementation: UIView, QuestionViewProtocol {
-    func overwrite(data: Question, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool) {
-        
-    }
-    
-    
-    
     // MARK: - IBOutlets
-    
     @IBOutlet weak var questionTableView: UITableView!
     @IBOutlet weak var btnProximo: UIButton!
     @IBOutlet weak var btnAnterior: UIButton!

@@ -16,7 +16,7 @@ class ResultsViewImplementation: UIView, ResultsViewProtocol {
     
     // MARK: - Private attributes
     private var data: ResultsData
-    private let sectionHeaderTitleArray = ["", "", "Questões"]
+    private let sectionHeaderTitleArray = ["", "", ""]
     private var resultsPerTopicsKeys: [String]
     
     // MARK: - Init methods

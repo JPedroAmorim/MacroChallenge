@@ -18,20 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-Nn-yf6">
-                        <rect key="frame" x="16" y="36" width="288" height="16"/>
+                        <rect key="frame" x="16" y="28" width="288" height="16"/>
                         <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="CZU-tQ-2Qe"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matemática" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-Tw-oeD">
-                        <rect key="frame" x="16" y="8" width="91.5" height="20"/>
+                        <rect key="frame" x="16" y="0.0" width="91.5" height="20"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxT-ye-2CF">
-                        <rect key="frame" x="261" y="8" width="43" height="20"/>
+                        <rect key="frame" x="261" y="0.0" width="43" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,9 +39,9 @@
                 </subviews>
                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="tC5-Tw-oeD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7Cs-RE-UZh"/>
+                    <constraint firstItem="tC5-Tw-oeD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Cs-RE-UZh"/>
                     <constraint firstItem="qxT-ye-2CF" firstAttribute="trailing" secondItem="yLM-Nn-yf6" secondAttribute="trailing" id="Dfa-Lc-rul"/>
-                    <constraint firstAttribute="bottom" secondItem="yLM-Nn-yf6" secondAttribute="bottom" constant="8" id="O31-eJ-zst"/>
+                    <constraint firstAttribute="bottom" secondItem="yLM-Nn-yf6" secondAttribute="bottom" constant="16" id="O31-eJ-zst"/>
                     <constraint firstItem="qxT-ye-2CF" firstAttribute="centerY" secondItem="tC5-Tw-oeD" secondAttribute="centerY" id="X1u-Fh-ykR"/>
                     <constraint firstItem="yLM-Nn-yf6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ejS-Wi-Dx0"/>
                     <constraint firstItem="yLM-Nn-yf6" firstAttribute="top" secondItem="tC5-Tw-oeD" secondAttribute="bottom" constant="8" id="fbk-Yl-wWb"/>

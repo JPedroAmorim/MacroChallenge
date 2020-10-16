@@ -173,7 +173,7 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 	Método responsável de montar o array de seções a partir das questões da prova.
 
 	*/
-	
+
 	private func setupSectionDictionaryKeys() -> [String]{
 		var resultSet: Set<String> = Set<String>()
 

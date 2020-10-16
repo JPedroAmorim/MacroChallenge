@@ -332,7 +332,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             UIView.animate(withDuration: 0.3, animations: {
                 // 0xCBDAF8
                 cell.CardView.backgroundColor = UIColor(red:203/255, green:218/255, blue:248/255, alpha: 1)
-                cell.btnRadio.image = UIImage(systemName: "largecircle.fill.circle")
+                cell.imgOptionImg.image = UIImage(systemName: "largecircle.fill.circle")
                 // Deselect other options
                 guard let tableView = cell.superview as? UITableView else {return}
                 for auxCell in tableView.visibleCells {
@@ -344,19 +344,22 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         case .deselected:
             UIView.animate(withDuration: 0.3, animations: {
                 cell.CardView.backgroundColor = .white
-                cell.btnRadio.image = UIImage(systemName: "circle")
+                cell.imgOptionImg.image = UIImage(systemName: "circle")
+                cell.imgOptionImg.tintColor = UIColor.systemBlue
             })
         case .right:
             UIView.animate(withDuration: 0.3, animations: {
                 // 0xFFCCCC
                 cell.CardView.backgroundColor = UIColor(red:181/255, green:255/255, blue:181/255, alpha: 1)
-                cell.btnRadio.image = UIImage(systemName: "checkmark")
+                cell.imgOptionImg.image = UIImage(systemName: "checkmark")
+                cell.imgOptionImg.tintColor = UIColor.systemGreen
             })
         case .wrong:
             UIView.animate(withDuration: 0.3, animations: {
                 // 0xB5FFB5
                 cell.CardView.backgroundColor = UIColor(red:255/255, green:204/255, blue:204/255, alpha: 1)
-                cell.btnRadio.image = UIImage(systemName: "xmark")
+                cell.imgOptionImg.image = UIImage(systemName: "xmark")
+                cell.imgOptionImg.tintColor = UIColor.systemRed
             })
         }
     }

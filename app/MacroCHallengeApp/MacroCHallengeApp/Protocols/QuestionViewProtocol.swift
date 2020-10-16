@@ -19,7 +19,7 @@ protocol QuestionViewProtocol {
      
      */
     
-    init(data: Question, controller: QuestionViewControllerProtocol)
+    init(data: Question, controller: QuestionViewControllerProtocol, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool)
     
     /**
      

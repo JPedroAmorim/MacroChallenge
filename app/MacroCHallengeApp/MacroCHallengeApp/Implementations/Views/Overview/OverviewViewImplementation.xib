@@ -40,7 +40,7 @@
                             <rect key="frame" x="24" y="54" width="366" height="679"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gTb-Cp-EmZ">
-                                <size key="itemSize" width="44" height="44"/>
+                                <size key="itemSize" width="60" height="60"/>
                                 <size key="headerReferenceSize" width="50" height="50"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>

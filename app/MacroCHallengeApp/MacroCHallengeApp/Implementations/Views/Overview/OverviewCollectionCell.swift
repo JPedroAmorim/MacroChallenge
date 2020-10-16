@@ -11,6 +11,7 @@ class OverviewCollectionCell: UICollectionViewCell {
 	// MARK: -IBOutlets
 	@IBOutlet weak var numberLabel: UILabel!
 	@IBOutlet weak var bgView: UIView!
+	@IBOutlet weak var stateImage: UIImageView!
 
 	// MARK: -Lifecyle
 	override func awakeFromNib() {
@@ -20,11 +21,12 @@ class OverviewCollectionCell: UICollectionViewCell {
 
 	// MARK: - Private methods
 	/**
-     
-     Método responsável por definir qualidades visuais (sombra, corner radius) da célula.
-     
+
+	Método responsável por definir qualidades visuais (sombra, corner radius) da célula.
+
 	*/
 	private func setupCardView() {
+		stateImage.isHidden = true
 		bgView.layer.borderWidth = 3
 		bgView.layer.cornerRadius = 5
 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswersCollectionView" customModule="MacroCHallengeApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="655" id="qvi-Rb-pok" customClass="AnswersCollectionView" customModule="MacroCHallengeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="655"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qvi-Rb-pok" id="cDd-OG-L8f">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="655"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIn-Hm-Ufo">
+                        <rect key="frame" x="24" y="60" width="366" height="573"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nA1-Z5-nGf">
+                                <rect key="frame" x="0.0" y="0.0" width="366" height="565.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K0D-Nv-8TV">
+                                    <size key="itemSize" width="60" height="60"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nA1-Z5-nGf" secondAttribute="trailing" id="3H4-vD-i3w"/>
+                            <constraint firstItem="nA1-Z5-nGf" firstAttribute="top" secondItem="iIn-Hm-Ufo" secondAttribute="top" id="84n-rC-X52"/>
+                            <constraint firstItem="nA1-Z5-nGf" firstAttribute="leading" secondItem="iIn-Hm-Ufo" secondAttribute="leading" id="A21-wc-L0Z"/>
+                            <constraint firstAttribute="bottom" secondItem="nA1-Z5-nGf" secondAttribute="bottom" id="aLN-N4-gWN"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questões" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-4C-ONx">
+                        <rect key="frame" x="24" y="16" width="73" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzO-ta-Bep">
+                        <rect key="frame" x="245" y="16" width="99" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-1x-XP7">
+                        <rect key="frame" x="344" y="16" width="46" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2W-YN-VKO">
+                        <rect key="frame" x="24" y="52.5" width="366" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="EE9-a1-HUh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iIn-Hm-Ufo" firstAttribute="leading" secondItem="cDd-OG-L8f" secondAttribute="leading" constant="24" id="4oD-1q-zgw"/>
+                    <constraint firstItem="A2W-YN-VKO" firstAttribute="leading" secondItem="cDd-OG-L8f" secondAttribute="leading" constant="24" id="5Ge-Xh-kuk"/>
+                    <constraint firstAttribute="trailing" secondItem="X8g-1x-XP7" secondAttribute="trailing" constant="24" id="Aqg-iB-Arf"/>
+                    <constraint firstItem="A2W-YN-VKO" firstAttribute="top" secondItem="djw-4C-ONx" secondAttribute="bottom" constant="16" id="Bdn-lp-Pxn"/>
+                    <constraint firstAttribute="trailing" secondItem="A2W-YN-VKO" secondAttribute="trailing" constant="24" id="BnU-zN-cPI"/>
+                    <constraint firstAttribute="bottom" secondItem="iIn-Hm-Ufo" secondAttribute="bottom" constant="20" id="ClE-k6-ipP"/>
+                    <constraint firstItem="pzO-ta-Bep" firstAttribute="centerY" secondItem="djw-4C-ONx" secondAttribute="centerY" id="JP7-AO-m3U"/>
+                    <constraint firstItem="djw-4C-ONx" firstAttribute="top" secondItem="cDd-OG-L8f" secondAttribute="top" constant="16" id="LQK-vJ-RYH"/>
+                    <constraint firstItem="X8g-1x-XP7" firstAttribute="centerY" secondItem="djw-4C-ONx" secondAttribute="centerY" id="RGS-UL-nKL"/>
+                    <constraint firstItem="X8g-1x-XP7" firstAttribute="leading" secondItem="pzO-ta-Bep" secondAttribute="trailing" id="Ynh-wG-Gge"/>
+                    <constraint firstItem="iIn-Hm-Ufo" firstAttribute="top" secondItem="A2W-YN-VKO" secondAttribute="bottom" constant="16" id="p63-9J-VAL"/>
+                    <constraint firstItem="djw-4C-ONx" firstAttribute="leading" secondItem="cDd-OG-L8f" secondAttribute="leading" constant="24" id="xl2-us-bSh"/>
+                    <constraint firstAttribute="trailing" secondItem="iIn-Hm-Ufo" secondAttribute="trailing" constant="24" id="zba-ff-504"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="iIn-Hm-Ufo" id="XfT-a5-Ms2"/>
+                <outlet property="questionsCollection" destination="nA1-Z5-nGf" id="iEN-ae-Avc"/>
+            </connections>
+            <point key="canvasLocation" x="-149.27536231884059" y="27.790178571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

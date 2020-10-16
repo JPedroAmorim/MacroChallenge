@@ -48,6 +48,14 @@
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
 		C44560CD2535F28C007D945C /* HorizontalChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44560CC2535F28C007D945C /* HorizontalChartView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
+		C44561712539D10A007D945C /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44561702539D10A007D945C /* AnswersCollectionView.xib */; };
+		C44561762539D110007D945C /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44561752539D110007D945C /* AnswersCollectionView.swift */; };
+		C445617B2539D119007D945C /* AnswersCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C445617A2539D119007D945C /* AnswersCollectionCell.xib */; };
+		C44561802539D11F007D945C /* AnswersCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C445617F2539D11F007D945C /* AnswersCollectionCell.swift */; };
+		C44561712539D10A007D945C /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C44561702539D10A007D945C /* AnswersCollectionView.xib */; };
+		C44561762539D110007D945C /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44561752539D110007D945C /* AnswersCollectionView.swift */; };
+		C445617B2539D119007D945C /* AnswersCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C445617A2539D119007D945C /* AnswersCollectionCell.xib */; };
+		C44561802539D11F007D945C /* AnswersCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C445617F2539D11F007D945C /* AnswersCollectionCell.swift */; };
 		C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */; };
 		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */; };
@@ -181,6 +189,14 @@
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C44560CC2535F28C007D945C /* HorizontalChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalChartView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
+		C44561702539D10A007D945C /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
+		C44561752539D110007D945C /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
+		C445617A2539D119007D945C /* AnswersCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionCell.xib; sourceTree = "<group>"; };
+		C445617F2539D11F007D945C /* AnswersCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionCell.swift; sourceTree = "<group>"; };
+		C44561702539D10A007D945C /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
+		C44561752539D110007D945C /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
+		C445617A2539D119007D945C /* AnswersCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionCell.xib; sourceTree = "<group>"; };
+		C445617F2539D11F007D945C /* AnswersCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionCell.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
@@ -265,6 +281,14 @@
 				2F9A67CD2535FB37002EE9B2 /* PieChartTableViewCell.xib */,
 				2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */,
 				2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */,
+				C44561752539D110007D945C /* AnswersCollectionView.swift */,
+				C44561702539D10A007D945C /* AnswersCollectionView.xib */,
+				C445617F2539D11F007D945C /* AnswersCollectionCell.swift */,
+				C445617A2539D119007D945C /* AnswersCollectionCell.xib */,
+				C44561752539D110007D945C /* AnswersCollectionView.swift */,
+				C44561702539D10A007D945C /* AnswersCollectionView.xib */,
+				C445617F2539D11F007D945C /* AnswersCollectionCell.swift */,
+				C445617A2539D119007D945C /* AnswersCollectionCell.xib */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -610,12 +634,16 @@
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
 				2F9A67D02535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,
+				C445617B2539D119007D945C /* AnswersCollectionCell.xib in Resources */,
 				4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */,
 				4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */,
 				D565EEF4252B813900426648 /* LaunchScreen.storyboard in Resources */,
 				D565EEF1252B813900426648 /* Assets.xcassets in Resources */,
 				D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */,
 				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
+				C44561712539D10A007D945C /* AnswersCollectionView.xib in Resources */,
+				C44561712539D10A007D945C /* AnswersCollection.xib in Resources */,
+				C44561712539D10A007D945C /* AnswersCollectionView.xib in Resources */,
 				2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */,
 				4FFF6BE8252F3D920015DFE7 /* QuestionOptionTableViewCell.xib in Resources */,
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,
@@ -783,6 +811,9 @@
 				4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */,
 				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
+				C44561762539D110007D945C /* AnswersCollectionView.swift in Sources */,
+				C44561762539D110007D945C /* AnswersCollection.swift in Sources */,
+				C44561762539D110007D945C /* AnswersCollectionView.swift in Sources */,
 				2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */,
@@ -801,6 +832,7 @@
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				2F9A67CE2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
+				C44561802539D11F007D945C /* AnswersCollectionCell.swift in Sources */,
 				D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */,
 			);

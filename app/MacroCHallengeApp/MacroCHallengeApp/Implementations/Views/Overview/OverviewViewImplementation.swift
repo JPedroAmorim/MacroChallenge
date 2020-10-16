@@ -244,7 +244,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numberOfItemsInSection = 0
         let dictionaryKeysAsArray = Array(sectionDictionary.keys).sorted()
-    
+        
         for index in 0...(dictionaryKeysAsArray.count - 1) {
             let key = dictionaryKeysAsArray[index]
             guard let tupleValue = sectionDictionary[key] else {
@@ -301,29 +301,16 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        switch kind {
-        
-        case UICollectionView.elementKindSectionHeader:
+        if kind == UICollectionView.elementKindSectionHeader {
             questionsCollege.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil),
-                                                                      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                                                      withReuseIdentifier: "HeaderCollectionReusableView")
+                                      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                      withReuseIdentifier: "HeaderCollectionReusableView")
+            
             if let headerView = questionsCollege.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as? HeaderCollectionReusableView {
                 headerView.topicLabel.text = getNameOfSection(section: indexPath.section)
                 return headerView
             }
-            
-            
-            return UICollectionReusableView()
-            
-        case UICollectionView.elementKindSectionFooter:
-            let footerView = questionsCollege.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
-            
-            footerView.backgroundColor = UIColor.green
-            return footerView
-            
-        default:
-            
-            assert(false, "Unexpected element kind")
         }
+        return UICollectionReusableView()
     }
 }

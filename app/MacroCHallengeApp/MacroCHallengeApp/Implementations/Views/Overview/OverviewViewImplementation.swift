@@ -14,6 +14,12 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     private var simulatorStarted = false
     private var customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
     
+    /**
+     
+     Um dicionário que contém como chaves as matérias da prova e como valor tem uma tupla cujo o primeiro elemento representa a seção da chave e o segundo representa o número de questões daquela chave.
+     */
+    private var sectionDictionary: [String:(Int, Int)] = [:]
+    
     // MARK: -IBOutlets
     @IBOutlet weak var questionsView: UIView!
     @IBOutlet weak var questionsCollege: UICollectionView!
@@ -29,7 +35,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
-        
+        setupSectionDictionary()
         setupVisualElements()
         setupDelegateCollectionview()
     }
@@ -123,6 +129,72 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     
     /**
      
+     Método responsável de montar o array de seções a partir das questões da prova.
+     
+     */
+    private func setupSectionDictionaryKeys() -> [String]{
+        var resultSet: Set<String> = Set<String>()
+        
+        for question in data.questions {
+            resultSet.insert(question.topic)
+        }
+        
+        return Array(resultSet)
+    }
+    
+    /**
+     
+     Método que nos retorna o número de questões de um determinado tópico.
+     
+     - parameter topic: Tópico de uma prova.
+     
+     */
+    private func countingQuestionsForTopic(_ topic: String) -> Int {
+        var result: Int = 0
+        
+        for question in data.questions {
+            if question.topic == topic {
+                result += 1
+            }
+        }
+        
+        return result
+    }
+    
+    /**
+     
+     Método que monta o dicionário de seções, onde a chave é a seção e o valor é uma tupla. O primeiro valor da tupla é o número da seção que ela representa na Collection View e o segundo valor da tupla representa o número de questões dentro dessa seção.
+
+     */
+    private func setupSectionDictionary() {
+        let dictionaryKeys: [String] = setupSectionDictionaryKeys()
+        var index = 0
+        
+        for key in dictionaryKeys {
+            sectionDictionary[key] = (index , countingQuestionsForTopic(key))
+            index += 1
+        }
+    }
+    
+    /**
+     
+     Método que retorna o número da questão dentro de uma seção para que a OverView tenha questões do 1, 2,..., {número total de questões da prova}.
+
+     */
+    private func giveCorrectQuestionNumberForIndexPath(section: Int) -> Int{
+        var jumpAmount: Int = 0
+        
+        for (_, value) in sectionDictionary {
+            if value.0 < section {
+                jumpAmount += value.1
+            }
+        }
+        
+        return jumpAmount
+    }
+    
+    /**
+     
      Função executada quando o botão de começar/finalizar o simulado é pressionado.
      
      */
@@ -144,6 +216,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             }
         }
     }
+    
+    
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -156,14 +230,29 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        data.questions.count
+        var numberOfItemsInSection = 0
+        let dictionaryKeysAsArray = Array(sectionDictionary.keys)
+        
+        for index in 0...(dictionaryKeysAsArray.count - 1) {
+            let key = dictionaryKeysAsArray[index]
+            guard let tupleValue = sectionDictionary[key] else {
+                return 0
+            }
+            
+            if tupleValue.0 == section{
+                numberOfItemsInSection = tupleValue.1
+            }
+        }
+        
+        return numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
-        cell.numberLabel.text = data.questions[indexPath.row].number
+        let indexFix = giveCorrectQuestionNumberForIndexPath(section: indexPath.section)
+        cell.numberLabel.text = data.questions[indexFix + indexPath.row].number
         
-        if let questionNumber = Int(data.questions[indexPath.row].number) {
+        if let questionNumber = Int(data.questions[indexFix + indexPath.row].number) {
             if answeredQuestionsArray.contains(questionNumber) {
                 cell.bgView.backgroundColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
                 cell.bgView.layer.borderColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1).cgColor
@@ -178,18 +267,19 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return sectionDictionary.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let indexFix = giveCorrectQuestionNumberForIndexPath(section: indexPath.section)
         if simulatorStarted {
-            viewController.questionWasSubmitted(data.questions[indexPath.row])
+            viewController.questionWasSubmitted(data.questions[indexFix + indexPath.row])
         } else {
             self.showAlert(title: "Iniciar novo simulado?", msg: "Para acessar as questões comece um novo simulado", shouldPresentCancel: true, closure: ({ action in
                 self.viewController.hasBegun()
                 self.simulatorStarted = true
                 self.viewController.hasBegun()
-                self.viewController.questionWasSubmitted(self.data.questions[indexPath.row])
+                self.viewController.questionWasSubmitted(self.data.questions[indexFix + indexPath.row])
                 if let viewController = self.viewController as? UIViewController {
                     viewController.navigationItem.rightBarButtonItem?.title = "Finalizar"
                 }

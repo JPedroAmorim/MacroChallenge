@@ -193,6 +193,16 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         return jumpAmount
     }
     
+    private func getNameOfSection(section: Int) -> String{
+        
+        for (key, value) in sectionDictionary {
+            if section == value.0 {
+                return key
+            }
+        }
+        
+        return ""
+    }
     /**
      
      Função executada quando o botão de começar/finalizar o simulado é pressionado.
@@ -289,13 +299,29 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.headerReferenceSize = CGSize(width: self.questionsView.frame.size.width,
-                                            height: 30)
-        questionsCollege.register(UINib(nibName: "SectionHeaderView", bundle: nil),
-                                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                  withReuseIdentifier: "SectionHeaderView")
-
-        return UICollectionReusableView()
+        switch kind {
+        
+        case UICollectionView.elementKindSectionHeader:
+            questionsCollege.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil),
+                                                                      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                                                      withReuseIdentifier: "HeaderCollectionReusableView")
+            if let headerView = questionsCollege.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as? HeaderCollectionReusableView {
+                headerView.topicLabel.text = getNameOfSection(section: indexPath.section)
+                return headerView
+            }
+            
+            
+            return UICollectionReusableView()
+            
+        case UICollectionView.elementKindSectionFooter:
+            let footerView = questionsCollege.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
+            
+            footerView.backgroundColor = UIColor.green
+            return footerView
+            
+        default:
+            
+            assert(false, "Unexpected element kind")
+        }
     }
 }

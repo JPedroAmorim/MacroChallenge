@@ -167,7 +167,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
      
      */
     private func setupSectionDictionary() {
-        let dictionaryKeys: [String] = setupSectionDictionaryKeys()
+        let dictionaryKeys: [String] = setupSectionDictionaryKeys().sorted()
         var index = 0
         
         for key in dictionaryKeys {
@@ -242,14 +242,14 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numberOfItemsInSection = 0
         let dictionaryKeysAsArray = Array(sectionDictionary.keys)
-        
+    
         for index in 0...(dictionaryKeysAsArray.count - 1) {
             let key = dictionaryKeysAsArray[index]
             guard let tupleValue = sectionDictionary[key] else {
                 return 0
             }
             
-            if tupleValue.0 == section{
+            if tupleValue.0 == section {
                 numberOfItemsInSection = tupleValue.1
             }
         }

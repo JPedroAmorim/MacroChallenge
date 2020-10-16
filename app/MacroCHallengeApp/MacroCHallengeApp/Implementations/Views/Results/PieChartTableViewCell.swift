@@ -16,10 +16,10 @@ class PieChartTableViewCell: UITableViewCell {
     // MARK: - Private attributes
     lazy var pieChartView: PieChartView = {
         let pieChartView = PieChartView()
-        pieChartView.backgroundColor = UIColor.init(red: 242/255,
-                                                    green: 242/255,
-                                                    blue: 247/255,
-                                                    alpha: 1.0)
+//        pieChartView.backgroundColor = UIColor.init(red: 242/255,
+//                                                    green: 242/255,
+//                                                    blue: 247/255,
+//                                                    alpha: 1.0)
         return pieChartView
     }()
     
@@ -61,6 +61,7 @@ class PieChartTableViewCell: UITableViewCell {
     private func addingPieChartToView(pieChart: PieChartView) {
         self.view.addSubview(pieChart)
         pieChart.centerInSuperview()
+        pieChart.backgroundColor = self.view.backgroundColor
         pieChart.width(to: self.view)
         pieChart.height(to: self.view)
     }
@@ -84,20 +85,20 @@ class PieChartTableViewCell: UITableViewCell {
         let data = PieChartData(dataSet: dataSet)
         pieChart.data = data
 
-        let colors = [ UIColor.init(red: 0/255,
-                                    green: 122/255,
-                                    blue: 255/255,
+        let colors = [ UIColor.init(red: 14/255,
+                                    green: 173/255,
+                                    blue: 0/255,
                                     alpha: 1.0),
-                       UIColor.init(red: 158/255,
-                                    green: 185/255,
-                                    blue: 255/255,
+                       UIColor.init(red: 170/255,
+                                    green: 170/255,
+                                    blue: 170/255,
                                     alpha: 1.0)]
         
         dataSet.colors =  colors
         dataSet.sliceSpace = 0
         
         pieChart.drawHoleEnabled = true
-        pieChart.transparentCircleColor = .white
+        pieChart.transparentCircleColor = self.view.backgroundColor
         pieChart.holeRadiusPercent = 0.70
         pieChart.rotationEnabled = false
 

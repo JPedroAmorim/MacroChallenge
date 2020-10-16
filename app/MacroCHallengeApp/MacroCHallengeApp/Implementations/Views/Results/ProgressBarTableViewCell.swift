@@ -72,7 +72,10 @@ class ProgressBarTableViewCell: UITableViewCell {
         for view in barView.subviews { // Limpa subviews anteriores
             view.removeFromSuperview()
         }
-        currentProgress.backgroundColor = UIColor(named: "PrimaryGraphicsColor")
+        currentProgress.backgroundColor = UIColor.init(red: 14/255,
+                                                       green: 173/255,
+                                                       blue: 0/255,
+                                                       alpha: 1.0)
         
         
         currentProgress.frame = CGRect(x: 0,

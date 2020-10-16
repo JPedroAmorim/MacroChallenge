@@ -40,6 +40,10 @@ class AnswersCollectionView: UITableViewCell {
 
 		setupDelegateCollectionview()
 
+		let height = questionsCollection.collectionViewLayout.collectionViewContentSize.height
+
+		let heightConstraint = NSLayoutConstraint(item: bgView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: height)
+		NSLayoutConstraint.activate([heightConstraint])
 	}
 
 }
@@ -54,7 +58,7 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		10
+		100
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

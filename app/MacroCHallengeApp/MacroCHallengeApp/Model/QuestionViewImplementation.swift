@@ -62,6 +62,8 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     /// Método reponsavél por sobrescrever a view com uma nova questão
     /// - parameter data: Questão que será utilizada para sobrescrever a view
+    /// - parameter wasAlreadyAnswered: Diz se a questão já foi respondida
+    /// - parameter shouldPresentAnswer: Booleano para indicar se a questão deveria mostrar a resposta
     func overwrite(data: Question, wasAlreadyAnswered: String?) {
         self.question = data
         if let alreadyChosenOption = wasAlreadyAnswered {

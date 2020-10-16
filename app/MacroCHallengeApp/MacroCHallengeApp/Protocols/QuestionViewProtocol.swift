@@ -28,10 +28,11 @@ protocol QuestionViewProtocol {
      - parameter data: A questão que agora será exibida.
      - parameter wasAlreadyAnswered: String opcional para indicar se uma questão já foi ou não respondida. Caso seu valor não
      seja nil, quer dizer que a questão já foi respondida.
+     - parameter shouldPresentAnswer: Booleano para indicar se a questão deveria mostrar a resposta.
      
      */
     
-    func overwrite(data: Question, wasAlreadyAnswered: String?)
+    func overwrite(data: Question, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool)
     
     /**
      

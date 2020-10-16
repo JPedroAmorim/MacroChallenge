@@ -38,38 +38,40 @@ class AnswersCollectionView: UITableViewCell {
 
 		print("updateView")
 
-		let view = UIView()
-		view.backgroundColor = .white
-
-		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-		layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-		layout.itemSize = CGSize(width: 60, height: 60)
-		
-		questionsCollection?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
-		questionsCollection?.backgroundColor = UIColor.black
-
-		questionsCollection?.dataSource = self
-		questionsCollection?.delegate = self
+		setupDelegateCollectionview()
 
 	}
 
 }
 
-extension AnswersCollectionView: UICollectionViewDataSource {
+// MARK: - Extension Table View Data Source Methods
+extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDelegate {
+
+	func setupDelegateCollectionview() {
+		questionsCollection.delegate = self
+		questionsCollection.dataSource = self
+		questionsCollection.register(UINib(nibName: "OverviewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "OverviewCollectionCell")
+	}
+
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 9 // How many cells to display
+		10
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
-		myCell.backgroundColor = UIColor.blue
-		return myCell
-	}
-}
+		let cell = questionsCollection.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
+		cell.numberLabel.text = "1"
 
-extension AnswersCollectionView: UICollectionViewDelegate {
+		cell.bgView.backgroundColor = UIColor.white
+		cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
+
+		return cell
+	}
+
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+	}
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		print("User tapped on item \(indexPath.row)")
+		print(indexPath.row)
 	}
 }

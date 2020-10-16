@@ -21,9 +21,9 @@ class OverviewCollectionCell: UICollectionViewCell {
 
 	// MARK: - Private methods
 	/**
-     
-     Método responsável por definir qualidades visuais (sombra, corner radius) da célula.
-     
+
+	Método responsável por definir qualidades visuais (sombra, corner radius) da célula.
+
 	*/
 	private func setupCardView() {
 		stateImage.isHidden = true

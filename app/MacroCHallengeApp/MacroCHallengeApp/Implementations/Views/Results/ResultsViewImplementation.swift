@@ -72,7 +72,7 @@ class ResultsViewImplementation: UIView, ResultsViewProtocol {
 // MARK: - Extension Table View Data Source Methods
 
 extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionHeaderTitleArray.count
     }

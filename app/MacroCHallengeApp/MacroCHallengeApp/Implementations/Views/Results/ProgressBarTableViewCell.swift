@@ -13,6 +13,7 @@ class ProgressBarTableViewCell: UITableViewCell {
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var finalGradeLabel: UILabel!
     @IBOutlet weak var barView: UIView!
+    @IBOutlet weak var progressView: UIView!
     
     // MARK: - Private attributes
     private var topic = String()
@@ -38,7 +39,9 @@ class ProgressBarTableViewCell: UITableViewCell {
         self.percentage = percetage
         
         settingCornerRadiusOnView(view: barView)
-        setProgress()
+        settingCornerRadiusOnView(view: progressView)
+        
+        settingProgress(view: progressView)
         
         settingTextLabels()
     }
@@ -63,7 +66,7 @@ class ProgressBarTableViewCell: UITableViewCell {
      
      */
     
-    private func setProgress() {
+    private func settingProgress(view: UIView) {
         
         for view in barView.subviews { // Limpa subviews anteriores
             view.removeFromSuperview()

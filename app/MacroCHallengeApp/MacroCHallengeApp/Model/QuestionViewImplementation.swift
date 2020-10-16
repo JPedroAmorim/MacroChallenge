@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 class QuestionViewImplementation: UIView, QuestionViewProtocol {
+    func overwrite(data: Question, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool) {
+        
+    }
+    
     
     
     // MARK: - IBOutlets

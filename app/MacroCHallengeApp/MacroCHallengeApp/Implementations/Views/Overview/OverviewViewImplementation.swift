@@ -133,13 +133,15 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
      
      */
     private func setupSectionDictionaryKeys() -> [String]{
-        var resultSet: Set<String> = Set<String>()
+        var resultArray: [String] = []
         
         for question in data.questions {
-            resultSet.insert(question.topic)
+            if !resultArray.contains(question.topic) {
+                resultArray.append(question.topic)
+            }
         }
         
-        return Array(resultSet)
+        return resultArray
     }
     
     /**
@@ -167,7 +169,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
      
      */
     private func setupSectionDictionary() {
-        let dictionaryKeys: [String] = setupSectionDictionaryKeys().sorted()
+        let dictionaryKeys: [String] = setupSectionDictionaryKeys()
         var index = 0
         
         for key in dictionaryKeys {
@@ -241,7 +243,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numberOfItemsInSection = 0
-        let dictionaryKeysAsArray = Array(sectionDictionary.keys)
+        let dictionaryKeysAsArray = Array(sectionDictionary.keys).sorted()
     
         for index in 0...(dictionaryKeysAsArray.count - 1) {
             let key = dictionaryKeysAsArray[index]

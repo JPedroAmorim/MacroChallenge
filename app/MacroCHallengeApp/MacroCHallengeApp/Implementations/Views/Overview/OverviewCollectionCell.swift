@@ -11,6 +11,7 @@ class OverviewCollectionCell: UICollectionViewCell {
 	// MARK: -IBOutlets
 	@IBOutlet weak var numberLabel: UILabel!
 	@IBOutlet weak var bgView: UIView!
+	@IBOutlet weak var stateImage: UIImageView!
 
 	// MARK: -Lifecyle
 	override func awakeFromNib() {
@@ -25,6 +26,7 @@ class OverviewCollectionCell: UICollectionViewCell {
      
 	*/
 	private func setupCardView() {
+		stateImage.isHidden = true
 		bgView.layer.borderWidth = 3
 		bgView.layer.cornerRadius = 5
 

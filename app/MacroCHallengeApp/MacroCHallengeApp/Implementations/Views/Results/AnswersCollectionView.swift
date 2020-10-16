@@ -52,37 +52,6 @@ class AnswersCollectionView: UITableViewCell {
 		}
 	}
 }
-// MARK: - Extension Table View Data Source Methods
-//extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDelegate {
-//
-//	func setupDelegateCollectionview() {
-//		questionsCollection.delegate = self
-//		questionsCollection.dataSource = self
-//		questionsCollection.register(UINib(nibName: "OverviewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "OverviewCollectionCell")
-//	}
-//
-//	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//		return data.test.questions.count
-//	}
-//
-//	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//		let cell = questionsCollection.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
-//		cell.numberLabel.text = "1"
-//
-//		cell.bgView.backgroundColor = UIColor.white
-//		cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
-//
-//		return cell
-//	}
-//
-//	func numberOfSections(in collectionView: UICollectionView) -> Int {
-//		return 1
-//	}
-//
-//	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//		print(indexPath.row)
-//	}
-//}
 
 // MARK: - Extension Table View Data Source Methods
 extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDelegate {
@@ -121,9 +90,13 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 				cell.bgView.backgroundColor = UIColor(red:14/255, green:173/255, blue:0/255, alpha: 1)
 				cell.bgView.layer.borderColor = UIColor(red:14/255, green:173/255, blue:0/255, alpha: 1).cgColor
 				cell.numberLabel.textColor = UIColor.white
+				cell.stateImage.isHidden = false
 			} else {
-				cell.bgView.backgroundColor = UIColor.white
-				cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
+				cell.bgView.backgroundColor = UIColor(red:255/255, green:90/255, blue:90/255, alpha: 1)
+				cell.bgView.layer.borderColor = UIColor(red:255/255, green:90/255, blue:90/255, alpha: 1).cgColor
+				cell.numberLabel.textColor = UIColor.white
+				cell.stateImage.image = UIImage(named: "wrong")
+				cell.stateImage.isHidden = false
 			}
 		}
 

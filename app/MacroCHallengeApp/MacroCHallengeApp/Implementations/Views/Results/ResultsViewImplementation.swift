@@ -152,7 +152,7 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
 				fatalError("The dequeued cell is not an instance of ProgressBarTableViewCell.")
 			}
 
-			cell.updateView(data: data)
+			cell.updateView(data: data, viewController: viewController)
 
 			finalCell = cell
         }

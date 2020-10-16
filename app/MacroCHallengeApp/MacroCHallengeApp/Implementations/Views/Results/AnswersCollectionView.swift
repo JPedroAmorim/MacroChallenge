@@ -7,21 +7,19 @@
 
 import UIKit
 
-class AnswersCollectionView: UITableViewCell {
+class ProgressBarTableViewCell: UITableViewCell {
 
 	// MARK: -IBOutlets
 	@IBOutlet weak var topicLabel: UILabel!
 	@IBOutlet weak var finalGradeLabel: UILabel!
 	@IBOutlet weak var barView: UIView!
 	@IBOutlet weak var progressView: UIView!
-	@IBOutlet weak var bgView: UIView!
 
 	// MARK: - Private attributes
 	private var topic = String()
 	private var numberOfRightAnswers: Int = 0
 	private var totalNumberOfQuestions: Int = 0
 	private var percentage: Double = 0.0
-	@IBOutlet weak var questionsCollection: UICollectionView!
 
 	// MARK: -Lifecycle
 	override func awakeFromNib() {
@@ -34,48 +32,69 @@ class AnswersCollectionView: UITableViewCell {
 
 	// MARK: - Public Methods
 
-	func updateView(){
+	func updateView(topic: String, numberOfRightAnswers: Int, totalNumberOfQuestions: Int, percetage: Double){
+		self.topic = topic
+		self.numberOfRightAnswers = numberOfRightAnswers
+		self.totalNumberOfQuestions = totalNumberOfQuestions
+		self.percentage = percetage
 
-		print("updateView")
+		settingCornerRadiusOnView(view: barView)
+		settingCornerRadiusOnView(view: progressView)
 
-		setupDelegateCollectionview()
+		settingProgress(view: progressView)
 
-		let height = questionsCollection.collectionViewLayout.collectionViewContentSize.height
-
-		let heightConstraint = NSLayoutConstraint(item: bgView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: height)
-		NSLayoutConstraint.activate([heightConstraint])
+		settingTextLabels()
 	}
 
-}
+	// MARK: - Private Methods
 
-// MARK: - Extension Table View Data Source Methods
-extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDelegate {
+	/**
 
-	func setupDelegateCollectionview() {
-		questionsCollection.delegate = self
-		questionsCollection.dataSource = self
-		questionsCollection.register(UINib(nibName: "OverviewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "OverviewCollectionCell")
+	Método responsável por acrescentar corner radius em uma view.
+
+	- parameters view: view no qual será acrescentado corner radius.
+
+	*/
+
+	private func settingCornerRadiusOnView(view: UIView) {
+		view.layer.cornerRadius = 8
 	}
 
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		100
+	/**
+
+	Método responsável por colocar porcetagem na barra de progresso.
+
+	*/
+
+	private func settingProgress(view: UIView) {
+
+		let currentProgress = UIView()
+		for view in barView.subviews { // Limpa subviews anteriores
+			view.removeFromSuperview()
+		}
+		currentProgress.backgroundColor = UIColor.init(red: 14/255,
+													   green: 173/255,
+													   blue: 0/255,
+													   alpha: 1.0)
+
+
+		currentProgress.frame = CGRect(x: 0,
+									   y: 0,
+									   width: barView.frame.width * CGFloat(percentage) * 0.01,
+									   height: barView.frame.height)
+
+		settingCornerRadiusOnView(view: currentProgress)
+		barView.addSubview(currentProgress)
 	}
 
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = questionsCollection.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
-		cell.numberLabel.text = "1"
+	/**
 
-		cell.bgView.backgroundColor = UIColor.white
-		cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
+	Método responsável por mudar o texto das labels.
 
-		return cell
-	}
+	*/
 
-	func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return 1
-	}
-
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		print(indexPath.row)
+	private func settingTextLabels() {
+		topicLabel.text = topic
+		finalGradeLabel.text = "\(numberOfRightAnswers)/\(totalNumberOfQuestions)"
 	}
 }

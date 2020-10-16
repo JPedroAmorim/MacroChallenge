@@ -131,16 +131,11 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             showAlert(title: "Deseja finalizar simulado?", msg: "Sua prova será finalizada e a nota calculada", shouldPresentCancel: true, closure: ({ action in
                 self.simulatorStarted = false
                 self.viewController.hasEnded()
-                if let viewController = self.viewController as? UIViewController {
-                    viewController.navigationItem.title = "Iniciar"
-                }
             }))
         } else {
             self.simulatorStarted = true
             self.viewController.hasBegun()
-            if let viewController = self.viewController as? UIViewController {
-                viewController.navigationItem.title = "Finalizar"
-            }
+            self.viewController.questionWasSubmitted(data.questions[0])
         }
     }
 }

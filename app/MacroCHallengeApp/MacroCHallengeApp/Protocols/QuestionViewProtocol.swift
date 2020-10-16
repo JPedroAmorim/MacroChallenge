@@ -31,7 +31,7 @@ protocol QuestionViewProtocol {
      
      */
     
-    func overwrite(data: Question, wasAlreadyAnswered: String?)
+    func overwrite(data: Question, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool)
     
     /**
      

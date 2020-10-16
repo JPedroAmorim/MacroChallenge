@@ -133,13 +133,15 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
      
      */
     private func setupSectionDictionaryKeys() -> [String]{
-        var resultSet: Set<String> = Set<String>()
+        var resultArray: [String] = []
         
         for question in data.questions {
-            resultSet.insert(question.topic)
+            if !resultArray.contains(question.topic) {
+                resultArray.append(question.topic)
+            }
         }
         
-        return Array(resultSet)
+        return resultArray
     }
     
     /**
@@ -164,7 +166,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     /**
      
      Método que monta o dicionário de seções, onde a chave é a seção e o valor é uma tupla. O primeiro valor da tupla é o número da seção que ela representa na Collection View e o segundo valor da tupla representa o número de questões dentro dessa seção.
-
+     
      */
     private func setupSectionDictionary() {
         let dictionaryKeys: [String] = setupSectionDictionaryKeys()
@@ -179,7 +181,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     /**
      
      Método que retorna o número da questão dentro de uma seção para que a OverView tenha questões do 1, 2,..., {número total de questões da prova}.
-
+     
      */
     private func giveCorrectQuestionNumberForIndexPath(section: Int) -> Int{
         var jumpAmount: Int = 0
@@ -193,6 +195,16 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         return jumpAmount
     }
     
+    private func getNameOfSection(section: Int) -> String{
+        
+        for (key, value) in sectionDictionary {
+            if section == value.0 {
+                return key
+            }
+        }
+        
+        return ""
+    }
     /**
      
      Função executada quando o botão de começar/finalizar o simulado é pressionado.
@@ -231,15 +243,15 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numberOfItemsInSection = 0
-        let dictionaryKeysAsArray = Array(sectionDictionary.keys)
-        
+        let dictionaryKeysAsArray = Array(sectionDictionary.keys).sorted()
+    
         for index in 0...(dictionaryKeysAsArray.count - 1) {
             let key = dictionaryKeysAsArray[index]
             guard let tupleValue = sectionDictionary[key] else {
                 return 0
             }
             
-            if tupleValue.0 == section{
+            if tupleValue.0 == section {
                 numberOfItemsInSection = tupleValue.1
             }
         }
@@ -284,6 +296,34 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
                     viewController.navigationItem.rightBarButtonItem?.title = "Finalizar"
                 }
             }))
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        
+        case UICollectionView.elementKindSectionHeader:
+            questionsCollege.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil),
+                                                                      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                                                      withReuseIdentifier: "HeaderCollectionReusableView")
+            if let headerView = questionsCollege.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as? HeaderCollectionReusableView {
+                headerView.topicLabel.text = getNameOfSection(section: indexPath.section)
+                return headerView
+            }
+            
+            
+            return UICollectionReusableView()
+            
+        case UICollectionView.elementKindSectionFooter:
+            let footerView = questionsCollege.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
+            
+            footerView.backgroundColor = UIColor.green
+            return footerView
+            
+        default:
+            
+            assert(false, "Unexpected element kind")
         }
     }
 }

@@ -10,18 +10,11 @@ import UIKit
 class AnswersCollectionView: UITableViewCell {
 
 	// MARK: -IBOutlets
-	@IBOutlet weak var topicLabel: UILabel!
-	@IBOutlet weak var finalGradeLabel: UILabel!
-	@IBOutlet weak var barView: UIView!
-	@IBOutlet weak var progressView: UIView!
 	@IBOutlet weak var bgView: UIView!
+	@IBOutlet weak var questionsCollection: UICollectionView!
 
 	// MARK: - Private attributes
-	private var topic = String()
-	private var numberOfRightAnswers: Int = 0
-	private var totalNumberOfQuestions: Int = 0
-	private var percentage: Double = 0.0
-	@IBOutlet weak var questionsCollection: UICollectionView!
+	private var data: ResultsData!
 
 	// MARK: -Lifecycle
 	override func awakeFromNib() {
@@ -33,21 +26,21 @@ class AnswersCollectionView: UITableViewCell {
 	}
 
 	// MARK: - Public Methods
-
-	func updateView(){
-
-		print("updateView")
-
+	func updateView(data: ResultsData){
+		print("data")
+		print(data.correctAnswers)
 		setupDelegateCollectionview()
+		setupLayout()
+	}
 
+	//MARK: - Private Methods
+	fileprivate func setupLayout() {
 		let height = questionsCollection.collectionViewLayout.collectionViewContentSize.height
 
 		let heightConstraint = NSLayoutConstraint(item: bgView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: height)
 		NSLayoutConstraint.activate([heightConstraint])
 	}
-
 }
-
 // MARK: - Extension Table View Data Source Methods
 extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDelegate {
 

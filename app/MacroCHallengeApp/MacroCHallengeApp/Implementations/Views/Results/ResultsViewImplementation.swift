@@ -152,12 +152,16 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
 				fatalError("The dequeued cell is not an instance of ProgressBarTableViewCell.")
 			}
 
-			cell.updateView()
-//			let keyForRow = resultsPerTopicsKeys[indexPath.row]
-//
-//			guard let resultPerTopic = data.resultsPerTopic[keyForRow] else {
-//				return UITableViewCell()
-//			}
+			let keyForRow = resultsPerTopicsKeys[indexPath.row]
+
+			guard let resultPerTopic = data.resultsPerTopic[keyForRow] else {
+				return UITableViewCell()
+			}
+
+			cell.updateView(topic: keyForRow,
+							numberOfRightAnswers: resultPerTopic.totalNumberOfCorrectAnswers,
+							totalNumberOfQuestions: resultPerTopic.totalNumberOfQuestions,
+							percetage: resultPerTopic.totalPercentageOfCorrectAnswers)
 
 			finalCell = cell
         }

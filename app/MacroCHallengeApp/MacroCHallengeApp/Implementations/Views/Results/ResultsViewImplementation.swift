@@ -84,7 +84,7 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
             numberOfRows = 1
         } else if section == 1 { // grade for subject section
             numberOfRows = resultsPerTopicsKeys.count
-        } else if section == 1 { // questions section
+        } else if section == 2 { // questions section
             numberOfRows = 1
         }
         return numberOfRows
@@ -145,7 +145,25 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
             finalCell = cell
             
         } else if indexPath.section == 2 { // questions
-            
+			cellIdentifier = "AnswersCollectionView"
+			referenceXib(nibName: cellIdentifier)
+
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AnswersCollectionView  else {
+				fatalError("The dequeued cell is not an instance of ProgressBarTableViewCell.")
+			}
+
+			let keyForRow = resultsPerTopicsKeys[indexPath.row]
+
+			guard let resultPerTopic = data.resultsPerTopic[keyForRow] else {
+				return UITableViewCell()
+			}
+
+			cell.updateView(topic: keyForRow,
+							numberOfRightAnswers: resultPerTopic.totalNumberOfCorrectAnswers,
+							totalNumberOfQuestions: resultPerTopic.totalNumberOfQuestions,
+							percetage: resultPerTopic.totalPercentageOfCorrectAnswers)
+
+			finalCell = cell
         }
         
         return finalCell

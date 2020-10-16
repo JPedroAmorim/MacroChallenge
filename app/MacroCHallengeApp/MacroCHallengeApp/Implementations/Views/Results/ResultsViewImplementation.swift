@@ -72,7 +72,7 @@ class ResultsViewImplementation: UIView, ResultsViewProtocol {
 // MARK: - Extension Table View Data Source Methods
 
 extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionHeaderTitleArray.count
     }
@@ -152,16 +152,12 @@ extension ResultsViewImplementation: UITableViewDataSource, UITableViewDelegate 
 				fatalError("The dequeued cell is not an instance of ProgressBarTableViewCell.")
 			}
 
-			let keyForRow = resultsPerTopicsKeys[indexPath.row]
-
-			guard let resultPerTopic = data.resultsPerTopic[keyForRow] else {
-				return UITableViewCell()
-			}
-
-			cell.updateView(topic: keyForRow,
-							numberOfRightAnswers: resultPerTopic.totalNumberOfCorrectAnswers,
-							totalNumberOfQuestions: resultPerTopic.totalNumberOfQuestions,
-							percetage: resultPerTopic.totalPercentageOfCorrectAnswers)
+			cell.updateView()
+//			let keyForRow = resultsPerTopicsKeys[indexPath.row]
+//
+//			guard let resultPerTopic = data.resultsPerTopic[keyForRow] else {
+//				return UITableViewCell()
+//			}
 
 			finalCell = cell
         }

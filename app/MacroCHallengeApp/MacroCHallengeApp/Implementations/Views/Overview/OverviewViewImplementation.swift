@@ -228,7 +228,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
         questionsCollege.dataSource = self
         questionsCollege.register(UINib(nibName: "OverviewCollectionCell", bundle: nil), forCellWithReuseIdentifier: "OverviewCollectionCell")
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numberOfItemsInSection = 0
         let dictionaryKeysAsArray = Array(sectionDictionary.keys)
@@ -246,7 +246,7 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
         
         return numberOfItemsInSection
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = questionsCollege.dequeueReusableCell(withReuseIdentifier: "OverviewCollectionCell", for: indexPath) as! OverviewCollectionCell
         let indexFix = giveCorrectQuestionNumberForIndexPath(section: indexPath.section)
@@ -262,14 +262,14 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
                 cell.numberLabel.textColor = UIColor(red:25/255, green:95/255, blue:230/255, alpha: 1)
             }
         }
-        
+
         return cell
     }
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sectionDictionary.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let indexFix = giveCorrectQuestionNumberForIndexPath(section: indexPath.section)
         if simulatorStarted {

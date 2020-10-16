@@ -269,10 +269,10 @@
 				2F9A67CD2535FB37002EE9B2 /* PieChartTableViewCell.xib */,
 				2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */,
 				2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */,
-				C44561702539D10A007D945C /* AnswersCollectionView.xib */,
 				C44561752539D110007D945C /* AnswersCollectionView.swift */,
-				C445617A2539D119007D945C /* AnswersCollectionCell.xib */,
+				C44561702539D10A007D945C /* AnswersCollectionView.xib */,
 				C445617F2539D11F007D945C /* AnswersCollectionCell.swift */,
+				C445617A2539D119007D945C /* AnswersCollectionCell.xib */,
 			);
 			path = Results;
 			sourceTree = "<group>";

@@ -39,9 +39,9 @@ class ProgressBarTableViewCell: UITableViewCell {
         self.percentage = percetage
         
         settingCornerRadiusOnView(view: barView)
-        settingCornerRadiusOnView(view: progressView)
+//        settingCornerRadiusOnView(view: progressView)
         
-        settingProgress(view: progressView)
+//        settingProgress(view: progressView)
         
         settingTextLabels()
     }

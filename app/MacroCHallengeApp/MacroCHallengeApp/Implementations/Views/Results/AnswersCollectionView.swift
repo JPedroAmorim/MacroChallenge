@@ -15,12 +15,13 @@ class AnswersCollectionView: UITableViewCell {
 
 	// MARK: - Private attributes
 	private var data: ResultsData!
-	var viewController: ResultsViewControllerProtocol!
+	private var viewController: ResultsViewControllerProtocol!
 
 	private var sectionDictionary: [String:(Int, Int)] = [:]
 	private var answeredQuestionsArray = [Int]()
 
 	// MARK: -Lifecycle
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 	}
@@ -31,7 +32,6 @@ class AnswersCollectionView: UITableViewCell {
 
 	// MARK: - Public Methods
 	func updateView(data: ResultsData, viewController: ResultsViewControllerProtocol){
-		print("data")
 
 		self.viewController = viewController
 		self.data = data
@@ -119,6 +119,7 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 	Método que retorna o número da questão dentro de uma seção para que a OverView tenha questões do 1, 2,..., {número total de questões da prova}.
 
 	*/
+
 	private func giveCorrectQuestionNumberForIndexPath(section: Int) -> Int{
 		var jumpAmount: Int = 0
 
@@ -136,6 +137,7 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 	Método que monta o dicionário de seções, onde a chave é a seção e o valor é uma tupla. O primeiro valor da tupla é o número da seção que ela representa na Collection View e o segundo valor da tupla representa o número de questões dentro dessa seção.
 
 	*/
+
 	private func setupSectionDictionary() {
 		let dictionaryKeys: [String] = setupSectionDictionaryKeys()
 		var index = 0
@@ -153,6 +155,7 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 	- parameter topic: Tópico de uma prova.
 
 	*/
+
 	private func countingQuestionsForTopic(_ topic: String) -> Int {
 		var result: Int = 0
 
@@ -170,6 +173,7 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
 	Método responsável de montar o array de seções a partir das questões da prova.
 
 	*/
+	
 	private func setupSectionDictionaryKeys() -> [String]{
 		var resultSet: Set<String> = Set<String>()
 

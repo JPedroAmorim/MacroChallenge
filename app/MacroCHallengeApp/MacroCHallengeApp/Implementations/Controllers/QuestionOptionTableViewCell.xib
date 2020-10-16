@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mta-Qd-uz3" userLabel="CardView">
-                        <rect key="frame" x="32" y="8" width="350" height="103"/>
+                        <rect key="frame" x="24" y="8" width="366" height="103"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdO-FD-c58" userLabel="lblIndex">
                                 <rect key="frame" x="48" y="38.5" width="16" height="26.5"/>
@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="aaasidbaisdaisudiasudiasgudiaugdiasgduiadusgiadsugaisug" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1I-LD-tb2" userLabel="lblAnswer">
-                                <rect key="frame" x="80" y="12" width="254" height="79"/>
+                                <rect key="frame" x="80" y="12" width="270" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,9 +60,9 @@
                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Mta-Qd-uz3" secondAttribute="bottom" constant="8" id="5W2-D6-Gw0"/>
-                    <constraint firstItem="Mta-Qd-uz3" firstAttribute="leading" secondItem="8xv-8b-HjC" secondAttribute="leading" constant="32" id="Coh-PQ-OQc"/>
+                    <constraint firstItem="Mta-Qd-uz3" firstAttribute="leading" secondItem="8xv-8b-HjC" secondAttribute="leading" constant="24" id="Coh-PQ-OQc"/>
                     <constraint firstItem="Mta-Qd-uz3" firstAttribute="top" secondItem="8xv-8b-HjC" secondAttribute="top" constant="8" id="Ud8-BA-9Ev"/>
-                    <constraint firstAttribute="trailing" secondItem="Mta-Qd-uz3" secondAttribute="trailing" constant="32" id="dgs-C9-LBE"/>
+                    <constraint firstAttribute="trailing" secondItem="Mta-Qd-uz3" secondAttribute="trailing" constant="24" id="dgs-C9-LBE"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

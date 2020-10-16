@@ -25,14 +25,18 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     private var question: Question
     private var sectionHeaders: [String]
     private var chosenOption: String?
+    private var shouldDisplayAnswer: Bool
     
     
     // MARK: - Métodos de init
     
-    required init(data: Question, controller: QuestionViewControllerProtocol) {
+    required init(data: Question, controller: QuestionViewControllerProtocol, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool) {
         self.question = data
         self.controller = controller
-        self.sectionHeaders = ["", "", "", "", "", ""] // Strings estao vazias para não exibir os headers
+        self.chosenOption = wasAlreadyAnswered
+        self.shouldDisplayAnswer = shouldPresentAnswer
+        print(self.shouldDisplayAnswer)
+        self.sectionHeaders = ["", "", "", "", "", "", ""] // Strings estao vazias para não exibir os headers
         super.init(frame: CGRect.zero)
         initFromNib()
         self.questionTableView.delegate = self
@@ -61,8 +65,9 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     /// - parameter data: Questão que será utilizada para sobrescrever a view
     /// - parameter wasAlreadyAnswered: Diz se a questão já foi respondida
     /// - parameter shouldPresentAnswer: Booleano para indicar se a questão deveria mostrar a resposta
-    func overwrite(data: Question, wasAlreadyAnswered: String?) {
+    func overwrite(data: Question, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool) {
         self.question = data
+        self.shouldDisplayAnswer = shouldPresentAnswer
         if let alreadyChosenOption = wasAlreadyAnswered {
             self.chosenOption = alreadyChosenOption
         } else {
@@ -112,9 +117,15 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     // MARK: Enums
     
     enum TextCellType {
-        case initialText
         case subtitle
         case text
+    }
+    
+    enum OptionCellState {
+        case selected
+        case deselected
+        case right
+        case wrong
     }
     
     
@@ -125,21 +136,32 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var numberOfRows = 0
-        if section == 0 { // Question header
-            numberOfRows = 1
-        } else if section == 1 { // Initial text
-            numberOfRows = (self.question.initialText == nil ? 0 : 1)
-        } else if section == 2 { // images
-            numberOfRows = self.question.images?.count ?? 0
-        } else if section == 3 { // subtitle
-            numberOfRows = (self.question.subtitle == nil ? 0 : 1)
-        } else if section == 4 { // text
-            numberOfRows = 1
-        } else if section == 5 { // options
-            numberOfRows = question.options.count
+        switch section {
+        // Question header
+        case 0:
+            return 1
+        // Initial text
+        case 1:
+            return self.question.initialText == nil ? 0 : 1
+        // Images
+        case 2:
+            return self.question.images?.count ?? 0
+        // Subtitle
+        case 3:
+            return self.question.subtitle == nil ? 0 : 1
+        // Text
+        case 4:
+            return 1
+        // Options
+        case 5:
+            return self.question.options.count
+        // Initial text
+        case 6:
+            return shouldDisplayAnswer ? 1 : 0
+        // Não deveria entrar aqui
+        default:
+            return 0
         }
-        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -153,7 +175,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             return setupQuestionHeaderCell(tableView: tableView, indexPath: indexPath, subject: question.topic)
         // Initial text
         case 1:
-            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: question.initialText ?? "", category: .initialText)
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: question.initialText ?? "", category: .text)
         // Images
         case 2:
             let image = self.question.images?[indexPath.row] ?? UIImage()
@@ -167,6 +189,10 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         // Options
         case 5:
             return setupOptionCell(tableView: tableView, indexPath: indexPath)
+        // Card com a resposta correta
+        case 6:
+            let str = "\n\nA resposta correta é " + self.question.answer.uppercased()
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: str, category: .text)
         default:
             return UITableViewCell()
         }
@@ -176,57 +202,28 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     // MARK: TableViewDelegate methods
     
     func tableView( _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
+        if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell, !self.shouldDisplayAnswer {
             let option = String(format: "%c", indexPath.row + 97) // Convert path.row index to a char. 97 is equivalent to 'a' in the ASCII table
             if option == self.chosenOption { // Reselect cell to deselect it
                 self.chosenOption = nil
                 self.controller.answerWasUnsubmitted(question: self.question)
-                setOptionCell(cell: cell, selected: false)
+                setOptionCell(cell: cell, state: .deselected)
             } else { // Select a previous unselected cell
                 self.chosenOption = option
                 self.controller.answerWasSubmitted(question: self.question, answer: option)
-                setOptionCell(cell: cell, selected: true)
+                setOptionCell(cell: cell, state: .selected)
             }
         }
     }
     
     func tableView( _ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = questionTableView.cellForRow(at: indexPath) as? QuestionOptionTableViewCell {
-            setOptionCell(cell: cell, selected: false)
+            setOptionCell(cell: cell, state: .deselected)
         }
     }
     
     
     // MARK: Private methods
-    
-    /// Método responsavel pelas alterações visuais em uma célula de opção
-    /// - parameter cell: A célula que deve ser alterada
-    /// - parameter selected: Determina se a célula terá aparencia de selecionada ou não
-    private func setOptionCell(cell: QuestionOptionTableViewCell, selected: Bool) {
-        if selected {
-            UIView.animate(withDuration: 0.3, animations: {
-                // 0xCBDAF8
-                cell.CardView.backgroundColor = UIColor(red:203/255, green:218/255, blue:248/255, alpha: 1)
-                cell.lblAnswer.textColor = .black
-                cell.lblIndex.textColor = .black
-                cell.btnRadio.image = UIImage(systemName: "largecircle.fill.circle")
-                // Deselect other options
-                guard let tableView = cell.superview as? UITableView else {return}
-                for auxCell in tableView.visibleCells {
-                    if let optionCell = auxCell as? QuestionOptionTableViewCell, auxCell != cell {
-                        self.setOptionCell(cell: optionCell, selected: false)
-                    }
-                }
-            })
-        } else {
-            UIView.animate(withDuration: 0.3, animations: {
-                cell.CardView.backgroundColor = .white
-                cell.lblAnswer.textColor = .black
-                cell.lblIndex.textColor = .black
-                cell.btnRadio.image = UIImage(systemName: "circle")
-            })
-        }
-    }
     
     /// Método responsável por setar a célula de cabeçalho
     /// - parameter tableView: TableView que contém a célula
@@ -258,12 +255,6 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         referenceXib(nibName: cellIdentifier)
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionTextTableViewCell {
             switch category {
-            case .initialText:
-                let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-                let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
-                cell.lblText.textAlignment = .left
-                cell.lblText.attributedText = myAttrString
-                cell.lblText.textColor = .black
             case .subtitle:
                 let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
                 let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
@@ -310,14 +301,63 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             let index = String(format: "%c", indexPath.row + 97)
             cell.lblIndex.text = index.uppercased()
             cell.lblAnswer.text = self.question.options[index]
-            if (index == self.chosenOption) {
-                setOptionCell(cell: cell, selected: true)
+            if index == self.chosenOption {
+                if shouldDisplayAnswer {
+                    if self.chosenOption == self.question.answer {
+                        setOptionCell(cell: cell, state: .right)
+                    } else {
+                        setOptionCell(cell: cell, state: .wrong)
+                    }
+                } else {
+                    setOptionCell(cell: cell, state: .selected)
+                }
             } else {
-                setOptionCell(cell: cell, selected: false)
+                setOptionCell(cell: cell, state: .deselected)
             }
             return cell
         } else {
             fatalError("QuestionOptionTableViewCell failed")
+        }
+    }
+    
+    /// Método responsavel pelas alterações visuais em uma célula de opção
+    /// - parameter cell: A célula que deve ser alterada
+    /// - parameter selected: Determina o estado da célula
+    private func setOptionCell(cell: QuestionOptionTableViewCell, state: OptionCellState) {
+        switch state {
+        case .selected:
+            UIView.animate(withDuration: 0.3, animations: {
+                // 0xCBDAF8
+                cell.CardView.backgroundColor = UIColor(red:203/255, green:218/255, blue:248/255, alpha: 1)
+                cell.imgOptionImg.image = UIImage(systemName: "largecircle.fill.circle")
+                // Deselect other options
+                guard let tableView = cell.superview as? UITableView else {return}
+                for auxCell in tableView.visibleCells {
+                    if let optionCell = auxCell as? QuestionOptionTableViewCell, auxCell != cell {
+                        self.setOptionCell(cell: optionCell, state: .deselected)
+                    }
+                }
+            })
+        case .deselected:
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.CardView.backgroundColor = .white
+                cell.imgOptionImg.image = UIImage(systemName: "circle")
+                cell.imgOptionImg.tintColor = UIColor.systemBlue
+            })
+        case .right:
+            UIView.animate(withDuration: 0.3, animations: {
+                // 0xFFCCCC
+                cell.CardView.backgroundColor = UIColor(red:181/255, green:255/255, blue:181/255, alpha: 1)
+                cell.imgOptionImg.image = UIImage(systemName: "checkmark")
+                cell.imgOptionImg.tintColor = UIColor.systemGreen
+            })
+        case .wrong:
+            UIView.animate(withDuration: 0.3, animations: {
+                // 0xB5FFB5
+                cell.CardView.backgroundColor = UIColor(red:255/255, green:204/255, blue:204/255, alpha: 1)
+                cell.imgOptionImg.image = UIImage(systemName: "xmark")
+                cell.imgOptionImg.tintColor = UIColor.systemRed
+            })
         }
     }
 }

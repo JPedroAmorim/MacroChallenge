@@ -16,6 +16,7 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     private var data: [Question]
     private var currentQuestionIndex: Int
     private var answeredQuestions: [String : String] = [:]
+    private var shouldDisplayAnswer: Bool = false
     
     // MARK: - Init methods
     required init(data: [Question], parentController: OverviewViewControllerProtocol) {
@@ -50,7 +51,9 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
         if currentQuestionIndex < data.count - 1 {
             currentQuestionIndex += 1
             let currentQuestionNumber = data[currentQuestionIndex].number
-            myView?.overwrite(data: data[currentQuestionIndex], wasAlreadyAnswered: answeredQuestions[currentQuestionNumber])
+            myView?.overwrite(data: self.data[currentQuestionIndex],
+                              wasAlreadyAnswered: self.answeredQuestions[currentQuestionNumber],
+                              shouldPresentAnswer: self.shouldDisplayAnswer)
             setNavTitle(index: data[currentQuestionIndex].number)
         }
     }
@@ -59,7 +62,9 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
         if currentQuestionIndex > 0 {
             currentQuestionIndex -= 1
             let currentQuestionNumber = data[currentQuestionIndex].number
-            myView?.overwrite(data: data[currentQuestionIndex], wasAlreadyAnswered: answeredQuestions[currentQuestionNumber])
+            myView?.overwrite(data: self.data[currentQuestionIndex],
+                              wasAlreadyAnswered: self.answeredQuestions[currentQuestionNumber],
+                              shouldPresentAnswer: self.shouldDisplayAnswer)
             setNavTitle(index: data[currentQuestionIndex].number)
         }
     }
@@ -75,7 +80,9 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
         
         currentQuestionIndex = questionNumberAsInteger - 1
         
-        myView?.overwrite(data: data[currentQuestionIndex], wasAlreadyAnswered: answeredQuestions[question.number])
+        myView?.overwrite(data: self.data[currentQuestionIndex],
+                          wasAlreadyAnswered: self.answeredQuestions[question.number],
+                          shouldPresentAnswer: self.shouldDisplayAnswer)
     }
     
     func answerWasSubmitted(question: Question, answer: String) {
@@ -99,7 +106,7 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
      
      */
     private func setupDefaultView() { 
-        let defaultView = QuestionViewImplementation(data: data[currentQuestionIndex], controller: self)
+        let defaultView = QuestionViewImplementation(data: data[currentQuestionIndex], controller: self, wasAlreadyAnswered: nil, shouldPresentAnswer: self.shouldDisplayAnswer)
         self.myView = defaultView
         self.view = defaultView
     }

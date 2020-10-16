@@ -68,7 +68,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <connections>
                 <outlet property="CardView" destination="Mta-Qd-uz3" id="XG1-XB-aII"/>
-                <outlet property="btnRadio" destination="lze-f3-3AJ" id="I2k-bY-5e1"/>
+                <outlet property="imgOptionImg" destination="lze-f3-3AJ" id="I2k-bY-5e1"/>
                 <outlet property="lblAnswer" destination="S1I-LD-tb2" id="sFA-uJ-8v6"/>
                 <outlet property="lblIndex" destination="bdO-FD-c58" id="b2m-nP-bNr"/>
             </connections>

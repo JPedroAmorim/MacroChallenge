@@ -12,7 +12,7 @@ class QuestionOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var lblIndex: UILabel!
     @IBOutlet weak var lblAnswer: UILabel!
     @IBOutlet weak var CardView: UIView!
-    @IBOutlet weak var btnRadio: UIImageView!
+    @IBOutlet weak var imgOptionImg: UIImageView!
     
     // MARK: - Lifecyle
     override func awakeFromNib() {

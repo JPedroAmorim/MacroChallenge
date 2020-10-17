@@ -11,12 +11,12 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     // MARK: - Dependencies
     var myView: QuestionViewProtocol?
     var parentController: OverviewViewControllerProtocol
+    var shouldDisplayAnswer: Bool = false
     
     // MARK: - Private attributes
     private var data: [Question]
     private var currentQuestionIndex: Int
     private var answeredQuestions: [String : String] = [:]
-    private var shouldDisplayAnswer: Bool = false
     
     // MARK: - Init methods
     required init(data: [Question], parentController: OverviewViewControllerProtocol) {

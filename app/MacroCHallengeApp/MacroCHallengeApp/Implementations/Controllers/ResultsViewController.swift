@@ -17,12 +17,14 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     private(set) var resultsData: ResultsData?
     private var correctUserAnswers: [Int] = []
     private var wrongUserAnswers: [Int] = []
+    private var timeElapsed: String
     private var questionController: QuestionViewControllerProtocol
     
     // MARK: - Init methods
-    required init(test: Test, answeredQuestions: [String : String], questionController: QuestionViewControllerProtocol) {
+    required init(test: Test, answeredQuestions: [String : String], timeElapsed: String, questionController: QuestionViewControllerProtocol) {
         self.test = test
         self.answeredQuestions = answeredQuestions
+        self.timeElapsed = timeElapsed
         self.questionController = questionController
         super.init(nibName: nil, bundle: nil)
         setupResultsData()
@@ -57,7 +59,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         let totalPercentageOfCorrectAnswers = calculatePercentage(correctAnswers: totalNumberOfCorrectAnswers ,
                                                                   totalNumberOfQuestions: totalNumberOfQuestions)
         let totalNumberOfAnsweredQuestions = answeredQuestions.count
-        let totalTimeElapsed = "todo" 
+        let totalTimeElapsed = timeElapsed
         let resultsPerTopic: [String : ResultsPerTopic] = generateResultsForAllTopics()
         
         generateCorrectAndWrongUserAnswersAsIntArray()
@@ -77,7 +79,16 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     
     // MARK: - ResultsViewControllerProtocol methods
     func questionWasSubmitted(_ question: Question) {
+        guard let navController = self.navigationController else {
+            return
+        }
         
+        questionController.shouldDisplayAnswer = true
+        questionController.displayQuestion(question)
+        
+        if let questionControllerAsUIViewController = questionController as? UIViewController {
+            navController.pushViewController(questionControllerAsUIViewController, animated: true)
+        }
     }
     
     // MARK: - Private methods

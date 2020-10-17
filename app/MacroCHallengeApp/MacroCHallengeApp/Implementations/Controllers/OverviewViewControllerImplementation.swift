@@ -87,9 +87,11 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     }
     
     func hasEnded() {
-        timer?.invalidate()
+        DispatchQueue.main.async {
+            self.timer?.invalidate()
+        }
         if let navCon = self.navigationController, let questionController = self.questionController {
-            let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered, questionController: questionController)
+            let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered, timeElapsed: timeText, questionController: questionController)
             navCon.pushViewController(resultsVC, animated: true)
         }
     }

@@ -11,6 +11,7 @@ class AnswersCollectionView: UITableViewCell {
     // MARK: -IBOutlets
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var questionsCollection: UICollectionView!
+    @IBOutlet var timeLabel: UILabel!
     
     // MARK: - Private attributes
     private var data: ResultsData!
@@ -33,6 +34,7 @@ class AnswersCollectionView: UITableViewCell {
         
         self.viewController = viewController
         self.data = data
+        self.timeLabel.text = data.totalTimeElapsed
         
         setupSectionDictionary()
         setupDelegateCollectionview()
@@ -183,8 +185,6 @@ extension AnswersCollectionView:UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath) selected")
-        
         let indexFix = giveCorrectQuestionNumberForIndexPath(section: indexPath.section)
         viewController.questionWasSubmitted(data.test.questions[indexFix + indexPath.row])
     }

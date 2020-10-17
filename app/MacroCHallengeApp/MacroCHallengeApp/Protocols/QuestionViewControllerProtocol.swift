@@ -76,7 +76,17 @@ protocol QuestionViewControllerProtocol {
      - parameter newTimeText: O novo texto do cronômetro no formato HH:MM (exemplo 01:20)
      
      */
+    
     func updateTime(_ newTimeText: String)
+    
+    
+    /**
+     
+     Variável de controle que indica se o controlador deve ou não mostrar a resposta da questão.
+     
+     */
+    
+    var shouldDisplayAnswer: Bool {get set}
     
     // Dependências
     var myView: QuestionViewProtocol? {get set}

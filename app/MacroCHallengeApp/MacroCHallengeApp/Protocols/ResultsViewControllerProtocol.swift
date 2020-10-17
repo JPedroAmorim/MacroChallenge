@@ -15,10 +15,12 @@ protocol ResultsViewControllerProtocol {
      
      - parameter Test: A prova realizada.
      - parameter answeredQuestions: As repostas fornecidas pelo usuário ao finalizar a prova.
+     - parameter timeElapsed: Uma string com o tempo total que o usuário gastou na prova no formato HH:MM
      - parameter questionController: O controlador de exibição de questões.
      
      */
-    init(test: Test, answeredQuestions: [String : String], questionController: QuestionViewControllerProtocol)
+    init(test: Test, answeredQuestions: [String : String], timeElapsed:String,
+         questionController: QuestionViewControllerProtocol)
     
     /**
      

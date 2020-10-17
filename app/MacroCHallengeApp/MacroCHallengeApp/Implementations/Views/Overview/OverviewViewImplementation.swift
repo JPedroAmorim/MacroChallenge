@@ -300,7 +300,6 @@ extension OverviewViewImplementation:UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
         if kind == UICollectionView.elementKindSectionHeader {
             questionsCollege.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil),
                                       forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,

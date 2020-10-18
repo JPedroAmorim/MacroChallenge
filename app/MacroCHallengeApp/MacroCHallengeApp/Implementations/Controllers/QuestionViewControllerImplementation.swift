@@ -121,5 +121,10 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     private func setNavTitle(index: String) {
         guard let nav = self.navigationController else { return } 
         nav.navigationItem.title = "Questão " + index
+        
+        // Não sei se estou fazendo certo, mas pelo que entendi
+        // a variável nav não estava alterando o título da
+        // navigation, por isso add o código a baixo
+        navigationItem.title = nav.navigationItem.title
     }
 }

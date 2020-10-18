@@ -32,6 +32,7 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = data.name
     }
     
     // MARK: - Setup methods

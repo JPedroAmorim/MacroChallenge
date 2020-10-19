@@ -56,6 +56,12 @@ class HorizontalChartView: UIView {
 	Método responsável por update do estado de progresso
 	*/
 
+	func setup(title: String, correctQuestions: Int, totalQuestions: Int) {
+
+		setupLabels(title: title, correctQuestions: correctQuestions, totalQuestions: totalQuestions)
+		setupPerformanceBar(correctQuestions: correctQuestions, totalQuestions: totalQuestions, percentage: 0)
+	}
+
 	func updatePercentage(percentage: Double) {
 
 		let currentProgress = UIView()

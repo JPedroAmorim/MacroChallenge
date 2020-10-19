@@ -12,20 +12,20 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     private var data: Test
     private var answeredQuestionsArray = [Int]()
     private var simulatorStarted = false
-    private var customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
     
     /**
      
      Um dicionário que contém como chaves as matérias da prova e como valor tem uma tupla cujo o primeiro elemento representa a seção da chave e o segundo representa o número de questões daquela chave.
      */
+
     private var sectionDictionary: [String:(Int, Int)] = [:]
     
     // MARK: -IBOutlets
     @IBOutlet weak var questionsView: UIView!
     @IBOutlet weak var questionsCollege: UICollectionView!
     @IBOutlet var clockLabel: UILabel!
-    @IBOutlet weak var progressChart: UIView!
-    
+	@IBOutlet weak var progressChart: HorizontalChartView!
+
     // MARK: - Dependencies
     var viewController: OverviewViewControllerProtocol
     
@@ -38,6 +38,8 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         setupSectionDictionary()
         setupVisualElements()
         setupDelegateCollectionview()
+
+		progressChart.setup(title: "Progresso", correctQuestions: 00, totalQuestions: data.questions.count)
     }
     
     required init?(coder: NSCoder) {
@@ -55,11 +57,11 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     
     // MARK: - OverviewViewProtocol methods
     func updatePercentage(percentage: Double) {
-        customView.updatePercentage(percentage: percentage)
+		progressChart.updatePercentage(percentage: percentage)
     }
     
     func updateCurrentQuestionsLabel(questionsAnswered: Int) {
-        customView.updateCurrentQuestionsLabel(questionsAnswered: questionsAnswered, totalQuestions: data.questions.count)
+		progressChart.updateCurrentQuestionsLabel(questionsAnswered: questionsAnswered, totalQuestions: data.questions.count)
     }
     
     func updateAnsweredQuestions(questionsAnswered: [Int]) {
@@ -74,10 +76,7 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
     func showTimeHasEndedAlert() {
         showAlert(title: "O tempo para o simulado acabou", msg: "O tempo dedicado à prova acabou. Mesmo assim, você ainda pode finalizar as suas questões.", shouldPresentCancel: false, closure: ({action in}))
     }
-    
-    func updateFrame() {
-        customView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: progressChart.frame.width, height: 77))
-    }
+
     // MARK: - Private methods
     
     /**
@@ -114,14 +113,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
         if let viewController = self.viewController as? UIViewController {
             viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Iniciar Prova", style: .plain, target: self, action: #selector(StartOrFinishNavButtonTapped))
         }
-        
-        customView = HorizontalChartView(title: "Progresso", correctQuestions: 0, totalQuestions: 0, percentage: 0)
-        customView.frame = self.progressChart.bounds
-        
-        self.progressChart.addSubview(customView)
-        
-        customView.center = CGPoint(x: progressChart.frame.size.width  / 2,
-                                    y: progressChart.frame.size.height / 2)
         
         updatePercentage(percentage: 0.0)
         updateCurrentQuestionsLabel(questionsAnswered: 0)
@@ -228,8 +219,6 @@ class OverviewViewImplementation: UIView, OverviewViewProtocol {
             }
         }
     }
-    
-    
 }
 
 // MARK: - Extension Table View Data Source Methods

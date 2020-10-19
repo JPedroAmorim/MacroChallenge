@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverviewViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
                 <outlet property="clockLabel" destination="CJL-4f-A3d" id="rbW-FC-Yfq"/>
-                <outlet property="progressChart" destination="L1U-zq-hHX" id="Qh0-7m-mdH"/>
+                <outlet property="progressChart" destination="L1U-zq-hHX" id="GCA-t6-pcT"/>
                 <outlet property="questionsCollege" destination="Ghc-vp-oeF" id="0ve-vY-C4x"/>
                 <outlet property="questionsView" destination="QxE-l1-qVZ" id="kbl-to-GdW"/>
             </connections>
@@ -77,21 +78,53 @@
                         <constraint firstItem="xhW-Jv-XAF" firstAttribute="centerY" secondItem="Rmj-d4-jaB" secondAttribute="centerY" id="wsR-R4-skS"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX" customClass="HorizontalChartView" customModule="MacroCHallengeApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="785" width="414" height="77"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="77" id="o09-C3-XMW"/>
                     </constraints>
+                    <connections>
+                        <outlet property="performanceBarView" destination="FfB-Nb-hFs" id="v3w-zQ-soz"/>
+                        <outlet property="performanceLabel" destination="lF1-iM-HRd" id="re2-U3-xLv"/>
+                        <outlet property="titleLabel" destination="qvx-ar-h6t" id="NP8-V5-uUs"/>
+                    </connections>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvx-ar-h6t">
+                    <rect key="frame" x="24" y="793" width="102" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Mpu-w3-GyS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-iM-HRd">
+                    <rect key="frame" x="336" y="793.5" width="54" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfB-Nb-hFs">
+                    <rect key="frame" x="24" y="826" width="366" height="28"/>
+                    <color key="backgroundColor" name="SecundaryGraphicsColor"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.95685106519999996" green="0.9568567872" blue="0.95687133069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="L1U-zq-hHX" secondAttribute="bottom" id="111-SX-eYI"/>
+                <constraint firstItem="qvx-ar-h6t" firstAttribute="top" secondItem="QxE-l1-qVZ" secondAttribute="bottom" constant="16" id="4Bm-SR-MYW"/>
                 <constraint firstItem="QxE-l1-qVZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7D2-kh-lme"/>
                 <constraint firstItem="L1U-zq-hHX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9pd-Ss-BmH"/>
+                <constraint firstItem="FfB-Nb-hFs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="DVf-sa-ftt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FfB-Nb-hFs" secondAttribute="bottom" constant="8" id="HrP-0q-zfc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lF1-iM-HRd" secondAttribute="trailing" constant="24" id="XNq-sL-obJ"/>
+                <constraint firstItem="lF1-iM-HRd" firstAttribute="centerY" secondItem="qvx-ar-h6t" secondAttribute="centerY" id="Z93-FE-Ar9"/>
+                <constraint firstItem="FfB-Nb-hFs" firstAttribute="top" secondItem="qvx-ar-h6t" secondAttribute="bottom" constant="8" id="eHc-Wb-UwJ"/>
                 <constraint firstItem="QxE-l1-qVZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jas-NA-hTH"/>
+                <constraint firstItem="qvx-ar-h6t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="kj2-p2-FgS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QxE-l1-qVZ" secondAttribute="trailing" id="mBf-nb-0ta"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FfB-Nb-hFs" secondAttribute="trailing" constant="24" id="mE8-ti-1B6"/>
                 <constraint firstItem="L1U-zq-hHX" firstAttribute="top" secondItem="QxE-l1-qVZ" secondAttribute="bottom" constant="8" id="snG-kF-0XX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L1U-zq-hHX" secondAttribute="trailing" id="vY5-ak-qUq"/>
             </constraints>
@@ -99,6 +132,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="SecundaryGraphicsColor">
+            <color red="0.61960784313725492" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

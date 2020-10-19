@@ -57,13 +57,6 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         self.questionController = defaultQuestionController
     }
     
-    // MARK: - UIViewController overwritten methods
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        if let view = self.myView {
-            view.updateFrame()
-        }
-    }
-    
     // MARK: - OverviewViewControllerProtocol methods
     func questionWasSubmitted(_ question: Question) {
         guard let questionController = self.questionController else { return }

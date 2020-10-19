@@ -72,14 +72,6 @@ protocol OverviewViewProtocol {
     
     func showTimeHasEndedAlert()
     
-    /**
-
-    Método que reorganiza os elementos para o modo landscape.
-
-    */
-    
-    func updateFrame()
-    
     // Dependências
     var viewController: OverviewViewControllerProtocol  {get set}
 }

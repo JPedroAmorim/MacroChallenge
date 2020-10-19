@@ -23,6 +23,7 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     // MARK: - Atributos privados
     
     private var question: Question
+    private var numOfQuestions: Int
     private var sectionHeaders: [String]
     private var chosenOption: String?
     private var shouldDisplayAnswer: Bool
@@ -30,8 +31,9 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     // MARK: - Métodos de init
     
-    required init(data: Question, controller: QuestionViewControllerProtocol, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool) {
+    required init(data: Question, controller: QuestionViewControllerProtocol, wasAlreadyAnswered: String?, shouldPresentAnswer: Bool, numberOfQuestions: Int) {
         self.question = data
+        self.numOfQuestions = numberOfQuestions
         self.controller = controller
         self.chosenOption = wasAlreadyAnswered
         self.shouldDisplayAnswer = shouldPresentAnswer
@@ -40,9 +42,7 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         initFromNib()
         self.questionTableView.delegate = self
         self.questionTableView.dataSource = self
-        let currentQuestion = Int(data.number) ?? -10
-        self.btnAnterior.setTitle("Questão " + String(currentQuestion - 1), for: .normal)
-        self.btnProximo.setTitle("Questão " + String(currentQuestion + 1), for: .normal)
+        setupButtons(data.number)
     }
     
     required init?(coder: NSCoder) {
@@ -72,9 +72,7 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         } else {
             self.chosenOption = nil
         }
-        let currentQuestion = Int(data.number) ?? -10
-        self.btnAnterior.setTitle("Questão " + String(currentQuestion - 1), for: .normal)
-        self.btnProximo.setTitle("Questão " + String(currentQuestion + 1), for: .normal)
+        setupButtons(data.number)
         self.questionTableView.reloadData()
     }
     
@@ -98,7 +96,23 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         controller.nextWasSubmitted()
     }
     
-
+    /// Função responsável por configurar os botões que questões anteriores e próximas
+    /// Se a view não souber em qual questão está apresentará uma interrogação ao invés do número
+    /// Caso a questão seja de número 1 ou igual ao número de questões do teste os botões para a questão anterior ou próxima são escondidos respectivamente
+    /// - parameter questionNumber: String que representa o número da questão atual
+    func setupButtons(_ questionNumber: String) {
+        // Setup text
+        if let currentQuestion = Int(questionNumber) {
+            self.btnAnterior.isHidden = currentQuestion == 1
+            self.btnAnterior.setTitle("Questão " + String(currentQuestion - 1), for: .normal)
+            self.btnProximo.isHidden = currentQuestion == self.numOfQuestions
+            self.btnProximo.setTitle("Questão " + String(currentQuestion + 1), for: .normal)
+        } else {
+            self.btnAnterior.setTitle("Questão ?", for: .normal)
+            self.btnProximo.setTitle("Questão ?", for: .normal)
+        }
+    }
+    
     /// Função utilizada para registrar o arquivo .xib das celulas para serem utilizadas pela table view
     /// - parameter nibName: Nome que referencia o nome do xib
     func referenceXib(nibName: String) {

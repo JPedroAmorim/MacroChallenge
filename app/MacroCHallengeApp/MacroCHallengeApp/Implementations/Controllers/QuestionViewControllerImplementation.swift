@@ -106,7 +106,10 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
      
      */
     private func setupDefaultView() { 
-        let defaultView = QuestionViewImplementation(data: data[currentQuestionIndex], controller: self, wasAlreadyAnswered: nil, shouldPresentAnswer: self.shouldDisplayAnswer)
+        let defaultView = QuestionViewImplementation(data: data[currentQuestionIndex],
+                        controller: self, wasAlreadyAnswered: nil,
+                        shouldPresentAnswer: self.shouldDisplayAnswer,
+                        numberOfQuestions: self.data.count)
         self.myView = defaultView
         self.view = defaultView
     }

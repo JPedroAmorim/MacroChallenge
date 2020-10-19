@@ -60,11 +60,21 @@
                                 <constraint firstAttribute="height" constant="1" id="gsR-bm-ZHR"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4e-FC-Wdy">
+                            <rect key="frame" x="0.0" y="732" width="414" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="PTb-BI-UyG"/>
+                                <constraint firstAttribute="width" constant="414" id="q1y-fV-Id8"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Ghc-vp-oeF" secondAttribute="bottom" id="1UN-GW-hpX"/>
+                        <constraint firstItem="E4e-FC-Wdy" firstAttribute="bottom" secondItem="Ghc-vp-oeF" secondAttribute="bottom" id="CSm-3D-PqW"/>
                         <constraint firstAttribute="trailing" secondItem="hag-lm-4WN" secondAttribute="trailing" constant="24" id="GPM-h5-7VP"/>
+                        <constraint firstItem="E4e-FC-Wdy" firstAttribute="leading" secondItem="QxE-l1-qVZ" secondAttribute="leading" id="KPA-RM-aoZ"/>
                         <constraint firstItem="Rmj-d4-jaB" firstAttribute="top" secondItem="QxE-l1-qVZ" secondAttribute="top" constant="16" id="NcD-VP-lTv"/>
                         <constraint firstItem="CJL-4f-A3d" firstAttribute="centerY" secondItem="Rmj-d4-jaB" secondAttribute="centerY" id="Sz3-j1-jJb"/>
                         <constraint firstAttribute="trailing" secondItem="CJL-4f-A3d" secondAttribute="trailing" constant="24" id="YMh-cf-hiI"/>
@@ -76,6 +86,7 @@
                         <constraint firstItem="CJL-4f-A3d" firstAttribute="leading" secondItem="xhW-Jv-XAF" secondAttribute="trailing" constant="2" id="uXw-aD-0QT"/>
                         <constraint firstItem="Ghc-vp-oeF" firstAttribute="leading" secondItem="QxE-l1-qVZ" secondAttribute="leading" constant="24" id="ul7-dc-lnA"/>
                         <constraint firstItem="xhW-Jv-XAF" firstAttribute="centerY" secondItem="Rmj-d4-jaB" secondAttribute="centerY" id="wsR-R4-skS"/>
+                        <constraint firstItem="E4e-FC-Wdy" firstAttribute="centerX" secondItem="QxE-l1-qVZ" secondAttribute="centerX" id="y6m-3j-wRW"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-zq-hHX" customClass="HorizontalChartView" customModule="MacroCHallengeApp" customModuleProvider="target">

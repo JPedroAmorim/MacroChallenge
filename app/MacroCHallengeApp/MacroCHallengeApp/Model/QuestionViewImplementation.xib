@@ -65,6 +65,14 @@
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNQ-4g-Mpf">
+                    <rect key="frame" x="0.0" y="801" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="414" id="394-IT-THg"/>
+                        <constraint firstAttribute="height" constant="1" id="4gc-dl-Fdz"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,7 +80,9 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C6A-Cl-Jl9" secondAttribute="trailing" id="0mz-8Z-vR0"/>
                 <constraint firstItem="C6A-Cl-Jl9" firstAttribute="top" secondItem="Pg0-0h-mN5" secondAttribute="bottom" id="2Wi-xB-00l"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pg0-0h-mN5" secondAttribute="trailing" id="Itm-Ee-R0E"/>
+                <constraint firstItem="BNQ-4g-Mpf" firstAttribute="bottom" secondItem="Pg0-0h-mN5" secondAttribute="bottom" id="Ukl-Ao-DQe"/>
                 <constraint firstItem="Pg0-0h-mN5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fg7-8H-FcS"/>
+                <constraint firstItem="BNQ-4g-Mpf" firstAttribute="leading" secondItem="Pg0-0h-mN5" secondAttribute="trailing" constant="-414" id="nfK-lK-c0W"/>
                 <constraint firstItem="Pg0-0h-mN5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="oFp-B1-YEe"/>
                 <constraint firstItem="C6A-Cl-Jl9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qKg-9Q-bUz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="C6A-Cl-Jl9" secondAttribute="bottom" id="u3J-1C-9n2"/>

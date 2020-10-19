@@ -192,7 +192,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         // Card com a resposta correta
         case 6:
             let str = "\n\nA resposta correta é " + self.question.answer.uppercased()
-            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: str, category: .text)
+            return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: str, category: .answer)
         default:
             return UITableViewCell()
         }
@@ -268,7 +268,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .black
             case .answer:
-                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
+                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
                 let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
                 cell.lblText.textAlignment = .left
                 cell.lblText.attributedText = myAttrString

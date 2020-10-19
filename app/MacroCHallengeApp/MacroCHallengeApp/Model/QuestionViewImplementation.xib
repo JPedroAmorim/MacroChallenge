@@ -24,21 +24,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6A-Cl-Jl9" userLabel="buttonView">
                     <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-zy-Mvh">
-                            <rect key="frame" x="16" y="19" width="100" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-zy-Mvh">
+                            <rect key="frame" x="16" y="19" width="120" height="22"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="A8S-sZ-wPI"/>
+                                <constraint firstAttribute="width" constant="120" id="A8S-sZ-wPI"/>
                             </constraints>
-                            <state key="normal" title="Anterior" image="chevron.left" catalog="system">
+                            <state key="normal" title="Questão 666" image="chevron.left" catalog="system">
                                 <color key="titleColor" systemColor="linkColor"/>
                             </state>
                             <connections>
                                 <action selector="submitPrevious:" destination="-1" eventType="touchUpInside" id="ezt-4U-1AO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
-                            <rect key="frame" x="320" y="19" width="78" height="22"/>
-                            <state key="normal" title="Proximo" image="chevron.backward" catalog="system">
+                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3s-74-Zs0">
+                            <rect key="frame" x="278" y="19" width="120" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="LTn-ni-kIi"/>
+                            </constraints>
+                            <state key="normal" title="Questão 1" image="chevron.backward" catalog="system">
                                 <color key="titleColor" systemColor="linkColor"/>
                             </state>
                             <connections>

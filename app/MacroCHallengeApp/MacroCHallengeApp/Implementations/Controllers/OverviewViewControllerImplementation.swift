@@ -10,7 +10,7 @@ import UIKit
 class OverviewViewControllerImplementation: UIViewController, OverviewViewControllerProtocol {
     // MARK: - Constants
     // TODO: Ver como esse controller de fato obterá essa informação
-    private let testDurationInSeconds = 2 * 60 // Valor de teste: Dois minutos
+    private let testDurationInSeconds = 10 * 60 // Valor de teste: Dez minutos
     
     // MARK: - Dependencies
     var myView: OverviewViewProtocol?

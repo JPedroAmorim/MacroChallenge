@@ -92,7 +92,7 @@ class PieChartTableViewCell: UITableViewCell {
                        UIColor.init(red: 170/255,
                                     green: 170/255,
                                     blue: 170/255,
-                                    alpha: 1.0)]
+                                    alpha: 0.6)]
         
         dataSet.colors =  colors
         dataSet.sliceSpace = 0

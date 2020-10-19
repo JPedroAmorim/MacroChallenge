@@ -119,6 +119,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
     enum TextCellType {
         case subtitle
         case text
+        case answer
     }
     
     enum OptionCellState {
@@ -263,6 +264,12 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.lblText.textColor = .gray
             case .text:
                 let myAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+                let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
+                cell.lblText.textAlignment = .left
+                cell.lblText.attributedText = myAttrString
+                cell.lblText.textColor = .black
+            case .answer:
+                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)]
                 let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
                 cell.lblText.textAlignment = .left
                 cell.lblText.attributedText = myAttrString

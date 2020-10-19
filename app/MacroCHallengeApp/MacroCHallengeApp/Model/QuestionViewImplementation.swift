@@ -35,7 +35,6 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         self.controller = controller
         self.chosenOption = wasAlreadyAnswered
         self.shouldDisplayAnswer = shouldPresentAnswer
-        print(self.shouldDisplayAnswer)
         self.sectionHeaders = ["", "", "", "", "", "", ""] // Strings estao vazias para não exibir os headers
         super.init(frame: CGRect.zero)
         initFromNib()

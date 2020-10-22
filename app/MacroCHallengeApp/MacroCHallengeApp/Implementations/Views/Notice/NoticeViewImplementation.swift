@@ -124,7 +124,6 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         if indexPath.section == 0 { // topicos por matéria
             
-//            let test = data.tests[indexPath.row]
             
             
         } else if indexPath.section == 1 { // redação

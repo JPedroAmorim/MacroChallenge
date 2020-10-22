@@ -15,16 +15,18 @@ protocol NoticeViewControllerProtocol {
      - parameter data: Dicionário cujo os dados serão mostrados.
      
      */
-    init(data: [String:String])
+    init(data: Notice)
     
     /**
      
      Método que recebe um dicionário que contem o número de questões e o conteúdo programático e a partir dele será responsável de chamar o controller que mostrará as informações do tópico selecionado.
      
-     - parameter topic: dicionário contendo informações do tópico selecionado pela View.
+     - parameter topic: array contendo informações do tópico selecionado pela View.
+     - parameter numberOfQuestions: número de questões do tópico selecionado pela View.
+    
      
      */
-    func topicWasSubmitted(_ topic: [String:String])
+    func topicWasSubmitted(_ topic: [String], _ numberOfQuestions: Int)
     
     /**
      

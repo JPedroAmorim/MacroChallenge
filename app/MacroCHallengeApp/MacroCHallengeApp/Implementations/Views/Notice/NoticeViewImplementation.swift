@@ -16,7 +16,7 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
     var viewController: NoticeViewControllerProtocol
     
     // MARK: - Private attributes
-    private var data: [String : String]
+    private var data: Notice
     
     private let sectionHeaderTitleArray = ["Tópicos por matéria",
                                            "Redação",
@@ -24,8 +24,8 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
                                            "Duração da prova"]
     
     // MARK: - Init methods
-    required init(data: [String : String], controller: NoticeViewControllerProtocol) {
-        self.data = data
+    required init(notice: Notice, controller: NoticeViewControllerProtocol) {
+        self.data = notice
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
@@ -145,7 +145,7 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         switch section {
         case 0: // topicos
-            viewController.topicWasSubmitted(["":""])
+            viewController.topicWasSubmitted([""], 0)
         case 1: // redação
             viewController.essayWasSubmitted(["":""])
         case 2: // mais informações

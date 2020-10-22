@@ -15,10 +15,10 @@ class NoticeViewControllerImplementation: UIViewController, NoticeViewController
     var myView: NoticeViewProtocol?
     
     // MARK: - Private attributes
-    private var data: [String : String]
+    private var data: Notice
     
     // MARK: - Init methods
-    required init(data: [String : String]) {
+    required init(data: Notice) {
         self.data = data
         super.init(nibName: nil, bundle: nil)
     }
@@ -39,18 +39,18 @@ class NoticeViewControllerImplementation: UIViewController, NoticeViewController
     
     // MARK: - Setup methods
     private func setupDefaultView() {
-        let defaultView = NoticeViewImplementation(data: self.data, controller: self)
+        let defaultView = NoticeViewImplementation(notice: self.data, controller: self)
         self.myView = defaultView
         self.view = defaultView
     }
     
     // MARK: - NoticeViewControllerProtocol methods
     
-    func topicWasSubmitted(_ topic: [String : String]) {
-//        if let navController = self.navigationController {
-//            let overviewViewController = OverviewViewControllerImplementation(data: test)
-//            navController.pushViewController(overviewViewController, animated: true)
-//        }
+    func topicWasSubmitted(_ topic: [String], _ numberOfQuestions: Int) {
+        //        if let navController = self.navigationController {
+        //            let overviewViewController = OverviewViewControllerImplementation(data: test)
+        //            navController.pushViewController(overviewViewController, animated: true)
+        //        }
     }
     
     func essayWasSubmitted(_ essay: [String : String]) {

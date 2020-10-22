@@ -11,19 +11,26 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class School {
+public class Test {
     @Id
     @SequenceGenerator(name = "id", sequenceName = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id")
     private Integer id;
 
-    @OneToMany(mappedBy = "school")
+    @ManyToOne
+    private School school;
+
+    @OneToMany(mappedBy = "test")
     @JsonIgnore
-    private List<Test> tests;
+    private List<Question> questions;
+
+    @OneToMany(mappedBy = "test")
+    @JsonIgnore
+    private List<Results> results;
 
     @NonNull
     private String name;
 
     @NonNull
-    private String location;
+    private String year;
 }

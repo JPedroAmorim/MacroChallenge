@@ -1,17 +1,29 @@
 package com.macrochallenge.backend.controllers;
 
+import com.macrochallenge.backend.model.School;
+import com.macrochallenge.backend.repositories.SchoolRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("api/v1/applications")
+@RequestMapping("api/v1/schools")
 @RestController
 public class SchoolController {
 
-    @PostMapping("/{id}/error-submission")
-    public ResponseEntity<Object> addNewError(@PathVariable Integer id, @RequestBody ErrorDTO errorDTO) {
+    private final SchoolRepository schoolRepository;
 
+    @Autowired
+    public SchoolController(SchoolRepository schoolRepository) {
+        this.schoolRepository = schoolRepository;
+    }
 
-        return new ResponseEntity<>("Escola adicionada com sucesso", HttpStatus.OK);
+    @PostMapping("/school-submission")
+    public ResponseEntity<String> addNewSchool(@RequestBody School school) {
+
+        schoolRepository.save(school);
+        schoolRepository.flush();
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

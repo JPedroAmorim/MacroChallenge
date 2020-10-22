@@ -33,7 +33,7 @@ protocol SchoolViewControllerProtocol {
      - parameter notice :  edital selecionado pela View.
      
      */
-    func noticeWasSubmitted(_ notice: [String:String])
+    func noticeWasSubmitted(_ notice: Notice)
     
     // Dependências
     var myView: SchoolViewProtocol? {get set}

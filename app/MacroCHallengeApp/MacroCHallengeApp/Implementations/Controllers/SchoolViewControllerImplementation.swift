@@ -50,7 +50,7 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
         }
     }
     
-    func noticeWasSubmitted(_ notice: [String : String]) {
+    func noticeWasSubmitted(_ notice: Notice) {
         // TODO: Implementação desse método. Por enquanto, ele está fora do escopo da estória que estamos atacando.
     }
 }

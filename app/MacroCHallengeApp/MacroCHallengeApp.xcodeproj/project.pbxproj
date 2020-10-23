@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2859F43CC46F9E6535B76157 /* Pods_MacroCHallengeApp_MacroCHallengeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2CAEB495A8493BF54AE16A /* Pods_MacroCHallengeApp_MacroCHallengeAppUITests.framework */; };
+		2F1FCF0E2541B5210040169E /* NoticeViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF0D2541B5210040169E /* NoticeViewImplementation.swift */; };
+		2F1FCF132541B5950040169E /* NoticeViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF122541B5950040169E /* NoticeViewImplementation.xib */; };
+		2F1FCF192541BB4F0040169E /* NoticeTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF172541BB4F0040169E /* NoticeTopicTableViewCell.swift */; };
+		2F1FCF1A2541BB4F0040169E /* NoticeTopicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF182541BB4F0040169E /* NoticeTopicTableViewCell.xib */; };
+		2F1FCF1F2541C6EC0040169E /* NoticeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */; };
+		2F1FCF242541C8250040169E /* NoticeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */; };
+		2F1FCF292541CFB20040169E /* NoticeViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */; };
+		2F1FCF2E2541DA0E0040169E /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF2D2541DA0E0040169E /* Notice.swift */; };
 		2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
@@ -144,6 +152,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1FCF0D2541B5210040169E /* NoticeViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewImplementation.swift; sourceTree = "<group>"; };
+		2F1FCF122541B5950040169E /* NoticeViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeViewImplementation.xib; sourceTree = "<group>"; };
+		2F1FCF172541BB4F0040169E /* NoticeTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTopicTableViewCell.swift; sourceTree = "<group>"; };
+		2F1FCF182541BB4F0040169E /* NoticeTopicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeTopicTableViewCell.xib; sourceTree = "<group>"; };
+		2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewProtocol.swift; sourceTree = "<group>"; };
+		2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2F1FCF2D2541DA0E0040169E /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -258,6 +274,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1FCF0C2541B49B0040169E /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				2F1FCF0D2541B5210040169E /* NoticeViewImplementation.swift */,
+				2F1FCF122541B5950040169E /* NoticeViewImplementation.xib */,
+				2F1FCF172541BB4F0040169E /* NoticeTopicTableViewCell.swift */,
+				2F1FCF182541BB4F0040169E /* NoticeTopicTableViewCell.xib */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
 		2F9A67AD2535F219002EE9B2 /* Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +308,7 @@
 				4FFF6BAB252BA4F10015DFE7 /* Question.swift */,
 				D59A376B2535DF8100AD14F1 /* ResultsData.swift */,
 				D59A37802535FB8100AD14F1 /* ResultsPerTopic.swift */,
+				2F1FCF2D2541DA0E0040169E /* Notice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +406,8 @@
 				D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */,
 				D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */,
 				D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */,
+				2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */,
+				2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -400,6 +430,7 @@
 				D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */,
 				4FFF6BC0252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift */,
 				D59A37772535F1E300AD14F1 /* ResultsViewController.swift */,
+				2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -407,6 +438,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F1FCF0C2541B49B0040169E /* Notice */,
 				2F9A67AD2535F219002EE9B2 /* Results */,
 				D59E82FE252E2E37007E8CBD /* Overview */,
 				D586B5AA252CA21100F4DF76 /* Questions */,
@@ -618,6 +650,7 @@
 				4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */,
 				D565EEF4252B813900426648 /* LaunchScreen.storyboard in Resources */,
 				D565EEF1252B813900426648 /* Assets.xcassets in Resources */,
+				2F1FCF1A2541BB4F0040169E /* NoticeTopicTableViewCell.xib in Resources */,
 				D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */,
 				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
 				2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */,
@@ -628,6 +661,7 @@
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
 				2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */,
 				C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */,
+				2F1FCF132541B5950040169E /* NoticeViewImplementation.xib in Resources */,
 				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,12 +813,17 @@
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */,
+				2F1FCF242541C8250040169E /* NoticeViewControllerProtocol.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				D5BCC580252E271200E181CB /* Extensions.swift in Sources */,
+				2F1FCF192541BB4F0040169E /* NoticeTopicTableViewCell.swift in Sources */,
 				2FF53933252E291500C0107B /* NoticeTableViewCell.swift in Sources */,
+				2F1FCF292541CFB20040169E /* NoticeViewControllerImplementation.swift in Sources */,
 				4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */,
 				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
+				2F1FCF0E2541B5210040169E /* NoticeViewImplementation.swift in Sources */,
+				2F1FCF1F2541C6EC0040169E /* NoticeViewProtocol.swift in Sources */,
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
 				2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
@@ -793,6 +832,7 @@
 				D59A37782535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
 				C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
+				2F1FCF2E2541DA0E0040169E /* Notice.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,

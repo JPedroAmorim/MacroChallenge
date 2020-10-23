@@ -6,10 +6,43 @@
 //
 
 import SwiftyJSON
+import Foundation
+
+//	MARK: - Error Handling
+enum ErrorQuestion: String, Error {
+
+	case noNumber = "Number is nil"
+	case noText = "Text is nil"
+	case noInitialText = "InitialText is nil"
+	case noSubtitle = "Subtitle is nil"
+	case noAnswer = "Answer is nil"
+	case noTopic = "Topic is nil"
+	case noImagesURLs = "ImagesURLs is nil"
+	case noOptions = "Options is nil"
+	case noOptionsGet = "Options is empty"
+}
+
 
 class ConverterJSON {
 
-	func createQuestion(json: JSON) -> Any? {
+	//	MARK: - Convert JSON to Question
+	/**
+	Método responsável por converter um objeto JSON em um objeto da  classe Question
+
+	How to use?
+
+	do {
+	let converterJSON = try ConverterJSON().createQuestion(json: json)
+	print(converterJSON)
+	}
+	catch let error as UserValidationError {
+	print(error.rawValue)
+	} catch {
+	print("Unspecific Error")
+	}
+	*/
+
+	func createQuestion(json: JSON) throws -> Question? {
 		var number: String
 		var text: String
 		var initialText: String?
@@ -22,37 +55,37 @@ class ConverterJSON {
 		if let numberCurrent = json["number"].string {
 			number = numberCurrent
 		} else  {
-			return "invalid number question"
+			throw ErrorQuestion.noNumber
 		}
 
 		if let textCurrent = json["text"].string {
 			text = textCurrent
 		} else  {
-			return "invalid text question"
+			throw ErrorQuestion.noText
 		}
 
 		if let initialTextCurrent = json["initialText"].string {
 			initialText = initialTextCurrent
 		} else  {
-			return "invalid initialText question"
+			throw ErrorQuestion.noInitialText
 		}
 
 		if let subtitleCurrent = json["subtitle"].string {
 			subtitle = subtitleCurrent
 		} else  {
-			return "invalid subtitle question"
+			throw ErrorQuestion.noSubtitle
 		}
 
 		if let answerCurrent = json["answer"].string {
 			answer = answerCurrent
 		} else  {
-			return "invalid answer question"
+			throw ErrorQuestion.noAnswer
 		}
 
 		if let topicCurrent = json["topic"].string {
 			topic = topicCurrent
 		} else  {
-			return "invalid topic question"
+			throw ErrorQuestion.noTopic
 		}
 
 		if let imagesCurrent = json["images"].string {
@@ -62,17 +95,17 @@ class ConverterJSON {
 				imagesURLs = []
 			}
 		} else  {
-			return "invalid images question"
+			throw ErrorQuestion.noImagesURLs
 		}
 
 		if let optionsCurrent = json["options"].string {
 			if let opt = handleOptions(text: optionsCurrent) {
 				options = opt
 			} else {
-				return "invalid options question"
+				throw ErrorQuestion.noOptionsGet
 			}
 		} else  {
-			return "invalid options question"
+			throw ErrorQuestion.noOptions
 		}
 
 		let question = Question(number: number, text: text, initialText: initialText, images: nil, subtitle: subtitle, options: options, answer: answer, topic: topic)
@@ -81,6 +114,7 @@ class ConverterJSON {
 
 		return question
 	}
+
 
 	func handleOptions(text: String) -> [String:String]? {
 		let textJoined = text.split(separator: "@")

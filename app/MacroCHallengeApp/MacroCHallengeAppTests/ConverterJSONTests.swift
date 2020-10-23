@@ -32,6 +32,8 @@ class ConverterJSONTests: XCTestCase {
 		}
 
 		XCTAssertEqual(result.number, expectedResult.number)
+		XCTAssertEqual(result.options, expectedResult.options)
+		XCTAssertEqual(result.images, expectedResult.images)
     }
 
     func testPerformanceExample() throws {

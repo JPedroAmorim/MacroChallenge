@@ -31,21 +31,6 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
 		navigationItem.title = "Colégios"
-
-		let json: JSON = JSON([
-					"number" : "1",
-					"text" : "This is a example of text",
-					"initialText" : "initialText example",
-					"images" : "URL1@URL2@URL3",
-					"subtitle" : "subtitleExample",
-					"options" : "A#ExampleOptionA@B#ExampleOptionB@C#ExampleOptionC@D#ExampleOptionD",
-					"answer" : "answerTest",
-					"topic" : "topic",
-
-				])
-
-		var converterJSON = ConverterJSON().createQuestion(json: json)
-
     }
     
     // MARK: - Setup methods

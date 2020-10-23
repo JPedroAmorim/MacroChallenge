@@ -17,6 +17,7 @@ class Question {
     private(set) var options: [String:String]
     private(set) var answer: String
     private(set) var topic: String
+	private(set) var imagesURL: [String]?
     
     init(number: String, text: String, initialText: String?, images: [UIImage]?, subtitle: String?, options: [String : String], answer: String, topic: String) {
         self.number = number
@@ -28,5 +29,9 @@ class Question {
         self.answer = answer
         self.topic = topic
     }
+
+	func updateImagesURL(imagesURL: [String]) {
+		self.imagesURL = imagesURL
+	}
     
 }

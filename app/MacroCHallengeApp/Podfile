@@ -8,7 +8,7 @@ target 'MacroCHallengeApp' do
   # Pods for MacroCHallengeApp
   pod 'Charts'
   pod 'TinyConstraints'
-
+  pod 'SwiftyJSON', '~> 4.0'
   target 'MacroCHallengeAppTests' do
     inherit! :search_paths
     # Pods for testing

@@ -30,6 +30,7 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
 		navigationItem.title = "Colégios"
+		var converterJSON = ConverterJSON()
     }
     
     // MARK: - Setup methods

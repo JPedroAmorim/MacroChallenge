@@ -9,29 +9,38 @@ import SwiftyJSON
 import XCTest
 
 class ConverterJSONTests: XCTestCase {
+	// MARK: - Setup and teardown methods
+    override func setUpWithError() throws {}
+    override func tearDownWithError() throws {}
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testCreateQuestion_whenGivenValidJSON_shouldGiveValidQuestion() throws {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+		// Given
+		let inputJSON = createValidMockJSON()
+		let testSubject = ConverterJSON()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-		try creatingQuestion()
+		// When
+		let resultQuestion = testSubject.createQuestion(json: inputJSON)
+
+		// Then
+		let expectedOptionsDict  = ["A" : "ExampleOptionA", "B" : "ExampleOptionB", "C": "ExampleOptionC", "D" : "ExampleOptionD"]
+		let expectedResult = Question(number: "1", text: "This is a example of text", initialText: "initialText example", images: nil, subtitle: "subtitleExample", options: expectedOptionsDict, answer: "answerTest", topic: "topic")
+
+		guard let result = resultQuestion as? Question else {
+			XCTFail("Result question falhou a fazer o question")
+			return
+		}
+
+		XCTAssertEqual(result.number, expectedResult.number)
     }
 
     func testPerformanceExample() throws {
-        // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
 
-	func creatingQuestion() throws {
+	func createValidMockJSON() -> JSON {
 
 		let json: JSON = JSON([
 			"number" : "1",
@@ -45,13 +54,7 @@ class ConverterJSONTests: XCTestCase {
 
 		])
 
-		// Getting a double from a JSON Array
-		let question = ConverterJSON().createQuestion(json: json)
-
-		if let quest = question as? Question {
-			print(quest.imagesURL!)
-		}
-
+		return json
 	}
 
 }

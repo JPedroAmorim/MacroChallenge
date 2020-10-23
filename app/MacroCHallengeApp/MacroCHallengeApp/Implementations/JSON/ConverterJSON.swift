@@ -9,27 +9,6 @@ import SwiftyJSON
 
 class ConverterJSON {
 
-//	init() {
-//
-//		let json: JSON = JSON([
-//			"number" : "1",
-//			"text" : "This is a example of text",
-//			"initialText" : "initialText example",
-//			"images" : "URL1@URL2@URL3",
-//			"subtitle" : "subtitleExample",
-//			"options" : "A#ExampleOptionA@B#ExampleOptionB@C#ExampleOptionC@D#ExampleOptionD",
-//			"answer" : "answerTest",
-//			"topic" : "topic",
-//
-//		])
-//
-//		// Getting a double from a JSON Array
-//		let question = createQuestion(json: json)
-//
-//		print(question?.imagesURL!)
-//
-//	}
-
 	func createQuestion(json: JSON) -> Any? {
 		var number: String
 		var text: String

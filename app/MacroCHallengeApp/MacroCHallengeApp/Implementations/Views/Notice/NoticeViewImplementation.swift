@@ -17,7 +17,7 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
     
     // MARK: - Private attributes
     private var data: Notice
-    
+    private var topicsArray: [String] = []
     private let sectionHeaderTitleArray = ["Tópicos por matéria",
                                            "Redação",
                                            "Mais informações",
@@ -29,6 +29,7 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
+        topicsArray = setupTopicsArrayKeys()
         setupTableView()
     }
     
@@ -71,7 +72,24 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
         self.testTableView.register(nib, forCellReuseIdentifier: nibName)
     }
     
-    
+    /**
+     
+     Método responsável de montar o array de seções a partir dos tópicos da prova.
+     
+     */
+    private func setupTopicsArrayKeys() -> [String]{
+        var resultArray: [String] = []
+
+        for topic in data.topics {
+            let key = topic.key
+            
+            if !resultArray.contains(key) {
+                resultArray.append(key)
+            }
+        }
+        
+        return resultArray
+    }
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -86,7 +104,7 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         switch section{
         case 0: // tópicos por matéria
-            numberOfRows = 4 // <<<< mudar
+            numberOfRows = topicsArray.count
         case 1: // redação
             numberOfRows = 1
         case 2: // mais informações
@@ -123,18 +141,21 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         }
         
         if indexPath.section == 0 { // topicos por matéria
-            
-            
+            let topic = topicsArray[indexPath.row]
+            cell.titleLabel.text = topic
             
         } else if indexPath.section == 1 { // redação
             cell.titleLabel.text = "Informações sobre a redação"
+            
         } else if indexPath.section == 2 { // mais informações
             cell.titleLabel.text = "Edital completo"
+            
         } else if indexPath.section == 3 { // duração da prova
             cell.accessoryType = .none
             cell.durationLabel.isHidden = false
             cell.titleLabel.text = "Duração da prova"
-            cell.durationLabel.text = "4:30 horas" // <<<< mudar
+            cell.durationLabel.text = "\(data.durationTime) horas"
+            
         }
         
         return cell
@@ -145,11 +166,17 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         switch section {
         case 0: // topicos
-            viewController.topicWasSubmitted([""], 0)
+            let topic = topicsArray[indexPath.row]
+            if let subTopicsArray = data.topics[topic],
+               let numberOfQuestions = data.numberOfQuestionsPerTopic[topic] {
+                viewController.topicWasSubmitted(subTopicsArray,
+                                                 numberOfQuestions)
+            }
+            
         case 1: // redação
-            viewController.essayWasSubmitted(["":""])
+            viewController.essayWasSubmitted(data.essay)
         case 2: // mais informações
-            viewController.moreInformationWasSubmitted("")
+            viewController.moreInformationWasSubmitted(data.linkNotice)
         default:
             print("Other cell was selected")
         }

@@ -129,8 +129,10 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NoticeTopicTableViewCell  else {
             fatalError("The dequeued cell is not an instance of NoticeTopicTableViewCell.")
         }
+        
         cell.durationLabel.isHidden = true
         cell.accessoryType = .disclosureIndicator
+        
         if indexPath.section == 0 { // topicos por matéria
             let topic = topicsArray[indexPath.row]
             cell.titleLabel.text = topic

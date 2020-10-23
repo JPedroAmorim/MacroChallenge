@@ -51,6 +51,9 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     }
     
     func noticeWasSubmitted(_ notice: Notice) {
-        // TODO: Implementação desse método. Por enquanto, ele está fora do escopo da estória que estamos atacando.
+        if let navController = self.navigationController {
+            let overviewViewController = NoticeViewControllerImplementation(data: notice)
+            navController.pushViewController(overviewViewController, animated: true)
+        }
     }
 }

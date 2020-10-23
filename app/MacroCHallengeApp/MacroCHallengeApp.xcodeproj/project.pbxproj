@@ -52,6 +52,8 @@
 		4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */; };
 		4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */; };
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
+		547EB57F25432B6F008A3DCC /* NoticeInfoViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB57E25432B6F008A3DCC /* NoticeInfoViewImplementation.xib */; };
+		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
@@ -190,6 +192,8 @@
 		4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionImageTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionTextTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionTextTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionImageTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		547EB57E25432B6F008A3DCC /* NoticeInfoViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoViewImplementation.xib; sourceTree = "<group>"; };
+		547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		5D907BAFCE374DD3935E40D6 /* Pods-MacroCHallengeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8289D5C44965F5491BA064C9 /* Pods-MacroCHallengeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.release.xcconfig"; sourceTree = "<group>"; };
 		961D18B14BA1FA3B7D2A9236 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +315,15 @@
 				2F1FCF2D2541DA0E0040169E /* Notice.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		547EB57D25432B2F008A3DCC /* NoticeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				547EB57E25432B6F008A3DCC /* NoticeInfoViewImplementation.xib */,
+				547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */,
+			);
+			path = NoticeInfo;
 			sourceTree = "<group>";
 		};
 		879AAAF9B05EF24979DBDD6F /* Pods */ = {
@@ -438,6 +451,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				547EB57D25432B2F008A3DCC /* NoticeInfo */,
 				2F1FCF0C2541B49B0040169E /* Notice */,
 				2F9A67AD2535F219002EE9B2 /* Results */,
 				D59E82FE252E2E37007E8CBD /* Overview */,
@@ -640,9 +654,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547EB57F25432B6F008A3DCC /* NoticeInfoViewImplementation.xib in Resources */,
 				C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */,
 				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
+				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
 				2F9A67D02535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,

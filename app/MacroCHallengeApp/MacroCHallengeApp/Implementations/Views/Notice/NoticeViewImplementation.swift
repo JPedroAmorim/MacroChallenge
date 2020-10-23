@@ -17,11 +17,11 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
     
     // MARK: - Private attributes
     private var data: Notice
-    
+    private var topicsArray: [String] = []
     private let sectionHeaderTitleArray = ["Tópicos por matéria",
                                            "Redação",
                                            "Mais informações",
-                                           "Duração da prova"]
+                                           " "]
     
     // MARK: - Init methods
     required init(notice: Notice, controller: NoticeViewControllerProtocol) {
@@ -29,6 +29,7 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
+        topicsArray = setupTopicsArrayKeys()
         setupTableView()
     }
     
@@ -49,7 +50,7 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
     
     /**
      
-     Método responsável por configurar a TableView das provas.
+     Método responsável por configurar a TableView.
      
      */
     
@@ -71,7 +72,24 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
         self.testTableView.register(nib, forCellReuseIdentifier: nibName)
     }
     
-    
+    /**
+     
+     Método responsável de montar o array de seções a partir dos tópicos da prova.
+     
+     */
+    private func setupTopicsArrayKeys() -> [String]{
+        var resultArray: [String] = []
+        
+        for topic in data.topics {
+            let key = topic.key
+            
+            if !resultArray.contains(key) {
+                resultArray.append(key)
+            }
+        }
+        
+        return resultArray
+    }
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -86,7 +104,7 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         switch section{
         case 0: // tópicos por matéria
-            numberOfRows = 4 // <<<< mudar
+            numberOfRows = topicsArray.count
         case 1: // redação
             numberOfRows = 1
         case 2: // mais informações
@@ -104,16 +122,6 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         return sectionHeaderTitleArray[section] as String
     }
     
-    //    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-    //        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.init(red: 242/255,
-    //                                                                                          green: 242/255,
-    //                                                                                          blue: 247/255,
-    //                                                                                          alpha: 1.0)
-    //        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.init(red: 123/255,
-    //                                                                                   green: 123/255,
-    //                                                                                   blue: 123/255,
-    //                                                                                   alpha: 1.0)
-    //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "NoticeTopicTableViewCell"
@@ -122,19 +130,29 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
             fatalError("The dequeued cell is not an instance of NoticeTopicTableViewCell.")
         }
         
+        cell.durationLabel.isHidden = true
+        cell.accessoryType = .disclosureIndicator
+        
         if indexPath.section == 0 { // topicos por matéria
-            
-            
+            let topic = topicsArray[indexPath.row]
+            cell.titleLabel.text = topic
+            cell.selectionStyle = .gray
             
         } else if indexPath.section == 1 { // redação
             cell.titleLabel.text = "Informações sobre a redação"
+            cell.selectionStyle = .gray
+            
         } else if indexPath.section == 2 { // mais informações
             cell.titleLabel.text = "Edital completo"
+            cell.selectionStyle = .gray
+            
         } else if indexPath.section == 3 { // duração da prova
             cell.accessoryType = .none
             cell.durationLabel.isHidden = false
             cell.titleLabel.text = "Duração da prova"
-            cell.durationLabel.text = "4:30 horas" // <<<< mudar
+            cell.durationLabel.text = "\(data.durationTime) horas"
+            cell.selectionStyle = .none
+            
         }
         
         return cell
@@ -145,13 +163,37 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         switch section {
         case 0: // topicos
-            viewController.topicWasSubmitted([""], 0)
+            let topic = topicsArray[indexPath.row]
+            if let subTopicsArray = data.topics[topic],
+               let numberOfQuestions = data.numberOfQuestionsPerTopic[topic] {
+                viewController.topicWasSubmitted(subTopicsArray,
+                                                 numberOfQuestions)
+            }
+            
         case 1: // redação
-            viewController.essayWasSubmitted(["":""])
+            viewController.essayWasSubmitted(data.essay)
         case 2: // mais informações
-            viewController.moreInformationWasSubmitted("")
+            viewController.moreInformationWasSubmitted(data.linkNotice)
         default:
             print("Other cell was selected")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.contentView.backgroundColor = UIColor.init(red: 242/255,
+                                                          green: 242/255,
+                                                          blue: 247/255,
+                                                          alpha: 1.0)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 16.0
+    }
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.init(red: 242/255,
+                                            green: 242/255,
+                                            blue: 247/255,
+                                            alpha: 1.0)
     }
 }

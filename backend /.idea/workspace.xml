@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc71e0ac-de1d-4ae2-a654-b1125e718126" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b19281bcb6e0a5e9d7ebda3c06aed0ba2dc1c42" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b19281bcb6e0a5e9d7ebda3c06aed0ba2dc1c42" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/77cb4ba100abe65f4b6e6b73cb7207bfb0565a75" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/77cb4ba100abe65f4b6e6b73cb7207bfb0565a75" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +71,15 @@
       <workItem from="1601991405356" duration="1561000" />
       <workItem from="1603296979474" duration="18848000" />
       <workItem from="1603460001941" duration="280000" />
+      <workItem from="1603460850186" duration="714000" />
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1542" y="371" key="#SQL_Dialects" timestamp="1603464287601">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1542" y="371" key="#SQL_Dialects/-1920.0.1920.1080/0.0.1440.900@-1920.0.1920.1080" timestamp="1603464287601" />
     <state x="-1360" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603300471773">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>

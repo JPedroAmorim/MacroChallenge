@@ -1,0 +1,1 @@
+INSERT INTO school(id, location, name) VALUES ('teste', 'ddd');

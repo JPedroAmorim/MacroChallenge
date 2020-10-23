@@ -24,7 +24,7 @@ public class Question {
     private String text;
 
     @Nullable
-    private String year;
+    private String number;
 
     @Nullable
     private String images; // URL das imagens

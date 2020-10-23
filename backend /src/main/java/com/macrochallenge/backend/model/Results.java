@@ -31,7 +31,10 @@ public class Results {
     private String correctAnswers;
 
     @NonNull
-    private String 
+    private String rightAnswers;
+
+    @NonNull
+    private String wrongAnswers;
 
     public Results(Test test, Double totalPercentageOfCorrectAnswers, Integer totalNumberOfQuestions,
                    Integer totalNumberOfCorrectAnswers) {

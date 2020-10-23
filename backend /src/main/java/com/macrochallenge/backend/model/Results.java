@@ -27,6 +27,12 @@ public class Results {
     @NonNull
     private Integer totalNumberOfCorrectAnswers;
 
+    @NonNull
+    private String correctAnswers;
+
+    @NonNull
+    private String 
+
     public Results(Test test, Double totalPercentageOfCorrectAnswers, Integer totalNumberOfQuestions,
                    Integer totalNumberOfCorrectAnswers) {
         this.test = test;

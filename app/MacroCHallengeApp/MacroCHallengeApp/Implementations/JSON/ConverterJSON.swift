@@ -22,7 +22,6 @@ enum ErrorQuestion: String, Error {
 	case noOptionsGet = "Options is empty"
 }
 
-
 class ConverterJSON {
 
 	//	MARK: - Convert JSON to Question
@@ -32,13 +31,13 @@ class ConverterJSON {
 	How to use?
 
 	do {
-	let converterJSON = try ConverterJSON().createQuestion(json: json)
-	print(converterJSON)
+		let converterJSON = try ConverterJSON().createQuestion(json: json)
+		print(converterJSON)
 	}
-	catch let error as UserValidationError {
-	print(error.rawValue)
+		catch let error as UserValidationError {
+		print(error.rawValue)
 	} catch {
-	print("Unspecific Error")
+		print("Unspecific Error")
 	}
 	*/
 

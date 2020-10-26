@@ -31,13 +31,13 @@ class ConverterJSON {
 	How to use?
 
 	do {
-		let converterJSON = try ConverterJSON().createQuestion(json: json)
-		print(converterJSON)
+	let converterJSON = try ConverterJSON().createQuestion(json: json)
+	print(converterJSON)
 	}
-		catch let error as UserValidationError {
-		print(error.rawValue)
+	catch let error as UserValidationError {
+	print(error.rawValue)
 	} catch {
-		print("Unspecific Error")
+	print("Unspecific Error")
 	}
 	*/
 
@@ -48,7 +48,10 @@ class ConverterJSON {
 		var subtitle: String?
 		var answer: String
 		var topic: String
+
 		var imagesURLs: [String]
+		var images: [UIImage]?
+
 		var options: [String:String]
 
 		if let numberCurrent = json["number"].string {
@@ -88,8 +91,9 @@ class ConverterJSON {
 		}
 
 		if let imagesCurrent = json["images"].string {
-			if let imgURLs = handleImages(URLs: imagesCurrent) {
+			if let imgURLs = handleImagesURL(URLs: imagesCurrent) {
 				imagesURLs = imgURLs
+				images = handleUIImages(URLs: imagesURLs)
 			} else {
 				imagesURLs = []
 			}
@@ -107,12 +111,7 @@ class ConverterJSON {
 			throw ErrorQuestion.noOptions
 		}
 
-		let imagesUIImages = UIImageView()
-		imagesUIImages.loadImageUsingCache(withUrl: "https://firebasestorage.googleapis.com/v0/b/roggerapp-64174.appspot.com/o/promotions%2FBacon%20Cheddar.jpg?alt=media&token=66ec189e-06e2-4707-a583-80f4f8fd3bdd")
-
-		let question = Question(number: number, text: text, initialText: initialText, images: [imagesUIImages.image!], subtitle: subtitle, options: options, answer: answer, topic: topic)
-
-		question.updateImagesURL(imagesURL: imagesURLs)
+		let question = Question(number: number, text: text, initialText: initialText, images: images, subtitle: subtitle, options: options, answer: answer, topic: topic)
 
 		return question
 	}
@@ -139,7 +138,7 @@ class ConverterJSON {
 		}
 	}
 
-	func handleImages(URLs: String) -> [String]? {
+	func handleImagesURL(URLs: String) -> [String]? {
 		let URLsJoined = URLs.split(separator: "@")
 
 		var URLs = [String]()
@@ -153,5 +152,22 @@ class ConverterJSON {
 		} else {
 			return URLs
 		}
+	}
+
+	func handleUIImages(URLs: [String]) -> [UIImage]? {
+
+		var images = [UIImage]()
+
+		for URL in URLs {
+			if let url = NSURL(string: URL) as URL? {
+				if let imageData: NSData = NSData(contentsOf: url) {
+					if let image = UIImage(data: imageData as Data) {
+						images.append(image)
+					}
+				}
+			}
+		}
+
+		return images
 	}
 }

@@ -20,6 +20,7 @@
 		2F1FCF3B254733690040169E /* NoticeInfoViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3A254733690040169E /* NoticeInfoViewProtocol.swift */; };
 		2F1FCF40254736790040169E /* NoticeInfoViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3F254736790040169E /* NoticeInfoViewControllerProtocol.swift */; };
 		2F1FCF45254737920040169E /* NoticeInfoViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */; };
+		2F1FCF5D2547523D0040169E /* NoticeInfoViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */; };
 		2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
@@ -56,7 +57,6 @@
 		4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */; };
 		4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */; };
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
-		547EB57F25432B6F008A3DCC /* NoticeInfoViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB57E25432B6F008A3DCC /* NoticeInfoViewImplementation.xib */; };
 		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
@@ -170,6 +170,7 @@
 		2F1FCF3A254733690040169E /* NoticeInfoViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewProtocol.swift; sourceTree = "<group>"; };
 		2F1FCF3F254736790040169E /* NoticeInfoViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,7 +201,6 @@
 		4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionImageTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionTextTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionTextTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionImageTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		547EB57E25432B6F008A3DCC /* NoticeInfoViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoViewImplementation.xib; sourceTree = "<group>"; };
 		547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		5D907BAFCE374DD3935E40D6 /* Pods-MacroCHallengeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8289D5C44965F5491BA064C9 /* Pods-MacroCHallengeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -328,9 +328,9 @@
 		547EB57D25432B2F008A3DCC /* NoticeInfo */ = {
 			isa = PBXGroup;
 			children = (
-				547EB57E25432B6F008A3DCC /* NoticeInfoViewImplementation.xib */,
 				547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */,
 				2F1FCF3525472FEC0040169E /* NoticeInfoViewImplementation.swift */,
+				2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */,
 			);
 			path = NoticeInfo;
 			sourceTree = "<group>";
@@ -666,13 +666,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547EB57F25432B6F008A3DCC /* NoticeInfoViewImplementation.xib in Resources */,
 				C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */,
 				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
+				2F1FCF5D2547523D0040169E /* NoticeInfoViewImplementation.xib in Resources */,
 				2F9A67D02535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,
 				4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */,
 				4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */,

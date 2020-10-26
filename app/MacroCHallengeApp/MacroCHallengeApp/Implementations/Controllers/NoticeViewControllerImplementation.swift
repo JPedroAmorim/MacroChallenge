@@ -48,15 +48,15 @@ class NoticeViewControllerImplementation: UIViewController, NoticeViewController
     
     func topicWasSubmitted(_ topic: [String], _ numberOfQuestions: Int) {
         if let navController = self.navigationController {
-            let overviewViewController = NoticeInfoViewControllerImplementation(topic, numberOfQuestions, nil)
-            navController.pushViewController(overviewViewController, animated: true)
+            let noticeInfoViewController = NoticeInfoViewControllerImplementation(topic, numberOfQuestions, nil)
+            navController.pushViewController(noticeInfoViewController, animated: true)
         }
     }
     
     func essayWasSubmitted(_ essay: [String : String]) {
         if let navController = self.navigationController {
-            let overviewViewController = NoticeInfoViewControllerImplementation(nil, nil, essay)
-            navController.pushViewController(overviewViewController, animated: true)
+            let noticeInfoViewController = NoticeInfoViewControllerImplementation(nil, nil, essay)
+            navController.pushViewController(noticeInfoViewController, animated: true)
         }
     }
     

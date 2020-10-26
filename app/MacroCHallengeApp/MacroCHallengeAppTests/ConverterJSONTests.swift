@@ -44,22 +44,12 @@ class ConverterJSONTests: XCTestCase {
 
 		do {
 			// When
-			let resultQuestion = try testSubject.createQuestion(json: inputJSON)
+			_ = try testSubject.createQuestion(json: inputJSON)
 
-			// Then
-			let expectedOptionsDict  = ["A" : "ExampleOptionA", "B" : "ExampleOptionB", "C": "ExampleOptionC", "D" : "ExampleOptionD"]
-			let expectedResult = Question(number: "1", text: "This is a example of text", initialText: "initialText example", images: nil, subtitle: "subtitleExample", options: expectedOptionsDict, answer: "answerTest", topic: "topic")
-
-			guard let result = resultQuestion else {
-				XCTFail("Result question falhou a fazer o question")
-				return
-			}
-
-			XCTAssertEqual(result.number, expectedResult.number)
-			XCTAssertEqual(result.options, expectedResult.options)
-			XCTAssertEqual(result.images, expectedResult.images)
+			XCTFail("There is no question number in the dictionary, an error was expected")
 		}
 		catch {
+			// Then
 			XCTAssert(true)
 		}
 	}

@@ -13,26 +13,28 @@ class NoticeInfoViewImplementation: UIView, NoticeInfoViewProtocol {
     // MARK: - IBOutlets
     @IBOutlet weak var myTableView: UITableView!
     
-    
     // MARK: - Dependencies
     var viewController: NoticeInfoViewControllerProtocol
     
     // MARK: - Private attributes
     private var topic: [String]?
     private var numberOfQuestions: Int?
+    private var nameOfThetopic: String?
     private var essay: [String : String]?
     private var isTopicInformationsView: Bool = false
     private var sectionHeaderTitleArray: [String] = []
     
     // MARK: - Init methods
-    required init(_ topic: [String]?, _ numberOfQuestions: Int?, _ essay: [String : String]?, controller: NoticeInfoViewControllerProtocol) {
+    required init(_ topic: [String]?, _ numberOfQuestions: Int?, _ nameOfThetopic: String?,_ essay: [String : String]?, controller: NoticeInfoViewControllerProtocol) {
         self.topic = topic
         self.numberOfQuestions = numberOfQuestions
+        self.nameOfThetopic = nameOfThetopic
         self.essay = essay
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()
         isTopicInformationsView = determineTypeOfView(topic, numberOfQuestions, essay)
+        setNavigationtitle()
         setupSectionHeaderTitleArray()
         setupTableView()
     }
@@ -134,6 +136,22 @@ class NoticeInfoViewImplementation: UIView, NoticeInfoViewProtocol {
         
         return resultArray
     }
+    
+    /**
+     
+     Método responsável de definir o title da View na NavigationBar
+     
+     */
+    private func setNavigationtitle() {
+        if let viewController = self.viewController as? UIViewController {
+            if isTopicInformationsView {
+                guard let nameOfThetopic = self.nameOfThetopic else {return}
+                viewController.navigationItem.title = "\(nameOfThetopic)"
+            } else {
+                viewController.navigationItem.title = "Redação"
+            }
+        }
+    }
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -178,7 +196,9 @@ extension NoticeInfoViewImplementation: UITableViewDataSource, UITableViewDelega
             switch indexPath.section {
             case 0: // número de questões
                 guard let numberOfQuestions = self.numberOfQuestions else { return cell }
-                cell.textLabel?.text = "A prova contém \(String(describing: numberOfQuestions)) questões de "
+                guard let nameOfThetopic = self.nameOfThetopic else { return cell }
+
+                cell.textLabel?.text = "A prova contém \(String(describing: numberOfQuestions)) questões de \(nameOfThetopic)"
             case 1: // conteúdo programado
                 guard let topic = self.topic else { return cell }
                 cell.textLabel?.text = topic[indexPath.row]
@@ -188,7 +208,7 @@ extension NoticeInfoViewImplementation: UITableViewDataSource, UITableViewDelega
             
         } else {
             guard let essay = self.essay else { return cell }
-            cell.textLabel?.text = essay[sectionHeaderTitleArray[indexPath.row]]
+            cell.textLabel?.text = essay[sectionHeaderTitleArray[indexPath.section]]
         }
         
         return cell

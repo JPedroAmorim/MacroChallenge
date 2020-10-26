@@ -14,11 +14,12 @@ protocol NoticeInfoViewControllerProtocol {
      
      - parameter topic: um vetor com o que cai em um determinado tópico
      - parameter numberOfQuestions: número de questões de um tópico
+     - parameter nameOfThetopic: nome de um tópico
      - parameter essay: um dicionário com as informações da redação
      
      */
     
-    init(_ topic: [String]?, _ numberOfQuestions: Int?, _ essay: [String : String]?)
+    init(_ topic: [String]?, _ numberOfQuestions: Int?, _ nameOfThetopic: String?, _ essay: [String : String]?)
         
     // Dependências
     var myView: NoticeInfoViewProtocol? {get set}

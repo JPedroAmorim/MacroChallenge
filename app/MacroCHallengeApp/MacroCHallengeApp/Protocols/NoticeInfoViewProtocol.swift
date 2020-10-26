@@ -18,7 +18,7 @@ protocol NoticeInfoViewProtocol {
      - parameter controller: Um controlador do tipo NoticeInfoViewControllerProtocol
      
      */
-    init(_ topic: [String]?, _ numberOfQuestions: Int?, _ essay: [String : String]?, controller: NoticeInfoViewControllerProtocol)
+    init(_ topic: [String]?, _ numberOfQuestions: Int?,_ nameOfThetopic: String?, _ essay: [String : String]?, controller: NoticeInfoViewControllerProtocol)
     
     // Dependências
     var viewController: NoticeInfoViewControllerProtocol {get set}

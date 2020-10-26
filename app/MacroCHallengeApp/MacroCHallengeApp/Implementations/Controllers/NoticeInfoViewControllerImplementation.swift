@@ -15,12 +15,14 @@ class NoticeInfoViewControllerImplementation: UIViewController, NoticeInfoViewCo
     // MARK: - Private attributes
     private var topic: [String]?
     private var numberOfQuestions: Int?
+    private var nameOfThetopic: String?
     private var essay: [String : String]?
     
     // MARK: - Init methods
-    required init(_ topic: [String]?, _ numberOfQuestions: Int?, _ essay: [String : String]?) {
+    required init(_ topic: [String]?, _ numberOfQuestions: Int?, _ nameOfThetopic: String? ,_ essay: [String : String]?) {
         self.topic = topic
         self.numberOfQuestions = numberOfQuestions
+        self.nameOfThetopic = nameOfThetopic
         self.essay = essay
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,6 +45,7 @@ class NoticeInfoViewControllerImplementation: UIViewController, NoticeInfoViewCo
     private func setupDefaultView() {
         let defaultView = NoticeInfoViewImplementation(self.topic,
                                                        self.numberOfQuestions,
+                                                       self.nameOfThetopic,
                                                        self.essay,
                                                        controller: self)
         self.myView = defaultView

@@ -26,7 +26,7 @@ protocol NoticeViewControllerProtocol {
     
      
      */
-    func topicWasSubmitted(_ topic: [String], _ numberOfQuestions: Int)
+    func topicWasSubmitted(_ topic: [String], _ numberOfQuestions: Int, _ nameOfThetopic: String)
     
     /**
      

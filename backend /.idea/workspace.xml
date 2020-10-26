@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc71e0ac-de1d-4ae2-a654-b1125e718126" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/TestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/interfaces/TestServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Service/RequestSenderImplementation.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Service/RequestSenderImplementation.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/ResultsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/ResultsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/ResultsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/ResultsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/SchoolRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/TestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/repositories/TestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/ResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/ResultsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/TestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

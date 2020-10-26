@@ -7,11 +7,10 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class RequestSenderImplementation: RequestSenderProtocol {
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: ([Question]) -> Void, onFailure: (String) -> Void) {
-        <#code#>
+        
     }
-    
-    private func sendRequest
 }

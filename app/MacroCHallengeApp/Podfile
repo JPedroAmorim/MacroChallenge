@@ -8,6 +8,7 @@ target 'MacroCHallengeApp' do
   # Pods for MacroCHallengeApp
   pod 'Charts'
   pod 'TinyConstraints'
+  pod 'Alamofire', '~> 5.2'
 
   target 'MacroCHallengeAppTests' do
     inherit! :search_paths

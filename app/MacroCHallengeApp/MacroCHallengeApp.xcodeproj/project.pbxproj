@@ -131,6 +131,12 @@
 		D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603372547435C00B96DA4 /* TestHeader.swift */; };
 		D5E603392547435C00B96DA4 /* TestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603372547435C00B96DA4 /* TestHeader.swift */; };
 		D5E6033A2547435C00B96DA4 /* TestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603372547435C00B96DA4 /* TestHeader.swift */; };
+		D5E6033F2547468100B96DA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6033E2547468100B96DA4 /* Constants.swift */; };
+		D5E603402547468100B96DA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6033E2547468100B96DA4 /* Constants.swift */; };
+		D5E603412547468100B96DA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6033E2547468100B96DA4 /* Constants.swift */; };
+		D5E603492547472700B96DA4 /* RequestSenderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */; };
+		D5E6034A2547472700B96DA4 /* RequestSenderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */; };
+		D5E6034B2547472700B96DA4 /* RequestSenderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */; };
 		D5F4C98C25377B94003B568A /* QuestionViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BC0252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift */; };
 		D5F4C99025377B9A003B568A /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
 		D5F4C99425377BB5003B568A /* QuestionViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BB6252CA6AB0015DFE7 /* QuestionViewImplementation.swift */; };
@@ -251,6 +257,8 @@
 		D5BCC57F252E271200E181CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D5E603302547411800B96DA4 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		D5E603372547435C00B96DA4 /* TestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHeader.swift; sourceTree = "<group>"; };
+		D5E6033E2547468100B96DA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementation.swift; sourceTree = "<group>"; };
 		FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroCHallengeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -339,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				D5BCC57F252E271200E181CB /* Extensions.swift */,
+				D5E6033E2547468100B96DA4 /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */,
+				D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -823,6 +833,7 @@
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */,
+				D5E603492547472700B96DA4 /* RequestSenderImplementation.swift in Sources */,
 				2F1FCF242541C8250040169E /* NoticeViewControllerProtocol.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
@@ -853,6 +864,7 @@
 				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */,
 				D565EEEA252B813700426648 /* SceneDelegate.swift in Sources */,
+				D5E6033F2547468100B96DA4 /* Constants.swift in Sources */,
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */,
@@ -881,6 +893,7 @@
 				D5F4C99025377B9A003B568A /* HorizontalChartView.swift in Sources */,
 				D5F4C9A425377BE0003B568A /* QuestionButtonsTableViewCell.swift in Sources */,
 				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
+				D5E603402547468100B96DA4 /* Constants.swift in Sources */,
 				D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				2F9A67CF2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
@@ -908,6 +921,7 @@
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
 				D59A376D2535DF8100AD14F1 /* ResultsData.swift in Sources */,
+				D5E6034A2547472700B96DA4 /* RequestSenderImplementation.swift in Sources */,
 				D5544703252F51F2001793E0 /* SchoolsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -919,6 +933,8 @@
 				D5E6033A2547435C00B96DA4 /* TestHeader.swift in Sources */,
 				D5E603332547411800B96DA4 /* RequestSender.swift in Sources */,
 				D565EF0A252B813A00426648 /* MacroCHallengeAppUITests.swift in Sources */,
+				D5E6034B2547472700B96DA4 /* RequestSenderImplementation.swift in Sources */,
+				D5E603412547468100B96DA4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

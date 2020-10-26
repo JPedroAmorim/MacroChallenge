@@ -107,7 +107,10 @@ class ConverterJSON {
 			throw ErrorQuestion.noOptions
 		}
 
-		let question = Question(number: number, text: text, initialText: initialText, images: nil, subtitle: subtitle, options: options, answer: answer, topic: topic)
+		let imagesUIImages = UIImageView()
+		imagesUIImages.loadImageUsingCache(withUrl: "https://firebasestorage.googleapis.com/v0/b/roggerapp-64174.appspot.com/o/promotions%2FBacon%20Cheddar.jpg?alt=media&token=66ec189e-06e2-4707-a583-80f4f8fd3bdd")
+
+		let question = Question(number: number, text: text, initialText: initialText, images: [imagesUIImages.image!], subtitle: subtitle, options: options, answer: answer, topic: topic)
 
 		question.updateImagesURL(imagesURL: imagesURLs)
 

@@ -36,6 +36,29 @@ class ConverterJSONTests: XCTestCase {
 		XCTAssertEqual(result.images, expectedResult.images)
     }
 
+	func testCreateQuestion_whenGivenInvalidJSON_shouldGiveValidQuestion() throws {
+
+		// Given
+		let inputJSON = createInvalidMockJSON()
+		let testSubject = ConverterJSON()
+
+		// When
+		let resultQuestion = try testSubject.createQuestion(json: inputJSON)
+
+		// Then
+		let expectedOptionsDict  = ["A" : "ExampleOptionA@B:ExampleOptionB@C:ExampleOptionC@D:ExampleOptionD"]
+		let expectedResult = Question(number: "1", text: "This is a example of text", initialText: nil, images: nil, subtitle: "subtitleExample", options: expectedOptionsDict, answer: "answerTest", topic: "topic")
+
+		guard let result = resultQuestion else {
+			XCTFail("Result question falhou a fazer o question")
+			return
+		}
+
+		XCTAssertEqual(result.number, expectedResult.number)
+		XCTAssertEqual(result.options, expectedResult.options)
+		XCTAssertEqual(result.images, expectedResult.images)
+	}
+
     func testPerformanceExample() throws {
         self.measure {
             // Put the code you want to measure the time of here.
@@ -51,6 +74,22 @@ class ConverterJSONTests: XCTestCase {
 			"images" : "URL1@URL2@URL3",
 			"subtitle" : "subtitleExample",
 			"options" : "A:ExampleOptionA#@B:ExampleOptionB#@C:ExampleOptionC#@D:ExampleOptionD",
+			"answer" : "answerTest",
+			"topic" : "topic",
+		])
+
+		return json
+	}
+
+	func createInvalidMockJSON() -> JSON {
+
+		let json: JSON = JSON([
+			"number" : "1",
+			"text" : "This is a example of text",
+			"initialText" : "initialText example",
+			"images" : "URL1@URL2@URL3",
+			"subtitle" : "subtitleExample",
+			"options" : "A:ExampleOptionA@B:ExampleOptionB@C:ExampleOptionC@D:ExampleOptionD",
 			"answer" : "answerTest",
 			"topic" : "topic",
 		])

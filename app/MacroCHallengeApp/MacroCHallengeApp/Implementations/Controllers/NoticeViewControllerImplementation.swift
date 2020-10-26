@@ -47,17 +47,17 @@ class NoticeViewControllerImplementation: UIViewController, NoticeViewController
     // MARK: - NoticeViewControllerProtocol methods
     
     func topicWasSubmitted(_ topic: [String], _ numberOfQuestions: Int) {
-        //        if let navController = self.navigationController {
-        //            let overviewViewController = OverviewViewControllerImplementation(data: test)
-        //            navController.pushViewController(overviewViewController, animated: true)
-        //        }
+        if let navController = self.navigationController {
+            let overviewViewController = NoticeInfoViewControllerImplementation(topic, numberOfQuestions, nil)
+            navController.pushViewController(overviewViewController, animated: true)
+        }
     }
     
     func essayWasSubmitted(_ essay: [String : String]) {
-//        if let navController = self.navigationController {
-//            let overviewViewController = OverviewViewControllerImplementation(data: test)
-//            navController.pushViewController(overviewViewController, animated: true)
-//        }
+        if let navController = self.navigationController {
+            let overviewViewController = NoticeInfoViewControllerImplementation(nil, nil, essay)
+            navController.pushViewController(overviewViewController, animated: true)
+        }
     }
     
     func moreInformationWasSubmitted(_ linkNotice: String) {

@@ -8,6 +8,5 @@
 import Foundation
 
 protocol RequestSenderProtocol {
-    func sendTestsHeaderForSchoolRequest(schoolName: String, completion: ([TestHeader]) -> Void, onFailure: (String) -> Void)
-    func sendQuestionsForTestRequest(testName: String, testYear: String, completion: (Test) -> Void, onFailure: (String) -> Void)
+    func getQuestionsForTestRequest(testName: String, testYear: String, completion: ([Question]) -> Void, onFailure: (String) -> Void)
 }

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc71e0ac-de1d-4ae2-a654-b1125e718126" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +75,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1542" y="371" key="#SQL_Dialects" timestamp="1603464287601">
+    <state x="-1542" y="371" key="#SQL_Dialects" timestamp="1603729512750">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1542" y="371" key="#SQL_Dialects/-1920.0.1920.1080/0.0.1440.900@-1920.0.1920.1080" timestamp="1603464287601" />
+    <state x="-1542" y="371" key="#SQL_Dialects/-1920.0.1920.1080/0.0.1440.900@-1920.0.1920.1080" timestamp="1603729512750" />
     <state x="-1360" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603300471773">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>

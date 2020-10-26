@@ -21,6 +21,7 @@ public class Question {
     private Test test;
 
     @NonNull
+    @Column(length = 2000)
     private String text;
 
     @Nullable
@@ -33,6 +34,7 @@ public class Question {
     private String subtitle;
 
     @NonNull
+    @Column(length = 2000)
     private String options;
 
     @NonNull

@@ -26,7 +26,8 @@ public class ResultsService implements ResultsServiceInterface {
 
     @Override
     public void addNewResult(ResultsDTO resultsDTO) {
-        Optional<Test> testForResultOptional = testRepository.findByName(resultsDTO.getTestName());
+        Optional<Test> testForResultOptional = testRepository.findByNameAndYear(resultsDTO.getTestName(),
+                resultsDTO.getTestYear());
 
         if (!testForResultOptional.isPresent()) {
             throw new NotFoundException("Prova não encontrada");
@@ -35,7 +36,8 @@ public class ResultsService implements ResultsServiceInterface {
         Test testForResult = testForResultOptional.get();
 
         Results resultEntity = new Results(testForResult, resultsDTO.getTotalPercentageOfCorrectAnswers(),
-                resultsDTO.getTotalNumberOfQuestions(), resultsDTO.getTotalNumberOfCorrectAnswers());
+                resultsDTO.getTotalNumberOfQuestions(), resultsDTO.getTotalNumberOfCorrectAnswers(),
+                resultsDTO.getRightAnswer(), resultsDTO.getWrongAnswer());
 
         resultsRepository.save(resultEntity);
     }

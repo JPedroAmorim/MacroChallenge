@@ -24,6 +24,10 @@ public class Question {
     @Column(length = 2000)
     private String text;
 
+    @NonNull
+    @Column(length = 2000)
+    private String initialText;
+
     @Nullable
     private String number;
 

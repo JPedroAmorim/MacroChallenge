@@ -18,7 +18,7 @@ public class ResultsController {
 
     @Autowired
     public ResultsController(ResultsServiceInterface resultsService) {
-        this.resultsService= resultsService;
+        this.resultsService = resultsService;
     }
 
     @PostMapping

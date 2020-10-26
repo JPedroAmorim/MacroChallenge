@@ -9,6 +9,9 @@ public class ResultsDTO {
     private String testName;
 
     @NonNull
+    private String testYear;
+
+    @NonNull
     private Double totalPercentageOfCorrectAnswers;
 
     @NonNull
@@ -16,4 +19,10 @@ public class ResultsDTO {
 
     @NonNull
     private Integer totalNumberOfCorrectAnswers;
+
+    @NonNull
+    private String rightAnswer;
+
+    @NonNull
+    private String wrongAnswer;
 }

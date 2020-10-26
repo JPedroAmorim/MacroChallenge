@@ -20,13 +20,13 @@ class ConverterJSONTests: XCTestCase {
 		let testSubject = ConverterJSON()
 
 		// When
-		let resultQuestion = testSubject.createQuestion(json: inputJSON)
+		let resultQuestion = try testSubject.createQuestion(json: inputJSON)
 
 		// Then
 		let expectedOptionsDict  = ["A" : "ExampleOptionA", "B" : "ExampleOptionB", "C": "ExampleOptionC", "D" : "ExampleOptionD"]
 		let expectedResult = Question(number: "1", text: "This is a example of text", initialText: "initialText example", images: nil, subtitle: "subtitleExample", options: expectedOptionsDict, answer: "answerTest", topic: "topic")
 
-		guard let result = resultQuestion as? Question else {
+		guard let result = resultQuestion else {
 			XCTFail("Result question falhou a fazer o question")
 			return
 		}
@@ -50,13 +50,11 @@ class ConverterJSONTests: XCTestCase {
 			"initialText" : "initialText example",
 			"images" : "URL1@URL2@URL3",
 			"subtitle" : "subtitleExample",
-			"options" : "A#ExampleOptionA@B#ExampleOptionB@C#ExampleOptionC@D#ExampleOptionD",
+			"options" : "A:ExampleOptionA#@B:ExampleOptionB#@C:ExampleOptionC#@D:ExampleOptionD",
 			"answer" : "answerTest",
 			"topic" : "topic",
-
 		])
 
 		return json
 	}
-
 }

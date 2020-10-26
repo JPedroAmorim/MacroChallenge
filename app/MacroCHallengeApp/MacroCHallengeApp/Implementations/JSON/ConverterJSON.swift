@@ -116,16 +116,16 @@ class ConverterJSON {
 
 
 	func handleOptions(text: String) -> [String:String]? {
-		let textJoined = text.split(separator: "@")
+		let textJoined = text.components(separatedBy: "#@")
 
 		var options = [String : String]()
 
 		for option in textJoined  {
-			let optionJoined = option.split(separator: "#")
+			let optionText = String(option.dropFirst(2))
 
-			if optionJoined.count == 2 {
-				options.updateValue(String(optionJoined[1]), forKey: String(optionJoined[0]))
-			}
+			let optionLetter = String(option.prefix(1))
+
+			options.updateValue(optionText, forKey: optionLetter)
 		}
 
 		if options.isEmpty {

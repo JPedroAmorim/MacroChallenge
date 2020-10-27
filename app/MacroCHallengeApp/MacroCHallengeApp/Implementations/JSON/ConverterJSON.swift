@@ -41,8 +41,27 @@ class ConverterJSON {
 	print("Unspecific Error")
 	}
 	*/
+    
+    
+    
+    func produceQuestionArray(jsonArray: [JSON]) -> [Question] {
+        var resultArray: [Question] = []
+        
+        for jsonEntry in jsonArray {
+            do {
+                let question = try createQuestion(json: jsonEntry)
+                resultArray.append(question)
+            } catch is ErrorQuestion {
+                continue
+            } catch {
+                continue
+            }
+        }
+        
+        return resultArray
+    }
 
-	func createQuestion(json: JSON) throws -> Question? {
+	func createQuestion(json: JSON) throws -> Question {
 		var number: String
 		var text: String
 		var initialText: String?

@@ -17,7 +17,24 @@ class RequestSenderImplementationTests: XCTestCase {
     
     // Nota: Para esse teste funcionar, o backend precisa estar ativo
     func testGetQuestionsForTestRequest_WhenBackendIsUp_shouldReturnQuestions() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+       // Given
+        var questionsFromRequest: [Question]?
+        var errorString: String?
+        
+        let completionHandler: ([Question]) -> Void = { questions in
+            questionsFromRequest = questions
+        }
+        
+        let failureHandler: (String) -> Void = {error in
+            errorString = error
+        }
+        
+        // When
+        testSubject.getQuestionsForTestRequest(testName: "cti2019", testYear: "2019", completion: completionHandler, onFailure: failureHandler)
+        
+        
+        // Then
+        XCTAssertNil(errorString)
+        XCTAssertNotNil(questionsFromRequest)
     }
 }

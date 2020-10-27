@@ -39,10 +39,16 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "MacroCHallengeAppTests">
+               </Test>
+               <Test
                   Identifier = "MockSchoolsImplementationTests">
                </Test>
                <Test
                   Identifier = "OverviewViewControllerImplementation">
+               </Test>
+               <Test
+                  Identifier = "ResultsControllerImplementationTests">
                </Test>
             </SkippedTests>
          </TestableReference>
@@ -55,6 +61,11 @@
                BlueprintName = "MacroCHallengeAppUITests"
                ReferencedContainer = "container:MacroCHallengeApp.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MacroCHallengeAppUITests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

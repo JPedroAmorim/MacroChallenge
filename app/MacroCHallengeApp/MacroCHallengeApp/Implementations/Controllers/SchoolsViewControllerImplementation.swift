@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControllerProtocol {
     // MARK: - Dependencies

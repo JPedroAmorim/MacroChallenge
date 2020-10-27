@@ -167,7 +167,8 @@ extension NoticeViewImplementation: UITableViewDataSource, UITableViewDelegate {
             if let subTopicsArray = data.topics[topic],
                let numberOfQuestions = data.numberOfQuestionsPerTopic[topic] {
                 viewController.topicWasSubmitted(subTopicsArray,
-                                                 numberOfQuestions)
+                                                 numberOfQuestions,
+                                                 topic)
             }
             
         case 1: // redação

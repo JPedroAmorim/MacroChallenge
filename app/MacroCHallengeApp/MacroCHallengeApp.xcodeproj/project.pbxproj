@@ -16,6 +16,11 @@
 		2F1FCF242541C8250040169E /* NoticeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */; };
 		2F1FCF292541CFB20040169E /* NoticeViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */; };
 		2F1FCF2E2541DA0E0040169E /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF2D2541DA0E0040169E /* Notice.swift */; };
+		2F1FCF3625472FEC0040169E /* NoticeInfoViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3525472FEC0040169E /* NoticeInfoViewImplementation.swift */; };
+		2F1FCF3B254733690040169E /* NoticeInfoViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3A254733690040169E /* NoticeInfoViewProtocol.swift */; };
+		2F1FCF40254736790040169E /* NoticeInfoViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3F254736790040169E /* NoticeInfoViewControllerProtocol.swift */; };
+		2F1FCF45254737920040169E /* NoticeInfoViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */; };
+		2F1FCF5D2547523D0040169E /* NoticeInfoViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */; };
 		2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
@@ -52,6 +57,7 @@
 		4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */; };
 		4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */; };
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
+		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
@@ -193,6 +199,11 @@
 		2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2F1FCF2D2541DA0E0040169E /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		2F1FCF3525472FEC0040169E /* NoticeInfoViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewImplementation.swift; sourceTree = "<group>"; };
+		2F1FCF3A254733690040169E /* NoticeInfoViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewProtocol.swift; sourceTree = "<group>"; };
+		2F1FCF3F254736790040169E /* NoticeInfoViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -223,6 +234,7 @@
 		4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionImageTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionTextTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionTextTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionImageTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		5D907BAFCE374DD3935E40D6 /* Pods-MacroCHallengeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8289D5C44965F5491BA064C9 /* Pods-MacroCHallengeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.release.xcconfig"; sourceTree = "<group>"; };
 		961D18B14BA1FA3B7D2A9236 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -351,6 +363,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		547EB57D25432B2F008A3DCC /* NoticeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */,
+				2F1FCF3525472FEC0040169E /* NoticeInfoViewImplementation.swift */,
+				2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */,
+			);
+			path = NoticeInfo;
+			sourceTree = "<group>";
+		};
 		879AAAF9B05EF24979DBDD6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +478,8 @@
 				2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */,
 				2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */,
 				D5E603302547411800B96DA4 /* RequestSender.swift */,
+				2F1FCF3A254733690040169E /* NoticeInfoViewProtocol.swift */,
+				2F1FCF3F254736790040169E /* NoticeInfoViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -480,6 +504,7 @@
 				4FFF6BC0252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift */,
 				D59A37772535F1E300AD14F1 /* ResultsViewController.swift */,
 				2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */,
+				2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -487,6 +512,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				547EB57D25432B2F008A3DCC /* NoticeInfo */,
 				2F1FCF0C2541B49B0040169E /* Notice */,
 				2F9A67AD2535F219002EE9B2 /* Results */,
 				D59E82FE252E2E37007E8CBD /* Overview */,
@@ -692,8 +718,10 @@
 				C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */,
 				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
+				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
+				2F1FCF5D2547523D0040169E /* NoticeInfoViewImplementation.xib in Resources */,
 				2F9A67D02535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,
 				4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */,
 				4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */,
@@ -848,6 +876,7 @@
 			files = (
 				4FFF6BC1252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift in Sources */,
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
+				2F1FCF3B254733690040169E /* NoticeInfoViewProtocol.swift in Sources */,
 				D59A37812535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */,
 				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
@@ -859,6 +888,7 @@
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,
 				D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
+				2F1FCF3625472FEC0040169E /* NoticeInfoViewImplementation.swift in Sources */,
 				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
@@ -884,11 +914,13 @@
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				2F1FCF2E2541DA0E0040169E /* Notice.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
+				2F1FCF40254736790040169E /* NoticeInfoViewControllerProtocol.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D5E603312547411800B96DA4 /* RequestSender.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
 				2F9A67E0253780A5002EE9B2 /* ProgressBarTableViewCell.swift in Sources */,
 				4FFF6BB7252CA6AB0015DFE7 /* QuestionViewImplementation.swift in Sources */,
+				2F1FCF45254737920040169E /* NoticeInfoViewControllerImplementation.swift in Sources */,
 				4FAC80EA25377538006F947A /* QuestionHeaderTableViewCell.swift in Sources */,
 				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */,

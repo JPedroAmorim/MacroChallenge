@@ -101,6 +101,7 @@
 		D527685D252CB51E003F0C70 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		D5276861252CB521003F0C70 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
 		D5276865252CB524003F0C70 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
+		D539856D25486A0F00EB09DA /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539856C25486A0F00EB09DA /* RequestSenderImplementationTests.swift */; };
 		D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55446F8252F4FE2001793E0 /* ResultsControllerImplementationTests.swift */; };
 		D5544703252F51F2001793E0 /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */; };
@@ -158,8 +159,6 @@
 		D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */; };
 		D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
 		D59E830A252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
-		D5B5483825485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */; };
-		D5B5483925485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */; };
 		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
@@ -263,6 +262,7 @@
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
 		C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionCell.swift; sourceTree = "<group>"; };
 		D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSchoolsImplementationTests.swift; sourceTree = "<group>"; };
+		D539856C25486A0F00EB09DA /* RequestSenderImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementationTests.swift; sourceTree = "<group>"; };
 		D55446F8252F4FE2001793E0 /* ResultsControllerImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsControllerImplementationTests.swift; sourceTree = "<group>"; };
 		D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewControllerImplementation.swift; sourceTree = "<group>"; };
 		D565EEE4252B813700426648 /* MacroCHallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroCHallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,7 +301,6 @@
 		D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewImplementation.swift; sourceTree = "<group>"; };
 		D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewViewImplementation.xib; sourceTree = "<group>"; };
-		D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementationTests.swift; sourceTree = "<group>"; };
 		D5BCC57F252E271200E181CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D5E603302547411800B96DA4 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		D5E603372547435C00B96DA4 /* TestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHeader.swift; sourceTree = "<group>"; };
@@ -459,7 +458,7 @@
 		D565EEFD252B813A00426648 /* MacroCHallengeAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */,
+				D539856C25486A0F00EB09DA /* RequestSenderImplementationTests.swift */,
 				D55446F8252F4FE2001793E0 /* ResultsControllerImplementationTests.swift */,
 				D565EEFE252B813A00426648 /* MacroCHallengeAppTests.swift */,
 				D565EF00252B813A00426648 /* Info.plist */,
@@ -950,7 +949,6 @@
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */,
-				D5B5483825485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */,
 				2F9A67CE2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
 				D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */,
@@ -961,7 +959,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B5483925485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */,
 				D5E603392547435C00B96DA4 /* TestHeader.swift in Sources */,
 				D5F4C99425377BB5003B568A /* QuestionViewImplementation.swift in Sources */,
 				C465A14E2543204B00805BC7 /* QuestionHeaderTableViewCell.swift in Sources */,
@@ -1001,6 +998,7 @@
 				D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
+				D539856D25486A0F00EB09DA /* RequestSenderImplementationTests.swift in Sources */,
 				D59A37792535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
 				D5F4C99825377BD7003B568A /* QuestionOptionTableViewCell.swift in Sources */,
 				D59E82F4252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,

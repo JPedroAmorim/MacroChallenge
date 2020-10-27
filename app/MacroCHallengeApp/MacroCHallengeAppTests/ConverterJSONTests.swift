@@ -54,12 +54,6 @@ class ConverterJSONTests: XCTestCase {
 		}
 	}
 
-	func testPerformanceExample() throws {
-		self.measure {
-			// Put the code you want to measure the time of here.
-		}
-	}
-
 	func createValidMockJSON() -> JSON {
 
 		let json: JSON = JSON([

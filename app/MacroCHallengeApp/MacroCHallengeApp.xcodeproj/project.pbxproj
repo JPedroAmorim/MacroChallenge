@@ -155,6 +155,8 @@
 		D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */; };
 		D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
 		D59E830A252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
+		D5B5483825485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */; };
+		D5B5483925485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */; };
 		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
@@ -295,6 +297,7 @@
 		D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewImplementation.swift; sourceTree = "<group>"; };
 		D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewViewImplementation.xib; sourceTree = "<group>"; };
+		D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementationTests.swift; sourceTree = "<group>"; };
 		D5BCC57F252E271200E181CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D5E603302547411800B96DA4 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		D5E603372547435C00B96DA4 /* TestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHeader.swift; sourceTree = "<group>"; };
@@ -452,6 +455,7 @@
 		D565EEFD252B813A00426648 /* MacroCHallengeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5B5483725485A6000C94AA9 /* RequestSenderImplementationTests.swift */,
 				D55446F8252F4FE2001793E0 /* ResultsControllerImplementationTests.swift */,
 				D565EEFE252B813A00426648 /* MacroCHallengeAppTests.swift */,
 				D565EF00252B813A00426648 /* Info.plist */,
@@ -940,6 +944,7 @@
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */,
+				D5B5483825485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */,
 				2F9A67CE2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
 				D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */,
@@ -950,6 +955,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B5483925485A6000C94AA9 /* RequestSenderImplementationTests.swift in Sources */,
 				D5E603392547435C00B96DA4 /* TestHeader.swift in Sources */,
 				D5F4C99425377BB5003B568A /* QuestionViewImplementation.swift in Sources */,
 				C465A14E2543204B00805BC7 /* QuestionHeaderTableViewCell.swift in Sources */,

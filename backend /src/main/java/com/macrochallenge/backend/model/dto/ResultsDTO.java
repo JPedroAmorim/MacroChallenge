@@ -21,8 +21,8 @@ public class ResultsDTO {
     private Integer totalNumberOfCorrectAnswers;
 
     @NonNull
-    private String rightAnswer;
+    private String rightAnswers;
 
     @NonNull
-    private String wrongAnswer;
+    private String wrongAnswers;
 }

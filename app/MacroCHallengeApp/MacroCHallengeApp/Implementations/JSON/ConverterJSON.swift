@@ -11,25 +11,27 @@ import Foundation
 //	MARK: - Error Handling
 enum ErrorQuestion: String, Error {
 
-	case noNumber = "Number is nil"
-	case noText = "Text is nil"
-	case noInitialText = "InitialText is nil"
-	case noSubtitle = "Subtitle is nil"
-	case noAnswer = "Answer is nil"
-	case noTopic = "Topic is nil"
-	case noImagesURLs = "ImagesURLs is nil"
-	case noOptions = "Options is nil"
-	case noOptionsGet = "Options is empty"
-	case noImagesAvailable = "Unable to download all images"
+	case noNumber = "Não foi possível obter o número da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noText = "Não foi possível obter o texto da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noInitialText = "Não foi possível obter o texto  inicial da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noSubtitle = "Não foi possível obter o subtitulo da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noAnswer = "Não foi possível obter a resposta da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noTopic = "Não foi possível obter o tópico da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noImagesURLs = "Não foi possível obter a URL das imagens da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noOptions = "Não foi possível obter as alternativas da questão para criar objeto tipo Question, confira ConverterJSON"
+	case noOptionsGet = "Não foi  possível converter string de alternativas para criar objeto tipo Question, confira ConverterJSON"
+	case noImagesAvailable = "Não foi possível executar download das imagens para criar objeto tipo Question, confira ConverterJSON"
 }
 
-class ConverterJSON {
+class ConverterJSON: ConverterJSONProtocol {
 
 	//	MARK: - Convert JSON to Question
 	/**
-	Método responsável por converter um objeto JSON em um objeto da  classe Question
+	Função responsável por converter um objeto JSON em um objeto da  classe Question
 
-	How to use?
+	- parameter json: Objeto JSON com dados da questão a ser convertida para objeto Question
+
+	Como usar:
 
 	do {
 	let converterJSON = try ConverterJSON().createQuestion(json: json)
@@ -40,8 +42,8 @@ class ConverterJSON {
 	} catch {
 	print("Unspecific Error")
 	}
-	*/
 
+	*/
 	func createQuestion(json: JSON) throws -> Question? {
 		var number: String
 		var text: String
@@ -118,8 +120,14 @@ class ConverterJSON {
 		return question
 	}
 
+	/**
 
-	func handleOptions(text: String) -> [String:String]? {
+	Função responsável por converter String de alternativas recebida pelo json em dicionário com [ alternativa :  texto ]
+
+	- parameter text: String única contendo as alternativas, utilizando como separador o símbolo "#@"
+
+	*/
+	private func handleOptions(text: String) -> [String:String]? {
 		let textJoined = text.components(separatedBy: "#@")
 
 		var options = [String : String]()
@@ -140,7 +148,14 @@ class ConverterJSON {
 		}
 	}
 
-	func handleImagesURL(URLs: String) -> [String]? {
+	/**
+
+	Função responsável por converter String de URLs recebida pelo json em vetor com URLs válidas
+
+	- parameter URLs: String única contendo as URLs de imagem, utilizando como separador o símbolo "@"
+
+	*/
+	private func handleImagesURL(URLs: String) -> [String]? {
 		let URLsJoined = URLs.split(separator: "@")
 
 		var URLs = [String]()
@@ -156,7 +171,14 @@ class ConverterJSON {
 		}
 	}
 
-	func handleUIImages(URLs: [String]) -> [UIImage] {
+	/**
+
+	Função responsável por converter vetor de String contendo URL válida em vetor com imagens da questão
+
+	- parameter URLs: Vetor de Strings contendo URLs
+
+	*/
+	private func handleUIImages(URLs: [String]) -> [UIImage] {
 
 		var images = [UIImage]()
 

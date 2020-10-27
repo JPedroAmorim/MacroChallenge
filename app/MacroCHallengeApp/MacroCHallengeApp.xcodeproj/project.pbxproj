@@ -46,6 +46,7 @@
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
+		C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
 		C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436ACA9253A337100B18303 /* AnswersCollectionView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
@@ -207,6 +208,7 @@
 		AACB2A94AF164BB3EEB16172 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1018FB61C603ED420A9B2D7 /* Pods-MacroCHallengeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONProtocol.swift; sourceTree = "<group>"; };
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 				D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */,
 				D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */,
 				D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */,
+				C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */,
 				D565EF43252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
+				C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
 				2F9A67E0253780A5002EE9B2 /* ProgressBarTableViewCell.swift in Sources */,

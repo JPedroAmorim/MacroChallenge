@@ -117,10 +117,10 @@ class ConverterJSON: ConverterJSONProtocol {
 
 		for option in textJoined  {
 
-			if let uu = option.components(separatedBy: "||").last {
-				let optionText = String(uu.dropFirst(2))
+			if let optionString = option.components(separatedBy: "||").last {
+				let optionText = String(optionString.dropFirst(2))
 
-				let optionLetter = String(uu.prefix(1))
+				let optionLetter = String(optionString.prefix(1))
 
 				options.updateValue(optionText, forKey: optionLetter)
 			} else {

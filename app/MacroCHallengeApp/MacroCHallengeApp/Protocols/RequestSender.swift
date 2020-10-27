@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RequestSenderProtocol {
-    func getQuestionsForTestRequest(testName: String, testYear: String, completion: ([Question]) -> Void, onFailure: (String) -> Void)
+    func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]) -> Void, onFailure: @escaping (String) -> Void)
 }

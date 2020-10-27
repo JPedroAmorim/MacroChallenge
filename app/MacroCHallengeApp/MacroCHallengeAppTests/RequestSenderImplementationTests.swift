@@ -18,23 +18,23 @@ class RequestSenderImplementationTests: XCTestCase {
     // Nota: Para esse teste funcionar, o backend precisa estar ativo
     func testGetQuestionsForTestRequest_WhenBackendIsUp_shouldReturnQuestions() throws {
        // Given
-        var questionsFromRequest: [Question]?
-        var errorString: String?
+        let responseExpectation = XCTestExpectation(description: "Questions were retrieved from backend and properly parsed")
         
         let completionHandler: ([Question]) -> Void = { questions in
-            questionsFromRequest = questions
+            
+            XCTAssert(questions.count > 0)
+            
+            responseExpectation.fulfill()
         }
         
-        let failureHandler: (String) -> Void = {error in
-            errorString = error
+        let failureHandler: (String) -> Void = { error in
+            XCTFail("Error ocurred with message \(error)")
         }
         
         // When
         testSubject.getQuestionsForTestRequest(testName: "cti2019", testYear: "2019", completion: completionHandler, onFailure: failureHandler)
-        
-        
+
         // Then
-        XCTAssertNil(errorString)
-        XCTAssertNotNil(questionsFromRequest)
+        wait(for: [responseExpectation], timeout: 10.0)
     }
 }

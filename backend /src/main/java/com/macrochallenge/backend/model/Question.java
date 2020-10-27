@@ -1,6 +1,7 @@
 package com.macrochallenge.backend.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -18,6 +19,7 @@ public class Question {
     private Integer id;
 
     @ManyToOne
+    @JsonIgnore
     private Test test;
 
     @NonNull

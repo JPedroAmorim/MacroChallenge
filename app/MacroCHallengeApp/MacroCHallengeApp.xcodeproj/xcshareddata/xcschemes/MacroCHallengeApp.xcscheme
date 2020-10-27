@@ -55,21 +55,6 @@
                </Test>
             </SkippedTests>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D565EF04252B813A00426648"
-               BuildableName = "MacroCHallengeAppUITests.xctest"
-               BlueprintName = "MacroCHallengeAppUITests"
-               ReferencedContainer = "container:MacroCHallengeApp.xcodeproj">
-            </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "MacroCHallengeAppUITests">
-               </Test>
-            </SkippedTests>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

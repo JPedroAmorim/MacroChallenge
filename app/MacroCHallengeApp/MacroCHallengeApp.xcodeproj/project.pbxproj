@@ -107,6 +107,23 @@
 		D5276861252CB521003F0C70 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
 		D5276865252CB524003F0C70 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
 		D539856D25486A0F00EB09DA /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539856C25486A0F00EB09DA /* RequestSenderImplementationTests.swift */; };
+		D539857425486FED00EB09DA /* SchoolViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586B571252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift */; };
+		D53985782548700200EB09DA /* NoticeViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */; };
+		D539857C2548700800EB09DA /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF2D2541DA0E0040169E /* Notice.swift */; };
+		D53985802548702500EB09DA /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
+		D53985842548702900EB09DA /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF2D2541DA0E0040169E /* Notice.swift */; };
+		D53985882548704600EB09DA /* SchoolsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */; };
+		D539858C2548705B00EB09DA /* NoticeInfoViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */; };
+		D53985902548706000EB09DA /* NoticeViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF0D2541B5210040169E /* NoticeViewImplementation.swift */; };
+		D53985942548706400EB09DA /* NoticeTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF172541BB4F0040169E /* NoticeTopicTableViewCell.swift */; };
+		D53985982548708100EB09DA /* NoticeInfoViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3A254733690040169E /* NoticeInfoViewProtocol.swift */; };
+		D539859C2548708400EB09DA /* NoticeInfoViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3F254736790040169E /* NoticeInfoViewControllerProtocol.swift */; };
+		D53985A02548708700EB09DA /* MetricsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8525485AE30040169E /* MetricsViewProtocol.swift */; };
+		D53985A42548708A00EB09DA /* MetricsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8A254861560040169E /* MetricsViewControllerProtocol.swift */; };
+		D53985A82548708D00EB09DA /* MetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8F254864C60040169E /* MetricsProtocol.swift */; };
+		D53985AC2548709100EB09DA /* NoticeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */; };
+		D53985B02548709300EB09DA /* NoticeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */; };
+		D53985B4254870B400EB09DA /* NoticeInfoViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF3525472FEC0040169E /* NoticeInfoViewImplementation.swift */; };
 		D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55446F8252F4FE2001793E0 /* ResultsControllerImplementationTests.swift */; };
 		D5544703252F51F2001793E0 /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */; };
@@ -994,9 +1011,11 @@
 				D5E603322547411800B96DA4 /* RequestSender.swift in Sources */,
 				D5F4C9A025377BDD003B568A /* QuestionImageTableViewCell.swift in Sources */,
 				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
+				D53985942548706400EB09DA /* NoticeTopicTableViewCell.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D5F4C99C25377BDA003B568A /* QuestionTextTableViewCell.swift in Sources */,
 				D59A37612535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
+				D539857C2548700800EB09DA /* Notice.swift in Sources */,
 				D59A37672535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				D527685D252CB51E003F0C70 /* Test.swift in Sources */,
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,
@@ -1005,6 +1024,8 @@
 				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D5E603402547468100B96DA4 /* Constants.swift in Sources */,
 				D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
+				D53985A42548708A00EB09DA /* MetricsViewControllerProtocol.swift in Sources */,
+				D53985902548706000EB09DA /* NoticeViewImplementation.swift in Sources */,
 				C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */,
 				D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				C465A10425431E7700805BC7 /* AnswersCollectionView.swift in Sources */,
@@ -1012,10 +1033,14 @@
 				D554471B252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D565EF3E252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
 				2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
+				D539859C2548708400EB09DA /* NoticeInfoViewControllerProtocol.swift in Sources */,
 				D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */,
 				2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */,
+				D53985782548700200EB09DA /* NoticeViewControllerImplementation.swift in Sources */,
+				D53985A02548708700EB09DA /* MetricsViewProtocol.swift in Sources */,
 				D586B56D252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
+				D53985B4254870B400EB09DA /* NoticeInfoViewImplementation.swift in Sources */,
 				2FF53934252E291500C0107B /* NoticeTableViewCell.swift in Sources */,
 				D565EF38252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
 				D59E82FA252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
@@ -1028,13 +1053,18 @@
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				D539856D25486A0F00EB09DA /* RequestSenderImplementationTests.swift in Sources */,
 				D59A37792535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
+				D53985AC2548709100EB09DA /* NoticeViewControllerProtocol.swift in Sources */,
 				D5F4C99825377BD7003B568A /* QuestionOptionTableViewCell.swift in Sources */,
+				D53985A82548708D00EB09DA /* MetricsProtocol.swift in Sources */,
 				D59E82F4252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
+				D53985B02548709300EB09DA /* NoticeViewProtocol.swift in Sources */,
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5F4C98C25377B94003B568A /* QuestionViewControllerImplementation.swift in Sources */,
+				D53985982548708100EB09DA /* NoticeInfoViewProtocol.swift in Sources */,
 				C465A10025431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */,
 				C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
 				C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */,
+				D539858C2548705B00EB09DA /* NoticeInfoViewControllerImplementation.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
 				D59A376D2535DF8100AD14F1 /* ResultsData.swift in Sources */,
@@ -1053,8 +1083,11 @@
 				C465A12425431EED00805BC7 /* ResultsViewControllerProtocol.swift in Sources */,
 				C465A12C25431F0C00805BC7 /* ResultsViewProtocol.swift in Sources */,
 				C465A1522543204B00805BC7 /* QuestionHeaderTableViewCell.swift in Sources */,
+				D53985842548702900EB09DA /* Notice.swift in Sources */,
 				C465A16B2543209F00805BC7 /* QuestionImageTableViewCell.swift in Sources */,
+				D53985802548702500EB09DA /* School.swift in Sources */,
 				C465A0F825431E1600805BC7 /* Question.swift in Sources */,
+				D539857425486FED00EB09DA /* SchoolViewControllerProtocol.swift in Sources */,
 				C465A13D25431FB000805BC7 /* QuestionViewProtocol.swift in Sources */,
 				C465A11825431EBF00805BC7 /* OverviewCollectionCell.swift in Sources */,
 				C465A10825431E7800805BC7 /* AnswersCollectionView.swift in Sources */,
@@ -1064,6 +1097,7 @@
 				C465A14125431FCA00805BC7 /* OverviewViewProtocol.swift in Sources */,
 				C465A15A2543206E00805BC7 /* QuestionOptionTableViewCell.swift in Sources */,
 				C465A11C25431ED300805BC7 /* ResultsPerTopic.swift in Sources */,
+				D53985882548704600EB09DA /* SchoolsViewProtocol.swift in Sources */,
 				C465A1562543205C00805BC7 /* QuestionViewImplementation.swift in Sources */,
 				C465A12825431F0300805BC7 /* QuestionViewControllerProtocol.swift in Sources */,
 				C465A12025431ED900805BC7 /* Test.swift in Sources */,

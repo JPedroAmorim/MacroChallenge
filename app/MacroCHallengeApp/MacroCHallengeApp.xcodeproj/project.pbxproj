@@ -27,6 +27,7 @@
 		2F1FCF8B254861560040169E /* MetricsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8A254861560040169E /* MetricsViewControllerProtocol.swift */; };
 		2F1FCF90254864C60040169E /* MetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8F254864C60040169E /* MetricsProtocol.swift */; };
 		2F2BADD82548758F00C2F411 /* MetricsViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */; };
+		2F2BADF42548795200C2F411 /* MockMetricsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */; };
 		2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
@@ -226,6 +227,7 @@
 		2F1FCF8A254861560040169E /* MetricsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2F1FCF8F254864C60040169E /* MetricsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsProtocol.swift; sourceTree = "<group>"; };
 		2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMetricsImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 			children = (
 				D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */,
 				D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */,
+				2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFF6BC1252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift in Sources */,
+				2F2BADF42548795200C2F411 /* MockMetricsImplementation.swift in Sources */,
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				2F1FCF7C254857F00040169E /* MetricsViewImplementation.swift in Sources */,
 				2F1FCF3B254733690040169E /* NoticeInfoViewProtocol.swift in Sources */,

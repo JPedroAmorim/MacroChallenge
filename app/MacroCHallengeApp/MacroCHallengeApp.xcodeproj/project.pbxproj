@@ -60,9 +60,12 @@
 		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
+		C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
 		C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436ACA9253A337100B18303 /* AnswersCollectionView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
+		C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
+		C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
@@ -249,6 +252,7 @@
 		AACB2A94AF164BB3EEB16172 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1018FB61C603ED420A9B2D7 /* Pods-MacroCHallengeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONProtocol.swift; sourceTree = "<group>"; };
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
@@ -488,6 +492,7 @@
 				D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */,
 				D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */,
 				D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */,
+				C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */,
 				2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */,
 				2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */,
 				D5E603302547411800B96DA4 /* RequestSender.swift */,
@@ -930,6 +935,7 @@
 				2F1FCF2E2541DA0E0040169E /* Notice.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				2F1FCF40254736790040169E /* NoticeInfoViewControllerProtocol.swift in Sources */,
+				C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D5E603312547411800B96DA4 /* RequestSender.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
@@ -1001,6 +1007,7 @@
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5F4C98C25377B94003B568A /* QuestionViewControllerImplementation.swift in Sources */,
 				C465A10025431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */,
+				C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
 				C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
@@ -1034,6 +1041,7 @@
 				C465A1562543205C00805BC7 /* QuestionViewImplementation.swift in Sources */,
 				C465A12825431F0300805BC7 /* QuestionViewControllerProtocol.swift in Sources */,
 				C465A12025431ED900805BC7 /* Test.swift in Sources */,
+				C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
 				C465A13925431FA900805BC7 /* OverviewViewControllerProtocol.swift in Sources */,
 				C465A10C25431EA600805BC7 /* ResultsData.swift in Sources */,
 				D565EF0A252B813A00426648 /* MacroCHallengeAppUITests.swift in Sources */,

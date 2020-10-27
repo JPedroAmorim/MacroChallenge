@@ -26,14 +26,9 @@ class ConverterJSONTests: XCTestCase {
 		let expectedOptionsDict  = ["A" : "ExampleOptionA", "B" : "ExampleOptionB", "C": "ExampleOptionC", "D" : "ExampleOptionD"]
 		let expectedResult = Question(number: "1", text: "This is a example of text", initialText: "initialText example", images: nil, subtitle: "subtitleExample", options: expectedOptionsDict, answer: "answerTest", topic: "topic")
 
-		guard let result = resultQuestion else {
-			XCTFail("Result question falhou a fazer o question")
-			return
-		}
-
-		XCTAssertEqual(result.number, expectedResult.number)
-		XCTAssertEqual(result.options, expectedResult.options)
-		XCTAssertEqual(result.images?.count, 3)
+		XCTAssertEqual(resultQuestion.number, expectedResult.number)
+		XCTAssertEqual(resultQuestion.options, expectedResult.options)
+		XCTAssertEqual(resultQuestion.images?.count, 3)
 	}
 
 	func testCreateQuestion_whenGivenInvalidJSON_shouldGiveError() throws {
@@ -54,9 +49,21 @@ class ConverterJSONTests: XCTestCase {
 		}
 	}
 
-	func testPerformanceExample() throws {
-		self.measure {
-			// Put the code you want to measure the time of here.
+	func testCreateQuestion_whenGivenInvalidJSONOptions_shouldGiveError() throws {
+
+		// Given
+		let inputJSON = createInvalidOptionsMockJSON()
+		let testSubject = ConverterJSON()
+
+		do {
+			// When
+			_ = try testSubject.createQuestion(json: inputJSON)
+
+			XCTFail("There is invalid options in question, an error was expected")
+		}
+		catch {
+			// Then
+			XCTAssert(true)
 		}
 	}
 
@@ -68,7 +75,7 @@ class ConverterJSONTests: XCTestCase {
 			"initialText" : "initialText example",
 			"images" : "https://firebasestorage.googleapis.com/v0/b/roggerapp-64174.appspot.com/o/promotions%2FBacon%20Cheddar.jpg?alt=media&token=66ec189e-06e2-4707-a583-80f4f8fd3bdd@https://firebasestorage.googleapis.com/v0/b/roggerapp-64174.appspot.com/o/promotions%2FBacon%20Cheddar.jpg?alt=media&token=66ec189e-06e2-4707-a583-80f4f8fd3bdd@https://firebasestorage.googleapis.com/v0/b/roggerapp-64174.appspot.com/o/promotions%2FBacon%20Cheddar.jpg?alt=media&token=66ec189e-06e2-4707-a583-80f4f8fd3bdd",
 			"subtitle" : "subtitleExample",
-			"options" : "A:ExampleOptionA#@B:ExampleOptionB#@C:ExampleOptionC#@D:ExampleOptionD",
+			"options" : "||A:ExampleOptionA#@||B:ExampleOptionB#@||C:ExampleOptionC#@||D:ExampleOptionD",
 			"answer" : "answerTest",
 			"topic" : "topic",
 		])
@@ -79,12 +86,27 @@ class ConverterJSONTests: XCTestCase {
 	func createInvalidMockJSON() -> JSON {
 
 		let json: JSON = JSON([
-			//			"number" : "1",
 			"text" : "This is a example of text",
 			"initialText" : "initialText example",
 			"images" : "URL1@URL2@URL3",
 			"subtitle" : "subtitleExample",
-			"options" : "A:ExampleOptionA@B:ExampleOptionB@C:ExampleOptionC@D:ExampleOptionD",
+			"options" : "A:ExampleOptionA#@B:ExampleOptionB#@C:ExampleOptionC#@D:ExampleOptionD",
+			"answer" : "answerTest",
+			"topic" : "topic",
+		])
+
+		return json
+	}
+
+	func createInvalidOptionsMockJSON() -> JSON {
+
+		let json: JSON = JSON([
+			"number" : "1",
+			"text" : "This is a example of text",
+			"initialText" : "initialText example",
+			"images" : "URL1@URL2@URL3",
+			"subtitle" : "subtitleExample",
+			"options" : "||A:ExampleOptionA||#@||B:ExampleOption||B#@#@||C:ExampleOptionC#@||D:ExampleOptionD",
 			"answer" : "answerTest",
 			"topic" : "topic",
 		])

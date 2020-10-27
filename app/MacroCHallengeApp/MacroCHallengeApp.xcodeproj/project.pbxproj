@@ -71,6 +71,8 @@
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
 		C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
+		C460D99125486DE8008711F3 /* HistoricViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */; };
+		C460D99C25486FD4008711F3 /* HistoricViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */; };
 		C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
@@ -265,6 +267,8 @@
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
+		C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerImplementation.swift; sourceTree = "<group>"; };
+		C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C465A05F2541B24300805BC7 /* ConverterJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSON.swift; sourceTree = "<group>"; };
 		C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONTests.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
@@ -419,6 +423,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C460D98925486D24008711F3 /* Historic */ = {
+			isa = PBXGroup;
+			children = (
+				C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */,
+				C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */,
+			);
+			path = Historic;
+			sourceTree = "<group>";
+		};
+		C460D98A25486D32008711F3 /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF42252BADA200426648 /* SchoolsViewControllerImplementation.swift */,
+				D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */,
+				D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */,
+				4FFF6BC0252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift */,
+				D59A37772535F1E300AD14F1 /* ResultsViewController.swift */,
+				2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */,
+				2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		C460D98B25486D4D008711F3 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Metrics;
+			sourceTree = "<group>";
+		};
+		C460D98F25486DD1008711F3 /* Historic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Historic;
+			sourceTree = "<group>";
+		};
+		C460D9A225487277008711F3 /* Historic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Historic;
+			sourceTree = "<group>";
+		};
 		C465A0562541B1A300805BC7 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +547,7 @@
 		D565EF2C252BAC1C00426648 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C460D98F25486DD1008711F3 /* Historic */,
 				D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */,
 				D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */,
 				D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */,
@@ -537,13 +586,9 @@
 		D565EF55252BAF6500426648 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D565EF42252BADA200426648 /* SchoolsViewControllerImplementation.swift */,
-				D586B586252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift */,
-				D5544719252F579D001793E0 /* OverviewViewControllerImplementation.swift */,
-				4FFF6BC0252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift */,
-				D59A37772535F1E300AD14F1 /* ResultsViewController.swift */,
-				2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */,
-				2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */,
+				C460D98B25486D4D008711F3 /* Metrics */,
+				C460D98A25486D32008711F3 /* Simulator */,
+				C460D98925486D24008711F3 /* Historic */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -551,6 +596,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C460D9A225487277008711F3 /* Historic */,
 				2F1FCF7A254857C10040169E /* Metrics */,
 				547EB57D25432B2F008A3DCC /* NoticeInfo */,
 				2F1FCF0C2541B49B0040169E /* Notice */,
@@ -937,7 +983,9 @@
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
 				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */,
+				C460D99C25486FD4008711F3 /* HistoricViewControllerProtocol.swift in Sources */,
 				D5E603492547472700B96DA4 /* RequestSenderImplementation.swift in Sources */,
+				C460D99125486DE8008711F3 /* HistoricViewControllerImplementation.swift in Sources */,
 				2F1FCF242541C8250040169E /* NoticeViewControllerProtocol.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,

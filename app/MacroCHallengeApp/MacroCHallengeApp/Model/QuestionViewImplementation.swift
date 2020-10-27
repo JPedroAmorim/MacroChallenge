@@ -205,13 +205,12 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             return setupOptionCell(tableView: tableView, indexPath: indexPath)
         // Card com a resposta correta
         case 6:
-            let str = "\n\nA resposta correta é " + self.question.answer.uppercased()
+            let str: String = answerRight()
             return setupQuestionTextCell(tableView: tableView, indexPath: indexPath, value: str, category: .answer)
         default:
             return UITableViewCell()
         }
     }
-    
     
     // MARK: TableViewDelegate methods
     
@@ -282,9 +281,9 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .black
             case .answer:
-                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
+                let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
                 let myAttrString = NSAttributedString(string: value, attributes: myAttribute)
-                cell.lblText.textAlignment = .left
+                cell.lblText.textAlignment = .center
                 cell.lblText.attributedText = myAttrString
                 cell.lblText.textColor = .black
             }
@@ -378,6 +377,17 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 cell.imgOptionImg.image = UIImage(systemName: "xmark")
                 cell.imgOptionImg.tintColor = UIColor.systemRed
             })
+        }
+    }
+
+    /// Método responsavel por definir se a resposta está certa, errada ou não foi respondida
+    private func answerRight() -> String {
+        if self.chosenOption == self.question.answer {
+            return "\nParabéns, você acertou!"
+        } else if self.chosenOption == nil {
+            return "\nVocê não respondeu esta questão. A resposta correta é a " + self.question.answer.uppercased() + "."
+        } else {
+            return "\nA resposta correta é a " + self.question.answer.uppercased() + "."
         }
     }
 }

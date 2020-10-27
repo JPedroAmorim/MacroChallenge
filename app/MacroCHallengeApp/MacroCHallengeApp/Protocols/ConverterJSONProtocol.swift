@@ -27,6 +27,6 @@ protocol ConverterJSONProtocol {
 	}
 
 	*/
-	func createQuestion(json: JSON) throws -> Question?
+	func createQuestion(json: JSON) throws -> Question
 
 }

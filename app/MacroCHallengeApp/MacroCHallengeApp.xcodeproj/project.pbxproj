@@ -50,6 +50,8 @@
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
 		C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436ACA9253A337100B18303 /* AnswersCollectionView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
+		C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
+		C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
@@ -900,6 +902,7 @@
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5F4C98C25377B94003B568A /* QuestionViewControllerImplementation.swift in Sources */,
 				C465A10025431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */,
+				C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
 				C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
@@ -930,6 +933,7 @@
 				C465A1562543205C00805BC7 /* QuestionViewImplementation.swift in Sources */,
 				C465A12825431F0300805BC7 /* QuestionViewControllerProtocol.swift in Sources */,
 				C465A12025431ED900805BC7 /* Test.swift in Sources */,
+				C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
 				C465A13925431FA900805BC7 /* OverviewViewControllerProtocol.swift in Sources */,
 				C465A10C25431EA600805BC7 /* ResultsData.swift in Sources */,
 				D565EF0A252B813A00426648 /* MacroCHallengeAppUITests.swift in Sources */,

@@ -26,25 +26,8 @@ enum ErrorQuestion: String, Error {
 class ConverterJSON: ConverterJSONProtocol {
 
 	//	MARK: - Convert JSON to Question
-	/**
-	Função responsável por converter um objeto JSON em um objeto da  classe Question
 
-	- parameter json: Objeto JSON com dados da questão a ser convertida para objeto Question
-
-	Como usar:
-
-	do {
-	let converterJSON = try ConverterJSON().createQuestion(json: json)
-	print(converterJSON)
-	}
-	catch let error as UserValidationError {
-	print(error.rawValue)
-	} catch {
-	print("Unspecific Error")
-	}
-
-	*/
-	func createQuestion(json: JSON) throws -> Question? {
+	func createQuestion(json: JSON) throws -> Question {
 		var number: String
 		var text: String
 		var initialText: String?
@@ -133,11 +116,16 @@ class ConverterJSON: ConverterJSONProtocol {
 		var options = [String : String]()
 
 		for option in textJoined  {
-			let optionText = String(option.dropFirst(2))
 
-			let optionLetter = String(option.prefix(1))
+			if let uu = option.components(separatedBy: "||").last {
+				let optionText = String(uu.dropFirst(2))
 
-			options.updateValue(optionText, forKey: optionLetter)
+				let optionLetter = String(uu.prefix(1))
+
+				options.updateValue(optionText, forKey: optionLetter)
+			} else {
+				return nil
+			}
 		}
 
 		if options.isEmpty {

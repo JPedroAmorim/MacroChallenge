@@ -39,7 +39,7 @@ class HistoricViewControllerImplementation: UIViewController, SchoolsViewControl
 
 	private func setupDefaultViewImplementation() {
 		if let data = schools?.getSchools() {
-			let defaultView = SchoolsViewImplementation(data: data, controller: self)
+			let defaultView = HistoricViewImplementation(data: data, controller: self)
 			self.myView = defaultView
 			self.view = defaultView
 		}

@@ -48,6 +48,9 @@
                   Identifier = "OverviewViewControllerImplementation">
                </Test>
                <Test
+                  Identifier = "RequestSenderImplementationTests">
+               </Test>
+               <Test
                   Identifier = "ResultsControllerImplementationTests">
                </Test>
             </SkippedTests>

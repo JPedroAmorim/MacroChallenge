@@ -26,7 +26,7 @@ class RequestSenderImplementation: RequestSenderProtocol {
         do {
             
             let jsonResponseArray = try sendGetRequestForUrl(url)
-            let questionsArrayForTest =  parser.produceQuestionArray(jsonArray: jsonResponseArray)
+            let questionsArrayForTest =  parser.createQuestions(jsonArray: jsonResponseArray)
             completion(questionsArrayForTest)
             
         } catch RequestError.responseError(let errorMessage) {

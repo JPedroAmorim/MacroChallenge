@@ -3,6 +3,7 @@ package com.macrochallenge.backend.service;
 import com.macrochallenge.backend.exceptions.NotFoundException;
 import com.macrochallenge.backend.model.Results;
 import com.macrochallenge.backend.model.Test;
+import com.macrochallenge.backend.model.dto.AccumulatedResultsDTO;
 import com.macrochallenge.backend.model.dto.ResultsDTO;
 import com.macrochallenge.backend.repositories.ResultsRepository;
 import com.macrochallenge.backend.repositories.TestRepository;
@@ -10,6 +11,7 @@ import com.macrochallenge.backend.service.interfaces.ResultsServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,6 +45,22 @@ public class ResultsService implements ResultsServiceInterface {
                 totalNumberOfCorrectAnswers, resultsDTO.getCorrectAnswers(), resultsDTO.getWrongAnswers());
 
         resultsRepository.save(resultsEntity);
+    }
+
+    @Override
+    public AccumulatedResultsDTO getAccumulatedResults() {
+        List<Results> allResults = resultsRepository.getAll();
+
+        Integer accumulatedNumberOfQuestions = allResults.stream()
+                .mapToInt(Results::getTotalNumberOfQuestions)
+                .sum();
+
+        Integer accumulatedNumberOfCorrectAnswers = allResults.stream()
+                .mapToInt(Results::getTotalNumberOfCorrectAnswers)
+                .sum();
+
+        return new AccumulatedResultsDTO(String.valueOf(accumulatedNumberOfQuestions),
+                String.valueOf(accumulatedNumberOfCorrectAnswers));
     }
 
 }

@@ -35,11 +35,14 @@ public class ResultsService implements ResultsServiceInterface {
 
         Test testForResult = testForResultOptional.get();
 
-        Results resultEntity = new Results(testForResult, resultsDTO.getTotalPercentageOfCorrectAnswers(),
-                resultsDTO.getTotalNumberOfQuestions(), resultsDTO.getTotalNumberOfCorrectAnswers(),
-                resultsDTO.getRightAnswer(), resultsDTO.getWrongAnswer());
+        Double totalPercentageOfCorrectAnswers = Double.valueOf(resultsDTO.getTotalPercentageOfCorrectAnswers());
+        Integer totalNumberOfQuestions = Integer.valueOf(resultsDTO.getTotalNumberOfQuestions());
+        Integer totalNumberOfCorrectAnswers = Integer.valueOf(resultsDTO.getTotalNumberOfCorrectAnswers());
 
-        resultsRepository.save(resultEntity);
+        Results resultsEntity = new Results(testForResult, totalPercentageOfCorrectAnswers, totalNumberOfQuestions,
+                totalNumberOfCorrectAnswers, resultsDTO.getCorrectAnswers(), resultsDTO.getWrongAnswers());
+
+        resultsRepository.save(resultsEntity);
     }
 
 }

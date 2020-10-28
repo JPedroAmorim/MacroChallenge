@@ -36,14 +36,22 @@ class RequestSenderImplementation: RequestSenderProtocol {
             return
         }
         
-        
         let requestBody : [String:String] = ["testName": testName,
                                              "testYear": testYear,
                                              "totalPercentageOfCorrectAnswers": String(results.totalPercentageOfCorrectAnswers),
                                              "totalNumberOfQuestions": String(results.totalNumberOfQuestions),
                                              "totalNumberOfCorrectAnswers": String(results.totalNumberOfCorrectAnswers),
-                                             "correctAnswers": String(results.correctAnswers),
-                                             "wrongAnswers": String(results.wrongAnswers)]
+                                             "correctAnswers": String(describing: results.correctAnswers),
+                                             "wrongAnswers": String(describing: results.wrongAnswers)]
+        
+        
+        sendPostRequestForUrl(url: url, requestBody: requestBody) { error in
+            if let errorMessage = error {
+                completion(errorMessage)
+            } else {
+                completion(nil) // Tudo ocorreu bem
+            }
+        }
     }
     
     private func sendGetRequestForUrl(_ url: URL, completion: @escaping (JSON?, String?) -> Void)  {

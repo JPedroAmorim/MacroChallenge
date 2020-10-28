@@ -18,7 +18,7 @@ class MetricsViewImplementation: UIView, MetricsViewProtocol {
     private var generalResults: ResultsPerTopic
     private var topicsResults: [String : ResultsPerTopic]
     private let sectionHeaderTitleArray = ["Resultados gerais",
-                                           "Resultado por tópico"]
+                                           "Resultados por tópico"]
     private var topicsArraysKeys: [String] = []
     
     // MARK: - Init methods
@@ -121,6 +121,10 @@ extension MetricsViewImplementation: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellIdentifier = String()
         var finalCell = UITableViewCell()
+        finalCell.backgroundColor = UIColor.init(red: 242/255,
+                                                  green: 242/255,
+                                                  blue: 247/255,
+                                                  alpha: 1.0)
         
         if indexPath.section == 0 { // resultado geral
             cellIdentifier = "PieChartTableViewCell"

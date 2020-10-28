@@ -35,7 +35,7 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     
     // MARK: - Setup methods
     private func setupDefaultMetricsImplementation() {
-//        self.metrics = MockMetricsImplementation()
+        self.metrics = MockMetricsImplementation()
     }
     
     private func setupDefaultViewImplementation() {

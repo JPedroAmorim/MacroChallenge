@@ -22,7 +22,7 @@
 		2F1FCF45254737920040169E /* NoticeInfoViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */; };
 		2F1FCF5D2547523D0040169E /* NoticeInfoViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */; };
 		2F1FCF7C254857F00040169E /* MetricsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF7B254857EF0040169E /* MetricsViewImplementation.swift */; };
-		2F1FCF812548580C0040169E /* MetricsViewControllerImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF802548580C0040169E /* MetricsViewControllerImplementation.xib */; };
+		2F1FCF812548580C0040169E /* MetricsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FCF802548580C0040169E /* MetricsViewImplementation.xib */; };
 		2F1FCF8625485AE30040169E /* MetricsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8525485AE30040169E /* MetricsViewProtocol.swift */; };
 		2F1FCF8B254861560040169E /* MetricsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8A254861560040169E /* MetricsViewControllerProtocol.swift */; };
 		2F1FCF90254864C60040169E /* MetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8F254864C60040169E /* MetricsProtocol.swift */; };
@@ -222,7 +222,7 @@
 		2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2F1FCF5C2547523D0040169E /* NoticeInfoViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoViewImplementation.xib; sourceTree = "<group>"; };
 		2F1FCF7B254857EF0040169E /* MetricsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewImplementation.swift; sourceTree = "<group>"; };
-		2F1FCF802548580C0040169E /* MetricsViewControllerImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetricsViewControllerImplementation.xib; sourceTree = "<group>"; };
+		2F1FCF802548580C0040169E /* MetricsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetricsViewImplementation.xib; sourceTree = "<group>"; };
 		2F1FCF8525485AE30040169E /* MetricsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewProtocol.swift; sourceTree = "<group>"; };
 		2F1FCF8A254861560040169E /* MetricsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2F1FCF8F254864C60040169E /* MetricsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsProtocol.swift; sourceTree = "<group>"; };
@@ -366,7 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				2F1FCF7B254857EF0040169E /* MetricsViewImplementation.swift */,
-				2F1FCF802548580C0040169E /* MetricsViewControllerImplementation.xib */,
+				2F1FCF802548580C0040169E /* MetricsViewImplementation.xib */,
 			);
 			path = Metrics;
 			sourceTree = "<group>";
@@ -776,7 +776,7 @@
 				D565EEF1252B813900426648 /* Assets.xcassets in Resources */,
 				2F1FCF1A2541BB4F0040169E /* NoticeTopicTableViewCell.xib in Resources */,
 				D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */,
-				2F1FCF812548580C0040169E /* MetricsViewControllerImplementation.xib in Resources */,
+				2F1FCF812548580C0040169E /* MetricsViewImplementation.xib in Resources */,
 				D565EF58252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
 				2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */,
 				4FFF6BE8252F3D920015DFE7 /* QuestionOptionTableViewCell.xib in Resources */,

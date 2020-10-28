@@ -54,11 +54,20 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return 1
+		return 3
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return data.count
+
+		switch section {
+			case 0:
+				return data.count
+			case 1:
+				return data.count
+			// ...
+			default:
+				return data.count
+		}
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,5 +87,30 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableViewSchools.deselectRow(at: indexPath, animated: true)
 		viewController.schoolWasSubmitted(data[indexPath.row])
+	}
+
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
+		let sectionName: String
+		switch section {
+			case 0:
+				sectionName = NSLocalizedString("mySectionName", comment: "mySectionName")
+			case 1:
+				sectionName = NSLocalizedString("myOtherSectionName", comment: "myOtherSectionName")
+			// ...
+			default:
+				sectionName = "aaaa"
+		}
+		return sectionName
+	}
+
+	func tableView (tableView:UITableView , heightForHeaderInSection section:Int)->Float
+	{
+
+		var title = self.tableView(tableView, titleForHeaderInSection: section)
+		if (title == "") {
+			return 0.0
+		}
+		return 20.0
 	}
 }

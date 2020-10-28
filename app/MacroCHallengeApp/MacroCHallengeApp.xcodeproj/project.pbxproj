@@ -65,6 +65,7 @@
 		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
+		C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */; };
 		C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
 		C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436ACA9253A337100B18303 /* AnswersCollectionView.xib */; };
@@ -275,6 +276,7 @@
 		AACB2A94AF164BB3EEB16172 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1018FB61C603ED420A9B2D7 /* Pods-MacroCHallengeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewProtocol.swift; sourceTree = "<group>"; };
 		C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONProtocol.swift; sourceTree = "<group>"; };
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */,
 				C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */,
 				C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */,
+				C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */,
 				C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */,
 				C460D9C125487875008711F3 /* HistoricTableViewCell.swift */,
 				C460D9C825487880008711F3 /* HistoricTableViewCell.xib */,
@@ -1052,6 +1055,7 @@
 				D5E6033F2547468100B96DA4 /* Constants.swift in Sources */,
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
+				C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */,
 				D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */,
 				2F9A67CE2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
 				D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */,

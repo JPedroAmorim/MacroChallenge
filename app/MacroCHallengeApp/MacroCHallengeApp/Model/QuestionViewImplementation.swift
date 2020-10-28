@@ -75,6 +75,9 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
         }
         setupButtons(data.number)
         self.questionTableView.reloadData()
+        self.questionTableView.scrollToRow(at: IndexPath(row: 0, section: 0),
+                                           at: .top,
+                                           animated: false)
     }
     
 

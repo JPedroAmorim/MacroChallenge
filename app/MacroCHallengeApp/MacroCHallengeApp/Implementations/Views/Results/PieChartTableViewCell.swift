@@ -103,7 +103,7 @@ class PieChartTableViewCell: UITableViewCell {
         pieChart.rotationEnabled = false
 
         let myString = "\(numberOfRightAnswers)/\(totalNumberOfQuestions)"
-        let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
+        let myAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
         pieChart.centerAttributedText = myAttrString
         

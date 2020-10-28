@@ -25,6 +25,6 @@ public class ResultsController {
     public ResponseEntity<String> addNewResult(@RequestBody ResultsDTO resultsDTO) {
         resultsService.addNewResult(resultsDTO);
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>("Resultado gravado com sucesso", HttpStatus.OK);
     }
 }

@@ -86,7 +86,6 @@ class RequestSenderImplementation: RequestSenderProtocol {
         
         AF.request(url, method: .post, parameters: requestBody, encoding: JSONEncoding.default)
             .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
             .responseData { response in
                 
                 switch response.result {

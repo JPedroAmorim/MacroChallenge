@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,18 +18,42 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2q2-8m-vQd" userLabel="Card View">
-                        <rect key="frame" x="16" y="8" width="288" height="48"/>
+                        <rect key="frame" x="16" y="4" width="288" height="56"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prova XXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN5-UZ-Xet">
-                                <rect key="frame" x="8" y="14.5" width="93.5" height="19"/>
+                                <rect key="frame" x="8" y="18.5" width="93.5" height="19"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-C9-pPZ">
+                                <rect key="frame" x="232" y="4" width="48" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEr-aX-kFv">
+                                        <rect key="frame" x="8" y="16.5" width="32" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GEr-aX-kFv" secondAttribute="height" multiplier="32:15" id="FDG-gr-uk7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="GEr-aX-kFv" firstAttribute="width" secondItem="0Zw-C9-pPZ" secondAttribute="height" multiplier="2:3" id="T1U-C3-hXt"/>
+                                    <constraint firstItem="GEr-aX-kFv" firstAttribute="centerY" secondItem="0Zw-C9-pPZ" secondAttribute="centerY" id="iDW-Qd-zMB"/>
+                                    <constraint firstAttribute="width" secondItem="0Zw-C9-pPZ" secondAttribute="height" multiplier="1:1" id="lfv-2d-wq7"/>
+                                    <constraint firstItem="GEr-aX-kFv" firstAttribute="centerX" secondItem="0Zw-C9-pPZ" secondAttribute="centerX" id="vCc-U5-d8w"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="48" id="Tpv-P5-Vso"/>
+                            <constraint firstItem="0Zw-C9-pPZ" firstAttribute="width" secondItem="2q2-8m-vQd" secondAttribute="height" multiplier="6:7" id="Byw-Gr-Wpt"/>
+                            <constraint firstAttribute="height" constant="56" id="Fhh-mo-lej"/>
+                            <constraint firstItem="0Zw-C9-pPZ" firstAttribute="centerY" secondItem="2q2-8m-vQd" secondAttribute="centerY" id="W4v-pA-USL"/>
+                            <constraint firstAttribute="trailing" secondItem="0Zw-C9-pPZ" secondAttribute="trailing" constant="8" id="ZAh-WF-WdT"/>
                             <constraint firstItem="KN5-UZ-Xet" firstAttribute="centerY" secondItem="2q2-8m-vQd" secondAttribute="centerY" id="kAW-cP-UVU"/>
                             <constraint firstItem="KN5-UZ-Xet" firstAttribute="leading" secondItem="2q2-8m-vQd" secondAttribute="leading" constant="8" id="xfm-Ta-yrb"/>
                         </constraints>
@@ -36,19 +61,26 @@
                 </subviews>
                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="2q2-8m-vQd" secondAttribute="bottom" constant="8" id="AvU-Qp-Bud"/>
                     <constraint firstAttribute="trailing" secondItem="2q2-8m-vQd" secondAttribute="trailing" constant="16" id="Liy-MK-DvX"/>
                     <constraint firstItem="2q2-8m-vQd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eOP-UZ-O3M"/>
-                    <constraint firstItem="2q2-8m-vQd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oxh-Zh-v5X"/>
+                    <constraint firstItem="2q2-8m-vQd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="nyZ-1i-46B"/>
+                    <constraint firstAttribute="bottom" secondItem="2q2-8m-vQd" secondAttribute="bottom" constant="4" id="tpT-oh-X1V"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="cardView" destination="2q2-8m-vQd" id="Gtm-BM-2OD"/>
+                <outlet property="cirtularProgressView" destination="0Zw-C9-pPZ" id="XX8-mI-vTU"/>
+                <outlet property="progressLabel" destination="GEr-aX-kFv" id="y71-Jc-EVe"/>
                 <outlet property="testLabel" destination="KN5-UZ-Xet" id="qTV-uf-TyF"/>
             </connections>
-            <point key="canvasLocation" x="-245" y="96"/>
+            <point key="canvasLocation" x="-190" y="101"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

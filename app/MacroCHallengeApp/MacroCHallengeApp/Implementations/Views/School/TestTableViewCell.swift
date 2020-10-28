@@ -11,6 +11,8 @@ class TestTableViewCell: UITableViewCell {
     // MARK: -IBOutlets
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var cirtularProgressView: UIView!
+    @IBOutlet weak var progressLabel: UILabel!
     
     // MARK: - Lifecyle
     

@@ -28,18 +28,18 @@ public class Results {
     private Integer totalNumberOfCorrectAnswers;
 
     @NonNull
-    private String rightAnswers;
+    private String correctAnswers;
 
     @NonNull
     private String wrongAnswers;
 
     public Results(Test test, Double totalPercentageOfCorrectAnswers, Integer totalNumberOfQuestions,
-                   Integer totalNumberOfCorrectAnswers, String rightAnswers, String wrongAnswers) {
+                   Integer totalNumberOfCorrectAnswers, String correctAnswers, String wrongAnswers) {
         this.test = test;
         this.totalPercentageOfCorrectAnswers = totalPercentageOfCorrectAnswers;
         this.totalNumberOfQuestions = totalNumberOfQuestions;
         this.totalNumberOfCorrectAnswers = totalNumberOfCorrectAnswers;
-        this.rightAnswers = rightAnswers;
+        this.correctAnswers = correctAnswers;
         this.wrongAnswers = wrongAnswers;
     }
 }

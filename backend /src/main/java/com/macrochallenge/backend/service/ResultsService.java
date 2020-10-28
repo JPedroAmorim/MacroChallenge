@@ -34,12 +34,12 @@ public class ResultsService implements ResultsServiceInterface {
         }
 
         Test testForResult = testForResultOptional.get();
-//
-//        Results resultEntity = new Results(testForResult, resultsDTO.getTotalPercentageOfCorrectAnswers(),
-//                resultsDTO.getTotalNumberOfQuestions(), resultsDTO.getTotalNumberOfCorrectAnswers(),
-//                resultsDTO.getRightAnswer(), resultsDTO.getWrongAnswer());
-//
-//        resultsRepository.save(resultEntity);
+
+        Results resultEntity = new Results(testForResult, resultsDTO.getTotalPercentageOfCorrectAnswers(),
+                resultsDTO.getTotalNumberOfQuestions(), resultsDTO.getTotalNumberOfCorrectAnswers(),
+                resultsDTO.getRightAnswer(), resultsDTO.getWrongAnswer());
+
+        resultsRepository.save(resultEntity);
     }
 
 }

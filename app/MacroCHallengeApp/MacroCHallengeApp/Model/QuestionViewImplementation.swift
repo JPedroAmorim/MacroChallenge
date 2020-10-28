@@ -13,6 +13,7 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     @IBOutlet weak var questionTableView: UITableView!
     @IBOutlet weak var btnProximo: UIButton!
     @IBOutlet weak var btnAnterior: UIButton!
+    @IBOutlet weak var btnFinish: UIButton!
     
     
     // MARK: - Dependencias
@@ -89,11 +90,39 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
     
     // MARK: - Funções privadas
     
+    // Chama a função do controller para retroceder uma pergunta
     @IBAction func submitPrevious(_ sender: Any) {
         controller.previousWasSubmitted()
     }
+    
+    // Chama a função do controller para avançar uma pergunta
     @IBAction func submitNext(_ sender: Any) {
         controller.nextWasSubmitted()
+    }
+    
+    // Chama a função do controller para finalizar a prova
+    @IBAction func finishTest(_ sender: Any) {
+        // Caso existam questões não respondidas o usuário recebe uma notificação
+        if !(self.controller.allQuestionsAreAnswered()) {
+            let alert = UIAlertController(title: "Encerrar prova" ,
+                                          message: "Deseja mesmo encerrar a prova? Você não repondeu à todas as questões",
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancelar",
+                                          style: .destructive,
+                                          handler: nil))
+            
+            alert.addAction(UIAlertAction(title: "Encerrar",
+                                          style: .default,
+                                          handler: { _ in
+                                            self.controller.finishTest()
+                                          }))
+            if let viewController = self.controller as? UIViewController {
+                viewController.present(alert, animated: true, completion: nil)
+            }
+        } else {
+            self.controller.finishTest()
+        }
     }
     
     /// Função responsável por configurar os botões que questões anteriores e próximas
@@ -107,6 +136,7 @@ class QuestionViewImplementation: UIView, QuestionViewProtocol {
             self.btnAnterior.setTitle("Questão " + String(currentQuestion - 1), for: .normal)
             self.btnProximo.isHidden = currentQuestion == self.numOfQuestions
             self.btnProximo.setTitle("Questão " + String(currentQuestion + 1), for: .normal)
+            self.btnFinish.isHidden = currentQuestion != self.numOfQuestions
         } else {
             self.btnAnterior.setTitle("Questão ?", for: .normal)
             self.btnProximo.setTitle("Questão ?", for: .normal)

@@ -38,6 +38,22 @@ protocol QuestionViewControllerProtocol {
     
     /**
      
+     Método que alerta o controller que o botão “Finalizar prova” foi pressionado. Este método deve conter a lógica para, a partir dele, a prova ser finalizada.
+     
+     */
+
+    func finishTest()
+    
+    /**
+     
+     Método que  responde se todas questões ja foram respondidas
+     
+     */
+
+    func allQuestionsAreAnswered() -> Bool
+    
+    /**
+     
      Método que alerta o controller que ele deve exibir uma questão em específico. Ao ser chamado, o controlador deve fazer a lógica para que os apontadores de previous e next fiquem
      nas posições corretas.
      

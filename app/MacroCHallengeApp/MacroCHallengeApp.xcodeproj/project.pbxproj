@@ -232,7 +232,6 @@
 		D5F4C99825377BD7003B568A /* QuestionOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BDF252F3D720015DFE7 /* QuestionOptionTableViewCell.swift */; };
 		D5F4C99C25377BDA003B568A /* QuestionTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BEC252F62160015DFE7 /* QuestionTextTableViewCell.swift */; };
 		D5F4C9A025377BDD003B568A /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
-		D5F4C9A425377BE0003B568A /* QuestionButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -689,8 +688,6 @@
 				4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */,
 				4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */,
 				4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */,
-				4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */,
-				4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */,
 				4FAC80E825377538006F947A /* QuestionHeaderTableViewCell.swift */,
 				4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */,
 			);
@@ -830,7 +827,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */,
-				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
@@ -1003,6 +999,7 @@
 				2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */,
 				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
 				C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
+				C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */,
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
 				2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,

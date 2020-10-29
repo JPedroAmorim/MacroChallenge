@@ -53,10 +53,5 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
             navController.pushViewController(schoolViewController, animated: true)
         }
     }
-
-//	excluir depois
-	func testWasSubmitted(_ test: Test){
-
-	}
 }
 

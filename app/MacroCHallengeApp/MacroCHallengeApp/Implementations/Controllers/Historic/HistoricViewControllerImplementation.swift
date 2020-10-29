@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricViewControllerImplementation: UIViewController, SchoolsViewControllerProtocol, HistoricViewControllerProtocol {
+class HistoricViewControllerImplementation: UIViewController,  HistoricViewControllerProtocol {
 	// MARK: - Dependencies
 	/*
 
@@ -17,7 +17,7 @@ class HistoricViewControllerImplementation: UIViewController, SchoolsViewControl
 	suas dependências (exceto pela view) são passadas em seu inicializador (veja o método schoolWasSubmitted, por exemplo).
 
 	*/
-	var myView: SchoolsViewProtocol?
+	var myView: HistoricViewProtocol?
 	var schools: SchoolsProtocol?
 
 	// MARK: - Lifecycle methods

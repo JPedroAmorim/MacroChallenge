@@ -20,7 +20,4 @@ protocol SchoolsViewControllerProtocol {
     // Dependências
     var myView: SchoolsViewProtocol? {get set}
     var schools: SchoolsProtocol? {get set}
-
-//	excluir depois
-	func testWasSubmitted(_ test: Test)
 }

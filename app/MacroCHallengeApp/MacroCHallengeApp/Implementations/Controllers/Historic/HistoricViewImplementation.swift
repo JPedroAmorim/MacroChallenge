@@ -9,19 +9,19 @@ import Foundation
 
 import UIKit
 
-class HistoricViewImplementation: UIView, SchoolsViewProtocol, HistoricViewProtocol {
+class HistoricViewImplementation: UIView, HistoricViewProtocol {
 	// MARK: -IBOutlets
 //	@IBOutlet weak var tableViewSchools: UITableView!
 	@IBOutlet weak var tableViewSchools: UITableView!
 	
 	// MARK: - Dependencies
-	var viewController: SchoolsViewControllerProtocol
+	var viewController: HistoricViewControllerProtocol
 
 	// MARK: - Private attributes
 	private var data: [School]
 
 	// MARK: - Init methods
-	required init(data: [School], controller: SchoolsViewControllerProtocol) {
+	required init(data: [School], controller: HistoricViewControllerProtocol) {
 		self.data = data
 		self.viewController = controller
 		super.init(frame: CGRect.zero)

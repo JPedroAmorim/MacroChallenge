@@ -19,6 +19,6 @@ protocol HistoricViewControllerProtocol {
 	func testWasSubmitted(_ test: Test)
 
 	// Dependências
-	var myView: SchoolsViewProtocol? {get set}
+	var myView: HistoricViewProtocol? {get set}
 	var schools: SchoolsProtocol? {get set}
 }

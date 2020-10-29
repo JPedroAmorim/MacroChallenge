@@ -17,8 +17,8 @@ protocol HistoricViewProtocol {
 	- parameter viewController: Um controlador do tipo SchoolsViewControllerProtocol.
 
 	*/
-	init(data: [School], controller: SchoolsViewControllerProtocol)
+	init(data: [School], controller: HistoricViewControllerProtocol)
 
 	// Dependências
-	var viewController: SchoolsViewControllerProtocol {get set}
+	var viewController: HistoricViewControllerProtocol {get set}
 }

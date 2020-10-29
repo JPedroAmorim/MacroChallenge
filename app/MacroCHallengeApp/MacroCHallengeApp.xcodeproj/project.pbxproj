@@ -80,12 +80,6 @@
 		C460D9BB2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
 		C460D9BC2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
 		C460D9BD2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
-		C460D9C225487875008711F3 /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9C125487875008711F3 /* HistoricTableViewCell.swift */; };
-		C460D9C325487875008711F3 /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9C125487875008711F3 /* HistoricTableViewCell.swift */; };
-		C460D9C425487875008711F3 /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9C125487875008711F3 /* HistoricTableViewCell.swift */; };
-		C460D9C925487880008711F3 /* HistoricTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9C825487880008711F3 /* HistoricTableViewCell.xib */; };
-		C460D9CA25487880008711F3 /* HistoricTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9C825487880008711F3 /* HistoricTableViewCell.xib */; };
-		C460D9CB25487880008711F3 /* HistoricTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9C825487880008711F3 /* HistoricTableViewCell.xib */; };
 		C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
@@ -285,8 +279,6 @@
 		C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewImplementation.swift; sourceTree = "<group>"; };
 		C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricViewImplementation.xib; sourceTree = "<group>"; };
-		C460D9C125487875008711F3 /* HistoricTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricTableViewCell.swift; sourceTree = "<group>"; };
-		C460D9C825487880008711F3 /* HistoricTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricTableViewCell.xib; sourceTree = "<group>"; };
 		C465A05F2541B24300805BC7 /* ConverterJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSON.swift; sourceTree = "<group>"; };
 		C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONTests.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
@@ -449,8 +441,6 @@
 				C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */,
 				C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */,
 				C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */,
-				C460D9C125487875008711F3 /* HistoricTableViewCell.swift */,
-				C460D9C825487880008711F3 /* HistoricTableViewCell.xib */,
 			);
 			path = Historic;
 			sourceTree = "<group>";
@@ -851,7 +841,6 @@
 				2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */,
 				C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */,
 				2F1FCF132541B5950040169E /* NoticeViewImplementation.xib in Resources */,
-				C460D9C925487880008711F3 /* HistoricTableViewCell.xib in Resources */,
 				C48FBA8C252D963E00A3CF8D /* SchoolsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -860,7 +849,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C460D9CA25487880008711F3 /* HistoricTableViewCell.xib in Resources */,
 				D59E830A252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */,
 				2FF5392D252CBEF200C0107B /* TestTableViewCell.xib in Resources */,
 				2F9A67D12535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,
@@ -876,7 +864,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C460D9CB25487880008711F3 /* HistoricTableViewCell.xib in Resources */,
 				C460D9BD2548779D008711F3 /* HistoricViewImplementation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1025,7 +1012,6 @@
 				2F1FCF292541CFB20040169E /* NoticeViewControllerImplementation.swift in Sources */,
 				4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */,
 				D586B56C252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
-				C460D9C225487875008711F3 /* HistoricTableViewCell.swift in Sources */,
 				2F1FCF0E2541B5210040169E /* NoticeViewImplementation.swift in Sources */,
 				2F1FCF1F2541C6EC0040169E /* NoticeViewProtocol.swift in Sources */,
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
@@ -1080,7 +1066,6 @@
 				D59A37612535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A37672535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				D527685D252CB51E003F0C70 /* Test.swift in Sources */,
-				C460D9C325487875008711F3 /* HistoricTableViewCell.swift in Sources */,
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,
 				D5F4C99025377B9A003B568A /* HorizontalChartView.swift in Sources */,
 				D5F4C9A425377BE0003B568A /* QuestionButtonsTableViewCell.swift in Sources */,
@@ -1143,7 +1128,6 @@
 				C465A10825431E7800805BC7 /* AnswersCollectionView.swift in Sources */,
 				C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */,
 				C465A0FC25431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */,
-				C460D9C425487875008711F3 /* HistoricTableViewCell.swift in Sources */,
 				C465A15E2543207D00805BC7 /* QuestionTextTableViewCell.swift in Sources */,
 				C465A14125431FCA00805BC7 /* OverviewViewProtocol.swift in Sources */,
 				C465A15A2543206E00805BC7 /* QuestionOptionTableViewCell.swift in Sources */,

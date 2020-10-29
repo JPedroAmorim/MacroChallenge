@@ -15,8 +15,8 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 	dependências opcionais que não são a sua view. Para contornarmos isso, existem métodos de setup que são responsáveis
 	por popular essas variáveis com suas implementações padrões. Para os demais controllers, as implementações padrões de
 	suas dependências (exceto pela view) são passadas em seu inicializador (veja o método schoolWasSubmitted, por exemplo).
-
 	*/
+
 	var myView: HistoricViewProtocol?
 	var schools: SchoolsProtocol?
 
@@ -44,8 +44,9 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 			self.view = defaultView
 		}
 	}
+	
 
-	// MARK: - SchoolViewControllerProtocol methods
+	// MARK: - HistoricViewControllerProtocol methods
 
 	func testWasSubmitted(_ test: Test) {
 		if let navController = self.navigationController {

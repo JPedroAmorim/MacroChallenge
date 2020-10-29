@@ -10,9 +10,9 @@ import Foundation
 protocol HistoricViewControllerProtocol {
 	/**
 
-	Método que recebe um objeto School da view e a partir dele, é responsável de chamar o próximo controller responsável por exibir dados de um colégio específico
+	Método que recebe um objeto Test da view e a partir dele, é responsável de chamar o próximo controller responsável por exibir dados de uma prova específico
 
-	- parameter school: Escola selecionada pela View.
+	- parameter school: Prova selecionada pela View.
 
 	*/
 	func testWasSubmitted(_ test: Test)

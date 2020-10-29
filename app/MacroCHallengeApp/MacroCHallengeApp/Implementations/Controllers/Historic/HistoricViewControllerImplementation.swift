@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricViewControllerImplementation: UIViewController, SchoolsViewControllerProtocol {
+class HistoricViewControllerImplementation: UIViewController, SchoolsViewControllerProtocol, HistoricViewControllerProtocol {
 	// MARK: - Dependencies
 	/*
 
@@ -50,6 +50,20 @@ class HistoricViewControllerImplementation: UIViewController, SchoolsViewControl
 		if let navController = self.navigationController {
 			let schoolViewController = SchoolViewControllerImplementation(data: school)
 			navController.pushViewController(schoolViewController, animated: true)
+		}
+	}
+
+//	func testWasSubmitted(_ school: School) {
+//		if let navController = self.navigationController {
+//			let schoolViewController = SchoolViewControllerImplementation(data: school)
+//			navController.pushViewController(schoolViewController, animated: true)
+//		}
+//	}
+
+	func testWasSubmitted(_ test: Test) {
+		if let navController = self.navigationController {
+			let overviewViewController = OverviewViewControllerImplementation(data: test)
+			navController.pushViewController(overviewViewController, animated: true)
 		}
 	}
 }

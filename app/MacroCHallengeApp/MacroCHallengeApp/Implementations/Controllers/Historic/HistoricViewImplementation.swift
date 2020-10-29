@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class HistoricViewImplementation: UIView, SchoolsViewProtocol {
+class HistoricViewImplementation: UIView, SchoolsViewProtocol, HistoricViewProtocol {
 	// MARK: -IBOutlets
 //	@IBOutlet weak var tableViewSchools: UITableView!
 	@IBOutlet weak var tableViewSchools: UITableView!
@@ -86,7 +86,8 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableViewSchools.deselectRow(at: indexPath, animated: true)
-		viewController.schoolWasSubmitted(data[indexPath.row])
+//		viewController.schoolWasSubmitted(data[indexPath.row])
+		viewController.testWasSubmitted(data[indexPath.row].tests.first!)
 	}
 
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -94,20 +95,23 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 		let sectionName: String
 		switch section {
 			case 0:
-				sectionName = NSLocalizedString("mySectionName", comment: "mySectionName")
+				sectionName = "Colégio Técnico Industrial"
 			case 1:
-				sectionName = NSLocalizedString("myOtherSectionName", comment: "myOtherSectionName")
-			// ...
+				sectionName = "Cotuca"
+
+			case 2:
+				sectionName = "Etec"
+
 			default:
-				sectionName = "aaaa"
+				sectionName = ""
 		}
 		return sectionName
 	}
 
-	func tableView (tableView:UITableView , heightForHeaderInSection section:Int)->Float
+	private func tableView (tableView:UITableView , heightForHeaderInSection section:Int)->Float
 	{
 
-		var title = self.tableView(tableView, titleForHeaderInSection: section)
+		let title = self.tableView(tableView, titleForHeaderInSection: section)
 		if (title == "") {
 			return 0.0
 		}

@@ -49,7 +49,7 @@ public class ResultsService implements ResultsServiceInterface {
 
     @Override
     public AccumulatedResultsDTO getAccumulatedResults() {
-        List<Results> allResults = resultsRepository.getAll();
+        List<Results> allResults = resultsRepository.findAll();
 
         Integer accumulatedNumberOfQuestions = allResults.stream()
                 .mapToInt(Results::getTotalNumberOfQuestions)

@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ResultsRepository extends JpaRepository<Results, Integer> {
-    List<Results> getAll();
+
 }

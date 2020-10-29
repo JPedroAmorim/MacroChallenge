@@ -45,3 +45,7 @@ x
 Hsrc/main/java/com/macrochallenge/backend/controllers/TestController.java,6/b/6b5d218e5442c2e67a47436a0d01ea96f6f40173
 q
 Asrc/main/java/com/macrochallenge/backend/service/TestService.java,6/f/6ff0809c311512b5fb9698045a574a4f5fcc9afa
+o
+?src/main/java/com/macrochallenge/backend/model/dto/TestDTO.java,b/5/b5005813adfc0e1b6b17dfaa6a73e3c702fb365a
+}
+Msrc/main/java/com/macrochallenge/backend/model/dto/AccumulatedResultsDTO.java,1/4/149c60b5e45eaa8123d9784fbb430fe829dbc4b9

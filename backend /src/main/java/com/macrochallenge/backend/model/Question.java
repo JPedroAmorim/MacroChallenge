@@ -23,7 +23,7 @@ public class Question {
     private Test test;
 
     @NonNull
-    @Column(length = 3500)
+    @Column(length = 4500)
     private String text;
 
     @NonNull
@@ -43,7 +43,7 @@ public class Question {
     private String topic;
 
     @NonNull
-    @Column(length = 3500)
+    @Column(length = 4500)
     private String options;
 
     @NonNull

@@ -15,7 +15,6 @@ protocol HistoricViewControllerProtocol {
 	- parameter school: Escola selecionada pela View.
 
 	*/
-	func schoolWasSubmitted(_ school: School)
 	func testWasSubmitted(_ test: Test)
 
 	// Dependências

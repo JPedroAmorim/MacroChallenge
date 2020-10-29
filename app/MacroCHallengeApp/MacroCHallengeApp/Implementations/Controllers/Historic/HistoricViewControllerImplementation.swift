@@ -46,19 +46,6 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 	}
 
 	// MARK: - SchoolViewControllerProtocol methods
-	func schoolWasSubmitted(_ school: School) {
-		if let navController = self.navigationController {
-			let schoolViewController = SchoolViewControllerImplementation(data: school)
-			navController.pushViewController(schoolViewController, animated: true)
-		}
-	}
-
-//	func testWasSubmitted(_ school: School) {
-//		if let navController = self.navigationController {
-//			let schoolViewController = SchoolViewControllerImplementation(data: school)
-//			navController.pushViewController(schoolViewController, animated: true)
-//		}
-//	}
 
 	func testWasSubmitted(_ test: Test) {
 		if let navController = self.navigationController {

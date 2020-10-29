@@ -44,22 +44,10 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     }
     
     // MARK: - SchoolViewControllerProtocol methods
-    func testWasSubmitted(_ test: TestHeader) {
-        
-        requestSender.getQuestionsForTestRequest(testName: test.name, testYear: test.year) { questions, error in
-            guard let questionsArray = questions else {
-                if let errorMessage = error {
-                    print("aconteceu erro \(errorMessage)")
-                }
-                
-                return // TODO: Dar um aviso ao usuário
-            }
-            
-            if let navController = self.navigationController {
-                let testAsTestType = Test(name: test.name, year: test.year, questions: questionsArray)
-                
-                let overviewViewController = OverviewViewControllerImplementation(data: testAsTestType)
-                navController.pushViewController(overviewViewController, animated: true)
+    func testWasSubmitted(_ test: Test) {
+        if let navController = self.navigationController {
+            let overviewViewController = OverviewViewControllerImplementation(data: test)
+            navController.pushViewController(overviewViewController, animated: true)
         }
     }
     
@@ -70,4 +58,4 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
         }
     }
 }
-}
+

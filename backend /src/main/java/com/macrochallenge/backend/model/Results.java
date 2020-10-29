@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,6 +18,9 @@ public class Results {
 
     @ManyToOne
     private Test test;
+
+    @OneToMany(mappedBy = "result")
+    private List<ResultsPerTopic> resultsPerTopics;
 
     @NonNull
     private Double totalPercentageOfCorrectAnswers;

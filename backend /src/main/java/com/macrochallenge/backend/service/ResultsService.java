@@ -41,6 +41,8 @@ public class ResultsService implements ResultsServiceInterface {
         Integer totalNumberOfQuestions = Integer.valueOf(resultsDTO.getTotalNumberOfQuestions());
         Integer totalNumberOfCorrectAnswers = Integer.valueOf(resultsDTO.getTotalNumberOfCorrectAnswers());
 
+        
+
         Results resultsEntity = new Results(testForResult, totalPercentageOfCorrectAnswers, totalNumberOfQuestions,
                 totalNumberOfCorrectAnswers, resultsDTO.getCorrectAnswers(), resultsDTO.getWrongAnswers());
 

@@ -36,13 +36,17 @@ class RequestSenderImplementation: RequestSenderProtocol {
             return
         }
         
-        let requestBody : [String:String] = ["testName": testName,
+        
+        
+        let requestBody : [String: String] = ["testName": testName,
                                              "testYear": testYear,
                                              "totalPercentageOfCorrectAnswers": String(results.totalPercentageOfCorrectAnswers),
                                              "totalNumberOfQuestions": String(results.totalNumberOfQuestions),
                                              "totalNumberOfCorrectAnswers": String(results.totalNumberOfCorrectAnswers),
                                              "correctAnswers": String(describing: results.correctAnswers),
-                                             "wrongAnswers": String(describing: results.wrongAnswers)]
+                                             "wrongAnswers": String(describing: results.wrongAnswers),
+                                             "answeredQuestions": String(describing: results.answeredQuestions),
+                                             "resultsPerTopic": describeResultsPerTopicAsJSON(results.resultsPerTopic)]
         
         
         sendPostRequestForUrl(url: url, requestBody: requestBody) { error in
@@ -102,5 +106,19 @@ class RequestSenderImplementation: RequestSenderProtocol {
                     completion(errorMessage)
                 }
             }
+    }
+    
+    private func describeResultsPerTopicAsJSON(_ resultsPerTopicDict: [String : ResultsPerTopic]) -> String {
+        var resultString = "["
+        
+        for (key, value) in resultsPerTopicDict {
+            resultString.append("{\"topic\":\"\(key)\", \"totalPercentageOfCorrectAnswers\":\(value.totalPercentageOfCorrectAnswers), \"totalNumberOfCorrectAnswers\":\(value.totalNumberOfCorrectAnswers), \"totalNumberOfAnsweredQuestions\":\(value.totalNumberOfAnsweredQuestions), \"totalNumberOfCorrectAnswers\":\(value.totalNumberOfCorrectAnswers)},")
+        }
+        
+        resultString = String(resultString.dropLast())
+        
+        resultString.append("]")
+        
+        return resultString
     }
 }

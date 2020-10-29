@@ -52,13 +52,22 @@ class RequestSenderImplementationTests: XCTestCase {
             responseExpectation.fulfill()
         }
         
+        let mockResultsPerTopic: [String : ResultsPerTopic] = ["Matemática" : ResultsPerTopic(totalPercentageOfCorrectAnswers: 20.0,
+                                                                                               totalNumberOfCorrectAnswers: 10,
+                                                                                               totalNumberOfAnsweredQuestions: 30,
+                                                                                               totalNumberOfQuestions: 40),
+                                                               "Português" : ResultsPerTopic(totalPercentageOfCorrectAnswers: 30.0,
+                                                                                              totalNumberOfCorrectAnswers: 15,
+                                                                                              totalNumberOfAnsweredQuestions: 30,
+                                                                                              totalNumberOfQuestions: 20)]
+        
         let mockResults = ResultsData(totalPercentageOfCorrectAnswers: 20.0,
                                       totalNumberOfCorrectAnswers: 10,
                                       totalNumberOfAnsweredQuestions: 20,
                                       totalNumberOfQuestions: 50,
-                                      resultsPerTopic: [:],
+                                      resultsPerTopic: mockResultsPerTopic,
                                       test: Test(name: "", year: "", questions: []),
-                                      answeredQuestions: [:],
+                                      answeredQuestions: ["10":"A", "20":"B"],
                                       totalTimeElapsed: "",
                                       correctAnswers: [1, 2, 3],
                                       wrongAnswers: [4, 5, 6])
@@ -67,6 +76,6 @@ class RequestSenderImplementationTests: XCTestCase {
         testSubject.postResultsForTest(testName: "cotuca2019", testYear: "2019", results: mockResults, completion: completionHandler)
 
         // Then
-        wait(for: [responseExpectation], timeout: 10.0)
+        wait(for: [responseExpectation], timeout: 400000000.0)
     }
 }

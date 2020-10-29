@@ -27,6 +27,7 @@ class ConverterJSONTests: XCTestCase {
 		let expectedResult = Question(number: "1", text: "This is a example of text", initialText: "initialText example", images: nil, subtitle: "subtitleExample", options: expectedOptionsDict, answer: "answerTest", topic: "topic")
 
 		XCTAssertEqual(resultQuestion.number, expectedResult.number)
+        print(String(describing: resultQuestion.options))
 		XCTAssertEqual(resultQuestion.options, expectedResult.options)
 		XCTAssertEqual(resultQuestion.images?.count, 3)
 	}

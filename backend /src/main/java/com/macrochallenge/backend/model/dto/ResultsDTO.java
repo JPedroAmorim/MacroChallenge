@@ -25,4 +25,10 @@ public class ResultsDTO {
 
     @NonNull
     private String wrongAnswers;
+
+    @NonNull
+    private String answeredQuestions;
+
+    @NonNull
+    private String resultsPerTopic;
 }

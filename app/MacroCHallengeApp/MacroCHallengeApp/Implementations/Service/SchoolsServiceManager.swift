@@ -23,9 +23,9 @@ class SchoolsServiceManager: SchoolsProtocol {
                location: ["Campinas"],
                logo: UIImage(named: "logoCOTUCA")!,
                notice: getNotice(),
-               tests: [TestHeader(name: "cotuca", year: "2020"),
-                       TestHeader(name: "cotuca", year: "2019"),
-                       TestHeader(name: "cotuca", year: "2018"),
-                       TestHeader(name: "cotuca", year: "2017"),
-                       TestHeader(name: "cotuca", year: "2016")])]
+               tests: [TestHeader(name: "cotuca2020", year: "2020"),
+                       TestHeader(name: "cotuca2019", year: "2019"),
+                       TestHeader(name: "cotuca2018", year: "2018"),
+                       TestHeader(name: "cotuca2017", year: "2017"),
+                       TestHeader(name: "cotuca2016", year: "2016")])]
 }

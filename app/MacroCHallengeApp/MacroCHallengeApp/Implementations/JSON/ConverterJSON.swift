@@ -103,7 +103,8 @@ class ConverterJSON: ConverterJSONProtocol {
         }
         
         if let optionsCurrent = json["options"].string {
-            if let opt = handleOptions(text: optionsCurrent) {
+            if var opt = handleOptions(text: optionsCurrent) {
+                opt[""] = nil
                 options = opt
             } else {
                 throw ErrorQuestion.noOptionsGet
@@ -113,6 +114,7 @@ class ConverterJSON: ConverterJSONProtocol {
         }
         
         let question = Question(number: number, text: text, initialText: initialText, images: images, subtitle: subtitle, options: options, answer: answer, topic: topic)
+        
         
         return question
     }

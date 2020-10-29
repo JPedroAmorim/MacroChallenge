@@ -9,6 +9,7 @@ import UIKit
 import SwiftyJSON
 
 class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControllerProtocol {
+    
     // MARK: - Dependencies
     /*
      
@@ -19,7 +20,7 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
      
      */
     var myView: SchoolsViewProtocol?
-    var schools: SchoolsProtocol?
+    var schoolsManager: SchoolsProtocol?
     
     // MARK: - Lifecycle methods
     override func loadView() {
@@ -35,11 +36,11 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
     
     // MARK: - Setup methods
     private func setupDefaultSchoolsImplementation() {
-        self.schools = MockSchoolsImplementation()
+        self.schoolsManager = SchoolsServiceManager()
     }
     
     private func setupDefaultViewImplementation() {
-        if let data = schools?.getSchools() {
+        if let data = schoolsManager?.getSchools() {
             let defaultView = SchoolsViewImplementation(data: data, controller: self)
             self.myView = defaultView
             self.view = defaultView

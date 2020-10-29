@@ -88,7 +88,9 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableViewSchools.deselectRow(at: indexPath, animated: true)
-		viewController.testWasSubmitted(data[indexPath.row].tests.first!)
+		viewController.testWasSubmitted(data[indexPath.section].tests[indexPath.row])
+
+//		ResultsViewController(test: data, answeredQuestions: questionsAnswered, timeElapsed: "00:00", questionController: questionController)
 	}
 
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

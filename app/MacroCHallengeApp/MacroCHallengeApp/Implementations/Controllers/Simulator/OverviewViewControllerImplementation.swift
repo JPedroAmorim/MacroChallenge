@@ -22,7 +22,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     private(set) var totalPercentageOfCorrectAnswers: Double = 0.0
     private var timeText: String = "00:00"
     private var timer: Timer?
-    
+
     // MARK: - Init methods
     required init(data: Test) {
         self.data = data

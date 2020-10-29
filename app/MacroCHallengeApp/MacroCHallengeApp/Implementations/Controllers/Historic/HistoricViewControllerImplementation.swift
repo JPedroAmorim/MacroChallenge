@@ -17,7 +17,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 	suas dependências (exceto pela view) são passadas em seu inicializador (veja o método schoolWasSubmitted, por exemplo).
 	*/
 
-	var myView: HistoricViewProtocol?
+	var myHistoricView: HistoricViewProtocol?
 	var schools: SchoolsProtocol?
 
 	// MARK: - Lifecycle methods
@@ -40,7 +40,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 	private func setupDefaultViewImplementation() {
 		if let data = schools?.getSchools() {
 			let defaultView = HistoricViewImplementation(data: data, controller: self)
-			self.myView = defaultView
+			self.myHistoricView = defaultView
 			self.view = defaultView
 		}
 	}
@@ -49,11 +49,15 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 	// MARK: - HistoricViewControllerProtocol methods
 
 	func testWasSubmitted(_ test: Test) {
+
+		let overviewViewController = OverviewViewControllerImplementation(data: test)
+		let questionsVC = QuestionViewControllerImplementation(data: test.questions, parentController: overviewViewController)
+
+		questionsVC.shouldDisplayAnswer = true
+
 		if let navController = self.navigationController {
-			let overviewViewController = OverviewViewControllerImplementation(data: test)
-			navController.pushViewController(overviewViewController, animated: true)
+			let resultsVC = ResultsViewController(test: test, answeredQuestions: ["1":"a", "2": "b"], timeElapsed: "00:00", questionController: questionsVC)
+			navController.pushViewController(resultsVC, animated: true)
 		}
 	}
 }
-
-

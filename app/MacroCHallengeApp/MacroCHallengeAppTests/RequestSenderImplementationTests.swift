@@ -33,7 +33,7 @@ class RequestSenderImplementationTests: XCTestCase {
         }
         
         // When
-        testSubject.getQuestionsForTestRequest(testName: "cti2019", testYear: "2019", completion: completionHandler)
+        testSubject.getQuestionsForTestRequest(testName: "cotuca2019", testYear: "2019", completion: completionHandler)
 
         // Then
         wait(for: [responseExpectation], timeout: 10.0)
@@ -67,6 +67,6 @@ class RequestSenderImplementationTests: XCTestCase {
         testSubject.postResultsForTest(testName: "cotuca2019", testYear: "2019", results: mockResults, completion: completionHandler)
 
         // Then
-        wait(for: [responseExpectation], timeout: 40000.0)
+        wait(for: [responseExpectation], timeout: 10.0)
     }
 }

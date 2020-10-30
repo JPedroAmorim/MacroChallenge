@@ -69,12 +69,22 @@
 		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
+		C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */; };
+		C4043982254B1829009CBB5B /* HistoricResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4043981254B1829009CBB5B /* HistoricResultsViewController.swift */; };
 		C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
 		C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436ACA9253A337100B18303 /* AnswersCollectionView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
 		C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
 		C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
+		C460D99125486DE8008711F3 /* HistoricViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */; };
+		C460D99C25486FD4008711F3 /* HistoricViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */; };
+		C460D9B42548778B008711F3 /* HistoricViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */; };
+		C460D9B52548778B008711F3 /* HistoricViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */; };
+		C460D9B62548778B008711F3 /* HistoricViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */; };
+		C460D9BB2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
+		C460D9BC2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
+		C460D9BD2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
 		C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
 		C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
@@ -185,6 +195,7 @@
 		D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E82FF252E2E50007E8CBD /* OverviewViewImplementation.swift */; };
 		D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
 		D59E830A252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
+		D5A71ABC254C42250085ABCD /* NoticeViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */; };
 		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
@@ -286,10 +297,16 @@
 		AACB2A94AF164BB3EEB16172 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1018FB61C603ED420A9B2D7 /* Pods-MacroCHallengeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewProtocol.swift; sourceTree = "<group>"; };
+		C4043981254B1829009CBB5B /* HistoricResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricResultsViewController.swift; sourceTree = "<group>"; };
 		C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONProtocol.swift; sourceTree = "<group>"; };
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
+		C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerImplementation.swift; sourceTree = "<group>"; };
+		C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerProtocol.swift; sourceTree = "<group>"; };
+		C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewImplementation.swift; sourceTree = "<group>"; };
+		C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricViewImplementation.xib; sourceTree = "<group>"; };
 		C465A05F2541B24300805BC7 /* ConverterJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSON.swift; sourceTree = "<group>"; };
 		C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONTests.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
@@ -570,6 +587,12 @@
 				2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */,
 				2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */,
 				2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */,
+				C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */,
+				C4043981254B1829009CBB5B /* HistoricResultsViewController.swift */,
+				C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */,
+				C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */,
+				C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */,
+				C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -790,6 +813,7 @@
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
+				C460D9BB2548779D008711F3 /* HistoricViewImplementation.xib in Resources */,
 				4FFF6BBC252CA7480015DFE7 /* QuestionViewImplementation.xib in Resources */,
 				2F1FCF5D2547523D0040169E /* NoticeInfoViewImplementation.xib in Resources */,
 				2F9A67D02535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,
@@ -823,6 +847,7 @@
 				2F9A67D12535FB37002EE9B2 /* PieChartTableViewCell.xib in Resources */,
 				2FF53936252E291500C0107B /* NoticeTableViewCell.xib in Resources */,
 				D586B597252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
+				C460D9BC2548779D008711F3 /* HistoricViewImplementation.xib in Resources */,
 				D565EF59252BAF9100426648 /* SchoolsViewImplementation.xib in Resources */,
 				2F9A67C82535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 			);
@@ -832,6 +857,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C460D9BD2548779D008711F3 /* HistoricViewImplementation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,7 +994,10 @@
 				4FAEFFD4254AFFB6001BE984 /* SchoolsServiceManager.swift in Sources */,
 				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */,
+				C460D99C25486FD4008711F3 /* HistoricViewControllerProtocol.swift in Sources */,
 				D5E603492547472700B96DA4 /* RequestSenderImplementation.swift in Sources */,
+				C460D99125486DE8008711F3 /* HistoricViewControllerImplementation.swift in Sources */,
+				C460D9B42548778B008711F3 /* HistoricViewImplementation.swift in Sources */,
 				2F1FCF242541C8250040169E /* NoticeViewControllerProtocol.swift in Sources */,
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
@@ -993,6 +1022,7 @@
 				2F1FCF2E2541DA0E0040169E /* Notice.swift in Sources */,
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				2F1FCF40254736790040169E /* NoticeInfoViewControllerProtocol.swift in Sources */,
+				C4043982254B1829009CBB5B /* HistoricResultsViewController.swift in Sources */,
 				C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D5E603312547411800B96DA4 /* RequestSenderProtocol.swift in Sources */,
@@ -1009,6 +1039,7 @@
 				D5E6033F2547468100B96DA4 /* Constants.swift in Sources */,
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
+				C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */,
 				D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */,
 				2F9A67CE2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
 				D565EF3D252BACCB00426648 /* SchoolsProtocol.swift in Sources */,
@@ -1026,6 +1057,7 @@
 				D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				D5E603322547411800B96DA4 /* RequestSenderProtocol.swift in Sources */,
 				D5F4C9A025377BDD003B568A /* QuestionImageTableViewCell.swift in Sources */,
+				C460D9B52548778B008711F3 /* HistoricViewImplementation.swift in Sources */,
 				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
 				D53985942548706400EB09DA /* NoticeTopicTableViewCell.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
@@ -1066,6 +1098,7 @@
 				D586B573252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
+				D5A71ABC254C42250085ABCD /* NoticeViewControllerImplementation.swift in Sources */,
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				D539856D25486A0F00EB09DA /* RequestSenderImplementationTests.swift in Sources */,
 				D59A37792535F1E300AD14F1 /* ResultsViewController.swift in Sources */,
@@ -1100,6 +1133,7 @@
 				C465A12C25431F0C00805BC7 /* ResultsViewProtocol.swift in Sources */,
 				C465A1522543204B00805BC7 /* QuestionHeaderTableViewCell.swift in Sources */,
 				D53985842548702900EB09DA /* Notice.swift in Sources */,
+				C460D9B62548778B008711F3 /* HistoricViewImplementation.swift in Sources */,
 				C465A16B2543209F00805BC7 /* QuestionImageTableViewCell.swift in Sources */,
 				D53985802548702500EB09DA /* School.swift in Sources */,
 				C465A0F825431E1600805BC7 /* Question.swift in Sources */,

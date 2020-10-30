@@ -46,11 +46,13 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     
     // MARK: - SchoolViewControllerProtocol methods
     func testWasSubmitted(_ test: TestHeader) {
-        
+        self.myView?.startActivity()
         requestSender.getQuestionsForTestRequest(
             testName: test.name,
             testYear: test.year,
             completion: { questions, error in
+                
+                self.myView?.stopActivity()
                 guard let questionsArray = questions else {
                     print("Erro ao fazer request das questoes:\n\t \(error ?? "Error message is nil")")
                     let alert = UIAlertController(title: "Erro",

@@ -124,7 +124,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         
         for (questionNumber, answer) in answeredQuestions {
             if let question = testQuestions.filter({ $0.number == questionNumber }).first {
-                if question.answer == answer {
+                if question.answer == answer.uppercased() {
                     correctAnswers += 1
                 }
             }
@@ -166,7 +166,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         for (questionNumber, answer) in answeredQuestions {
             if let question = testQuestions.filter({ $0.number == questionNumber }).first {
                 if question.topic == topic {
-                    if question.answer == answer {
+                    if question.answer == answer.uppercased() {
                         topicTotalCorrect += 1
                     }
                     topicTotalAnswered += 1
@@ -221,7 +221,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         for (questionNumber, answer) in answeredQuestions {
             if let question = testQuestions.filter({ $0.number == questionNumber }).first {
                 if let questionNumberAsInt = Int(questionNumber) {
-                    if question.answer == answer {
+                    if question.answer == answer.uppercased() {
                         correctUserAnswers.append(questionNumberAsInt)
                     }
                 }

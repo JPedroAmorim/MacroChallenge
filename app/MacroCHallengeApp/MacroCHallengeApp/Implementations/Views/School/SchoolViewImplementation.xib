@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchoolViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="vfp-wV-bPa" id="rU6-PY-nd9"/>
                 <outlet property="testTableView" destination="iPB-2l-wMy" id="JMK-HV-z6P"/>
             </connections>
         </placeholder>
@@ -29,6 +30,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-wV-bPa">
+                    <rect key="frame" x="197" y="358" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,9 +40,11 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iPB-2l-wMy" secondAttribute="bottom" id="MsR-Xc-KsT"/>
                 <constraint firstItem="iPB-2l-wMy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="OTg-7b-Wc4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iPB-2l-wMy" secondAttribute="trailing" id="Ufv-dI-twe"/>
+                <constraint firstItem="vfp-wV-bPa" firstAttribute="centerX" secondItem="iPB-2l-wMy" secondAttribute="centerX" id="dG5-IZ-y37"/>
                 <constraint firstItem="iPB-2l-wMy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="om8-34-03C"/>
+                <constraint firstItem="vfp-wV-bPa" firstAttribute="centerY" secondItem="iPB-2l-wMy" secondAttribute="centerY" id="ybK-Tz-Zv2"/>
             </constraints>
-            <point key="canvasLocation" x="142" y="149"/>
+            <point key="canvasLocation" x="140.57971014492756" y="148.36956521739131"/>
         </view>
     </objects>
 </document>

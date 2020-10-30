@@ -10,7 +10,7 @@ import Foundation
 
 //	MARK: - Error Handling
 enum ErrorQuestion: String, Error {
-    
+
     case noNumber = "Não foi possível obter o número da questão para criar objeto tipo Question, confira ConverterJSON"
     case noText = "Não foi possível obter o texto da questão para criar objeto tipo Question, confira ConverterJSON"
     case noInitialText = "Não foi possível obter o texto  inicial da questão para criar objeto tipo Question, confira ConverterJSON"

@@ -8,8 +8,19 @@
 import UIKit
 
 class SchoolViewImplementation: UIView, SchoolViewProtocol {
+    func startActivity() {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.hidesWhenStopped = true
+    }
+    
+    func stopActivity() {
+        self.activityIndicator.stopAnimating()
+    }
+    
     // MARK: - IBOutlets
     @IBOutlet weak var testTableView: UITableView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Dependencies
     var viewController: SchoolViewControllerProtocol
@@ -26,6 +37,7 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
         super.init(frame: CGRect.zero)
         initFromNib()
         setupTableView()
+        self.activityIndicator.isHidden = true
     }
     
     required init?(coder: NSCoder) {

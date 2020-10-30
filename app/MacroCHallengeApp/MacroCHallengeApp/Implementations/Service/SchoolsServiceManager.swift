@@ -27,5 +27,6 @@ class SchoolsServiceManager: SchoolsProtocol {
                        TestHeader(name: "cotuca2019", year: "2019"),
                        TestHeader(name: "cotuca2018", year: "2018"),
                        TestHeader(name: "cotuca2017", year: "2017"),
-                       TestHeader(name: "cotuca2016", year: "2016")])]
+                       TestHeader(name: "cotuca2016", year: "2016")]),
+	]
 }

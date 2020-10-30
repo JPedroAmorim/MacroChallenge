@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ResultsPerTopic {
+struct ResultsPerTopic: Equatable {
     private(set) var totalPercentageOfCorrectAnswers: Double
     private(set) var totalNumberOfCorrectAnswers: Int
     private(set) var totalNumberOfAnsweredQuestions: Int

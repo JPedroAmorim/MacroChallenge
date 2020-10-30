@@ -10,20 +10,20 @@ import Foundation
 
 //	MARK: - Error Handling
 enum ErrorQuestion: String, Error {
-
-    case noNumber = "Não foi possível obter o número da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noText = "Não foi possível obter o texto da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noInitialText = "Não foi possível obter o texto  inicial da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noSubtitle = "Não foi possível obter o subtitulo da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noAnswer = "Não foi possível obter a resposta da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noTopic = "Não foi possível obter o tópico da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noImagesURLs = "Não foi possível obter a URL das imagens da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noOptions = "Não foi possível obter as alternativas da questão para criar objeto tipo Question, confira ConverterJSON"
-    case noOptionsGet = "Não foi  possível converter string de alternativas para criar objeto tipo Question, confira ConverterJSON"
-    case noImagesAvailable = "Não foi possível executar download das imagens para criar objeto tipo Question, confira ConverterJSON"
+    
+    case noNumber = "Não foi possível obter o número da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noText = "Não foi possível obter o texto da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noInitialText = "Não foi possível obter o texto  inicial da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noSubtitle = "Não foi possível obter o subtitulo da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noAnswer = "Não foi possível obter a resposta da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noTopic = "Não foi possível obter o tópico da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noImagesURLs = "Não foi possível obter a URL das imagens da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noOptions = "Não foi possível obter as alternativas da questão para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noOptionsGet = "Não foi  possível converter string de alternativas para criar objeto tipo Question, confira ConverterQuestionsJSON"
+    case noImagesAvailable = "Não foi possível executar download das imagens para criar objeto tipo Question, confira ConverterQuestionsJSON"
 }
 
-class ConverterJSON: ConverterJSONProtocol {
+class ConverterQuestionsJSON: ConverterQuestionsJSONProtocol {
     //	MARK: - ConverterJSONProtocol methods
     func createQuestions(jsonArray: [JSON]) -> [Question]{
         var questionArray: [Question] = []

@@ -8,7 +8,7 @@
 import SwiftyJSON
 import XCTest
 
-class ConverterJSONTests: XCTestCase {
+class ConverterQuestionsJSONTests: XCTestCase {
 	// MARK: - Setup and teardown methods
 	override func setUpWithError() throws {}
 	override func tearDownWithError() throws {}
@@ -17,7 +17,7 @@ class ConverterJSONTests: XCTestCase {
 
 		// Given
 		let inputJSON = createValidMockJSON()
-		let testSubject = ConverterJSON()
+		let testSubject = ConverterQuestionsJSON()
 
 		// When
 		let resultQuestion = try testSubject.createQuestion(json: inputJSON)
@@ -36,7 +36,7 @@ class ConverterJSONTests: XCTestCase {
 
 		// Given
 		let inputJSON = createInvalidMockJSON()
-		let testSubject = ConverterJSON()
+		let testSubject = ConverterQuestionsJSON()
 
 		do {
 			// When
@@ -54,7 +54,7 @@ class ConverterJSONTests: XCTestCase {
 
 		// Given
 		let inputJSON = createInvalidOptionsMockJSON()
-		let testSubject = ConverterJSON()
+		let testSubject = ConverterQuestionsJSON()
 
 		do {
 			// When

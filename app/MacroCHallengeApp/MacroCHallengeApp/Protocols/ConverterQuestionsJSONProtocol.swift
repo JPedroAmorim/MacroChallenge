@@ -8,7 +8,7 @@
 import SwiftyJSON
 import Foundation
 
-protocol ConverterJSONProtocol {
+protocol ConverterQuestionsJSONProtocol {
 	/**
 	Função responsável por converter um objeto JSON em um objeto da  classe Question
 
@@ -17,8 +17,8 @@ protocol ConverterJSONProtocol {
 	Como usar:
 
 	do {
-	let converterJSON = try ConverterJSON().createQuestion(json: json)
-	print(converterJSON)
+	let converterQuestionsJSON = try ConverterQuestionsJSON().createQuestion(json: json)
+	print(converterQuestionsJSON)
 	}
 	catch let error as UserValidationError {
 	print(error.rawValue)

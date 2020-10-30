@@ -462,27 +462,6 @@
 			path = Simulator;
 			sourceTree = "<group>";
 		};
-		C460D98B25486D4D008711F3 /* Metrics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Metrics;
-			sourceTree = "<group>";
-		};
-		C460D98F25486DD1008711F3 /* Historic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Historic;
-			sourceTree = "<group>";
-		};
-		C460D9A225487277008711F3 /* Historic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Historic;
-			sourceTree = "<group>";
-		};
 		C465A0562541B1A300805BC7 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,7 +542,6 @@
 		D565EF2C252BAC1C00426648 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C460D98F25486DD1008711F3 /* Historic */,
 				D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */,
 				D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */,
 				D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */,
@@ -602,7 +580,6 @@
 		D565EF55252BAF6500426648 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C460D98B25486D4D008711F3 /* Metrics */,
 				C460D98A25486D32008711F3 /* Simulator */,
 				C460D98925486D24008711F3 /* Historic */,
 			);
@@ -612,7 +589,6 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C460D9A225487277008711F3 /* Historic */,
 				2F1FCF7A254857C10040169E /* Metrics */,
 				547EB57D25432B2F008A3DCC /* NoticeInfo */,
 				2F1FCF0C2541B49B0040169E /* Notice */,

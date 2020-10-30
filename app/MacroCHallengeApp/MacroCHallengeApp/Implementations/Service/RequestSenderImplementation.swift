@@ -13,6 +13,7 @@ import SwiftyJSON
 class RequestSenderImplementation: RequestSenderProtocol {
     
     private var parser = ConverterQuestionsJSON()
+    private var parserForGeneralResults = ConverterResultsJSON()
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "tests?testName=\(testName)&testYear=\(testYear)") else {

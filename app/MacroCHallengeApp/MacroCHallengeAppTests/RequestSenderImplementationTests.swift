@@ -76,6 +76,6 @@ class RequestSenderImplementationTests: XCTestCase {
         testSubject.postResultsForTest(testName: "cotuca2019", testYear: "2019", results: mockResults, completion: completionHandler)
 
         // Then
-        wait(for: [responseExpectation], timeout: 20.0)
+        wait(for: [responseExpectation], timeout: 5.0)
     }
 }

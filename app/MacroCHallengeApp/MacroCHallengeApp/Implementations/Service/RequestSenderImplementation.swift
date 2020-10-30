@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class RequestSenderImplementation: RequestSenderProtocol {
     
-    private var parser = ConverterJSON()
+    private var parser = ConverterQuestionsJSON()
     //oi
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {

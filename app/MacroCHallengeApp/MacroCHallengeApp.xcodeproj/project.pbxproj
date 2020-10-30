@@ -85,9 +85,9 @@
 		C460D9BB2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
 		C460D9BC2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
 		C460D9BD2548779D008711F3 /* HistoricViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */; };
-		C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
-		C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
-		C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterJSON.swift */; };
+		C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */; };
+		C465A0612541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */; };
+		C465A0622541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */; };
 		C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */; };
 		C465A0F825431E1600805BC7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
 		C465A0FC25431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */; };
@@ -307,7 +307,7 @@
 		C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewImplementation.swift; sourceTree = "<group>"; };
 		C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricViewImplementation.xib; sourceTree = "<group>"; };
-		C465A05F2541B24300805BC7 /* ConverterJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSON.swift; sourceTree = "<group>"; };
+		C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterQuestionsJSON.swift; sourceTree = "<group>"; };
 		C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONTests.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
@@ -464,7 +464,7 @@
 		C465A0562541B1A300805BC7 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				C465A05F2541B24300805BC7 /* ConverterJSON.swift */,
+				C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -980,7 +980,7 @@
 				D59A37812535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */,
 				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
-				C465A0602541B24300805BC7 /* ConverterJSON.swift in Sources */,
+				C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D59A37662535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
@@ -1074,7 +1074,7 @@
 				D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				D53985A42548708A00EB09DA /* MetricsViewControllerProtocol.swift in Sources */,
 				D53985902548706000EB09DA /* NoticeViewImplementation.swift in Sources */,
-				C465A0612541B24300805BC7 /* ConverterJSON.swift in Sources */,
+				C465A0612541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
 				D586B591252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				C465A10425431E7700805BC7 /* AnswersCollectionView.swift in Sources */,
 				2F9A67CF2535FB37002EE9B2 /* PieChartTableViewCell.swift in Sources */,
@@ -1141,7 +1141,7 @@
 				C465A13D25431FB000805BC7 /* QuestionViewProtocol.swift in Sources */,
 				C465A11825431EBF00805BC7 /* OverviewCollectionCell.swift in Sources */,
 				C465A10825431E7800805BC7 /* AnswersCollectionView.swift in Sources */,
-				C465A0622541B24300805BC7 /* ConverterJSON.swift in Sources */,
+				C465A0622541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
 				C465A0FC25431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */,
 				C465A15E2543207D00805BC7 /* QuestionTextTableViewCell.swift in Sources */,
 				C465A14125431FCA00805BC7 /* OverviewViewProtocol.swift in Sources */,

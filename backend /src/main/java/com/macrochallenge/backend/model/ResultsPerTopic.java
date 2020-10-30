@@ -32,4 +32,15 @@ public class ResultsPerTopic {
 
     @NonNull
     private Integer totalNumberOfQuestions;
+
+    public ResultsPerTopic(Results result, String topic, Double totalPercentageOfCorrectAnswers,
+                           Integer totalNumberOfCorrectAnswers, Integer totalNumberOfQuestions,
+                           Integer totalNumberOfAnsweredQuestions) {
+        this.result = result;
+        this.topic = topic;
+        this.totalPercentageOfCorrectAnswers = totalPercentageOfCorrectAnswers;
+        this.totalNumberOfCorrectAnswers = totalNumberOfCorrectAnswers;
+        this.totalNumberOfAnsweredQuestions = totalNumberOfAnsweredQuestions;
+        this.totalNumberOfQuestions = totalNumberOfQuestions;
+    }
 }

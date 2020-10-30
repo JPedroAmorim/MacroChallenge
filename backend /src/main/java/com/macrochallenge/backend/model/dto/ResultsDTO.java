@@ -18,6 +18,9 @@ public class ResultsDTO {
     private String totalNumberOfQuestions;
 
     @NonNull
+    private String totalNumberOfAnsweredQuestions;
+
+    @NonNull
     private String totalNumberOfCorrectAnswers;
 
     @NonNull

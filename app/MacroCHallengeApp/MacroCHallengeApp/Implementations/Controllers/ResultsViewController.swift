@@ -10,6 +10,7 @@ import UIKit
 class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     // MARK: - Dependencies
     var myView: ResultsViewProtocol?
+    var requestSender = RequestSenderImplementation()
     
     // MARK: - Private attributes
     private var test: Test
@@ -75,6 +76,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
                                       correctAnswers: correctUserAnswers,
                                       wrongAnswers: wrongUserAnswers)
         self.resultsData = resultsData
+        sendResultsRequest(resultsData)
     }
     
     // MARK: - ResultsViewControllerProtocol methods
@@ -237,5 +239,21 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         }
         
         wrongUserAnswers.sort()
+    }
+    
+    private func sendResultsRequest(_ resultsData: ResultsData) {
+        requestSender.postResultsForTest(testName: test.name, testYear: test.year, results: resultsData) { error in
+            if let errorMessage = error {
+                print("Erro ao fazer request dos resultados:\n\t \(errorMessage)")
+                let alert = UIAlertController(title: "Erro",
+                                              message: "Falha ao gravar os resultados no servidor, verifique sua conexão",
+                                              preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok",
+                                              style: .default,
+                                              handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+        }
     }
 }

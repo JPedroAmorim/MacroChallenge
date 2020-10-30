@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc71e0ac-de1d-4ae2-a654-b1125e718126" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Controllers/HistoricViewImplementation.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Controllers/HistoricViewImplementation.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/GeneralResultsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsPerTopicDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Controllers/ResultsViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Controllers/ResultsViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Service/RequestSenderImplementation.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Service/RequestSenderImplementation.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/ResultsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/ResultsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/ResultsPerTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/ResultsPerTopic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/AccumulatedResultsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/ResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/ResultsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/interfaces/ResultsServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/interfaces/ResultsServiceInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +139,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1192" y="404" width="488" height="275" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1920.1080/0.0.1440.900@-1920.0.1920.1080" timestamp="1603304786216" />
+    <state x="-1222" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604064624320">
+      <screen x="-1920" y="23" width="1920" height="977" />
+    </state>
+    <state x="-1222" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.23.1920.977/0.23.1440.877@-1920.23.1920.977" timestamp="1604064624320" />
     <state width="1878" height="297" key="GridCell.Tab.0.bottom" timestamp="1603985151300">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -235,9 +252,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1252" y="250" width="584" height="580" key="find.popup/-1920.0.1920.1080/0.0.1440.900@-1920.0.1920.1080" timestamp="1603977872447" />
-    <state x="-1295" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1603807910187">
-      <screen x="-1920" y="23" width="1920" height="980" />
+    <state x="-1295" y="237" width="670" height="674" key="search.everywhere.popup" timestamp="1604068674389">
+      <screen x="-1920" y="23" width="1920" height="977" />
     </state>
+    <state x="-1295" y="237" width="670" height="674" key="search.everywhere.popup/-1920.23.1920.977/0.23.1440.877@-1920.23.1920.977" timestamp="1604068674389" />
     <state x="-1295" y="238" width="670" height="676" key="search.everywhere.popup/-1920.23.1920.980/0.23.1440.877@-1920.23.1920.980" timestamp="1603807910187" />
   </component>
   <component name="XDebuggerManager">
@@ -245,7 +263,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/controllers/ResultsController.java</url>
-          <line>23</line>
+          <line>22</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

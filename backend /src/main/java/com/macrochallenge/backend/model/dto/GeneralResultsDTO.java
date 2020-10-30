@@ -2,14 +2,20 @@ package com.macrochallenge.backend.model.dto;
 
 import lombok.Data;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+
+import java.util.List;
 
 @Data
-@RequiredArgsConstructor
-public class AccumulatedResultsDTO {
+public class GeneralResultsDTO {
+    @NonNull
+    private String totalPercentageOfCorrectAnswers;
+
     @NonNull
     private String totalNumberOfQuestions;
 
     @NonNull
     private String totalNumberOfCorrectAnswers;
+
+    @NonNull
+    private List<ResultsPerTopicDTO> resultsPerTopic;
 }

@@ -1,6 +1,5 @@
 package com.macrochallenge.backend.controllers;
 
-import com.macrochallenge.backend.model.dto.AccumulatedResultsDTO;
 import com.macrochallenge.backend.model.dto.ResultsDTO;
 import com.macrochallenge.backend.service.interfaces.ResultsServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;

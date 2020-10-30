@@ -13,7 +13,6 @@ import SwiftyJSON
 class RequestSenderImplementation: RequestSenderProtocol {
     
     private var parser = ConverterJSON()
-    //oi
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "tests?testName=\(testName)&testYear=\(testYear)") else {
@@ -36,7 +35,7 @@ class RequestSenderImplementation: RequestSenderProtocol {
             completion("Erro ao decodificar a URL")
             return
         }
-        
+        results.t
         
         
         let requestBody : [String: String] = ["testName": testName,
@@ -44,6 +43,7 @@ class RequestSenderImplementation: RequestSenderProtocol {
                                              "totalPercentageOfCorrectAnswers": String(results.totalPercentageOfCorrectAnswers),
                                              "totalNumberOfQuestions": String(results.totalNumberOfQuestions),
                                              "totalNumberOfCorrectAnswers": String(results.totalNumberOfCorrectAnswers),
+                                             "totalNumberOfAnsweredQuestions": String(results.totalNumberOfAnsweredQuestions),
                                              "correctAnswers": String(describing: results.correctAnswers),
                                              "wrongAnswers": String(describing: results.wrongAnswers),
                                              "answeredQuestions": String(describing: results.answeredQuestions),

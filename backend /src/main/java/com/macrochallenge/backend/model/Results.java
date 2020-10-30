@@ -26,6 +26,9 @@ public class Results {
     private Double totalPercentageOfCorrectAnswers;
 
     @NonNull
+    private Integer totalNumberOfAnsweredQuestions;
+
+    @NonNull
     private Integer totalNumberOfQuestions;
 
     @NonNull
@@ -37,13 +40,15 @@ public class Results {
     @NonNull
     private String wrongAnswers;
 
-    public Results(Test test, Double totalPercentageOfCorrectAnswers, Integer totalNumberOfQuestions,
-                   Integer totalNumberOfCorrectAnswers, String correctAnswers, String wrongAnswers) {
+    public Results(Test test, Double totalPercentageOfCorrectAnswers, Integer totalNumberOfAnsweredQuestions,
+                   Integer totalNumberOfQuestions, Integer totalNumberOfCorrectAnswers, String correctAnswers,
+                   String wrongAnswers) {
         this.test = test;
         this.totalPercentageOfCorrectAnswers = totalPercentageOfCorrectAnswers;
         this.totalNumberOfQuestions = totalNumberOfQuestions;
         this.totalNumberOfCorrectAnswers = totalNumberOfCorrectAnswers;
         this.correctAnswers = correctAnswers;
         this.wrongAnswers = wrongAnswers;
+        this.totalNumberOfAnsweredQuestions = totalNumberOfAnsweredQuestions;
     }
 }

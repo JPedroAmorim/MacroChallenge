@@ -13,9 +13,9 @@ class School {
     private(set) var location: [String]
     private(set) var logo: UIImage
     private(set) var notice: Notice
-    private(set) var tests: [Test]
+    private(set) var tests: [TestHeader]
     
-    init(name: String, location: [String], logo: UIImage, notice: Notice, tests: [Test]) {
+    init(name: String, location: [String], logo: UIImage, notice: Notice, tests: [TestHeader]) {
         self.name = name
         self.location = location
         self.logo = logo

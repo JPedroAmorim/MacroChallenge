@@ -57,8 +57,6 @@
 		4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */; };
 		4FAEFFD4254AFFB6001BE984 /* SchoolsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */; };
 		4FAEFFD9254B06ED001BE984 /* NoticeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */; };
-		4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */; };
-		4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */; };
 		4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
 		4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		4FFF6BAC252BA4F10015DFE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
@@ -232,7 +230,6 @@
 		D5F4C99825377BD7003B568A /* QuestionOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BDF252F3D720015DFE7 /* QuestionOptionTableViewCell.swift */; };
 		D5F4C99C25377BDA003B568A /* QuestionTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BEC252F62160015DFE7 /* QuestionTextTableViewCell.swift */; };
 		D5F4C9A025377BDD003B568A /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
-		D5F4C9A425377BE0003B568A /* QuestionButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,7 +292,6 @@
 		4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsServiceManager.swift; sourceTree = "<group>"; };
 		4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeMock.swift; sourceTree = "<group>"; };
 		4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionButtonsTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionButtonsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionButtonsTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionButtonsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6B9E252BA3510015DFE7 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		4FFF6BA6252BA4720015DFE7 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4FFF6BAB252BA4F10015DFE7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -442,6 +438,14 @@
 			path = Results;
 			sourceTree = "<group>";
 		};
+		4F6DE00F254C908000D7BCAD /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		4FFF6B9D252BA3250015DFE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +510,7 @@
 				D565EEE5252B813700426648 /* Products */,
 				879AAAF9B05EF24979DBDD6F /* Pods */,
 				E49B9671FC4CF1EB23537FB7 /* Frameworks */,
+				4F6DE00F254C908000D7BCAD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -689,8 +694,6 @@
 				4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */,
 				4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */,
 				4FFF6BF1252F62310015DFE7 /* QuestionImageTableViewCell.xib */,
-				4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */,
-				4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */,
 				4FAC80E825377538006F947A /* QuestionHeaderTableViewCell.swift */,
 				4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */,
 			);
@@ -830,7 +833,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */,
-				4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */,
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
 				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
@@ -1001,7 +1003,7 @@
 				2F1FCF8625485AE30040169E /* MetricsViewProtocol.swift in Sources */,
 				D59A37812535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */,
-				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
+				C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
 				C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
 				2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */,
@@ -1097,7 +1099,6 @@
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,
 				D5F4C99025377B9A003B568A /* HorizontalChartView.swift in Sources */,
 				D5C6C4E5254C6C6300489068 /* HistoricViewProtocol.swift in Sources */,
-				D5F4C9A425377BE0003B568A /* QuestionButtonsTableViewCell.swift in Sources */,
 				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D5E603402547468100B96DA4 /* Constants.swift in Sources */,
 				D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,

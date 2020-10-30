@@ -8,6 +8,7 @@
 import UIKit
 
 class QuestionViewControllerImplementation: UIViewController, QuestionViewControllerProtocol {
+    
     // MARK: - Dependencies
     var myView: QuestionViewProtocol?
     var parentController: OverviewViewControllerProtocol
@@ -73,6 +74,14 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
                               shouldPresentAnswer: self.shouldDisplayAnswer)
             setNavTitle(index: data[currentQuestionIndex].number)
         }
+    }
+    
+    func finishTest() {
+        self.parentController.hasEnded()
+    }
+
+    func allQuestionsAreAnswered() -> Bool {
+        return data.count == answeredQuestions.count
     }
     
     func displayQuestion(_ question: Question) {

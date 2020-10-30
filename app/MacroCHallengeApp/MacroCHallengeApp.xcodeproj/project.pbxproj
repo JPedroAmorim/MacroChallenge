@@ -40,6 +40,12 @@
 		2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */; };
 		2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67E8253A0219002EE9B2 /* HeaderCollectionReusableView.swift */; };
 		2F9A67EB253A021B002EE9B2 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67E9253A0219002EE9B2 /* HeaderCollectionReusableView.xib */; };
+		2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */; };
+		2FBD62F1254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */; };
+		2FBD62FC254C51DD006A8725 /* ConverterResultsJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */; };
+		2FBD62FD254C51DD006A8725 /* ConverterResultsJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */; };
+		2FBD6302254C6627006A8725 /* ConverterResultsJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD6301254C6627006A8725 /* ConverterResultsJSONTests.swift */; };
+		2FBD6303254C6627006A8725 /* ConverterResultsJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD6301254C6627006A8725 /* ConverterResultsJSONTests.swift */; };
 		2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53929252CBEF200C0107B /* TestTableViewCell.xib */; };
@@ -71,12 +77,12 @@
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
 		C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */; };
 		C4043982254B1829009CBB5B /* HistoricResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4043981254B1829009CBB5B /* HistoricResultsViewController.swift */; };
-		C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
+		C41FDDB525484A4D0043055A /* ConverterQuestionsJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterQuestionsJSONProtocol.swift */; };
 		C436ACA5253A336C00B18303 /* AnswersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */; };
 		C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436ACA9253A337100B18303 /* AnswersCollectionView.xib */; };
 		C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44560D12535F292007D945C /* HorizontalChartView.swift */; };
-		C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
-		C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */; };
+		C460D96C25485C06008711F3 /* ConverterQuestionsJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterQuestionsJSONProtocol.swift */; };
+		C460D96D25485C06008711F3 /* ConverterQuestionsJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FDDB425484A4D0043055A /* ConverterQuestionsJSONProtocol.swift */; };
 		C460D99125486DE8008711F3 /* HistoricViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */; };
 		C460D99C25486FD4008711F3 /* HistoricViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */; };
 		C460D9B42548778B008711F3 /* HistoricViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */; };
@@ -88,7 +94,7 @@
 		C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */; };
 		C465A0612541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */; };
 		C465A0622541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */; };
-		C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */; };
+		C465A07B25429D9700805BC7 /* ConverterQuestionsJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465A07A25429D9700805BC7 /* ConverterQuestionsJSONTests.swift */; };
 		C465A0F825431E1600805BC7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BAB252BA4F10015DFE7 /* Question.swift */; };
 		C465A0FC25431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */; };
 		C465A10025431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67DE253780A5002EE9B2 /* ProgressBarTableViewCell.swift */; };
@@ -266,6 +272,9 @@
 		2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarTableViewCell.xib; sourceTree = "<group>"; };
 		2F9A67E8253A0219002EE9B2 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		2F9A67E9253A0219002EE9B2 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSON.swift; sourceTree = "<group>"; };
+		2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSONProtocol.swift; sourceTree = "<group>"; };
+		2FBD6301254C6627006A8725 /* ConverterResultsJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSONTests.swift; sourceTree = "<group>"; };
 		2FF53928252CBEF200C0107B /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2FF53929252CBEF200C0107B /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		2FF53931252E291500C0107B /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
@@ -299,7 +308,7 @@
 		B6931E5D5FF3CBF767A7189A /* Pods-MacroCHallengeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeAppTests/Pods-MacroCHallengeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewProtocol.swift; sourceTree = "<group>"; };
 		C4043981254B1829009CBB5B /* HistoricResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricResultsViewController.swift; sourceTree = "<group>"; };
-		C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONProtocol.swift; sourceTree = "<group>"; };
+		C41FDDB425484A4D0043055A /* ConverterQuestionsJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterQuestionsJSONProtocol.swift; sourceTree = "<group>"; };
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
@@ -308,7 +317,7 @@
 		C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewImplementation.swift; sourceTree = "<group>"; };
 		C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricViewImplementation.xib; sourceTree = "<group>"; };
 		C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterQuestionsJSON.swift; sourceTree = "<group>"; };
-		C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterJSONTests.swift; sourceTree = "<group>"; };
+		C465A07A25429D9700805BC7 /* ConverterQuestionsJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterQuestionsJSONTests.swift; sourceTree = "<group>"; };
 		C48FBA8B252D963E00A3CF8D /* SchoolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolsTableViewCell.xib; sourceTree = "<group>"; };
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
@@ -465,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */,
+				2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -524,7 +534,8 @@
 				D565EEFE252B813A00426648 /* MacroCHallengeAppTests.swift */,
 				D565EF00252B813A00426648 /* Info.plist */,
 				D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */,
-				C465A07A25429D9700805BC7 /* ConverterJSONTests.swift */,
+				C465A07A25429D9700805BC7 /* ConverterQuestionsJSONTests.swift */,
+				2FBD6301254C6627006A8725 /* ConverterResultsJSONTests.swift */,
 			);
 			path = MacroCHallengeAppTests;
 			sourceTree = "<group>";
@@ -552,7 +563,7 @@
 				D59E82F8252E2E17007E8CBD /* OverviewViewControllerProtocol.swift */,
 				D59A375F2535DC7500AD14F1 /* ResultsViewControllerProtocol.swift */,
 				D59A37652535DE7F00AD14F1 /* ResultsViewProtocol.swift */,
-				C41FDDB425484A4D0043055A /* ConverterJSONProtocol.swift */,
+				C41FDDB425484A4D0043055A /* ConverterQuestionsJSONProtocol.swift */,
 				2F1FCF1E2541C6EC0040169E /* NoticeViewProtocol.swift */,
 				2F1FCF232541C8250040169E /* NoticeViewControllerProtocol.swift */,
 				D5E603302547411800B96DA4 /* RequestSenderProtocol.swift */,
@@ -561,6 +572,7 @@
 				2F1FCF8525485AE30040169E /* MetricsViewProtocol.swift */,
 				2F1FCF8A254861560040169E /* MetricsViewControllerProtocol.swift */,
 				2F1FCF8F254864C60040169E /* MetricsProtocol.swift */,
+				2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -971,6 +983,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBD62FC254C51DD006A8725 /* ConverterResultsJSONProtocol.swift in Sources */,
 				4FFF6BC1252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift in Sources */,
 				2F2BADF42548795200C2F411 /* MockMetricsImplementation.swift in Sources */,
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
@@ -982,6 +995,7 @@
 				4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */,
 				C465A0602541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
+				2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D59A37662535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				C4F885C2252F581D008FF2A0 /* OverviewCollectionCell.swift in Sources */,
@@ -1002,6 +1016,7 @@
 				D59E8300252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B590252C064D00F4DF76 /* SchoolViewImplementation.swift in Sources */,
 				2F2BADD82548758F00C2F411 /* MetricsViewControllerImplementation.swift in Sources */,
+				2FBD6302254C6627006A8725 /* ConverterResultsJSONTests.swift in Sources */,
 				D5BCC580252E271200E181CB /* Extensions.swift in Sources */,
 				2F1FCF192541BB4F0040169E /* NoticeTopicTableViewCell.swift in Sources */,
 				2FF53933252E291500C0107B /* NoticeTableViewCell.swift in Sources */,
@@ -1023,7 +1038,7 @@
 				C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */,
 				2F1FCF40254736790040169E /* NoticeInfoViewControllerProtocol.swift in Sources */,
 				C4043982254B1829009CBB5B /* HistoricResultsViewController.swift in Sources */,
-				C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */,
+				C41FDDB525484A4D0043055A /* ConverterQuestionsJSONProtocol.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D5E603312547411800B96DA4 /* RequestSenderProtocol.swift in Sources */,
 				4FAEFFD9254B06ED001BE984 /* NoticeMock.swift in Sources */,
@@ -1094,8 +1109,10 @@
 				D59E82FA252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				C465A11025431EB400805BC7 /* HeaderCollectionReusableView.swift in Sources */,
 				D565EF51252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
+				2FBD6303254C6627006A8725 /* ConverterResultsJSONTests.swift in Sources */,
 				D5276859252CB305003F0C70 /* MockSchoolsImplementationTests.swift in Sources */,
 				D586B573252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
+				2FBD62FD254C51DD006A8725 /* ConverterResultsJSONProtocol.swift in Sources */,
 				D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				D5A71ABC254C42250085ABCD /* NoticeViewControllerImplementation.swift in Sources */,
@@ -1110,9 +1127,10 @@
 				D586B579252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				D5F4C98C25377B94003B568A /* QuestionViewControllerImplementation.swift in Sources */,
 				D53985982548708100EB09DA /* NoticeInfoViewProtocol.swift in Sources */,
+				2FBD62F1254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */,
 				C465A10025431E4F00805BC7 /* ProgressBarTableViewCell.swift in Sources */,
-				C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
-				C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */,
+				C460D96C25485C06008711F3 /* ConverterQuestionsJSONProtocol.swift in Sources */,
+				C465A07B25429D9700805BC7 /* ConverterQuestionsJSONTests.swift in Sources */,
 				D539858C2548705B00EB09DA /* NoticeInfoViewControllerImplementation.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
@@ -1151,7 +1169,7 @@
 				C465A1562543205C00805BC7 /* QuestionViewImplementation.swift in Sources */,
 				C465A12825431F0300805BC7 /* QuestionViewControllerProtocol.swift in Sources */,
 				C465A12025431ED900805BC7 /* Test.swift in Sources */,
-				C460D96D25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
+				C460D96D25485C06008711F3 /* ConverterQuestionsJSONProtocol.swift in Sources */,
 				C465A13925431FA900805BC7 /* OverviewViewControllerProtocol.swift in Sources */,
 				C465A10C25431EA600805BC7 /* ResultsData.swift in Sources */,
 				D565EF0A252B813A00426648 /* MacroCHallengeAppUITests.swift in Sources */,

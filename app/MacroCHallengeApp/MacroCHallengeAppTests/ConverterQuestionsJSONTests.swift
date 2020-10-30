@@ -8,7 +8,7 @@
 import SwiftyJSON
 import XCTest
 
-class ConverterJSONTests: XCTestCase {
+class ConverterQuestionsJSONTests: XCTestCase {
 	// MARK: - Setup and teardown methods
 	override func setUpWithError() throws {}
 	override func tearDownWithError() throws {}

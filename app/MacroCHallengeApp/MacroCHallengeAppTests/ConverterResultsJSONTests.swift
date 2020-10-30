@@ -20,10 +20,111 @@ class ConverterResultsJSONTests: XCTestCase {
         let testSubject = ConverterResultsJSON()
 
         // When
-        let resultQuestions = try testSubject.createResultPerTopic(json: inputJSON)
+        let resultGeneralResults = try testSubject.createResultPerTopic(json: inputJSON)
 
         // Then
+        let percentageOfCorrectAnswers = ("20" as NSString).doubleValue
+        let numberOfCorrectAnswers = ("45" as NSString).intValue
+        let numberOfAnsweredQuestions = ("45" as NSString).intValue
+        let numberOfQuestions = ("50" as NSString).intValue
+        
+        let expectedResultPerTopic = ResultsPerTopic(totalPercentageOfCorrectAnswers: percentageOfCorrectAnswers,
+                                             totalNumberOfCorrectAnswers: Int(numberOfCorrectAnswers),
+                                             totalNumberOfAnsweredQuestions: Int(numberOfAnsweredQuestions),
+                                             totalNumberOfQuestions: Int(numberOfQuestions))
 
+        XCTAssertEqual(resultGeneralResults.totalNumberOfCorrectAnswers, expectedResultPerTopic.totalNumberOfCorrectAnswers)
+        XCTAssertEqual(resultGeneralResults.totalNumberOfQuestions, expectedResultPerTopic.totalNumberOfQuestions)
+        XCTAssertEqual(resultGeneralResults.totalNumberOfAnsweredQuestions, expectedResultPerTopic.totalNumberOfAnsweredQuestions)
+        XCTAssertEqual(resultGeneralResults.totalPercentageOfCorrectAnswers, expectedResultPerTopic.totalPercentageOfCorrectAnswers)
+    }
+    
+    func testCreateDictResultsPerTopic_whenGivenValidJSON_shouldGiveValidDictResultsPerTopic() throws {
+
+        // Given
+        let inputJSON = createValidMockJSON()
+        let testSubject = ConverterResultsJSON()
+
+        // When
+        let dictResultsPerTopic = try testSubject.createDictionaryTopicsResults(json: inputJSON)
+
+        // Then
+        var percentageOfCorrectAnswers = ("20.0" as NSString).doubleValue
+        var numberOfCorrectAnswers = ("10" as NSString).intValue
+        var numberOfAnsweredQuestions = ("30" as NSString).intValue
+        var numberOfQuestions = ("30" as NSString).intValue
+        let expectedResultPortuguese = ResultsPerTopic(totalPercentageOfCorrectAnswers: percentageOfCorrectAnswers,
+                                             totalNumberOfCorrectAnswers: Int(numberOfCorrectAnswers),
+                                             totalNumberOfAnsweredQuestions: Int(numberOfAnsweredQuestions),
+                                             totalNumberOfQuestions: Int(numberOfQuestions))
+        
+        percentageOfCorrectAnswers = ("50.0" as NSString).doubleValue
+        numberOfCorrectAnswers = ("15" as NSString).intValue
+        numberOfAnsweredQuestions = ("30" as NSString).intValue
+        numberOfQuestions = ("30" as NSString).intValue
+        let expectedResultMath = ResultsPerTopic(totalPercentageOfCorrectAnswers: percentageOfCorrectAnswers,
+                                             totalNumberOfCorrectAnswers: Int(numberOfCorrectAnswers),
+                                             totalNumberOfAnsweredQuestions: Int(numberOfAnsweredQuestions),
+                                             totalNumberOfQuestions: Int(numberOfQuestions))
+        
+        let expectedDictResultsPerTopic: [String:ResultsPerTopic] = ["Português" : expectedResultPortuguese,
+                                                                     "Matemática" : expectedResultMath]
+        
+        XCTAssertEqual(dictResultsPerTopic, expectedDictResultsPerTopic)
+    }
+    
+    func testCreateResultPerTopic_whenGivenInvalidGeneralResultsMockJSON_shouldGiveError() throws {
+
+        // Given
+        let inputJSON = createInvalidGeneralResultsMockJSON()
+        let testSubject = ConverterResultsJSON()
+
+        do {
+            // When
+            _ = try testSubject.createResultPerTopic(json: inputJSON)
+
+            XCTFail("There is invalid wrong key in generals result dictionary, an error was expected")
+        }
+        catch {
+            // Then
+            XCTAssert(true)
+        }
+    }
+    
+    func testCreateDictResultsPerTopic_whenGivenInvalidResultsPerTopicMockJSON_shouldGiveError() throws {
+
+        // Given
+        let inputJSON = createInvalidResultsPerTopicMockJSON()
+        let testSubject = ConverterResultsJSON()
+
+        do {
+            // When
+            _ = try testSubject.createDictionaryTopicsResults(json: inputJSON)
+
+            XCTFail("There is invalid wrong key in a result topic in dictionary, an error was expected")
+        }
+        catch {
+            // Then
+            XCTAssert(true)
+        }
+    }
+    
+    func testCreateDictResultsPerTopic_whenGivenEmptyResultsPerTopicMockJSON_shouldGiveError() throws {
+
+        // Given
+        let inputJSON = createEmptyResultsPerTopicMockJSON()
+        let testSubject = ConverterResultsJSON()
+
+        do {
+            // When
+            _ = try testSubject.createDictionaryTopicsResults(json: inputJSON)
+
+            XCTFail("The array dictionary results per topic is empty, an error was expected")
+        }
+        catch {
+            // Then
+            XCTAssert(true)
+        }
     }
     
     func createValidMockJSON() -> JSON {

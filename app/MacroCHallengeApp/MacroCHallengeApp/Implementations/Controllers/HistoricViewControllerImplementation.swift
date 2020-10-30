@@ -7,7 +7,31 @@
 
 import UIKit
 
-class HistoricViewControllerImplementation: UIViewController,  HistoricViewControllerProtocol {
+class HistoricViewControllerImplementation: UIViewController,  HistoricViewControllerProtocol, OverviewViewControllerProtocol {
+
+	// MARK: - OverviewViewProtocol methods
+	required init(data: Test) {
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	required init?(coder: NSCoder) {
+		super.init(coder: coder)
+	}
+
+	func questionWasSubmitted(_ question: Question) {}
+
+	func answerForQuestionWasSubmitted(question: Question, answer: String) {}
+
+	func questionWasUnsubmitted(question: Question) {}
+
+	func hasBegun() {}
+
+	func hasEnded() {}
+
+	var myView: OverviewViewProtocol?
+
+	var questionController: QuestionViewControllerProtocol?
+
 	// MARK: - Dependencies
 	/*
 
@@ -49,10 +73,14 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 	// MARK: - HistoricViewControllerProtocol methods
 
 	func testWasSubmitted(_ test: TestHeader) {
-        let testFromTestHeader = Test(name: test.name, year: test.year, questions: [])
+
+		let testFromTestHeader = Test(name: test.name, year: test.year, questions: [])
         
         let overviewViewController = OverviewViewControllerImplementation(data: testFromTestHeader)
+
 		let questionsVC = QuestionViewControllerImplementation(data: [], parentController: overviewViewController)
+
+		overviewViewController.dismiss(animated: false)
 
 		questionsVC.shouldDisplayAnswer = true
 
@@ -62,3 +90,4 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 		}
 	}
 }
+

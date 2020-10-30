@@ -35,9 +35,8 @@ class RequestSenderImplementation: RequestSenderProtocol {
             completion("Erro ao decodificar a URL")
             return
         }
-        results.t
-        
-        
+       
+
         let requestBody : [String: String] = ["testName": testName,
                                              "testYear": testYear,
                                              "totalPercentageOfCorrectAnswers": String(results.totalPercentageOfCorrectAnswers),
@@ -113,7 +112,7 @@ class RequestSenderImplementation: RequestSenderProtocol {
         var resultString = "["
         
         for (key, value) in resultsPerTopicDict {
-            resultString.append("{\"topic\":\"\(key)\", \"totalPercentageOfCorrectAnswers\":\(value.totalPercentageOfCorrectAnswers), \"totalNumberOfCorrectAnswers\":\(value.totalNumberOfCorrectAnswers), \"totalNumberOfAnsweredQuestions\":\(value.totalNumberOfAnsweredQuestions), \"totalNumberOfCorrectAnswers\":\(value.totalNumberOfCorrectAnswers)},")
+            resultString.append("{\"topic\":\"\(key)\", \"totalPercentageOfCorrectAnswers\":\(value.totalPercentageOfCorrectAnswers), \"totalNumberOfCorrectAnswers\":\(value.totalNumberOfCorrectAnswers), \"totalNumberOfAnsweredQuestions\":\(value.totalNumberOfAnsweredQuestions), \"totalNumberOfQuestions\":\(value.totalNumberOfQuestions)},")
         }
         
         resultString = String(resultString.dropLast())

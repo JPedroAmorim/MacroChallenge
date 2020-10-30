@@ -3,8 +3,10 @@ package com.macrochallenge.backend.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,7 +22,7 @@ public class Results {
     private Test test;
 
     @OneToMany(mappedBy = "result")
-    private List<ResultsPerTopic> resultsPerTopics;
+    private List<ResultsPerTopic> resultsPerTopics = new ArrayList<>();
 
     @NonNull
     private Double totalPercentageOfCorrectAnswers;

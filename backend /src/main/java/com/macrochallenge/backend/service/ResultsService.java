@@ -60,6 +60,7 @@ public class ResultsService implements ResultsServiceInterface {
                 totalNumberOfAnsweredQuestions, totalNumberOfQuestions, totalNumberOfCorrectAnswers,
                 resultsDTO.getCorrectAnswers(), resultsDTO.getWrongAnswers());
 
+
         List<ResultsPerTopic> resultsPerTopicList = new ArrayList<>();
 
         for (ResultsPerTopicDTO resultsPerTopicDTO : resultsPerTopicDTOList) {
@@ -80,6 +81,8 @@ public class ResultsService implements ResultsServiceInterface {
             resultsPerTopicList.add(resultsPerTopic);
         }
 
+        int size = resultsEntity.getResultsPerTopics().size();
+
         resultsEntity.getResultsPerTopics().addAll(resultsPerTopicList);
 
         resultsRepository.save(resultsEntity);
@@ -98,7 +101,7 @@ public class ResultsService implements ResultsServiceInterface {
                 .sum();
 
         Double totalPercentageOfCorrectAnswers = round((double) accumulatedNumberOfQuestions
-                / (double) accumulatedNumberOfCorrectAnswers, 2);
+                / (double) accumulatedNumberOfCorrectAnswers);
 
         Map<String, ResultsPerTopicDTO> resultsPerTopicDTOMap = new HashMap<>();
 
@@ -133,7 +136,7 @@ public class ResultsService implements ResultsServiceInterface {
                     entry.setTotalNumberOfQuestions(String.valueOf(recalculatedValueForTotalNumberOfQuestions));
 
                     Double totalPercentageOfCorrectAnswersForTopic = round((recalculatedValueForCorrectAnswers
-                            / recalculatedValueForTotalNumberOfQuestions, 2);
+                            / recalculatedValueForTotalNumberOfQuestions));
 
                     entry.setTotalPercentageOfCorrectAnswers(String.valueOf(totalPercentageOfCorrectAnswersForTopic));
 
@@ -158,11 +161,9 @@ public class ResultsService implements ResultsServiceInterface {
         return  generalResultsDTO;
     }
 
-    private double round(double value, int places) {
-        if (places < 0) throw new IllegalArgumentException();
-
+    private double round(double value) {
         BigDecimal bd = BigDecimal.valueOf(value);
-        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
 

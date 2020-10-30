@@ -1,5 +1,6 @@
 package com.macrochallenge.backend.controllers;
 
+import com.macrochallenge.backend.model.dto.GeneralResultsDTO;
 import com.macrochallenge.backend.model.dto.ResultsDTO;
 import com.macrochallenge.backend.service.interfaces.ResultsServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class ResultsController {
     }
 
     @GetMapping("/accumulated-results")
-    public AccumulatedResultsDTO getAccumulatedResults() {
+    public GeneralResultsDTO getAccumulatedResults() {
         return resultsService.getAccumulatedResults();
     }
 }

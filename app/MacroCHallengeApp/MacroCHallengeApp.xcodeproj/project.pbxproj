@@ -198,6 +198,16 @@
 		D5A71ABC254C42250085ABCD /* NoticeViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */; };
 		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
+		D5C6C4E1254C6C4400489068 /* SchoolsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */; };
+		D5C6C4E5254C6C6300489068 /* HistoricViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */; };
+		D5C6C4E9254C6C6600489068 /* HistoricViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */; };
+		D5C6C4ED254C6C6A00489068 /* HistoricResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4043981254B1829009CBB5B /* HistoricResultsViewController.swift */; };
+		D5C6C4F1254C6C6D00489068 /* HistoricViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */; };
+		D5C6C4F5254C6C7000489068 /* MetricsViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */; };
+		D5C6C4F9254C6CB500489068 /* MockMetricsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */; };
+		D5C6C4FD254C6CE200489068 /* MetricsViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */; };
+		D5C6C501254C6D0C00489068 /* NoticeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */; };
+		D5C6C505254C6D3000489068 /* MetricsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF7B254857EF0040169E /* MetricsViewImplementation.swift */; };
 		D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
 		D5E603312547411800B96DA4 /* RequestSenderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603302547411800B96DA4 /* RequestSenderProtocol.swift */; };
 		D5E603322547411800B96DA4 /* RequestSenderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E603302547411800B96DA4 /* RequestSenderProtocol.swift */; };
@@ -1059,15 +1069,21 @@
 				D5F4C9A025377BDD003B568A /* QuestionImageTableViewCell.swift in Sources */,
 				C460D9B52548778B008711F3 /* HistoricViewImplementation.swift in Sources */,
 				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
+				D5C6C4E9254C6C6600489068 /* HistoricViewControllerProtocol.swift in Sources */,
 				D53985942548706400EB09DA /* NoticeTopicTableViewCell.swift in Sources */,
+				D5C6C4F5254C6C7000489068 /* MetricsViewControllerImplementation.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D5F4C99C25377BDA003B568A /* QuestionTextTableViewCell.swift in Sources */,
+				D5C6C4F9254C6CB500489068 /* MockMetricsImplementation.swift in Sources */,
 				D59A37612535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
+				D5C6C501254C6D0C00489068 /* NoticeMock.swift in Sources */,
 				D539857C2548700800EB09DA /* Notice.swift in Sources */,
+				D5C6C4F1254C6C6D00489068 /* HistoricViewControllerImplementation.swift in Sources */,
 				D59A37672535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				D527685D252CB51E003F0C70 /* Test.swift in Sources */,
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,
 				D5F4C99025377B9A003B568A /* HorizontalChartView.swift in Sources */,
+				D5C6C4E5254C6C6300489068 /* HistoricViewProtocol.swift in Sources */,
 				D5F4C9A425377BE0003B568A /* QuestionButtonsTableViewCell.swift in Sources */,
 				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D5E603402547468100B96DA4 /* Constants.swift in Sources */,
@@ -1085,12 +1101,14 @@
 				D565EEFF252B813A00426648 /* MacroCHallengeAppTests.swift in Sources */,
 				2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
 				D5CB3BE72530DBE50014F180 /* OverviewCollectionCell.swift in Sources */,
+				D5C6C4ED254C6C6A00489068 /* HistoricResultsViewController.swift in Sources */,
 				D53985782548700200EB09DA /* NoticeViewControllerImplementation.swift in Sources */,
 				D53985A02548708700EB09DA /* MetricsViewProtocol.swift in Sources */,
 				D586B56D252BFCA700F4DF76 /* SchoolViewProtocol.swift in Sources */,
 				D53985B4254870B400EB09DA /* NoticeInfoViewImplementation.swift in Sources */,
 				2FF53934252E291500C0107B /* NoticeTableViewCell.swift in Sources */,
 				D565EF38252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
+				D5C6C505254C6D3000489068 /* MetricsViewImplementation.swift in Sources */,
 				D59E82FA252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				C465A11025431EB400805BC7 /* HeaderCollectionReusableView.swift in Sources */,
 				D565EF51252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
@@ -1114,6 +1132,7 @@
 				C460D96C25485C06008711F3 /* ConverterJSONProtocol.swift in Sources */,
 				C465A07B25429D9700805BC7 /* ConverterJSONTests.swift in Sources */,
 				D539858C2548705B00EB09DA /* NoticeInfoViewControllerImplementation.swift in Sources */,
+				D5C6C4E1254C6C4400489068 /* SchoolsServiceManager.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
 				D59A376D2535DF8100AD14F1 /* ResultsData.swift in Sources */,
@@ -1126,6 +1145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C6C4FD254C6CE200489068 /* MetricsViewControllerImplementation.swift in Sources */,
 				D5E6033A2547435C00B96DA4 /* TestHeader.swift in Sources */,
 				D5E603332547411800B96DA4 /* RequestSenderProtocol.swift in Sources */,
 				C465A11425431EB500805BC7 /* HeaderCollectionReusableView.swift in Sources */,

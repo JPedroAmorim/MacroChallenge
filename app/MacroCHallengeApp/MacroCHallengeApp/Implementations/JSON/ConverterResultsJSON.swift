@@ -16,6 +16,7 @@ enum ErrorResult: String, Error {
     case noTotalNumberOfAnsweredQuestions = "Não foi possível obter o número do total de respostas respondidas para criar objeto tipo ResultPerTopic, confira ConverterResulstJSON"
     case noTotalNumberOfQuestions = "Não foi possível obter o número do total de questões para criar objeto tipo ResultPerTopic, confira ConverterResulstJSON"
     case noTopic = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic], confira ConverterResulstJSON"
+    case arrayResultsPerTopicIsEmpty = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic] pois o array de tópicos está vazio, confira ConverterResulstJSON"
 }
 
 class ConverterResultsJSON: ConverterResultsJSONProtocol  {
@@ -68,6 +69,8 @@ class ConverterResultsJSON: ConverterResultsJSONProtocol  {
         var topic: String
         
         if let jsonArray = json["resultsPerTopic"].array {
+            if jsonArray.isEmpty { throw ErrorResult.arrayResultsPerTopicIsEmpty }
+            
             for jsonEntry in jsonArray {
                 do {
                     if let topicJSON = jsonEntry["topic"].string {
@@ -79,10 +82,8 @@ class ConverterResultsJSON: ConverterResultsJSONProtocol  {
                     let resultPerTopic = try createResultPerTopic(json: jsonEntry)
                     
                     resultsPerTopic[topic] = resultPerTopic
-                } catch is ErrorResult {
-                    continue
-                } catch {
-                    continue
+                } catch let error as ErrorResult{
+                    throw error
                 }
             }
         }

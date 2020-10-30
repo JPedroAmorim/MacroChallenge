@@ -122,7 +122,8 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 			fatalError("The dequeued cell is not an instance of TestTableViewCell.")
 		}
 
-		cell.testLabel.text = dataTableView[indexPath.section].tests[indexPath.row].name
+		let nameTitle = handleStringName(name: dataTableView[indexPath.section].tests[indexPath.row].name)
+		cell.testLabel.text = nameTitle
         
         let correctAnswers: Int = 40
         let angle = convertNumberOfRightQuestionsInAngle(numberOfRightQuestions: correctAnswers)
@@ -135,6 +136,24 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
         cell.circularProgressLabel.text = "\(percentageOfCorrectAnswers)" + "%"
         
 		return cell
+	}
+
+	/**
+		Função para tratamento da string de título, insere um espaço entre o nome da prova e o ano respectivo
+
+		- parameter name: nome concatenado
+	*/
+	func handleStringName(name: String) -> String {
+		var characters = Array(name)
+
+		for i in 0...(characters.count - 1) {
+			if Int(String(characters[i])) != nil {
+				characters.insert(" ", at: i)
+				break
+			}
+		}
+
+		return String(characters)
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

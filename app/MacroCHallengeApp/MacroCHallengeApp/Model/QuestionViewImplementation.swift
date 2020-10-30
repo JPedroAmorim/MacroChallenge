@@ -317,7 +317,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
         let cellIdentifier = "QuestionOptionTableViewCell"
         referenceXib(nibName: cellIdentifier)
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionOptionTableViewCell {
-            let index = String(format: "%c", indexPath.row + 97)
+            let index = String(format: "%c", indexPath.row + 97).uppercased()
             cell.lblIndex.text = index.uppercased()
             cell.lblAnswer.text = self.question.options[index]
             if index == self.chosenOption {

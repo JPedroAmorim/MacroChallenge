@@ -8,6 +8,7 @@
 import UIKit
 
 class SchoolViewControllerImplementation: UIViewController, SchoolViewControllerProtocol {
+
     // MARK: - Dependencies
     var myView: SchoolViewProtocol?
     
@@ -44,11 +45,30 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     }
     
     // MARK: - SchoolViewControllerProtocol methods
-    func testWasSubmitted(_ test: Test) {
-        if let navController = self.navigationController {
-            let overviewViewController = OverviewViewControllerImplementation(data: test)
-            navController.pushViewController(overviewViewController, animated: true)
-        }
+    func testWasSubmitted(_ test: TestHeader) {
+        
+        requestSender.getQuestionsForTestRequest(
+            testName: test.name,
+            testYear: test.year,
+            completion: { questions, error in
+                guard let questionsArray = questions else {
+                    print("Erro ao fazer request das questoes:\n\t \(error ?? "Error message is nil")")
+                    let alert = UIAlertController(title: "Erro",
+                                                  message: "Falha ao carregar questões, verifique sua conexão",
+                                                  preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok",
+                                                  style: .default,
+                                                  handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                
+                if let navController = self.navigationController {
+                    let testAsTestType = Test(name: test.name, year: test.year, questions: questionsArray)
+                    let overviewViewController = OverviewViewControllerImplementation(data: testAsTestType)
+                    navController.pushViewController(overviewViewController, animated: true)
+                }
+            })
     }
     
     func noticeWasSubmitted(_ notice: Notice) {

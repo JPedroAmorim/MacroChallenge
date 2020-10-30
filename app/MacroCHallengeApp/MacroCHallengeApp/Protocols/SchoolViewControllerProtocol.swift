@@ -24,7 +24,7 @@ protocol SchoolViewControllerProtocol {
      - parameter test: prova selecionada pela View.
      
      */
-    func testWasSubmitted(_ test: Test)
+    func testWasSubmitted(_ test: TestHeader)
     
     /**
      

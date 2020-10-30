@@ -19,5 +19,5 @@ protocol SchoolsViewControllerProtocol {
     
     // Dependências
     var myView: SchoolsViewProtocol? {get set}
-    var schools: SchoolsProtocol? {get set}
+    var schoolsManager: SchoolsProtocol? {get set}
 }

@@ -50,6 +50,8 @@
 		2FF53936252E291500C0107B /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53932252E291500C0107B /* NoticeTableViewCell.xib */; };
 		4FAC80EA25377538006F947A /* QuestionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC80E825377538006F947A /* QuestionHeaderTableViewCell.swift */; };
 		4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */; };
+		4FAEFFD4254AFFB6001BE984 /* SchoolsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */; };
+		4FAEFFD9254B06ED001BE984 /* NoticeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */; };
 		4FBFE5472530E078000F92AC /* QuestionButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */; };
 		4FBFE5482530E078000F92AC /* QuestionButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */; };
 		4FFF6B9F252BA3510015DFE7 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
@@ -261,6 +263,8 @@
 		492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroCHallengeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAC80E825377538006F947A /* QuestionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionHeaderTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionHeaderTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionHeaderTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionHeaderTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsServiceManager.swift; sourceTree = "<group>"; };
+		4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeMock.swift; sourceTree = "<group>"; };
 		4FBFE5452530E078000F92AC /* QuestionButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionButtonsTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionButtonsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4FBFE5462530E078000F92AC /* QuestionButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionButtonsTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionButtonsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6B9E252BA3510015DFE7 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -591,6 +595,8 @@
 				D586B55D252BE77000F4DF76 /* MockSchoolsImplementation.swift */,
 				D5E603482547472700B96DA4 /* RequestSenderImplementation.swift */,
 				2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */,
+				4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */,
+				4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -959,6 +965,7 @@
 				2F1FCF3625472FEC0040169E /* NoticeInfoViewImplementation.swift in Sources */,
 				D565EF2E252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D554471A252F579D001793E0 /* OverviewViewControllerImplementation.swift in Sources */,
+				4FAEFFD4254AFFB6001BE984 /* SchoolsServiceManager.swift in Sources */,
 				D59A37602535DC7500AD14F1 /* ResultsViewControllerProtocol.swift in Sources */,
 				D59A376C2535DF8100AD14F1 /* ResultsData.swift in Sources */,
 				D5E603492547472700B96DA4 /* RequestSenderImplementation.swift in Sources */,
@@ -989,6 +996,7 @@
 				C41FDDB525484A4D0043055A /* ConverterJSONProtocol.swift in Sources */,
 				2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */,
 				D5E603312547411800B96DA4 /* RequestSenderProtocol.swift in Sources */,
+				4FAEFFD9254B06ED001BE984 /* NoticeMock.swift in Sources */,
 				D565EF37252BACBC00426648 /* SchoolsViewProtocol.swift in Sources */,
 				2F9A67E0253780A5002EE9B2 /* ProgressBarTableViewCell.swift in Sources */,
 				4FFF6BB7252CA6AB0015DFE7 /* QuestionViewImplementation.swift in Sources */,

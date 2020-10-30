@@ -85,6 +85,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
         }
         if let navCon = self.navigationController, let questionController = self.questionController {
             let resultsVC = ResultsViewController(test: data, answeredQuestions: questionsAnswered, timeElapsed: timeText, questionController: questionController)
+            navCon.popToRootViewController(animated: false)
             navCon.pushViewController(resultsVC, animated: true)
         }
     }

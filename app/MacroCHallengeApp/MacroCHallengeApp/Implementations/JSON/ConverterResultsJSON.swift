@@ -18,7 +18,7 @@ enum ErrorResult: String, Error {
     case noTopic = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic], confira ConverterResulstJSON"
 }
 
-class ConverterResulstJSON: ConverterResultsJSONProtocol  {
+class ConverterResultsJSON: ConverterResultsJSONProtocol  {
     //    MARK: - ConverterJSONProtocol methods\
     func createResultPerTopic(json: JSON) throws -> ResultsPerTopic {
         var totalPercentageOfCorrectAnswers: String

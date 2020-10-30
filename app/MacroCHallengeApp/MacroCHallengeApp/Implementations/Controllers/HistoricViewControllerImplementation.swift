@@ -68,19 +68,14 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
 			self.view = defaultView
 		}
 	}
-	
 
 	// MARK: - HistoricViewControllerProtocol methods
 
 	func testWasSubmitted(_ test: TestHeader) {
 
 		let testFromTestHeader = Test(name: test.name, year: test.year, questions: [])
-        
-        let overviewViewController = OverviewViewControllerImplementation(data: testFromTestHeader)
 
-		let questionsVC = QuestionViewControllerImplementation(data: [], parentController: overviewViewController)
-
-		overviewViewController.dismiss(animated: false)
+		let questionsVC = QuestionViewControllerImplementation(data: [], parentController: self)
 
 		questionsVC.shouldDisplayAnswer = true
 

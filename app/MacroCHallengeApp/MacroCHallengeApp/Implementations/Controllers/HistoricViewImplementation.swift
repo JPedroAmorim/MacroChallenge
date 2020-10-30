@@ -18,10 +18,13 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
 
 	// MARK: - Private attributes
 	private var data: [School]
+	private var dataTableView: [School]
 
 	// MARK: - Init methods
 	required init(data: [School], controller: HistoricViewControllerProtocol) {
 		self.data = data
+		self.dataTableView = SchoolsServiceManager().getSchools()
+
 		self.viewController = controller
 		super.init(frame: CGRect.zero)
 		initFromNib()
@@ -100,20 +103,12 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return 3
+		return dataTableView.count
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-		switch section {
-			case 0:
-				return 1
-			case 1:
-				return 2
-
-			default:
-				return 3
-		}
+		return dataTableView[section].tests.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -127,7 +122,7 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 			fatalError("The dequeued cell is not an instance of TestTableViewCell.")
 		}
 
-		cell.testLabel.text = data[indexPath.section].tests[indexPath.row].name
+		cell.testLabel.text = dataTableView[indexPath.section].tests[indexPath.row].name
         
         let correctAnswers: Int = 40
         let angle = convertNumberOfRightQuestionsInAngle(numberOfRightQuestions: correctAnswers)
@@ -145,26 +140,11 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableViewSchools.deselectRow(at: indexPath, animated: true)
 		viewController.testWasSubmitted(data[indexPath.section].tests[indexPath.row])
-
-//		ResultsViewController(test: data, answeredQuestions: questionsAnswered, timeElapsed: "00:00", questionController: questionController)
 	}
 
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
-		let sectionName: String
-		switch section {
-			case 0:
-				sectionName = "Colégio Técnico Industrial"
-			case 1:
-				sectionName = "Cotuca"
-
-			case 2:
-				sectionName = "Etec"
-
-			default:
-				sectionName = ""
-		}
-		return sectionName
+		return dataTableView[section].name
 	}
 
 	func referenceXib(nibName: String) {

@@ -11,7 +11,6 @@ import KDCircularProgress
 
 class HistoricViewImplementation: UIView, HistoricViewProtocol {
 	// MARK: -IBOutlets
-	//	@IBOutlet weak var tableViewSchools: UITableView!
 	@IBOutlet weak var tableViewSchools: UITableView!
 	
 	// MARK: - Dependencies

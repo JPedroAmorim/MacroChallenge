@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc71e0ac-de1d-4ae2-a654-b1125e718126" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/ResultsPerTopic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/Results.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/model/dto/ResultsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/ResultsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/macrochallenge/backend/service/ResultsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Controllers/HistoricViewImplementation.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../app/MacroCHallengeApp/MacroCHallengeApp/Implementations/Controllers/HistoricViewImplementation.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +80,7 @@
       <workItem from="1603834946593" duration="112000" />
       <workItem from="1603901522102" duration="6683000" />
       <workItem from="1603973551390" duration="8975000" />
+      <workItem from="1604059732097" duration="285000" />
     </task>
     <servers />
   </component>

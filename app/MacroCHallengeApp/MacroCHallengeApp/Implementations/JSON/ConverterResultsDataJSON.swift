@@ -169,7 +169,7 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
                                       totalNumberOfQuestions: Int(numQuestions),
                                       resultsPerTopic: resultsPerTopic,
                                       test: test,
-                                      answeredQuestions: convertStringInADict(json: answeredQuestions),
+                                      answeredQuestions: convertStringInADictionary(json: answeredQuestions),
                                       totalTimeElapsed: "",
                                       correctAnswers: convertStringInArrayOfInt(json: correctAnswers),
                                       wrongAnswers: convertStringInArrayOfInt(json: wrongAnswers))
@@ -216,7 +216,7 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
 
     */
     
-    private func convertStringInADict(json: String)  -> [String: String] {
+    private func convertStringInADictionary(json: String)  -> [String: String] {
         if let data = json.data(using: .utf8) {
             do {
                 if let result = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]{

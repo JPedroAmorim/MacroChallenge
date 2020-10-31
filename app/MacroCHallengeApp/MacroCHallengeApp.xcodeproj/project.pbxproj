@@ -49,6 +49,7 @@
 		2FBD634B254C9965006A8725 /* ConverterResultsDataJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD6349254C9965006A8725 /* ConverterResultsDataJSON.swift */; };
 		2FBD6350254C9A45006A8725 /* ConverterResultsDataJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD634F254C9A45006A8725 /* ConverterResultsDataJSONProtocol.swift */; };
 		2FBD6351254C9A45006A8725 /* ConverterResultsDataJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD634F254C9A45006A8725 /* ConverterResultsDataJSONProtocol.swift */; };
+		2FBD636F254CF1F0006A8725 /* ConverterResultsDataJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD636E254CF1F0006A8725 /* ConverterResultsDataJSONTests.swift */; };
 		2FF5392A252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392B252CBEF200C0107B /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53928252CBEF200C0107B /* TestTableViewCell.swift */; };
 		2FF5392C252CBEF200C0107B /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53929252CBEF200C0107B /* TestTableViewCell.xib */; };
@@ -290,6 +291,7 @@
 		2FBD632B254C6B01006A8725 /* ConverterResultsJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSONTests.swift; sourceTree = "<group>"; };
 		2FBD6349254C9965006A8725 /* ConverterResultsDataJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsDataJSON.swift; sourceTree = "<group>"; };
 		2FBD634F254C9A45006A8725 /* ConverterResultsDataJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsDataJSONProtocol.swift; sourceTree = "<group>"; };
+		2FBD636E254CF1F0006A8725 /* ConverterResultsDataJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsDataJSONTests.swift; sourceTree = "<group>"; };
 		2FF53928252CBEF200C0107B /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2FF53929252CBEF200C0107B /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		2FF53931252E291500C0107B /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */,
 				C465A07A25429D9700805BC7 /* ConverterQuestionsJSONTests.swift */,
 				2FBD632B254C6B01006A8725 /* ConverterResultsJSONTests.swift */,
+				2FBD636E254CF1F0006A8725 /* ConverterResultsDataJSONTests.swift */,
 			);
 			path = MacroCHallengeAppTests;
 			sourceTree = "<group>";
@@ -1094,6 +1097,7 @@
 				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
 				D5C6C4E9254C6C6600489068 /* HistoricViewControllerProtocol.swift in Sources */,
 				D53985942548706400EB09DA /* NoticeTopicTableViewCell.swift in Sources */,
+				2FBD636F254CF1F0006A8725 /* ConverterResultsDataJSONTests.swift in Sources */,
 				D5C6C4F5254C6C7000489068 /* MetricsViewControllerImplementation.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
 				D5F4C99C25377BDA003B568A /* QuestionTextTableViewCell.swift in Sources */,

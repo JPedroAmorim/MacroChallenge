@@ -55,7 +55,8 @@ class ConverterResultsDataJSONTests: XCTestCase {
                                               resultsPerTopic: ["Português" : expectedResultPortuguese,
                                                                 "Matemática" : expectedResultMath],
                                               test: test,
-                                              answeredQuestions: ["20": "B", "10" : "A"],
+                                              answeredQuestions: ["20": "B",
+                                                                  "10" : "A"],
                                               totalTimeElapsed: "",
                                               correctAnswers: [1, 2, 3],
                                               wrongAnswers: [2, 3, 4, 5])
@@ -65,13 +66,50 @@ class ConverterResultsDataJSONTests: XCTestCase {
         XCTAssertEqual(resultsData.totalNumberOfAnsweredQuestions, expectedResultsData.totalNumberOfAnsweredQuestions)
         XCTAssertEqual(resultsData.totalNumberOfQuestions, expectedResultsData.totalNumberOfQuestions)
         XCTAssertEqual(resultsData.resultsPerTopic, expectedResultsData.resultsPerTopic)
-        XCTAssertEqual(resultsData.test, expectedResultsData.test)
+        XCTAssertEqual(resultsData.test.name, expectedResultsData.test.name)
+        XCTAssertEqual(resultsData.test.year, expectedResultsData.test.year)
         XCTAssertEqual(resultsData.answeredQuestions, expectedResultsData.answeredQuestions)
         XCTAssertEqual(resultsData.totalTimeElapsed, expectedResultsData.totalTimeElapsed)
         XCTAssertEqual(resultsData.correctAnswers, expectedResultsData.correctAnswers)
         XCTAssertEqual(resultsData.wrongAnswers, expectedResultsData.wrongAnswers)
     }
 
+    func testCreateResultsData_whenGivenInvalidResultsDataMockJSON_shouldGiveError() throws {
+
+        // Given
+        let inputJSON = createInvalidMockJSON()
+        let testSubject = ConverterResultsDataJSON()
+
+        do {
+            // When
+            _ = try testSubject.createResultsData(json: inputJSON)
+
+            XCTFail("There is invalid wrong key in results data dictionary, an error was expected")
+        }
+        catch {
+            // Then
+            XCTAssert(true)
+        }
+    }
+    
+    func testCreateDictResultsPerTopic_whenGivenEmptyResultsPerTopicMockJSON_shouldGiveError() throws {
+
+        // Given
+        let inputJSON = createEmptyResultsDataMockJSON()
+        let testSubject = ConverterResultsDataJSON()
+
+        do {
+            // When
+            _ = try testSubject.createResultsData(json: inputJSON)
+
+            XCTFail("The array dictionary results per topic is empty, an error was expected")
+        }
+        catch {
+            // Then
+            XCTAssert(true)
+        }
+    }
+    
     func createValidMockJSON() -> JSON {
         let arrayDictResultsPerTopic: [[String:String]] = [["topic":"Português",
                                                             "totalPercentageOfCorrectAnswers":"20.0",
@@ -101,5 +139,52 @@ class ConverterResultsDataJSONTests: XCTestCase {
         return json
     }
     
+    func createInvalidMockJSON() -> JSON {
+        let arrayDictResultsPerTopic: [[String:String]] = [["topic":"Português",
+                                                            "totalPercentageOfCorrectAnswers":"20.0",
+                                                            "totalNumberOfCorrectAnswers":"10",
+                                                            "totalNumberOfAnsweredQuestions":"30",
+                                                            "totalNumberOfQuestions":"30"],
+                                                           ["topic":"Matemática",
+                                                            "totalPercentageOfCorrectAnswers":"50.0",
+                                                            "totalNumberOfCorrectAnswers":"15",
+                                                            "totalNumberOfAnsweredQuestions":"30",
+                                                            "totalNumberOfQuestions":"30"]
+        ]
+        
+        // Sem a chave totalNumberOfCorrectAnswers
+        let dictValidMock: [String:Any] = ["testName":"cotuca2019",
+                                           "testYear":"2019",
+                                           "totalNumberOfAnsweredQuestions":"45",
+                                           "totalNumberOfQuestions":"50",
+                                           "totalNumberOfCorrectAnswers":"45",
+                                           "correctAnswers":"[1, 2, 3]",
+                                           "wrongAnswers":"[2, 3, 4, 5]",
+                                           "answeredQuestions":"[\"20\": \"B\", \"10\" : \"A\"]",
+                                           "resultsPerTopic": arrayDictResultsPerTopic]
+        
+        
+        let json: JSON = JSON(dictValidMock)
+        
+        return json
+    }
     
+    func createEmptyResultsDataMockJSON() -> JSON {
+        
+        let arrayEmptyDictResultsPerTopic: [[String:String]] = [[:]]
+        
+        let dictInvalidMock: [String:Any] = ["testName":"cotuca2019",
+                                           "testYear":"2019",
+                                           "totalNumberOfAnsweredQuestions":"45",
+                                           "totalNumberOfQuestions":"50",
+                                           "totalNumberOfCorrectAnswers":"45",
+                                           "correctAnswers":"[1, 2, 3]",
+                                           "wrongAnswers":"[2, 3, 4, 5]",
+                                           "answeredQuestions":"[\"20\": \"B\", \"10\" : \"A\"]",
+                                           "resultsPerTopic": arrayEmptyDictResultsPerTopic]
+        
+        let json: JSON = JSON(dictInvalidMock)
+        
+        return json
+    }
 }

@@ -165,7 +165,7 @@ class ConverterResultsJSONTests: XCTestCase {
                                                             "totalNumberOfQuestions":"30"]
         ]
         
-        // Retirei a chave totalNumberOfCorrectAnswers
+        // Sem a chave totalNumberOfCorrectAnswers
         let dictInvalidGeneralResultsMock: [String:Any] = ["totalPercentageOfCorrectAnswers":"20.0",
                                            "totalNumberOfQuestions":"50",
                                            "totalNumberOfAnsweredQuestions":"45",

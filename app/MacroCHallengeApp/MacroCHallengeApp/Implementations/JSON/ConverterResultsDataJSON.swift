@@ -22,7 +22,7 @@ enum ErrorResultsData: String, Error {
     case noAnsweredQuestions = "Não foi possível obter as questões respondidas para criar objeto tipo ResultsData, confira ConverterResultsDataJSON"
     case arrayResultsPerTopicIsEmpty = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic] pois o array de tópicos está vazio, confira ConverterResultsDataJSON"
     case noTopic = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic], confira ConverterResultsDataJSON"
-
+    case noStringIsNotADictionary = "Não foi possível obter o dicionário através da String para criar o dicionário tipo [String:String] que representa as questões respondidas, confira ConverterResultsDataJSON"
 }
 
 class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
@@ -114,25 +114,25 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
                         throw ErrorResultsData.noTopic
                     }
                     
-                    if let percentageOfCorrectAnswers = json["totalPercentageOfCorrectAnswers"].string {
+                    if let percentageOfCorrectAnswers = jsonEntry["totalPercentageOfCorrectAnswers"].string {
                         pOfCorrectAnswers = percentageOfCorrectAnswers
                     } else {
                         throw ErrorResultsData.noTotalPercentageOfCorrectAnswers
                     }
                     
-                    if let numberOfQuestions = json["totalNumberOfQuestions"].string {
+                    if let numberOfQuestions = jsonEntry["totalNumberOfQuestions"].string {
                         numOfQuestions = numberOfQuestions
                     } else {
                         throw ErrorResultsData.noTotalNumberOfQuestions
                     }
                     
-                    if let numberOfCorrectAnswers = json["totalNumberOfCorrectAnswers"].string {
+                    if let numberOfCorrectAnswers = jsonEntry["totalNumberOfCorrectAnswers"].string {
                         numOfCorrectAnswers = numberOfCorrectAnswers
                     } else {
                         throw ErrorResultsData.noTotalNumberOfCorrectAnswers
                     }
                     
-                    if let numberOfAnsweredQuestions = json["totalNumberOfAnsweredQuestions"].string {
+                    if let numberOfAnsweredQuestions = jsonEntry["totalNumberOfAnsweredQuestions"].string {
                         totalNumberOfAnsweredQuestions = numberOfAnsweredQuestions
                     } else {
                         throw ErrorResultsData.noTotalNumberOfAnsweredQuestions
@@ -163,13 +163,20 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
         
         let test = Test(name: testName, year: testYear, questions: [])
         
+        var dictAnsweredQuestions: [String:String] = [:]
+        if let dict = convertStringInADictionary(text: answeredQuestions) {
+//            dictAnsweredQuestions = dict
+        } else {
+            throw ErrorResultsData.noStringIsNotADictionary
+        }
+        
         let resultsData = ResultsData(totalPercentageOfCorrectAnswers: percentage,
                                       totalNumberOfCorrectAnswers: Int(numRightAnswers),
                                       totalNumberOfAnsweredQuestions: Int(numAnsweredQuestions),
                                       totalNumberOfQuestions: Int(numQuestions),
                                       resultsPerTopic: resultsPerTopic,
                                       test: test,
-                                      answeredQuestions: convertStringInADictionary(json: answeredQuestions),
+                                      answeredQuestions: dictAnsweredQuestions,
                                       totalTimeElapsed: "",
                                       correctAnswers: convertStringInArrayOfInt(json: correctAnswers),
                                       wrongAnswers: convertStringInArrayOfInt(json: wrongAnswers))
@@ -198,7 +205,9 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
                 character == "9" {
                 numberString.append(character)
             } else {
-                array.append(Int((numberString as NSString).intValue))
+                if numberString != "" {
+                    array.append(Int((numberString as NSString).intValue))
+                }
                 numberString = ""
             }
         }
@@ -209,24 +218,22 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
     /**
     Função responsável por converter um String em um dicionário.
 
-    - parameter json: String a ser transformada para um [String:String]
+    - parameter text: String a ser transformada para um [String:String]
      
      Exemplo: "["20": "B", "10" : "A"]" -> ["20":"B",
                                 "10":"A"]
 
     */
     
-    private func convertStringInADictionary(json: String)  -> [String: String] {
-        if let data = json.data(using: .utf8) {
+    private func convertStringInADictionary(text: String) -> [String:AnyObject]? {
+        if let data = text.data(using: .utf8) {
             do {
-                if let result = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]{
-                    return result
-                }
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject]
+                return json
             } catch {
-                print("Error in convertStringInADict(json: String)  -> [String: String]  \(error.localizedDescription)")
+                print("Something went wrong")
             }
         }
-        
-        return ["":""]
+        return nil
     }
 }

@@ -9,6 +9,7 @@ import com.macrochallenge.backend.model.Test;
 import com.macrochallenge.backend.model.dto.GeneralResultsDTO;
 import com.macrochallenge.backend.model.dto.ResultsDTO;
 import com.macrochallenge.backend.model.dto.ResultsPerTopicDTO;
+import com.macrochallenge.backend.repositories.ResultsPerTopicRepository;
 import com.macrochallenge.backend.repositories.ResultsRepository;
 import com.macrochallenge.backend.repositories.TestRepository;
 import com.macrochallenge.backend.service.interfaces.ResultsServiceInterface;
@@ -25,11 +26,14 @@ public class ResultsService implements ResultsServiceInterface {
 
     private final TestRepository testRepository;
     private final ResultsRepository resultsRepository;
+    private final ResultsPerTopicRepository resultsPerTopicRepository;
 
     @Autowired
-    public ResultsService(TestRepository testRepository, ResultsRepository resultsRepository) {
+    public ResultsService(TestRepository testRepository, ResultsRepository resultsRepository,
+                          ResultsPerTopicRepository resultsPerTopicRepository) {
         this.testRepository = testRepository;
         this.resultsRepository = resultsRepository;
+        this.resultsPerTopicRepository = resultsPerTopicRepository;
     }
 
     @Override
@@ -81,8 +85,7 @@ public class ResultsService implements ResultsServiceInterface {
             resultsPerTopicList.add(resultsPerTopic);
         }
 
-        int size = resultsEntity.getResultsPerTopics().size();
-
+        
         resultsEntity.getResultsPerTopics().addAll(resultsPerTopicList);
 
         resultsRepository.save(resultsEntity);

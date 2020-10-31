@@ -125,9 +125,10 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 		cell.testLabel.text = dataTableView[indexPath.section].tests[indexPath.row].name
         
         let correctAnswers: Int = 40
-        let angle = convertNumberOfRightQuestionsInAngle(numberOfRightQuestions: correctAnswers)
-
-        cell.circularProgressView.addSubview(drawCircularProgress(toAngle: angle))
+        
+        let circular = CircularProgress(numberOfRightQuestions: correctAnswers)
+        
+        cell.circularProgressView.addSubview(circular.drawCircularProgress(view: cell.circularProgressView))
         
         // Multiplica por dois, porque a porcentagem de acertos seria: (correctAnswers/50)*100.
         let percentageOfCorrectAnswers: Int = 2*correctAnswers

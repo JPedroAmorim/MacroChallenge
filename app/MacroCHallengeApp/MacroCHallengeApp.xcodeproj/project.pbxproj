@@ -72,6 +72,7 @@
 		4FFF6BF7252F62610015DFE7 /* QuestionTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */; };
 		4FFF6BFC252F62800015DFE7 /* QuestionImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */; };
 		547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */; };
+		54A52B41254C88DD006D708A /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A52B40254C88DD006D708A /* CircularProgress.swift */; };
 		6EB06DF3BB895272D7017FFB /* Pods_MacroCHallengeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */; };
 		890EE09153079732E5390E9B /* Pods_MacroCHallengeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE24E242AA4F60D38FC5190D /* Pods_MacroCHallengeAppTests.framework */; };
 		C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */; };
@@ -309,6 +310,7 @@
 		4FFF6BF6252F62610015DFE7 /* QuestionTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionTextTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionTextTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FFF6BFB252F62800015DFE7 /* QuestionImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionImageTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionImageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		547EB58325432EE2008A3DCC /* NoticeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInfoTableViewCell.xib; sourceTree = "<group>"; };
+		54A52B40254C88DD006D708A /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		5D907BAFCE374DD3935E40D6 /* Pods-MacroCHallengeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8289D5C44965F5491BA064C9 /* Pods-MacroCHallengeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp.release.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp/Pods-MacroCHallengeApp.release.xcconfig"; sourceTree = "<group>"; };
 		961D18B14BA1FA3B7D2A9236 /* Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MacroCHallengeApp-MacroCHallengeAppUITests/Pods-MacroCHallengeApp-MacroCHallengeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 			children = (
 				D5BCC57F252E271200E181CB /* Extensions.swift */,
 				D5E6033E2547468100B96DA4 /* Constants.swift */,
+				54A52B40254C88DD006D708A /* CircularProgress.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1035,6 +1038,7 @@
 				2F1FCF1F2541C6EC0040169E /* NoticeViewProtocol.swift in Sources */,
 				4FFF6BED252F62160015DFE7 /* QuestionTextTableViewCell.swift in Sources */,
 				2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */,
+				54A52B41254C88DD006D708A /* CircularProgress.swift in Sources */,
 				2F1FCF8B254861560040169E /* MetricsViewControllerProtocol.swift in Sources */,
 				D586B572252BFE1400F4DF76 /* SchoolViewControllerProtocol.swift in Sources */,
 				C44560D22535F292007D945C /* HorizontalChartView.swift in Sources */,

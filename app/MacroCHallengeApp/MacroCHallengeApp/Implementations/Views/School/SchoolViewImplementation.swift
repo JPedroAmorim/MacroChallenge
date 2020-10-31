@@ -131,6 +131,17 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             
             cell.testLabel.text = "Prova \(test.year)"
             
+            let correctAnswers: Int = 40
+            
+            let circular = CircularProgress(numberOfRightQuestions: correctAnswers)
+            
+            cell.circularProgressView.addSubview(circular.drawCircularProgress(view: cell.circularProgressView))
+            
+            // Multiplica por dois, porque a porcentagem de acertos seria: (correctAnswers/50)*100.
+            let percentageOfCorrectAnswers: Int = 2*correctAnswers
+
+            cell.circularProgressLabel.text = "\(percentageOfCorrectAnswers)" + "%"
+            
         } else if indexPath.section == 1 { // notice
             cellIdentifier = "NoticeTableViewCell"
             referenceXib(nibName: cellIdentifier)

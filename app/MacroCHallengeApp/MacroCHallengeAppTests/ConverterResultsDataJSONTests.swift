@@ -55,8 +55,7 @@ class ConverterResultsDataJSONTests: XCTestCase {
                                               resultsPerTopic: ["Português" : expectedResultPortuguese,
                                                                 "Matemática" : expectedResultMath],
                                               test: test,
-                                              answeredQuestions: ["20": "B",
-                                                                  "10" : "A"],
+                                              answeredQuestions: ["20": "B", "10" : "A"],
                                               totalTimeElapsed: "",
                                               correctAnswers: [1, 2, 3],
                                               wrongAnswers: [2, 3, 4, 5])
@@ -99,7 +98,7 @@ class ConverterResultsDataJSONTests: XCTestCase {
         let testSubject = ConverterResultsDataJSON()
 
         do {
-            // When
+            // Given
             _ = try testSubject.createResultsData(json: inputJSON)
 
             XCTFail("The array dictionary results per topic is empty, an error was expected")
@@ -108,6 +107,20 @@ class ConverterResultsDataJSONTests: XCTestCase {
             // Then
             XCTAssert(true)
         }
+    }
+    
+    
+    func testCreateDict_whenGivenValidDictString_ShouldReturnDict() {
+        // Given
+        let testSubject = ConverterResultsDataJSON()
+        let inputDict = ["20" : "B", "1" : "C", "30" : "D"]
+        
+        // Given
+       let result = testSubject.convertStringInADictionary(text: String(describing: inputDict))
+        
+        
+        
+        XCTAssertEqual(result, inputDict)
     }
     
     func createValidMockJSON() -> JSON {
@@ -122,6 +135,10 @@ class ConverterResultsDataJSONTests: XCTestCase {
                                                             "totalNumberOfAnsweredQuestions":"30",
                                                             "totalNumberOfQuestions":"30"]
         ]
+        
+        // A string que você tava fazendo o answered questions tava errada.
+        let answeredQuestionsAsInputString = String(describing: ["20": "B", "10": "A"])
+        
         let dictValidMock: [String:Any] = ["testName":"cotuca2019",
                                            "testYear":"2019",
                                            "totalPercentageOfCorrectAnswers":"90.0",
@@ -130,7 +147,7 @@ class ConverterResultsDataJSONTests: XCTestCase {
                                            "totalNumberOfCorrectAnswers":"45",
                                            "correctAnswers":"[1, 2, 3]",
                                            "wrongAnswers":"[2, 3, 4, 5]",
-                                           "answeredQuestions":"[\"20\": \"B\", \"10\" : \"A\"]",
+                                           "answeredQuestions": answeredQuestionsAsInputString,
                                            "resultsPerTopic": arrayDictResultsPerTopic]
         
         

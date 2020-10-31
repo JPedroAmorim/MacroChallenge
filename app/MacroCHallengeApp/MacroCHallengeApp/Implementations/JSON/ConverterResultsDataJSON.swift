@@ -67,6 +67,7 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
             throw ErrorResultsData.noTotalNumberOfQuestions
         }
         
+        // Isso aqui tem cara que vai dar errado, answeredQuestions já existe no escopo (linha 41) e inclusive vc usa na linha 96
         if let answeredQuestions = json["totalNumberOfAnsweredQuestions"].string {
             totalNumberOfAnsweredQuestions = answeredQuestions
         } else {
@@ -163,11 +164,10 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
         
         let test = Test(name: testName, year: testYear, questions: [])
         
-        var dictAnsweredQuestions: [String:String] = [:]
-        if let dict = convertStringInADictionary(text: answeredQuestions) {
-//            dictAnsweredQuestions = dict
-        } else {
-            throw ErrorResultsData.noStringIsNotADictionary
+        let dictAnsweredQuestions: [String:String] = convertStringInADictionary(text: answeredQuestions)
+        
+        if dictAnsweredQuestions.isEmpty {
+            throw ErrorResultsData.noStringIsNotADictionary // O nome desse erro não faz sentido
         }
         
         let resultsData = ResultsData(totalPercentageOfCorrectAnswers: percentage,
@@ -186,13 +186,13 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
     
     
     /**
-    Função responsável por converter um String em um array de Int.
-
-    - parameter json: String a ser transformada para um [Int]
+     Função responsável por converter um String em um array de Int.
+     
+     - parameter json: String a ser transformada para um [Int]
      
      Exemplo: "[1, 2, 3]" -> [1,2,3]
-
-    */
+     
+     */
     
     private func convertStringInArrayOfInt(json: String) -> [Int] {
         var numberString = ""
@@ -216,24 +216,35 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
     }
     
     /**
-    Função responsável por converter um String em um dicionário.
-
-    - parameter text: String a ser transformada para um [String:String]
+     Função responsável por converter um String em um dicionário.
+     
+     - parameter text: String a ser transformada para um [String:String]
+     - returns: Um dicionário vazio caso a entrada for inválida
      
      Exemplo: "["20": "B", "10" : "A"]" -> ["20":"B",
-                                "10":"A"]
-
-    */
+     "10":"A"]
+     Exemplo: "abc" -> [:]
+     
+     */
     
-    private func convertStringInADictionary(text: String) -> [String:AnyObject]? {
-        if let data = text.data(using: .utf8) {
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject]
-                return json
-            } catch {
-                print("Something went wrong")
+    func convertStringInADictionary(text: String) -> [String:String] { // Deixei público pra testar o método, depois muda pra privado
+        var resultDict: [String : String] = [:]
+        
+        let pattern = "\"(\\d+)\": \"([A-Z])\""
+        let regex = try? NSRegularExpression(pattern: pattern)
+        
+        if let matches = regex?.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count)) {
+            
+            for match in matches {
+                if let keyRange = Range(match.range(at: 1), in: text), let valueRange = Range(match.range(at: 2), in: text) {
+                    let key = String(text[keyRange])
+                    let value = String(text[valueRange])
+                    resultDict[key] = value
+                }
             }
+            
         }
-        return nil
+        
+        return resultDict
     }
 }

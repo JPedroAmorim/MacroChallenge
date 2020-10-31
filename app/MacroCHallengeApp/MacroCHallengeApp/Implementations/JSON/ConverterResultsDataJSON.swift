@@ -163,18 +163,17 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
         
         let test = Test(name: testName, year: testYear, questions: [])
         
-        
         let resultsData = ResultsData(totalPercentageOfCorrectAnswers: percentage,
                                       totalNumberOfCorrectAnswers: Int(numRightAnswers),
-                                      totalNumberOfAnsweredQuestions: numAnsweredQuestions,
-                                      totalNumberOfQuestions: numQuestions,
+                                      totalNumberOfAnsweredQuestions: Int(numAnsweredQuestions),
+                                      totalNumberOfQuestions: Int(numQuestions),
                                       resultsPerTopic: resultsPerTopic,
                                       test: test,
                                       answeredQuestions: convertStringInADict(json: answeredQuestions),
                                       totalTimeElapsed: "",
                                       correctAnswers: convertStringInArrayOfInt(json: correctAnswers),
                                       wrongAnswers: convertStringInArrayOfInt(json: wrongAnswers))
-                
+        
         return resultsData
     }
     
@@ -217,15 +216,17 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
 
     */
     
-    private func convertStringInADict(json: String) -> [String: Any]? {
+    private func convertStringInADict(json: String)  -> [String: String] {
         if let data = json.data(using: .utf8) {
             do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                if let result = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]{
+                    return result
+                }
             } catch {
-                print(error.localizedDescription)
+                print("Error in convertStringInADict(json: String)  -> [String: String]  \(error.localizedDescription)")
             }
         }
         
-        return nil
+        return ["":""]
     }
 }

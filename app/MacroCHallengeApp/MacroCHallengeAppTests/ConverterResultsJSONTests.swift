@@ -39,7 +39,7 @@ class ConverterResultsJSONTests: XCTestCase {
         XCTAssertEqual(resultGeneralResults.totalPercentageOfCorrectAnswers, expectedResultPerTopic.totalPercentageOfCorrectAnswers)
     }
     
-    func testCreateDictResultsPerTopic_whenGivenValidJSON_shouldGiveValidDictResultsPerTopic() throws {
+    func testCreateDictResultsPerTopic_whenGivenValidJSON_shouldGiveValidDictonaryResultsPerTopic() throws {
 
         // Given
         let inputJSON = createValidMockJSON()
@@ -165,7 +165,7 @@ class ConverterResultsJSONTests: XCTestCase {
                                                             "totalNumberOfQuestions":"30"]
         ]
         
-        // Retirei a chave totalNumberOfCorrectAnswers
+        // Sem a chave totalNumberOfCorrectAnswers
         let dictInvalidGeneralResultsMock: [String:Any] = ["totalPercentageOfCorrectAnswers":"20.0",
                                            "totalNumberOfQuestions":"50",
                                            "totalNumberOfAnsweredQuestions":"45",

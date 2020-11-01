@@ -11,16 +11,16 @@ import Foundation
 //    MARK: - Error Handling
 enum ErrorResult: String, Error {
     
-    case noTotalPercentageOfCorrectAnswers = "Não foi possível obter o número do total de percetagem de respostas corretas para criar objeto tipo ResultPerTopic, confira ConverterResulstJSON"
-    case noTotalNumberOfCorrectAnswers = "Não foi possível obter o número do total de respostas corretas para criar objeto tipo ResultPerTopic, confira ConverterResulstJSON"
-    case noTotalNumberOfAnsweredQuestions = "Não foi possível obter o número do total de respostas respondidas para criar objeto tipo ResultPerTopic, confira ConverterResulstJSON"
-    case noTotalNumberOfQuestions = "Não foi possível obter o número do total de questões para criar objeto tipo ResultPerTopic, confira ConverterResulstJSON"
-    case noTopic = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic], confira ConverterResulstJSON"
-    case arrayResultsPerTopicIsEmpty = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic] pois o array de tópicos está vazio, confira ConverterResulstJSON"
+    case noTotalPercentageOfCorrectAnswers = "Não foi possível obter o número do total de percetagem de respostas corretas para criar objeto tipo ResultPerTopic, confira ConverterResultsJSON"
+    case noTotalNumberOfCorrectAnswers = "Não foi possível obter o número do total de respostas corretas para criar objeto tipo ResultPerTopic, confira ConverterResultsJSON"
+    case noTotalNumberOfAnsweredQuestions = "Não foi possível obter o número do total de respostas respondidas para criar objeto tipo ResultPerTopic, confira ConverterResultsJSON"
+    case noTotalNumberOfQuestions = "Não foi possível obter o número do total de questões para criar objeto tipo ResultPerTopic, confira ConverterResultsJSON"
+    case noTopic = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic], confira ConverterResultsJSON"
+    case arrayResultsPerTopicIsEmpty = "Não foi possível obter o tópico para criar o dicionário tipo [String:ResultPerTopic] pois o array de tópicos está vazio, confira ConverterResultsJSON"
 }
 
 class ConverterResultsJSON: ConverterResultsJSONProtocol  {
-    //    MARK: - ConverterJSONProtocol methods\
+    //    MARK: - ConverterResultsJSONProtocol methods\
     func createResultPerTopic(json: JSON) throws -> ResultsPerTopic {
         var totalPercentageOfCorrectAnswers: String
         var totalNumberOfQuestions: String

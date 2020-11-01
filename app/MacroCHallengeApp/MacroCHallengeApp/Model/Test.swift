@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Test {
+class Test: NSObject {
     private(set) var name: String
     private(set) var year: String
     private(set) var questions: [Question]

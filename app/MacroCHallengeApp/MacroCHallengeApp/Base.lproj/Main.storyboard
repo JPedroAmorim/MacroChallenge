@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +29,7 @@
         <scene sceneID="GHm-yB-V34">
             <objects>
                 <navigationController id="D1U-1H-x28" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Métricas" id="qYI-t5-3Vc"/>
+                    <tabBarItem key="tabBarItem" title="Métricas" image="SimuladoMetricas" id="qYI-t5-3Vc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Om1-Du-1x6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,12 +42,11 @@
             </objects>
             <point key="canvasLocation" x="-1281" y="475"/>
         </scene>
-        <!--Metrics View Controller Implementation-->
         <!--Histórico-->
         <scene sceneID="cs7-Pr-r9Z">
             <objects>
                 <navigationController id="1fn-0B-sBy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Histórico" id="UvR-V7-QiC"/>
+                    <tabBarItem key="tabBarItem" title="Histórico" image="book.fill" catalog="system" id="UvR-V7-QiC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z4M-ad-wUj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="-394" y="1219"/>
         </scene>
-        <!--View Controller-->
+        <!--Metrics View Controller Implementation-->
         <scene sceneID="ysr-Uk-DZr">
             <objects>
                 <viewController id="cex-xw-Qo6" customClass="MetricsViewControllerImplementation" customModule="MacroCHallengeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +114,7 @@
         <scene sceneID="o2x-nK-nwa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="moZ-hb-YhX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Simulado" id="Icy-Sf-zts"/>
+                    <tabBarItem key="tabBarItem" title="Simulado" image="SimuladoIcon" id="Icy-Sf-zts"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0tk-3B-0Ob">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -132,6 +131,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SimuladoIcon" width="19" height="24"/>
+        <image name="SimuladoMetricas" width="29" height="23"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

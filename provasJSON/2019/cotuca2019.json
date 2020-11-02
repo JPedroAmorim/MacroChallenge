@@ -226,7 +226,7 @@
  {
   "number": 15,
   "initialText": "Observe, na tabela a seguir, o número de candidatos por ano de ingresso do Vestibulinho do Cotuca.",
-  "images": "",
+  "images": "https://i.imgur.com/iZeiBk7.png",
   "subtitle": "http://exame.cotuca.unicamp.br/candvaga.aspx Acesso em: 28/07/2017.",
   "questionText":
   "A partir  do  cálculo  da  média  aritmética  do  número  de  candidatos  nesses  cinco  anos,  determine  em  qual  ano  o número de candidatos se distanciou mais dessa média.",
@@ -259,7 +259,7 @@
  {
   "number": 17,
   "initialText": "Calcule o valor de na expressão abaixo.",
-  "images": "",
+  "images": "https://i.imgur.com/eryfXMO.png",
   "subtitle": "",
   "questionText": "",
   "alternatives": [
@@ -275,7 +275,7 @@
  {
   "number": 18,
   "initialText": "",
-  "images": "",
+  "images": "https://i.imgur.com/Q1xMcQ9.png@https://i.imgur.com/c2Fok4R.png@https://i.imgur.com/K8Fg7cn.png",
   "subtitle": "",
   "questionText": "Observe, a seguir, uma maneira de resolver a equação. Como: (imagem 1), podemos acrescentar um parênteses dentro do radical, de modo que a equação original assumirá a seguinte forma: (imagem 2). Note que a expressão dentro do parênteses é idêntica à expressão apresentada no início do problema e, portanto, vale 2. Temos, então, que √x(2) = 2. Elevando ambos os membros ao quadrado, temos: 2x = 4, logo x=2. \nA partir do raciocínio apresentado, ao resolver a equação                    ,  o valor de   será:   Processo Seletivo COTUCA 2019  14",
   "alternatives": [
@@ -355,7 +355,7 @@
  {
   "number": 23,
   "initialText": "",
-  "images": "",
+  "images": "https://i.imgur.com/1VhKcck.png",
   "subtitle": "",
   "questionText": "A soma dos valores de x e y que satisfazem o sistema de equações a seguir é:",
   "alternatives": [
@@ -371,7 +371,7 @@
  {
   "number": 24,
   "initialText": "",
-  "images": "",
+  "images": "https://i.imgur.com/l3Dtgsy.png",
   "subtitle": "",
   "questionText": "Ao considerar x=2.020 e y =2.019, o valor da expressão é:",
   "alternatives": [

@@ -15,7 +15,67 @@ class RequestSenderImplementation: RequestSenderProtocol {
     private var parser = ConverterQuestionsJSON()
     private var parserForGeneralResults = ConverterResultsJSON()
     private var parserForTestResults = ConverterResultsDataJSON()
-
+    
+    func getAccumulatedResults(completion: @escaping([String : ResultsPerTopic]?, String?) -> Void) {
+        guard let url = URL(string: rootBackendURL + "results/accumulated-results") else {
+            completion(nil, "Erro ao decodificar a URL")
+            return
+        }
+        
+        var json: JSON? = nil
+        sendGetRequestForUrl(url) { jsonResponse, err in
+            guard let jsonResponseArray = jsonResponse else {
+                completion(nil, "Erro ao processar resposta do servidor")
+                return
+            }
+            json = jsonResponseArray
+        }
+        
+        if let j = json {
+            do {
+                let result = try self.parserForGeneralResults.createDictionaryTopicsResults(json: j)
+                completion(result, nil)
+                return
+            } catch {
+                completion(nil, "\(error)")
+                return
+            }
+        } else {
+            completion(nil, "JSON está nulo")
+            return
+        }
+        
+    }
+    
+    func getTestResult(completion: @escaping(ResultsData?, String?) -> Void) {
+        guard let url = URL(string: rootBackendURL + "results/accumulated-results") else {
+            completion(nil, "Erro ao decodificar a URL")
+            return
+        }
+        
+        var json: JSON? = nil
+        
+        sendGetRequestForUrl(url) { jsonResponse, err -> Void in
+            guard let jsonResponseArray = jsonResponse else {
+                completion(nil, "Erro ao processar resposta do servidor")
+                return
+            }
+            json = jsonResponseArray
+        }
+        if let j = json {
+            do {
+                let result = try self.parserForTestResults.createResultsData(json: j)
+                completion(result, nil)
+                return
+            } catch {
+                completion(nil, "\(error)")
+                return
+            }
+        } else {
+            completion(nil, "JSON está nulo")
+            return
+        }
+    }
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "tests?testName=\(testName)&testYear=\(testYear)") else {

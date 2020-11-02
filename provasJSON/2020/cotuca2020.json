@@ -276,7 +276,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Considere as sentenças: I. (푥3)4=푥7 II. (푥3)4=푥12 III. (푥3)4=푥81 IV. 푥3푥4=푥7 V. 푥3푥4=푥12 VI. Para 푎,푏 e 푐 números reais, se 푎푏=푎푐, então 푏=푐 São verdadeiras as sentenças:",
+  "questionText": "Considere as sentenças: \nI. (xu{00B3})u{2074} = xu{2077} \nII. (xu{00B3})u{2074} = xu{00B9}u{00B2} \nIII. (xu{00B3})u{2074} = xu{2078}u{00B9} \nIV. xu{00B3}xu{2074} \nVI. Para a,b e c números reais, se ab = ac, então b = c São verdadeiras as sentenças:",
   "alternatives": [
    "A:I, V e VI",
    "B:II, IV e VI",
@@ -292,7 +292,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Leia o texto a seguir. “A cidade de São Paulo atingiu 23% da meta de vacinação contra sarampo entre os jovens de 15 a 29 anos. Segundo a Secretaria Municipal de Saúde, de 10 de junho até esta quintafeira (25), foram aplicadas 720 mil doses da vacina.” Disponível em https://aconteceagora.com.br/spatingiu-23-dametadevacinacaocontrasarampoentrejovensde-15-a-29-anos/?utm_source=rss&utm_medium=rss&utm_campaign=spatingiu-23-dametadevacinacaocontrasarampoentrejovensde-15-a-29-anos. Acesso em 26/07/2019.  Na cidade de São Paulo, após 25 de julho, foram vacinados 50% dos jovens de 15 a 19 anos que ainda não haviam recebido a vacina. Qual é a porcentagem total de jovens vacinados até essa data?",
+  "questionText": "Leia o texto a seguir:\n\n “A cidade de São Paulo atingiu 23% da meta de vacinação contra sarampo entre os jovens de 15 a 29 anos. Segundo a Secretaria Municipal de Saúde, de 10 de junho até esta quintafeira (25), foram aplicadas 720 mil doses da vacina.”.  Na cidade de São Paulo, após 25 de julho, foram vacinados 50% dos jovens de 15 a 19 anos que ainda não haviam recebido a vacina. Qual é a porcentagem total de jovens vacinados até essa data?",
   "alternatives": [
    "A:43%",
    "B:57,5%",
@@ -300,7 +300,7 @@
    "D:73%",
    "E:77%"
   ],
-  "answer": "*",
+  "answer": "E",
   "topic": "Matemática"
  },
  {
@@ -324,12 +324,12 @@
   "initialText": "",
   "images": "https://i.imgur.com/WeQjX8l.png",
   "subtitle": "",
-  "questionText": "Na  figura  a  seguir,  temos  três  circunferências  de  raio 1,  tangentes  entre  si  e  inscritas  no  retângulo 퐴퐵퐶퐷. Sabendo que 푀 é ponto do segmento 퐴퐷̅̅̅̅ e que 퐹, 퐺 e 퐸 são pontos de tangência entre as circunferências e os lados do retângulo, calcule o valor da tangente do ângulo 푀퐸̂퐹.",
+  "questionText": "Na  figura  a  seguir,  temos  três  circunferências  de  raio 1,  tangentes  entre  si  e  inscritas  no  retângulo ABCD. Sabendo que M é ponto do segmento AD e que F, G e E são pontos de tangência entre as circunferências e os lados do retângulo, calcule o valor da tangente do ângulo MEF.",
   "alternatives": [
-   "A:2+√3",
-   "B:12−√3",
-   "C:2−√3",
-   "D:√3−1",
+   "A:2 + √3",
+   "B:1/(2 − √3)",
+   "C:2 − √3",
+   "D:√3 − 1",
    "E:"
   ],
   "answer": "C",
@@ -340,7 +340,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Calcule a soma das raízes reais da equação −−푥−34−−푥+13=1푥.",
+  "questionText": "Calcule a soma das raízes reais da equação (-x-3)/-4 - (-x+1)/3 = 1/x.",
   "alternatives": [
    "A:−1/7",
    "B:−2/7",
@@ -356,23 +356,23 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Calcule o valor numérico da expressão 퐸=  12(13+56+1112)−32.",
+  "questionText": "Calcule o valor numérico da expressão E =  12[(1/3)+(5/6)+(11/12)]−3u{00B3}.",
   "alternatives": [
-   "A:퐸=0",
-   "B:퐸=1",
-   "C:퐸=9",
-   "D:퐸=16",
-   "E:퐸=34"
+   "A:E = 0",
+   "B:E = 1",
+   "C:E = 9",
+   "D:E = 16",
+   "E:E = 34"
   ],
   "answer": "D",
   "topic": "Matemática"
  },
  {
   "number": 24,
-  "initialText": "",
+  "initialText": "Calcule o valor de X, sabendo que a = 2020 e b = 2018.",
   "images": "",
   "subtitle": "",
-  "questionText": "Calcule o valor de 푋, sabendo que 푎=2020 e 푏=2018. 푋=푎42−푎2푏2+푏424푎2+8푎푏+4푏2",
+  "questionText": "",
   "alternatives": [
    "A:1/16",
    "B:1/8",
@@ -404,23 +404,23 @@
   "initialText": "",
   "images": "https://i.imgur.com/aSzc0hA.png",
   "subtitle": "",
-  "questionText": "No  dia  10  de  abril  de  2019,  foi  publicada  a  primeira imagem de um buraco negro. Essa imagem foi produzida por  uma rede de telescópios como resultado  do  projeto  Event Horizon  Telescope, realizado  pela  Fundação  Nacional  de  Ciências  (National Science Foundation). O buraco negro fotografado possui uma massa 6,5 bilhões de  vezes  maior  que  a  massa  do  Sol,  e  se  encontra  a  5 milhões de anosluz da Terra. Considere que: • 1 anoluz é a distância percorrida pela luz em um ano; • 1 ano é aproximadamente igual a 3,0  107 s; • a velocidade da luz é igual a 3,0  105 km/s. Sendo assim, a distância do buraco negro observado em relação à Terra é de:",
+  "questionText": "No  dia  10  de  abril  de  2019,  foi  publicada  a  primeira imagem de um buraco negro. Essa imagem foi produzida por  uma rede de telescópios como resultado  do  projeto  Event Horizon  Telescope, realizado  pela  Fundação  Nacional  de  Ciências  (National Science Foundation). O buraco negro fotografado possui uma massa 6,5 bilhões de  vezes  maior  que  a  massa  do  Sol,  e  se  encontra  a  5 milhões de anos luz da Terra. Considere que: \n• 1 anoluz é a distância percorrida pela luz em um ano; \n• 1 ano é aproximadamente igual a 3,0 x 10u{2077} s; • a velocidade da luz é igual a 3,0 x 10u{2075} km/s. Sendo assim, a distância do buraco negro observado em relação à Terra é de:",
   "alternatives": [
-   "A:5,9  1025 m.",
-   "B:4,5  1022 m.",
-   "C:1,5  1015 m.",
-   "D:9,0  1015 m.",
-   "E:1,5  10"
+   "A:5,9 x 10u{00B2}u{2075} m.",
+   "B:4,5 x 10u{00B2}u{00B2} m.",
+   "C:1,5 x 10u{00B9}u{2075} m.",
+   "D:9,0 x 10u{00B9}u{2075} m.",
+   "E:1,5 x 10u{00B9}u{2074} m."
   ],
   "answer": "B",
   "topic": "Ciências Naturais"
  },
  {
   "number": 27,
-  "initialText": "",
+  "initialText": "Sabe-se  que  a  pressão  atmosférica  diminui  com  a  altitude,  e  essa diminuição causa alterações no comportamento do organismo humano. Numa  altura  de  aproximadamente  2.500  m  acima  do  nível  do  mar,  o organismo humano pode apresentar aumento na frequência cardíaca, dor de cabeça, náuseas, dificuldade para respirar, além de outros sintomas. O  gráfico  ao  lado fornece  o  comportamento  da  pressão  atmosférica  em relação à altitude.  Observe o gráfico e assinale a alternativa correta.",
   "images": "https://i.imgur.com/nRsGbhM.png",
   "subtitle": "",
-  "questionText": "Sabese  que  a  pressão  atmosférica  diminui  com  a  altitude,  e  essa diminuição causa alterações no comportamento do organismo humano. Numa  altura  de  aproximadamente  2.500  m  acima  do  nível  do  mar,  o organismo humano pode apresentar aumento na frequência cardíaca, dor de cabeça, náuseas, dificuldade para respirar, além de outros sintomas. O  gráfico  ao  lado fornece  o  comportamento  da  pressão  atmosférica  em relação à altitude.  Observe o gráfico e assinale a alternativa correta.",
+  "questionText": "",
   "alternatives": [
    "A:Em uma variação de altitude do nível do mar até uma altura de 1 km, observase, no gráfico, uma alteração de pressão como a observada em uma variação da altitude de 7 km até 8 km, pois a densidade do ar é a mesma em qualquer altitude.",
    "B:Em uma variação de altitude do nível do mar até uma altura de 1 km, observase, no gráfico, uma alteração de pressão menor que a observada em uma variação da altitude de 7 km até 8 km, pois a densidade do ar diminui com o aumento da altitude.",
@@ -442,17 +442,17 @@
    "B:Lisossomos",
    "C:Mitocôndrias",
    "D:Cloroplastos",
-   "E:Centríolos"
+   "E:Centríolos",
   ],
   "answer": "A",
   "topic": "Ciências Naturais"
  },
  {
   "number": 29,
-  "initialText": "",
+  "initialText": "Leia o texto a seguir.",
   "images": "https://i.imgur.com/V1Jx3F9.png",
   "subtitle": "",
-  "questionText": "Leia o texto a seguir.  O  aumento  nos  casos  da  doença  evidenciada  no  texto  reforça  a  necessidade  da  realização  das campanhas  de vacinação como medida de promoção da saúde individual e coletiva. O motivo pelo qual devemos receber diferentes vacinas ao longo de nossa vida é:",
+  "questionText": "O  aumento  nos  casos  da  doença  evidenciada  no  texto  reforça  a  necessidade  da  realização  das campanhas  de vacinação como medida de promoção da saúde individual e coletiva. O motivo pelo qual devemos receber diferentes vacinas ao longo de nossa vida é:",
   "alternatives": [
    "A:As vacinas possuem agentes virais mortos ou atenuados, ou ainda substâncias virais que têm por finalidade formar a memória imunológica, que é específica para cada agente viral.",
    "B:As vacinas possuem anticorpos que  irão realizar  o combate  aos agentes virais. Como os  anticorpos são específicos para cada doença, tornase necessário o recebimento de diferentes tipos de vacina.",
@@ -465,10 +465,10 @@
  },
  {
   "number": 30,
-  "initialText": "",
+  "initialText": "Leia o texto a seguir: \n\nAbelhas utilizam campos elétricos para identificar flores A relação entre abelha e flor é tão intensa que alguns ecólogos atrelam o surgimento e a proliferação das abelhas na Terra ao aparecimento das plantas com flores e frutos (angiospermas). Para se alimentar, as abelhas utilizam os sentidos de visão e olfato, por meio dos quais reconhecem os diferentes tipos de flores por sua cor e cheiro. No entanto, existe outra forma de comunicação entre flores e abelhas bastante sofisticada. Invisíveis para os seres humanos,  os  campos elétricos  florais  são  estímulos  percebidos  por  um  sentido  especial  das  abelhas  que  elas também usam para reconhecer e identificar as flores. Em 2013, um estudo conduzido por Daniel Robert, biólogo da Universidade  de  Bristol,  Inglaterra,  e  publicado  pela Science (vol.  340,  pp.  66-69),  anunciava  uma  importante descoberta:  as  flores  estão  cercadas  por  um  campo  elétrico  fraco,  que  surge  da  interação  com  a  atmosfera.  As abelhas são capazes de detectar esses campos elétricos e, por meio do seu formato geométrico, identificar o tipo de flor. Adaptado de: FLORIO, V. Abelhas utilizam campos elétricos para identificar flores. In: Cienc. Cult. vol.68 no.3 São Paulo July/Sept. 2016.",
   "images": "",
   "subtitle": "",
-  "questionText": "Leia o texto a seguir. Abelhas utilizam campos elétricos para identificar flores A relação entre abelha e flor é tão intensa que alguns ecólogos atrelam o surgimento e a proliferação das abelhas na Terra ao aparecimento das plantas com flores e frutos (angiospermas). Para se alimentar, as abelhas utilizam os sentidos de visão e olfato, por meio dos quais reconhecem os diferentes tipos de flores por sua cor e cheiro. No entanto, existe outra forma de comunicação entre flores e abelhas bastante sofisticada. Invisíveis para os seres humanos,  os  campos elétricos  florais  são  estímulos  percebidos  por  um  sentido  especial  das  abelhas  que  elas também usam para reconhecer e identificar as flores. Em 2013, um estudo conduzido por Daniel Robert, biólogo da Universidade  de  Bristol,  Inglaterra,  e  publicado  pela Science (vol.  340,  pp.  66-69),  anunciava  uma  importante descoberta:  as  flores  estão  cercadas  por  um  campo  elétrico  fraco,  que  surge  da  interação  com  a  atmosfera.  As abelhas são capazes de detectar esses campos elétricos e, por meio do seu formato geométrico, identificar o tipo de flor. Adaptado de: FLORIO, V. Abelhas utilizam campos elétricos para identificar flores. In: Cienc. Cult. vol.68 no.3 São Paulo July/Sept. 2016.  Considerando o  texto,  o  reconhecimento  das  estruturas  florais,  a  partir  dos  campos  elétricos,  gerou  vantagem evolutiva para as angiospermas, pois",
+  "questionText": "Considerando o  texto,  o  reconhecimento  das  estruturas  florais,  a  partir  dos  campos  elétricos,  gerou  vantagem evolutiva para as angiospermas, pois",
   "alternatives": [
    "A:as  abelhas,  ao  reconhecerem  os  campos  elétricos  das  flores, conseguem  selecionar  as  espécies  que produzem mais néctar, agindo como efetivas polinizadoras e dispersoras de sementes.",
    "B:as  abelhas,  ao  reconhecerem  o  campo  elétrico  produzido  pela  interação  das  flores  com  a  atmosfera, conseguem perceber, com exatidão, as condições climáticas, realizando a polinização na primavera e de forma sincronizada.",
@@ -500,7 +500,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Leia o texto a seguir. Personalidades  e  o  próprio  senso  comum  tendem  a  repetir  que  a  maior  floresta  tropical  do  mundo  sirva  como pulmões  ao  planeta.  Do  ponto  de  vista  científico,  porém,  a  analogia  é  equivocada.  Os  pulmões  humanos  são responsáveis por uma troca gasosa essencial: eles nos fornecem oxigênio e eliminam o gás carbônico produzido pelo próprio corpo durante a queima energética. De acordo com o biólogo e pesquisador da Universidade Federal de  Minas  Gerais, Adriano  Paglia,  são  as  algas  marinhas,  vegetais  fotossintetizantes,  que  fazem  boa  parte  da liberação de oxigênio na atmosfera mundial. Adaptado de: https://www.hojeemdia.com.br/horizontes/nocentrodapol%C3%AAmicaaamaz%C3%B4nia-%C3%A9-oun%C3%A3o-%C3%A9-opulm%C3%A3odomundo-1.737402. Acesso em: 23/08/2019.  Considerando as informações contidas no texto e os seus conhecimentos, assinale a alternativa correta:",
+  "questionText": "Leia o texto a seguir:\n\n Personalidades  e  o  próprio  senso  comum  tendem  a  repetir  que  a  maior  floresta  tropical  do  mundo  sirva  como pulmões  ao  planeta.  Do  ponto  de  vista  científico,  porém,  a  analogia  é  equivocada.  Os  pulmões  humanos  são responsáveis por uma troca gasosa essencial: eles nos fornecem oxigênio e eliminam o gás carbônico produzido pelo próprio corpo durante a queima energética. De acordo com o biólogo e pesquisador da Universidade Federal de  Minas  Gerais, Adriano  Paglia,  são  as  algas  marinhas,  vegetais  fotossintetizantes,  que  fazem  boa  parte  da liberação de oxigênio na atmosfera mundial. (Adaptado de: https://www.hojeemdia.com.br/horizontes/nocentrodapol%C3%AAmicaaamaz%C3%B4nia-%C3%A9-oun%C3%A3o-%C3%A9-opulm%C3%A3odomundo-1.737402. Acesso em: 23/08/2019).  Considerando as informações contidas no texto e os seus conhecimentos, assinale a alternativa correta:",
   "alternatives": [
    "A:A  Amazônia não  pode  ser  considerada  o  pulmão  do  mundo,  pois,  devido  à  alta  taxa  de  transpiração, é responsável pela formação dos rios aéreos.",
    "B:As algas são consideradas o pulmão do mundo por serem capazes de liberar oxigênio para a atmosfera e fixar o gás carbônico, pois não realizam respiração aeróbica, apenas fotossíntese.",
@@ -513,10 +513,10 @@
  },
  {
   "number": 33,
-  "initialText": "",
+  "initialText": "A  tirinha  a  seguir  representa  Charles  Darwin,  o  principal  pensador  da  teoria  evolucionista  mais  aceita atualmente.  (https://esquadraodoconhecimento.files.wordpress.com/2011/12/darwin-1.png. Acesso em 25/08/2019.)",
   "images": "https://i.imgur.com/AnzVIVS.png",
   "subtitle": "",
-  "questionText": "A  tirinha  a  seguir  representa  Charles  Darwin,  o  principal  pensador  da  teoria  evolucionista  mais  aceita atualmente.  https://esquadraodoconhecimento.files.wordpress.com/2011/12/darwin-1.png. Acesso em 25/08/2019.  Analise a explicação apresentada no segundo quadrinho e assinale a alternativa correta.",
+  "questionText": "Analise a explicação apresentada no segundo quadrinho e assinale a alternativa correta.",
   "alternatives": [
    "A:A  explicação  apresentada  está  de  acordo  com  a teoria  darwinista,  pois  justifica  o  surgimento  da característica pela seleção dos mais aptos.",
    "B:A explicação apresentada está de acordo com a teoria lamarckista, pois justifica a ocorrência da adaptação por sua finalidade.",
@@ -558,5 +558,21 @@
   ],
   "answer": "A",
   "topic": "Ciências Naturais"
+ }
+ {
+	 "number": 36,
+	 "initialText": "",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Considerando a parte em negrito do texto e os seus conhecimentos sobre separação de misturas, quais deverão ser os procedimentos para separar a areia da hematita?",
+	 "alternatives": [
+		 "A:Trituração e evaporação.",
+		 "B:Filtração e destilação.",
+		 "C:Filtração e flotação.",
+		 "D:Decantação e trituração.",
+		 "E:Flotação e decantação"
+	 ],
+	 "answer": "A",
+	 "topic": "Ciências Naturais"
  }
 ]

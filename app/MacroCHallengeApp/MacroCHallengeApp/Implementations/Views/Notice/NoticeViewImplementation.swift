@@ -11,6 +11,8 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
     
     // MARK: - IBOutlets
     @IBOutlet weak var testTableView: UITableView!
+
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Dependencies
     var viewController: NoticeViewControllerProtocol
@@ -31,6 +33,7 @@ class NoticeViewImplementation: UIView, NoticeViewProtocol {
         initFromNib()
         topicsArray = setupTopicsArrayKeys()
         setupTableView()
+        self.activityIndicator.isHidden = true
     }
     
     required init?(coder: NSCoder) {

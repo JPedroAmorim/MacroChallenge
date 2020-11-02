@@ -443,6 +443,13 @@
 			path = Results;
 			sourceTree = "<group>";
 		};
+		2FBD638C2550A039006A8725 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		4F6DE00F254C908000D7BCAD /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +640,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2FBD638C2550A039006A8725 /* Misc */,
 				2F1FCF7A254857C10040169E /* Metrics */,
 				547EB57D25432B2F008A3DCC /* NoticeInfo */,
 				2F1FCF0C2541B49B0040169E /* Notice */,

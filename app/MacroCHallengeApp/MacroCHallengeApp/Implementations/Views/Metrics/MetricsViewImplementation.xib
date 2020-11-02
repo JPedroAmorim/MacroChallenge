@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MetricsViewControllerImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MetricsViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="mVr-7q-gQZ" id="0Da-85-hPo"/>
             </connections>
@@ -31,7 +31,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mVr-7q-gQZ" secondAttribute="trailing" id="dof-f0-3vL"/>
                 <constraint firstItem="mVr-7q-gQZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fN8-2E-4kD"/>
             </constraints>
-            <point key="canvasLocation" x="116" y="104"/>
+            <point key="canvasLocation" x="115.94202898550725" y="103.53260869565219"/>
         </view>
     </objects>
 </document>

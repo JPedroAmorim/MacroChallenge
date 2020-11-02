@@ -16,65 +16,35 @@ class RequestSenderImplementation: RequestSenderProtocol {
     private var parserForGeneralResults = ConverterResultsJSON()
     private var parserForTestResults = ConverterResultsDataJSON()
     
-    func getAccumulatedResults(completion: @escaping([String : ResultsPerTopic]?, String?) -> Void) {
+    func getAccumulatedResults(completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "results/accumulated-results") else {
-            completion(nil, "Erro ao decodificar a URL")
+            completion(nil, nil, "Erro ao decodificar a URL")
             return
         }
         
-        var json: JSON? = nil
-        sendGetRequestForUrl(url) { jsonResponse, err in
+        sendGetRequestForUrl(url, completion:  { jsonResponse, err in
             guard let jsonResponseArray = jsonResponse else {
-                completion(nil, "Erro ao processar resposta do servidor")
+                completion(nil, nil, "Erro ao processar resposta do servidor")
                 return
             }
-            json = jsonResponseArray
-        }
-        
-        if let j = json {
-            do {
-                let result = try self.parserForGeneralResults.createDictionaryTopicsResults(json: j)
-                completion(result, nil)
-                return
-            } catch {
-                completion(nil, "\(error)")
-                return
+            let res = { () -> (ResultsPerTopic, [String:ResultsPerTopic])? in
+                do {
+                    let res = try self.parserForGeneralResults.createResultPerTopic(json: jsonResponseArray)
+                    let result = try self.parserForGeneralResults.createDictionaryTopicsResults(json: jsonResponseArray)
+                    return (res, result)
+                } catch {
+                    print("Error: \(error)")
+                    return nil
+                }
+            }()
+            
+            if let r = res {
+                completion(r.0, r.1, nil)
+            } else {
+                completion(nil, nil, "Erro ao fazer o parsing")
             }
-        } else {
-            completion(nil, "JSON está nulo")
-            return
-        }
-        
-    }
-    
-    func getTestResult(completion: @escaping(ResultsData?, String?) -> Void) {
-        guard let url = URL(string: rootBackendURL + "results/accumulated-results") else {
-            completion(nil, "Erro ao decodificar a URL")
-            return
-        }
-        
-        var json: JSON? = nil
-        
-        sendGetRequestForUrl(url) { jsonResponse, err -> Void in
-            guard let jsonResponseArray = jsonResponse else {
-                completion(nil, "Erro ao processar resposta do servidor")
-                return
-            }
-            json = jsonResponseArray
-        }
-        if let j = json {
-            do {
-                let result = try self.parserForTestResults.createResultsData(json: j)
-                completion(result, nil)
-                return
-            } catch {
-                completion(nil, "\(error)")
-                return
-            }
-        } else {
-            completion(nil, "JSON está nulo")
-            return
-        }
+            
+        })
     }
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {

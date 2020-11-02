@@ -20,12 +20,12 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
      */
     var myView: MetricsViewProtocol?
     var metrics: MetricsProtocol?
+    let requestSender = RequestSenderImplementation()
     
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
-        setupDefaultMetricsImplementation()
-        setupDefaultViewImplementation()
+        getRequest()
     }
     
     override func viewDidLoad() {
@@ -44,5 +44,20 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
             self.myView = defaultView
             self.view = defaultView
         }
+    }
+    
+    private func getRequest() {
+        self.view = LoadingViewController().view
+        requestSender.getAccumulatedResults(completion: {generalResults, topicsResults, err in
+
+            if let general = generalResults, let topics = topicsResults {
+                let defaultView = MetricsViewImplementation(generalResults: general, topicsResults: topics, controller: self)
+                self.myView = defaultView
+                self.view = defaultView
+            } else {
+                print(err)
+            }
+            
+        })
     }
 }

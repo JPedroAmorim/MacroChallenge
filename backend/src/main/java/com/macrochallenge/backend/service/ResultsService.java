@@ -36,6 +36,8 @@ public class ResultsService implements ResultsServiceInterface {
         this.resultsPerTopicRepository = resultsPerTopicRepository;
     }
 
+
+
     @Override
     public void addNewResult(ResultsDTO resultsDTO) {
         Optional<Test> testForResultOptional = testRepository.findByNameAndYear(resultsDTO.getTestName(),
@@ -85,7 +87,7 @@ public class ResultsService implements ResultsServiceInterface {
             resultsPerTopicList.add(resultsPerTopic);
         }
 
-        
+
         resultsEntity.getResultsPerTopics().addAll(resultsPerTopicList);
 
         resultsRepository.save(resultsEntity);

@@ -20,15 +20,18 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     private var wrongUserAnswers: [Int] = []
     private var timeElapsed: String
     private var questionController: QuestionViewControllerProtocol
+    private var shouldSendResults: Bool
     
     // MARK: - Init methods
-    required init(test: Test, answeredQuestions: [String : String], timeElapsed: String, questionController: QuestionViewControllerProtocol) {
+    required init(test: Test, answeredQuestions: [String : String], timeElapsed: String, questionController: QuestionViewControllerProtocol, shouldSendResults: Bool) {
         self.test = test
         self.answeredQuestions = answeredQuestions
         self.timeElapsed = timeElapsed
         self.questionController = questionController
+        self.shouldSendResults = shouldSendResults
         super.init(nibName: nil, bundle: nil)
         setupResultsData()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -43,6 +46,7 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     // MARK: - Setup methods
@@ -76,7 +80,9 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
                                       correctAnswers: correctUserAnswers,
                                       wrongAnswers: wrongUserAnswers)
         self.resultsData = resultsData
-        sendResultsRequest(resultsData)
+        if shouldSendResults {
+            sendResultsRequest(resultsData)
+        }
     }
     
     // MARK: - ResultsViewControllerProtocol methods

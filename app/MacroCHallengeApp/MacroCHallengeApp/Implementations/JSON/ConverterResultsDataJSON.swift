@@ -230,7 +230,7 @@ class ConverterResultsDataJSON: ConverterResultsDataJSONProtocol  {
     func convertStringInADictionary(text: String) -> [String:String] { // Deixei público pra testar o método, depois muda pra privado
         var resultDict: [String : String] = [:]
         
-        let pattern = "\"(\\d+)\": \"([A-Z])\""
+        let pattern = "\"(\\d+)\": \"([A-Za-z])\""
         let regex = try? NSRegularExpression(pattern: pattern)
         
         if let matches = regex?.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count)) {

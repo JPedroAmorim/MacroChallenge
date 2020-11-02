@@ -10,9 +10,20 @@ import UIKit
 import KDCircularProgress
 
 class HistoricViewImplementation: UIView, HistoricViewProtocol {
+    func startActivity() {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.hidesWhenStopped = true
+    }
+    
+    func stopActivity() {
+        self.activityIndicator.stopAnimating()
+    }
+    
 	// MARK: -IBOutlets
 	@IBOutlet weak var tableViewSchools: UITableView!
-	
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
 	// MARK: - Dependencies
 	var viewController: HistoricViewControllerProtocol
 
@@ -30,6 +41,7 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
 		initFromNib()
 
 		setupDelegateTableview()
+        self.activityIndicator.isHidden = true
 	}
 
 	required init?(coder: NSCoder) {
@@ -153,7 +165,7 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 			}
 		}
 
-		return String(characters)
+        return String(characters).capitalizingFirstLetter()
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

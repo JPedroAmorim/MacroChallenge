@@ -14,6 +14,8 @@ class RequestSenderImplementation: RequestSenderProtocol {
     
     private var parser = ConverterQuestionsJSON()
     private var parserForGeneralResults = ConverterResultsJSON()
+    private var parserForTestResults = ConverterResultsDataJSON()
+
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "tests?testName=\(testName)&testYear=\(testYear)") else {
@@ -29,6 +31,34 @@ class RequestSenderImplementation: RequestSenderProtocol {
             let questionsArrayForTest =  self.parser.createQuestions(jsonArray: jsonResponseArray)
             completion(questionsArrayForTest, nil)
         }
+    }
+    
+    func getQuestionsAndAnsweredQuestions(testName: String, testYear: String, completion: @escaping ([Question]?, [String: String]?, String?) -> Void) {
+        guard let url = URL(string: rootBackendURL + "tests/test-result?testName=\(testName)&testYear=\(testYear)") else {
+            completion(nil, nil, "Erro ao decodificar a URL")
+            return
+        }
+        
+        sendGetRequestForUrl(url) { json, error in
+            guard let jsonResponse = json else {
+                completion(nil, nil, "Erro ao processar a resposta")
+                return
+            }
+            
+            guard let jsonArray = jsonResponse["questions"].array else {
+                completion(nil, nil, "Erro ao processar a resposta")
+                return
+            }
+            
+            let questions = self.parser.createQuestions(jsonArray: jsonArray)
+            
+            let answeredQuestionsString = jsonResponse["answeredQuestions"].stringValue
+            
+            let answeredQuestionsDict = self.parserForTestResults.convertStringInADictionary(text: answeredQuestionsString)
+            
+            completion(questions, answeredQuestionsDict, nil)
+        }
+        
     }
     
     func postResultsForTest(testName: String, testYear: String, results: ResultsData, completion: @escaping (String?) -> Void) {

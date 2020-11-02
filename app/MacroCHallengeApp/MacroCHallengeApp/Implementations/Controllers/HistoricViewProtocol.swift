@@ -21,4 +21,8 @@ protocol HistoricViewProtocol {
 
 	// Dependências
 	var viewController: HistoricViewControllerProtocol {get set}
+    
+    func startActivity()
+    func stopActivity()
+    
 }

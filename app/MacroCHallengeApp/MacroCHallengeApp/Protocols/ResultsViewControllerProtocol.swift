@@ -20,7 +20,7 @@ protocol ResultsViewControllerProtocol {
      
      */
     init(test: Test, answeredQuestions: [String : String], timeElapsed:String,
-         questionController: QuestionViewControllerProtocol)
+         questionController: QuestionViewControllerProtocol, shouldSendResults: Bool)
     
     /**
      

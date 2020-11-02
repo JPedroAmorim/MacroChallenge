@@ -415,7 +415,7 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
 
     /// Método responsavel por definir se a resposta está certa, errada ou não foi respondida
     private func answerRight() -> String {
-        if self.chosenOption == self.question.answer {
+        if self.chosenOption?.uppercased() == self.question.answer {
             return "\nParabéns, você acertou!"
         } else if self.chosenOption == nil {
             return "\nVocê não respondeu esta questão. A resposta correta é a " + self.question.answer.uppercased() + "."

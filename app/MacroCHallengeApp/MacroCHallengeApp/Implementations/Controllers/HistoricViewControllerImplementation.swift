@@ -86,6 +86,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
             let questionsVC = QuestionViewControllerImplementation(data: testQuestions, parentController: self)
             
             questionsVC.shouldDisplayAnswer = true
+            questionsVC.answeredQuestions = answeredQuestionsForTest
             
             if let navController = self.navigationController {
                 let resultsVC = ResultsViewController(test: testFromTestHeader, answeredQuestions: answeredQuestionsForTest, timeElapsed: "00:00", questionController: questionsVC, shouldSendResults: false)

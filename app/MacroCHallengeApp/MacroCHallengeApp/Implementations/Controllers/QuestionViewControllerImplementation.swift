@@ -17,7 +17,7 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
     // MARK: - Private attributes
     private var data: [Question]
     private var currentQuestionIndex: Int
-    private var answeredQuestions: [String : String] = [:]
+    var answeredQuestions: [String : String] = [:]
     
     // MARK: - Init methods
     required init(data: [Question], parentController: OverviewViewControllerProtocol) {
@@ -122,7 +122,8 @@ class QuestionViewControllerImplementation: UIViewController, QuestionViewContro
      */
     private func setupDefaultView() { 
         let defaultView = QuestionViewImplementation(data: data[currentQuestionIndex],
-                        controller: self, wasAlreadyAnswered: nil,
+                                                     controller: self,
+                                                     wasAlreadyAnswered: self.answeredQuestions[data[currentQuestionIndex].number],
                         shouldPresentAnswer: self.shouldDisplayAnswer,
                         numberOfQuestions: self.data.count)
         self.myView = defaultView

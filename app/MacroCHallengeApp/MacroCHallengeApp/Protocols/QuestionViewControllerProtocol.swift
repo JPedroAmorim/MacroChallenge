@@ -63,7 +63,7 @@ protocol QuestionViewControllerProtocol {
     
     func displayQuestion(_ question: Question)
     
-    
+    var answeredQuestions: [String : String] {get set}
     /**
      
      Método pelo qual a view avisa o controlador que uma alternativa foi selecionada.

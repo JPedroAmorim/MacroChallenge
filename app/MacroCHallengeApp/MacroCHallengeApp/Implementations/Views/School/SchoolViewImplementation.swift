@@ -157,7 +157,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             case is TestTableViewCell: 
                 viewController.testWasSubmitted(data.tests[indexPath.row])
             default:
-                fatalError("Unexpected: the cell is not a custom cell.")
+                print("Unexpected: the cell is not a custom cell.")
             }
             
         }

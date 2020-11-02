@@ -142,7 +142,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             finalCell = cell
             
             cell.noticeLabel.text = "Edital 2021"
-            cell.logoImageView.image = UIImage(named: "logoCTI")
+            cell.logoImageView.image = UIImage(named: "logoCOTUCA")
         }
         
         return finalCell

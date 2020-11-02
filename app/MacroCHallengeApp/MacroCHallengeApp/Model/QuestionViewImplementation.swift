@@ -353,9 +353,9 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
             let index = String(format: "%c", indexPath.row + 97).uppercased()
             cell.lblIndex.text = index.uppercased()
             cell.lblAnswer.text = self.question.options[index]
-            if index == self.chosenOption {
+            if index == self.chosenOption?.uppercased() {
                 if shouldDisplayAnswer {
-                    if self.chosenOption == self.question.answer {
+                    if self.chosenOption?.uppercased() == self.question.answer.uppercased() {
                         setOptionCell(cell: cell, state: .right)
                     } else {
                         setOptionCell(cell: cell, state: .wrong)

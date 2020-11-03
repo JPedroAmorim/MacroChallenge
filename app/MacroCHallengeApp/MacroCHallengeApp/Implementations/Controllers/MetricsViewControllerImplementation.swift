@@ -33,6 +33,11 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
         navigationItem.title = "Métricas Gerais"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getRequest()
+    }
+    
     // MARK: - Setup methods
     private func setupDefaultMetricsImplementation() {
         self.metrics = MockMetricsImplementation()

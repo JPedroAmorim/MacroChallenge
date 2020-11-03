@@ -210,7 +210,7 @@
  {
   "number": 14,
   "initialText": "Determine o valor da expressão:",
-  "images": "",
+  "images": "https://i.imgur.com/tIwQVh9.png",
   "subtitle": "",
   "questionText": "",
   "alternatives": [
@@ -292,7 +292,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "O valor total da conta de energia elétrica de uma residência, de agosto de 2017, foi de R$300,00. Sabese que o valor total da conta é o valor do consumo acrescido de um imposto, que corresponde a 25% do valor total da conta. Qual foi o valor do consumo referente à conta de agosto de 2017?",
+  "questionText": "O valor total da conta de energia elétrica de uma residência, de agosto de 2017, foi de R$300,00. Sabe-se que o valor total da conta é o valor do consumo acrescido de um imposto, que corresponde a 25% do valor total da conta. Qual foi o valor do consumo referente à conta de agosto de 2017?",
   "alternatives": [
    "A:R$200,00",
    "B:R$225,00",
@@ -305,10 +305,10 @@
  },
  {
   "number": 20,
-  "initialText": "",
+  "initialText": "Um  dos  aspectos mais  importantes para  construção  de  uma casa  é  o  planejamento.  Esse  planejamento geralmente  começa  com  um  projeto  e,  com  ele  em  mãos,  dáse  início  à  construção.  No  planejamento, estão descritos itens como compra de materiais, administração de mão de obra ou outras atividades que fazem parte da etapa de construção.  Quando se trata de uma mão de obra muito grande, o engenheiro ou o mestre de obras fica encarregado de realizar  o cálculo dos materiais que serão usados para a construção. Por exemplo, é sempre bom ter o cálculo de telhas que serão usadas para não correr o risco de sobrar ou então de faltar o material necessário.",
   "images": "https://i.imgur.com/7jOJWx.png",
   "subtitle": "",
-  "questionText": "Um  dos  aspectos mais  importantes para  construção  de  uma casa  é  o  planejamento.  Esse  planejamento geralmente  começa  com  um  projeto  e,  com  ele  em  mãos,  dáse  início  à  construção.  No  planejamento, estão descritos itens como compra de materiais, administração de mão de obra ou outras atividades que fazem parte da etapa de construção.  Quando se trata de uma mão de obra muito grande, o engenheiro ou o mestre de obras fica encarregado de realizar  o cálculo dos materiais que serão usados para a construção. Por exemplo, é sempre bom ter o cálculo de telhas que serão usadas para não correr o risco de sobrar ou então de faltar o material necessário.   Considere que, para a construção do telhado da ilustração acima: • as medidas indicadas são: H = 5 m, A = 12 m e C = 10 m; • serão usadas telhas romanas, semelhantes às da ilustração, na disposição de 16 peças por metro quadrado; • é recomendado que sejam adquiridos 5% de telhas a mais para recortes e eventuais quebras no transporte e manuseio. Segundo os critérios acima, qual será o menor número de telhas romanas que deve ser adquirido?",
+  "questionText": "Considere que, para a construção do telhado da ilustração acima: \n• as medidas indicadas são: H = 5 m, A = 12 m e C = 10 m;\n• serão usadas telhas romanas, semelhantes às da ilustração, na disposição de 16 peças por metro quadrado; \n• é recomendado que sejam adquiridos 5% de telhas a mais para recortes e eventuais quebras no transporte e manuseio. Segundo os critérios acima, qual será o menor número de telhas romanas que deve ser adquirido?",
   "alternatives": [
    "A:4.576",
    "B:4.368",
@@ -321,8 +321,8 @@
  },
  {
   "number": 21,
-  "initialText": "Simplificando a expressão algébrica , com x ≠ ±y, obtemos: ",
-  "images": "",
+  "initialText": "Simplificando a expressão algébrica, com x ≠ ±y, obtemos: ",
+  "images": "https://i.imgur.com/awFeIIq.png",
   "subtitle": "",
   "questionText": "",
   "alternatives": [
@@ -340,7 +340,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Sejam x1 e x2 as raízes da equação 5xu{00B2}+7x−6=0, sendo 푥1>푥2. Qual é o valor da potência (푥1)푥2?",
+  "questionText": "Sejam x1 e x2 as raízes da equação 5xu{00B2} + 7x − 6=0, sendo x1>x2. Qual é o valor da potência (x1)ˆx2?",
   "alternatives": [
    "A:25/6",
    "B:25/9",
@@ -353,8 +353,8 @@
  },
  {
   "number": 23,
-  "initialText": "Calcule o valor da expressão E=4x+2y , considerando (x,y) a solução do sistema:",
-  "images": "",
+  "initialText": "Calcule o valor da expressão E = 4x + 2y, considerando (x,y) a solução do sistema:",
+  "images": "https://i.imgur.com/ffx0Oe2.png",
   "subtitle": "",
   "questionText": "",
   "alternatives": [
@@ -384,27 +384,11 @@
   "topic": "Matemática"
  },
  {
-  "number": 25,
-  "initialText": "O gráfico a seguir representa a variação da posição de um móvel em uma trajetória retilínea em função do tempo, no intervalo de 0 a 11 s.",
-  "images": "",
-  "subtitle": "",
-  "questionText": "O gráfico que melhor representa a velocidade desse móvel, nesse mesmo intervalo, é:",
-  "alternatives": [
-   "A:",
-   "B:",
-   "C:",
-   "D:",
-   "E:"
-  ],
-  "answer": "A",
-  "topic": "Ciências Naturais"
- },
- {
   "number": 26,
-  "initialText": "",
+  "initialText": "Três crianças brincam de cabo de guerra. A competição acontece numa arena circular, onde três cordas estão fortemente unidas através de um nó que, no início da brincadeira, encontrase no centro da arena.  A  arena  foi  dividida  radialmente  em  três  partes  iguais,  onde  cada  criança  pode  se  locomover,  aplicando  uma força radial na extremidade livre da corda.  Num determinado momento, as crianças perceberam que, na formação desenhada abaixo, conseguiam manter o jogo equilibrado.",
   "images": "https://i.imgur.com/SiKIdOE.png",
   "subtitle": "",
-  "questionText": "Três crianças brincam de cabo de guerra. A competição acontece numa arena circular, onde três cordas estão fortemente unidas através de um nó que, no início da brincadeira, encontrase no centro da arena.  A  arena  foi  dividida  radialmente  em  três  partes  iguais,  onde  cada  criança  pode  se  locomover,  aplicando  uma força radial na extremidade livre da corda.  Num determinado momento, as crianças perceberam que, na formação desenhada abaixo, conseguiam manter o jogo equilibrado.   Se  nessa  formação, em  que o  jogo  permanece  equilibrado,  as  crianças  A  e  B  fazem  respectivamente  uma tração  na  corda  de  680  N  e  320  N,  a  tração  exercida  pela  terceira  criança  (C),  no  momento  da  configuração apresentada no desenho, será, em N, de:",
+  "questionText": "Se  nessa  formação, em  que o  jogo  permanece  equilibrado,  as  crianças  A  e  B  fazem  respectivamente  uma tração  na  corda  de  680  N  e  320  N,  a  tração  exercida  pela  terceira  criança  (C),  no  momento  da  configuração apresentada no desenho, será, em N, de:",
   "alternatives": [
    "A:1000",
    "B:600",
@@ -420,13 +404,13 @@
   "initialText": "",
   "images": "https://i.imgur.com/sgUImYS.png",
   "subtitle": "",
-  "questionText": "Um  aluno  do  COTUCA,  depois  de  um  árduo  dia  de  estudos,  vai  para  casa  e  pretende  dormir  cedo,  mas  um som fraco e irritantemente agudo de um mosquito que ronda a sua cabeça juntamente ao barulho forte e grave do motor de uma moto que passeia em frente à janela do seu quarto não permitem que ele descanse.  Os dois sons caracterizados no texto acima (o som emitido pelo mosquito e o som emitido pelo motor da moto) podem  ser  melhor  representados,  comparativamente,  por  quais  curvas  do  gráfico  da  intensidade  em  função  do tempo a seguir?    som emitido pelo mosquito som emitido pelo motor da moto",
+  "questionText": "Um  aluno  do  COTUCA,  depois  de  um  árduo  dia  de  estudos,  vai  para  casa  e  pretende  dormir  cedo,  mas  um som fraco e irritantemente agudo de um mosquito que ronda a sua cabeça juntamente ao barulho forte e grave do motor de uma moto que passeia em frente à janela do seu quarto não permitem que ele descanse.  Os dois sons caracterizados no texto acima (o som emitido pelo mosquito e o som emitido pelo motor da moto) podem  ser  melhor  representados,  comparativamente,  por  quais  curvas  do  gráfico  da  intensidade  em  função  do tempo a seguir?",
   "alternatives": [
-   "A:A D",
-   "B:D A",
-   "C:B C",
-   "D:C B",
-   "E:C A"
+   "A:som emitido pelo mosquito A som emitido pelo motor da moto D",
+   "B:som emitido pelo mosquito D som emitido pelo motor da moto A",
+   "C:som emitido pelo mosquito B som emitido pelo motor da moto C",
+   "D:som emitido pelo mosquito C som emitido pelo motor da moto B",
+   "E:som emitido pelo mosquito C som emitido pelo motor da moto A"
   ],
   "answer": "B",
   "topic": "Ciências Naturais"
@@ -436,7 +420,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Após o escândalo de doping da Rússia nas olimpíadas e paralimpíadas Rio 2016, a Federação Internacional de Atletismo considera anular todos os recordes mundiais registrados antes de 2005, baseados em alguns critérios.   O  doping  é  definido  como  a utilização  de  substâncias  ou  métodos  proibidos  capazes  de  promover  alterações físicas  e/ou  psíquicas  que  melhoram  artificialmente  o  desempenho  esportivo  do  atleta. Essas  drogas  ilícitas  podem diminuir   a   fadiga,   melhorar   velocidade,   estimular   batimentos   cardíacos,   diminuir   a   sensação   de   medo   e consequentemente melhorar a performance do atleta. Os métodos de controle de dopagem consistem em análise de urina  e/ou  sangue  com  a  finalidade  de  identificar  a  presença de  substâncias  ou  métodos  proibidos  pela  Agência Mundial Antidopagem. Adaptado de http://www.abcd.gov.br/perguntaserespostas Acesso em 25/07/2017.  Os sistemas do corpo humano que são afetados diretamente pela ação e pelas formas de detecção da dopagem descritas no texto são:",
+  "questionText": "Após o escândalo de doping da Rússia nas olimpíadas e paralimpíadas Rio 2016, a Federação Internacional de Atletismo considera anular todos os recordes mundiais registrados antes de 2005, baseados em alguns critérios.   \n\nO  doping  é  definido  como  a utilização  de  substâncias  ou  métodos  proibidos  capazes  de  promover  alterações físicas  e/ou  psíquicas  que  melhoram  artificialmente  o  desempenho  esportivo  do  atleta. Essas  drogas  ilícitas  podem diminuir   a   fadiga,   melhorar   velocidade,   estimular   batimentos   cardíacos,   diminuir   a   sensação   de   medo   e consequentemente melhorar a performance do atleta. Os métodos de controle de dopagem consistem em análise de urina  e/ou  sangue  com  a  finalidade  de  identificar  a  presença de  substâncias  ou  métodos  proibidos  pela  Agência Mundial Antidopagem. \n\nOs sistemas do corpo humano que são afetados diretamente pela ação e pelas formas de detecção da dopagem descritas no texto são:",
   "alternatives": [
    "A:endócrino, muscular, linfático e cardiovascular.",
    "B:nervoso, endócrino, esquelético e excretor.",
@@ -468,7 +452,7 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Leia o texto a seguir.   O  coração  é  um  órgão muscular  oco,  envolto  por  um  saco  cheio  de  líquido  chamado  pericárdio,  localizado  no interior da cavidade torácica. Sua função é bombear o sangue oxigenado (arterial) proveniente dos pulmões para todo o  corpo  e  direcionar  o  sangue  desoxigenado  (venoso),  que  retornou  ao  coração,  até  os  pulmões,  onde  deve  ser enriquecido com oxigênio novamente. Adaptado de  http://saude.ig.com.br/coracao/ Acesso em 14/08/2017 .  Assinale a alternativa que  relaciona corretamente o vaso sanguíneo que chega  ou deixa o coração, com o tipo de sangue que carrega.",
+  "questionText": "Leia o texto a seguir.\n\nO  coração  é  um  órgão muscular  oco,  envolto  por  um  saco  cheio  de  líquido  chamado  pericárdio,  localizado  no interior da cavidade torácica. Sua função é bombear o sangue oxigenado (arterial) proveniente dos pulmões para todo o  corpo  e  direcionar  o  sangue  desoxigenado  (venoso),  que  retornou  ao  coração,  até  os  pulmões,  onde  deve  ser enriquecido com oxigênio novamente.\n\\nAssinale a alternativa que  relaciona corretamente o vaso sanguíneo que chega  ou deixa o coração, com o tipo de sangue que carrega.",
   "alternatives": [
    "A:Veia cava superior – sangue arterial",
    "B:Artéria aorta – sangue venoso",
@@ -481,8 +465,8 @@
  },
  {
   "number": 31,
-  "initialText": "",
-  "images": "",
+  "initialText": "Utilize as informações contidas nestes resultados de exames de sangue e urina para responder às questões 31 e 32. \n\nUma mulher foi submetida a exames de sangue (hemograma) e de urina tipo I em um exame de rotina e obteve os resultados que podem ser observados nas tabelas a seguir:",
+  "images": "https://i.imgur.com/av6e5vw.png",
   "subtitle": "",
   "questionText": "A  análise  do  exame  de  sangue  possibilita  detectarmos, respectivamente,  a  seguinte  doença  e  medida  de tratamento correspondente:",
   "alternatives": [
@@ -500,23 +484,23 @@
   "initialText": "",
   "images": "",
   "subtitle": "",
-  "questionText": "Uma mulher foi submetida a exames de sangue (hemogram",
+  "questionText": "Considerando-se os resultados parciais do exame de urina do tipo I da paciente, podemos afirmar que ela possui, respectivamente, mal funcionamento de qual órgão e qual doença associada a esse órgão?",
   "alternatives": [
-   "A:e de urina tipo I em um exame de rotina e obteve os resultados que podem ser observados nas tabelas a seguir:   Hemograma (valores encontrados) Valores de  referência Eritrócitos 2,6∙106/mm3 3,8 - 4,8∙106/mm3 Plaquetas 250 mil/mm3 150,0 - 400,0 mil/mm3 Leucócitos  totais 8,09 mil/mm3 4,5 - 11,0 mil/mm3 Neutrófilos 4,28 mil/mm3 1,8 - 7,7 mil/mm3 Basófilos 0,08 mil/mm3 0,0 - 0,2 mil/mm3 Monócitos 0,35 mil/mm3 0,0 - 0,8 mil/mm3 Linfócitos  atípicos 3,21 mil/mm3 1,0 - 4,0 mil/mm3  Urina tipo I -  resultados parciais Resultados encontrados Valores/resultados de referência Glicose presente ausente Proteínas 0,05 g/L <0,15 g/L Corpos cetônicos ausentes ausentes Pigmentos biliares ausentes ausentes Nitrito negativo negativo Hemoglobina ausente ausente   31. A  análise  do  exame  de  sangue  possibilita  detectarmos, respectivamente,  a  seguinte  doença  e  medida  de tratamento correspondente: a) trombopenia, ingestão de alimentos ricos em cálcio.",
-   "B:leucopenia, ingestão de alimentos ricos em vitaminas do complexo B.",
-   "C:anemia, ingestão de alimentos ricos em ferro.",
-   "D:escorbuto, ingestão de alimentos ricos em iodo.",
-   "E:leucocitose, ingestão de alimentos ricos em magnésio."
+   "A:Rim, diabetes insipidus",
+   "B:Tireoide, bócio endêmico",
+   "C:Hipófise, nanismo",
+   "D:Pâncreas, diabetes mellitusdo.",
+   "E:Fígado, diabetes mellitus"
   ],
   "answer": "D",
   "topic": "Ciências Naturais"
  },
  {
   "number": 33,
-  "initialText": "",
+  "initialText": "Leia o quadrinho abaixo.",
   "images": "https://i.imgur.com/FXxv4da.png",
   "subtitle": "",
-  "questionText": "Leia o quadrinho abaixo.  Disponível em http://hojeemdia.com.br/opini%C3%A3o/blogs/blogdolute-.366314?month=2&year=2017 Acesso em 14/08/2017.  Na figura, os animais se referem às plantas como coitadas por não apresentarem estruturas de locomoção, e, em incêndios, poderiam ser completamente destruídas. Ao que se refere à relação entre plantas e animais, analise as alternativas a seguir e assinale a mais adequada em relação ao tema.",
+  "questionText": "Na figura, os animais se referem às plantas como coitadas por não apresentarem estruturas de locomoção, e, em incêndios, poderiam ser completamente destruídas. Ao que se refere à relação entre plantas e animais, analise as alternativas a seguir e assinale a mais adequada em relação ao tema.",
   "alternatives": [
    "A:Após o fogo, as sementes sobrevivem, dando origem a um novo bioma no local.",
    "B:Os animais conseguem sobreviver, pois ao migrarem para outros biomas não são ameaçados.",
@@ -529,10 +513,10 @@
  },
  {
   "number": 34,
-  "initialText": "",
+  "initialText": "Leia o texto a seguir.\n\nA  escovação  dos  dentes  após  as  refeições  e  visita  ao  dentista  regularmente  são  as  melhores  formas  para manter os dentes saudáveis. Isso evita o aparecimento das cáries dentárias que ocorrem por diversos fatores, tais como:  hábitos  alimentares, falta  de  higiene,  composição  da  saliva  e  colonização  bacteriana.  O  metabolismo dessas  bactérias  produz  ácidos  que  levam  à  corrosão  do  esmalte  dos  dentes.  Sabese  que  a  acidez  (o  pH)  da boca é em torno de 6,8.\n\nUma forma mais fácil de verificar acidez e basicidade das substâncias é esta escala de pH:",
   "images": "https://i.imgur.com/PIRd9zy.png",
   "subtitle": "",
-  "questionText": "Leia o texto a seguir. A  escovação  dos  dentes  após  as  refeições  e  visita  ao  dentista  regularmente  são  as  melhores  formas  para manter os dentes saudáveis. Isso evita o aparecimento das cáries dentárias que ocorrem por diversos fatores, tais como:  hábitos  alimentares, falta  de  higiene,  composição  da  saliva  e  colonização  bacteriana.  O  metabolismo dessas  bactérias  produz  ácidos  que  levam  à  corrosão  do  esmalte  dos  dentes.  Sabese  que  a  acidez  (o  pH)  da boca é em torno de 6,8.  Adaptado de Greyce A. Storgatto; Mara E. F. Braibante e HugoT. S. Braibante. –A química na odontologia. Química nova na escola. Vol. 39, Nº 1, p. 4-11. Fevereiro de 2017.   Uma forma mais fácil de verificar acidez e basicidade das substâncias é esta escala de pH:   A partir das informações acima, podemos afirmar que: Processo Seletivo COTUCA 2018  21",
+  "questionText": "A partir das informações acima, podemos afirmar que: Processo Seletivo COTUCA 2018  21",
   "alternatives": [
    "A:uma  dieta  rica  em  frutas  cítricas  (laranja,  limão  e  abacaxi,  por  exemplo)  e  bebidas  ácidas  colabora  com  a manutenção dos esmaltes dos dentes, associada à escovação após cada refeição.",
    "B:os cremes dentais devem apresentar pH (escala de acidez), em geral, abaixo de 7, pois isso ajuda a manter a acidez da boca e diminui as chances de formação de cáries.",
@@ -545,10 +529,10 @@
  },
  {
   "number": 35,
-  "initialText": "",
+  "initialText": "Em  um  experimento, três amostras foram identificadas  com  números  de  1  a  3 e  foram  submetidas  a  testes quando estavam nos estados físicos líquido e sólido. Essas amostras podem ser de cloreto de sódio, ferro metálico e sacarose (açúcar - C12H22O11), não necessariamente nessa ordem. O  objetivo  desse  experimento  era  identificar  cada  uma  delas,  utilizando  um  circuito  elétrico,  como  o esquematizado a seguir. Em  uma  tabela,  foi  anotado: “conduz”,  quando  a  lâmpada  acendia,  e  “não  conduz”,  quando  permanecia apagada. Dessa forma, foram obtidos os seguintes resultados:",
   "images": "https://i.imgur.com/dTcoFyw.png",
   "subtitle": "",
-  "questionText": "Em  um  experimento, três amostras foram identificadas  com  números  de  1  a  3 e  foram  submetidas  a  testes quando estavam nos estados físicos líquido e sólido. Essas amostras podem ser de cloreto de sódio, ferro metálico e sacarose (açúcar - C12H22O11), não necessariamente nessa ordem. O  objetivo  desse  experimento  era  identificar  cada  uma  delas,  utilizando  um  circuito  elétrico,  como  o esquematizado a seguir.            Em  uma  tabela,  foi  anotado: “conduz”,  quando  a  lâmpada  acendia,  e  “não  conduz”,  quando  permanecia apagada. Dessa forma, foram obtidos os seguintes resultados:  Amostra Líquido Sólido 1 Conduz Conduz 2 Não conduz Não conduz 3 Conduz Não conduz   As ligações químicas e as substâncias das amostras de 1 a 3 podem ser, respectivamente:",
+  "questionText": "As ligações químicas e as substâncias das amostras de 1 a 3 podem ser, respectivamente:",
   "alternatives": [
    "A:ligação metálica e Fe; ligação iônica e NaCl e ligação covalente e C12H22O11.",
    "B:ligação metálica e Fe; ligação covalente e C12H22O11 e ligação iônica e NaCl.",

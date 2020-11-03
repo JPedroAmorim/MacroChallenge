@@ -75,7 +75,7 @@ class MetricsViewImplementation: UIView, MetricsViewProtocol {
             }
         }
         
-        return resultArray
+        return resultArray.sorted()
     }
 }
 

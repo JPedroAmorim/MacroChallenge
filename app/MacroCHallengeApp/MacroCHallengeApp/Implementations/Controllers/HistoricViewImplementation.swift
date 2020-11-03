@@ -9,16 +9,6 @@ import Foundation
 import UIKit
 
 class HistoricViewImplementation: UIView, HistoricViewProtocol {
-    func startActivity() {
-        self.activityIndicator.isHidden = false
-        self.activityIndicator.startAnimating()
-        self.activityIndicator.hidesWhenStopped = true
-    }
-    
-    func stopActivity() {
-        self.activityIndicator.stopAnimating()
-    }
-    
 	// MARK: -IBOutlets
 	@IBOutlet weak var tableViewSchools: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!

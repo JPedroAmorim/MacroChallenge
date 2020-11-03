@@ -59,7 +59,6 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
             } else {
                 self.view = LoadingView(message: "Falha ao carregar suas métricas :(",
                                         error: true)
-                print(err)
             }
             
         })

@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 
 class LoadingView: UIView {
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lblText: UILabel!
     
+    // MARK: - Lifecycle
     required init(message: String, error: Bool) {
     
         super.init(frame: CGRect.zero)

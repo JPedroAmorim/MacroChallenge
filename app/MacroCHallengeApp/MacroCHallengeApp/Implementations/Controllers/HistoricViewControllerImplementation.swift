@@ -67,31 +67,36 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     
     // obs: do jeito q ta agora so mostra o ultimo teste feito
     func testWasSubmitted(_ test: TestHeader) {
-        myHistoricView?.startActivity()
+        let historicView = self.view
+        self.view = LoadingView(message: "Carregando sua prova ...",
+                                error: false)
         requestSender.getQuestionsAndAnsweredQuestions(testName: test.name , testYear: test.year) { questions, answeredQuestions, error in
-            self.myHistoricView?.stopActivity()
-            guard let testQuestions = questions, let answeredQuestionsForTest = answeredQuestions else {
-                let alert = UIAlertController(title: "Erro",
-                                              message: "Falha ao carregar resultado, verifique sua conexão",
-                                              preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok",
-                                              style: .default,
-                                              handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                return
+            if let testQuestions = questions, let answeredQuestionsForTest = answeredQuestions {
+                let testFromTestHeader = Test(name: test.name, year: test.year, questions: testQuestions)
+                
+                let questionsVC = QuestionViewControllerImplementation(data: testQuestions, parentController: self)
+                
+                questionsVC.shouldDisplayAnswer = true
+                questionsVC.answeredQuestions = answeredQuestionsForTest
+                
+                if let navController = self.navigationController {
+                    let resultsVC = ResultsViewController(test: testFromTestHeader, answeredQuestions: answeredQuestionsForTest, timeElapsed: "00:00", questionController: questionsVC, shouldSendResults: false)
+                    navController.pushViewController(resultsVC, animated: true)
+                }
+                
+                self.view = historicView
+            } else {
+                if let navController = self.navigationController {
+                    let errorView = LoadingView(message: "Erro ao carregar sua prova :(",
+                                                error: true)
+                    let vc = UIViewController()
+                    vc.view = errorView
+                    navController.pushViewController(vc, animated: false)
+                }
+                self.view = historicView
             }
             
-            let testFromTestHeader = Test(name: test.name, year: test.year, questions: testQuestions)
             
-            let questionsVC = QuestionViewControllerImplementation(data: testQuestions, parentController: self)
-            
-            questionsVC.shouldDisplayAnswer = true
-            questionsVC.answeredQuestions = answeredQuestionsForTest
-            
-            if let navController = self.navigationController {
-                let resultsVC = ResultsViewController(test: testFromTestHeader, answeredQuestions: answeredQuestionsForTest, timeElapsed: "00:00", questionController: questionsVC, shouldSendResults: false)
-                navController.pushViewController(resultsVC, animated: true)
-            }
         }
     }
 }

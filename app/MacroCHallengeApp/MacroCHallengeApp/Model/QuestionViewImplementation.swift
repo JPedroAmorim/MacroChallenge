@@ -385,7 +385,12 @@ extension QuestionViewImplementation: UITableViewDataSource, UITableViewDelegate
                 // Deselect other options
                 guard let tableView = cell.superview as? UITableView else {return}
                 for auxCell in tableView.visibleCells {
-                    if let optionCell = auxCell as? QuestionOptionTableViewCell, auxCell != cell {
+                    if let optionCell = auxCell as? QuestionOptionTableViewCell,
+                       let auxRow = tableView.indexPath(for: optionCell)?.row,
+                       let cellRow = tableView.indexPath(for: cell)?.row,
+                       auxRow != cellRow {
+                        
+                        
                         self.setOptionCell(cell: optionCell, state: .deselected)
                     }
                 }

@@ -10,4 +10,26 @@ import UIKit
 
 class LoadingView: UIView {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var lblText: UILabel!
+    
+    required init(message: String, error: Bool) {
+    
+        super.init(frame: CGRect.zero)
+        
+        if let nib = Bundle.main.loadNibNamed("LoadingView", owner: self, options: nil), let nibView = nib.first as? UIView {
+            nibView.frame = bounds
+            nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            addSubview(nibView)
+            self.lblText.text = message
+            self.activityIndicator.isHidden = error
+            error ? activityIndicator.stopAnimating() : activityIndicator.startAnimating()
+        }
+        
+        
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

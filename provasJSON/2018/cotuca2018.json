@@ -1,0 +1,562 @@
+[
+ {
+  "number": 1,
+  "initialText": "Leia o cartum a seguir para responder às questões 1 e 2.",
+  "images": "https://i.imgur.com/9uO8rFX.png",
+  "subtitle": "",
+  "questionText": "A interpretação da imagem e dos diálogos, em conjunto, sugere que:",
+  "alternatives": [
+   "A:o homem ao centro já conhecia os soldados antes de chegarem à ilha.",
+   "B:a palavra “tipo” tem sentidos diferentes para o soldado e para o homem ajoelhado.",
+   "C:o armamento usado pelos soldados é necessário para a defesa deles.",
+   "D:o homem vestido só de bermuda está muito doente, por isso foi exilado de seu país.",
+   "E:a palavra “civilização” tem sentidos diferentes para o soldado e para o homem ajoelhado."
+  ],
+  "answer": "E",
+  "topic": "Português"
+ },
+ {
+  "number": 2,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Sobre a construção da fala do soldado:",
+  "alternatives": [
+   "A:o sujeito do verbo “existe” poderia ser expresso pelo pronome “ele”.",
+   "B:o sujeito do verbo “existe” poderia ser expresso pelo substantivo “arma”.",
+   "C:o complemento do verbo “existe” não pode ser entendido pelo contexto da frase.",
+   "D:as exclamações indicam o nervosismo do personagem diante do pedido do homem.",
+   "E:em “Somos nós a civilização!”, há uma inversão na ordem direta entre sujeito e verbo."
+  ],
+  "answer": "E",
+  "topic": "Português"
+ },
+ {
+  "number": 3,
+  "initialText": "Leia os dois textos a seguir para responder às questões 3 e 4.",
+  "images": "https://i.imgur.com/xkgKXQb.png",
+  "subtitle": "NO MEIO DO CAMINHO.\nNo meio do caminho tinha uma pedra tinha uma pedra no meio do caminho tinha uma pedra.\nno meio do caminho tinha uma pedra..\nNunca me esquecerei desse acontecimento \nna vida de minhas retinas tão fatigadas.\nNunca me esquecerei que no meio do caminho tinha uma pedra\ntinha uma pedra no meio do caminho no meio do caminho tinha uma pedra.",
+  "questionText": "O  texto  de  Sérgio  Vaz  foi  escrito  inspirado  no  de  Carlos  Drummond  de  Andrade.  Analise  qual  das alternativas a seguir melhor se refere à relação estabelecida entre os dois textos.",
+  "alternatives": [
+   "A:O texto de Drummond é criticado pelo de Sérgio Vaz, o que se observa no verso “há pedras demais em nossos caminhos”, contrapondo “tinha uma pedra”.",
+   "B:O  texto  de  Sérgio  Vaz,  por  ter  sido  publicado  em  uma  rede  social,  apresenta  problemas de  ortografia, como no uso de “há” ao invés de “á”.",
+   "C:Os  textos  são  construídos  no  formato  de  um  poema,  embora  o  de  Sérgio  Vaz  tenha  características também de uma carta, e o de Drummond assemelhese a um relato pessoal.",
+   "D:O verbo “tinha”, do texto de Drummond, tem  sentido  semelhante ao do verbo “há”, do poema de Sérgio Vaz, mas este último, por ser mais recente, é mais informal.",
+   "E:O texto de Sérgio Vaz, apesar de ter sido publicado em uma rede social, apresenta um vocabulário mais"
+  ],
+  "answer": "C",
+  "topic": "Português"
+ },
+ {
+  "number": 4,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Observe os tempos verbais apresentados nos dois textos e escolha a alternativa que melhor os analisa.",
+  "alternatives": [
+   "A:No texto de Sérgio Vaz, é possível observar verbos conjugados no presente do indicativo, que se referem ao sofrimento causado por elementos característicos da vida do eu lírico.",
+   "B:No  texto  de  Drummond,  o  eu  lírico  usa  verbos  no  pretérito  imperfeito  do  indicativo,  alegrandose  por  se lembrar de dificuldades que não têm mais influência em sua vida.",
+   "C:No texto de Drummond, o verbo “esquecerei”, no futuro  do  presente  do  indicativo,  indica  que  as  pedras terão influência apenas no futuro do eu lírico.",
+   "D:Além de verbos no infinitivo, o texto de Sérgio Vaz usa um imperativo em “viver”, indicando que, apesar das dificuldades, é preciso continuar vivendo.",
+   "E:O verbo  “há”,  no  texto  de  Sérgio  Vaz,  assim  como  o  verbo  “tinha”,  no  texto  de  Drummond,  indicam"
+  ],
+  "answer": "A",
+  "topic": "Português"
+ },
+ {
+  "number": 5,
+  "initialText": "O livro “Este seu Olhar”, organizado por Regina Zilberman, publica textos de autores consagrados que, a partir de uma fotografia importante de suas vidas, escrevem histórias que relembram a infância, fatos marcantes, momentos felizes e tristes. Na apresentação do livro, a organizadora escreve o que chama de “Receita de escrita”. Leia-a, a seguir, para responder às questões de 5 a 8.\n\n1. Ingredientes:\n\n1 foto de infância; \n1 autor;\n1 leitor;\nmuita imaginação.\n\n2. Modo de preparo:\n\nPense primeiro: qual é minha foto preferida? Qual delas me provoca lembranças especiais? Que retrato traduz um momento importante de minha vida? Feita a escolha, separe a foto, mas deixe-a a seu alcance. Agora, volte a refletir: o que essa foto me diz? O que ela conta de mim? Essa etapa pode levar algum tempo, mas não procure apressar seus pensamentos. Principalmente porque sua imaginação começará a ser movimentada, já que, como toda foto, esta conta uma história. Volte à foto, que estava separada. E responda: que história ela conta? Uma narrativa começa a se organizar: o início poderá anteceder a imagem representada no retrato, mas, a esse começo, seguir-se-ão ações, vivenciadas por seres reais ou imaginários, humanos ou não. As ações requerem continuidade, movimento, conflito e solução. Eis que se forma uma narrativa, a que você – e só você – compôs. Responsável pela elaboração do texto, você pode participar dele como personagem, testemunha ou mero narrador; pode relembrar um fato passado ou projetar um acontecimento futuro; e, assim como teve um começo, disporá de um final, em que os eventos mostrarão um sucesso ou um fracasso, mas, de toda maneira, um acabamento. Retorne a seu conto, depois de terminá-lo, pois ele requer revisões, rearranjos, sincronização e afinamento dos dados. Supõe-se que a elaboração de um texto é linear, mas, como ocorre à leitura, a escrita exige um permanente vaivém, segundo o qual cabe regressar ao começo, a cada movimento de avanço. Não deixe, porém, a foto de lado, pois ela regula a história em construção, como se fosse um mecanismo de controle e aprovação constantes. Se a imagem desencadeia a ficção, esta não pode perder de vista o ponto de partida, para que você integre o visual e o oral, a figura e o discurso suscitado por ela.\n\n3. Modo de servir – modo de ler:\n\nSirva uma primeira porção a seu leitor, que poderá ser, nesse momento, você mesmo. Sirva, porém, novas porções a outros destinatários, porque eles percorrerão a trilha da leitura, descrita na receita anterior. A leitura apresenta-se de novo, porque, sem o diálogo com o outro, a escrita não completa seu ciclo, o significado não se apresenta, a comunicação não se estabelece. A escrita depende da leitura, porque esta provoca novas escritas, reaparecendo o processo infinito mencionado antes. Incendiada pela imaginação e mediada pelos recursos da ficção, a expressão verbal dispõe de inúmeros meios de se manifestar, e impedi-los é limitar a ação humana. Sirva-se, pois, à vontade e constantemente, a exemplo dos escritores que formam este livro.",
+  "images": "",
+  "subtitle": "",
+  "questionText": "O texto é apresentado no formato do gênero receita, mas:",
+  "alternatives": [
+   "A:não apresenta algumas características principais dele, como a relação entre os ingredientes e o modo de preparo.",
+   "B:a estrutura desse texto tem objetivos muito diferentes das receitas comuns, já que a “Receita de escrita” não tem um produto final.",
+   "C:estabelece  relações  com  outros  gêneros  textuais, especialmente  com  as narrativas  que  se  inspiram  no cotidiano, como em uma crônica.",
+   "D:características de um diário são apresentadas, como se a autora registrasse seu percurso para escrever os textos do livro.",
+   "E:alguns trechos retomam características próprias de reflexões apresentadas em contos."
+  ],
+  "answer": "E",
+  "topic": "Português"
+ },
+ {
+  "number": 6,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "A autora apresenta diferentes frases interrogativas ao longo de sua “Receita de escrita”. Qual o objetivo principal delas?",
+  "alternatives": [
+   "A:Repetir,  de  diferentes  formas,  uma  mesma  reflexão  necessária  para  a  escrita  e  compreensão  de  textos como os do livro.",
+   "B:Provocar no leitor da apresentação do livro reflexões sobre aspectos diferentes e fundamentais dos textos publicados na sequência.",
+   "C:Provocar no leitor curiosidade para buscar as respostas a elas nos textos do livro, conhecendo mais sobre si mesmo.",
+   "D:Indicar reflexões necessárias para se escrever uma narrativa em versos, com reflexões pessoais, como os contos que foram publicados no livro.",
+   "E:Indicar  de forma envolvente o passoapasso necessário para a escrita de narrativas curtas, como as de"
+  ],
+  "answer": "A",
+  "topic": "Português"
+ },
+ {
+  "number": 7,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Escolha  a  alternativa  que  melhor  analisa a  construção  do  trecho  “Volte  à  foto,  que  estava  separada.  E responda: que história ela conta?”.",
+  "alternatives": [
+   "A:Os dois períodos poderiam ser escritos em um só, sendo necessária a substituição da conjunção “e” por “e então”.",
+   "B:Os dois períodos poderiam ser escritos em um só, sendo necessária a substituição da conjunção “e” por uma vírgula seguida de “e então”.",
+   "C:Em um texto não literário, provavelmente o ponto seria substituído por uma vírgula, para que a construção fosse mais fluida.",
+   "D:A  separação  dos  dois  períodos  por  um  ponto  é inadequada para textos  literários.  A  leitura  seria  mais fluida, caso o ponto fosse substituído por uma vírgula.",
+   "E:A construção do trecho com dois períodos tem caráter literário e, portanto, seria também adequada a um"
+  ],
+  "answer": "C",
+  "topic": "Português"
+ },
+ {
+  "number": 8,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Releia  este  trecho  inicial  do texto: “Pense primeiro: qual é minha foto preferida? Qual delas me provoca lembranças  especiais?  Que  retrato  traduz  um  momento  importante  de  minha  vida?”.  Sobre  as construções estabelecidas nele, assinale a alternativa correta.",
+  "alternatives": [
+   "A:O verbo “provoca” está conjugado no singular, mas deveria estar no plural (“provocam”), para concordar com “lembranças”.",
+   "B:O verbo “retrato” é usado como sinônimo do substantivo “foto”.",
+   "C:A palavra “delas” não estabelece concordância gramatical ou relação de sentido com nenhum outro termo desse trecho.",
+   "D:A palavra “delas” estabelece uma  relação  de  sentido,  mas  não uma  concordância  gramatical  no  trecho reproduzido.",
+   "E:A palavra “que” em “Que retrato” poderia ser substituída por “qual”, mas, nesse caso, provocaria  uma"
+  ],
+  "answer": "D",
+  "topic": "Português"
+ },
+ {
+  "number": 9,
+  "initialText": "Carlos Alberto Soffredini foi um escritor brasileiro, autor de diversas peças teatrais, dentre elas, Na carrêra do divino, cujo principal objetivo é caracterizar o caipira brasileiro. Para isso, realizou uma pesquisa específica antes da escrita desse texto, por não ser falante do dialeto caipira. Leia a seguir um trecho dessa peça, para responder às questões de 9 a 11.\n\nCena I\nA querência – O Rancho\n\n[...]\nJECA – Tô fazeno, tô fazeno...\n[...]\nMONTEIRO LOBATO (NARRADOR) – “Em três dias uma choça(1), que por eufemismo chamam casa, brota da terra como um urupê(2)”.\nJECA – Tá pronta, muié.\nNHÁ RITA – (vendo) Eita fremosura!\nJECA – Baldeia pra cá as trapizonga(3) mór da gente pindurá...\nMONTEIRO LOBATO (NARRADOR) – “Tiram tudo do lugar: os esteios, os caibros, as ripas, os barrotes, o cipó que os liga, o barro das paredes e a palha do teto.”\nJECA - ... [...] a enchada... e o santinho pindura naquela parede lá qu’ié pr’ele escorá. Aquela num tá lá muito bem barrotada...\nNHÁ RITA – Vai caí?\nJECA – C’o santinho escorano? Vê lá se ela tem corage...\nMONTEIRO LOBATO (NARRADOR) – “Tão íntima é a comunhão dessas palhoças(4) com a terra local que dariam ideia de coisa nascida do chão por obra espontânea da natureza – se a natureza fosse capaz de criar coisas tão feias.”\nAdaptado de Soffredini: obras principais: Na carrêra do divino. Organização de Renata Soffredini e Lígia Balista. São Paulo: Giostri, 2017. p. 26-27.\n\nVocabulário:\n(1) Construção precária, revestida de palha ou de folhas.\n(2) Espécie de cogumelo.\n(3) Conjunto de coisas confusas ou desordenadas.\n(4) Casa coberta de palha.",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Monteiro Lobato, apresentado como uma voz narrativa, em uma de suas ponderações, analisa: “Em três dias uma choça, que por eufemismo chamam casa, brota da terra como um urupê”. A utilização de “eufemismo” nesse período indica que:",
+  "alternatives": [
+   "A:construções  feitas  sem  projetos  de  engenheiros  não  eram  utilizadas  para  moradia  e  não  poderiam  ser chamadas de casa.",
+   "B:o local escolhido para a construção do rancho não era adequado a uma moradia.",
+   "C:as  construções  do  caipira  são  muito  feias,  apesar  de  bem  finalizadas  para  uma  moradia, e  não  seriam obra da natureza que, tem apenas produções belas.",
+   "D:a moradia do caipira e de sua família era, primordialmente, um local de adoração de santos, que tinham local especial na parede de barro.",
+   "E:Monteiro Lobato deprecia as construções feitas pelos caipiras."
+  ],
+  "answer": "E",
+  "topic": "Português"
+ },
+ {
+  "number": 10,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "A utilização do chamado dialeto caipira na obra acontece:",
+  "alternatives": [
+   "A:como  fator  primordial  para  a  construção  das  personagens  caipiras,  tendo  em  vista  que  a  linguagem  é constituinte da nossa identidade.",
+   "B:em decorrência dos estudos do autor para uma maior fidelidade com um dialeto que percorre igualmente todo o Brasil.",
+   "C:como  fator  importante  para  a  construção  da  imagem  do  povo  brasileiro,  sendo  uma  obra  de  crítica  à desigualdade social.",
+   "D:como  representação  da  variedade  histórica  da  língua,  que  se  modifica  ao  longo  do  tempo,  de  geração para geração.",
+   "E:em decorrência da utilização do vocabulário caipira, que dificulta a comunicação entre as personagens."
+  ],
+  "answer": "A",
+  "topic": "Português"
+ },
+ {
+  "number": 11,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Sobre  a  composição  da  peça,  Soffredini  afirmou,  em  depoimento,  que,  por  não  ser  caipira,  e  usar  a linguagem urbana, litorânea, precisou estudar muito para compor as falas da peça. Na construção das falas das personagens da obra, temos representada a:",
+  "alternatives": [
+   "A:variação  regional,  em  que mudanças  na  linguagem  ocorrem  de  acordo  com  a  localidade  dos  grupos falantes.",
+   "B:variação histórica, em que mudanças na  linguagem ocorrem de acordo com o contexto histórico em que se situam os grupos falantes.",
+   "C:variação resultante dos estudos dos falantes, em que mudanças na linguagem ocorrem de acordo com o grau de instrução dos grupos falantes.",
+   "D:variação resultante das diferentes idades dos falantes, em que mudanças na linguagem ocorrem pelo uso de gírias.",
+   "E:variação  dos  estudos  dos  falantes,  em  que mudanças  na  linguagem  ocorrem  pelo  uso  de  contrações,"
+  ],
+  "answer": "A",
+  "topic": "Português"
+ },
+ {
+  "number": 12,
+  "initialText": "Muitos  textos  apresentam  a ambiguidade  como  um  recurso  para  explorar  sentidos  poéticos.  Com  ela,  é possível  contrapor  sentidos  muito  diferentes  em  um  mesmo  contexto  e  criar,  por  exemplo,  ironia  ou  humor.  O cartaz a seguir apresenta esse efeito:",
+  "images": "https://i.imgur.com/1nvFUPK.png",
+  "subtitle": "",
+  "questionText": "Escolha a alternativa que melhor interpreta esse cartaz.",
+  "alternatives": [
+   "A:O sentido poético do texto está centrado na palavra “vida”, que pode ser interpretada como o cotidiano ou como a duração entre o nascimento e a morte.",
+   "B:A  ambiguidade  é  desfeita  no  texto  pela  palavra  “um”,  que  particulariza  as  interpretações  que  seriam possíveis para a palavra “emaranhado”.",
+   "C:A palavra “emaranhado” indicaria a compreensão de “nós” como um substantivo concreto, se a palavra “vida” não pudesse ser interpretada como cotidiano.",
+   "D:O  sentido  poético  do  texto  está  centrado  na  palavra  “um”,  que  pode  ser  interpretada  como  pronome indefinido ou como numeral.",
+   "E:O sentido poético do texto está centrado na palavra “nós”, que pode ser interpretada como uma manobra"
+  ],
+  "answer": "E",
+  "topic": "Português"
+ },
+ {
+  "number": 13,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "No Brasil, o número 푁 de um calçado é calculado, aproximadamente, pela fórmula 푁= 53 ∙푐 − 5, onde 푐 é o comprimento (em cm) do pé. Qual é o número de calçado mais indicado para uma pessoa cujos pés possuem 22 cm de comprimento?",
+  "alternatives": [
+   "A:30",
+   "B:32",
+   "C:34",
+   "D:36",
+   "E:38"
+  ],
+  "answer": "B",
+  "topic": "Matemática"
+ },
+ {
+  "number": 14,
+  "initialText": "Determine o valor da expressão:",
+  "images": "",
+  "subtitle": "",
+  "questionText": "",
+  "alternatives": [
+   "A:26/5",
+   "B:38/5",
+   "C:42/5",
+   "D:68/5",
+   "E:74/5"
+  ],
+  "answer": "E",
+  "topic": "Matemática"
+ },
+ {
+  "number": 15,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Para  uma  festa  de  casamento, foram  comprados 560 doces.  Essa  quantia  era  suficiente  para  dividilos igualmente  entre  todos  os  convidados.  No  dia  do  casamento, 10 pessoas  não  puderam  comparecer,  fazendo com  que  cada  convidado  recebesse 1 doce  a  mais.  Se N é o número  que  representa  o  total  de  pessoas  que foram convidadas para a festa, então:",
+  "alternatives": [
+   "A:40≤N<52",
+   "B:52≤N<64",
+   "C:64≤N<76",
+   "D:76≤N<88",
+   "E:88≤N<100"
+  ],
+  "answer": "D",
+  "topic": "Matemática"
+ },
+ {
+  "number": 16,
+  "initialText": "Leia o texto a seguir.\n\nNa hora  de  adquirir  um  ar  condicionado,  você certamente  ouvirá  falar  de  BTU e  de  sua  importância  técnica. Mas, afinal, o que é BTU? Essas três letras significam British Thermal Unit ou Unidade Térmica Britânica, medida que determina a potência de refrigeração de cada aparelho de ar condicionado.  Esse  dado  garantirá  que  o  seu  equipamento  refrigere  de  maneira  adequada  o  local  onde  será  instalado,  de acordo com a área, número de ocupantes do local e incidência solar. Assim, você evita gastar dinheiro com um ar condicionado muito potente para o seu espaço ou um aparelho com desempenho abaixo do necessário.  Para refrigerar um cômodo, são necessárias 600 ou 800 BTU por metro quadrado. Você deve usar a base de 600 BTU quando o ambiente não tiver incidência de sol. Já as 800 BTU devem ser consideradas em locais onde há incidência solar diariamente.  Devese,  na  sequência,  medir  o  cômodo  em  que  o ar  condicionado ficará  instalado.  Recomendase,  então, somar 600 BTU (ou 800 BTU,  se  houver  incidência  de  sol)  a  cada  usuário  adicional  do  espaço  (o  primeiro  não conta)\nSendo assim, vamos à conta final, usando como exemplo um local sem incidência de sol, de 15 m2, cujo uso é de duas pessoas:  \n\n600∙15+600=9600 BTU.",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Segundo as informações acima, qual deve ser a capacidade do aparelho de ar condicionado (em BTU) para um local com incidência de sol, de 30 m2, cujo uso é de quatro pessoas?",
+  "alternatives": [
+   "A:19.800",
+   "B:20.400",
+   "C:24.800",
+   "D:26.400",
+   "E:27.200"
+  ],
+  "answer": "D",
+  "topic": "Matemática"
+ },
+ {
+  "number": 17,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Se √x = 1 + √3, qual é o valor de xu{00B2}?",
+  "alternatives": [
+   "A:28 + 16√3",
+   "B:24 + 8√3",
+   "C:16 + 12√3",
+   "D:18 + 20√3",
+   "E:22 + 14√3"
+  ],
+  "answer": "A",
+  "topic": "Matemática"
+ },
+ {
+  "number": 18,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Em uma festa de aniversário, o número de adultos era igual a 60% do número de crianças. Após a chegada de  mais 12 crianças  e 4 adultos,  o  número  de  crianças  passou  a  ser  o  dobro  do  número  de  adultos. Depois disso, o total de pessoas presentes na festa (crianças e adultos) é um número cuja soma dos algarismos é igual a:",
+  "alternatives": [
+   "A:8",
+   "B:9",
+   "C:10",
+   "D:12",
+   "E:15"
+  ],
+  "answer": "D",
+  "topic": "Matemática"
+ },
+ {
+  "number": 19,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "O valor total da conta de energia elétrica de uma residência, de agosto de 2017, foi de R$300,00. Sabese que o valor total da conta é o valor do consumo acrescido de um imposto, que corresponde a 25% do valor total da conta. Qual foi o valor do consumo referente à conta de agosto de 2017?",
+  "alternatives": [
+   "A:R$200,00",
+   "B:R$225,00",
+   "C:R$240,00",
+   "D:R$275,00",
+   "E:R$375,00"
+  ],
+  "answer": "B",
+  "topic": "Matemática"
+ },
+ {
+  "number": 20,
+  "initialText": "",
+  "images": "https://i.imgur.com/7jOJWx.png",
+  "subtitle": "",
+  "questionText": "Um  dos  aspectos mais  importantes para  construção  de  uma casa  é  o  planejamento.  Esse  planejamento geralmente  começa  com  um  projeto  e,  com  ele  em  mãos,  dáse  início  à  construção.  No  planejamento, estão descritos itens como compra de materiais, administração de mão de obra ou outras atividades que fazem parte da etapa de construção.  Quando se trata de uma mão de obra muito grande, o engenheiro ou o mestre de obras fica encarregado de realizar  o cálculo dos materiais que serão usados para a construção. Por exemplo, é sempre bom ter o cálculo de telhas que serão usadas para não correr o risco de sobrar ou então de faltar o material necessário.   Considere que, para a construção do telhado da ilustração acima: • as medidas indicadas são: H = 5 m, A = 12 m e C = 10 m; • serão usadas telhas romanas, semelhantes às da ilustração, na disposição de 16 peças por metro quadrado; • é recomendado que sejam adquiridos 5% de telhas a mais para recortes e eventuais quebras no transporte e manuseio. Segundo os critérios acima, qual será o menor número de telhas romanas que deve ser adquirido?",
+  "alternatives": [
+   "A:4.576",
+   "B:4.368",
+   "C:4.160",
+   "D:2.288",
+   "E:2.080"
+  ],
+  "answer": "B",
+  "topic": "Matemática"
+ },
+ {
+  "number": 21,
+  "initialText": "Simplificando a expressão algébrica , com x ≠ ±y, obtemos: ",
+  "images": "",
+  "subtitle": "",
+  "questionText": "",
+  "alternatives": [
+   "A:1/[2(x + y)]",
+   "B:1/[2(x - y)]",
+   "C:1/2xy",
+   "D:xy/[2(x - y)]",
+   "E:xy/[2(x + y)]"
+  ],
+  "answer": "A",
+  "topic": "Matemática"
+ },
+ {
+  "number": 22,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Sejam x1 e x2 as raízes da equação 5xu{00B2}+7x−6=0, sendo 푥1>푥2. Qual é o valor da potência (푥1)푥2?",
+  "alternatives": [
+   "A:25/6",
+   "B:25/9",
+   "C:3/25",
+   "D:–6/25",
+   "E:−9/25"
+  ],
+  "answer": "B",
+  "topic": "Matemática"
+ },
+ {
+  "number": 23,
+  "initialText": "Calcule o valor da expressão E=4x+2y , considerando (x,y) a solução do sistema:",
+  "images": "",
+  "subtitle": "",
+  "questionText": "",
+  "alternatives": [
+   "A:28",
+   "B:36",
+   "C:42",
+   "D:54",
+   "E:60"
+  ],
+  "answer": "D",
+  "topic": "Matemática"
+ },
+ {
+  "number": 24,
+  "initialText": "",
+  "images": "https://i.imgur.com/2IvYEaI.png@https://i.imgur.com/w3ebUXs.png@https://i.imgur.com/ziapowi.png@https://i.imgur.com/1wWSXHN.png@https://i.imgur.com/IvCwuzl.png@https://i.imgur.com/n4VAcc0.png@https://i.imgur.com/sfYXKrB.png",
+  "subtitle": "",
+  "questionText": "Na figura abaixo, temos um retângulo inscrito em uma circunferência. Se esse retângulo tem área de 24 cm2 e perímetro de 20 cm, qual é o valor da área sombreada? Utilize a aproximação π = 3.",
+  "alternatives": [
+   "A:12 cmu{00B2}",
+   "B:14 cmu{00B2}",
+   "C:15 cmu{00B2}",
+   "D:16 cmu{00B2}",
+   "E:18 cmu{00B2}"
+  ],
+  "answer": "C",
+  "topic": "Matemática"
+ },
+ {
+  "number": 25,
+  "initialText": "O gráfico a seguir representa a variação da posição de um móvel em uma trajetória retilínea em função do tempo, no intervalo de 0 a 11 s.",
+  "images": "",
+  "subtitle": "",
+  "questionText": "O gráfico que melhor representa a velocidade desse móvel, nesse mesmo intervalo, é:",
+  "alternatives": [
+   "A:",
+   "B:",
+   "C:",
+   "D:",
+   "E:"
+  ],
+  "answer": "A",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 26,
+  "initialText": "",
+  "images": "https://i.imgur.com/SiKIdOE.png",
+  "subtitle": "",
+  "questionText": "Três crianças brincam de cabo de guerra. A competição acontece numa arena circular, onde três cordas estão fortemente unidas através de um nó que, no início da brincadeira, encontrase no centro da arena.  A  arena  foi  dividida  radialmente  em  três  partes  iguais,  onde  cada  criança  pode  se  locomover,  aplicando  uma força radial na extremidade livre da corda.  Num determinado momento, as crianças perceberam que, na formação desenhada abaixo, conseguiam manter o jogo equilibrado.   Se  nessa  formação, em  que o  jogo  permanece  equilibrado,  as  crianças  A  e  B  fazem  respectivamente  uma tração  na  corda  de  680  N  e  320  N,  a  tração  exercida  pela  terceira  criança  (C),  no  momento  da  configuração apresentada no desenho, será, em N, de:",
+  "alternatives": [
+   "A:1000",
+   "B:600",
+   "C:500",
+   "D:360",
+   "E:300"
+  ],
+  "answer": "B",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 27,
+  "initialText": "",
+  "images": "https://i.imgur.com/sgUImYS.png",
+  "subtitle": "",
+  "questionText": "Um  aluno  do  COTUCA,  depois  de  um  árduo  dia  de  estudos,  vai  para  casa  e  pretende  dormir  cedo,  mas  um som fraco e irritantemente agudo de um mosquito que ronda a sua cabeça juntamente ao barulho forte e grave do motor de uma moto que passeia em frente à janela do seu quarto não permitem que ele descanse.  Os dois sons caracterizados no texto acima (o som emitido pelo mosquito e o som emitido pelo motor da moto) podem  ser  melhor  representados,  comparativamente,  por  quais  curvas  do  gráfico  da  intensidade  em  função  do tempo a seguir?    som emitido pelo mosquito som emitido pelo motor da moto",
+  "alternatives": [
+   "A:A D",
+   "B:D A",
+   "C:B C",
+   "D:C B",
+   "E:C A"
+  ],
+  "answer": "B",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 28,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Após o escândalo de doping da Rússia nas olimpíadas e paralimpíadas Rio 2016, a Federação Internacional de Atletismo considera anular todos os recordes mundiais registrados antes de 2005, baseados em alguns critérios.   O  doping  é  definido  como  a utilização  de  substâncias  ou  métodos  proibidos  capazes  de  promover  alterações físicas  e/ou  psíquicas  que  melhoram  artificialmente  o  desempenho  esportivo  do  atleta. Essas  drogas  ilícitas  podem diminuir   a   fadiga,   melhorar   velocidade,   estimular   batimentos   cardíacos,   diminuir   a   sensação   de   medo   e consequentemente melhorar a performance do atleta. Os métodos de controle de dopagem consistem em análise de urina  e/ou  sangue  com  a  finalidade  de  identificar  a  presença de  substâncias  ou  métodos  proibidos  pela  Agência Mundial Antidopagem. Adaptado de http://www.abcd.gov.br/perguntaserespostas Acesso em 25/07/2017.  Os sistemas do corpo humano que são afetados diretamente pela ação e pelas formas de detecção da dopagem descritas no texto são:",
+  "alternatives": [
+   "A:endócrino, muscular, linfático e cardiovascular.",
+   "B:nervoso, endócrino, esquelético e excretor.",
+   "C:nervoso, muscular, excretor e cardiovascular.",
+   "D:nervoso, esquelético, cardiovascular e excretor.",
+   "E:endócrino, imunológico, excretor e cardiovascular."
+  ],
+  "answer": "C",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 29,
+  "initialText": "",
+  "images": "https://i.imgur.com/LgzwbUt.png",
+  "subtitle": "",
+  "questionText": "A partir do diálogo ao lado entre dois estudantes, complete as frases a seguir de forma adequada.  A  fecundação  é  a  união  de  dois  gametas  que  podem  ser  indicados em   _______.   Os   gametas   nos   humanos   são   formados   por ______________.    Após    a    fecundação    a    figura    4    indica    o ____________.  As  figuras  5,  6  e  7  são  o  resultado  de  divisões _____________,   que   ____________   o   número___________   de cromossomos das células.",
+  "alternatives": [
+   "A:1, meiose, embrião, mitóticas, mantém, haploide.",
+   "B:1, meiose, zigoto, mitóticas, mantém, diploide.",
+   "C:2, meiose, zigoto, mitóticas, aumentam, haploide.",
+   "D:1, mitose, embrião, meióticas, reduzem, diploide.",
+   "E:2, meiose, zigoto, meióticas, aumentam, haploide."
+  ],
+  "answer": "B",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 30,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Leia o texto a seguir.   O  coração  é  um  órgão muscular  oco,  envolto  por  um  saco  cheio  de  líquido  chamado  pericárdio,  localizado  no interior da cavidade torácica. Sua função é bombear o sangue oxigenado (arterial) proveniente dos pulmões para todo o  corpo  e  direcionar  o  sangue  desoxigenado  (venoso),  que  retornou  ao  coração,  até  os  pulmões,  onde  deve  ser enriquecido com oxigênio novamente. Adaptado de  http://saude.ig.com.br/coracao/ Acesso em 14/08/2017 .  Assinale a alternativa que  relaciona corretamente o vaso sanguíneo que chega  ou deixa o coração, com o tipo de sangue que carrega.",
+  "alternatives": [
+   "A:Veia cava superior – sangue arterial",
+   "B:Artéria aorta – sangue venoso",
+   "C:Artéria pulmonar – sangue venoso",
+   "D:Veia pulmonar – sangue venoso",
+   "E:Veia cava inferior – sangue arterial"
+  ],
+  "answer": "C",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 31,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "A  análise  do  exame  de  sangue  possibilita  detectarmos, respectivamente,  a  seguinte  doença  e  medida  de tratamento correspondente:",
+  "alternatives": [
+   "A:trombopenia, ingestão de alimentos ricos em cálcio.",
+   "B:leucopenia, ingestão de alimentos ricos em vitaminas do complexo B.",
+   "C:anemia, ingestão de alimentos ricos em ferro.",
+   "D:escorbuto, ingestão de alimentos ricos em iodo.",
+   "E:leucocitose, ingestão de alimentos ricos em magnésio."
+  ],
+  "answer": "C",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 32,
+  "initialText": "",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Uma mulher foi submetida a exames de sangue (hemogram",
+  "alternatives": [
+   "A:e de urina tipo I em um exame de rotina e obteve os resultados que podem ser observados nas tabelas a seguir:   Hemograma (valores encontrados) Valores de  referência Eritrócitos 2,6∙106/mm3 3,8 - 4,8∙106/mm3 Plaquetas 250 mil/mm3 150,0 - 400,0 mil/mm3 Leucócitos  totais 8,09 mil/mm3 4,5 - 11,0 mil/mm3 Neutrófilos 4,28 mil/mm3 1,8 - 7,7 mil/mm3 Basófilos 0,08 mil/mm3 0,0 - 0,2 mil/mm3 Monócitos 0,35 mil/mm3 0,0 - 0,8 mil/mm3 Linfócitos  atípicos 3,21 mil/mm3 1,0 - 4,0 mil/mm3  Urina tipo I -  resultados parciais Resultados encontrados Valores/resultados de referência Glicose presente ausente Proteínas 0,05 g/L <0,15 g/L Corpos cetônicos ausentes ausentes Pigmentos biliares ausentes ausentes Nitrito negativo negativo Hemoglobina ausente ausente   31. A  análise  do  exame  de  sangue  possibilita  detectarmos, respectivamente,  a  seguinte  doença  e  medida  de tratamento correspondente: a) trombopenia, ingestão de alimentos ricos em cálcio.",
+   "B:leucopenia, ingestão de alimentos ricos em vitaminas do complexo B.",
+   "C:anemia, ingestão de alimentos ricos em ferro.",
+   "D:escorbuto, ingestão de alimentos ricos em iodo.",
+   "E:leucocitose, ingestão de alimentos ricos em magnésio."
+  ],
+  "answer": "D",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 33,
+  "initialText": "",
+  "images": "https://i.imgur.com/FXxv4da.png",
+  "subtitle": "",
+  "questionText": "Leia o quadrinho abaixo.  Disponível em http://hojeemdia.com.br/opini%C3%A3o/blogs/blogdolute-.366314?month=2&year=2017 Acesso em 14/08/2017.  Na figura, os animais se referem às plantas como coitadas por não apresentarem estruturas de locomoção, e, em incêndios, poderiam ser completamente destruídas. Ao que se refere à relação entre plantas e animais, analise as alternativas a seguir e assinale a mais adequada em relação ao tema.",
+  "alternatives": [
+   "A:Após o fogo, as sementes sobrevivem, dando origem a um novo bioma no local.",
+   "B:Os animais conseguem sobreviver, pois ao migrarem para outros biomas não são ameaçados.",
+   "C:As plantas não dependem dos animais no seu ciclo de vida, portanto, após o fogo, podem voltar a ocupar o local.",
+   "D:Mesmo que os animais fujam do incêndio, eles também são prejudicados, perdendo abrigo e alimento.",
+   "E:Os animais que sobrevivem aos incêndios retornam ao local e conseguem sobreviver, mesmo que as plantas"
+  ],
+  "answer": "D",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 34,
+  "initialText": "",
+  "images": "https://i.imgur.com/PIRd9zy.png",
+  "subtitle": "",
+  "questionText": "Leia o texto a seguir. A  escovação  dos  dentes  após  as  refeições  e  visita  ao  dentista  regularmente  são  as  melhores  formas  para manter os dentes saudáveis. Isso evita o aparecimento das cáries dentárias que ocorrem por diversos fatores, tais como:  hábitos  alimentares, falta  de  higiene,  composição  da  saliva  e  colonização  bacteriana.  O  metabolismo dessas  bactérias  produz  ácidos  que  levam  à  corrosão  do  esmalte  dos  dentes.  Sabese  que  a  acidez  (o  pH)  da boca é em torno de 6,8.  Adaptado de Greyce A. Storgatto; Mara E. F. Braibante e HugoT. S. Braibante. –A química na odontologia. Química nova na escola. Vol. 39, Nº 1, p. 4-11. Fevereiro de 2017.   Uma forma mais fácil de verificar acidez e basicidade das substâncias é esta escala de pH:   A partir das informações acima, podemos afirmar que: Processo Seletivo COTUCA 2018  21",
+  "alternatives": [
+   "A:uma  dieta  rica  em  frutas  cítricas  (laranja,  limão  e  abacaxi,  por  exemplo)  e  bebidas  ácidas  colabora  com  a manutenção dos esmaltes dos dentes, associada à escovação após cada refeição.",
+   "B:os cremes dentais devem apresentar pH (escala de acidez), em geral, abaixo de 7, pois isso ajuda a manter a acidez da boca e diminui as chances de formação de cáries.",
+   "C:os cremes dentais devem apresentar pH (escala de acidez), em geral, acima de 7, pois isso ajuda a combater a acidez da boca e diminui as chances de formação de cáries.",
+   "D:a  boca  é  naturalmente  ácida  e  isso  impede  a  ação  das  bactérias,  diminuindo  seu  metabolismo  e  a consequente produção de ácidos.",
+   "E:a  boca  é  naturalmente  básica  e  isso  impede  a  ação  das  bactérias,  diminuindo  seu  metabolismo  e  a"
+  ],
+  "answer": "C",
+  "topic": "Ciências Naturais"
+ },
+ {
+  "number": 35,
+  "initialText": "",
+  "images": "https://i.imgur.com/dTcoFyw.png",
+  "subtitle": "",
+  "questionText": "Em  um  experimento, três amostras foram identificadas  com  números  de  1  a  3 e  foram  submetidas  a  testes quando estavam nos estados físicos líquido e sólido. Essas amostras podem ser de cloreto de sódio, ferro metálico e sacarose (açúcar - C12H22O11), não necessariamente nessa ordem. O  objetivo  desse  experimento  era  identificar  cada  uma  delas,  utilizando  um  circuito  elétrico,  como  o esquematizado a seguir.            Em  uma  tabela,  foi  anotado: “conduz”,  quando  a  lâmpada  acendia,  e  “não  conduz”,  quando  permanecia apagada. Dessa forma, foram obtidos os seguintes resultados:  Amostra Líquido Sólido 1 Conduz Conduz 2 Não conduz Não conduz 3 Conduz Não conduz   As ligações químicas e as substâncias das amostras de 1 a 3 podem ser, respectivamente:",
+  "alternatives": [
+   "A:ligação metálica e Fe; ligação iônica e NaCl e ligação covalente e C12H22O11.",
+   "B:ligação metálica e Fe; ligação covalente e C12H22O11 e ligação iônica e NaCl.",
+   "C:ligação iônica e C12H22O11; ligação metálica e NaCl e ligação covalente e Fe.",
+   "D:ligação iônica e NaCl; ligação metálica e Fe e ligação covalente e C12H22O11.",
+   "E:ligação covalente e C"
+  ],
+  "answer": "B",
+  "topic": "Ciências Naturais"
+ }
+]

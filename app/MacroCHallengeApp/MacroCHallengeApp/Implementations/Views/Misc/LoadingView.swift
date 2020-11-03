@@ -11,14 +11,19 @@ import UIKit
 class LoadingView: UIView {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    required init() {
-        
+    @IBOutlet weak var lblText: UILabel!
+    
+    required init(message: String, error: Bool) {
+    
         super.init(frame: CGRect.zero)
+        
         if let nib = Bundle.main.loadNibNamed("LoadingView", owner: self, options: nil), let nibView = nib.first as? UIView {
             nibView.frame = bounds
             nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             addSubview(nibView)
-            activityIndicator.startAnimating()
+            self.lblText.text = message
+            self.activityIndicator.isHidden = error
+            error ? activityIndicator.stopAnimating() : activityIndicator.startAnimating()
         }
         
         

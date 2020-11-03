@@ -19,9 +19,6 @@ protocol SchoolViewProtocol {
      */
     init(data: School, controller: SchoolViewControllerProtocol)
     
-    func startActivity()
-    func stopActivity()
-    
     // Dependências
     var viewController: SchoolViewControllerProtocol {get set}
 }

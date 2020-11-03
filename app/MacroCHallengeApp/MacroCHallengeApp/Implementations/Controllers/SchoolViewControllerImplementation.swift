@@ -8,7 +8,7 @@
 import UIKit
 
 class SchoolViewControllerImplementation: UIViewController, SchoolViewControllerProtocol {
-
+    
     // MARK: - Dependencies
     var myView: SchoolViewProtocol?
     
@@ -46,30 +46,33 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     
     // MARK: - SchoolViewControllerProtocol methods
     func testWasSubmitted(_ test: TestHeader) {
-        self.myView?.startActivity()
+        let historicView = self.view
+        self.view = LoadingView(message: "Carregando a prova ...",
+                                error: false)
         requestSender.getQuestionsForTestRequest(
             testName: test.name,
             testYear: test.year,
             completion: { questions, error in
                 
-                self.myView?.stopActivity()
-                guard let questionsArray = questions else {
-                    print("Erro ao fazer request das questoes:\n\t \(error ?? "Error message is nil")")
-                    let alert = UIAlertController(title: "Erro",
-                                                  message: "Falha ao carregar questões, verifique sua conexão",
-                                                  preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Ok",
-                                                  style: .default,
-                                                  handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                    return
+                if let questionsArray = questions {
+                    if let navController = self.navigationController {
+                        let testAsTestType = Test(name: test.name, year: test.year, questions: questionsArray)
+                        let overviewViewController = OverviewViewControllerImplementation(data: testAsTestType)
+                        navController.pushViewController(overviewViewController, animated: true)
+                    }
+                    self.view = historicView
+                } else {
+                    if let navController = self.navigationController {
+                        let errorView = LoadingView(message: "Erro ao carregar a prova :(",
+                                                    error: true)
+                        let vc = UIViewController()
+                        vc.view = errorView
+                        navController.pushViewController(vc, animated: false)
+                    }
+                    self.view = historicView
                 }
                 
-                if let navController = self.navigationController {
-                    let testAsTestType = Test(name: test.name, year: test.year, questions: questionsArray)
-                    let overviewViewController = OverviewViewControllerImplementation(data: testAsTestType)
-                    navController.pushViewController(overviewViewController, animated: true)
-                }
+                
             })
     }
     

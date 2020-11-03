@@ -47,7 +47,8 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     }
     
     private func getRequest() {
-        self.view = LoadingView().self
+        
+        self.view = LoadingView()
         requestSender.getAccumulatedResults(completion: {generalResults, topicsResults, err in
 
             if let general = generalResults, let topics = topicsResults {

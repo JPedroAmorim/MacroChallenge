@@ -48,7 +48,7 @@ class ConverterResultsJSON: ConverterResultsJSONProtocol  {
         if let numberOfAnsweredQuestions = json["totalNumberOfAnsweredQuestions"].string {
             totalNumberOfAnsweredQuestions = numberOfAnsweredQuestions
         } else {
-            throw ErrorResult.noTotalNumberOfCorrectAnswers
+            throw ErrorResult.noTotalNumberOfAnsweredQuestions
         }
         
         let percentageOfCorrectAnswers = (totalPercentageOfCorrectAnswers as NSString).doubleValue

@@ -15,7 +15,37 @@ class RequestSenderImplementation: RequestSenderProtocol {
     private var parser = ConverterQuestionsJSON()
     private var parserForGeneralResults = ConverterResultsJSON()
     private var parserForTestResults = ConverterResultsDataJSON()
-
+    
+    func getAccumulatedResults(completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
+        guard let url = URL(string: rootBackendURL + "results/accumulated-results") else {
+            completion(nil, nil, "Erro ao decodificar a URL")
+            return
+        }
+        
+        sendGetRequestForUrl(url, completion:  { jsonResponse, err in
+            guard let jsonResponseArray = jsonResponse else {
+                completion(nil, nil, "Erro ao processar resposta do servidor")
+                return
+            }
+            let res = { () -> (ResultsPerTopic, [String:ResultsPerTopic])? in
+                do {
+                    let res = try self.parserForGeneralResults.createResultPerTopic(json: jsonResponseArray)
+                    let result = try self.parserForGeneralResults.createDictionaryTopicsResults(json: jsonResponseArray)
+                    return (res, result)
+                } catch {
+                    print("Error: \(error)")
+                    return nil
+                }
+            }()
+            
+            if let r = res {
+                completion(r.0, r.1, nil)
+            } else {
+                completion(nil, nil, "Erro ao fazer o parsing")
+            }
+            
+        })
+    }
     
     func getQuestionsForTestRequest(testName: String, testYear: String, completion: @escaping ([Question]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "tests?testName=\(testName)&testYear=\(testYear)") else {

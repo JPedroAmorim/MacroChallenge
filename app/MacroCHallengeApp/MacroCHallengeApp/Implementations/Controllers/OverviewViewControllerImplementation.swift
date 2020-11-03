@@ -42,7 +42,7 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDefaultQuestionController()
-        self.title = data.name
+        self.title = handleStringName(name: data.name)
     }
     
     // MARK: - Setup methods
@@ -186,5 +186,23 @@ class OverviewViewControllerImplementation: UIViewController, OverviewViewContro
                 }
             }
         }
+    }
+    
+    /**
+        Função para tratamento da string de título, insere um espaço entre o nome da prova e o ano respectivo
+
+        - parameter name: nome concatenado
+    */
+    func handleStringName(name: String) -> String {
+        var characters = Array(name)
+
+        for i in 0...(characters.count - 1) {
+            if Int(String(characters[i])) != nil {
+                characters.insert(" ", at: i)
+                break
+            }
+        }
+
+        return String(characters).capitalizingFirstLetter()
     }
 }

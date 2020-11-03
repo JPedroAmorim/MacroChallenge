@@ -11,7 +11,8 @@ import UIKit
 class LoadingView: UIView {
     // MARK: - IBOutlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var lblText: UILabel!
+    @IBOutlet weak var lblLoadingMessage: UILabel!
+    @IBOutlet weak var lblErrorMessage: UILabel!
     
     // MARK: - Lifecycle
     required init(message: String, error: Bool) {
@@ -22,9 +23,19 @@ class LoadingView: UIView {
             nibView.frame = bounds
             nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             addSubview(nibView)
-            self.lblText.text = message
-            self.activityIndicator.isHidden = error
-            error ? activityIndicator.stopAnimating() : activityIndicator.startAnimating()
+            if error {
+                lblErrorMessage.text = message
+                lblErrorMessage.isHidden = false
+                lblLoadingMessage.isHidden = true
+                activityIndicator.isHidden = true
+                activityIndicator.stopAnimating()
+            } else {
+                lblLoadingMessage.text = message
+                lblLoadingMessage.isHidden = false
+                lblErrorMessage.isHidden = true
+                activityIndicator.isHidden = false
+                activityIndicator.startAnimating()
+            }
         }
         
         

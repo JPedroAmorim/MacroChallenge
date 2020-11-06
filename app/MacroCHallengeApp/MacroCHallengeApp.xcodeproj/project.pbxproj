@@ -513,6 +513,15 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		D50719062555B57C0070196D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */,
+				C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		D560D7A8252E25CB000227CA /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +597,8 @@
 		D565EF2C252BAC1C00426648 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */,
+				C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */,
 				D565EF36252BACBC00426648 /* SchoolsViewProtocol.swift */,
 				D565EF2D252BAC4C00426648 /* SchoolsViewControllerProtocol.swift */,
 				D586B56B252BFCA700F4DF76 /* SchoolViewProtocol.swift */,
@@ -637,10 +648,6 @@
 				2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */,
 				2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */,
 				C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */,
-				C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */,
-				C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */,
-				C404395C254A09CE009CBB5B /* HistoricViewProtocol.swift */,
-				C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -648,6 +655,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D50719062555B57C0070196D /* History */,
 				2FBD638C2550A039006A8725 /* Misc */,
 				2F1FCF7A254857C10040169E /* Metrics */,
 				547EB57D25432B2F008A3DCC /* NoticeInfo */,

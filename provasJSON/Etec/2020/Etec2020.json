@@ -1,0 +1,789 @@
+[
+ {
+  "number": 1,
+  "initialText": "Um número natural, diferente de zero e diferente de um, pode ser classificado como primo ou composto. Os quadrinhos fornecem algumas pistas sobre o que permite caracterizar um número para que ele seja dito primo.",
+  "images": "",
+  "subtitle": "",
+  "questionText": "Analise as alternativas e assinale a correta.",
+  "alternatives": [
+   "A:O número 6 056 529 316 217 não é primo, e por isso está distante do restante.",
+   "B:Como os números 37 e 73 são primos, então 16 e 61 também são.",
+   "C:O número 237 é um número primo, assim como o 37 e o 137.",
+   "D:Todo número primo é ímpar e só pode terminar em 1, 3, 7 ou 9.",
+   "E:Há apenas quatro números primos que são menores do que 10"
+  ],
+  "answer": "E",
+  "topic": "Matematica"
+ },
+
+ {
+	 "number" 2: ,
+	 "initialText": " A pele, maior órgão do corpo humano, é importante na manutenção da saúde porque reveste toda a superfície corporal, atuando, entre outras coisas, na proteção contra germes e raios solares, e é também responsável pela sensibilidade tátil e pela manutenção da temperatura corporal. O ser humano apresenta a temperatura corporal normal de 36,5 oC. A elevação ou redução dessa temperatura pode ter efeitos danosos ao organismo. Assim, na pele, entre os fatores que contribuem para a manutenção da temperatura corporal em dias frios, em ambientes abertos, destacam-se",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:a dilatação dos vasos sanguíneos periféricos e maior eliminação de oleosidade pelas glândulas sebáceas.",
+		 "B:a dilatação dos vasos sanguíneos periféricos e maior eliminação de suor pelas glândulas sudoríparas.",
+		 "C:a dilatação dos vasos sanguíneos periféricos e eliminação contínua de suor pelas glândulas sebáceas.",
+		 "D:a contração dos vasos sanguíneos periféricos e menor eliminação de suor pelas glândulas sudoríparas.",
+		 "E:a contração dos vasos sanguíneos periféricos e maior eliminação de suor pelas glândulas sebáceas."
+	 ],
+	 "answer": "D",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 3,
+	 "initialText": "Sabemos que a humanidade é capaz de produzir o necessário para banir do planeta o problema da subalimentação. Apesar disso, a fome no mundo concentra-se em países da África subsaariana (e, em menor proporção, na Índia e no Paquistão) e persiste por causa do protecionismo econômico dos países ricos. A esmagadora maioria dos que não conseguem preencher suas necessidades básicas vive em regiões rurais, e a escassa renda que obtêm deriva da agricultura. Aumentar a produção agropecuária é fundamental, como bem sublinhou o secretário-geral da ONU, mas o mais importante é criar condições para que os que vivem em situação de pobreza absoluta conquistem o direito de produzir a própria alimentação. De acordo com o texto, é correto afirmar que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:a subalimentação inexiste em países considerados subdesenvolvidos.",
+		 "B:a subalimentação atinge principalmente os moradores das áreas urbanas.",
+		 "C:o aumento da produção industrial acabará com o problema da subalimentação.",
+		 "D:é possível acabar com o problema da subalimentação no mundo em que vivemos.",
+		 "E:é a proteção militar dada pelos países pobres aos países ricos que causa a subalimentação."
+	 ],
+	 "answer": "D",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 4,
+	 "initialText": "No estudo de substâncias puras e misturas, a professora apresentou dois sistemas a seus alunos, conforme representado nas figuras. Ela solicitou que analisassem e fizessem duas afirmações sobre cada sistema. Nas alternativas, encontram-se algumas das afirmações feitas pelos alunos. Analise-as e assinale a alternativa que apresenta apenas a afirmação correta sobre um dos sistemas representados.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:No sistema 1, temos duas substâncias simples.",
+		 "B:O sistema 1 é uma substância pura.",
+		 "C:No sistema 1, temos cinco componentes.",
+		 "D:O sistema 2 é uma mistura.",
+		 "E:No sistema 2, temos dois componentes."
+	 ],
+	 "answer": "A",
+	 "topic": "Quimica"
+ },
+ {
+	 "number": 5,
+	 "initialText": "Eu herdei da minha mãe esse trabalho de artesanato com barro. E, desde a minha bisavó, já se fazia desse jeito. Ela era índia. Então, a minha mãe fazia pote, bilha, qualquer tipo de louça. A gente faz assim: pega o barro mole, mistura com caraipé*, amassa até ele ficar mesmo bem ligado e, depois que ele já está bem ligado, a gente já vai começar a formar a louça. Agora, tem que ter uma coisa, tem que saber a temperatura e a quantia que o barro pega do caraipé. Se estiver bem areadinho, ele já tá bom. E eu tenho esperança que meu filho também vai continuar a trabalhar e alguém além dele vai também. Vai aprender um filho dele, um sobrinho, porque toda criança sempre mostra logo uma coisa que ela quer ser, que ela quer fazer. Eu acho que vai ter alguém assim, não vai ficar parado, não. Vão continuar a fazer essas panelas aqui. O depoimento de Maria da Saúde de Souza, artesã do Pará, foi gravado em vídeo e transcrito pelo Museu da Pessoa, website dedicado a coletar e a publicar as histórias de vida de milhares de brasileiros. Os depoimentos orais são considerados fontes",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:históricas, pois contêm informações e conhecimentos transmitidos de geração a geração ou a versão pessoal de indivíduos que testemunharam acontecimentos históricos.",
+		 "B:etnográficas, pois são utilizadas para confirmar as diferenças culturais existentes no interior de uma mesma sociedade, fortalecendo os preconceitos e preservando os privilégios.",
+		 "C:científicas, pois sua obtenção se dá por meio de entrevistas realizadas por repórteres profissionais, vinculados aos grandes portais de notícias.",
+		 "D:epistemológicas, pois são documentos certificados por instituições extraoficiais, vinculadas a organismos diplomáticos internacionais.",
+		 "E:mitológicas,pois as versões pessoais são ratificadas pelos cientistas, comprometendo a credibilidade dos testemunhos."
+	 ],
+	 "answer": "A",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 6,
+	 "initialText": "Com a promessa de tornar economicamente mais viáveis os voos espaciais, uma empresa demonstrou ser capaz de fazer retornarem os propulsores de seu foguete. A recuperação desses propulsores possibilita que eles sejam reparados para serem reutilizados em novos lançamentos. Após terem cumprido sua função, os propulsores do foguete se desprendem, caindo aceleradamente em direção ao planeta. Ao se aproximarem da superfície, retropropulsores são acionados, imprimindo uma força vertical e para cima de intensidade ___I___ que a do peso dos propulsores, diminuindo contínua e drasticamente a velocidade de queda, até próximo ao toque no solo. Nesse momento, os retropropulsores imprimem uma força vertical e para cima de intensidade ___II___ a do peso dos propulsores, o que os mantém pairando, sem velocidade, enquanto os computadores avaliam a telemetria para, finalmente, diminuírem até zero a retropropulsão. Assinale a alternativa que completa correta e respectivamente as lacunas da frase.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:I maior - II menor que",
+		 "B:I maior - II igual",
+		 "C:I maior - II maior que",
+		 "D:I menor - II igual",
+		 "E:I menor - II maior que"
+	 ],
+	 "answer": "B",
+	 "topic": "Fisica"
+ },
+ {
+	 "number": 7,
+	 "initialText": "Leia a charge.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "A charge de Ziraldo foi publicada na década de 1970 e, apesar da diferença histórico-cultural com o contexto atual, é possível apreender seu efeito de humor. A expressão responsável pela construção do humor no texto é",
+	 "alternatives": [
+		 "A:“não pago!”, repetida exaustivamente pela personagem com o intuito de criar, dessa forma, um eufemismo.",
+		 "B:“Contra tudo e contra todos”, passagem generalizante e imprópria ao contexto humorístico, trata-se de uma ironia.",
+		 "C:“paga ICM! Corro pra lá: Olha o fiscal me cobrando...”, passagem composta por verbos que se contradizem, formando, portanto, um paradoxo.",
+		 "D:“herói cobrado retumbante”, devido à sua semelhança sonora com um conhecido verso do Hino Nacional Brasileiro, configurando uma paronomásia.",
+		 "E:“Heroicamente! Denodadamente! Como um mártir”, expressões usadas para atingir a autoestima da personagem; trata-se de uma preterição."
+	 ],
+	 "answer": "D",
+	 "topic": "Portugues"
+ },
+ {
+	 "number": 8,
+	 "initialText": "O empreendedorismo é, para muitos, uma oportunidade, assim como para Hilda Regina que decidiu investir em uma agência de publicidade. Nesse mercado competitivo, entre seus diferenciais, a empresária decidiu desenvolver um cartão de visita que tem a forma de um polígono convexo com todos os lados de mesma medida, e apenas quatro ângulos internos, sendo dois deles agudos e dois obtusos. A figura matemática que é descrita tendo, obrigatoriamente, todos os elementos do cartão de visita citado é o",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:losango",
+		 "B:pentágono",
+		 "C:quadrado",
+		 "D:retângulo",
+		 "E:triângulo"
+	 ],
+	 "answer": "A",
+	 "topic": "Matematica"
+ },
+ {
+	 "number": 9,
+	 "initialText": " Fundamental à manutenção da vida na Terra, o ciclo biogeoquímico do carbono na natureza está representado simplificadamente no esquema.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Sobre esse esquema é correto afirmar que",
+	 "alternatives": [
+		 "A:os processos 1 e 2 são realizados pelos animais e vegetais na decomposição da matéria orgânica.",
+		 "B:os processos 1 e 2 são realizados pelos animais e vegetais na produção de compostos orgânicos.",
+		 "C:os processos 1 e 2 são realizados pelos animais na absorção e na eliminação do gás carbônico.",
+		 "D:o processo 1 é realizado pelos animais na combustão da matéria orgânica.",
+		 "E:o processo 1 é realizado pelos vegetais na produção da matéria orgânica."
+	 ],
+	 "answer": "E",
+	 "topic": "Quimica"
+ },
+ {
+	 "number": 10,
+	 "initialText": "Na América do Sul, ninguém gasta mais em fast-food do que os brasileiros. Aliás, segundo um estudo realizado pela EAE Business School, que analisou os hábitos de consumo nesse setor em 2014, apenas os Estados Unidos (290,2 bilhões de reais), o Japão (162,3 bilhões de reais) e a China (130,2 bilhões de reais) estão à frente do Brasil (53,7 bilhões de reais) em gastos no setor. De acordo com o levantamento, o gasto com fast-food por habitante no Brasil em 2014 foi de 265 reais, e o consumo deve crescer em 30,88% até 2019 — uma das maiores expectativas entre os países estudados, junto com Espanha (48,61%) e China (23,99%). Os espanhóis, aliás, estão entre os europeus que menos gastam com fast-food. Cada habitante investe em média 42,6 euros por ano. Essa cifra os situa somente atrás dos italianos. O crescimento do tipo de restaurante retratado no texto se deve ao",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:aumento significativo do desemprego, forçando milhões de trabalhadores e trabalhadoras a se alimentarem com refeições mais baratas e mais nutritivas servidas nesses restaurantes.",
+		 "B:surgimento de um movimento denominado slow food, que defende a utilização de produtos alimentares artesanais de qualidade, produzidos de forma que respeite o meio ambiente.",
+		 "C:movimento mundial de valorização das alimentações locais como forma de prestigiar a comida feita nos vilarejos mais distantes e disponibilizadas por intermédio de restaurantes mundializados.",
+		 "D:fenômeno da globalização, que atua como fator determinante na modificação dos hábitos alimentares, gerando transformações no estilo de vida de milhões de pessoas espalhadas pelo planeta.",
+		 "E:resgate de uma modalidade de alimentação que surgiu no início do modo de produção capitalista no século XVI na Europa, baseada nas tabernas instaladas nas feiras comerciais como as de Flandres e de Champagne."
+	 ],
+	 "answer": "D",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 11,
+	 "initialText": "  Leia o texto para responder às questões 11 e 12. John Goodenough, Stanley Whittingham e Akira Yoshino são os vencedores do Prêmio Nobel 2019 de Química pelo desenvolvimento de baterias de íons de lítio. Atualmente, celulares, notebooks e carros elétricos saem de fábrica com esse tipo de bateria. Com essa descoberta, é possível armazenar uma grande quantidade de energia em baterias pequenas e leves. Se fôssemos utilizar outros tipos de bateria, como por exemplo, bateria de hidreto de níquel ou bateria de níquel cádmio, para armazenarmos a mesma quantidade de energia, teríamos baterias com o tamanho e massa duas ou até mesmo três vezes maiores que as baterias de íons de lítio. Outra vantagem desse tipo de bateria é o fato de não possuírem o efeito memória, conhecido popularmente como o vício da bateria. Devido a essa característica que facilita a vida do usuário, ela não requer tanta atenção nos processos de carga e descarga. Contudo, com todos os avanços, as baterias continuam extremamente sensíveis à temperatura. Quando expostas ao calor, podem perder parte de sua capacidade total e se decompor mais rápido que o normal.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "De acordo com o texto, é correto afirmar que",
+	 "alternatives": [
+		 "A:os carros elétricos, fabricados atualmente, usam baterias do tipo níquel cádmio.",
+		 "B:as baterias de íons de lítio são maiores e mais pesadas que as baterias de hidreto de níquel.",
+		 "C:as baterias de lítio apresentam efeito memória e, por isso devemos recarregá-las por completo.",
+		 "D:aparelhos eletrônicos, fabricados atualmente, usam baterias menores e mais leves as quais não requerem tanta preocupação com sua carga e descarga.",
+		 "E:as baterias atuais podem ficar expostas a altas temperaturas sem perderem sua capacidade de recarga e nem sofrerem decomposição."
+	 ],
+	 "answer": "D",
+	 "topic": "Quimica"
+ },
+ {
+	 "number": 12,
+	 "initialText": "Os íons de lítio, usados em baterias, são provenientes de compostos iônicos. Um exemplo de composto iônico é o sal cloreto de sódio, no qual átomos de sódio se ligam a átomos de cloro por meio de ligação iônica, na razão de 1:1, como todos os cloretos de metais alcalinos. Sabendo que o lítio também é um metal alcalino, podemos afirmar que os átomos de lítio se ligam a átomos de cloro formando o composto cloreto de lítio, representado, corretamente, por",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:Li2Cl",
+		 "B:Li2Cl2",
+		 "C:ClLi2",
+		 "D:Cl2Li2",
+		 "E:LiCl"
+	 ],
+	 "answer": "E",
+	 "topic": "Quimica"
+ },
+ {
+	 "number": 13,
+	 "initialText": "Uma das mais antigas formas de exploração econômica do território da América portuguesa, a produção de açúcar aconteceu principalmente nos engenhos do Nordeste e se organizava segundo um sistema que ficou conhecido como plantation. Assinale a alternativa que apresenta, corretamente, as principais características do sistema de plantation.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:Agricultura diversificada, voltada para a subsistência, pequenas propriedades rurais, mão de obra familiar.",
+		 "B:Extrativismo, voltado para o mercado interno, médias propriedades, mão de obra imigrante.",
+		 "C:Monocultura, voltada para o mercado externo, latifúndio e mão de obra escrava.",
+		 "D:Produção agrícola diversificada, voltada para o mercado externo, latifúndio e mão de obra livre.",
+		 "E:Produção mecanizada, voltada para o mercado interno, pequenas propriedades, mão de obra escrava."
+	 ],
+	 "answer": "C",
+	 "topic": "Historia"
+ },
+ {
+	 "number": 14,
+	 "initialText": "Leia o texto para responder às questões 14 e 15.  A imagem mostra o satélite brasileiro CBERS–4 utilizado para monitoramento do nosso território e para desenvolvimento científico. Como a maioria dos objetos colocados no espaço, o CBERS–4 é completamente envolvido por uma manta térmica protetora (Isolamento de Múltiplas Camadas, sigla em inglês MLI). Esse material tem como função diminuir o fluxo de calor, que pode ser um grande problema para objetos colocados em órbita, uma vez que facilmente eles podem ser submetidos a temperaturas maiores que 100 oC e menores que –100 C.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "No CBERS–4, com respeito à absorção de energia térmica proveniente do Sol, o revestimento térmico feito com o MLI, temcomofunçãoinibiraabsorçãodeenergiaapenaspor ___I___,tendoemvistaquenoespaçonãoexisteouémuito rarefeita a presença de matéria que poderia auxiliar no processo de troca de calor por ___II___ com a transferência do calor de partícula para partícula ou mesmo por ___III___,em que porções de matéria aquecida trocam de posição com porções de matéria contendo menos calor. Assinale a alternativa que completa correta e respectivamente as lacunas da frase.",
+	 "alternatives": [
+		 "A:I condução - II convecção - III irradiação",
+		 "B:I condução - II irradiação - III convecção",
+		 "C:I convecção - II condução - III irradiação",
+		 "D:I irradiação - II condução - III convecção",
+		 "E:I irradiação - II convecção - III condução"
+	 ],
+	 "answer": "D",
+	 "topic": "Física"
+ },
+ {
+	 "number": 15,
+	 "initialText": "Se o texto desta questão fosse direcionado a leitores estadunidenses, ele teria que sofrer não apenas uma tradução para a língua inglesa como também uma conversão da escala termométrica utilizada. Isso ocorre porque os estadunidenses utilizam cotidianamente a unidade de temperatura denominada Fahrenheit. A conversão de valores expressos na escala Celsius para a escala Fahrenheit é feita utilizando-se a expressão de conversão, Tc/5 = (Tf – 32)/9, em que tC é um valor de temperatura expresso na escala Celsius e tF, o valor correspondente de 59 temperatura expresso na escala Fahrenheit. Nessas condições, a menor temperatura que apareceria no texto em língua inglesa é",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:–482 F",
+		 "B:–212 F",
+		 "C:–148 F",
+		 "D:148 F",
+		 "E:212 F"
+	 ],
+	 "answer": "C",
+	 "topic": "Física"
+ },
+ {
+	 "number": 16,
+	 "initialText": "O coração de um mamífero possui uma completa separação entre os ventrículos. Essa separação não permite a mistura do sangue venoso com o sangue arterial. O esquema refere-se ao sistema circulatório dos mamíferos.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Sobre esse esquema, podemos afirmar, corretamente, que os números I, II, III e IV representam, respectivamente,",
+	 "alternatives": [
+		 "A:I veias cavas - II veias pulmonares - III artéria pulmonar - IV artéria aorta",
+		 "B:I veias cavas - II veias pulmonares - III artéria aorta - IV artéria pulmonar",
+		 "C:I artéria aorta - II artéria pulmonar - III veias cavas - IV veias pulmonares",
+		 "D:I artéria aorta - II veias pulmonares - III artéria pulmonar - IV veias cavas",
+		 "E:I veias pulmonares - II veias cavas - III artéria aorta - IV artéria pulmonar"
+	 ],
+	 "answer": "B",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 17,
+	 "initialText": " A atividade pecuária possui grande representatividade na economia brasileira. Não é novidade que o Brasil possui um dos maiores rebanhos comerciais de bovinos do mundo. Essa atividade gera milhões de empregos diretos e indiretos, e 20% do território nacional é ocupado com pastagens que são destinadas à criação do gado.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Assim como na agricultura, a atividade pecuária se diferencia em extensiva e intensiva. A pecuária intensiva é um sistema",
+	 "alternatives": [
+		 "A:tradicional de produção, em que os animais são criados em grandes áreas, o qual emprega técnicas arcaicas com objetivo de manter a produtividade.",
+		 "B:tradicional de produção, em que predomina a utilização dos nutrientes do pasto como fonte de alimentos para os animais e utilização mínima de água.",
+		 "C:tradicional de produção, em que, nos períodos mais secos, complementa-se a alimentação dos rebanhos com cactáceas, como a palma e proteinados de baixo custo.",
+		 "D:moderno de produção, em que ocorrem investimentos em técnicas avançadas aplicadas nos rebanhos, tais como melhoramento genético e inseminação artificial.",
+		 "E:moderno de produção, em que os animais são criados soltos e, como forma de suplementação, é feito o fornecimento de sal comum e de sal mineral aos rebanhos."
+	 ],
+	 "answer": "D",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 18,
+	 "initialText": "Leia o texto para responder às questões de 18 a 21. O que liga a floresta Amazônica, o aquecimento mundial e você? Há muito tempo a floresta Amazônica é reconhecida como um repositório de serviços ecológicos, não só para os povos indígenas e as comunidades locais, mas também para o restante do mundo. Além disso, de todas as florestas tropicais do mundo, a Amazônia é a única que ainda está conservada, em termos de tamanho e de diversidade. No entanto, à medida que as florestas são queimadas ou retiradas e o processo de aquecimento global é intensificado, o desmatamento da Amazônia gradualmente desmonta os frágeis processos ecológicos que levaram anos para serem construídos e refinados.  A floresta amazônica pode curar você Durante milênios, os seres humanos utilizaram insetos, plantas e outros organismos da região para várias finalidades, entre elas a agricultura, a vestimenta e, claro, a cura para doenças. Povos indígenas e outros grupos que vivem na floresta amazônica aperfeiçoaram o uso de compostos químicos encontrados em plantas e em animais. O conhecimento sobre o uso dessas plantas geralmente fica nas mãos de um curandeiro que, por sua vez, repassa a tradição para um aprendiz. Esse processo se mantém ao longo de séculos e compõe uma parte integral da identidade desses povos. O potencial inexplorado das plantas amazônicas Os cientistas acreditam que menos de 0,5% das espécies da flora foram detalhadamente estudadas quanto ao seu potencial medicinal. Ao mesmo tempo em que o bioma Amazônia está encolhendo lentamente em tamanho, a riqueza da vida silvestre de suas florestas também tem se reduzido, bem como o uso potencial das plantas e dos animais que ainda não foram descobertos.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "I - O desmatamento da floresta põe em risco, para além de suas riquezas naturais, a continuidade de conhecimentos tradicionais. II - Apesar da biodiversidade existente na floresta Amazônica, o impacto gerado pelo seu desmatamento restringe-se às comunidades e aos povos locais. III - A não preservação do bioma Amazônia pode acarretar impactos no clima mundial e até mesmo na pesquisa médico-científica. É correto o que se afirma em",
+	 "alternatives": [
+		 "A:I, apenas.",
+		 "B:II, apenas.",
+		 "C:III, apenas.",
+		 "D:I e III, apenas.",
+		 "E:I, II e III"
+	 ],
+	 "answer": "D",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 19,
+	 "initialText": "Observe os elementos de coesão destacados no texto. Analisando seu contexto de ocorrência, assim como suas funções sintático-semânticas, afirma-se corretamente que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:“não só” é uma locução adverbial utilizada para negar a expressão “os povos indígenas e as comunidades locais”.",
+		 "B:“não só... mas também”; “além disso” e “bem como” são locuções conjuntivas e expressam ideia de adição.",
+		 "C:“No entanto”, como conjunção adversativa, pode ser substituída, sem alterar o sentido original do período, por “porque”.",
+		 "D:“à medida que” está empregada inadequadamente no texto, pois deveria expressar proporção; logo, o correto seria “na medida em que”.",
+		 "E:“mas também” exerce função de conjunção adversativa no texto, uma vez que expressa oposição em relação à oração anterior: “... a floresta Amazônica é reconhecida...”."
+	 ],
+	 "answer": "B",
+	 "topic": "Portugues"
+ },
+ {
+	 "number": 20,
+	 "initialText": " A função referencial ou informativa, predominante no texto apresentado e uma das mais frequentes no cotidiano, tem por objetivo informar o leitor. Para alcançar seu intento, o autor recorre a determinadas construções linguísticas, tal como",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:a variação entre verbos no presente do indicativo e verbos no presente do subjuntivo com a finalidade de discernir entre dados concretos e hipotéticos sobre a floresta, respectivamente.",
+		 "B:o uso de verbos no presente e no pretérito perfeito do indicativo para retratar a realidade atual da floresta e seu uso tradicional no preparo de medicamentos, respectivamente.",
+		 "C:a recorrência de verbos no imperativo e de vocativos direcionados ao leitor, a fim de alcançar sua adesão ao processo de preservação ambiental.",
+		 "D:o uso predominante de linguagem denotativa na construção de narrativas sobre o processo de desmatamento da floresta a fim de fornecer informações acerca desse tópico.",
+		 "E:o uso predominante da linguagem conotativa na construção textual para garantir objetividade e imparcialidade aos dados retratados."
+	 ],
+	 "answer": "B",
+	 "topic": "Portugues"
+ },
+ {
+	 "number": 21,
+	 "initialText": "Antecedente é a palavra empregada pela gramática tradicional para identificar o termo ao qual o pronome relativo se refere em uma oração. Assinale a alternativa cujo antecedente do pronome relativo está corretamente destacado.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:“...o desmatamento da Amazônia gradualmente desmonta os frágeis processos ecológicos que levaram anos para serem construídos e refinados.”",
+		 "B:“O conhecimento sobre o uso dessas plantas geralmente fica nas mãos de um curandeiro, que por sua vez repassa a tradição para um aprendiz...”",
+		 "C:“Além disso, de todas as florestas tropicais do mundo, a Amazônia é a única que ainda está conservada, em termos de tamanho e diversidade.”",
+		 "D:“Os cientistas acreditam que menos de 0,5% das espécies da flora foram detalhadamente estudadas...”",
+		 "E:“Ao mesmo tempo em que o bioma Amazônia está encolhendo lentamente em tamanho...”"
+	 ],
+	 "answer": "A",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 22,
+	 "initialText": "Leia o texto para responder às questões 22 e 23.  A Feira do Peixe Vivo, em Caxias do Sul, visa promover uma melhor qualidade de vida à população ao estimular o consumo de peixes. A feira ocorre uma vez ao mês e comercializa espécies como carpa capim (11 reais o quilograma), carpa húngara (9 reais o quilograma) e o bagre (X reais o quilograma). Em sua barraca, um piscicultor comercializava bagres, cujas massas variavam de 1,3 kg a 1,6 kg. Um freguês comprou o bagre de maior massa por R$ 25,00. De acordo com as informações do texto, é correto afirmar que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:x < 15",
+		 "B:15 < X < 20",
+		 "C:15 > X > 20",
+		 "D:15 < X > 20",
+		 "E:X > 20"
+	 ],
+	 "answer": "B",
+	 "topic": "Matemática"
+ },
+ {
+	 "number": 23,
+	 "initialText": "Suponha que um dos piscicultores comercialize apenas carpas capim e carpas húngaras. Em março, esse piscicultor levou à feira 1 200 carpas e conseguiu vender 90% delas, obtendo um faturamento de R$ 11.380,00. Nessas condições, o número de carpas húngaras que o piscicultor vendeu foi igual a",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:250.",
+		 "B:290.",
+		 "C:820.",
+		 "D:910.",
+		 "E:950."
+	 ],
+	 "answer": "A",
+	 "topic": "Matemática"
+ },
+ {
+	 "number": 24,
+	 "initialText": "Vários estudiosos consideram que nenhum país do mundo é tão social, cultural e economicamente ligado ao milho quanto o México. Para começar, ele surgiu por lá. Há cerca de nove mil anos, povos que moravam onde hoje fica o México encontraram uma versão primitiva do milho, com uma espiga de uns 2,5 centímetros, e começaram a cultivá-lo. Até hoje, esse é um dos principais plantios do país. No México, além do milho amarelo, que estamos acostumados a consumir no Brasil, podemos encontrar milhos de outras cores. Há o branco, que é muito comum, e também variedades vermelhas, azuis e pretas, por exemplo.	 O maior número de variedades de milho no mundo se encontra no México: são 64 tipos (sendo 59 nativos do país) dentre as 220 variedades existentes em toda a América Latina. E o mais interessante é que, enquanto em outros países americanos as espécies primitivas desse cereal são consideradas “relíquias”, no México muitas delas continuam sendo usadas no dia a dia. O México tem o maior consumo per capita de milho no mundo: são 63 kg anuais, contra uma média de 18 kg no Brasil, por exemplo. Em algumas comunidades, estima-se que esse alimento sozinho ofereça cerca de 70% das calorias e 50% das proteínas consumidas diariamente pela população. Cerca de 75% da composição desse cereal é amido, substância muito usada pela indústria alimentícia e em produtos tão variados quanto resinas para a pintura de carros, sabão, pasta de dentes e plásticos biodegradáveis. A glicose que vem do amido também é usada como meio de cultura de bactérias que produzem a penicilina e para revestir comprimidos, por exemplo. Recentemente, pesquisadores descobriram que a jornada histórica do milho até chegar à versão atual foi mais complexa do que se imaginava, passando inclusive pelo Brasil. Seja como for, o certo é que, sem o trabalho humano, o milho provavelmente não existiria hoje. Isso decorre das características da planta que dificultam muito que ela espalhe suas sementes espontaneamente. Afinal, elas ficam bem presas à espiga e cobertas por folhas resistentes. Assim, os seres humanos são muito importantes para fazer com que o milho se reproduza de forma significativa. Isso, de certa forma, torna o vínculo entre homem e planta ainda mais forte. Para algumas civilizações, no entanto, o laço é tão forte que é basicamente uma coisa só. Os maias, por exemplo, acreditavam que o homem veio do milho. No Popol Vuh, livro mais importante da mitologia Maia, encontra-se o seguinte: “De milho amarelo e milho branco se fez sua carne”. Existe, também, o mito de que o milho teria sido criado a partir das unhas do deus Cintéotl. Até hoje, muitos povos indígenas mexicanos consideram o milho uma divindade e dão a ele um caráter sagrado. Afinal, é dele que depende, em grande parte, a subsistência dessas comunidades. O grão é considerado precioso por assegurar a continuidade do ciclo da vida. Mais recentemente, a luta dos indígenas mexicanos tem sido contra o cultivo de milho transgênico, que apesar de ser proibido, vem acontecendo há décadas. Usado para aumentar a produtividade e a resistência a pragas e a inseticidas, entre outros fins, o cereal transgênico provoca o desaparecimento de espécies nativas, além de prejudicar a agricultura familiar. Portanto, a forte relação com o milho vai muito além da planta em si, e além do próprio México. Ela traz também uma mensagem universal: nós, seres humanos, fazemos parte da terra. Dela dependemos, e dela devemos cuidar. De acordo com o texto, é correto afirmar que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:a atual luta dos indígenas mexicanos é pelo direito de utilizar sementes transgênicas de milho em larga escala para poder aumentar ainda mais a produção desse grão.",
+		 "B:a relação do povo mexicano com o milho é histórica, uma vez que esse grão é cultivado desde a época dos antigos povos que habitavam a região onde hoje se localiza o México.",
+		 "C:o Brasil é o país que mais consome milho no mundo, uma vez que esse grão foi encontrado em abundância pelos portugueses que aqui aportaram no século XVI.",
+		 "D:a dispersão das sementes de milho pela América Latina só foi possível em função da ação dos ventos que espalharam as sementes desse grão para todo o continente americano.",
+		 "E:o povo maia tinha no milho um deus cristão, responsável pela eliminação da fome e pela manutenção da vida desse povo, que conviveu em harmonia com os colonizadores espanhóis."
+	 ],
+	 "answer": "B",
+	 "topic": "História"
+ },
+ {
+	 "number": 25,
+	 "initialText": "Ainda de acordo com o texto, é correto afirmar que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:o maior número de variedades de milho se encontra no Brasil, onde é usado para extrair o etanol.",
+		 "B:o milho branco é a variedade mais rara encontrada no México e é utilizada para fazer canjica.",
+		 "C:a glicose que vem do amido de milho é também usada no revestimento de comprimidos.",
+		 "D:a palha do milho é utilizada na fabricação de cremes dentais e de pneus.",
+		 "E:os maias usavam o milho na produção da penicilina."
+	 ],
+	 "answer": "C",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 26,
+	 "initialText": "Uma das consequências das trocas de calor, que ocorrem durante uma transformação química realizada em meio aquoso, é a variação de temperatura do sistema. Se o sistema receber calor, esse sofrerá um aumento de temperatura e, se ceder calor, terá queda de temperatura. Durante uma reação química realizada em meio aquoso, observa-se a variação da temperatura do sistema de 22 C para 28 C. Conclui-se, corretamente, que se trata de uma reação",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:exotérmica, pois cedeu calor para o sistema.",
+		 "B:exotérmica, pois absorveu calor do sistema.",
+		 "C:endotérmica, pois cedeu calor para o sistema.",
+		 "D:endotérmica, pois absorveu calor do sistema.",
+		 "E:isotérmica, pois não houve troca de energia."
+	 ],
+	 "answer": "A",
+	 "topic": "Quimica"
+ },
+ {
+	 "number": 27,
+	 "initialText": "É possível calcular a quantidade de calor trocada em um sistema por meio da relação matemática: Q = m·c·DT. Essa relação é conhecida como a Equação Fundamental da Calorimetria e mostra que o calor trocado (Q) depende da massa (m), do calor específico (c) e da variação de temperatura do corpo (DT). Sabendo que a massa da solução referida no texto é 100 g e considerando o calor específico como 1 cal/g ·oC, a quantidade de calor trocada nesse processo é",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:60 calorias.",
+		 "B:600 calorias.",
+		 "C:2 200 calorias.",
+		 "D:2 800 calorias.",
+		 "E:5 000 calorias."
+	 ],
+	 "answer": "B",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 28,
+	 "initialText": "Na alimentação humana, a preservação da saúde depende dos nutrientes utilizados pelo organismo, pois tanto os de origem vegetal quanto animal são importantes na obtenção de energia, na formação de novas células e na regulagem do metabolismo celular. Considere que, após uma determinada refeição, com o processo digestivo totalmente realizado, verificou-se que as substâncias absorvidas pelo sistema digestório, em maior quantidade foram os aminoácidos, que certamente foram obtidos dos alimentos, que predominavam nessa refeição, tais como",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:batata e mandioca.",
+		 "B:arroz e salada de folhas.",
+		 "C:macarrão.",
+		 "D:polenta frita.",
+		 "E:contrafilé na brasa."
+	 ],
+	 "answer": "E",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 29,
+	 "initialText": "Iniciada em 1789, a Revolução Francesa tinha como um de seus principais objetivos a abolição da sociedade de Antigo Regime, com o fim dos privilégios e das desigualdades entre os diferentes grupos sociais. Pouco antes da Revolução, a sociedade francesa estava dividida entre",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:apoiadores de Napoleão e de Robespierre, importantes lideranças políticas conservadoras que lutavam pela manutenção da monarquia francesa.",
+		 "B:burguesia e trabalhadores rurais e urbanos, já que o clero e a nobreza não tinham participação significativa na política francesa no período pré-revolucionário.",
+		 "C:Girondinos e Sans Culottes, grupos rivais que disputavam a hegemonia política e representavam os diferentes interesses da burguesia na relação com o rei Luís XVI.",
+		 "D:Primeiro e Segundo Estados (clero e nobreza), que reuniam cerca de 3% da população, e Terceiro Estado, que abrigava a burguesia, os trabalhadores urbanos e rurais e pagava, sozinho, todas as taxas e os impostos diretos cobrados pela monarquia.",
+		 "E:Primeiro e Segundo Estados (clero e nobreza), que reuniam a minoria da população, mas pagavam, sozinhos, todas as taxas e os impostos diretos que financiavam os programas assistenciais que mantinham parte do Terceiro Estado."
+	 ],
+	 "answer": "D",
+	 "topic": "História"
+ },
+ {
+	 "number": 30,
+	 "initialText": "Leia o diálogo entre Menipo e Hermes para responder às questões de 30 a 32. O diálogo, desenvolvido entre as personagens Menipo e Hermes, faz parte do livro Diálogo dos Mortos, do escritor Luciano de Samósata. Menipo – Onde estão os belos e as belas, Hermes1? Leva-me até eles, pois eu sou novato aqui. Hermes – Não tenho tempo, Menipo. Mas, olha aquilo ali, à direita: ali está Jacinto, também Narciso e Nireu e Aquiles2; e ainda Tiró, Helena3, Leda, em suma, todas as beldades antigas. Menipo – Eu estou vendo só ossos e crânios desprovidos de carnes, a maioria desses semelhantes. Contudo, aqueles são os ossos que todos os poetas admiram e que tu pareces desprezar. Mesmo assim, mostra-me Helena, pois eu não saberia reconhecê-la. Hermes – Esse crânio aí é Helena. Menipo – Então é por causa disso aí que foram lotados milhares de navios da Grécia inteira e tombaram tantos gregos e bárbaros, e tantas cidades foram arrasadas! Hermes – Mas, Menipo, tu não viste essa mulher em vida; senão tu também terias dito que não merece castigo “sofrer dores por muito tempo por uma mulher”, porque também as flores secas, se alguém as contempla depois que elas perdem o viço, é evidente que lhe parecerão murchas; mas enquanto florescem e mantêm o colorido, elas são muito belas. Menipo – Pois é isso mesmo que me causa admiração, Hermes: que os Aqueus4 não perceberam que estavam sofrendo por uma coisa tão efêmera e tão facilmente perecível. \n\n 1. Hermes: divindade grega posteriormente assimilada à representação do deus Mercúrio, pela mitologia romana. Na cena, Hermes entrega as almas a Caronte, que se encarrega de fazê-las atravessar o Aqueronte, rio que separa o mundo dos vivos e dos mortos.\n2. Aquiles: filho de Peleu e Tétis, o mais valente dos heróis na guerra de Troia, de cabeleira dourada. É jovem, forte e belo. Morre em plena juventude; por isso ele está ao lado de beldades, tais como Jacinto e Narciso.\n3. Helena: mulher de Menelau, raptada por Páris, filho de Príamo, rei de Troia, foi a causa da guerra que levou ao Hades milhares de almas de heróis, segundo Homero.\n4. Aqueu: relativo aos aqueus, um dos quatro ramos do povo grego antigo, ou indivíduo dos aqueus, relativo à Acaia (antiga Grécia), ou ao seu natural ou habitante. Luciano de Samósata escritor grego do século II mistura em sua obra dois gêneros diferentes: a Comédia destinada ao riso; e o Diálogo, destinado às reflexões filosóficas.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Sobre o conteúdo reflexivo-filosófico do diálogo transcrito, depreende-se corretamente que",
+	 "alternatives": [
+		 "A:questiona as ações realizadas em vida para se alcançarem beleza e poder, uma vez que apenas os verdadeiros heróis, como Aquiles, são capazes de os manter na morte.",
+		 "B:expõe a importância da guerra para conseguir reconhecimento, já que, sem alguém para se lembrar dos heróis, a morte lentamente apaga suas grandes obras.",
+		 "C:critica a falta de objetividade de grandes líderes guerreiros, como Aquiles e Hermes, cuja atuação na Guerra de Troia levou milhares à morte.",
+		 "D:reflete sobre a validade das ações dos seres humanos para alcançar reconhecimento e beleza, condições perdidas após a morte.",
+		 "E:tem por objetivo criticar a vaidade excessiva de grandes líderes e intelectuais cuja morte aumenta ainda mais suas riquezas."
+	 ],
+	 "answer": "D",
+	 "topic": "História"
+ },
+ {
+	 "number": 31,
+	 "initialText": "Observe a passagem: \n “...os Aqueus não perceberam que estavam sofrendo por uma coisa tão efêmera e tão facilmente perecível.”\n\nSão sinônimas dos termos destacados, respectivamente, as palavras",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:permanente e deteriorável.",
+		 "B:fraca e perene.",
+		 "C:débil e infinita.",
+		 "D:inócua e vitalícia.",
+		 "E:passageira e extinguível."
+	 ],
+	 "answer": "E",
+	 "topic": "História"
+ },
+ {
+	 "number": 32,
+	 "initialText": "Analise a passagem:\n“Onde estão os belos e as belas, Hermes? Leva-me até eles, pois eu sou novato aqui.”\n\nAssinale a alternativa em que o excerto esteja corretamente transposto para o discurso indireto.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:Menipo questionou Hermes sobre o paradeiro dos belos e belas, para, logo em seguida, exigir-lhe que o levasse até eles, posto que era novato aqui.",
+		 "B:Menipo perguntou a Hermes onde estavam os belos e as belas, ordenando-lhe que o levasse até eles, pois ele era novato naquele lugar.",
+		 "C:Hermes questiona a si mesmo onde estariam os belos e as belas, instigando-se para se levar até eles, uma vez que fora novo por lá.",
+		 "D:Hermes perguntou a Menipo onde estavam os belos e as belas, suplicando-lhe para que o levasse até eles, embora fosse novato ali.",
+		 "E:Menipo ordena a Hermes que estivessem todos, os belos e as belas, onde eles pudessem ser levados até ali, mesmo sendo novatos."
+	 ],
+	 "answer": "B",
+	 "topic": "História"
+ },
+ {
+	 "number": 33,
+	 "initialText": "Carlos Rogério, empresário do ramo de festas e eventos, decidiu oferecer a seus clientes embalagens diferenciadas para as populares lembrancinhas. Segundo o empresário, a introdução de uma embalagem em formato de poliedro convexo regular (apresentada na imagem, com sua planificação) aumentou seu faturamento no último mês. Sabendo que todas as faces da embalagem de Carlos Rogério são polígonos regulares, pode-se afirmar que um ângulo interno de uma dessas faces mede.\nLembre-se de que: Um poliedro convexo é chamado de regular se suas faces são polígonos regulares, e cada um desses polígonos regulares tem o mesmo número de lados.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:108°",
+		 "B:180°",
+		 "C:360°",
+		 "D:405°",
+		 "E:540°"
+	 ],
+	 "answer": "A",
+	 "topic": "Matemática"
+ },
+ {
+	 "number": 34,
+	 "initialText": " Em um jardim, um grupo de estudantes coletou alguns animais para realizar um trabalho de pesquisa, cujo objetivo era agrupar os seres vivos capturados de acordo, principalmente, com suas semelhanças anatômicas. Um dos aspectos a ser observado na pesquisa eram as quelíceras, que correspondem ao primeiro par de apêndices articulados localizados na região bucal dos animais e podem ter várias funções, como por exemplo: inocular veneno, rasgar ou triturar alimentos, carregar ovos e até cavar buracos. Após a coleta, foi possível organizar dois grupos de animais cujas características são:",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Considerando as características descritas dos animais coletados, é correto afirmar que os animais do Grupo 1 e do Grupo 2 são, respectivamente",
+	 "alternatives": [
+		 "A:Grupo 1: Insetos - Grupo 2: Aracnídeos",
+		 "B:Grupo 1: Crustáceos - Grupo 2: Insetos",
+		 "C:Grupo 1: Aracnídeos - Grupo 2: Insetos",
+		 "D:Grupo 1: Insetos - Grupo 2: Crustáceos",
+		 "E:Grupo 1: Aracnídeos - Grupo 2: Crustáceos"
+	 ],
+	 "answer": "C",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 35,
+	 "initialText": "Oficialmente, a Conferência de Berlim, realizada entre novembro de 1884 e fevereiro de 1885, na Alemanha, serviria para garantir a livre circulação e comércio na bacia do rio do Congo e no rio Níger, bem como o compromisso das potências europeias de lutar pelo fim da escravidão no Continente. Entretanto, o maior objetivo das negociações era",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:garantir os direitos portugueses de colonização sobre toda a área que se estende entre Angola e Moçambique, na África Austral, já que Portugal foi o primeiro país a se instalar nos territórios africanos.",
+		 "B:resolver os conflitos entre as potências europeias, que tinham interesse em adquirir a maior extensão de territórios e possessões na África, continente rico em recursos naturais e em matérias-primas.",
+		 "C:concretizar os planos de Martinho Lutero que, no contexto da Reforma Protestante, preconizou a conversão dos povos africanos ao cristianismo evangélico.",
+		 "D:apoiar a expansão do Partido Nazista alemão com a anexação de novos territórios e, consequentemente, de novos cidadãos para a formação do III Reich.",
+		 "E:impedir a participação dos países emergentes da América do Sul no comércio de longa distância de produtos como ouro, diamantes e marfim."
+	 ],
+	 "answer": "B",
+	 "topic": "História"
+ },
+ {
+	 "number": 36,
+	 "initialText": "Leia o texto para responder às questões 36 e 37. Em suas últimas viagens o programa Apollo levou um veículo capaz de mover-se sobre a superfície lunar com uma velocidade máxima de 13 km/h. As baterias desse veículo permitiam uma autonomia para 92 km. O veículo era muito leve. Na Terra, seu peso era aproximadamente 2 100 N, enquanto que, na Lua, pesava cerca de 350 N.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Admita que os astronautas ao utilizarem o veículo lunar mantiveram velocidade constante igual à velocidade máxima. Assim sendo, a expectativa do tempo de uso do veículo, até o total esgotamento de suas baterias, seria de aproximadamente",
+	 "alternatives": [
+		 "A:3 h.",
+		 "B:5 h.",
+		 "C:6 h.",
+		 "D:7 h.",
+		 "E:9 h."
+	 ],
+	 "answer": "D",
+	 "topic": "Física"
+ },
+ {
+	 "number": 37,
+	 "initialText": "A força gravitacional, quando nos referimos a objetos próximos à superfície de corpos celestes, recebe o nome de força peso. A força peso é calculada pelo produto da massa do objeto, cujo peso se deseja conhecer, pelo valor da aceleração da gravidade do local em que esse objeto se encontra. Considerando que o valor da aceleração da gravidade no planeta Terra seja 10 m/s2, o valor da aceleração da gravidade na Lua corresponde à",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:metade do valor da aceleração da gravidade da Terra.",
+		 "B:terça parte do valor da aceleração da gravidade da Terra.",
+		 "C:quarta parte do valor da aceleração da gravidade da Terra.",
+		 "D:quinta parte do valor da aceleração da gravidade da Terra.",
+		 "E:sexta parte do valor da aceleração da gravidade da Terra."
+	 ],
+	 "answer": "E",
+	 "topic": "Fisica"
+ },
+ {
+	 "number": 38,
+	 "initialText": "A estação chuvosa na Índia e em todo o sul da Ásia é chamada de monções e é sempre muito esperada. É um período de chuva frequente e volumosa que se estende por cerca de quatro meses. Antes de a chuva começar, o calor é intenso no continente, com temperaturas que superam os 40 oC. A chuva de monção (ou chuva de monções) ocorre no verão do hemisfério Norte. Só que diferente de diversas áreas do globo, os volumes acumulados de chuva sobre algumas áreas em quatro meses, como nas proximidades do Himalaia, podem chegar aos 3 000 mm.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "As chuvas mencionadas no texto são esperadas, pois ajudam no plantio de",
+	 "alternatives": [
+		 "A:arroz, em um sistema agrícola chamado terraceamento.",
+		 "B:azeitona, utilizando a técnica de rotação de culturas.",
+		 "C:feijão, em sistema de pecuária intensiva.",
+		 "D:uva, em sistema de pecuária extensiva.",
+		 "E:mandioca, plantada com técnicas industriais."
+	 ],
+	 "answer": "A",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 39,
+	 "initialText": " Na Antiguidade, o desenvolvimento de povoações, aldeias e cidades que se utilizaram dos rios para a sua constituição gerou sociedades mais complexas em diversas regiões do mundo, como o Oriente Médio, a Ásia e a África. Nessas sociedades, a vida coletiva era marcada pelo trabalho que modificava a natureza e estabelecia divisões de tarefas entre os seres humanos. Nelas, o trabalho coletivo de irrigação era necessário para controlar as cheias dos rios e para cultivar as terras de suas margens.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "O texto se refere às chamadas sociedades",
+	 "alternatives": [
+		 "A:feudais.",
+		 "B:fluviais.",
+		 "C:nômades.",
+		 "D:patriarcais.",
+		 "E:pré-históricas."
+	 ],
+	 "answer": "B",
+	 "topic": "História"
+ },
+ {
+	 "number": 40,
+	 "initialText": "Leia o texto para responder às questões 40 e 41.\nO soro fisiológico é uma solução utilizada para diversos fins, dentre os quais: limpar olhos e nariz, lavar queimaduras e feridas, hidratações e nebulizações. É uma solução de cloreto de sódio de concentração 0,9% (massa/volume). Essa concentração corresponde à razão entre à massa de cloreto de sódio, em gramas, e o volume de 100 mL da solução. Um paciente desidratado, em que é administrado 500 mL de soro na veia, receberá uma massa de sal correspondente a",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:0,45 g.",
+		 "B:4,50 g.",
+		 "C:45,00 g.",
+		 "D:9,00 g.",
+		 "E:0,90 g."
+	 ],
+	 "answer": "B",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 41,
+	 "initialText": "A nomenclatura dos sais é derivada da nomenclatura do respectivo ácido de origem. Por exemplo, o sal usado no soro fisiológico, cloreto de sódio, é derivado do ácido clorídrico, e pode ser obtido por meio da reação de neutralização:",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Desse modo, o sal derivado do ácido sulfídrico, na reação de neutralização total com hidróxido de cálcio, será",
+	 "alternatives": [
+		 "A:CaS: sulfeto de cálcio.",
+		 "B:CaS: sulfato de cálcio.",
+		 "C:CaS: sulfito de cálcio.",
+		 "D:NaS: sulfato de sódio.",
+		 "E:NaS: sulfeto de sódio"
+	 ],
+	 "answer": "A",
+	 "topic": "Quimica"
+ },
+ {
+	 "number": 43,
+	 "initialText": "Leia os quadrinhos e o quadro “VOCÊ SABIA?” para responder às questões 43 e 44.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Admita que a menina dos quadrinhos esteja visitando a avó que mora em outra cidade. A fim de voltar da casa de sua avó para o prédio onde mora, usando a bota de 7 léguas da história, a menina dá 3 passos para leste e 4 passos para o norte. A figura representa de modo esquemático esse trajeto realizado pela garota. A distância entre a casa da avó e o prédio no qual a menina mora é, em quilômetros, igual a",
+	 "alternatives": [
+		 "A:323,4.",
+		 "B:231,0.",
+		 "C:142,6.",
+		 "D:46,2.",
+		 "E:35,0."
+	 ],
+	 "answer": "B",
+	 "topic": "Matemática"
+ },
+ {
+	 "number": 44,
+	 "initialText": " A légua é uma medida de comprimento que varia de acordo com o período histórico e o país em que é usada. Segundo o dicionário Priberam, por exemplo, ela equivale a 5 km em Portugal. Pode-se, portanto, estimar que a légua brasileira é maior que a portuguesa em cerca de",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:76%.",
+		 "B:68%.",
+		 "C:32%.",
+		 "D:24%.",
+		 "E:13%."
+	 ],
+	 "answer": "C",
+	 "topic": "Matemática"
+ },
+ {
+	 "number": 45,
+	 "initialText": "No início do século XV, os portugueses iniciaram um processo de expansão marítima que se tornou conhecido posteriormente como Grandes Navegações. Esse processo foi resultado de um conjunto de fatores políticos, econômicos e científicos. Sobre a Ciência e as Grandes Navegações, é correto afirmar que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:estavam ligadas ao desenvolvimento econômico das comunidades pesqueiras do litoral do mar Egeu.",
+		 "B:o desenvolvimento científico era considerado um empecilho para os navegadores, pois estes acreditavam que a Terra era plana.",
+		 "C:as viagens foram favorecidas por invenções, tais como as caravelas, navios rápidos, versáteis e de fácil manobra, que podiam navegar inclusive com ventos contrários.",
+		 "D:os grandes cientistas do período se afastaram dessa empreitada, pois, sob comando da Igreja Católica, dedicaram-se às grandes questões teológicas de sua época.",
+		 "E:a experiência dos povos americanos foi decisiva para o desenvolvimento científico de instrumentos de localização e de embarcações apropriadas para as viagens transoceânicas."
+	 ],
+	 "answer": "C",
+	 "topic": "História"
+ },
+ {
+	 "number": 46,
+	 "initialText": "Embora algumas doenças prevenidas por meio da vacinação tenham se tornado raras em alguns países, os agentes infecciosos que as causam continuam a circular e, em um mundo altamente interligado, podem atravessar fronteiras geográficas e infectar qualquer pessoa que não esteja protegida. Assim, em relação a doenças como sarampo, caxumba, rubéola e poliomielite, pode-se afirmar corretamente que",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:o alto custo da produção de suas vacinas específicas, não coberto pelo sistema público de saúde, torna inacessível e impossível a prevenção dessas doenças para a população.",
+		 "B:seus agentes infecciosos são vírus que, quando são enfraquecidos ou mortos para tratamento preventivo, estimulam uma resposta imunológica ativa no organismo humano.",
+		 "C:seus agentes infecciosos são bactérias que, apesar de terem sido erradicadas da maioria dos países, afetam preferencialmente idosos e pessoas de vida sedentária.",
+		 "D:a produção de vacinas específicas para cada uma delas é feita atualmente, em pequena escala, a partir da hiperimunização de cavalos.",
+		 "E:seus agentes infecciosos foram eliminados totalmente da maioria dos países, tornando desnecessária a aplicação de medidas preventivas."
+	 ],
+	 "answer": "B",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 47,
+	 "initialText": "“No Brasil, o Vale do rio São Francisco é o único lugar que produz uva até três vezes ao ano. As parreiras são divididas em grandes áreas. Enquanto em uma parte elas estão prontas para a colheita, na outra a fase é de poda e, logo ao lado, as uvas ainda estão começando a aparecer. Esse não é o milagre da multiplicação. É o milagre da irrigação. Controlando a água, é possível controlar todo o ciclo de vida da parreira.”",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "A localização geográfica do cenário descrito no texto situa- se na região",
+	 "alternatives": [
+		 "A:Sul do Brasil e sofre a influência do clima semiárido.",
+		 "B:Sul do Brasil e sofre a influência do clima subtropical.",
+		 "C:Nordeste do Brasil e sofre a influência do clima semiárido.",
+		 "D:Nordeste do Brasil e sofre a influência do clima subtropical.",
+		 "E:Centro-Oeste do Brasil e sofre a influência do clima tropical de altitude."
+	 ],
+	 "answer": "C",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 48,
+	 "initialText": " SOHO, abreviação de Solar & Heliospheric Observatory, é uma sonda que orbita o Sol e coleta informações de nossa estrela utilizando vários instrumentos. Um deles registra o comportamento da coroa solar e, para isso, conta com um pequeno disco opaco que fica estrategicamente posicionado à frente da câmera, ocultando a visão do disco solar.",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "Esse instrumento simula o que acontece quando, devidamente protegidos, estamos observando, daqui da Terra, o Sol no momento em que ocorre um eclipse",
+	 "alternatives": [
+		 "A:lunar total, com a Lua se interpondo entre a Terra e o Sol.",
+		 "B:lunar parcial, com a Terra se interpondo entre a Lua e o Sol.",
+		 "C:solar total, com a Lua se interpondo entre a Terra e o Sol.",
+		 "D:solar total, com a Terra se interpondo entre a Lua e o Sol.",
+		 "E:solar parcial, com a Lua se interpondo entre a Terra e o Sol."
+	 ],
+	 "answer": "C",
+	 "topic": "Geografia"
+ },
+ {
+	 "number": 49,
+	 "initialText": "A quimioterapia é um dos principais métodos para o tratamento do câncer. Como a doença se caracteriza pela multiplicação descontrolada de células, a maioria das drogas utilizadas no tratamento quimioterápico age bloqueando o mecanismo celular responsável pela produção de novas células. Por isso, tanto células cancerosas quanto sadias são afetadas, o que resulta em efeitos colaterais, tais como queda de cabelo e prejuízo aos tecidos que têm alta taxa de renovação celular. Com base nessas informações, podemos afirmar corretamente que a quimioterapia atua
+",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:bloqueando a digestão celular realizada pelos lisossomos.",
+		 "B:impedindo a respiração celular realizada pelas mitocôndrias.",
+		 "C:dificultando a eliminação de substâncias tóxicas do organismo.",
+		 "D:acelerando os processos de renovação celular dos tecidos sadios.",
+		 "E:inibindo a ocorrência de mitoses responsáveis pela proliferação celular."
+	 ],
+	 "answer": "E",
+	 "topic": "Biologia"
+ },
+ {
+	 "number": 50,
+	 "initialText": "A palavra idiota tem sua origem no grego antigo idiótes, que significava “homem privado da vida pública, que não vive a política, que não participa das coisas públicas”. Enquanto o homem livre era aquele que participava ativamente da polis, da vida em sociedade, do público, porque vivia a política, o escravizado estava na vida privada, vivia limitado ao mundo privado, era um idiota porque não tinha acesso à vida política. Nesse sentido, para os gregos, cidadania (o pertencimento à cidade) dizia respeito àquele que vivia a política. Portanto, o cidadão construía os direitos e os deveres, enquanto o idiota estava à margem desse processo.
+",
+	 "images": "",
+	 "subtitle": "",
+	 "questionText": "",
+	 "alternatives": [
+		 "A:era considerado cidadão aquele que recusava a política, que não participava dos assuntos públicos e só se ocupava com a própria vida.",
+		 "B:havia uma lei que obrigava gregos a se envolverem com os assuntos coletivos, sob pena de terem seus direitos e sua liberdade cerceados.",
+		 "C:aqueles que se envolviam com a política eram tão idiotas quanto os que privilegiavam a vida privada, pois não percebiam que a política é o campo de atuação dos corruptos.",
+		 "D:a liberdade estava intrinsecamente ligada à ideia de cidadania, pois só podia se considerar livre aquele que participasse da condução coletiva dos assuntos da cidade.",
+		 "E:os direitos e os deveres eram construídos coletivamente pelos idiotas, enquanto os cidadãos viviam limitados ao mundo privado."
+	 ],
+	 "answer": "D",
+	 "topic": "História"
+ },
+ ]

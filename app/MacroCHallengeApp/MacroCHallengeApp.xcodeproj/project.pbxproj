@@ -127,6 +127,8 @@
 		C48FBA91252D965700A3CF8D /* SchoolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */; };
 		C4F885BD252F5807008FF2A0 /* OverviewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */; };
 		C4F885C2252F581D008FF2A0 /* OverviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */; };
+		D50719082555DB200070196D /* ConverterTestHeaderJSONswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50719072555DB200070196D /* ConverterTestHeaderJSONswift.swift */; };
+		D50719092555DB200070196D /* ConverterTestHeaderJSONswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50719072555DB200070196D /* ConverterTestHeaderJSONswift.swift */; };
 		D5276859252CB305003F0C70 /* MockSchoolsImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */; };
 		D527685D252CB51E003F0C70 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6BA6252BA4720015DFE7 /* Test.swift */; };
 		D5276861252CB521003F0C70 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF6B9E252BA3510015DFE7 /* School.swift */; };
@@ -338,6 +340,7 @@
 		C48FBA90252D965700A3CF8D /* SchoolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewCell.swift; sourceTree = "<group>"; };
 		C4F885BC252F5807008FF2A0 /* OverviewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionCell.xib; sourceTree = "<group>"; };
 		C4F885C1252F581D008FF2A0 /* OverviewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionCell.swift; sourceTree = "<group>"; };
+		D50719072555DB200070196D /* ConverterTestHeaderJSONswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTestHeaderJSONswift.swift; sourceTree = "<group>"; };
 		D5276858252CB305003F0C70 /* MockSchoolsImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSchoolsImplementationTests.swift; sourceTree = "<group>"; };
 		D539856C25486A0F00EB09DA /* RequestSenderImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementationTests.swift; sourceTree = "<group>"; };
 		D55446F8252F4FE2001793E0 /* ResultsControllerImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsControllerImplementationTests.swift; sourceTree = "<group>"; };
@@ -509,6 +512,7 @@
 				C465A05F2541B24300805BC7 /* ConverterQuestionsJSON.swift */,
 				2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */,
 				2FBD6349254C9965006A8725 /* ConverterResultsDataJSON.swift */,
+				D50719072555DB200070196D /* ConverterTestHeaderJSONswift.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -1042,6 +1046,7 @@
 				2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D59A37662535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
+				D50719082555DB200070196D /* ConverterTestHeaderJSONswift.swift in Sources */,
 				C4F885C2252F581D008FF2A0 /* OverviewCollectionCell.swift in Sources */,
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,
 				D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
@@ -1139,6 +1144,7 @@
 				D586B5A4252C9ADC00F4DF76 /* MockSchoolsImplementation.swift in Sources */,
 				D5E603402547468100B96DA4 /* Constants.swift in Sources */,
 				D59A37822535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
+				D50719092555DB200070196D /* ConverterTestHeaderJSONswift.swift in Sources */,
 				D53985A42548708A00EB09DA /* MetricsViewControllerProtocol.swift in Sources */,
 				D53985902548706000EB09DA /* NoticeViewImplementation.swift in Sources */,
 				C465A0612541B24300805BC7 /* ConverterQuestionsJSON.swift in Sources */,

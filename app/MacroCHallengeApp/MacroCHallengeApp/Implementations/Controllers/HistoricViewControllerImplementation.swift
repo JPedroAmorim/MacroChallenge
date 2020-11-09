@@ -41,7 +41,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     override func loadView() {
         super.loadView()
         setupDefaultSchoolsImplementation()
-        setupDefaultViewImplementation()
+        getDataForViewAndSetupView()
     }
     
     override func viewDidLoad() {
@@ -57,6 +57,24 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     private func setupDefaultViewImplementation() {
         if let data = schools?.getSchools() {
             let defaultView = HistoricViewImplementation(data: data, controller: self)
+            self.myHistoricView = defaultView
+            self.view = defaultView
+        }
+    }
+    
+    private func getDataForViewAndSetupView() {
+        self.view = LoadingView(message: "Carregando as escolas...",
+                                error: false)
+        
+        requestSender.getSchoolAndTestHeaders { schools, error in
+            guard let schoolsArray = schools else {
+                let errorView = LoadingView(message: "Erro ao carregar as escolas :(",
+                                            error: true)
+                self.view = errorView
+                return
+            }
+            
+            let defaultView = HistoricViewImplementation(data: schoolsArray, controller: self)
             self.myHistoricView = defaultView
             self.view = defaultView
         }

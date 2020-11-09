@@ -23,7 +23,7 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
 	// MARK: - Init methods
 	required init(data: [School], controller: HistoricViewControllerProtocol) {
 		self.data = data
-		self.dataTableView = SchoolsServiceManager().getSchools()
+		self.dataTableView = data
 
 		self.viewController = controller
 		super.init(frame: CGRect.zero)

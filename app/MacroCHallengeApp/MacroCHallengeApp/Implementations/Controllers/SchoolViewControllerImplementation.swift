@@ -76,6 +76,69 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
             })
     }
     
+    func questionWasSubmitted(topic: String) {
+        let historicView = self.view
+        self.view = LoadingView(message: "Carregando a prova ...",
+                                error: false)
+        
+        var errorHasOcurred = false
+        
+        let topicStr: String = { () -> String in
+            switch topic{
+            case "Português":
+                return "pt"
+            case "Matemática":
+                return "m"
+            case "Ciências Naturais":
+                return "cn"
+            default:
+                return ""
+            }
+                
+        }()
+        requestSender.getQuestionsForQuestionsRequest(
+            testName: self.data.name,
+            topic: topicStr,
+            completion: { questions, error in
+                if let questionsArray = questions {
+                    var i = 0
+                    let finalQuestionArray = questionsArray.map({(question: Question) -> Question in
+                        i += 1
+                        return Question(number: String(i),
+                                       text: question.text,
+                                       initialText: question.initialText,
+                                       images: question.images,
+                                       subtitle: question.subtitle,
+                                       options: question.options,
+                                       answer: question.answer,
+                                       topic: question.topic)
+                      
+                    })
+                    if !errorHasOcurred, let navController = self.navigationController {
+                        let testAsTestType = Test(name: "Questões \(self.data.tests[0].name)",
+                                                  year: "",
+                                                  questions: finalQuestionArray)
+                        let overviewViewController = OverviewViewControllerImplementation(data: testAsTestType)
+                        navController.pushViewController(overviewViewController, animated: true)
+                        self.view = historicView
+                    } else {
+                        if let navController = self.navigationController {
+                            let errorView = LoadingView(message: "Erro ao carregar a questões :(",
+                                                        error: true)
+                            let vc = UIViewController()
+                            vc.view = errorView
+                            navController.pushViewController(vc, animated: false)
+                            self.view = historicView
+                        }
+                    }
+                } else {
+                    print("\(error ?? "ziko")")
+                    errorHasOcurred = true
+                }
+            })
+        
+    }
+    
     func noticeWasSubmitted(_ notice: Notice) {
         if let navController = self.navigationController {
             let overviewViewController = NoticeViewControllerImplementation(data: notice)

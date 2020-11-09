@@ -62,6 +62,8 @@
 		2FF53934252E291500C0107B /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF53931252E291500C0107B /* NoticeTableViewCell.swift */; };
 		2FF53935252E291500C0107B /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53932252E291500C0107B /* NoticeTableViewCell.xib */; };
 		2FF53936252E291500C0107B /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF53932252E291500C0107B /* NoticeTableViewCell.xib */; };
+		4F6DE0372555BEED00D7BCAD /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DE0352555BEED00D7BCAD /* QuestionsTableViewCell.swift */; };
+		4F6DE0382555BEED00D7BCAD /* QuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DE0362555BEED00D7BCAD /* QuestionsTableViewCell.xib */; };
 		4FAC80EA25377538006F947A /* QuestionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC80E825377538006F947A /* QuestionHeaderTableViewCell.swift */; };
 		4FAC80EB25377538006F947A /* QuestionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */; };
 		4FAEFFD4254AFFB6001BE984 /* SchoolsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */; };
@@ -299,6 +301,8 @@
 		2FF53932252E291500C0107B /* NoticeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeTableViewCell.xib; sourceTree = "<group>"; };
 		3B2CAEB495A8493BF54AE16A /* Pods_MacroCHallengeApp_MacroCHallengeAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroCHallengeApp_MacroCHallengeAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		492D2A051A6F641168CCFD34 /* Pods_MacroCHallengeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacroCHallengeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F6DE0352555BEED00D7BCAD /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
+		4F6DE0362555BEED00D7BCAD /* QuestionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsTableViewCell.xib; sourceTree = "<group>"; };
 		4FAC80E825377538006F947A /* QuestionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionHeaderTableViewCell.swift; path = MacroCHallengeApp/Implementations/Controllers/QuestionHeaderTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4FAC80E925377538006F947A /* QuestionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionHeaderTableViewCell.xib; path = MacroCHallengeApp/Implementations/Controllers/QuestionHeaderTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsServiceManager.swift; sourceTree = "<group>"; };
@@ -702,6 +706,8 @@
 				2FF53929252CBEF200C0107B /* TestTableViewCell.xib */,
 				2FF53931252E291500C0107B /* NoticeTableViewCell.swift */,
 				2FF53932252E291500C0107B /* NoticeTableViewCell.xib */,
+				4F6DE0352555BEED00D7BCAD /* QuestionsTableViewCell.swift */,
+				4F6DE0362555BEED00D7BCAD /* QuestionsTableViewCell.xib */,
 			);
 			path = School;
 			sourceTree = "<group>";
@@ -876,6 +882,7 @@
 				4FFF6BE8252F3D920015DFE7 /* QuestionOptionTableViewCell.xib in Resources */,
 				D565EEEF252B813700426648 /* Main.storyboard in Resources */,
 				2F9A67EB253A021B002EE9B2 /* HeaderCollectionReusableView.xib in Resources */,
+				4F6DE0382555BEED00D7BCAD /* QuestionsTableViewCell.xib in Resources */,
 				2FF53935252E291500C0107B /* NoticeTableViewCell.xib in Resources */,
 				D586B596252C0AF700F4DF76 /* SchoolViewImplementation.xib in Resources */,
 				2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */,
@@ -1090,6 +1097,7 @@
 				D565EEEA252B813700426648 /* SceneDelegate.swift in Sources */,
 				D5E6033F2547468100B96DA4 /* Constants.swift in Sources */,
 				D59E82F3252E2D85007E8CBD /* OverviewViewProtocol.swift in Sources */,
+				4F6DE0372555BEED00D7BCAD /* QuestionsTableViewCell.swift in Sources */,
 				D59E82F9252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				C404395D254A09CE009CBB5B /* HistoricViewProtocol.swift in Sources */,
 				D5E603382547435C00B96DA4 /* TestHeader.swift in Sources */,

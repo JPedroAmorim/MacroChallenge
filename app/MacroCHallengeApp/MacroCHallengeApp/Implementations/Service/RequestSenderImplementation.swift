@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import AuthenticationServices
 
 
 class RequestSenderImplementation: RequestSenderProtocol {
@@ -181,5 +182,13 @@ class RequestSenderImplementation: RequestSenderProtocol {
         resultString.append("]")
         
         return resultString
+    }
+    
+    func addNewAccount(user: ASPasswordCredential, completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
+        
+    }
+    
+    func getAccountExistance(user: ASPasswordCredential, completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
+        
     }
 }

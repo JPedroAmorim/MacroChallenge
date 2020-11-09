@@ -29,25 +29,20 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
     
     
     // MARK: - LoginViewControllerProtocol methods
-    func addNewUser(_ user: ASAuthorizationAppleIDCredential) {
+    func addNewUser(_ account: Account) throws {
+        // Criando um usuário criptografado para o Keychain e sua respectiva Query de add
+        // https://developer.apple.com/documentation/security/keychain_services/keychain_items/adding_a_password_to_the_keychain
+        let user = account.user
+        let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
+                                    kSecAttrServer as String: Credentials.server,
+                                    kSecAttrAccount as String: user]
         
+        // Adicionando usuário no Keychain
+        let status = SecItemAdd(query as CFDictionary, nil)
+        guard status == errSecSuccess else { throw KeychainError.unhandledError(status: status) }
     }
     
-    func checkUserExistence(_ user: ASPasswordCredential) {
-        self.view = LoadingView(message: "Validando sua conta ...",
-                                error: false)
-//        requestSender.getAccountExistance(user: user, completion: (completion: {generalResults, topicsResults, err in
-//
-//            if let general = generalResults, let topics = topicsResults {
-//                let defaultView = LoginViewImplementation(controller: self)
-//
-//                self.myView = defaultView
-//                self.view = defaultView
-//            } else {
-//                self.view = LoadingView(message: "Sua conta é inválida :(",
-//                                        error: true)
-//            }
-//
-//        })
+    func checkUserExistence(_ account: Account) {
+        
     }
 }

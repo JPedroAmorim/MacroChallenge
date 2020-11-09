@@ -22,19 +22,19 @@ protocol LoginViewControllerProtocol {
      
      Método que recebe dados do usuário para inserir uma nova conta no back-end.
      
-     - parameter user: objeto que contém dados da conta (userIdentifier, fullName, email).
+     - parameter user: objeto que contém dados da conta (userIdentifier).
      
      */
-    func addNewUser(_ user: ASAuthorizationAppleIDCredential)
+    func addNewUser(_ account: Account) throws
     
     /**
      
      Método que recebe dados do usuário para verificar a existencia do mesmo no banco de dados
      
-     - parameter user : objeto que contém dados da conta (user e password).
+     - parameter user : objeto que contém dados da conta (userIdentifier).
      
      */
-    func checkUserExistence(_ user: ASPasswordCredential)
+    func checkUserExistence(_ account: Account)
     
     // Dependências
     var myView: LoginViewProtocol? {get set}

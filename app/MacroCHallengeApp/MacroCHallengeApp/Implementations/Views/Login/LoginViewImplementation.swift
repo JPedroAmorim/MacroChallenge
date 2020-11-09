@@ -73,23 +73,15 @@ extension LoginViewImplementation: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
             
-            // POST para guardar uma nova conta (passa userIdentifier, fullName e email).
-            viewController.addNewUser(appleIDCredential)
-        
-            // pushar próxima view
-        
-        case let passwordCredential as ASPasswordCredential:
-            
-            // Sign in using an existing iCloud Keychain credential.
-            // GET para fazer requisicao para ver se já existe a conta (passa user e password).
-            viewController.checkUserExistence(passwordCredential)
-
-            // 200: existe de fato - > próxima view
-            // 404: nao existe -> se cadastre
-            
-            DispatchQueue.main.async {
-                //                self.showPasswordCredentialAlert(username: username, password: password)
+            // POST para guardar uma nova conta (passa userIdentifier).
+            let userAccount = Account(user: appleIDCredential.user)
+            do {
+                try viewController.addNewUser(userAccount)
+            } catch {
+                print(error)
             }
+            
+            // pushar próxima view
             
         default:
             break

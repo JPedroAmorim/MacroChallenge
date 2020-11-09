@@ -83,6 +83,22 @@ class RequestSenderImplementation: RequestSenderProtocol {
         }
     }
     
+    func getQuestionsForQuestionsRequest(testName: String, topic: String, completion: @escaping ([Question]?, String?) -> Void) {
+        guard let url = URL(string: rootBackendURL + "questions?schoolName=\(testName)&topic=\(topic)") else {
+            completion(nil, "Erro ao decodificar a URL")
+            return
+        }
+        
+        sendGetRequestForUrl(url) { jsonResponse, error in
+            guard let jsonResponseArray = jsonResponse?.array else {
+                completion(nil, "Erro ao processar resposta do servidor")
+                return
+            }
+            let questionsArrayForTest =  self.parser.createQuestions(jsonArray: jsonResponseArray)
+            completion(questionsArrayForTest, nil)
+        }
+    }
+    
     func getQuestionsAndAnsweredQuestions(testName: String, testYear: String, completion: @escaping ([Question]?, [String: String]?, String?) -> Void) {
         guard let url = URL(string: rootBackendURL + "tests/test-result?testName=\(testName)&testYear=\(testYear)") else {
             completion(nil, nil, "Erro ao decodificar a URL")

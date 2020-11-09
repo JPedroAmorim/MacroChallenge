@@ -35,6 +35,9 @@ protocol SchoolViewControllerProtocol {
      */
     func noticeWasSubmitted(_ notice: Notice)
     
+    /// Método responsávell por exibir todas as questões da escola
+    func questionWasSubmitted(topic: String)
+    
     // Dependências
     var myView: SchoolViewProtocol? {get set}
 }

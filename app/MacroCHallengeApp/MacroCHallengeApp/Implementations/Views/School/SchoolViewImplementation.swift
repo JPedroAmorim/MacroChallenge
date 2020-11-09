@@ -18,7 +18,9 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
     // MARK: - Private attributes
     private var data: School
     
-    private let sectionHeaderTitleArray = ["Provas", "Saiba mais sobre o edital"]
+    private let sectionHeaderTitleArray = ["Provas", "Todas as questões", "Saiba mais sobre o edital"]
+    
+    private let topics = ["Português", "Matemática", "Ciências Naturais"]
     
     // MARK: - Init methods
     required init(data: School, controller: SchoolViewControllerProtocol) {
@@ -82,7 +84,9 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
         
         if section == 0 { // tests section
             numberOfRows = data.tests.count
-        } else if section == 1 { // notice section
+        } else if section == 1 { // question section
+            numberOfRows = topics.count
+        } else if section == 2 { // notice section
             numberOfRows = 1
         }
         return numberOfRows
@@ -106,7 +110,6 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellIdentifier = String()
         var finalCell = UITableViewCell()
-        
         if indexPath.section == 0 { // tests
             cellIdentifier = "TestTableViewCell"
             referenceXib(nibName: cellIdentifier)
@@ -121,7 +124,18 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             
             cell.testLabel.text = "Prova \(test.year)"
             
-        } else if indexPath.section == 1 { // notice
+        } else if indexPath.section == 1 { // Questoes
+            cellIdentifier = "QuestionsTableViewCell"
+            referenceXib(nibName: cellIdentifier)
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuestionsTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of TestTableViewCell.")
+            }
+            
+            cell.lblTopic.text = self.topics[indexPath.row]
+            finalCell = cell
+            
+        } else if indexPath.section == 2 { // notice
             cellIdentifier = "NoticeTableViewCell"
             referenceXib(nibName: cellIdentifier)
             
@@ -144,6 +158,8 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             switch cell {
             case is NoticeTableViewCell:
                 viewController.noticeWasSubmitted(data.notice)
+            case is QuestionsTableViewCell:
+                viewController.questionWasSubmitted(topic: self.topics[indexPath.row])
             case is TestTableViewCell: 
                 viewController.testWasSubmitted(data.tests[indexPath.row])
             default:

@@ -14,6 +14,8 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
         super.init(nibName: nil, bundle: nil)
     }
     
+    var controlCount = 0
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -41,9 +43,13 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     override func loadView() {
         super.loadView()
         setupDefaultSchoolsImplementation()
-        getDataForViewAndSetupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getDataForViewAndSetupView()
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Histórico"
@@ -63,10 +69,15 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     }
     
     private func getDataForViewAndSetupView() {
-        self.view = LoadingView(message: "Carregando as escolas...",
+        print("hi")
+        
+        self.view = LoadingView(message: "Carregando as provas realizadas...",
                                 error: false)
         
+        
         requestSender.getSchoolAndTestHeaders { schools, error in
+            print("get")
+            
             guard let schoolsArray = schools else {
                 let errorView = LoadingView(message: "Erro ao carregar as escolas :(",
                                             error: true)
@@ -74,9 +85,10 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
                 return
             }
             
-            let defaultView = HistoricViewImplementation(data: schoolsArray, controller: self)
-            self.myHistoricView = defaultView
-            self.view = defaultView
+            let schoolsArrayFiltered = schoolsArray.filter {$0.tests.first?.numberOfCorrectAnswersForLastResult != -1}
+            
+            self.view = HistoricViewImplementation(data: schoolsArrayFiltered, controller: self)
+
         }
     }
     

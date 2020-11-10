@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import KDCircularProgress
 
 class HistoricViewImplementation: UIView, HistoricViewProtocol {
 	// MARK: -IBOutlets
@@ -45,6 +46,53 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
 			addSubview(nibView)
 		}
 	}
+    
+    /*
+
+         Método responsável por converter o número de acertos de uma prova para um ângulo.
+
+         - parameters numberOfRightQuestions: número de questões acertadas.
+
+         */
+
+    private func convertNumberOfRightQuestionsInAngle(numberOfRightQuestions: Int, totalNumberOfQuestions: Int) -> Double {
+
+            let angle = Double(360 * (Double (numberOfRightQuestions) / Double (totalNumberOfQuestions)))
+
+            return angle
+        }
+
+        /**
+
+         Método responsável por criar o gráfico circular relativo ao número de acertos de uma prova.
+
+         - parameters toAngle: o ângulo relativo ao número de acertos de uma prova.
+
+         */
+
+        private func drawCircularProgress(toAngle: Double) -> KDCircularProgress {
+
+            let circularProgress: KDCircularProgress = KDCircularProgress(frame: CGRect(x: 0,
+                                                                                        y: 0,
+                                                                                        width: 56,
+                                                                                        height: 56))
+
+            let colorGreen: UIColor = UIColor(red: 14/255, green: 173/255, blue: 0, alpha: 1)
+            let colorGray: UIColor = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
+
+            circularProgress.startAngle = -90
+            circularProgress.progressThickness = 0.4
+            circularProgress.trackThickness = 0.4
+            circularProgress.glowMode = .noGlow
+            circularProgress.set(colors: colorGreen)
+            circularProgress.trackColor = colorGray
+            circularProgress.animate(fromAngle: 0,
+                                     toAngle: toAngle,
+                                     duration: 0,
+                                     completion: nil)
+
+            return circularProgress
+        }
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -75,9 +123,21 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TestTableViewCell  else {
 			fatalError("The dequeued cell is not an instance of TestTableViewCell.")
 		}
-
-		let nameTitle = handleStringName(name: dataTableView[indexPath.section].tests[indexPath.row].name)
+    
+        let testForCell = dataTableView[indexPath.section].tests[indexPath.row]
+        
+		let nameTitle = handleStringName(name: testForCell.name)
 		cell.testLabel.text = nameTitle
+        
+        let correctAnswers = testForCell.numberOfCorrectAnswersForLastResult
+        let angle = convertNumberOfRightQuestionsInAngle(numberOfRightQuestions: correctAnswers, totalNumberOfQuestions: testForCell.totalNumberOfQuestionsForLastResult)
+
+       cell.circularProgressView.addSubview(drawCircularProgress(toAngle: angle))
+
+       // Multiplica por dois, porque a porcentagem de acertos seria: (correctAnswers/50)100.
+        let percentageOfCorrectAnswers: Double = (Double(correctAnswers) / 50.0) * 100
+
+       cell.circularProgressLabel.text = "\(percentageOfCorrectAnswers)" + "%"
         
 		return cell
 	}

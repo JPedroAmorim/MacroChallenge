@@ -33,7 +33,23 @@ class ConverterTestHeaderJSON {
             return nil
         }
         
-        return TestHeader(name: testName, year: testYear)
+        guard let numberOfCorrectAnswersForLastResultString = json["numberOfCorrectAnswersForLastResult"].string else {
+            return nil
+        }
+        
+        guard let numberOfCorrectAnswersForLastResultInt = Int(numberOfCorrectAnswersForLastResultString) else {
+            return nil
+        }
+        
+        guard let totalNumberOfQuestionsForLastResultString = json["totalNumberOfQuestionsForLastResult"].string else {
+            return nil
+        }
+        
+        guard let totalNumberOfQuestionsForLastResultInt = Int(totalNumberOfQuestionsForLastResultString) else {
+            return nil
+        }
+        
+        return TestHeader(name: testName, year: testYear, numberOfCorrectAnswersForLastResult: numberOfCorrectAnswersForLastResultInt, totalNumberOfOfQuestionsForLastResult: totalNumberOfQuestionsForLastResultInt)
     }
     
     private func createSchool(json: JSON) -> School? {

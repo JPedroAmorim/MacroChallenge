@@ -1,754 +1,754 @@
 [
- {
-  "number": 1,
-  "initialText": "O efeito de humor da tira ocorre com a interpretação equivo- cada que o segundo personagem faz do termo",
-  "images": "https://i.imgur.com/UVc3PgM.png",
-  "subtitle": "",
-  "questionText": "",
-  "alternatives": [
-   "A:sargento.",
-   "B:exposição.",
-   "C:ele.",
-   "D:venceu."
-  ],
-  "answer": "C",
-  "topic": ""
- },
- {
-	 "number": 2,
-	 "initialText": "Leia o texto para responder às questões de números 02 a 09. O mundo dos selos raros Selos parecem coisas ultrapassadas e fora de moda. Não embelezam mais as cartas, hoje se preferem carimbos, e nem tantas cartas se usam. Foi-se o tempo em que receber um envelope com selo bonito era uma alegria e também uma fonte de informação. Certamente há muitas crianças, hoje em dia, que nem sabem o que é um selo. Apesar dessa notável insignificância, na semana passa- da, num leilão na Alemanha, vendeu-se um deles pela incrí- vel soma de 1,26 milhão de euros. Se for considerado pelo seu peso, é um dos objetos mais valiosos que existem. Seu nome é Erro de impressão Baden. Foi impresso num tom ver- de azulado em vez do padrão rosa lilás de sua série. Está estampado num envelope datado de 26 de agosto de 1851. Só existem dois selos do tipo, de 9 centavos, com o mesmo erro. O outro está na coleção do Museu Postal de Berlim. Esse não é o preço mais alto já pago por um selo. Na Eu- ropa, o Three Skilling Yellow, impresso na Suécia, em 1855, foi vendido nos anos 1990 por 2,2 milhões de dólares. Há também o imbatível Black on Magenta, que mede 2,5 por 3,8 centímetros e foi produzido na Guiana Francesa em 1856, quando houve uma escassez de selos vindos da Inglaterra, o que ameaçava as reservas postais. Foi impresso em pe- quena tiragem na gráfica de um jornal e o único magenta de um penny que sobreviveu foi esse. Leiloado pela Sotheby’s de Nova York, em 2014, foi arrematado por US$ 9,5 milhões. O diretor de projetos especiais da casa de leilões, David Redden, classificou-o como “um objeto mágico, a defini- ção própria de raridade e valor em um nível extraordinário”. O selo mostra uma imagem de um navio de três mastros e o lema dos colonos britânicos: “Nós damos e esperamos retorno”.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "As informações textuais permitem concluir que",
-	 "alternatives": [
-		 "A:os selos estão sendo cada vez menos usados, mas ainda podem ser negócios muito rentáveis.",
-		 "B:os leilões de selos têm levado a população a mandar mais cartas do que em outros tempos.",
-		 "C:a inexistência de selos hoje em dia tem feito o comércio desse produto ficar menos rentável.",
-		 "D:os países estão produzindo mais selos, empolgados com os valores que estes têm obtido em leilões."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 3,
-	 "initialText": "De acordo com o segundo parágrafo do texto, no leilão na Alemanha, o valor pago ao selo “Erro de impressão Baden” foi determinado",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:pelo seu tamanho reduzido.",
-		 "B:pelo defeito que o torna raro.",
-		 "C:pela data estampada no envelope.",
-		 "D:pelo preço pago originalmente por ele."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 4,
-	 "initialText": "Na frase “Se for considerado pelo seu peso, é um dos objetos mais valiosos que existem.”, a conjunção destacada expressa sentido de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:condição, sugerindo que o valor de um selo pode ser ex- tremamente alto em comparação ao seu peso.",
-		 "B:causa, sugerindo que a avaliação de um selo deve igno- rar o peso que ele possa ter de fato.",
-		 "C:conclusão, sugerindo que o selo, como os demais obje- tos valiosos do mundo, é avaliado pelo peso.",
-		 "D:comparação, sugerindo que o valor comercial de um selo é compatível com o seu peso físico.",
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 5,
-	 "initialText": "Assinale a alternativa em que o predicado nominal descreve uma relação positiva das pessoas com os selos.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:Selos parecem coisas ultrapassadas e fora de moda.",
-		 "B:... receber um envelope com selo bonito era uma alegria...",
-		 "C:O outro está na coleção do Museu Postal de Berlim.",
-		 "D:... e o único magenta de um penny que sobreviveu foi esse.",
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 6,
-	 "initialText": "Nos enunciados “Selos parecem coisas ultrapassadas” (1o parágrafo) e “quando houve uma escassez de selos vin- dos da Inglaterra” (3o parágrafo), os termos destacados são antônimos, respectivamente, de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:promissoras; diminuição.",
-		 "B:conservadoras; exagero.",
-		 "C:desinteressantes; falta.",
-		 "D:inovadoras; abundância.",
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 7,
-	 "initialText": "Na passagem do 3o parágrafo “O diretor de projetos espe- ciais da casa de leilões, David Redden, classificou-o como ‘um objeto mágico, a definição própria de raridade e valor em um nível extraordinário’”, o pronome “o”, em destaque, refere-se ao",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:Black on Magenta.",
-		 "B:Three Skilling Yellow.",
-		 "C:Erro de impressão Baden.",
-		 "D:ao selo do Museu Postal de Berlim.",
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 8,
-	 "initialText": "Assinale a alternativa em que o enunciado atende à norma padrão de concordância.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:Foi impresso uma pequena tiragem de selos na gráfica de um jornal, já que estava escasso os selos vindos da Inglaterra.",
-		 "B:Como se escreve poucas cartas hoje em dia, certamente deve existir muitas crianças que nem sabem o que é um selo.",
-		 "C:Pagaram-se 1,26 milhão de euros pelo Erro de impres- são Baden, mas houveram outros casos de selos vendi- dos por valores maior.",
-		 "D:9,5 milhões de dólares foram pagos em 2014 pelo Black on Magenta, o único magenta de um penny que sobre- viveu.",
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 9,
-	 "initialText": "Assinale a alternativa em que o emprego do acento indicativo da crase está em conformidade com a norma-padrão.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "C",
-	 "alternatives": [
-		 "A:Colocados lado à lado, Three Skilling e Black on Magenta são selos valiosos, cobiçados no mundo inteiro.",
-		 "B:Para David Redden, o selo mais caro do mundo chega à ser “um objeto mágico, a definição própria de raridade”.",
-		 "C:Quem foi à Alemanha para participar do leilão do Erro de impressão Baden, viu-o ser arrebatado por 1,26 milhão de euros.",
-		 "D:Devido à certo controle dos selos que viriam da Ingla- terra, as reservas postais da Guiana Francesa ficaram ameaçadas.",
-	 ],
-	 "answer": "",
-	 "topic": ""
- },
- {
-	 "number": 10,
-	 "initialText": "Observando-se a fisionomia de Chico Bento e de sua mãe, conclui-se, correta e respectivamente, que eles expressam",
-	 "images": "https://i.imgur.com/ySUQ4rE.png",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:raiva e felicidade.",
-		 "B:perplexidade e alegria.",
-		 "C:contentamento e indiferença.",
-		 "D:tristeza e confusão.",
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 11,
-	 "initialText": "Analisando-se a fala da mãe de Chico Bento, é correto afir- mar que ela",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:cria uma forma de expressão verbal de difícil entendi- mento ao leitor.",
-		 "B:expressa uma forma de comunicação que não ocorre no mundo real.",
-		 "C:altera a forma de representar a fala, usando uma lingua- gem formal.",
-		 "D:reproduz o modo como as pessoas do campo falam no cotidiano."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 12,
-	 "initialText": "Leia o texto para responder às questões de números 12 a 15. Vocês conhecem Ibaté? É uma cidade pequenina, muito pequena mesmo, na re- gião de Araraquara. Foi lá que nasci e morei com meus avós, até a idade de nove anos. Depois que vovô morreu, vovó resolveu me man- dar para São Paulo, viver com tio Dagoberto e tia Eva. Vovó nunca tinha viajado sozinha a São Paulo, só com vovô Horácio e de carro. Por isso, a família ficou preocupa- da quando ela anunciou que embarcaríamos, num ônibus da Viação Cometa. – Dizem que São Paulo é uma cidade muito perigosa – argumentou tia Frozina –, acho que mamãe não devia viajar sozinha. – Bobagens! – disse vovó, sem permitir nenhuma outra discussão. – É só uma cidade como qualquer outra.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "Assinale a alternativa em que se faz interpretação correta do texto em um enunciado que atende à norma-padrão de acen- tuação e de ortografia.",
-	 "alternatives": [
-		 "A:A avó discordou da filha Frozina, por que esta não queria a viajem, parecendo ter ciume da mãe andando com o neto por São Paulo.",
-		 "B:A avó acreditava que Ibaté era um lugar perigoso para o neto morar, porisso optou por deixa-lo sob os cuidados do tio.",
-		 "C:A avó estava para realizar sozinha uma viagem, depois que se tornou viúva e decidiu levar o neto para viver com os tios em São Paulo.",
-		 "D:A avó queria manter os mesmos habitos que tinha antes da viuvês, razão pela qual contrariou a filha e levou o neto para uma cidade maior.",
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 13,
-	 "initialText": "Quanto à predicação, o verbo que não precisa de comple- mento está corretamente destacado em:",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:Vocês conhecem Ibaté?",
-		 "B:Foi lá que nasci e morei com meus avós...",
-		 "C:... vovó resolveu me mandar para São Paulo...",
-		 "D:... disse vovó, sem permitir nenhuma outra discussão."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 14,
-	 "initialText": "No trecho “quando ela anunciou que embarcaríamos”, o sentido expresso pela forma verbal destacada e o sujeito composto que pratica a ação são, correta e respectivamente:",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:ação futura no passado; eu e ela.",
-		 "B:pedido; vovó e vovô.",
-		 "C:dúvida; tio Dagoberto e tia Eva.",
-		 "D:certeza; eu e tia Frozina."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 15,
-	 "initialText": "Nas passagens “É uma cidade pequenina” e “– Bobagens! – disse vovó”, as palavras destacadas expressam, respecti- vamente, sentido de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:lugar muito acolhedor; algo meio confuso.",
-		 "B:lugar pouco agradável; algo preocupante.",
-		 "C:lugar de pequena extensão; algo perigoso.",
-		 "D:lugar muito pequeno; algo sem importância"
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 16,
-	 "initialText": "João ganhou R$ 300,00 de aniversário e utilizou esse dinhei- ro para comprar uma camiseta, uma calça e uma bermuda. A camiseta custou desse valor mais R$ 10,00, e a calça custou desse valor mais R$ 20,00. Com o valor restante foi possível comprar a bermuda e ainda sobraram R$ 45,00. O valor da bermuda foi",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:R$ 60,00.",
-		 "B:R$ 75,00.",
-		 "C:R$ 90,00.",
-		 "D:R$ 105,00."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 17,
-	 "initialText": "A tabela mostra algumas informações sobre o número de gols sofridos e o saldo de gols de 3 times, A, B e C, após algumas partidas de um campeonato.",
-	 "images": "https://i.imgur.com/C6pEZvC.png",
-	 "subtitle": "",
-	 "questionText": "Sabe-se que:\n•   O time C sofreu 3 gols a menos do que o time B.\n•   O saldo de gols do time A é igual ao número de gols mar- cados pelo time C. \nNessas condições, a soma do número de gols marcados por esses três times juntos foi",
-	 "alternatives": [
-		 "A:5.",
-		 "B:6.",
-		 "C:7.",
-		 "D:8."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 18,
-	 "initialText": "Andrea colocou 3 músicas em seu pen drive. A primeira música tinha duração de 3 minutos e 48 segundos, e a segunda músi- ca tinha duração de 2 minutos e 52 segundos. Sabendo que a duração das 3 músicas juntas era de 9 minutos e 15 segundos, então, a duração da terceira música era de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:2 minutos e 35 segundos.",
-		 "B:2 minutos e 45 segundos.",
-		 "C:2 minutos e 55 segundos.",
-		 "D:3 minutos e 05 segundos.",
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 19,
-	 "initialText": "Um recipiente contém 20 litros de detergente. Com esse deter- gente foi possível encher totalmente 15 frascos, cada um deles com 800 mL, e mais alguns frascos, cada um deles com 600 mL. Sabendo que ainda restaram no recipiente 3,2 litros, o número de frascos enchidos, cada um deles contendo 600 mL, foi",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:5.",
-		 "B:6.",
-		 "C:7.",
-		 "D:8.",
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 20,
-	 "initialText": "Um reservatório, que tem capacidade máxima para 2 400 litros de água, encontra-se vazio. Para encher esse reservatório será utilizada uma mangueira que despeja 16 litros de água a cada 3 minutos. Depois de 3 horas, com a mangueira aberta, o número de litros de água que ainda faltam para encher total- mente esse reservatório, sem transbordar, é",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:960.",
-		 "B:1150.",
-		 "C:1280.",
-		 "D:1440.",
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 21,
-	 "initialText": "Pedro comprou algumas folhas de papel sulfite para realizar alguns trabalhos. Utilizou 30% delas no primeiro trabalho, e ainda restaram 84 folhas. O número de folhas utilizadas no primeiro trabalho foi",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:30.",
-		 "B:36.",
-		 "C:42.",
-		 "D:48."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 22,
-	 "initialText": "Bruno comprou uma bicicleta, pagando em 2 parcelas men- sais de R$ 972,00 cada uma. Sabendo que o preço dessa bicicleta à vista, sem desconto, era R$ 1.800,00, então, a taxa mensal de juro simples cobrada foi de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:2%.",
-		 "B:3%.",
-		 "C:4%.",
-		 "D:5%."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 23,
-	 "initialText": "Carol comprou um pacote de balas e irá dividi-las em pacoti- nhos menores, todos com o mesmo número de balas. Se forem colocadas 8 balas em cada pacotinho, será possível fazer N pacotinhos e não ficará bala alguma de fora. Se forem coloca- das 5 balas em cada pacotinho, serão feitos N + 3 pacotinhos, e também não ficará bala alguma de fora. O número total de balas que havia no pacote comprado por Carol era",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:40.",
-		 "B:45.",
-		 "C:50.",
-		 "D:55."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 24,
-	 "initialText": "Márcia tem em sua carteira apenas notas de R$ 2,00 e notas de R$ 5,00, no total de 9 notas. Sabendo que o valor total des- sas notas é R$ 36,00, então, o número de notas de R$ 5,00 é",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:3.",
-		 "B:4.",
-		 "C:5.",
-		 "D:6."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 25,
-	 "initialText": "Um professor de matemática pediu para seus alunos resol- verem a seguinte equação do 2o grau: x2 – 16 x + 63 = 0. Após resolver corretamente a equação, Pedro percebeu que as raízes dela eram iguais às idades de seus dois irmãos mais novos, André e Caio. Sabendo que André é mais velho do que Caio, a idade de Caio é",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:6 anos.",
-		 "B:7 anos",
-		 "C:8 anos.",
-		 "D:9 anos."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 26,
-	 "initialText": "A figura é formada por três quadrados Q1, Q2 e Q3.",
-	 "images": "https://i.imgur.com/cOI00tY.png",
-	 "subtitle": "",
-	 "questionText": "Sabe-se que o perímetro do quadrado Q2 é 32 cm², e que a 2 área do quadrado Q1 é 4 cm². A área do quadrado Q3 é igual a",
-	 "alternatives": [
-		 "A:9 cm²",
-		 "B:16 cm²",
-		 "C:25 cm²",
-		 "D:36 cm²"
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 27,
-	 "initialText": "Em uma avenida reta e plana, há um banco (B), uma farmá- cia (F), uma mercearia (M), uma padaria (P) e uma igreja (I), conforme mostra a figura.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "A distância entre o banco (B) e a farmácia (F) é igual a",
-	 "alternatives": [
-		 "A:400 m.",
-		 "B:500 m.",
-		 "C:600 m.",
-		 "D:700 m."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 28,
-	 "initialText": "Um terreno retangular ABCD, com 15 m de comprimento por 8 m de largura, teve parte de sua área, na forma de um triân- gulo retângulo, reservada para o cultivo de temperos, confor- me mostra a figura.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "O comprimento da cerca DE, que separa o canteiro do resto do terreno, é igual a",
-	 "alternatives": [
-		 "A:6 m.",
-		 "B:8 m.",
-		 "C:10 m.",
-		 "D:12 m."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 29,
-	 "initialText": "Uma caminhonete irá transportar 16 caixas com melões. Em cada caixa serão colocados 12 melões, cada um deles com massa aproximada de 2 kg. Sabendo que cada caixa vazia tem 400 g de massa, então, a massa total (caixas + melões) que essa caminhonete irá transportar será, aproximadamente, de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:376,4 kg.",
-		 "B:388,2 kg.",
-		 "C:390,4 kg.",
-		 "D:394,8 kg."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 30,
-	 "initialText": "A forma simplificada da expressão para a ≠ 2 e a ≠ –2, é igual a",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:a + 2",
-		 "B:8a · (a – 2)",
-		 "C:8a + 2",
-		 "D:8a² + 16"
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 31,
-	 "initialText": "Em um estudo sobre solo, foi utilizada uma coluna de vidro, com uma torneira adaptada em sua extremidade, conforme ilustração. Em seguida, 100 mL de areia seca foram coloca- dos dentro da coluna. Então, lentamente, foi acrescentado água, até que o nível da água, após preencher os espaços entre os grãos, atingisse a marca de 100 mL.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "Após medir a quantidade de água colocada na coluna (1), a torneira foi aberta e foi medido o tempo em segundos (2), no qual toda a água presente na coluna demorou para escoar pela torneira. As propriedades do solo que foram medidas em 1 e 2 foram, respectivamente,",
-	 "alternatives": [
-		 "A:drenagem e filtração.",
-		 "B:porosidade e permeabilidade.",
-		 "C:densidade e drenagem.",
-		 "D:filtração e estrutura."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 32,
-	 "initialText": "Leia atentamente o texto a seguir.\n\nUma determinada rocha se formou a partir do resfria- mento do magma, que ocorreu no interior da crosta terres- tre. Após milhares de anos, essa rocha aflorou à superfície terrestre, sofreu intemperismo, os seus constituintes foram transportados por um rio e foram depositados em um grande lago. Após mais alguns milhares de anos, esse material de- positado foi compactado e cimentado, dando origem a uma nova rocha. Ao fazer uma pesquisa nessa rocha, foi verifica- da a presença de ouro.\nConsiderando as informações do texto, o ouro foi",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:encontrado em uma rocha sedimentar.",
-		 "B:formado pelo intemperismo.",
-		 "C:cimentado pelo magma.",
-		 "D:formado em uma rocha metamórfica."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 33,
-	 "initialText": "A água usada em pias, chuveiros, tanques e máquinas de lavar pode ser reutilizada na limpeza da casa. Como essa água tem muito sabão, detergente, restos de alimentos e gor- dura, ela deve passar por um tratamento que elimine esses materiais. Para isso, pode ser utilizado o “jardim filtrante”, que consiste em um tanque com o fundo impermeabilizado, con- tendo areia e brita na parte inferior e água na parte superior, no qual são cultivadas plantas aquáticas, como o aguapé. O processo é apresentado na ilustração a seguir.",
-	 "images": "https://i.imgur.com/sXVpAYV.png",
-	 "subtitle": "",
-	 "questionText": "Ao passar pelos recipientes 1 e 2, a água é submetida, res- pectivamente, aos processos de",
-	 "alternatives": [
-		 "A:floculação e desinfecção.",
-		 "B:decomposição e decantação.",
-		 "C:filtração e peneiração.",
-		 "D:decantação e filtração."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 34,
-	 "initialText": "Um aterro sanitário é uma obra que tem por objetivo o tratamento final dos resíduos da forma mais ambientalmente correta possível. O funcionamento é baseado nas seguintes etapas:\n1 – A base do aterro é feita, colocando-se uma manta impermeável, para evitar vazamento de líquidos, sobre solo que foi compactado.\n2 – Sobre essa manta, é colocado um sistema de dre- nos para a coleta do chorume, líquido altamente contaminado que, após tratamento adequado, resulta em água limpa, ade- quada para regar jardins, por exemplo.\n3 – No interior do aterro, é colocado outro sistema de drenos para a coleta do biogás.\n4 – As camadas de resíduos (lixo) são cobertas por ca- madas de argila. Há, também, um sistema de drenagem que evita infiltração da água da chuva no interior do aterro.\n\nConsiderando as etapas descritas, verifica-se que o aterro sanitário produz materiais que podem ser utilizados, como é o caso do que ocorre em",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:1 e 2.",
-		 "B:2 e 3.",
-		 "C:3 e 4.",
-		 "D:4 e 1."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 35,
-	 "initialText": "Observe o circuito elétrico a seguir, constituído por 3 pilhas de 1,5 v cada uma e 4 lâmpadas de igual resistência (L1 a L4).",
-	 "images": "https://i.imgur.com/MYbLGuD.png",
-	 "subtitle": "",
-	 "questionText": "Da forma como está montado esse circuito, verifica-se que",
-	 "alternatives": [
-		 "A:a interrupção do circuito em P não afeta o brilho das lâm- padas.",
-		 "B:se o circuito for interrompido em X, a lâmpada L1 ficará acesa.",
-		 "C:a voltagem a ser distribuída no circuito é de 4,5 v.",
-		 "D:o brilho da lâmpada L1 é maior do que as demais lâmpadas."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 36,
-	 "initialText": "A energia solar desempenha um papel muito importante em nosso planeta. Além dos processos naturais, essa energia desempenha, atualmente, um papel importante na obtenção de energia para o uso doméstico. A figura a seguir indica algumas transformações de energia que ocorrem quando a energia solar atinge a superfície terrestre.",
-	 "images": "https://i.imgur.com/wniynPy.png",
-	 "subtitle": "",
-	 "questionText": "Com relação às formas de energia e suas transformações, é correto afirmar que a energia",
-	 "alternatives": [
-		 "A:térmica do sol é transformada em calor em 1, e, em ele- tricidade, em 2.",
-		 "B:radiante do sol é transformada em energia elétrica em 2, e, em química, em 3.",
-		 "C:luminosa do sol é transformada em energia térmica em 1, e, em química, em 2.",
-		 "D:solar é transformada em energia cinética em 1, e, em tér- mica, em 3."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 37,
-	 "initialText": "Para atender ao Princípio dos 3Rs, uma escola desenvolveu um programa e realizou as quatro ações descritas a seguir.\n1 – A escola solicitou aos alunos para trazer copos não des- cartáveis para beber água do filtro da escola em substituição aos copos de plástico que não serão mais oferecidos.\n2 – Os professores de ciências solicitaram aos alunos que trouxessem vidros vazios de produtos utilizados em casa como vidros de maionese, azeitona, palmito e outros, para acondicionar produtos químicos e pequenos animais conser- vados em álcool.\n3 – Os professores solicitaram aos alunos e ao pessoal da secretaria que trouxessem papel sulfite ou outro tipo de papel que tenha sido utilizado apenas em um dos lados e deixas- sem na sala de aula para que os alunos pudessem utilizar o outro lado do papel em seus estudos.\n4 – O pessoal da cantina da escola colocou em toda a área de recreação recipientes adequados para o descarte de garrafas Pet, embalagens de sucos e latas de refrigerantes.\n\nCorresponde às atividades de Reduzir, Reutilizar e Reciclar (3 Rs), respectivamente, as ações indicadas pelos números",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:1, 2 e 3.",
-		 "B:1, 2 e 4.",
-		 "C:2, 4 e 3.",
-		 "D:3, 4 e 1."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 38,
-	 "initialText": "Leia um depoimento, a respeito do uso de drogas.\n\n“Utilizava quando ia para as baladas. A sensação imedia- ta é de euforia e perda de inibições. Mas, depois que passava o efeito, sentia um desânimo muito grande e até ânsia de vômito. No dia seguinte, sentia um pouco de depressão. Mas, no fim de semana seguinte, voltava a utilizar. Sentia-me bem, tinha euforia para dançar a noite toda. Com o uso contínuo, aumentei as doses e, um dia após um exagero, quase morri. Minha temperatura aumentou e eu desmaiei.”\n\nO relato trata do consumo de",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:maconha.",
-		 "B:crack.",
-		 "C:anabolizante.",
-		 "D:ecstasy."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 39,
-	 "initialText": "Ao sofrer um ferimento com um objeto perfurocortante, o in- divíduo pode se contaminar com bactérias presentes nesse objeto. Então, no local onde esse objeto penetrou, inicia-se uma sequência de ações que tem por objetivo destruir os mi- crorganismos e as substâncias que produzem, e evitar danos ao indivíduo. O processo está representado na ilustração a seguir.",
-	 "images": "https://i.imgur.com/2Jejx9C.png",
-	 "subtitle": "",
-	 "questionText": "No esquema, as ações de defesa do organismo que serão realizados pelas células 1 e 2, são, respectivamente:",
-	 "alternatives": [
-		 "A:produção de anticorpos e fagocitose.",
-		 "B:produção de antígenos e de anticorpos.",
-		 "C:produção de antígenos e fagocitose.",
-		 "D:produção de anticorpos e de antígenos."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 40,
-	 "initialText": "Em 2016, enquanto ainda estudava no ensino médio na ci- dade de Coxim, região norte de Mato Grosso do Sul, João Victor de Andrade dos Santos descobriu algo que pode mu- dar a vida de muita gente. O estudante desenvolveu o mé- todo para conservar caldo de cana, porque na época, via o pai ter prejuízo por não conseguir conservar o produto, mas essa descoberta vai muito além. Depois de aprimorada, anos depois, foi descoberto que essa técnica pode ser capaz de inativar um protozoário encontrado nas fezes de um inseto presente em locais em que a cana é armazenada.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "O estudo descrito apresentou um método que pode ser eficaz para",
-	 "alternatives": [
-		 "A:o tratamento da malária.",
-		 "B:o desenvolvimento da vacina da dengue.",
-		 "C:a prevenção da doença de Chagas.",
-		 "D:a forma de repelir o mosquito da febre amarela."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 41,
-	 "initialText": "Nesse bioma é marcante a presença de árvores com galhos tortuosos e de casca grossa. Além do estrato arbóreo, apresenta estrato herbáceo, cujos ramos vegetais secam à medida que se estabelece o período de seca. Esses ramos secos propiciam as queimadas recorrentes nesse tipo de bioma. Nessa região podem ser encontradas 67 espécies de mamíferos, 837 de aves, 120 de répteis e 150 de anfíbios.\n\nNo mapa a seguir, estão representadas as cinco regiões bra- sileiras.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "A maior parte desse bioma encontra-se nas regiões",
-	 "alternatives": [
-		 "A:1, 2 e 3.",
-		 "B:1, 4 e 5.",
-		 "C:2, 4 e 5.",
-		 "D:4, 3 e 5."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 42,
-	 "initialText": "Animais como as aves e os mamíferos apresentam a tempe- ratura do corpo constante e não dependem do ambiente para aquecimento de seu corpo, pois reações químicas em suas células produzem energia suficiente para produção de calor, necessário para suas atividades. Esse processo, responsável pela produção de energia no organismo, é denominado",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:circulação sanguínea.",
-		 "B:movimento muscular.",
-		 "C:isolamento térmico.",
-		 "D:respiração celular."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 43,
-	 "initialText": "O gráfico a seguir representa de forma comparativa o desma- tamento na Amazônia, nos anos de 2017/2018 e 2018/2019.",
-	 "images": "https://i.imgur.com/TSspnPN.png",
-	 "subtitle": "",
-	 "questionText": "Se o ritmo de desmatamento continuar, isso trará conse- quências como o",
-	 "alternatives": [
-		 "A:aumento da poluição do ar devido à falta de oxigênio.",
-		 "B:alagamento dessa região devido ao aumento das chuvas.",
-		 "C:desenvolvimento de solo fértil e protegido para o plantio.",
-		 "D:desaparecimento de espécies vegetais e animais típicos."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 44,
-	 "initialText": "O investimento em energias renováveis é essencial para a redução da poluição ambiental. Uma dessas novas alterna- tivas é o etanol celulósico, combustível obtido por meio do aproveitamento do bagaço de cana-de-açúcar, que antes era desperdiçado. Primeiro, realiza-se a quebra dos polissacarí- deos presentes no bagaço em açúcares menores e, em se- guida, os açúcares são submetidos aos processos biológicos e químicos que levam à produção do álcool.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "Os processos biológicos e químicos que levam à produção do combustível, como descrito no texto, são, respectivamente:",
-	 "alternatives": [
-		 "A:solidificação e evaporação.",
-		 "B:coagulação e decantação.",
-		 "C:fermentação e destilação.",
-		 "D:digestão e dissolução."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 45,
-	 "initialText": "Os métodos de sustentabilidade estão sendo utilizados cada vez mais. Um deles consiste na compostagem, procedimen- to que resulta na produção de adubo orgânico. Para a com- postagem, é possível utilizar o lixo da cozinha e do jardim, misturando-os em um recipiente. É necessário ter duas ve- zes mais resíduos marrons (serragem, folhas secas, papelão e folhas de jornal) do que verdes (frutas, vegetais, grama, borra de café). Após algumas poucas semanas, os resíduos transformam-se em um fertilizante natural para nutrir o solo.\n\nEsse processo ocorre devido à ação de organismos que fa- zem parte de uma cadeia alimentar, atuando como",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "",
-	 "alternatives": [
-		 "A:decompositor.",
-		 "B:herbívoro.",
-		 "C:predador.",
-		 "D:produtor."
-	 ],
-	 "answer": "A",
-	 "topic": ""
- },
- {
-	 "number": 46,
-	 "initialText": "Analise o mapa para responder à questão.\n\nÁreas do globo cobertas com o bioma “X”",
-	 "images": "https://i.imgur.com/HA5QZMH.png",
-	 "subtitle": "",
-	 "questionText": "As áreas destacadas no mapa",
-	 "alternatives": [
-		 "A:têm como características comuns a presença de grande número de árvores e arbustos com folhas largas e sempre verdes que refletem o ambiente com predomínio de forte umidade e de altas temperaturas.",
-		 "B:apresentam alternância entre estações secas e chuvosas; a vegetação é constituída, principalmente, por arbustos e árvo- res de pequeno porte com raízes profundas, folhas grossas e troncos retorcidos.",
-		 "C:caracterizam-se pelo clima tropical de altitude com verões quentes e úmidos e invernos secos; as espécies vegetais pre- dominantes são do tipo gramíneas com arbustos que perdem as folhas na estação seca.",
-		 "D:apresentam grande biodiversidade, devido, principalmente, à presença de solos com grande umidade que, além de garan- tirem árvores de grande porte, ainda mantêm inúmeras espécies de mamíferos, insetos e aves."
-	 ],
-	 "answer": "B",
-	 "topic": ""
- },
- {
-	 "number": 47,
-	 "initialText": "No continente asiático, é possível identificar focos de tensão geopolítica que colocam em risco a paz daqueles que vivem nos locais que estão envolvidos em conflitos. Observe no mapa da Ásia alguns desses focos de tensão.",
-	 "images": "https://i.imgur.com/b88YY9k.png",
-	 "subtitle": "",
-	 "questionText": "Assinale a alternativa que identifica corretamente um dos focos de tensão.",
-	 "alternatives": [
-		 "A:I – Turquia e Iraque estão em conflito há quase uma década com o objetivo de estabelecer o domínio econô- mico sobre parte do Oriente Médio.",
-		 "B:II – Irã é o maior produtor de petróleo da região e tem pre- tensões de produzir armas nucleares e tornar-se a maior potência militar do Oriente Médio.",
-		 "C:III – Cachemira é um território em permanente disputa entre a Índia, de religião predominantemente hindu, e o Paquistão, de religião muçulmana.",
-		 "D:IV – Coreia do Norte e Coreia do Sul mantêm conflitos há décadas devido à disputa de territórios ricos em urânio, matéria-prima para a produção de armamentos nucleares."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
- {
-	 "number": 48,
-	 "initialText": "Analise o gráfico.\n\nBrasil – Pessoal ocupado na agropecuária",
-	 "images": "https://i.imgur.com/e1lh54W.png",
-	 "subtitle": "",
-	 "questionText": "A leitura do gráfico e os conhecimentos sobre aspectos socioeconômicos do Brasil permitem concluir que a evolução do número de trabalhadores na agropecuária deveu-se, entre outros fatores,",
-	 "alternatives": [
-		 "A:à substituição de áreas de lavouras pela pecuária que utiliza menos mão de obra.",
-		 "B:ao aumento das áreas destinadas à agricultura familiar, poupadora de mão de obra.",
-		 "C:aotérminodaexpansãodasfronteirasagrícolasnasregiões Norte e Centro-Oeste.",
-		 "D:à modernização das atividades agropecuárias e à conse- quente ampliação da mecanização."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 49,
-	 "initialText": "Johann Moritz Rugendas esteve no Brasil entre 1821 e 1825, produzindo várias ilustrações, publicadas posteriormente na Europa. Observe uma delas.",
-	 "images": "https://i.imgur.com/RB1X7df.png",
-	 "subtitle": "",
-	 "questionText": "A ilustração mostra que",
-	 "alternatives": [
-		 "A:o culto religioso contribuiu para a união dos negros nos quilombos.",
-		 "B:a vida dos escravos incluiu momentos de lazer, além do trabalho.",
-		 "C:a diversidade cultural impediu a integração entre brancos e negros.",
-		 "D:o politeísmo dos povos africanos foi preservado nesse ritual religioso."
-	 ],
-	 "answer": "D",
-	 "topic": ""
- },
- {
-	 "number": 50,
-	 "initialText": "O planeta era encarado como uma espécie de enorme tabuleiro de xadrez. A partida era disputada por dois jogado- res, empenhados em manter as posições que já haviam con- quistado – suas áreas de influência – e, tanto quanto possí- vel, tomar novas áreas do adversário. Nenhum país ou região do globo era considerado fora dos limites do jogo: cada casa do tabuleiro estaria, forçosamente, sob domínio de um ou de outro competidor. Tratava-se, porém, de uma partida com características muito especiais. O confronto aberto entre as superpotências provavelmente faria voar pelos ares todas as peças e o pró- prio tabuleiro.",
-	 "images": "",
-	 "subtitle": "",
-	 "questionText": "O texto refere-se",
-	 "alternatives": [
-		 "A:às disputas por colônias na África e na Ásia, nas quais as potências europeias conseguiram mercados consumi- dores e fornecedores.",
-		 "B:ao período conhecido como Paz Armada, que provocou as tensões responsáveis pela eclosão da Primeira Guerra Mundial.",
-		 "C:à bipolarização do mundo após a Segunda Guerra Mun- dial, em que os países líderes dos blocos capitalista e socialista queriam a hegemonia.",
-		 "D:aos combates diretos entre forças militares norte-ame- ricanas e soviéticas na Guerra Fria, que usaram armas químicas e nucleares."
-	 ],
-	 "answer": "C",
-	 "topic": ""
- },
+	{
+		"number": 1,
+		"initialText": "O efeito de humor da tira ocorre com a interpretação equivo- cada que o segundo personagem faz do termo",
+		"images": "https://i.imgur.com/UVc3PgM.png",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:sargento.",
+			"B:exposição.",
+			"C:ele.",
+			"D:venceu."
+		],
+		"answer": "C",
+		"topic": "Português"
+	},
+	{
+		"number": 2,
+		"initialText": "Leia o texto para responder às questões de números 02 a 09. O mundo dos selos raros Selos parecem coisas ultrapassadas e fora de moda. Não embelezam mais as cartas, hoje se preferem carimbos, e nem tantas cartas se usam. Foi-se o tempo em que receber um envelope com selo bonito era uma alegria e também uma fonte de informação. Certamente há muitas crianças, hoje em dia, que nem sabem o que é um selo. Apesar dessa notável insignificância, na semana passa- da, num leilão na Alemanha, vendeu-se um deles pela incrí- vel soma de 1,26 milhão de euros. Se for considerado pelo seu peso, é um dos objetos mais valiosos que existem. Seu nome é Erro de impressão Baden. Foi impresso num tom ver- de azulado em vez do padrão rosa lilás de sua série. Está estampado num envelope datado de 26 de agosto de 1851. Só existem dois selos do tipo, de 9 centavos, com o mesmo erro. O outro está na coleção do Museu Postal de Berlim. Esse não é o preço mais alto já pago por um selo. Na Eu- ropa, o Three Skilling Yellow, impresso na Suécia, em 1855, foi vendido nos anos 1990 por 2,2 milhões de dólares. Há também o imbatível Black on Magenta, que mede 2,5 por 3,8 centímetros e foi produzido na Guiana Francesa em 1856, quando houve uma escassez de selos vindos da Inglaterra, o que ameaçava as reservas postais. Foi impresso em pe- quena tiragem na gráfica de um jornal e o único magenta de um penny que sobreviveu foi esse. Leiloado pela Sotheby’s de Nova York, em 2014, foi arrematado por US$ 9,5 milhões. O diretor de projetos especiais da casa de leilões, David Redden, classificou-o como “um objeto mágico, a defini- ção própria de raridade e valor em um nível extraordinário”. O selo mostra uma imagem de um navio de três mastros e o lema dos colonos britânicos: “Nós damos e esperamos retorno”.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "As informações textuais permitem concluir que",
+		"alternatives": [
+			"A:os selos estão sendo cada vez menos usados, mas ainda podem ser negócios muito rentáveis.",
+			"B:os leilões de selos têm levado a população a mandar mais cartas do que em outros tempos.",
+			"C:a inexistência de selos hoje em dia tem feito o comércio desse produto ficar menos rentável.",
+			"D:os países estão produzindo mais selos, empolgados com os valores que estes têm obtido em leilões."
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 3,
+		"initialText": "De acordo com o segundo parágrafo do texto, no leilão na Alemanha, o valor pago ao selo “Erro de impressão Baden” foi determinado",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:pelo seu tamanho reduzido.",
+			"B:pelo defeito que o torna raro.",
+			"C:pela data estampada no envelope.",
+			"D:pelo preço pago originalmente por ele."
+		],
+		"answer": "B",
+		"topic": "Português"
+	},
+	{
+		"number": 4,
+		"initialText": "Na frase “Se for considerado pelo seu peso, é um dos objetos mais valiosos que existem.”, a conjunção destacada expressa sentido de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:condição, sugerindo que o valor de um selo pode ser ex- tremamente alto em comparação ao seu peso.",
+			"B:causa, sugerindo que a avaliação de um selo deve igno- rar o peso que ele possa ter de fato.",
+			"C:conclusão, sugerindo que o selo, como os demais obje- tos valiosos do mundo, é avaliado pelo peso.",
+			"D:comparação, sugerindo que o valor comercial de um selo é compatível com o seu peso físico.",
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 5,
+		"initialText": "Assinale a alternativa em que o predicado nominal descreve uma relação positiva das pessoas com os selos.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Selos parecem coisas ultrapassadas e fora de moda.",
+			"B:... receber um envelope com selo bonito era uma alegria...",
+			"C:O outro está na coleção do Museu Postal de Berlim.",
+			"D:... e o único magenta de um penny que sobreviveu foi esse.",
+		],
+		"answer": "B",
+		"topic": "Português"
+	},
+	{
+		"number": 6,
+		"initialText": "Nos enunciados “Selos parecem coisas ultrapassadas” (1o parágrafo) e “quando houve uma escassez de selos vin- dos da Inglaterra” (3o parágrafo), os termos destacados são antônimos, respectivamente, de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:promissoras; diminuição.",
+			"B:conservadoras; exagero.",
+			"C:desinteressantes; falta.",
+			"D:inovadoras; abundância.",
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 7,
+		"initialText": "Na passagem do 3o parágrafo “O diretor de projetos espe- ciais da casa de leilões, David Redden, classificou-o como ‘um objeto mágico, a definição própria de raridade e valor em um nível extraordinário’”, o pronome “o”, em destaque, refere-se ao",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Black on Magenta.",
+			"B:Three Skilling Yellow.",
+			"C:Erro de impressão Baden.",
+			"D:ao selo do Museu Postal de Berlim.",
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 8,
+		"initialText": "Assinale a alternativa em que o enunciado atende à norma padrão de concordância.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Foi impresso uma pequena tiragem de selos na gráfica de um jornal, já que estava escasso os selos vindos da Inglaterra.",
+			"B:Como se escreve poucas cartas hoje em dia, certamente deve existir muitas crianças que nem sabem o que é um selo.",
+			"C:Pagaram-se 1,26 milhão de euros pelo Erro de impres- são Baden, mas houveram outros casos de selos vendi- dos por valores maior.",
+			"D:9,5 milhões de dólares foram pagos em 2014 pelo Black on Magenta, o único magenta de um penny que sobre- viveu.",
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 9,
+		"initialText": "Assinale a alternativa em que o emprego do acento indicativo da crase está em conformidade com a norma-padrão.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "C",
+		"alternatives": [
+			"A:Colocados lado à lado, Three Skilling e Black on Magenta são selos valiosos, cobiçados no mundo inteiro.",
+			"B:Para David Redden, o selo mais caro do mundo chega à ser “um objeto mágico, a definição própria de raridade”.",
+			"C:Quem foi à Alemanha para participar do leilão do Erro de impressão Baden, viu-o ser arrebatado por 1,26 milhão de euros.",
+			"D:Devido à certo controle dos selos que viriam da Ingla- terra, as reservas postais da Guiana Francesa ficaram ameaçadas.",
+		],
+		"answer": "C",
+		"topic": "Português"
+	},
+	{
+		"number": 10,
+		"initialText": "Observando-se a fisionomia de Chico Bento e de sua mãe, conclui-se, correta e respectivamente, que eles expressam",
+		"images": "https://i.imgur.com/ySUQ4rE.png",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:raiva e felicidade.",
+			"B:perplexidade e alegria.",
+			"C:contentamento e indiferença.",
+			"D:tristeza e confusão.",
+		],
+		"answer": "B",
+		"topic": "Português"
+	},
+	{
+		"number": 11,
+		"initialText": "Analisando-se a fala da mãe de Chico Bento, é correto afir- mar que ela",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:cria uma forma de expressão verbal de difícil entendi- mento ao leitor.",
+			"B:expressa uma forma de comunicação que não ocorre no mundo real.",
+			"C:altera a forma de representar a fala, usando uma lingua- gem formal.",
+			"D:reproduz o modo como as pessoas do campo falam no cotidiano."
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 12,
+		"initialText": "Leia o texto para responder às questões de números 12 a 15. Vocês conhecem Ibaté? É uma cidade pequenina, muito pequena mesmo, na re- gião de Araraquara. Foi lá que nasci e morei com meus avós, até a idade de nove anos. Depois que vovô morreu, vovó resolveu me man- dar para São Paulo, viver com tio Dagoberto e tia Eva. Vovó nunca tinha viajado sozinha a São Paulo, só com vovô Horácio e de carro. Por isso, a família ficou preocupa- da quando ela anunciou que embarcaríamos, num ônibus da Viação Cometa. – Dizem que São Paulo é uma cidade muito perigosa – argumentou tia Frozina –, acho que mamãe não devia viajar sozinha. – Bobagens! – disse vovó, sem permitir nenhuma outra discussão. – É só uma cidade como qualquer outra.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Assinale a alternativa em que se faz interpretação correta do texto em um enunciado que atende à norma-padrão de acen- tuação e de ortografia.",
+		"alternatives": [
+			"A:A avó discordou da filha Frozina, por que esta não queria a viajem, parecendo ter ciume da mãe andando com o neto por São Paulo.",
+			"B:A avó acreditava que Ibaté era um lugar perigoso para o neto morar, porisso optou por deixa-lo sob os cuidados do tio.",
+			"C:A avó estava para realizar sozinha uma viagem, depois que se tornou viúva e decidiu levar o neto para viver com os tios em São Paulo.",
+			"D:A avó queria manter os mesmos habitos que tinha antes da viuvês, razão pela qual contrariou a filha e levou o neto para uma cidade maior.",
+		],
+		"answer": "C",
+		"topic": "Português"
+	},
+	{
+		"number": 13,
+		"initialText": "Quanto à predicação, o verbo que não precisa de comple- mento está corretamente destacado em:",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Vocês conhecem Ibaté?",
+			"B:Foi lá que nasci e morei com meus avós...",
+			"C:... vovó resolveu me mandar para São Paulo...",
+			"D:... disse vovó, sem permitir nenhuma outra discussão."
+		],
+		"answer": "B",
+		"topic": "Português"
+	},
+	{
+		"number": 14,
+		"initialText": "No trecho “quando ela anunciou que embarcaríamos”, o sentido expresso pela forma verbal destacada e o sujeito composto que pratica a ação são, correta e respectivamente:",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:ação futura no passado; eu e ela.",
+			"B:pedido; vovó e vovô.",
+			"C:dúvida; tio Dagoberto e tia Eva.",
+			"D:certeza; eu e tia Frozina."
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 15,
+		"initialText": "Nas passagens “É uma cidade pequenina” e “– Bobagens! – disse vovó”, as palavras destacadas expressam, respecti- vamente, sentido de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:lugar muito acolhedor; algo meio confuso.",
+			"B:lugar pouco agradável; algo preocupante.",
+			"C:lugar de pequena extensão; algo perigoso.",
+			"D:lugar muito pequeno; algo sem importância"
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 16,
+		"initialText": "João ganhou R$ 300,00 de aniversário e utilizou esse dinhei- ro para comprar uma camiseta, uma calça e uma bermuda. A camiseta custou desse valor mais R$ 10,00, e a calça custou desse valor mais R$ 20,00. Com o valor restante foi possível comprar a bermuda e ainda sobraram R$ 45,00. O valor da bermuda foi",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:R$ 60,00.",
+			"B:R$ 75,00.",
+			"C:R$ 90,00.",
+			"D:R$ 105,00."
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},
+	{
+		"number": 17,
+		"initialText": "A tabela mostra algumas informações sobre o número de gols sofridos e o saldo de gols de 3 times, A, B e C, após algumas partidas de um campeonato.",
+		"images": "https://i.imgur.com/C6pEZvC.png",
+		"subtitle": "",
+		"questionText": "Sabe-se que:\n•   O time C sofreu 3 gols a menos do que o time B.\n•   O saldo de gols do time A é igual ao número de gols mar- cados pelo time C. \nNessas condições, a soma do número de gols marcados por esses três times juntos foi",
+		"alternatives": [
+			"A:5.",
+			"B:6.",
+			"C:7.",
+			"D:8."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 18,
+		"initialText": "Andrea colocou 3 músicas em seu pen drive. A primeira música tinha duração de 3 minutos e 48 segundos, e a segunda músi- ca tinha duração de 2 minutos e 52 segundos. Sabendo que a duração das 3 músicas juntas era de 9 minutos e 15 segundos, então, a duração da terceira música era de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:2 minutos e 35 segundos.",
+			"B:2 minutos e 45 segundos.",
+			"C:2 minutos e 55 segundos.",
+			"D:3 minutos e 05 segundos.",
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 19,
+		"initialText": "Um recipiente contém 20 litros de detergente. Com esse deter- gente foi possível encher totalmente 15 frascos, cada um deles com 800 mL, e mais alguns frascos, cada um deles com 600 mL. Sabendo que ainda restaram no recipiente 3,2 litros, o número de frascos enchidos, cada um deles contendo 600 mL, foi",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:5.",
+			"B:6.",
+			"C:7.",
+			"D:8.",
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 20,
+		"initialText": "Um reservatório, que tem capacidade máxima para 2 400 litros de água, encontra-se vazio. Para encher esse reservatório será utilizada uma mangueira que despeja 16 litros de água a cada 3 minutos. Depois de 3 horas, com a mangueira aberta, o número de litros de água que ainda faltam para encher total- mente esse reservatório, sem transbordar, é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:960.",
+			"B:1150.",
+			"C:1280.",
+			"D:1440.",
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 21,
+		"initialText": "Pedro comprou algumas folhas de papel sulfite para realizar alguns trabalhos. Utilizou 30% delas no primeiro trabalho, e ainda restaram 84 folhas. O número de folhas utilizadas no primeiro trabalho foi",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:30.",
+			"B:36.",
+			"C:42.",
+			"D:48."
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},
+	{
+		"number": 22,
+		"initialText": "Bruno comprou uma bicicleta, pagando em 2 parcelas men- sais de R$ 972,00 cada uma. Sabendo que o preço dessa bicicleta à vista, sem desconto, era R$ 1.800,00, então, a taxa mensal de juro simples cobrada foi de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:2%.",
+			"B:3%.",
+			"C:4%.",
+			"D:5%."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 23,
+		"initialText": "Carol comprou um pacote de balas e irá dividi-las em pacoti- nhos menores, todos com o mesmo número de balas. Se forem colocadas 8 balas em cada pacotinho, será possível fazer N pacotinhos e não ficará bala alguma de fora. Se forem coloca- das 5 balas em cada pacotinho, serão feitos N + 3 pacotinhos, e também não ficará bala alguma de fora. O número total de balas que havia no pacote comprado por Carol era",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:40.",
+			"B:45.",
+			"C:50.",
+			"D:55."
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 24,
+		"initialText": "Márcia tem em sua carteira apenas notas de R$ 2,00 e notas de R$ 5,00, no total de 9 notas. Sabendo que o valor total des- sas notas é R$ 36,00, então, o número de notas de R$ 5,00 é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:3.",
+			"B:4.",
+			"C:5.",
+			"D:6."
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 25,
+		"initialText": "Um professor de matemática pediu para seus alunos resol- verem a seguinte equação do 2o grau: x2 – 16 x + 63 = 0. Após resolver corretamente a equação, Pedro percebeu que as raízes dela eram iguais às idades de seus dois irmãos mais novos, André e Caio. Sabendo que André é mais velho do que Caio, a idade de Caio é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:6 anos.",
+			"B:7 anos",
+			"C:8 anos.",
+			"D:9 anos."
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},
+	{
+		"number": 26,
+		"initialText": "A figura é formada por três quadrados Q1, Q2 e Q3.",
+		"images": "https://i.imgur.com/cOI00tY.png",
+		"subtitle": "",
+		"questionText": "Sabe-se que o perímetro do quadrado Q2 é 32 cm², e que a 2 área do quadrado Q1 é 4 cm². A área do quadrado Q3 é igual a",
+		"alternatives": [
+			"A:9 cm²",
+			"B:16 cm²",
+			"C:25 cm²",
+			"D:36 cm²"
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 27,
+		"initialText": "Em uma avenida reta e plana, há um banco (B), uma farmá- cia (F), uma mercearia (M), uma padaria (P) e uma igreja (I), conforme mostra a figura.",
+		"images": "https://i.imgur.com/FNGKlUS.png",
+		"subtitle": "",
+		"questionText": "A distância entre o banco (B) e a farmácia (F) é igual a",
+		"alternatives": [
+			"A:400 m.",
+			"B:500 m.",
+			"C:600 m.",
+			"D:700 m."
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 28,
+		"initialText": "Um terreno retangular ABCD, com 15 m de comprimento por 8 m de largura, teve parte de sua área, na forma de um triân- gulo retângulo, reservada para o cultivo de temperos, confor- me mostra a figura.",
+		"images": "https://i.imgur.com/yCY5R9v.png",
+		"subtitle": "",
+		"questionText": "O comprimento da cerca DE, que separa o canteiro do resto do terreno, é igual a",
+		"alternatives": [
+			"A:6 m.",
+			"B:8 m.",
+			"C:10 m.",
+			"D:12 m."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 29,
+		"initialText": "Uma caminhonete irá transportar 16 caixas com melões. Em cada caixa serão colocados 12 melões, cada um deles com massa aproximada de 2 kg. Sabendo que cada caixa vazia tem 400 g de massa, então, a massa total (caixas + melões) que essa caminhonete irá transportar será, aproximadamente, de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:376,4 kg.",
+			"B:388,2 kg.",
+			"C:390,4 kg.",
+			"D:394,8 kg."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 30,
+		"initialText": "A forma simplificada da expressão para a ≠ 2 e a ≠ –2, é igual a",
+		"images": "https://i.imgur.com/ISxfHYl.png",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:a + 2",
+			"B:8a · (a – 2)",
+			"C:8a + 2",
+			"D:8a² + 16"
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 31,
+		"initialText": "Em um estudo sobre solo, foi utilizada uma coluna de vidro, com uma torneira adaptada em sua extremidade, conforme ilustração. Em seguida, 100 mL de areia seca foram coloca- dos dentro da coluna. Então, lentamente, foi acrescentado água, até que o nível da água, após preencher os espaços entre os grãos, atingisse a marca de 100 mL.",
+		"images": "https://i.imgur.com/7ahMkP5.png",
+		"subtitle": "",
+		"questionText": "Após medir a quantidade de água colocada na coluna (1), a torneira foi aberta e foi medido o tempo em segundos (2), no qual toda a água presente na coluna demorou para escoar pela torneira. As propriedades do solo que foram medidas em 1 e 2 foram, respectivamente,",
+		"alternatives": [
+			"A:drenagem e filtração.",
+			"B:porosidade e permeabilidade.",
+			"C:densidade e drenagem.",
+			"D:filtração e estrutura."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 32,
+		"initialText": "Leia atentamente o texto a seguir.\n\nUma determinada rocha se formou a partir do resfria- mento do magma, que ocorreu no interior da crosta terres- tre. Após milhares de anos, essa rocha aflorou à superfície terrestre, sofreu intemperismo, os seus constituintes foram transportados por um rio e foram depositados em um grande lago. Após mais alguns milhares de anos, esse material de- positado foi compactado e cimentado, dando origem a uma nova rocha. Ao fazer uma pesquisa nessa rocha, foi verifica- da a presença de ouro.\nConsiderando as informações do texto, o ouro foi",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:encontrado em uma rocha sedimentar.",
+			"B:formado pelo intemperismo.",
+			"C:cimentado pelo magma.",
+			"D:formado em uma rocha metamórfica."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},
+	{
+		"number": 33,
+		"initialText": "A água usada em pias, chuveiros, tanques e máquinas de lavar pode ser reutilizada na limpeza da casa. Como essa água tem muito sabão, detergente, restos de alimentos e gor- dura, ela deve passar por um tratamento que elimine esses materiais. Para isso, pode ser utilizado o “jardim filtrante”, que consiste em um tanque com o fundo impermeabilizado, con- tendo areia e brita na parte inferior e água na parte superior, no qual são cultivadas plantas aquáticas, como o aguapé. O processo é apresentado na ilustração a seguir.",
+		"images": "https://i.imgur.com/sXVpAYV.png",
+		"subtitle": "",
+		"questionText": "Ao passar pelos recipientes 1 e 2, a água é submetida, res- pectivamente, aos processos de",
+		"alternatives": [
+			"A:floculação e desinfecção.",
+			"B:decomposição e decantação.",
+			"C:filtração e peneiração.",
+			"D:decantação e filtração."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 34,
+		"initialText": "Um aterro sanitário é uma obra que tem por objetivo o tratamento final dos resíduos da forma mais ambientalmente correta possível. O funcionamento é baseado nas seguintes etapas:\n1 – A base do aterro é feita, colocando-se uma manta impermeável, para evitar vazamento de líquidos, sobre solo que foi compactado.\n2 – Sobre essa manta, é colocado um sistema de dre- nos para a coleta do chorume, líquido altamente contaminado que, após tratamento adequado, resulta em água limpa, ade- quada para regar jardins, por exemplo.\n3 – No interior do aterro, é colocado outro sistema de drenos para a coleta do biogás.\n4 – As camadas de resíduos (lixo) são cobertas por ca- madas de argila. Há, também, um sistema de drenagem que evita infiltração da água da chuva no interior do aterro.\n\nConsiderando as etapas descritas, verifica-se que o aterro sanitário produz materiais que podem ser utilizados, como é o caso do que ocorre em",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:1 e 2.",
+			"B:2 e 3.",
+			"C:3 e 4.",
+			"D:4 e 1."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 35,
+		"initialText": "Observe o circuito elétrico a seguir, constituído por 3 pilhas de 1,5 v cada uma e 4 lâmpadas de igual resistência (L1 a L4).",
+		"images": "https://i.imgur.com/MYbLGuD.png",
+		"subtitle": "",
+		"questionText": "Da forma como está montado esse circuito, verifica-se que",
+		"alternatives": [
+			"A:a interrupção do circuito em P não afeta o brilho das lâm- padas.",
+			"B:se o circuito for interrompido em X, a lâmpada L1 ficará acesa.",
+			"C:a voltagem a ser distribuída no circuito é de 4,5 v.",
+			"D:o brilho da lâmpada L1 é maior do que as demais lâmpadas."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 36,
+		"initialText": "A energia solar desempenha um papel muito importante em nosso planeta. Além dos processos naturais, essa energia desempenha, atualmente, um papel importante na obtenção de energia para o uso doméstico. A figura a seguir indica algumas transformações de energia que ocorrem quando a energia solar atinge a superfície terrestre.",
+		"images": "https://i.imgur.com/wniynPy.png",
+		"subtitle": "",
+		"questionText": "Com relação às formas de energia e suas transformações, é correto afirmar que a energia",
+		"alternatives": [
+			"A:térmica do sol é transformada em calor em 1, e, em ele- tricidade, em 2.",
+			"B:radiante do sol é transformada em energia elétrica em 2, e, em química, em 3.",
+			"C:luminosa do sol é transformada em energia térmica em 1, e, em química, em 2.",
+			"D:solar é transformada em energia cinética em 1, e, em tér- mica, em 3."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 37,
+		"initialText": "Para atender ao Princípio dos 3Rs, uma escola desenvolveu um programa e realizou as quatro ações descritas a seguir.\n1 – A escola solicitou aos alunos para trazer copos não des- cartáveis para beber água do filtro da escola em substituição aos copos de plástico que não serão mais oferecidos.\n2 – Os professores de ciências solicitaram aos alunos que trouxessem vidros vazios de produtos utilizados em casa como vidros de maionese, azeitona, palmito e outros, para acondicionar produtos químicos e pequenos animais conser- vados em álcool.\n3 – Os professores solicitaram aos alunos e ao pessoal da secretaria que trouxessem papel sulfite ou outro tipo de papel que tenha sido utilizado apenas em um dos lados e deixas- sem na sala de aula para que os alunos pudessem utilizar o outro lado do papel em seus estudos.\n4 – O pessoal da cantina da escola colocou em toda a área de recreação recipientes adequados para o descarte de garrafas Pet, embalagens de sucos e latas de refrigerantes.\n\nCorresponde às atividades de Reduzir, Reutilizar e Reciclar (3 Rs), respectivamente, as ações indicadas pelos números",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:1, 2 e 3.",
+			"B:1, 2 e 4.",
+			"C:2, 4 e 3.",
+			"D:3, 4 e 1."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 38,
+		"initialText": "Leia um depoimento, a respeito do uso de drogas.\n\n“Utilizava quando ia para as baladas. A sensação imedia- ta é de euforia e perda de inibições. Mas, depois que passava o efeito, sentia um desânimo muito grande e até ânsia de vômito. No dia seguinte, sentia um pouco de depressão. Mas, no fim de semana seguinte, voltava a utilizar. Sentia-me bem, tinha euforia para dançar a noite toda. Com o uso contínuo, aumentei as doses e, um dia após um exagero, quase morri. Minha temperatura aumentou e eu desmaiei.”\n\nO relato trata do consumo de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:maconha.",
+			"B:crack.",
+			"C:anabolizante.",
+			"D:ecstasy."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 39,
+		"initialText": "Ao sofrer um ferimento com um objeto perfurocortante, o in- divíduo pode se contaminar com bactérias presentes nesse objeto. Então, no local onde esse objeto penetrou, inicia-se uma sequência de ações que tem por objetivo destruir os mi- crorganismos e as substâncias que produzem, e evitar danos ao indivíduo. O processo está representado na ilustração a seguir.",
+		"images": "https://i.imgur.com/2Jejx9C.png",
+		"subtitle": "",
+		"questionText": "No esquema, as ações de defesa do organismo que serão realizados pelas células 1 e 2, são, respectivamente:",
+		"alternatives": [
+			"A:produção de anticorpos e fagocitose.",
+			"B:produção de antígenos e de anticorpos.",
+			"C:produção de antígenos e fagocitose.",
+			"D:produção de anticorpos e de antígenos."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},
+	{
+		"number": 40,
+		"initialText": "Em 2016, enquanto ainda estudava no ensino médio na ci- dade de Coxim, região norte de Mato Grosso do Sul, João Victor de Andrade dos Santos descobriu algo que pode mu- dar a vida de muita gente. O estudante desenvolveu o mé- todo para conservar caldo de cana, porque na época, via o pai ter prejuízo por não conseguir conservar o produto, mas essa descoberta vai muito além. Depois de aprimorada, anos depois, foi descoberto que essa técnica pode ser capaz de inativar um protozoário encontrado nas fezes de um inseto presente em locais em que a cana é armazenada.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "O estudo descrito apresentou um método que pode ser eficaz para",
+		"alternatives": [
+			"A:o tratamento da malária.",
+			"B:o desenvolvimento da vacina da dengue.",
+			"C:a prevenção da doença de Chagas.",
+			"D:a forma de repelir o mosquito da febre amarela."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 41,
+		"initialText": "Nesse bioma é marcante a presença de árvores com galhos tortuosos e de casca grossa. Além do estrato arbóreo, apresenta estrato herbáceo, cujos ramos vegetais secam à medida que se estabelece o período de seca. Esses ramos secos propiciam as queimadas recorrentes nesse tipo de bioma. Nessa região podem ser encontradas 67 espécies de mamíferos, 837 de aves, 120 de répteis e 150 de anfíbios.\n\nNo mapa a seguir, estão representadas as cinco regiões bra- sileiras.",
+		"images": "https://i.imgur.com/nus6Xa4.png",
+		"subtitle": "",
+		"questionText": "A maior parte desse bioma encontra-se nas regiões",
+		"alternatives": [
+			"A:1, 2 e 3.",
+			"B:1, 4 e 5.",
+			"C:2, 4 e 5.",
+			"D:4, 3 e 5."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},
+	{
+		"number": 42,
+		"initialText": "Animais como as aves e os mamíferos apresentam a tempe- ratura do corpo constante e não dependem do ambiente para aquecimento de seu corpo, pois reações químicas em suas células produzem energia suficiente para produção de calor, necessário para suas atividades. Esse processo, responsável pela produção de energia no organismo, é denominado",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:circulação sanguínea.",
+			"B:movimento muscular.",
+			"C:isolamento térmico.",
+			"D:respiração celular."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 43,
+		"initialText": "O gráfico a seguir representa de forma comparativa o desma- tamento na Amazônia, nos anos de 2017/2018 e 2018/2019.",
+		"images": "https://i.imgur.com/TSspnPN.png",
+		"subtitle": "",
+		"questionText": "Se o ritmo de desmatamento continuar, isso trará conse- quências como o",
+		"alternatives": [
+			"A:aumento da poluição do ar devido à falta de oxigênio.",
+			"B:alagamento dessa região devido ao aumento das chuvas.",
+			"C:desenvolvimento de solo fértil e protegido para o plantio.",
+			"D:desaparecimento de espécies vegetais e animais típicos."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 44,
+		"initialText": "O investimento em energias renováveis é essencial para a redução da poluição ambiental. Uma dessas novas alterna- tivas é o etanol celulósico, combustível obtido por meio do aproveitamento do bagaço de cana-de-açúcar, que antes era desperdiçado. Primeiro, realiza-se a quebra dos polissacarí- deos presentes no bagaço em açúcares menores e, em se- guida, os açúcares são submetidos aos processos biológicos e químicos que levam à produção do álcool.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Os processos biológicos e químicos que levam à produção do combustível, como descrito no texto, são, respectivamente:",
+		"alternatives": [
+			"A:solidificação e evaporação.",
+			"B:coagulação e decantação.",
+			"C:fermentação e destilação.",
+			"D:digestão e dissolução."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 45,
+		"initialText": "Os métodos de sustentabilidade estão sendo utilizados cada vez mais. Um deles consiste na compostagem, procedimen- to que resulta na produção de adubo orgânico. Para a com- postagem, é possível utilizar o lixo da cozinha e do jardim, misturando-os em um recipiente. É necessário ter duas ve- zes mais resíduos marrons (serragem, folhas secas, papelão e folhas de jornal) do que verdes (frutas, vegetais, grama, borra de café). Após algumas poucas semanas, os resíduos transformam-se em um fertilizante natural para nutrir o solo.\n\nEsse processo ocorre devido à ação de organismos que fa- zem parte de uma cadeia alimentar, atuando como",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:decompositor.",
+			"B:herbívoro.",
+			"C:predador.",
+			"D:produtor."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},
+	{
+		"number": 46,
+		"initialText": "Analise o mapa para responder à questão.\n\nÁreas do globo cobertas com o bioma “X”",
+		"images": "https://i.imgur.com/HA5QZMH.png",
+		"subtitle": "",
+		"questionText": "As áreas destacadas no mapa",
+		"alternatives": [
+			"A:têm como características comuns a presença de grande número de árvores e arbustos com folhas largas e sempre verdes que refletem o ambiente com predomínio de forte umidade e de altas temperaturas.",
+			"B:apresentam alternância entre estações secas e chuvosas; a vegetação é constituída, principalmente, por arbustos e árvo- res de pequeno porte com raízes profundas, folhas grossas e troncos retorcidos.",
+			"C:caracterizam-se pelo clima tropical de altitude com verões quentes e úmidos e invernos secos; as espécies vegetais pre- dominantes são do tipo gramíneas com arbustos que perdem as folhas na estação seca.",
+			"D:apresentam grande biodiversidade, devido, principalmente, à presença de solos com grande umidade que, além de garan- tirem árvores de grande porte, ainda mantêm inúmeras espécies de mamíferos, insetos e aves."
+		],
+		"answer": "B",
+		"topic": "Geografia"
+	},
+	{
+		"number": 47,
+		"initialText": "No continente asiático, é possível identificar focos de tensão geopolítica que colocam em risco a paz daqueles que vivem nos locais que estão envolvidos em conflitos. Observe no mapa da Ásia alguns desses focos de tensão.",
+		"images": "https://i.imgur.com/b88YY9k.png",
+		"subtitle": "",
+		"questionText": "Assinale a alternativa que identifica corretamente um dos focos de tensão.",
+		"alternatives": [
+			"A:I – Turquia e Iraque estão em conflito há quase uma década com o objetivo de estabelecer o domínio econô- mico sobre parte do Oriente Médio.",
+			"B:II – Irã é o maior produtor de petróleo da região e tem pre- tensões de produzir armas nucleares e tornar-se a maior potência militar do Oriente Médio.",
+			"C:III – Cachemira é um território em permanente disputa entre a Índia, de religião predominantemente hindu, e o Paquistão, de religião muçulmana.",
+			"D:IV – Coreia do Norte e Coreia do Sul mantêm conflitos há décadas devido à disputa de territórios ricos em urânio, matéria-prima para a produção de armamentos nucleares."
+		],
+		"answer": "C",
+		"topic": "Geografia"
+	},
+	{
+		"number": 48,
+		"initialText": "Analise o gráfico.\n\nBrasil – Pessoal ocupado na agropecuária",
+		"images": "https://i.imgur.com/e1lh54W.png",
+		"subtitle": "",
+		"questionText": "A leitura do gráfico e os conhecimentos sobre aspectos socioeconômicos do Brasil permitem concluir que a evolução do número de trabalhadores na agropecuária deveu-se, entre outros fatores,",
+		"alternatives": [
+			"A:à substituição de áreas de lavouras pela pecuária que utiliza menos mão de obra.",
+			"B:ao aumento das áreas destinadas à agricultura familiar, poupadora de mão de obra.",
+			"C:aotérminodaexpansãodasfronteirasagrícolasnasregiões Norte e Centro-Oeste.",
+			"D:à modernização das atividades agropecuárias e à conse- quente ampliação da mecanização."
+		],
+		"answer": "D",
+		"topic": "Geografia"
+	},
+	{
+		"number": 49,
+		"initialText": "Johann Moritz Rugendas esteve no Brasil entre 1821 e 1825, produzindo várias ilustrações, publicadas posteriormente na Europa. Observe uma delas.",
+		"images": "https://i.imgur.com/RB1X7df.png",
+		"subtitle": "",
+		"questionText": "A ilustração mostra que",
+		"alternatives": [
+			"A:o culto religioso contribuiu para a união dos negros nos quilombos.",
+			"B:a vida dos escravos incluiu momentos de lazer, além do trabalho.",
+			"C:a diversidade cultural impediu a integração entre brancos e negros.",
+			"D:o politeísmo dos povos africanos foi preservado nesse ritual religioso."
+		],
+		"answer": "D",
+		"topic": "História"
+	},
+	{
+		"number": 50,
+		"initialText": "O planeta era encarado como uma espécie de enorme tabuleiro de xadrez. A partida era disputada por dois jogado- res, empenhados em manter as posições que já haviam con- quistado – suas áreas de influência – e, tanto quanto possí- vel, tomar novas áreas do adversário. Nenhum país ou região do globo era considerado fora dos limites do jogo: cada casa do tabuleiro estaria, forçosamente, sob domínio de um ou de outro competidor. Tratava-se, porém, de uma partida com características muito especiais. O confronto aberto entre as superpotências provavelmente faria voar pelos ares todas as peças e o pró- prio tabuleiro.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "O texto refere-se",
+		"alternatives": [
+			"A:às disputas por colônias na África e na Ásia, nas quais as potências europeias conseguiram mercados consumi- dores e fornecedores.",
+			"B:ao período conhecido como Paz Armada, que provocou as tensões responsáveis pela eclosão da Primeira Guerra Mundial.",
+			"C:à bipolarização do mundo após a Segunda Guerra Mun- dial, em que os países líderes dos blocos capitalista e socialista queriam a hegemonia.",
+			"D:aos combates diretos entre forças militares norte-ame- ricanas e soviéticas na Guerra Fria, que usaram armas químicas e nucleares."
+		],
+		"answer": "C",
+		"topic": "História"
+	},
 
- 
+
 ]

@@ -8,24 +8,15 @@
 import Foundation
 import AuthenticationServices
 
-protocol LoginViewControllerProtocol {
+protocol LoginViewControllerProtocol {    
     /**
      
-     Método que inicializa as views do login. Ele recebe o controller da view.
-     
-     - parameter viewController: Um controlador do tipo LoginViewControllerProtocol.
-     
-     */
-    init(controller: LoginViewControllerProtocol)
-    
-    /**
-     
-     Método que recebe dados do usuário para inserir uma nova conta no back-end.
+     Método que recebe dados do usuário para inserir uma nova conta no back-end e no Userdefaults.
      
      - parameter user: objeto que contém dados da conta (userIdentifier).
      
      */
-    func addNewUser(_ account: Account) throws
+    func addNewUser(_ userIdentifier: String) 
     
     /**
      
@@ -34,7 +25,7 @@ protocol LoginViewControllerProtocol {
      - parameter user : objeto que contém dados da conta (userIdentifier).
      
      */
-    func checkUserExistence(_ account: Account)
+    func checkUserExistence(_ userIdentifier: String)
     
     // Dependências
     var myView: LoginViewProtocol? {get set}

@@ -48,8 +48,6 @@
 		2F9A67E1253780A5002EE9B2 /* ProgressBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */; };
 		2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67E8253A0219002EE9B2 /* HeaderCollectionReusableView.swift */; };
 		2F9A67EB253A021B002EE9B2 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67E9253A0219002EE9B2 /* HeaderCollectionReusableView.xib */; };
-		2FB16ECD2559CB5C00C66382 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB16ECC2559CB5C00C66382 /* Credentials.swift */; };
-		2FB16ECE2559CB5C00C66382 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB16ECC2559CB5C00C66382 /* Credentials.swift */; };
 		2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */; };
 		2FBD62F1254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */; };
 		2FBD62FC254C51DD006A8725 /* ConverterResultsJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */; };
@@ -301,7 +299,6 @@
 		2F9A67DF253780A5002EE9B2 /* ProgressBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarTableViewCell.xib; sourceTree = "<group>"; };
 		2F9A67E8253A0219002EE9B2 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		2F9A67E9253A0219002EE9B2 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
-		2FB16ECC2559CB5C00C66382 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		2FBD62EF254C4FAB006A8725 /* ConverterResultsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSON.swift; sourceTree = "<group>"; };
 		2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSONProtocol.swift; sourceTree = "<group>"; };
 		2FBD632B254C6B01006A8725 /* ConverterResultsJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterResultsJSONTests.swift; sourceTree = "<group>"; };
@@ -708,7 +705,6 @@
 				2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */,
 				4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */,
 				4FAEFFD8254B06ED001BE984 /* NoticeMock.swift */,
-				2FB16ECC2559CB5C00C66382 /* Credentials.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1064,7 +1060,6 @@
 				4FFF6BC1252CCB9B0015DFE7 /* QuestionViewControllerImplementation.swift in Sources */,
 				2F2BADF42548795200C2F411 /* MockMetricsImplementation.swift in Sources */,
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
-				2FB16ECD2559CB5C00C66382 /* Credentials.swift in Sources */,
 				2F1FCF7C254857F00040169E /* MetricsViewImplementation.swift in Sources */,
 				2F1FCF3B254733690040169E /* NoticeInfoViewProtocol.swift in Sources */,
 				2F3D7EA22555BEDF00C2A586 /* LoginViewImplementation.swift in Sources */,
@@ -1209,7 +1204,6 @@
 				2FBD62FD254C51DD006A8725 /* ConverterResultsJSONProtocol.swift in Sources */,
 				D59E8301252E2E50007E8CBD /* OverviewViewImplementation.swift in Sources */,
 				D586B588252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
-				2FB16ECE2559CB5C00C66382 /* Credentials.swift in Sources */,
 				D5A71ABC254C42250085ABCD /* NoticeViewControllerImplementation.swift in Sources */,
 				D565EF44252BADA200426648 /* SchoolsViewControllerImplementation.swift in Sources */,
 				D539856D25486A0F00EB09DA /* RequestSenderImplementationTests.swift in Sources */,

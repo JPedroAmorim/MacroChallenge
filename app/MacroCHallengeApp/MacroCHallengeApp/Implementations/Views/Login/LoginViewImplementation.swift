@@ -74,12 +74,8 @@ extension LoginViewImplementation: ASAuthorizationControllerDelegate {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
             
             // POST para guardar uma nova conta (passa userIdentifier).
-            let userAccount = Account(user: appleIDCredential.user)
-            do {
-                try viewController.addNewUser(userAccount)
-            } catch {
-                print(error)
-            }
+            viewController.addNewUser(appleIDCredential.user)
+            
             
             // pushar próxima view
             

@@ -17,8 +17,11 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
     
     
     // MARK: - Lifecycle methods
-    required init(controller: LoginViewControllerProtocol) {
+    required init() {
         super.init(nibName: nil, bundle: nil)
+        self.view = LoginViewImplementation(controller: self)
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: navigationController, action: nil)
+        navigationItem.leftBarButtonItem = backButton
     }
     
     required init?(coder: NSCoder) {
@@ -29,20 +32,15 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
     
     
     // MARK: - LoginViewControllerProtocol methods
-    func addNewUser(_ account: Account) throws {
-        // Criando um usuário criptografado para o Keychain e sua respectiva Query de add
-        // https://developer.apple.com/documentation/security/keychain_services/keychain_items/adding_a_password_to_the_keychain
-        let user = account.user
-        let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
-                                    kSecAttrServer as String: Credentials.server,
-                                    kSecAttrAccount as String: user]
+    func addNewUser(_ userIdentifier: String) {
+        // Adicionando usuário no UserDefaults
+        UserDefaults.standard.set(userIdentifier, forKey: "User")
         
-        // Adicionando usuário no Keychain
-        let status = SecItemAdd(query as CFDictionary, nil)
-        guard status == errSecSuccess else { throw KeychainError.unhandledError(status: status) }
+        
+        
     }
     
-    func checkUserExistence(_ account: Account) {
+    func checkUserExistence(_ userIdentifier: String) {
         
     }
 }

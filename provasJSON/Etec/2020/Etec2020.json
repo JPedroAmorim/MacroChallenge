@@ -2,7 +2,7 @@
  {
   "number": 1,
   "initialText": "Um número natural, diferente de zero e diferente de um, pode ser classificado como primo ou composto. Os quadrinhos fornecem algumas pistas sobre o que permite caracterizar um número para que ele seja dito primo.",
-  "images": "",
+  "images": "https://i.imgur.com/1PXeImd.png",
   "subtitle": "",
   "questionText": "Analise as alternativas e assinale a correta.",
   "alternatives": [
@@ -99,7 +99,7 @@
  {
 	 "number": 7,
 	 "initialText": "Leia a charge.",
-	 "images": "",
+	 "images": "https://i.imgur.com/aELI4wt.png",
 	 "subtitle": "",
 	 "questionText": "A charge de Ziraldo foi publicada na década de 1970 e, apesar da diferença histórico-cultural com o contexto atual, é possível apreender seu efeito de humor. A expressão responsável pela construção do humor no texto é",
 	 "alternatives": [
@@ -131,7 +131,7 @@
  {
 	 "number": 9,
 	 "initialText": " Fundamental à manutenção da vida na Terra, o ciclo biogeoquímico do carbono na natureza está representado simplificadamente no esquema.",
-	 "images": "",
+	 "images": "https://i.imgur.com/DGLSylg.png",
 	 "subtitle": "",
 	 "questionText": "Sobre esse esquema é correto afirmar que",
 	 "alternatives": [
@@ -211,7 +211,7 @@
  {
 	 "number": 14,
 	 "initialText": "Leia o texto para responder às questões 14 e 15.  A imagem mostra o satélite brasileiro CBERS–4 utilizado para monitoramento do nosso território e para desenvolvimento científico. Como a maioria dos objetos colocados no espaço, o CBERS–4 é completamente envolvido por uma manta térmica protetora (Isolamento de Múltiplas Camadas, sigla em inglês MLI). Esse material tem como função diminuir o fluxo de calor, que pode ser um grande problema para objetos colocados em órbita, uma vez que facilmente eles podem ser submetidos a temperaturas maiores que 100 oC e menores que –100 C.",
-	 "images": "",
+	 "images": "https://i.imgur.com/EoqRadU.png",
 	 "subtitle": "",
 	 "questionText": "No CBERS–4, com respeito à absorção de energia térmica proveniente do Sol, o revestimento térmico feito com o MLI, temcomofunçãoinibiraabsorçãodeenergiaapenaspor ___I___,tendoemvistaquenoespaçonãoexisteouémuito rarefeita a presença de matéria que poderia auxiliar no processo de troca de calor por ___II___ com a transferência do calor de partícula para partícula ou mesmo por ___III___,em que porções de matéria aquecida trocam de posição com porções de matéria contendo menos calor. Assinale a alternativa que completa correta e respectivamente as lacunas da frase.",
 	 "alternatives": [
@@ -243,7 +243,7 @@
  {
 	 "number": 16,
 	 "initialText": "O coração de um mamífero possui uma completa separação entre os ventrículos. Essa separação não permite a mistura do sangue venoso com o sangue arterial. O esquema refere-se ao sistema circulatório dos mamíferos.",
-	 "images": "",
+	 "images": "https://i.imgur.com/gUoqiEA.png",
 	 "subtitle": "",
 	 "questionText": "Sobre esse esquema, podemos afirmar, corretamente, que os números I, II, III e IV representam, respectivamente,",
 	 "alternatives": [
@@ -515,7 +515,7 @@
  {
 	 "number": 33,
 	 "initialText": "Carlos Rogério, empresário do ramo de festas e eventos, decidiu oferecer a seus clientes embalagens diferenciadas para as populares lembrancinhas. Segundo o empresário, a introdução de uma embalagem em formato de poliedro convexo regular (apresentada na imagem, com sua planificação) aumentou seu faturamento no último mês. Sabendo que todas as faces da embalagem de Carlos Rogério são polígonos regulares, pode-se afirmar que um ângulo interno de uma dessas faces mede.\nLembre-se de que: Um poliedro convexo é chamado de regular se suas faces são polígonos regulares, e cada um desses polígonos regulares tem o mesmo número de lados.",
-	 "images": "",
+	 "images": "https://i.imgur.com/tANIw9A.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -531,7 +531,7 @@
  {
 	 "number": 34,
 	 "initialText": " Em um jardim, um grupo de estudantes coletou alguns animais para realizar um trabalho de pesquisa, cujo objetivo era agrupar os seres vivos capturados de acordo, principalmente, com suas semelhanças anatômicas. Um dos aspectos a ser observado na pesquisa eram as quelíceras, que correspondem ao primeiro par de apêndices articulados localizados na região bucal dos animais e podem ter várias funções, como por exemplo: inocular veneno, rasgar ou triturar alimentos, carregar ovos e até cavar buracos. Após a coleta, foi possível organizar dois grupos de animais cujas características são:",
-	 "images": "",
+	 "images": "https://i.imgur.com/xgziofj.png",
 	 "subtitle": "",
 	 "questionText": "Considerando as características descritas dos animais coletados, é correto afirmar que os animais do Grupo 1 e do Grupo 2 são, respectivamente",
 	 "alternatives": [
@@ -659,7 +659,7 @@
  {
 	 "number": 43,
 	 "initialText": "Leia os quadrinhos e o quadro “VOCÊ SABIA?” para responder às questões 43 e 44.",
-	 "images": "",
+	 "images": "https://i.imgur.com/zYXRMZl.png@https://i.imgur.com/FHLtw8u.png",
 	 "subtitle": "",
 	 "questionText": "Admita que a menina dos quadrinhos esteja visitando a avó que mora em outra cidade. A fim de voltar da casa de sua avó para o prédio onde mora, usando a bota de 7 léguas da história, a menina dá 3 passos para leste e 4 passos para o norte. A figura representa de modo esquemático esse trajeto realizado pela garota. A distância entre a casa da avó e o prédio no qual a menina mora é, em quilômetros, igual a",
 	 "alternatives": [

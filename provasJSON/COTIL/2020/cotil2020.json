@@ -562,179 +562,179 @@
  },
  {
 	 "number": 39,
-	 "initialText": "Texto para a próxima questão:",
+	 "initialText": "Podemos dividir o tratamento de água em duas etapas, as quais chamamos de tratamento inicial e tratamento final. Identifique, dentre as opções abaixo, o método de separação de misturas utilizado nas ETA's, por meio do qual ocorre reação química:",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:decantação",
+		 "B:peneiramento",
+		 "C:floculação",
+		 "D:aeração"
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "C",
+	 "topic": "Química"
  },{
 	 "number": 40,
-	 "initialText": "",
+	 "initialText": "Uma pessoa sobrevive apenas uma semana sem água; 9.400 litros de água são necessários para produzir 4 pneus de carro; todos os anos, 10 milhões de pessoas morrem no mundo todo, metade com menos de 18 anos, com doenças que não existiriam se a água fosse tratada. Haja vista a importância da água para a vida, pode-se afirmar que ela:",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:é uma substância simples, pois é formada por 2 átomos de H e 1 de Oxigênio.",
+		 "B:é formada por ligações covalentes e não conduz eletricidade quando pura.",
+		 "C:possui ponto de fusão igual a 100o C e 1 atm.",
+		 "D:na reação química com o gás carbônico, obtém-se como produto uma base."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "B",
+	 "topic": "Química"
  },
  {
 	 "number": 41,
-	 "initialText": "",
+	 "initialText": "Uma reação que ocorre nas ETA's se dá quando se adiciona cal hidratada [Ca(OH)2] à água, e, a seguir, sulfato de alumínio [Al2(SO4)3]. Assinale a alternativa que apresenta a reação química entre essas substâncias, devidamente balanceada:",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:Ca(OH)2 + Al2(SO4)3 → 2 Al(OH)3 + CaSO4",
+		 "B:Ca(OH)2 + Al2(SO4)3 → 3 Al(OH)3 + 2 CaSO4",
+		 "C:3 Ca(OH)2 + 2 Al2(SO4)3 → Al(OH)3 + 3 CaSO4",
+		 "D:3 Ca(OH)2 + Al2(SO4)3 → 2 Al(OH)3 + 3 CaSO4"
 	 ],
 	 "answer": "",
 	 "topic": ""
  },
  {
 	 "number": 42,
-	 "initialText": "",
+	 "initialText": "O transporte é um fator importante no desenvolvimento das cidades. Atualmente, são utilizados combustíveis fósseis, como, por exemplo, gasolina, diesel, GLP, querosene; e de fontes renováveis, como etanol, metanol, biodisel. Considerando os combustíveis a seguir e seus principais componentes - gasolina (octano - C8H18), etanol (C2H5OH) e gás natural (C5H12) - qual deles libera menor quantidade de gás carbônico (CO2) durante a combustão da mesma quantidade de matéria para todos eles? Tome como base os compostos fornecidos no enunciado.",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:gasolina",
+		 "B:etanol",
+		 "C:gás natural",
+		 "D:nenhum deles, pois eles não liberam gás carbônico na combustão"
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "B",
+	 "topic": "Química"
  },
  {
 	 "number": 43,
-	 "initialText": "",
+	 "initialText": "O terreno de uma antiga fábrica de baterias automotivas em Sorocaba (SP) se tornou um garimpo de chumbo a céu aberto. Em busca de dinheiro 'fácil', moradores da região se arriscam e cavam a terra contaminada por produtos químicos à procura de metais que possam ser vendidos aos “ferros-velhos” da cidade. Segundo o toxicologista da Universidade de São Paulo (USP), Fernando Barbosa Júnior, “as amostras apresentaram valores extremamente elevados de chumbo. Um milhão de vezes superiores àquelas que nós esperaríamos. Além do chumbo, foram encontrados alumínio, cádmio, cromo e arsênio. Sobre os metais citados no texto acima, pode-se afirmar que:",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:chumbo, alumínio e arsênio são elementos de transição.",
+		 "B:alumínio, cromo e arsênio são elementos representativos.",
+		 "C:arsênio, alumínio e chumbo são elementos representativos.",
+		 "D:arsênio, alumínio e cádmio são elementos de transição."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "C",
+	 "topic": "Química"
  },
  {
 	 "number": 44,
-	 "initialText": "",
+	 "initialText": "Dentre todas as realizações da engenharia antiga, os aquedutos romanos estão entre as mais notáveis. Os canais eram cobertos com três materiais: alvenaria, canos de chumbo e tubos de terracota. Esses canais levavam água até as vilas onde os ricos e poderosos romanos bebiam água de canecas e jarras de chumbo, o que, argumentam alguns historiadores, teria enfraquecido a elite romana e, desse modo, contribuído para a derrota do império que eles dirigiam, pois pode ter ocorrido envenenamento causado por níveis crescentes de chumbo no corpo, que é tóxico para muitos órgãos e tecidos, incluindo coração, ossos e rins. Os sintomas dessa contaminação incluem dor abdominal, confusão, dores de cabeça, irritabilidade, que podem resultar em ataques apopléticos, coma e morte. Sabendo que n = nêutrons, p = prótons, e = elétrons, assinale a questão que corretamente aponta para as características químicas do chumbo (82Pb207):",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:A = 207, Z = 82, n = 290, p = 207, e = 82",
+		 "B:A = 207, Z = 82, n = 125, p = 82, e = 82",
+		 "C:A = 82, Z = 207, n = 290, p = 82, e = 207",
+		 "D:A = 82, Z = 207, n = 125, p = 82, e = 83"
 	 ],
-	 "answer": "",
-	 "topic": ""
- },{
+	 "answer": "B",
+	 "topic": "Biologia"
+ },
+ {
 	 "number": 45,
-	 "initialText": "",
+	 "initialText": "Informações para resolução das questões 45 e 46:\n\nO crescimento desordenado, a falta de infraestrutura, os problemas sociais e a desonestidade de alguns acarretam um tipo de furto na rede elétrica conhecido como “gato”. Há dois tipos de “gato”:\n1. Dos que alteram o medidor para pagarem menos energia elétrica do que realmente gastaram;\n2. Dos que fazem ligações clandestinas na rede elétrica, puxando fios diretamente dos postes da rua para o interior das casas, sem pagar qualquer valor pela energia. Em ambos os casos, a população é duplamente prejudicada: podem ocorrer interrupções no fornecimento, devido ao aumento descontrolado no consumo, e o valor correspondente a energia roubada é rateado pelos outros pagantes. (Disponível em: \n\nCom base nas informações fornecidas, responda ao que se pede:",
 	 "images": "",
 	 "subtitle": "",
-	 "questionText": "",
+	 "questionText": "O “gato” do caso 2 já foi o causador de inúmeros incêndios. Eles ocorreram porque:",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:essas habitações normalmente eram de luxo e faziam uso de equipamentos de altíssima potência em corrente contínua, como saunas e aquecedores de piscina.",
+		 "B:a instalação foi feita por eletricistas que desconheciam a técnica do curto-circuito.",
+		 "C:os fios traziam energia elétrica de alta tensão.",
+		 "D:não foram usados disjuntores e a sobrecarga aquecia a fiação, causando curto-circuito."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "D",
+	 "topic": "Física"
  },{
 	 "number": 46,
-	 "initialText": "",
+	 "initialText": "Um transformador, presente nos postes da rua, é dimensionado para atender a um determinado número de residências e poderá ter um mau funcionamento devido à sobrecarga, caso tenha que atender a uma carga extra de várias ligações clandestinas. A função do transformador é:",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:transformar a corrente contínua (CC) em corrente alternada (AC).",
+		 "B:transformar a corrente alternada (AC) em corrente contínua (CC).",
+		 "C:baixar a alta tensão que vem das subestações para baixa tensão usada nas residências.",
+		 "D:subir a tensão das subestações para alta tensão usada nas residências."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "C",
+	 "topic": "Física"
  },{
 	 "number": 47,
-	 "initialText": "",
+	 "initialText": "Um trabalhador mora a 2,4km de distância do seu emprego. Ele tem que decidir entre duas opções de transporte para chegar ao seu trabalho: de ônibus, cuja velocidade média em sua região é de 18km/h, ou de bicicleta, com a qual ele é capaz de desenvolver uma velocidade média de 8m/s. Considerando que existe um ponto de ônibus bem em frente à sua casa e outro ponto em frente ao seu trabalho e, desconsiderando eventuais perdas de tempo na espera do ônibus, qual das opções abaixo apresenta o meio de transporte mais rápido e sua correta justificativa?",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:Ônibus, pois essa opção apresenta maior velocidade média.",
+		 "B:Bicicleta, pois essa opção economizaria 3 minutos em relação ao ônibus.",
+		 "C:Ônibus, pois nessa opção o tempo gasto é de apenas 8 minutos.",
+		 "D:Bicicleta, pois nessa opção ele chegaria 5 minutos à frente do ônibus."
 	 ],
-	 "answer": "",
-	 "topic": ""
- },{
+	 "answer": "B",
+	 "topic": "Física"
+ },
+ {
 	 "number": 48,
-	 "initialText": "",
+	 "initialText": "O uso de celulares se popularizou na última década. Vemos, atualmente, pessoas por todos os lados fazendo uso de smartphones conectados à internet ou em ligações telefônicas. As tecnologias mais usadas são 3G e 4G e suas características principais são:",
 	 "images": "",
 	 "subtitle": "",
-	 "questionText": "",
+	 "questionText": "Dados: (bps= bites por segundo); K=1000; M=1000 000; G= 1000 000 000\n\nPodemos concluir que:",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:a transmissão no sistema 3G é feita por uma onda eletromagnética mais lenta e então o aparelho celular recebe menos dados por segundo.",
+		 "B:a tecnologia fez a velocidade de propagação da onda eletromagnética aumentar aproximadamente 3 vezes ao mudar de 3G para 4G.",
+		 "C:a natureza da transmissão no sistema 3G é a mesma do sonar; a do 4G, a mesma que a da luz; a luz é mais rápida que o som.",
+		 "D:em sistema 4G, a frequência é maior, isto é, mais ondas se formam por segundo, portanto a transmissão de dados é mais rápida."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "D",
+	 "topic": "Física"
  },
  {
 	 "number": 49,
-	 "initialText": "",
+	 "initialText": "Há vários fatores que tornam a vida na cidade grande atraente, mas certamente não é o céu estrelado. Ao contarmos as estrelas numa área rural, chegaremos a números muito superiores aos da cidade, caso esta tenha suas ruas e praças bem iluminadas. Isso porque:",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:a iluminação da cidade ofusca o brilho das estrelas; a esse evento damos o nome de poluição luminosa.",
+		 "B:a poluição do ar em todas as cidades é muito grande e, portanto, o brilhodasestrelaséimpedido de chegar aos nossos olhos.",
+		 "C:o gado na área rural elimina gás metano em quantidade suficiente para destruir a camada de ozônio, causando um buraco na estratosfera, o que facilita a visualização de astros celestes.",
+		 "D:o céu que vemos numa cidade não é o mesmo céu de outra área, mesmo que elas estejam próximas, portanto nunca vemos as mesmas estrelas em cidades diferentes."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "A",
+	 "topic": "Física"
  },
  {
 	 "number": 50,
-	 "initialText": "",
+	 "initialText": "Em um posto de combustível, o preço do litro da gasolina é de R$3,999 e do álcool, R$2,499. Sabendo que os poderes caloríficos típicos e aproximados da gasolina e do álcool são, respectivamente, 7200 e 4600 kcal/litro, qual das alternativas abaixo apresenta o combustível com melhor custo-benefício e sua respectiva justificativa?",
 	 "images": "",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
-		 "A:",
-		 "B:",
-		 "C:",
-		 "D:"
+		 "A:Gasolina, pois gera mais energia com sua combustão.",
+		 "B:Álcool, pois é mais barato.",
+		 "C:Álcool, pois um volume equivalente a R$3,999 apresenta maior energia de combustão que 7200 kcal.",
+		 "D:Gasolina, pois a energia de 70% do seu volume é maior que 4600 kcal."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "C",
+	 "topic": "Física"
  },
-
-
 ]

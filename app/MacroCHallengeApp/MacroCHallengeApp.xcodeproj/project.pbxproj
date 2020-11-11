@@ -28,6 +28,14 @@
 		2F1FCF90254864C60040169E /* MetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF8F254864C60040169E /* MetricsProtocol.swift */; };
 		2F2BADD82548758F00C2F411 /* MetricsViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */; };
 		2F2BADF42548795200C2F411 /* MockMetricsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */; };
+		2F3D7E9D2555BE9E00C2A586 /* LoginViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3D7E9C2555BE9E00C2A586 /* LoginViewImplementation.xib */; };
+		2F3D7EA22555BEDF00C2A586 /* LoginViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EA12555BEDF00C2A586 /* LoginViewImplementation.swift */; };
+		2F3D7EAD2555C39000C2A586 /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EAC2555C39000C2A586 /* LoginViewControllerProtocol.swift */; };
+		2F3D7EAE2555C39000C2A586 /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EAC2555C39000C2A586 /* LoginViewControllerProtocol.swift */; };
+		2F3D7EB32555C3C700C2A586 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EB22555C3C700C2A586 /* LoginViewProtocol.swift */; };
+		2F3D7EB42555C3C700C2A586 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EB22555C3C700C2A586 /* LoginViewProtocol.swift */; };
+		2F3D7EC72555D98200C2A586 /* LoginViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EC62555D98200C2A586 /* LoginViewControllerImplementation.swift */; };
+		2F3D7EC82555D98200C2A586 /* LoginViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EC62555D98200C2A586 /* LoginViewControllerImplementation.swift */; };
 		2F9A67C12535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C22535F446002EE9B2 /* ResultsViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */; };
 		2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */; };
@@ -281,6 +289,12 @@
 		2F1FCF8F254864C60040169E /* MetricsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsProtocol.swift; sourceTree = "<group>"; };
 		2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2F2BADF32548795200C2F411 /* MockMetricsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMetricsImplementation.swift; sourceTree = "<group>"; };
+		2F3D7E972555BCC200C2A586 /* MacroCHallengeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacroCHallengeApp.entitlements; sourceTree = "<group>"; };
+		2F3D7E9C2555BE9E00C2A586 /* LoginViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewImplementation.xib; sourceTree = "<group>"; };
+		2F3D7EA12555BEDF00C2A586 /* LoginViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewImplementation.swift; sourceTree = "<group>"; };
+		2F3D7EAC2555C39000C2A586 /* LoginViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2F3D7EB22555C3C700C2A586 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		2F3D7EC62555D98200C2A586 /* LoginViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C02535F446002EE9B2 /* ResultsViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewImplementation.swift; sourceTree = "<group>"; };
 		2F9A67C62535F46F002EE9B2 /* ResultsViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewImplementation.xib; sourceTree = "<group>"; };
 		2F9A67CC2535FB37002EE9B2 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -441,6 +455,15 @@
 			path = Metrics;
 			sourceTree = "<group>";
 		};
+		2F3D7E9B2555BE2000C2A586 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2F3D7E9C2555BE9E00C2A586 /* LoginViewImplementation.xib */,
+				2F3D7EA12555BEDF00C2A586 /* LoginViewImplementation.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		2F9A67AD2535F219002EE9B2 /* Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +588,7 @@
 		D565EEE6252B813700426648 /* MacroCHallengeApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F3D7E972555BCC200C2A586 /* MacroCHallengeApp.entitlements */,
 				D560D7A8252E25CB000227CA /* Util */,
 				D565EF48252BADA800426648 /* Implementations */,
 				D565EF2C252BAC1C00426648 /* Protocols */,
@@ -629,6 +653,8 @@
 				2F1FCF8F254864C60040169E /* MetricsProtocol.swift */,
 				2FBD62FB254C51DD006A8725 /* ConverterResultsJSONProtocol.swift */,
 				2FBD634F254C9A45006A8725 /* ConverterResultsDataJSONProtocol.swift */,
+				2F3D7EAC2555C39000C2A586 /* LoginViewControllerProtocol.swift */,
+				2F3D7EB22555C3C700C2A586 /* LoginViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -656,6 +682,7 @@
 				2F1FCF44254737920040169E /* NoticeInfoViewControllerImplementation.swift */,
 				2F2BADD72548758F00C2F411 /* MetricsViewControllerImplementation.swift */,
 				C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */,
+				2F3D7EC62555D98200C2A586 /* LoginViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -663,6 +690,7 @@
 		D565EF56252BAF6E00426648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F3D7E9B2555BE2000C2A586 /* Login */,
 				D50719062555B57C0070196D /* History */,
 				2FBD638C2550A039006A8725 /* Misc */,
 				2F1FCF7A254857C10040169E /* Metrics */,
@@ -875,6 +903,7 @@
 			files = (
 				C436ACAA253A337100B18303 /* AnswersCollectionView.xib in Resources */,
 				2F9A67C72535F46F002EE9B2 /* ResultsViewImplementation.xib in Resources */,
+				2F3D7E9D2555BE9E00C2A586 /* LoginViewImplementation.xib in Resources */,
 				547EB58425432EE2008A3DCC /* NoticeInfoTableViewCell.xib in Resources */,
 				4FFF6BF2252F62310015DFE7 /* QuestionImageTableViewCell.xib in Resources */,
 				C460D9BB2548779D008711F3 /* HistoricViewImplementation.xib in Resources */,
@@ -1044,6 +1073,7 @@
 				D586B587252C02EC00F4DF76 /* SchoolViewControllerImplementation.swift in Sources */,
 				2F1FCF7C254857F00040169E /* MetricsViewImplementation.swift in Sources */,
 				2F1FCF3B254733690040169E /* NoticeInfoViewProtocol.swift in Sources */,
+				2F3D7EA22555BEDF00C2A586 /* LoginViewImplementation.swift in Sources */,
 				2F1FCF8625485AE30040169E /* MetricsViewProtocol.swift in Sources */,
 				D59A37812535FB8100AD14F1 /* ResultsPerTopic.swift in Sources */,
 				2F9A67EA253A021A002EE9B2 /* HeaderCollectionReusableView.swift in Sources */,
@@ -1052,10 +1082,12 @@
 				4FFF6BE0252F3D720015DFE7 /* QuestionOptionTableViewCell.swift in Sources */,
 				2FBD62F0254C4FAB006A8725 /* ConverterResultsJSON.swift in Sources */,
 				D586B55E252BE77000F4DF76 /* MockSchoolsImplementation.swift in Sources */,
+				2F3D7EC72555D98200C2A586 /* LoginViewControllerImplementation.swift in Sources */,
 				D59A37662535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				D50719082555DB200070196D /* ConverterTestHeaderJSONswift.swift in Sources */,
 				C4F885C2252F581D008FF2A0 /* OverviewCollectionCell.swift in Sources */,
 				D565EEE8252B813700426648 /* AppDelegate.swift in Sources */,
+				2F3D7EAD2555C39000C2A586 /* LoginViewControllerProtocol.swift in Sources */,
 				D586B578252BFEDB00F4DF76 /* QuestionViewControllerProtocol.swift in Sources */,
 				4FFF6BA7252BA4720015DFE7 /* Test.swift in Sources */,
 				2F1FCF3625472FEC0040169E /* NoticeInfoViewImplementation.swift in Sources */,
@@ -1103,6 +1135,7 @@
 				2F9A67E0253780A5002EE9B2 /* ProgressBarTableViewCell.swift in Sources */,
 				4FFF6BB7252CA6AB0015DFE7 /* QuestionViewImplementation.swift in Sources */,
 				2F1FCF45254737920040169E /* NoticeInfoViewControllerImplementation.swift in Sources */,
+				2F3D7EB32555C3C700C2A586 /* LoginViewProtocol.swift in Sources */,
 				4FAC80EA25377538006F947A /* QuestionHeaderTableViewCell.swift in Sources */,
 				2F1FCF90254864C60040169E /* MetricsProtocol.swift in Sources */,
 				D586B57E252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
@@ -1129,11 +1162,13 @@
 				C465A14E2543204B00805BC7 /* QuestionHeaderTableViewCell.swift in Sources */,
 				D586B57F252BFEEA00F4DF76 /* QuestionViewProtocol.swift in Sources */,
 				D5E603322547411800B96DA4 /* RequestSenderProtocol.swift in Sources */,
+				2F3D7EB42555C3C700C2A586 /* LoginViewProtocol.swift in Sources */,
 				D5F4C9A025377BDD003B568A /* QuestionImageTableViewCell.swift in Sources */,
 				C460D9B52548778B008711F3 /* HistoricViewImplementation.swift in Sources */,
 				D5BCC581252E271200E181CB /* Extensions.swift in Sources */,
 				D5C6C4E9254C6C6600489068 /* HistoricViewControllerProtocol.swift in Sources */,
 				D53985942548706400EB09DA /* NoticeTopicTableViewCell.swift in Sources */,
+				2F3D7EC82555D98200C2A586 /* LoginViewControllerImplementation.swift in Sources */,
 				2FBD636F254CF1F0006A8725 /* ConverterResultsDataJSONTests.swift in Sources */,
 				D5C6C4F5254C6C7000489068 /* MetricsViewControllerImplementation.swift in Sources */,
 				D565EF2F252BAC4C00426648 /* SchoolsViewControllerProtocol.swift in Sources */,
@@ -1202,6 +1237,7 @@
 				C465A07B25429D9700805BC7 /* ConverterQuestionsJSONTests.swift in Sources */,
 				D539858C2548705B00EB09DA /* NoticeInfoViewControllerImplementation.swift in Sources */,
 				D5C6C4E1254C6C4400489068 /* SchoolsServiceManager.swift in Sources */,
+				2F3D7EAE2555C39000C2A586 /* LoginViewControllerProtocol.swift in Sources */,
 				D5276861252CB521003F0C70 /* School.swift in Sources */,
 				D55446F9252F4FE2001793E0 /* ResultsControllerImplementationTests.swift in Sources */,
 				D59A376D2535DF8100AD14F1 /* ResultsData.swift in Sources */,
@@ -1406,14 +1442,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacroCHallengeApp/MacroCHallengeApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZC6LC8NWM;
+				DEVELOPMENT_TEAM = QTB2MSNYGB;
 				INFOPLIST_FILE = MacroCHallengeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tistao.MacroCHallengeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "tistao.MacroChallengeApp-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1426,14 +1463,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacroCHallengeApp/MacroCHallengeApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZC6LC8NWM;
+				DEVELOPMENT_TEAM = QTB2MSNYGB;
 				INFOPLIST_FILE = MacroCHallengeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tistao.MacroCHallengeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "tistao.MacroChallengeApp-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

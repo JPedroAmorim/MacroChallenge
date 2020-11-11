@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import KDCircularProgress
+import AuthenticationServices
 
 class HistoricViewImplementation: UIView, HistoricViewProtocol {
 	// MARK: -IBOutlets

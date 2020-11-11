@@ -94,7 +94,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="VBj-OE-Gac">
             <objects>
-                <tabBarController id="PZ7-LF-48u" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainViewController" id="PZ7-LF-48u" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aVo-kM-U1t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -131,8 +131,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SimuladoIcon" width="19" height="24"/>
-        <image name="SimuladoMetricas" width="29" height="23"/>
+        <image name="SimuladoIcon" width="18.5" height="24"/>
+        <image name="SimuladoMetricas" width="28.5" height="22.5"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

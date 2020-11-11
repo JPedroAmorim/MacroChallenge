@@ -66,6 +66,8 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
                     break
                 }
             }
+        } else {
+            self.pushLoginView()
         }
     }
     

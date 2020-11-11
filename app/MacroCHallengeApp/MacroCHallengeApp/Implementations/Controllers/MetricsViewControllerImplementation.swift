@@ -78,7 +78,7 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
      */
     
     private func pushLoginView() {
-        let controller = LoginViewControllerImplementation()
+        let controller = LoginViewControllerImplementation(message: "Métricas Gerais")
         if let navController = self.navigationController {
             navController.pushViewController(controller, animated: false)
         }

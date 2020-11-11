@@ -8,21 +8,19 @@
 import UIKit
 import AuthenticationServices
 
-class LoginViewImplementation: UIView, LoginViewProtocol {
+class LoginViewImplementation: UIView, LoginViewProtocol {    
     // MARK: -IBOutlet
     @IBOutlet weak var loginProviderStackView: UIStackView!
+    @IBOutlet weak var labelMessage: UILabel!
     
     // MARK: - Dependencies
     var viewController: LoginViewControllerProtocol
-    
-    // MARK: - Private attributes
-    
-    
+
     // MARK: - Init methods
-    required init(controller: LoginViewControllerProtocol) {
+    required init(message: String, controller: LoginViewControllerProtocol) {
         self.viewController = controller
         super.init(frame: CGRect.zero)
-        initFromNib()
+        initFromNib(message: message)
         setupProviderLoginView()
     }
     
@@ -30,12 +28,13 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func initFromNib() {
+    private func initFromNib(message: String) {
         if let nib = Bundle.main.loadNibNamed("LoginViewImplementation", owner: self, options: nil),
            let nibView = nib.first as? UIView {
             nibView.frame = bounds
             nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             addSubview(nibView)
+            self.labelMessage.text = message
         }
     }
     

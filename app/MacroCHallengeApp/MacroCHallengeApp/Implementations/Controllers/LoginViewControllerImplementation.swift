@@ -13,23 +13,18 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
     var myView: LoginViewProtocol?
     let requestSender = RequestSenderImplementation()
     
-    // MARK: - Private attributes
-    
-    
     // MARK: - Lifecycle methods
-    required init() {
+    required init(message: String) {
         super.init(nibName: nil, bundle: nil)
-        self.view = LoginViewImplementation(controller: self)
+        self.view = LoginViewImplementation(message: "Para ver \(message), faça o login com sua conta Apple :)", controller: self)
         let backButton = UIBarButtonItem(title: "", style: .plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
+        navigationItem.title = message
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Setup methods
-    
     
     // MARK: - LoginViewControllerProtocol methods
     func addNewUser(_ userIdentifier: String) {

@@ -18,6 +18,7 @@ class RequestSenderImplementation: RequestSenderProtocol {
     private var parserForTestHeader = ConverterTestHeaderJSON()
     
     func getSchoolAndTestHeaders(completion: @escaping([School]?, String?) -> Void) {
+        
         guard let url = URL(string: rootBackendURL + "/schools") else {
             completion(nil, "Erro ao decodificar a URL")
             return
@@ -100,7 +101,13 @@ class RequestSenderImplementation: RequestSenderProtocol {
     }
     
     func getQuestionsAndAnsweredQuestions(testName: String, testYear: String, completion: @escaping ([Question]?, [String: String]?, String?) -> Void) {
-        guard let url = URL(string: rootBackendURL + "tests/test-result?testName=\(testName)&testYear=\(testYear)") else {
+        
+        guard let userId = UserDefaults.standard.integer(forKey: "UserId") ?? nil else {
+            completion(nil, nil, "Erro ao recuperar user id")
+            return
+        }
+        
+        guard let url = URL(string: rootBackendURL + "tests/test-result?testName=\(testName)&testYear=\(testYear)&userId=\(userId)") else {
             completion(nil, nil, "Erro ao decodificar a URL")
             return
         }
@@ -128,7 +135,13 @@ class RequestSenderImplementation: RequestSenderProtocol {
     }
     
     func postResultsForTest(testName: String, testYear: String, results: ResultsData, completion: @escaping (String?) -> Void) {
-        guard let url = URL(string: rootBackendURL + "results") else {
+        
+        guard let userId = UserDefaults.standard.integer(forKey: "UserId") ?? nil else {
+            completion("Erro ao recuperar user id")
+            return
+        }
+        
+        guard let url = URL(string: rootBackendURL + "results?userId=\(userId)") else {
             completion("Erro ao decodificar a URL")
             return
         }

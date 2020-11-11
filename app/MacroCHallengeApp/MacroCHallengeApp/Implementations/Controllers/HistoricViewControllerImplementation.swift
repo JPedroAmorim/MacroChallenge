@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 class HistoricViewControllerImplementation: UIViewController,  HistoricViewControllerProtocol, OverviewViewControllerProtocol {
+    // MARK: - Variables
+    var isLoggedIn = false
     
     // MARK: - OverviewViewProtocol methods
     required init(data: Test) {
@@ -42,10 +45,12 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
+        if isLoggedIn {
         let defaultUIView = UIView(frame: CGRect.zero)
         defaultUIView.backgroundColor = .green
         self.view = defaultUIView
         setupDefaultSchoolsImplementation()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +60,54 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userIsLoggedIn()
         navigationItem.title = "Histórico"
+    }
+    
+    // MARK: - Private Methods
+    
+    /**
+     
+     Método responsável verifica se o usuário já logou antes ou não.
+     
+     - return: true se o usuário está logado, false caso contrário.
+     
+     */
+    private func userIsLoggedIn() {
+        if let userIdentifier = UserDefaults.standard.string(forKey: "User") {
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
+            appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState, error) in
+                switch credentialState {
+                case .authorized:
+                    DispatchQueue.main.async {
+                        self.setupDefaultSchoolsImplementation()
+                        self.setupDefaultViewImplementation()
+                        self.isLoggedIn = true
+                    }
+                case .revoked, .notFound:
+                    DispatchQueue.main.async {
+                        self.pushLoginView()
+                    }
+                default:
+                    break
+                }
+            }
+        } else {
+            self.pushLoginView()
+        }
+    }
+    
+    /**
+     
+     Método responsável que mostra a tela de login apenas quando o usuário na oestá logado.
+     
+     */
+    
+    private func pushLoginView() {
+        let controller = LoginViewControllerImplementation(message: "Histórico")
+        if let navController = self.navigationController {
+            navController.pushViewController(controller, animated: false)
+        }
     }
     
     // MARK: - Setup methods

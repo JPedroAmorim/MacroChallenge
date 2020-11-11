@@ -3,7 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
+                <outlet property="labelMessage" destination="HgM-sZ-kwZ" id="1Ku-3r-X6m"/>
                 <outlet property="loginProviderStackView" destination="LfE-l1-dZo" id="PUh-eJ-tr0"/>
             </connections>
         </placeholder>
@@ -19,24 +20,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para ver suas métricas, faça o login com sua conta Apple :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-sZ-kwZ">
+                    <rect key="frame" x="41.333333333333343" y="278.66666666666669" width="331.33333333333326" height="57.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfE-l1-dZo">
-                    <rect key="frame" x="107" y="313" width="200" height="110"/>
+                    <rect key="frame" x="41.333333333333343" y="368" width="331.33333333333326" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="MpV-y2-NF3"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LfE-l1-dZo" secondAttribute="trailing" constant="107" id="96M-Mx-w1Y"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LfE-l1-dZo" secondAttribute="bottom" constant="313" id="Bup-I5-ctx"/>
-                <constraint firstItem="LfE-l1-dZo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="107" id="Do1-Uu-8Jm"/>
-                <constraint firstItem="LfE-l1-dZo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="313" id="oNF-03-29L"/>
+                <constraint firstItem="LfE-l1-dZo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="H4V-aU-cuC"/>
+                <constraint firstItem="HgM-sZ-kwZ" firstAttribute="trailing" secondItem="LfE-l1-dZo" secondAttribute="trailing" id="ZrU-3U-74p"/>
+                <constraint firstItem="HgM-sZ-kwZ" firstAttribute="leading" secondItem="LfE-l1-dZo" secondAttribute="leading" id="jcc-8m-C0K"/>
+                <constraint firstItem="LfE-l1-dZo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="32" id="l9N-JF-tQQ"/>
+                <constraint firstItem="LfE-l1-dZo" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="quT-PI-Izj"/>
+                <constraint firstItem="LfE-l1-dZo" firstAttribute="top" secondItem="HgM-sZ-kwZ" secondAttribute="bottom" constant="32" id="zZq-aW-vUT"/>
             </constraints>
             <point key="canvasLocation" x="141" y="88"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

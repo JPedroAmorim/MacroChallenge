@@ -15,7 +15,7 @@ protocol LoginViewProtocol {
      - parameter viewController: Um controlador do tipo LoginViewControllerProtocol.
      
      */
-    init(controller: LoginViewControllerProtocol)
+    init(message: String, controller: LoginViewControllerProtocol)
     
     // Dependências
     var viewController: LoginViewControllerProtocol {get set}

@@ -15,30 +15,27 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     var metrics: MetricsProtocol?
     let requestSender = RequestSenderImplementation()
     
+    // MARK: - Variables
+    var isLoggedIn = false
+    
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
-        
-        if userIsLoggedIn() {
+        if isLoggedIn {
             getRequest()
-        } else {
-            pushLoginView()
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userIsLoggedIn()
         navigationItem.title = "Métricas Gerais"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        if userIsLoggedIn() {
+        if isLoggedIn {
             getRequest()
-        } else {
-            pushLoginView()
         }
     }
     
@@ -51,27 +48,21 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     - return: true se o usuário está logado, false caso contrário.
      
      */
-    private func userIsLoggedIn() -> Bool {
-        var result = false
-        
-        if let userIdentifier = UserDefaults.standard.string(forKey: "User"){
+    private func userIsLoggedIn() {
+        if let userIdentifier = UserDefaults.standard.string(forKey: "User") {
             let appleIDProvider = ASAuthorizationAppleIDProvider()
             appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState, error) in
                 switch credentialState {
                 case .authorized:
-                    // The Apple ID credential is valid.
-                    result = true
-                    break
+                    self.getRequest()
+                    self.isLoggedIn = true
                 case .revoked, .notFound:
-                    // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
-                    result = false
+                    self.pushLoginView()
                 default:
                     break
                 }
             }
         }
-        
-        return result
     }
     
     /**

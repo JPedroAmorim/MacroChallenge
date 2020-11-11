@@ -42,6 +42,9 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
+        let defaultUIView = UIView(frame: CGRect.zero)
+        defaultUIView.backgroundColor = .green
+        self.view = defaultUIView
         setupDefaultSchoolsImplementation()
     }
     
@@ -58,6 +61,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     // MARK: - Setup methods
     private func setupDefaultSchoolsImplementation() {
         self.schools = SchoolsServiceManager()
+        
     }
     
     private func setupDefaultViewImplementation() {
@@ -69,26 +73,41 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     }
     
     private func getDataForViewAndSetupView() {
-        print("hi")
         
-        self.view = LoadingView(message: "Carregando as provas realizadas...",
-                                error: false)
+        // Display loading
+        let loadingView = LoadingView(message: "Carregando as provas realizadas...",
+                                      error: false,
+                                      frame: self.view.frame)
         
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+        self.view.bringSubviewToFront(loadingView)
         
+        // Send request
         requestSender.getSchoolAndTestHeaders { schools, error in
-            print("get")
+            
+            // Remove loading view
+            loadingView.removeFromSuperview()
             
             guard let schoolsArray = schools else {
+                
+                // Display error message
                 let errorView = LoadingView(message: "Erro ao carregar as escolas :(",
-                                            error: true)
-                self.view = errorView
+                                            error: true,
+                                            frame: self.view.frame)
+                self.view.addSubview(errorView)
                 return
             }
-            
-            let schoolsArrayFiltered = schoolsArray.filter {$0.tests.first?.numberOfCorrectAnswersForLastResult != -1}
-            
-            self.view = HistoricViewImplementation(data: schoolsArrayFiltered, controller: self)
 
+            // Process return
+            let schoolsArrayFiltered = schoolsArray.filter {$0.tests.first?.numberOfCorrectAnswersForLastResult != -1}
+
+            // Display historic view
+            let historicView = HistoricViewImplementation(data: schoolsArrayFiltered, controller: self)
+            historicView.frame = self.view.frame
+
+            self.view.addSubview(historicView)
+            self.view.bringSubviewToFront(historicView)
         }
     }
     
@@ -99,7 +118,9 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     func testWasSubmitted(_ test: TestHeader) {
         let historicView = self.view
         self.view = LoadingView(message: "Carregando sua prova ...",
-                                error: false)
+                                error: false,
+                                frame: CGRect.zero)
+        
         requestSender.getQuestionsAndAnsweredQuestions(testName: test.name , testYear: test.year) { questions, answeredQuestions, error in
             if let testQuestions = questions, let answeredQuestionsForTest = answeredQuestions {
                 let testFromTestHeader = Test(name: test.name, year: test.year, questions: testQuestions)
@@ -118,7 +139,8 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
             } else {
                 if let navController = self.navigationController {
                     let errorView = LoadingView(message: "Erro ao carregar sua prova :(",
-                                                error: true)
+                                                error: true,
+                                                frame: CGRect.zero)
                     let vc = UIViewController()
                     vc.view = errorView
                     navController.pushViewController(vc, animated: false)

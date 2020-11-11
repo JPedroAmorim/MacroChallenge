@@ -42,12 +42,14 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
     
     private func getDataForViewAndSetupView() {
         self.view = LoadingView(message: "Carregando as escolas...",
-                                error: false)
+                                error: false,
+                                frame: CGRect.zero)
         
         requestSender.getSchoolAndTestHeaders { schools, error in 
             guard let schoolsArray = schools else {
                 let errorView = LoadingView(message: "Erro ao carregar as escolas :(",
-                                            error: true)
+                                            error: true,
+                                            frame: CGRect.zero)
                 self.view = errorView
                 return
             }

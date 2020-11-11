@@ -15,9 +15,9 @@ class LoadingView: UIView {
     @IBOutlet weak var lblErrorMessage: UILabel!
     
     // MARK: - Lifecycle
-    required init(message: String, error: Bool) {
+    required init(message: String, error: Bool, frame: CGRect) {
     
-        super.init(frame: CGRect.zero)
+        super.init(frame: frame)
         
         if let nib = Bundle.main.loadNibNamed("LoadingView", owner: self, options: nil), let nibView = nib.first as? UIView {
             nibView.frame = bounds

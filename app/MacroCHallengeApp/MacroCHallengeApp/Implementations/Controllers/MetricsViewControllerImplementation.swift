@@ -46,7 +46,8 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     private func getRequest() {
         
         self.view = LoadingView(message: "Carregando suas métricas ...",
-                                error: false)
+                                error: false,
+                                frame: CGRect.zero)
         requestSender.getAccumulatedResults(completion: {generalResults, topicsResults, err in
 
             if let general = generalResults, let topics = topicsResults {
@@ -55,7 +56,8 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
                 self.view = defaultView
             } else {
                 self.view = LoadingView(message: "Falha ao carregar suas métricas :(",
-                                        error: true)
+                                        error: true,
+                                        frame: CGRect.zero)
             }
             
         })

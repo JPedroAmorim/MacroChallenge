@@ -334,7 +334,7 @@
 		C436ACA4253A336C00B18303 /* AnswersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersCollectionView.swift; sourceTree = "<group>"; };
 		C436ACA9253A337100B18303 /* AnswersCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswersCollectionView.xib; sourceTree = "<group>"; };
 		C44560D12535F292007D945C /* HorizontalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartView.swift; sourceTree = "<group>"; };
-		C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerImplementation.swift; sourceTree = "<group>"; };
+		C460D99025486DE8008711F3 /* HistoricViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerImplementation.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C460D99B25486FD4008711F3 /* HistoricViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C460D9B32548778B008711F3 /* HistoricViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewImplementation.swift; sourceTree = "<group>"; };
 		C460D9BA2548779D008711F3 /* HistoricViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricViewImplementation.xib; sourceTree = "<group>"; };

@@ -48,7 +48,8 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     func testWasSubmitted(_ test: TestHeader) {
         let historicView = self.view
         self.view = LoadingView(message: "Carregando a prova ...",
-                                error: false)
+                                error: false,
+                                frame: CGRect.zero)
         requestSender.getQuestionsForTestRequest(
             testName: test.name,
             testYear: test.year,
@@ -64,7 +65,8 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
                 } else {
                     if let navController = self.navigationController {
                         let errorView = LoadingView(message: "Erro ao carregar a prova :(",
-                                                    error: true)
+                                                    error: true,
+                                                    frame: CGRect.zero)
                         let vc = UIViewController()
                         vc.view = errorView
                         navController.pushViewController(vc, animated: false)
@@ -79,7 +81,8 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
     func questionWasSubmitted(topic: String) {
         let historicView = self.view
         self.view = LoadingView(message: "Carregando a prova ...",
-                                error: false)
+                                error: false,
+                                frame: CGRect.zero)
         
         var errorHasOcurred = false
         
@@ -124,7 +127,8 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
                     } else {
                         if let navController = self.navigationController {
                             let errorView = LoadingView(message: "Erro ao carregar a questões :(",
-                                                        error: true)
+                                                        error: true,
+                                                        frame: CGRect.zero)
                             let vc = UIViewController()
                             vc.view = errorView
                             navController.pushViewController(vc, animated: false)

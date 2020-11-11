@@ -45,7 +45,7 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
      
      Método responsável verifica se o usuário já logou antes ou não.
      
-    - return: true se o usuário está logado, false caso contrário.
+     - return: true se o usuário está logado, false caso contrário.
      
      */
     private func userIsLoggedIn() {
@@ -54,10 +54,14 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
             appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState, error) in
                 switch credentialState {
                 case .authorized:
-                    self.getRequest()
-                    self.isLoggedIn = true
+                    DispatchQueue.main.async {
+                        self.getRequest()
+                        self.isLoggedIn = true
+                    }
                 case .revoked, .notFound:
-                    self.pushLoginView()
+                    DispatchQueue.main.async {
+                        self.pushLoginView()
+                    }
                 default:
                     break
                 }
@@ -96,7 +100,7 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
         self.view = LoadingView(message: "Carregando suas métricas ...",
                                 error: false)
         requestSender.getAccumulatedResults(completion: {generalResults, topicsResults, err in
-
+            
             if let general = generalResults, let topics = topicsResults {
                 let defaultView = MetricsViewImplementation(generalResults: general, topicsResults: topics, controller: self)
                 self.myView = defaultView

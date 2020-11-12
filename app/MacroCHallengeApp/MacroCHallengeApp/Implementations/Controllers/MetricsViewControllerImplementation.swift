@@ -21,22 +21,16 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
-        if isLoggedIn {
-            getRequest()
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userIsLoggedIn()
         navigationItem.title = "Métricas Gerais"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if isLoggedIn {
-            getRequest()
-        }
+        self.userIsLoggedIn()
     }
     
     // MARK: - Private Methods
@@ -80,7 +74,7 @@ class MetricsViewControllerImplementation: UIViewController, MetricsViewControll
     private func pushLoginView() {
         let controller = LoginViewControllerImplementation(message: "Métricas Gerais")
         if let navController = self.navigationController {
-            navController.pushViewController(controller, animated: false)
+            navController.setViewControllers([controller], animated: false)
         }
     }
     

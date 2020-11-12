@@ -219,6 +219,8 @@
 		D59E8309252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
 		D59E830A252E2E67007E8CBD /* OverviewViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59E8308252E2E67007E8CBD /* OverviewViewImplementation.xib */; };
 		D5A71ABC254C42250085ABCD /* NoticeViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FCF282541CFB20040169E /* NoticeViewControllerImplementation.swift */; };
+		D5B49C64255D774B00AD0755 /* LoginViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D7EA12555BEDF00C2A586 /* LoginViewImplementation.swift */; };
+		D5B49C68255D778600AD0755 /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DE0352555BEED00D7BCAD /* QuestionsTableViewCell.swift */; };
 		D5BCC580252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5BCC581252E271200E181CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCC57F252E271200E181CB /* Extensions.swift */; };
 		D5C6C4E1254C6C4400489068 /* SchoolsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEFFD3254AFFB6001BE984 /* SchoolsServiceManager.swift */; };
@@ -1178,6 +1180,7 @@
 				D5C6C501254C6D0C00489068 /* NoticeMock.swift in Sources */,
 				D539857C2548700800EB09DA /* Notice.swift in Sources */,
 				D5C6C4F1254C6C6D00489068 /* HistoricViewControllerImplementation.swift in Sources */,
+				D5B49C68255D778600AD0755 /* QuestionsTableViewCell.swift in Sources */,
 				D59A37672535DE7F00AD14F1 /* ResultsViewProtocol.swift in Sources */,
 				D527685D252CB51E003F0C70 /* Test.swift in Sources */,
 				D5276865252CB524003F0C70 /* Question.swift in Sources */,
@@ -1211,6 +1214,7 @@
 				D5C6C505254C6D3000489068 /* MetricsViewImplementation.swift in Sources */,
 				D59E82FA252E2E17007E8CBD /* OverviewViewControllerProtocol.swift in Sources */,
 				C465A11025431EB400805BC7 /* HeaderCollectionReusableView.swift in Sources */,
+				D5B49C64255D774B00AD0755 /* LoginViewImplementation.swift in Sources */,
 				D565EF51252BAF5600426648 /* SchoolsViewImplementation.swift in Sources */,
 				2FBD632C254C6B01006A8725 /* ConverterResultsJSONTests.swift in Sources */,
 				D5276859252CB305003F0C70 /* MockSchoolsImplementationTests.swift in Sources */,

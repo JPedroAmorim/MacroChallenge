@@ -8,10 +8,13 @@
 import XCTest
 
 class RequestSenderImplementationTests: XCTestCase {
+    
     // MARK: - Test subject
     let testSubject = RequestSenderImplementation()
 
-    override func setUpWithError() throws {}
+    override func setUpWithError() throws {
+        UserDefaults.standard.set("123", forKey: "User")
+    }
 
     override func tearDownWithError() throws {}
     
@@ -33,7 +36,7 @@ class RequestSenderImplementationTests: XCTestCase {
         }
         
         // When
-        testSubject.getQuestionsForTestRequest(testName: "cotuca2019", testYear: "2019", completion: completionHandler)
+        testSubject.getQuestionsForTestRequest(testName: "cotuca2020", testYear: "2020", completion: completionHandler)
 
         // Then
         wait(for: [responseExpectation], timeout: 10.0)
@@ -73,8 +76,28 @@ class RequestSenderImplementationTests: XCTestCase {
                                       wrongAnswers: [4, 5, 6])
         
         // When
-        testSubject.postResultsForTest(testName: "cotuca2019", testYear: "2019", results: mockResults, completion: completionHandler)
+        testSubject.postResultsForTest(testName: "cotuca2020", testYear: "2020", results: mockResults, completion: completionHandler)
 
+        // Then
+        wait(for: [responseExpectation], timeout: 5.0)
+    }
+    
+    func testGetAccumulatedResults_whenBackendIsUpAndUserRegistered_shouldReturnResults() {
+        // Given
+         let responseExpectation = XCTestExpectation(description: "Results were properply catched")
+        
+        let completionHandler: (ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void = { result, results, error in
+            guard let resultsPerTopic = result, let resultsPerTopicArray = results else {
+                XCTFail("Error ocurred with message \(error!)")
+                return
+            }
+            
+            responseExpectation.fulfill()
+        }
+        
+        // When
+        testSubject.getAccumulatedResults(completion: completionHandler)
+        
         // Then
         wait(for: [responseExpectation], timeout: 5.0)
     }

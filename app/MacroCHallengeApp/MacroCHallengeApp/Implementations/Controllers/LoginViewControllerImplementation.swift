@@ -66,9 +66,7 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
                 
             }
             
-            let trimmedUserId = userIdentifier.trimmingCharacters(in: CharacterSet(charactersIn: "."))
-            
-            UserDefaults.standard.set(trimmedUserId, forKey: "User")
+            UserDefaults.standard.set(userIdentifier, forKey: "User")
             
             self.navigationController?.popViewController(animated: true)
             if let item = self.tabBarController?.selectedIndex {

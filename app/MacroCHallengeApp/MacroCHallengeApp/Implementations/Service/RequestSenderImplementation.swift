@@ -20,7 +20,7 @@ class RequestSenderImplementation: RequestSenderProtocol {
     
     
     func addNewUser(userId: String, completion: @escaping(String?) -> Void) {
-        let trimmedUserId = userId.trimmingCharacters(in: CharacterSet(charactersIn: "."))
+        let trimmedUserId = userId.replacingOccurrences(of: ".", with: "")
         
         guard let url = URL(string: rootBackendURL + "/login") else {
             completion("Erro ao decodificar a URL")
@@ -58,7 +58,14 @@ class RequestSenderImplementation: RequestSenderProtocol {
     }
     
     func getAccumulatedResults(completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
-        guard let url = URL(string: rootBackendURL + "results/accumulated-results") else {
+        guard let userId = UserDefaults.standard.string(forKey: "User") else {
+            completion(nil, nil, "Erro ao recuperar user id")
+            return
+        }
+       
+      let trimmedUserId = userId.replacingOccurrences(of: ".", with: "")
+        
+        guard let url = URL(string: rootBackendURL + "results/accumulated-results?userId=\(trimmedUserId)") else {
             completion(nil, nil, "Erro ao decodificar a URL")
             return
         }
@@ -128,7 +135,9 @@ class RequestSenderImplementation: RequestSenderProtocol {
             return
         }
         
-        guard let url = URL(string: rootBackendURL + "tests/test-result?testName=\(testName)&testYear=\(testYear)&userId=\(userId)") else {
+        let trimmedUserId = userId.replacingOccurrences(of: ".", with: "")
+        
+        guard let url = URL(string: rootBackendURL + "tests/test-result?testName=\(testName)&testYear=\(testYear)&userId=\(trimmedUserId)") else {
             completion(nil, nil, "Erro ao decodificar a URL")
             return
         }
@@ -162,11 +171,12 @@ class RequestSenderImplementation: RequestSenderProtocol {
             return
         }
         
-        guard let url = URL(string: rootBackendURL + "results?userId=\(userId)") else {
+        let trimmedUserId = userId.replacingOccurrences(of: ".", with: "")
+        
+        guard let url = URL(string: rootBackendURL + "results?userId=\(trimmedUserId)") else {
             completion("Erro ao decodificar a URL")
             return
         }
-       
 
         let requestBody : [String: String] = ["testName": testName,
                                              "testYear": testYear,

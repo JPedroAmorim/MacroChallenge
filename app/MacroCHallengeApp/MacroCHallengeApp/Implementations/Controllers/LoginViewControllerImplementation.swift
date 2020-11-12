@@ -26,6 +26,29 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let item = tabBarController?.selectedIndex {
+            var controller = UIViewController()
+            
+            switch item {
+            case 1: // Métricas Gerais
+                controller = MetricsViewControllerImplementation()
+                break
+            case 2: // Histórico
+                controller = HistoricViewControllerImplementation()
+                break
+            default:
+                print("Another tab was selected")
+            }
+            
+            if let navController = self.navigationController {
+                navController.setViewControllers([controller], animated: false)
+            }
+        }
+    }
+    
     // MARK: - Private Methods
     /**
      
@@ -35,21 +58,21 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
      
      */
     private func pushController(_ item: Int) {
+        var controller = UIViewController()
+        
         switch item {
         case 1: // Métricas Gerais
-            let controller = MetricsViewControllerImplementation()
-            if let navController = self.navigationController {
-                navController.setViewControllers([controller], animated: false)
-            }
+            controller = MetricsViewControllerImplementation()
             break
         case 2: // Histórico
-            let controller = HistoricViewControllerImplementation()
-            if let navController = self.navigationController {
-                navController.setViewControllers([controller], animated: false)
-            }
+            controller = HistoricViewControllerImplementation()
             break
         default:
             print("Another tab was selected")
+        }
+        
+        if let navController = self.navigationController {
+            navController.setViewControllers([controller], animated: false)
         }
     }
     

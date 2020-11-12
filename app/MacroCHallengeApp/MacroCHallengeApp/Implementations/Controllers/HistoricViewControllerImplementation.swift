@@ -51,24 +51,15 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
-        if isLoggedIn {
-            let defaultUIView = UIView(frame: CGRect.zero)
-            defaultUIView.backgroundColor = .green
-            self.view = defaultUIView
-            setupDefaultSchoolsImplementation()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if isLoggedIn {
-            getDataForViewAndSetupView()
-        }
+        self.userIsLoggedIn()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userIsLoggedIn()
         navigationItem.title = "Histórico"
     }
     
@@ -88,8 +79,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
                 switch credentialState {
                 case .authorized:
                     DispatchQueue.main.async {
-                        self.setupDefaultSchoolsImplementation()
-                        self.setupDefaultViewImplementation()
+                        self.getDataForViewAndSetupView()
                         self.isLoggedIn = true
                     }
                 case .revoked, .notFound:
@@ -114,7 +104,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     private func pushLoginView() {
         let controller = LoginViewControllerImplementation(message: "Histórico")
         if let navController = self.navigationController {
-            navController.pushViewController(controller, animated: false)
+            navController.setViewControllers([controller], animated: false)
         }
     }
     

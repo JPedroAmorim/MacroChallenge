@@ -18,6 +18,26 @@ class RequestSenderImplementation: RequestSenderProtocol {
     private var parserForTestResults = ConverterResultsDataJSON()
     private var parserForTestHeader = ConverterTestHeaderJSON()
     
+    
+    func addNewUser(userId: String, completion: @escaping(String?) -> Void) {
+        let trimmedUserId = userId.trimmingCharacters(in: CharacterSet(charactersIn: "."))
+        
+        guard let url = URL(string: rootBackendURL + "/login") else {
+            completion("Erro ao decodificar a URL")
+            return
+        }
+        
+        let requestBody = ["userId" : trimmedUserId]
+        
+        sendPostRequestForUrl(url: url, requestBody: requestBody) {  error in
+            if let errorMessage = error {
+                completion(errorMessage)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
     func getSchoolAndTestHeaders(completion: @escaping([School]?, String?) -> Void) {
         
         guard let url = URL(string: rootBackendURL + "/schools") else {
@@ -233,11 +253,5 @@ class RequestSenderImplementation: RequestSenderProtocol {
         return resultString
     }
     
-    func addNewAccount(user: ASPasswordCredential, completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
-        
-    }
     
-    func getAccountExistance(user: ASPasswordCredential, completion: @escaping(ResultsPerTopic?, [String : ResultsPerTopic]?, String?) -> Void) {
-        
-    }
 }

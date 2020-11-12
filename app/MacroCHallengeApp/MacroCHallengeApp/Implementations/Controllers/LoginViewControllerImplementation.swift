@@ -56,12 +56,25 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
     // MARK: - LoginViewControllerProtocol methods
     func addNewUser(_ userIdentifier: String) {
         // Adicionando usuário no UserDefaults
-        UserDefaults.standard.set(userIdentifier, forKey: "User")
         
-        
-        self.navigationController?.popViewController(animated: true)
-        if let item = tabBarController?.selectedIndex {
-            pushController(item)
+        requestSender.addNewUser(userId: userIdentifier) { error in
+            
+            if error != nil {
+                let alert = UIAlertController(title: "Erro ao tentar realizar login", message: "Usuário já existe ou falha na conexão.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+            let trimmedUserId = userIdentifier.trimmingCharacters(in: CharacterSet(charactersIn: "."))
+            
+            UserDefaults.standard.set(trimmedUserId, forKey: "User")
+            
+            self.navigationController?.popViewController(animated: true)
+            if let item = self.tabBarController?.selectedIndex {
+                self.pushController(item)
+            }
+            
         }
     }
     

@@ -45,7 +45,7 @@ class SchoolsViewControllerImplementation: UIViewController, SchoolsViewControll
                                 error: false,
                                 frame: CGRect.zero)
         
-        requestSender.getSchoolAndTestHeaders(shouldHaveUserId: true) { schools, error in
+        requestSender.getSchoolAndTestHeaders(shouldHaveUserId: false) { schools, error in
             guard let schoolsArray = schools else {
                 let errorView = LoadingView(message: "Erro ao carregar as escolas :(",
                                             error: true,

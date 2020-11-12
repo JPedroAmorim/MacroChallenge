@@ -134,7 +134,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
         self.view.bringSubviewToFront(loadingView)
         
         // Send request
-        requestSender.getSchoolAndTestHeaders(shouldHaveUserId: false) { schools, error in
+        requestSender.getSchoolAndTestHeaders(shouldHaveUserId: true) { schools, error in
             
             // Remove loading view
             loadingView.removeFromSuperview()
@@ -142,7 +142,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
             guard let schoolsArray = schools else {
                 
                 // Display error message
-                let errorView = LoadingView(message: "Erro ao carregar as escolas :(",
+                let errorView = LoadingView(message: "Erro ao carregar as provas realizadas :(",
                                             error: true,
                                             frame: self.view.frame)
                 self.view.addSubview(errorView)

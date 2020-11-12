@@ -38,9 +38,23 @@ class RequestSenderImplementation: RequestSenderProtocol {
         }
     }
     
-    func getSchoolAndTestHeaders(completion: @escaping([School]?, String?) -> Void) {
+    func getSchoolAndTestHeaders(shouldHaveUserId: Bool, completion: @escaping([School]?, String?) -> Void) {
+        var urlString = ""
         
-        guard let url = URL(string: rootBackendURL + "/schools") else {
+        if shouldHaveUserId {
+            guard let userId = UserDefaults.standard.string(forKey: "User") else {
+                completion(nil, "Erro ao recuperar user id")
+                return
+            }
+            
+            let trimmedUserId = userId.replacingOccurrences(of: ".", with: "")
+            
+            urlString = rootBackendURL + "/schools?userId=\(trimmedUserId)"
+        } else {
+            urlString = rootBackendURL + "/schools?userId=-1"
+        }
+        
+        guard let url = URL(string: urlString) else {
             completion(nil, "Erro ao decodificar a URL")
             return
         }

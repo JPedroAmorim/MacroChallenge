@@ -134,7 +134,7 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
         self.view.bringSubviewToFront(loadingView)
         
         // Send request
-        requestSender.getSchoolAndTestHeaders { schools, error in
+        requestSender.getSchoolAndTestHeaders(shouldHaveUserId: false) { schools, error in
             
             // Remove loading view
             loadingView.removeFromSuperview()

@@ -43,10 +43,10 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
             }
             break
         case 2: // Histórico
-//            let controller = HistoricViewControllerImplementation(coder: <#T##NSCoder#>)
-//            if let navController = self.navigationController {
-//                navController.pushViewController(controller, animated: false)
-//            }
+            let controller = HistoricViewControllerImplementation()
+            if let navController = self.navigationController {
+                navController.pushViewController(controller, animated: false)
+            }
             break
         default:
             print("Another tab was selected")

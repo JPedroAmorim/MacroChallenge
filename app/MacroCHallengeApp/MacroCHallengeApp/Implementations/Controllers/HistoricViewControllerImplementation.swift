@@ -9,10 +9,16 @@ import UIKit
 import AuthenticationServices
 
 class HistoricViewControllerImplementation: UIViewController,  HistoricViewControllerProtocol, OverviewViewControllerProtocol {
+   
+    
     // MARK: - Variables
     var isLoggedIn = false
     
     // MARK: - OverviewViewProtocol methods
+    required init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     required init(data: Test) {
         super.init(nibName: nil, bundle: nil)
     }

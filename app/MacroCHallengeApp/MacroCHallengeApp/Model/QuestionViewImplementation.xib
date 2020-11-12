@@ -45,8 +45,8 @@
                                 <action selector="submitNext:" destination="-1" eventType="touchUpInside" id="JCJ-BE-ISU"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-Lm-Tq4" userLabel="btnFinish">
-                            <rect key="frame" x="273" y="13" width="117" height="34"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-Lm-Tq4" userLabel="btnFinish">
+                            <rect key="frame" x="207" y="13" width="183" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="Finalizar Prova"/>
                             <connections>
@@ -61,6 +61,7 @@
                         <constraint firstItem="FaO-zy-Mvh" firstAttribute="centerY" secondItem="C6A-Cl-Jl9" secondAttribute="centerY" id="8Ie-Rt-V9I"/>
                         <constraint firstItem="xkh-Lm-Tq4" firstAttribute="trailing" secondItem="Q3s-74-Zs0" secondAttribute="trailing" id="FnM-WZ-rwK"/>
                         <constraint firstItem="Q3s-74-Zs0" firstAttribute="centerY" secondItem="C6A-Cl-Jl9" secondAttribute="centerY" id="OJW-my-32T"/>
+                        <constraint firstItem="xkh-Lm-Tq4" firstAttribute="leading" secondItem="Q3s-74-Zs0" secondAttribute="leading" id="QnD-d7-Ik7"/>
                         <constraint firstItem="xkh-Lm-Tq4" firstAttribute="centerY" secondItem="Q3s-74-Zs0" secondAttribute="centerY" id="SfJ-JX-zad"/>
                         <constraint firstItem="Q3s-74-Zs0" firstAttribute="leading" secondItem="FaO-zy-Mvh" secondAttribute="trailing" id="UH5-ff-MqM"/>
                         <constraint firstItem="Q3s-74-Zs0" firstAttribute="leading" secondItem="C6A-Cl-Jl9" secondAttribute="trailing" multiplier="0.5" id="eqW-4x-jKm"/>

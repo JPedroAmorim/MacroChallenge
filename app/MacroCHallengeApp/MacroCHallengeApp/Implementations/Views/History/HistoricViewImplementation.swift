@@ -14,6 +14,7 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
 	// MARK: -IBOutlets
 	@IBOutlet weak var tableViewSchools: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var lblError: UILabel!
     
 	// MARK: - Dependencies
 	var viewController: HistoricViewControllerProtocol
@@ -24,15 +25,19 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
 
 	// MARK: - Init methods
 	required init(data: [School], controller: HistoricViewControllerProtocol) {
-		self.data = data
-		self.dataTableView = data
-
-		self.viewController = controller
-		super.init(frame: CGRect.zero)
-		initFromNib()
-
-		setupDelegateTableview()
-        self.activityIndicator.isHidden = true
+        self.viewController = controller
+        self.data = data
+        self.dataTableView = data
+        super.init(frame: CGRect.zero)
+        initFromNib()
+        if self.data.count == 0 {
+            self.activityIndicator.isHidden = true
+            self.tableViewSchools.isHidden = true
+        } else {
+            setupDelegateTableview()
+            self.activityIndicator.isHidden = true
+            self.lblError.isHidden = true
+        }
 	}
 
 	required init?(coder: NSCoder) {

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoricViewImplementation" customModule="MacroCHallengeApp" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="FPU-81-Pk5" id="oaS-Ic-Aip"/>
+                <outlet property="lblError" destination="dQn-la-PhP" id="ush-vt-2kC"/>
                 <outlet property="tableViewSchools" destination="fhr-HR-MRZ" id="asr-Bf-Ypk"/>
             </connections>
         </placeholder>
@@ -23,6 +24,12 @@
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você não realizou nenhuma prova ainda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQn-la-PhP" userLabel="lblError">
+                    <rect key="frame" x="16" y="436" width="382" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FPU-81-Pk5">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
                 </activityIndicatorView>
@@ -31,10 +38,14 @@
             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="FPU-81-Pk5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Rx-VB-cTk"/>
+                <constraint firstItem="dQn-la-PhP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BDJ-tY-kne"/>
                 <constraint firstItem="fhr-HR-MRZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="BWr-N8-xhW"/>
                 <constraint firstItem="fhr-HR-MRZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PVT-bw-g7p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dQn-la-PhP" secondAttribute="trailing" constant="16" id="R4h-BP-c3f"/>
                 <constraint firstItem="FPU-81-Pk5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Tro-0z-K21"/>
+                <constraint firstItem="dQn-la-PhP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UhR-mf-FHE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fhr-HR-MRZ" secondAttribute="bottom" id="eMV-QJ-NPW"/>
+                <constraint firstItem="dQn-la-PhP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="i8O-9B-nSw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fhr-HR-MRZ" secondAttribute="trailing" id="wQE-s4-BcI"/>
             </constraints>
             <point key="canvasLocation" x="138" y="106"/>

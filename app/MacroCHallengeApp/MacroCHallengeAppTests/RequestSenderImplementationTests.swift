@@ -13,7 +13,7 @@ class RequestSenderImplementationTests: XCTestCase {
     let testSubject = RequestSenderImplementation()
 
     override func setUpWithError() throws {
-        UserDefaults.standard.set("123", forKey: "User")
+        
     }
 
     override func tearDownWithError() throws {}

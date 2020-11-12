@@ -251,8 +251,16 @@ class ResultsViewController: UIViewController, ResultsViewControllerProtocol {
         requestSender.postResultsForTest(testName: test.name, testYear: test.year, results: resultsData) { error in
             if let errorMessage = error {
                 print("Erro ao fazer request dos resultados:\n\t \(errorMessage)")
+                var msg = ""
+                
+                if UserDefaults.standard.string(forKey: "User") == nil {
+                    msg = "Falha ao gravar os resultados no servidor, resgistre-se no aplicativo"
+                } else {
+                    msg =  "Falha ao gravar os resultados no servidor, verifique sua conexão"
+                }
+                
                 let alert = UIAlertController(title: "Erro",
-                                              message: "Falha ao gravar os resultados no servidor, verifique sua conexão",
+                                              message: msg,
                                               preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Ok",
                                               style: .default,

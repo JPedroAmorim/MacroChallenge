@@ -39,14 +39,14 @@ class LoginViewControllerImplementation: UIViewController,  LoginViewControllerP
         case 1: // Métricas Gerais
             let controller = MetricsViewControllerImplementation()
             if let navController = self.navigationController {
-                navController.pushViewController(controller, animated: false)
+                navController.setViewControllers([controller], animated: false)
             }
             break
         case 2: // Histórico
-//            let controller = HistoricViewControllerImplementation(coder: <#T##NSCoder#>)
-//            if let navController = self.navigationController {
-//                navController.pushViewController(controller, animated: false)
-//            }
+            let controller = HistoricViewControllerImplementation()
+            if let navController = self.navigationController {
+                navController.setViewControllers([controller], animated: false)
+            }
             break
         default:
             print("Another tab was selected")

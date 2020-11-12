@@ -9,10 +9,16 @@ import UIKit
 import AuthenticationServices
 
 class HistoricViewControllerImplementation: UIViewController,  HistoricViewControllerProtocol, OverviewViewControllerProtocol {
+    
+    
     // MARK: - Variables
     var isLoggedIn = false
     
     // MARK: - OverviewViewProtocol methods
+    required init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     required init(data: Test) {
         super.init(nibName: nil, bundle: nil)
     }
@@ -46,18 +52,20 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
     override func loadView() {
         super.loadView()
         if isLoggedIn {
-        let defaultUIView = UIView(frame: CGRect.zero)
-        defaultUIView.backgroundColor = .green
-        self.view = defaultUIView
-        setupDefaultSchoolsImplementation()
+            let defaultUIView = UIView(frame: CGRect.zero)
+            defaultUIView.backgroundColor = .green
+            self.view = defaultUIView
+            setupDefaultSchoolsImplementation()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getDataForViewAndSetupView()
+        if isLoggedIn {
+            getDataForViewAndSetupView()
+        }
     }
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userIsLoggedIn()
@@ -150,14 +158,14 @@ class HistoricViewControllerImplementation: UIViewController,  HistoricViewContr
                 self.view.addSubview(errorView)
                 return
             }
-
+            
             // Process return
             let schoolsArrayFiltered = schoolsArray.filter {$0.tests.first?.numberOfCorrectAnswersForLastResult != -1}
-
+            
             // Display historic view
             let historicView = HistoricViewImplementation(data: schoolsArrayFiltered, controller: self)
             historicView.frame = self.view.frame
-
+            
             self.view.addSubview(historicView)
             self.view.bringSubviewToFront(historicView)
         }

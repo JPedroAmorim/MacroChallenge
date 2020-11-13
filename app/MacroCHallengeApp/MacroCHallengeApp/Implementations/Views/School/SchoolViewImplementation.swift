@@ -159,8 +159,8 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             
             finalCell = cell
             
-            cell.noticeLabel.text = "Edital 2021"
-            cell.logoImageView.image = UIImage(named: "logoCOTUCA")
+            cell.noticeLabel.text = "Edital atualizado"
+            cell.logoImageView.image = data.logo
         }
         
         return finalCell
@@ -171,7 +171,7 @@ extension SchoolViewImplementation:UITableViewDataSource, UITableViewDelegate {
             
             switch cell {
             case is NoticeTableViewCell:
-                viewController.noticeWasSubmitted(data.notice)
+                viewController.noticeWasSubmitted(data.name, data.notice)
             case is QuestionsTableViewCell:
                 viewController.questionWasSubmitted(topic: self.topics[indexPath.row])
             case is TestTableViewCell: 

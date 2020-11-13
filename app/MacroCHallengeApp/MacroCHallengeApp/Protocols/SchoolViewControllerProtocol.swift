@@ -33,7 +33,7 @@ protocol SchoolViewControllerProtocol {
      - parameter notice :  edital selecionado pela View.
      
      */
-    func noticeWasSubmitted(_ notice: Notice)
+    func noticeWasSubmitted(_ nameSchool: String, _ notice: Notice)
     
     /// Método responsávell por exibir todas as questões da escola
     func questionWasSubmitted(topic: String)

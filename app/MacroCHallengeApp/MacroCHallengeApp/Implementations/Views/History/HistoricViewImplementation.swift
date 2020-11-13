@@ -39,6 +39,8 @@ class HistoricViewImplementation: UIView, HistoricViewProtocol {
             self.lblError.isHidden = true
         }
 	}
+    
+
 
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
@@ -115,8 +117,10 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-		return dataTableView[section].tests.count
+        
+        let correctData = dataTableView[section].tests.filter({$0.totalNumberOfQuestionsForLastResult != -1})
+        
+        return correctData.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,8 +133,10 @@ extension HistoricViewImplementation:UITableViewDataSource, UITableViewDelegate 
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TestTableViewCell  else {
 			fatalError("The dequeued cell is not an instance of TestTableViewCell.")
 		}
+        
+        let correctData = dataTableView[indexPath.section].tests.filter({$0.totalNumberOfQuestionsForLastResult != -1})
     
-        let testForCell = dataTableView[indexPath.section].tests[indexPath.row]
+        let testForCell = correctData[indexPath.row]
         
 		let nameTitle = handleStringName(name: testForCell.name)
 		cell.testLabel.text = nameTitle

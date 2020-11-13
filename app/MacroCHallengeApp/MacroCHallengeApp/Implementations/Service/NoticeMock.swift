@@ -206,3 +206,88 @@ func getNoticeCotuca() -> Notice {
 						durationTime: "4:30")
 	return notice
 }
+
+func getNoticeCotil() -> Notice {
+    let topics = [
+        "Matemática":[
+            "Números naturais, inteiros, racionais e irracionais",
+            "Potenciação, radiciação",
+            "Expressões algébricas",
+            "Produtos notáveis e fatorações",
+            "Porcentagem",
+            "Razões e proporções",
+            "Equações de 1º e 2º graus",
+            "Sistemas de equações de 1º grau",
+            "Elementos fundamentais da geometria plana e semelhança de figuras planas",
+            "Relações métricas e trigonométricas no triângulo retângulo",
+            "Áreas de figuras planas",
+            "Noções de estatística"],
+        "Português":[
+            "Gênero textuais",
+            "Acentuação",
+            "Ortografia",
+            "Estrutura e formação das palavras",
+            "Pontuação",
+            "Classes de palavras",
+            "Período simples e composto: relações de sentido",
+            "Concordâncias nominal e verbal",
+            "Regências nominal e verbal",
+            "Figuras de linguagem",
+            "Variações linguísticas"],
+        "Ciências Naturais":[
+            "Movimento:Conceito de movimento e repouso / Velocidade e aceleração / Características do movimento uniforme variado / movimentode queda livre / Composição de movimentos",
+        "Força: Medida de força / Tipos de força / Resultante de sistema de força / Leis de Newton",
+        "Energia: Trabalho / Potência / Formas de energia / Fontes de energia / Transformação de energia / Conservação da energia",
+        "Hidrostática: Pressão / Pressão atmosférica / Pressão absoluta / Lei de Stevin / Princípio de Pascal / Princípio de Arquimedes",
+        "Calor: Temperatura e calor / Propagação do calor / Bons e maus condutores de calor / Dilatação térmica / Equilíbrio térmico / Como funciona a garrafa térmica? / Efeito estufa / Aquecimento global / Aquecedor solar. ",
+        "Ondas: Onda em uma corda / Onda na água / Comprimento de onda / Frequência da onda / Velocidade da onda /ropriedades do som / Propagação do som / Ondas eletromagnéticas / Velocidade da Luz / Filtro solar / Forno de microondas / Ondas de rádio e TV",
+        "Óptica: Raio de Luz / Princípio de propagação / Meios de propagação / Formação de sombra e de penumbra / Fases da lua / Eclipse solar e lunar / Espelho plano / Espelho esférico / Decomposição da luz branca / Disco de Newton. ",
+            "Eletricidade: Carga elétrica / Eletricidade estática / Gerador elétrico / Pilhas e baterias / A corrente elétrica / Potência dos aparelhos elétricos / Consumo de energia elétrica",
+        "Magnetismo: Ímãs e suas propriedades / A bússola e o magnetismo terrestre / o eletroímã",
+        "Constituição da matéria: O átomo / Prótons, nêutrons e elétrons: massas e cargas elétricas / Íons / Número atômico e Número de massa / Distribuição eletrônica em níveis",
+        "Elemento químico: Simbologia e representação / Isótopos / Classificação periódica dos elementos: metais, não metais e gases nobres",
+        "Ligações químicas: Substâncias simples e substâncias compostas / Ligação iônica e ligação covalente",
+        "Misturas: Processos de separação de misturas homogêneas e heterogêneas",
+        "Reações químicas: Equação química / Classificação das reações químicas/ Lei de Lavoisier (conservação das massas) / Funções inorgânicas (ácidos, bases, sais e óxidos)",
+        "Corpo Humano: Organização celular / Organização e funcionamento dos aparelhos humanos / Órgãos do sentido / Hereditariedade: reprodução e transmissão de características",
+            "Programas de Saúde: Doenças sexualmente transmissíveis: contágio, consequências e prevenção / Nutrição e saúde: tipos de alimentos e alimentação equilibrada / O problema das drogas",
+            "Seres vivos: Bactérias, fungos, protozoários, vírus, animais vertebrados e invertebrados e vegetais",
+        "Meio Ambiente: Organização do ecossistema / Relações ecológicas entre os seres vivos / Interação homem e meio ambiente: Importância da qualidade da água, tratamento de lixo e esgoto e poluição atmosférica, desmatamento",
+        "Ciclos biogeoquímicos: ciclo da água, do oxigênio e do carbono"],
+        "História":["Tempo, espaço e formas de registros – origens da humanidade e processos de sedentarização",
+                             "A invenção do mundo clássico e o contraponto com outras sociedades – O mundo antigo",
+                             "Lógicas de organização política – cidades – estado e passagem ao medievo",
+                             "Trabalho e formas de organização social e cultural – servidão e mundo cristão",
+                             " O mundo moderno e a conexão entre sociedades africanas, americanas e europeias",
+                             "Humanismos, Renascimentos e o Novo Mundo ",
+                             "A organização do poder e as dinâmicas do mundo colonial americano – dominação, conflitos e resistências indígenas",
+                             "Lógicas comerciais e mercantis da modernidade – escravidão autóctone, africana e emergência do capitalismo",
+                             "O mundo contemporâneo: o Antigo Regime em crise – Iuminismo, revoluções e revoltas",
+                             "Os processos de independência nas Américas",
+                             " O Brasil no século XIX",
+                             "Configurações do mundo no século XIX – nacionalismos e imperialismos",
+                             "O nascimento da República no Brasil e os processos históricos até a metade do século XX",
+                             "Totalitarismos e conflitos mundiais",
+                             "Modernização, ditadura civil-militar e redemocratização: o Brasil após 1946",
+                             "A história recente – revoluções, pluralidades e confrontos contemporâneos."],
+        "Geografia":["Cartografia: Representações da Paisagem e Cartográfica / Escalas / Linguagens dos Mapas / Cartografia e Poder",
+                             "Geografia Econômica e Meio Ambiente: Ciclos da natureza e a sociedade / Atividades econômicas e o espaço geográfico / Patrimônio ambiental e a sua conservação / Crise ambiental / Produção e consumo de energia / A produção do espaço geográfico global. ",
+                             "Território Brasileiro: Regionalização / Domínios naturais do Brasil / Brasil: população e economia / Redes urbanas e sociais",
+                             "Geopolítica: Globalização; A nova “desordem” mundial e o mundo contemporâneo. "]]
+
+    let numberOfQuestionPerTopic = [
+        "Matemática": 12,
+        "Português": 10,
+        "Ciências Naturais": 12,
+        "Ciências Humanas": 6]
+
+    let essay = [
+        "Produção de Texto":"A redação deve ter no mínimo 10 linhas e no máximo até 20 linhas, totalizando 10 pontos.Produção de textos com menos de 10 linhas será zerada"]
+
+    let notice = Notice(topics: topics,
+                        numberOfQuestionsPerTopic: numberOfQuestionPerTopic,
+                        essay: essay,
+                        linkNotice: "https://www.exame.cotil.unicamp.br/wp-content/uploads/2019/09/manual_exame2020.pdf",
+                        durationTime: "3:30")
+    return notice
+}

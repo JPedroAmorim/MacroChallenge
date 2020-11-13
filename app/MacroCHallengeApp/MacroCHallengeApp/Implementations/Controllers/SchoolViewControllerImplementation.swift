@@ -94,6 +94,16 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
                 return "m"
             case "Ciências Naturais":
                 return "cn"
+            case "Química":
+                return "q"
+            case "História":
+                return "h"
+            case "Biologia":
+                return "b"
+            case "Geografia":
+                return "g"
+            case "Física":
+                return "f"
             default:
                 return ""
             }

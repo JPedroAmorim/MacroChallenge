@@ -34,7 +34,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.94914275410000004" green="0.94871443509999998" blue="0.96863073109999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="LfE-l1-dZo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="H4V-aU-cuC"/>
                 <constraint firstItem="HgM-sZ-kwZ" firstAttribute="trailing" secondItem="LfE-l1-dZo" secondAttribute="trailing" id="ZrU-3U-74p"/>

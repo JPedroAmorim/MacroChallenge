@@ -20,11 +20,25 @@ class SchoolViewImplementation: UIView, SchoolViewProtocol {
     
     private let sectionHeaderTitleArray = ["Provas", "Todas as questões", "Saiba mais sobre o edital"]
     
-    private let topics = ["Português", "Matemática", "Ciências Naturais"]
+    private var topics: [String]
     
     // MARK: - Init methods
     required init(data: School, controller: SchoolViewControllerProtocol) {
         self.data = data
+        self.topics = {
+                switch data.name {
+                case "Cotuca":
+                    return ["Português", "Matemática", "Ciências Naturais"]
+                case "Cotil":
+                    return ["Português", "Matemática", "Física", "Biologia", "Geografia", "Química"]
+                case "Cti":
+                    return ["Português", "Matemática", "Biologia", "História", "Geografia"]
+                case "Etec":
+                    return ["Português", "Matemática", "Física", "Químicia","Biologia", "História", "Geografia"]
+                default:
+                    return []
+                }
+            }()
         self.viewController = controller
         super.init(frame: CGRect.zero)
         initFromNib()

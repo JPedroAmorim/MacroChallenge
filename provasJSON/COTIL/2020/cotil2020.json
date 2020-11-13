@@ -122,7 +122,7 @@
  {
 	 "number": 9,
 	 "initialText": "Considere a oração: “Vimos no feio o belo”\nI) O sujeito não está explícito na oração, mas sabe-se que é simples;\nII) O sujeito não está explícito, mas pode-se identificá-lo pela desinência verbal;\nIII) O termo “o belo” desempenha a função de objeto indireto;\nIV) O termo “no feio” desempenha a função de adjunto adverbial. \n\nEstá correto o que se afirma em:",
-	 "images": "",
+	 "images": "https://i.imgur.com/ow3hEyF.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -242,7 +242,7 @@
  {
 	 "number": 17,
 	 "initialText": "Com a urbanização, as cidades devem melhorar sua infraestrutura, como, por exemplo, fazendo mais vias asfaltadas. Sendo assim, a figura abaixo mostra a rua B, que precisa ser asfaltada do ponto P até o ponto Q . Na rua A, já asfaltada, há três terrenos com frente para a rua B e para rua A. As divisas dos lotes são perpendiculares à rua A. As frentes dos lotes 1, 2 e 3 para a rua A, medem, respectivamente, 10 m, 25 m e 30 m. A frente do lote 2 para a rua B mede 32 m. Quantos metros de asfalto serão necessários?",
-	 "images": "",
+	 "images": "https://i.imgur.com/bFCUq9p.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -287,7 +287,7 @@
  {
 	 "number": 20,
 	 "initialText": "O prefeito de uma cidade turística pretende construir um teleférico unindo o parque cultural ao topo de uma montanha de 200 m de altura, como mostra a figura abaixo. Considerando que a plataforma de embarque do teleférico deve estar a uma altura de 5m do chão e que o pico da montanha possa ser observado sob um ângulo de 30o, determine a distância percorrida pelo teleférico do ponto de embarque ao topo da montanha.",
-	 "images": "",
+	 "images": "https://i.imgur.com/ExYsG45.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -302,7 +302,7 @@
  {
 	 "number": 21,
 	 "initialText": "Um arquiteto precisa fazer um projeto conforme a figura abaixo, em que a construção será a parte pintada, e o restante deverá ser o jardim. Sabendo que E é ponto médio de DC e F é ponto médio de BC, qual seria a área em metro quadrado de construção?",
-	 "images": "",
+	 "images": "https://i.imgur.com/iAgaPew.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -317,7 +317,7 @@
  {
 	 "number": 22,
 	 "initialText": "Frente ao crescente volume de construções nas cidades, muitas vezes de forma desordenada, um projeto paisagístico tem a importante missão de devolver a harmonia do ser humano com o meio ambiente, possibilitando-lhe uma melhor convivência com a natureza. O projeto de um museu prevê que se construa um jardim, formando com o prédio do museu uma área retangular, de acordo com a figura abaixo. Nela, a região cinza representa o lugar em que o jardim será construído.",
-	 "images": "",
+	 "images": "https://i.imgur.com/c9rFRXJ.png",
 	 "subtitle": "",
 	 "questionText": "Sabendo que o jardim ocupa 184m , calcule a medida x, em metros.",
 	 "alternatives": [
@@ -332,7 +332,7 @@
  {
 	 "number": 23,
 	 "initialText": "O velocímetro e o hodômetro são equipamentos importantes em qualquer veículo, pois aferem, respectivamente, velocidade e distância percorrida. Ambos, em alguns carros, são regulados para fazer seus registros utilizando o número de giros da roda do carro.",
-	 "images": "",
+	 "images": "https://i.imgur.com/pVMtsjR.png",
 	 "subtitle": "",
 	 "questionText": "Suponhamos que um automóvel venha com uma configuração de fábrica compatível com rodas de aro 15, que possui uma medida da circunferência do pneu de aproximadamente 200cm. Determine quantos giros a roda desse veículo realiza durante um intervalo de tempo de 2 minutos com uma velocidade de 120km/h.",
 	 "alternatives": [
@@ -347,7 +347,7 @@
  {
 	 "number": 24,
 	 "initialText": "O mapa abaixo mostra o posicionamento de três cidades – nomeadas de A, B e C - e as rodovias que as ligam e se cruzam perpendicularmente na cidade A. Em uma rodovia, a 60km de distância de A, encontra-se a cidade B; na outra, a 80km de A, encontra-se a cidade C. Um posto policial deve ser construído na rodovia que liga a cidade B até a C, conforme o desenho. Qual deve ser a distância do posto policial até a cidade B?",
-	 "images": "",
+	 "images": "https://i.imgur.com/r5XRkY0.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -362,7 +362,7 @@
  {
 	 "number": 25,
 	 "initialText": "Com o objetivo de promover a integração social entre os moradores de dois bairros próximos, a prefeitura de uma cidade pretende construir dois parques perto do cruzamento entre as ruas “Aritmética” e “Geometria”. Eles terão formato de trapézios isósceles e serão semelhantes, por isso os ângulos internos do trapézio menor (ABCD) serão congruentes aos ângulos internos􏰂􏰂􏰂􏰂 correspondentes no trapézio maior (PQRS). Considerando-se que AB = 30m, CD = 60m e que BC =􏰂􏰂 AD = 25m e sabendo-se que o construtor possui 560m de alambrado para cercar os dois parques, quanto deve medir o maior lado do maior trapézio (PQRS)?",
-	 "images": "",
+	 "images": "https://i.imgur.com/7pfRMqt.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -377,7 +377,7 @@
  {
 	 "number": 26,
 	 "initialText": "A acessibilidade urbana é um tema que merece atenção, especialmente quando as cidades crescem sem que haja planejamento de ações que garantam o bem-estar, a segurança e a autonomia no uso de equipamentos urbanos por pessoas com algum tipo de limitação, seja ela de mobilidade, idade ou percepção. Assim, para a construção de uma rampa de acesso, calculando- se sua inclinação, usa-se a seguinte expressão matemática:\n\n𝐢 = 𝐡 𝐱 𝟏𝟎𝟎 / 𝐂 , em que:\n\ni é a inclinação da rampa em porcentagem;\nh é a altura do desnível;\nC é o comprimento da projeção horizontal.",
-	 "images": "",
+	 "images": "https://i.imgur.com/0zKT1VW.png@https://i.imgur.com/FF6DQT2.png",
 	 "subtitle": "",
 	 "questionText": "Qual é o ângulo formado em uma rampa que possui 100% de inclinação?",
 	 "alternatives": [
@@ -406,7 +406,7 @@
  },{
 	 "number": 28,
 	 "initialText": "Uma determinada área pública da cidade foi destinada à construção de uma horta comunitária onde serão produzidos alimentos, por meio do trabalho voluntário e solitário da comunidade, monitorados por uma equipe de técnicos que utiliza o sistema de produção agroecológico. O mapa abaixo mostra, em escala, a área que será destinada à horta. Cada unidade horizontal ou vertical na figura abaixo equivale a 2 metros na realidade. Assim sendo, quanto é a área destinada para a horta, em m²?",
-	 "images": "",
+	 "images": "https://i.imgur.com/6KdlOMN.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -420,7 +420,7 @@
  },{
 	 "number": 29,
 	 "initialText": "Em um dos parques da cidade existem duas pistas: uma de caminhada e outra de corrida. Elas possuem uma configuração circular e concêntrica (mesmo centro), como mostra a figura. O atleta Bira, diariamente, caminha e corre nessas pistas. Este, fazendo uso de um podômetro (aparelho utilizado para medir passos), notou, no primeiro dia, que, dando uma volta na pista de caminhada e três na pista de corrida, totalizou 2600 passos. No segundo dia, foram duas voltas na pista de caminhada e duas na pista de corrida, totalizando 2000 passos. Sabendo que um passo de Bira mede 1,5m, quanto mede a pista de corrida?",
-	 "images": "",
+	 "images": "https://i.imgur.com/wKidmHn.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -448,7 +448,7 @@
  },{
 	 "number": 31,
 	 "initialText": "Algumas empresas de transporte privado urbano que se conectam aos seus usuários por celular possuem uma estratégia chamada “preço dinâmico”: quanto mais pessoas de um bairro fizerem uso do serviço, maior será o preço da corrida. Havendo, naturalmente, a diminuição das chamadas pelas pessoas desse bairro, equilibra-se, consequentemente, a quantidade de carros por toda a cidade. Na tabela abaixo, temos a quantidade de veículos desse serviço em um certo bairro da cidade, durante um período de 2,5 horas.",
-	 "images": "",
+	 "images": "https://i.imgur.com/Ff9MFxT.png",
 	 "subtitle": "",
 	 "questionText": "O valor limite, para que não haja aumento no valor da tarifa do serviço, é de 50 carros, durante o intervalo de tempo analisado. Qual deve ser o valor de x para que não haja acréscimo no valor da tarifa?",
 	 "alternatives": [
@@ -463,7 +463,7 @@
  {
 	 "number": 32,
 	 "initialText": "Perguntou-se a 400 famílias de um bairro da cidade qual era o tipo de transporte utilizado em seu dia a dia. Segundo as respostas, 275 famílias fazem uso de transporte público; 100 famílias utilizam o transporte público e o transporte particular; e 105 usam exclusivamente o transporte particular. Quantas famílias não usam nenhum tipo de transporte?",
-	 "images": "",
+	 "images": "https://i.imgur.com/PW67wSF.png",
 	 "subtitle": "",
 	 "questionText": "",
 	 "alternatives": [
@@ -491,7 +491,7 @@
  },{
 	 "number": 34,
 	 "initialText": "Analise a charge e responda ao que se pede.",
-	 "images": "",
+	 "images": "https://i.imgur.com/RwhYHm6.png",
 	 "subtitle": "",
 	 "questionText": "De acordo com a charge acima, podemos concluir que:",
 	 "alternatives": [
@@ -514,8 +514,8 @@
 		 "C:extinção de uma das espécies.",
 		 "D:aumento do número de indivíduos das duas espécies."
 	 ],
-	 "answer": "",
-	 "topic": ""
+	 "answer": "C",
+	 "topic": "Biografia"
  },{
 	 "number": 36,
 	 "initialText": "Considere o excerto para a próxima questão: “[...] Apesar do contexto de urbanização acelerada e, de certa forma, desorganizada, que vem moldando o cenário brasileiro nas últimas décadas, a implantação de programas de saúde pública foi bem-sucedida em algumas áreas, como aquelas que visam controlar doenças evitáveis por vacinação como diarreia, infecções respiratórias e tuberculose. Esses programas têm proporcionado acesso universal e livre à vacinação, como também aos cuidados primários de saúde.[...]”",
@@ -548,7 +548,7 @@
  },{
 	 "number": 38,
 	 "initialText": "A imagem abaixo representa um sistema de Wetland construído como alternativa ao tratamento de efluente (esgoto) doméstico, que visa a minimizar a carga poluente despejada em rios de cidades populosas.",
-	 "images": "",
+	 "images": "https://i.imgur.com/GdEpMoE.png",
 	 "subtitle": "",
 	 "questionText": "Esse sistema é utilizado principalmente para a remoção de nutrientes que serão incorporados à biomassa da planta, como Nitrogênio e Fósforo. Em relação ao exposto, assinale a alternativa correta:",
 	 "alternatives": [
@@ -695,7 +695,7 @@
  {
 	 "number": 48,
 	 "initialText": "O uso de celulares se popularizou na última década. Vemos, atualmente, pessoas por todos os lados fazendo uso de smartphones conectados à internet ou em ligações telefônicas. As tecnologias mais usadas são 3G e 4G e suas características principais são:",
-	 "images": "",
+	 "images": "https://i.imgur.com/1Tk1BZk.png",
 	 "subtitle": "",
 	 "questionText": "Dados: (bps= bites por segundo); K=1000; M=1000 000; G= 1000 000 000\n\nPodemos concluir que:",
 	 "alternatives": [

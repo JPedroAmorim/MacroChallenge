@@ -38,7 +38,7 @@ class ConverterQuestionsJSON: ConverterQuestionsJSONProtocol {
             }
         }
         
-        return questionArray
+        return questionArray.sorted(by: {Int($0.number) ?? -1 < Int($1.number) ?? -1})
     }
     
     func createQuestion(json: JSON) throws -> Question {

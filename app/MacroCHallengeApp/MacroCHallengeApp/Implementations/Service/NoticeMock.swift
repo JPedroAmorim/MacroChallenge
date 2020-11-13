@@ -128,3 +128,39 @@ func getNoticeCTI() -> Notice {
 						durationTime: "4:30")
 	return notice
 }
+
+func getNoticeCotuca() -> Notice {
+	let topics = [
+		"Matemática":[
+			"",
+		],
+		"Português":[
+			"Interpretação de texto",
+			"Sinônimos e antônimos",
+		],
+		"Ciências Naturais":[
+			"Drogas: categorias, efeitos, problemas sociais e de  saúde decorrentes do uso",
+			"métodos contraceptivos humanos",
+		],
+		"Ciências Humanas":[
+			"Lugar, paisagem e espaço geográfico",
+			"noções básicas de cartografia e geomorfologia",
+		]
+	]
+
+	let numberOfQuestionPerTopic = [
+		"Matemática": 12,
+		"Português": 12,
+		"Ciências Naturais": 12
+	]
+
+	let essay = [
+		"Tema":"Elaboração de texto do gênero DISSERTAÇÃO ARGUMENTATIVA. Um ou mais textos poderão ser apresentados como leitura de apoio para a elaboração da redação. \nInterpretação de textos verbais e não verbais; análise linguística com aplicação dos seguintes tópicos: \na. Uso das palavras há/a; mal/mau; mas/mais; por que/por quê/porque/porquê e outros casos especiais de ortografia \nb. Figuras de linguagem \nc. Classes de palavras \nd. Emprego dos tempos e modos verbais \ne. Termos da oração (análise sintática do período simples) \nf. Orações Coordenadas e Subordinadas (análise sintática do período composto) \ng. Concordância nominal e verbal \nh. Pontuação \ni. Acentuação e outras correções ortográficas \nj. Variantes linguísticas e padrão culto da Língua \nk. Características textuais de gêneros literários e jornalísticos \nObservação: será exigida a nova ortografia da Língua Portuguesa, conforme o acordo ortográfico em vigor no Brasil desde 2009.",]
+
+	let notice = Notice(topics: topics,
+						numberOfQuestionsPerTopic: numberOfQuestionPerTopic,
+						essay: essay,
+						linkNotice: "https://www.docsity.com/pt/documentos/downloading/?id=5275655",
+						durationTime: "4:30")
+	return notice
+}

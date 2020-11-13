@@ -153,7 +153,7 @@ class SchoolViewControllerImplementation: UIViewController, SchoolViewController
         
     }
     
-    func noticeWasSubmitted(_ notice: Notice) {
+    func noticeWasSubmitted(_ nameSchool: String,_ notice: Notice) {
         if let navController = self.navigationController {
             let overviewViewController = NoticeViewControllerImplementation(data: notice)
             navController.pushViewController(overviewViewController, animated: true)

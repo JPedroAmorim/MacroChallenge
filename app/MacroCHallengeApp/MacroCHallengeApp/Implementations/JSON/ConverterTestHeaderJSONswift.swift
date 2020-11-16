@@ -83,7 +83,7 @@ class ConverterTestHeaderJSON {
             }
         }
         
-        return School(name: schoolName , location: [schoolLocation], logo: schoolImage, notice: getNotice(), tests: testHeaders)
+        return School(name: schoolName , location: [schoolLocation], logo: schoolImage, notice: getNotice(schoolName: schoolName), tests: testHeaders)
     }
     
     private func handleUrlForImages(url: String) -> UIImage? {

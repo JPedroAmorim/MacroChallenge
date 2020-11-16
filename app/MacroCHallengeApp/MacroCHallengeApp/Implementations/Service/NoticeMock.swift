@@ -9,8 +9,18 @@ import Foundation
 
 
 func getNotice(schoolName: String) -> Notice {
-
-    return getNoticeCTI()
+    switch schoolName {
+    case "Cotuca":
+        return getNoticeCotuca()
+    case "Cti":
+        return getNoticeCTI()
+    case "Etec":
+        return getNoticeEtec()
+    case "Cotil":
+        return getNoticeCotil()
+    default:
+        return getNoticeCTI()
+    }
 }
 
 func getNoticeCTI() -> Notice {
@@ -202,7 +212,7 @@ func getNoticeCotuca() -> Notice {
 	let notice = Notice(topics: topics,
 						numberOfQuestionsPerTopic: numberOfQuestionPerTopic,
 						essay: essay,
-						linkNotice: "https://www.docsity.com/pt/documentos/downloading/?id=5275655",
+						linkNotice: "https://drive.google.com/file/d/1uwgLkaTq4RE9M67P1Nuie-1TlZEjXxaO/view",
 						durationTime: "4:30")
 	return notice
 }
@@ -254,7 +264,7 @@ func getNoticeCotil() -> Notice {
             "Seres vivos: Bactérias, fungos, protozoários, vírus, animais vertebrados e invertebrados e vegetais",
         "Meio Ambiente: Organização do ecossistema / Relações ecológicas entre os seres vivos / Interação homem e meio ambiente: Importância da qualidade da água, tratamento de lixo e esgoto e poluição atmosférica, desmatamento",
         "Ciclos biogeoquímicos: ciclo da água, do oxigênio e do carbono"],
-        "História":["Tempo, espaço e formas de registros – origens da humanidade e processos de sedentarização",
+        "Ciências Humanas":["Tempo, espaço e formas de registros – origens da humanidade e processos de sedentarização",
                              "A invenção do mundo clássico e o contraponto com outras sociedades – O mundo antigo",
                              "Lógicas de organização política – cidades – estado e passagem ao medievo",
                              "Trabalho e formas de organização social e cultural – servidão e mundo cristão",
@@ -269,8 +279,8 @@ func getNoticeCotil() -> Notice {
                              "O nascimento da República no Brasil e os processos históricos até a metade do século XX",
                              "Totalitarismos e conflitos mundiais",
                              "Modernização, ditadura civil-militar e redemocratização: o Brasil após 1946",
-                             "A história recente – revoluções, pluralidades e confrontos contemporâneos."],
-        "Geografia":["Cartografia: Representações da Paisagem e Cartográfica / Escalas / Linguagens dos Mapas / Cartografia e Poder",
+                             "A história recente – revoluções, pluralidades e confrontos contemporâneos.",
+                             "Cartografia: Representações da Paisagem e Cartográfica / Escalas / Linguagens dos Mapas / Cartografia e Poder",
                              "Geografia Econômica e Meio Ambiente: Ciclos da natureza e a sociedade / Atividades econômicas e o espaço geográfico / Patrimônio ambiental e a sua conservação / Crise ambiental / Produção e consumo de energia / A produção do espaço geográfico global. ",
                              "Território Brasileiro: Regionalização / Domínios naturais do Brasil / Brasil: população e economia / Redes urbanas e sociais",
                              "Geopolítica: Globalização; A nova “desordem” mundial e o mundo contemporâneo. "]]
@@ -407,10 +417,10 @@ func getNoticeEtec() -> Notice {
 	]
 
 	let numberOfQuestionPerTopic = [
-		"Matemática": 25,
-		"Português": 25,
-		"Ciências Naturais": 25,
-		"Ciências Humanas": 25
+		"Matemática": 15,
+		"Português": 15,
+		"Ciências Naturais": 10,
+		"Ciências Humanas": 10
 	]
 
 	let essay = ["Tema":"Essa prova não possui redação",]
@@ -419,6 +429,6 @@ func getNoticeEtec() -> Notice {
 						numberOfQuestionsPerTopic: numberOfQuestionPerTopic,
 						essay: essay,
 						linkNotice: "http://fatweb.s3.amazonaws.com/vestibulinhoetec/documentos/1SEM-19/ManualCandidato.pdf?id=20171",
-						durationTime: "5:00")
+						durationTime: "4:00")
 	return notice
 }

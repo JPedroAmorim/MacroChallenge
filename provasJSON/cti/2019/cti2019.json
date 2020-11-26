@@ -1,0 +1,744 @@
+[
+	{
+		"number": 1,
+		"initialText": "Leia o texto para responder às questões de números 01 a 06. Vai um café grátis, em troca dos seus dados pessoais?\n\nParece o sonho de todo estudante: tomar cafés, chás ou sucos ilimitados todos os dias, sem pagar um centavo por isso. Para universitários no Japão, Índia e, recentemente, nos Estados Unidos, o sonho virou realidade com a rede Shiru Cafe. São 28 lojas nos campi de universidades nesses países, entre elas as renomadas Brown, Harvard, Yale e Princeton (as três últimas lojas estão em construção).\nMas, como diz o velho ditado, “quando a esmola é demais o santo desconfia”. Ou, também, “não existe almoço grátis”. É que, embora de fato não precisem pagar pelo cafezinho, os estudantes devem concordar em compartilhar seus dados pessoais com as empresas patrocinadoras da loja.\nFunciona assim: o usuário cria uma conta com um e-mail universitário (pessoas não filiadas a uma escola não são bem-vindas no Shiru) e responde a um questionário que inclui ano de formatura, capacidades tecnológicas, ex- periência profissional e o tamanho de empresa que estaria interessado em trabalhar. Para professores, os cafés cus- tam US$ 1. A ideia é que a bebida seja consumida dentro da loja, que tem internet grátis e telões com anúncios das empresas patrocinadoras.\nSegundo o gerente da loja no campus da Universidade Brown, em Providence, na costa leste dos EUA, o objetivo todo é conectar os estudantes a possíveis empregadores. Mas a novidade, que abriu as portas em fevereiro, gerou algumas controvérsias entre os estudantes.\nEntre os alunos dessa universidade, alguns questionam as regras de privacidade e observam que elas não estão cla- ras o suficiente, pois nada garante que o café não vai reco- lher mais dados do que o combinado – algo possível se o usuário se conectar à rede wi-fi do local. Outros criticam a universidade por permitir uma “lavagem cerebral” e um recru- tamento indiscriminado de grandes corporações. Finalmente, há aqueles que simplesmente aceitam que privacidade é coi- sa do passado e que, se atualmente dados pessoais estão sendo coletados a todo instante por diferentes companhias, um cafezinho grátis em troca não fará mal a ninguém. E você, de que lado estaria?",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Uma frase condizente com as informações do texto e escrita em conformidade com a norma-padrão da língua portuguesa é:",
+		"alternatives": [
+			"A:A Shiru Cafe especializou-se em servir cafés, chás, sucos e wi-fi sem custo aos clientes recêm-contratados pelas empresas com as quais a rede tem parceria.A Shiru Cafe especializou-se em servir cafés, chás, sucos e wi-fi sem custo aos clientes recêm-contratados pelas empresas com as quais a rede tem parceria.",
+			"B:Os frequentadores do Shiru Cafe recebem bebidas gratuí- tas no momento em que seus dados pessoais são divulga- dos pelo estabelecimento.",
+			"C:A Shiru Cafe coleta dados pessoais de alunos de algumas universidades, em troca de bebidas de graça, para fornecer esses dados a empresas patrocinadoras da rede.",
+			"D:Os estudantes e professores universitários que tomam bebida grátis e acessam a rede wi-fi no Shiru Cafe tem seus dados pessoais divulgados a terceiros."
+		],
+		"answer": "C",
+		"topic": "Português"
+	},
+	{
+		"number": 2,
+		"initialText": "",
+		"images": "",
+		"subtitle": "",
+		"questionText": "No último parágrafo do texto, expõem-se",
+		"alternatives": [
+			"A:opiniões que divergem entre si sobre o que foi dito da rede Shiru Cafe.",
+			"B:comentários sem relação com o que se informou sobre a rede Shiru Cafe.",
+			"C:pontos de vista concordantes acerca de aspectos positi- vos da rede Shiru Cafe.",
+			"D:ideias que se anulam mutuamente ao criticar a iniciativa da rede Shiru Cafe."
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 3,
+		"initialText": "Um sinônimo para a palavra indiscriminado (5o parágrafo) é:",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:idealista.",
+			"B:irregular.",
+			"C:inevitável.",
+			"D:infalível."
+		],
+		"answer": "B",
+		"topic": "Português"
+	},{
+		"number": 4,
+		"initialText": "Considerando o contexto, o vocábulo aqueles, no quinto parágrafo – “Finalmente, há aqueles que...” –, refere-se a",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:estudantes da Universidade Brown.",
+			"B:clientes das 28 lojas da Shiru Cafe.",
+			"C:funcionários da Shiru Cafe e entusiastas dessa novidade.",
+			"D:frequentadores das diferentes universidades em que a Shiru Cafe atua."
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 5,
+		"initialText": "O vocábulo que introduz o agente da ação está destacado em:",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:... o sonho virou realidade com a rede Shiru Café... (1o parágrafo)",
+			"B:... os estudantes devem concordar em compartilhar seus dados pessoais... (2o parágrafo)",
+			"C:... o objetivo todo é conectar os estudantes a possíveis empregadores. (4o parágrafo)",
+			"D:... dados pessoais estão sendo coletados a todo instante por diferentes companhias... (5o parágrafo)"
+		],
+		"answer": "D",
+		"topic": "Português"
+	},{
+		"number": 6,
+		"initialText": "",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:... o sonho virou realidade com a rede Shiru Cafe. / ... o sonho transformou-se a realidade com a rede Shiru Cafe. (1o parágrafo)",
+			"B:... o tamanho de empresa que estaria interessado em tra- balhar. / ... o tamanho de empresa em que estaria interes- sado em trabalhar. (3o parágrafo)",
+			"C:... pessoas não filiadas a uma escola não são bem-vindas no Shiru... / ... pessoas não filiadas perante uma escola não são benquista no Shiru... (3o parágrafo)",
+			"D:... gerou algumas controvérsias entre os estudantes. / ... gerou algumas controvérsias de entre os estudantes. (4o parágrafo)"
+		],
+		"answer": "B",
+		"topic": "Português"
+	},{
+		"number": 7,
+		"initialText": "A concordância está em conformidade com a norma-padrão em:",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:A oferta de bebidas gratuitas atraem vários estudantes para o Shiru Cafe.",
+			"B:Tomar bebidas sem precisar pagar por elas interessam a muitos estudantes.",
+			"C:O aluno que quiser receber a bebida de graça respondem a algumas perguntas.",
+			"D:Os frequentadores do Shiru Cafe dispõem de wi-fi de gra- ça dentro da loja."
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 8,
+		"initialText": "Considere o cartaz.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Predominam, no cartaz, as seguintes funções da linguagem:",
+		"alternatives": [
+			"A:metalinguística e fática.",
+			"B:emotiva e apelativa.",
+			"C:referencial e fática.",
+			"D:referencial e apelativa."
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 9,
+		"initialText": "Leia o texto de Mario Quintana para responder às questões de números 09 e 10.\n\nSó para si\n\nDona Cômoda tem três gavetas. E um ar confortável de senhora rica. Nas gavetas guarda coisas de outros tempos, só para si. Foi sempre assim, dona Cômoda: gorda, fechada, egoísta.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Nesse texto, a descrição de uma cômoda é feita por meio do uso",
+		"alternatives": [
+			"A:da antítese.",
+			"B:da personificação.",
+			"C:do pleonasmo.",
+			"D:do eufemismo."
+		],
+		"answer": "B",
+		"topic": "Português"
+	},
+	{
+		"number": 10,
+		"initialText": "Considere as orações:\n\n1. Nas gavetas guarda coisas de outros tempos, só para si. \n2. Foi sempre assim, dona Cômoda: gorda, fechada, egoísta.\n\nAssinale a alternativa correta:",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Em 1, o sujeito é indeterminado e o predicado é verbal; em 2, o sujeito é oculto e o predicado é verbo-nominal.",
+			"B:Em 1, o sujeito é oculto e o predicado é verbal; em 2, o sujeito é simples e o predicado é nominal.",
+			"C:Em 1, o sujeito é indeterminado e o predicado é verbonominal; em 2, o sujeito é simples e o predicado é no- minal.",
+			"D:Em 1, o sujeito é oculto e o predicado é verbal; em 2, o sujeito é indeterminado e o predicado é nominal."
+		],
+		"answer": "B",
+		"topic": "Português"
+	},{
+		"number": 11,
+		"initialText": "Considere o cartum.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "O cartum apresenta uma",
+		"alternatives": [
+			"A:sátira bem-humorada do comportamento consumista.",
+			"B:crítica indignada contra os estudos acerca dos hábitos consumistas.",
+			"C:reflexão melancólica sobre a origem do consumismo.",
+			"D:explicação do impacto do consumismo sobre a desigual- dade."
+		],
+		"answer": "A",
+		"topic": "Português"
+	},
+	{
+		"number": 12,
+		"initialText": "Leia o poema de Cecília Meireles para responder às ques- tões de números 12 e 13.\n\nOu isto ou aquilo\nOu se tem chuva e não se tem sol ou se tem sol e não se tem chuva!\nOu se calça a luva e não se põe o anel, ou se põe o anel e não se calça a luva!\nQuem sobe nos ares não fica no chão, quem fica no chão não sobe nos ares.\nÉ uma grande pena que não se possa estar ao mesmo tempo em dois lugares!\nOu guardo o dinheiro e não compro o doce, ou compro o doce e gasto o dinheiro.\nOu isto ou aquilo: ou isto ou aquilo... e vivo escolhendo o dia inteiro!\nNão sei se brinco, não sei se estudo, se saio correndo ou fico tranquilo.\nMas não consegui entender ainda qual é melhor: se é isto ou aquilo.\n(Ou isto ou aquilo. São Paulo, Global, 2012)",
+		"images": "",
+		"subtitle": "",
+		"questionText": "O conteúdo do poema está resumido em",
+		"alternatives": [
+			"A:Ou se tem chuva e não se tem sol / ou se tem sol e não se tem chuva!",
+			"B:Quem sobe nos ares não fica no chão, / quem fica no chão não sobe nos ares.",
+			"C:Ou isto ou aquilo: ou isto ou aquilo... / e vivo escolhendo o dia inteiro!",
+			"D:Não sei se brinco, não sei se estudo, / se saio correndo ou fico tranquilo."
+		],
+		"answer": "C",
+		"topic": "Português"
+	},
+	{
+		"number": 13,
+		"initialText": "O vocábulo “ou” estabelece, no poema, relação de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:adição.",
+			"B:causa.",
+			"C:exclusão.",
+			"D:proporção."
+		],
+		"answer": "C",
+		"topic": "Português"
+	},
+	{
+		"number": 14,
+		"initialText": "Assinale a alternativa em que todos os verbos estão empre- gados em conformidade com a norma-padrão da língua.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Muitas situações nos mantém indecisos, porque tende- mos a querer tudo de uma só vez.",
+			"B:Não seria ótimo se nós podéssemos estar em mais de um lugar ao mesmo tempo?",
+			"C:Se dizermos que é fácil decidir entre economizar ou gas- tar talvez estejamos enganados.",
+			"D:É improvável que fiquemos plenamente satisfeitos ao es- colher só uma diversão entre tantas."
+		],
+		"answer": "D",
+		"topic": "Português"
+	},
+	{
+		"number": 15,
+		"initialText": "O sinal indicativo de crase está empregado corretamente em",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:Prefiro brincar à estudar, embora estudar também possa ser divertido.",
+			"B:Ele chegou à conclusão de que era melhor buscar um segundo parecer.",
+			"C:Nem sempre é simples chegar à uma decisão que todos aprovem.",
+			"D:É sempre bom pedir conselho à alguma pessoa mais ex- periente."
+		],
+		"answer": "B",
+		"topic": "Português"
+	},
+	{
+		"number": 16,
+		"initialText": "Um rolo tem 3,69 m de uma fita usada para ornamentar paco- tes. Essa fita é composta por uma sequência de quadrados de cores distintas, que se repetem obedecendo sempre a mesma ordem de cores, conforme mostra a figura.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Sabendo-se que o quadrado inicial é vermelho, e que cada quadrado tem 3 cm de lado, é correto afirmar que o número de quadrados verdes nessa fita é",
+		"alternatives": [
+			"A:29.",
+			"B:30.",
+			"C:31.",
+			"D:32."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},{
+		"number": 17,
+		"initialText": "Na divisão de um número natural n por x, obtêm-se quociente 7 e resto 3. Na divisão desse mesmo número natural n por 10, obtêm-se quociente 5 e resto y. Se y = x + 1, então valor de n é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:45.",
+			"B:48.",
+			"C:53.",
+			"D:59."
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 18,
+		"initialText": "André comprou uma casa por um determinado valor. Como entrada, ele deu R$ 60 mil, em dinheiro, e mais um terreno, cujo valor representou 15 do valor da casa. Sabendo-se que o valor total da entrada foi igual a do valor da compra, é cor- reto afirmar que o valor da compra da casa foi de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:R$ 300 mil",
+			"B:R$ 375 mil.",
+			"C:R$ 425 mil.",
+			"D:R$ 450 mil."
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 19,
+		"initialText": "Em uma empresa, 10 máquinas iguais, de mesmo rendimen- to, trabalhando de forma simultânea e ininterrupta, produzi- ram um lote de certa peça em 8 dias. Para a produção de um segundo lote da mesma peça, idêntico ao primeiro, foi possível utilizar somente 4 das mesmas máquinas que, tra- balhando de forma simultânea e ininterrupta, concluíram a produção desse lote em",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:20 dias.",
+			"B:18 dias.",
+			"C:16 dias.",
+			"D:14 dias."
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 20,
+		"initialText": "Em uma negociação para a venda de grande quantidade de certo produto, com pagamento à vista, uma empresa ofere- ceu a um atacadista dois descontos sucessivos de 20% e 30% sobre o preço unitário P, original desse produto. Os dois descontos dados a esse cliente equivalem a um desconto único, dado sobre P, de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:40%.",
+			"B:44%",
+			"C:50%.",
+			"D:56%."
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},
+	{
+		"number": 21,
+		"initialText": "A tabela relaciona o número de unidades de um mesmo pro- duto X, de preços unitários iguais, e o número de unidade de um mesmo produto Y, de preços unitários iguais, que os consumidores A, B e C compraram em um supermercado, e o valor total que dois desses consumidores pagaram na com- pra desses produtos.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "De acordo com as informações dadas, o valor total que o consumidor B pagou nessa compra foi",
+		"alternatives": [
+			"A:R$ 118,00.",
+			"B:R$ 122,00.",
+			"C:R$ 129,00.",
+			"D:R$ 135,00."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 22,
+		"initialText": "Um certo capital, cujo valor, em reais, é representado por x, foi aplicado durante 16 meses e o montante recebido pelo investidor, ao final da aplicação, foi igual a 1,18 x. A taxa anual de juros simples dessa aplicação foi de",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:12%",
+			"B:13,5%.",
+			"C:15%.",
+			"D:16,5%."
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},
+	{
+		"number": 23,
+		"initialText": "No depósito de uma livraria há pacotes P, com 8 unidades de certo livro em cada um, e pacotes Q, com 5 unidades desse mesmo livro em cada um, num total de 70 pacotes e 470 livros. A quantidade de livros contida em todos os pacotes P é igual a",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:150.",
+			"B:200.",
+			"C:240.",
+			"D:320."
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 24,
+		"initialText": "Um projeto para uma residência determina que a área construída deverá ocupar 3/5 da área total do terreno, que tem formato de um quadrilátero regular. Da área restante, 1/4 será ocupado por uma piscina, e ainda sobrarão 120 m2 para outros fins. A medida do lado desse terreno é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:20 m.",
+			"B:22 m.",
+			"C:24 m.",
+			"D:26 m."
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 25,
+		"initialText": "Um espelho quadrado, de área igual a 6 400 cm , é totalmen- te contornado por uma moldura de largura constante, indica- da por x na figura, cujo perímetro, determinado pelo lado L, mede 440 cm.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A medida da largura dessa moldura, indicada por x na figura, é igual a",
+		"alternatives": [
+			"A:15 cm.",
+			"B:12 cm.",
+			"C:10 cm.",
+			"D:8 cm."
+		],
+		"answer": "A",
+		"topic": "Matemática"
+	},
+	{
+		"number": 26,
+		"initialText": "Na figura, o quadrilátero ABCD é um trapézio retângulo, e o segmento AE é bissetriz do ângulo agudo DÂB.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A medida do ângulo AÊB, indica por α na figura, é",
+		"alternatives": [
+			"A:68⁰.",
+			"B:64⁰.",
+			"C:54⁰.",
+			"D:48⁰."
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 27,
+		"initialText": "Na figura, o retângulo ABCD, formado por seis retângulos congruentes, representa uma praça. A linha em vermelho de- termina o percurso feito por Tiago para ir do ponto A até o ponto C dessa praça.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Para fazer o percurso indicado na figura Tiago percorreu um total de",
+		"alternatives": [
+			"A:280 m.",
+			"B:290 m.",
+			"C:300 m.",
+			"D:320 m."
+		],
+		"answer": "D",
+		"topic": "Matemática"
+	},
+	{
+		"number": 28,
+		"initialText": "Após simplificada corretamente, a fração algébrica",
+		"images": "",
+		"subtitle": "",
+		"questionText": "sendo x ≠ 0 e y ≠ 0, será representada, na sua forma mais simples, por",
+		"alternatives": [
+			"A:x / (x - y)",
+			"B:(x + y) / (x - y)",
+			"C:(x - y) / (x + y)",
+			"D:x + y"
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},{
+		"number": 29,
+		"initialText": "Mariana sabe que (2x + y)² - 6xy - (x - y)² = 300. A partir desse conhecimento, concluiu que o valor positivo de x é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:8",
+			"B:10",
+			"C:12",
+			"D:15"
+		],
+		"answer": "B",
+		"topic": "Matemática"
+	},
+	{
+		"number": 30,
+		"initialText": "Uma folha retangular teve uma região pintada em azul, con- forme mostra a figura.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A área da região pintada em azul é corretamente representa- da pelo polinômio",
+		"alternatives": [
+			"A:a(a – b)",
+			"B:(a – b)",
+			"C:a² – b²",
+			"D:a² + b²"
+		],
+		"answer": "C",
+		"topic": "Matemática"
+	},
+	{
+		"number": 31,
+		"initialText": "As bactérias A, B e C foram avaliadas de acordo com sua resistência a 8 tipos de antibióticos. Em cada tipo de antibió- tico, as bactérias foram classificadas de 1 a 6, conforme o grau crescente de sua resistência, ou seja, o valor de 1 corresponde à baixa resistência ao antibiótico, enquanto o valor 6 corres- ponde à elevada resistência ao antibiótico, conforme pode-se observar na figura a seguir.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "De acordo com essa classificação, é correto afirmar que a bactéria",
+		"alternatives": [
+			"A:B é a mais resistente à Ampicilina.",
+			"B:C é a menos resistente à Tetraciclina.",
+			"C:A é a menos resistente à Piperaciclina.",
+			"D:B é a mais resistente à Cefoperazona."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 32,
+		"initialText": "Em 2017, aproximadamente 6634 km² de floresta foram des- matados no Brasil, reduzindo a capacidade de sequestro de carbono realizado por ela. O desmatamento da floresta com- promete o mecanismo de regulação",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:do efeito estufa, provocado pelo acúmulo de carbono na atmosfera, uma vez que a floresta é capaz de fixar carbono.",
+			"B:da camada de ozônio, pois seu desmatamento promove a liberação na atmosfera de dióxido de carbono.",
+			"C:da eutrofização das águas, decorrente da dissolução nos rios do excesso de dióxido de carbono.",
+			"D:dos resíduos sólidos, decorrentes da liberação do dióxido de carbono devido aos desmatamentos por queimadas."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},
+	{
+		"number": 33,
+		"initialText": "O cigarro, as bebidas alcoólicas, os remédios para reduzir o apetite e a ansiedade são drogas classificadas como lícitas, isto é, as leis não proíbem seu uso pelos adultos. Já a cocaína, a maconha e o crack são drogas ilícitas, pois, a sociedade não permite seu uso pelas pessoas. As drogas lícitas",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:podem causar danos ao organismo e dependência do seu uso pelas pessoas.",
+			"B:podem ser usadas pelas pessoas sem nenhum prejuízo para seus organismos.",
+			"C:são aquelas vendidas exclusivamente em farmácias e com receitas médicas.",
+			"D:são substâncias que não alteram o comportamento do indivíduo."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},{
+		"number": 34,
+		"initialText": "A mecanização da colheita de cana-de-açúcar diminui a emissão de gases de efeito estufa na atmosfera devido à",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:maior permanência da planta no solo, fazendo com que ela fixe mais carbono em seu caule.",
+			"B:dispensa da realização de queimadas em diversas situa- ções, reduzindo os gases de efeito estufa e material par- ticulado.",
+			"C:substituição dos combustíveis fósseis por biocombustí- veis das máquinas que trabalham na colheita.",
+			"D:capacidade do maquinário evitar processos erosivos que aumentam a produção de material particulado."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 35,
+		"initialText": "Os métodos contraceptivos humanos como a pílula anticon- cepcional, a vasectomia e o dispositivo intrauterino não medi- cado (DIU) impedem, respectivamente,",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:a ovulação, o encontro do espermatozoide com o óvulo e a implantação do zigoto no útero.",
+			"B:o encontro do espermatozoide com o óvulo, a fixação do zigoto no útero e a ovulação.",
+			"C:a fixação do óvulo no útero, a produção de espermatozoi- de e a produção de óvulos.",
+			"D:o encontro do espermatozoide com o óvulo, a produção de sêmen e a fixação do óvulo no útero."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},{
+		"number": 36,
+		"initialText": "O gráfico a seguir apresenta a variação dos parâmetros de DBO e oxigênio dissolvido em um curso d’água após o lan- çamento pontual de matéria orgânica por uma tubulação de esgoto.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Sabendo que DBO é a Demanda Bioquímica de Oxigênio e corresponde à quantidade de gás oxigênio necessária para a decomposição desta matéria orgânica, é correto afirmar que após o lançamento ocorre",
+		"alternatives": [
+			"A:uma manutenção da quantidade de matéria orgânica lan- çada no curso d’água ao longo do tempo.",
+			"B:uma diminuição das bactérias aeróbicas que decompõem a matéria orgânica, consumindo o gás oxigênio.",
+			"C:uma diminuição na demanda de gás oxigênio dissolvido para decompor a matéria orgânica.",
+			"D:um aumento pela demanda de gás oxigênio dissolvido para decompor a matéria orgânica."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 37,
+		"initialText": "A figura a seguir ilustra a evolução no tamanho dos aerogera- dores utilizados na geração de energia elétrica.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Embora a energia eólica seja considerada uma das mais limpas, a instalação de parques eólicos provoca impactos ambientais",
+		"alternatives": [
+			"A:atmosféricos na geração de gases do efeito estufa.",
+			"B:na camada de ozônio devido à diminuição da velocidade dos ventos.",
+			"C:visuais e sonoros devido às dimensões e ao ruído das turbinas.",
+			"D:no solo e nas aves devido às dimensões das hélices das turbinas."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 38,
+		"initialText": "Um dos principais problemas relacionados à agricultura con- vencional refere-se à perda de solos agricultáveis devido à erosão laminar, que corresponde à remoção das camadas superficiais do solo, empobrecendo-o gradualmente. Esse problema pode ser mitigado por meio",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:da execução de curvas de nível e controle do escoamen- to superficial promovido pelas chuvas.",
+			"B:do aumento da concentração de compostos, como nitro- gênio, fósforo e potássio pela adubação direta.",
+			"C:da construção de barreiras físicas como cercas vivas, evitando a erosão eólica e a erosão pluvial.",
+			"D:da rotação de culturas, permitindo que em épocas de chuvas o solo fique exposto."
+		],
+		"answer": "A",
+		"topic": "Biologia"
+	},
+	{
+		"number": 39,
+		"initialText": "A fotografia retrata um balão cheio de água no instante em que ele é perfurado.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "É possível notar que o fluido permanece pelo menos por um instante, no mesmo formato do balão. Esse fato pode ser jus- tificado por meio do",
+		"alternatives": [
+			"A:princípio termodinâmico.",
+			"B:princípio da inércia.",
+			"C:atrito do balão com a água.",
+			"D:princípio da ação e reação."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 40,
+		"initialText": "O petróleo bruto, por se tratar de uma mistura homogênea, necessita de um processo de destilação fracionada na refina- ria para separar seus diversos componentes, conforme apre- sentado a seguir.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "O fluxo ascendente na torre de destilação indica",
+		"alternatives": [
+			"A:o aumento do peso específico dos elementos.",
+			"B:a diminuição da temperatura do ponto de fusão.",
+			"C:temperaturas decrescentes do ponto de ebulição.",
+			"D:temperaturas crescentes do ponto de ebulição."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 41,
+		"initialText": "No Brasil, a Política Nacional de Resíduos Sólidos bus- ca diminuir a geração de resíduos, adotando princípios de redução, reutilização e reciclagem. Porém, por questões técnicas, nem todos os materiais descartados por pessoas ou indústrias podem passar pelo processo de reciclagem. Desse modo, os materiais que não são recicláveis corres- pondem a",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:garrafas de vidro, folhas de caderno e pilhas.",
+			"B:papel carbono, latas de alumínio e madeira.",
+			"C:pneus, caixas de papelão e espelhos de vidro.",
+			"D:remédios, espelhos de vidro e guardanapos usados."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 42,
+		"initialText": "Lívia colocou um litro de água (1000 cm3) em um copo e mediu o nível de água (situação A). Depois ela colocou uma estrela maciça de prata no copo e mediu novamente o nível de água (situação B). A massa de um centímetro cúbico de prata é 10,5 g. A massa dessa estrela é",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:1050g.",
+			"B:1500g.",
+			"C:1800 g.",
+			"D:2100 g."
+		],
+		"answer": "D",
+		"topic": "Biologia"
+	},
+	{
+		"number": 43,
+		"initialText": "A figura a seguir ilustra o comportamento de uma partícula de sujeira presente na água ao decantar em uma estação de tratamento de água.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A velocidade média de sedimentação, em módulo, dessa partícula em milímetros por segundo entre os instantes 42 e 112 segundos é de",
+		"alternatives": [
+			"A:9,37.",
+			"B:10,71.",
+			"C:11,34.",
+			"D:15,00."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 44,
+		"initialText": "A ilustração apresenta a bomba parafuso de Arquimedes, que corresponde a um grande parafuso (helicoide) que funciona de forma inclinada (plano inclinado) e gira movendo o fluido para a extremidade oposta do parafuso.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A água ao passar pela bomba recebe energia",
+		"alternatives": [
+			"A:térmica do movimento de rotação do parafuso, o que aumenta sua energia potencial.",
+			"B:potencial do movimento do parafuso, o que permite aumentar sua energia cinética.",
+			"C:cinética do movimento do parafuso, o que permite aumentar sua energia potencial.",
+			"D:proveniente da pressão atmosférica do movimento, o que eleva sua energia potencial."
+		],
+		"answer": "C",
+		"topic": "Biologia"
+	},
+	{
+		"number": 45,
+		"initialText": "O Programa Conjunto das Nações Unidas sobre HIV/AIDS (UNIAIDS) estima que existam em 2017 aproximadamente 36,9 milhões de pessoas infectadas com o vírus da imuno- deficiência humana (HIV, sigla em inglês) em todo o planeta. Esse vírus ataca o sistema imunológico (principalmente os linfócitos T CD4+), responsável por defender o organismo de doenças. A respeito da AIDS, é correto afirmar que",
+		"images": "",
+		"subtitle": "",
+		"questionText": "",
+		"alternatives": [
+			"A:para preveni-la, deve-se evitar compartilhar talheres e roupas íntimas com pessoas portadoras da doença.",
+			"B:pacientes com essa doença podem manifestar infecções secundárias em função da debilidade do sistema imuno- lógico.",
+			"C:os coquetéis antiretrovirais ao destruir a parede celular dos vírus, diminuem a possibilidade de transmissão da doença.",
+			"D:o tempo entre a infecção, ou seja, contato com o vírus e a manifestação da doença, é igual entre os humanos."
+		],
+		"answer": "B",
+		"topic": "Biologia"
+	},
+	{
+		"number": 46,
+		"initialText": "Observe a figura para responder à questão.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A leitura da imagem e os conhecimentos a respeito do contexto econômico mundial permitem afirmar que",
+		"alternatives": [
+			"A:com a mundialização da economia desapareceram as fronteiras e os protecionismos e as trocas comerciais se tornaram livres.",
+			"B:sob o aspecto geopolítico, o comércio mundial tem pro- movido a ascensão econômica das áreas periféricas.",
+			"C:o predomínio das atividades comerciais das grandes po- tências ressalta as diferenças econômicas observadas no mundo atual.",
+			"D:as desigualdades econômicas entre as regiões do mundo devem ser superadas com a valorização comercial das commodities."
+		],
+		"answer": "C",
+		"topic": "Geografia"
+	},
+	{
+		"number": 47,
+		"initialText": "A questão está relacionada ao gráfico apresentado a seguir.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "A leitura do gráfico e os conhecimentos sobre a dinâmica demográfica mundial permitem afirmar que, entre 1950 e 2017,",
+		"alternatives": [
+			"A:as áreas mais urbanizadas do mundo apresentaram forte crescimento demográfico.",
+			"B:os continentes onde há forte emigração foram os que apresentaram pequeno crescimento demográfico.",
+			"C:as regiões menos populosas foram as que apresentaram maior crescimento demográfico.",
+			"D:os continentes com grande concentração de países sub- desenvolvidos apresentaram maior crescimento demo- gráfico."
+		],
+		"answer": "D",
+		"topic": "Geografia"
+	},
+	{
+		"number": 48,
+		"initialText": "A questão está relacionada ao mapa apresentado a seguir.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Assinale a alternativa que identifica corretamente um dos domínios morfoclimáticos e as respectivas atividades econô- micas predominantes.",
+		"alternatives": [
+			"A:1 – cerrado – considerado como área de forte expressão agrícola, abriga inúmeras agroindústrias muito produti- vas.",
+			"B:2 – caatinga – em franca expansão das atividades indus- trias devido à extração mineral e à implantação de usinas eólicas.",
+			"C:3 – mares de morros – apresenta importantes atividades agropecuárias modernas que se destacam pelas técni- cas conservacionistas.",
+			"D:4 – araucária – mantém-se preservado porque as ativida- des industriais instaladas utilizam matérias primas impor- tadas de outros domínios."
+		],
+		"answer": "A",
+		"topic": "Geografia"
+	},
+	{
+		"number": 49,
+		"initialText": "Analise os dois documentos sobre a França no século XVIII.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "É correto afirmar que",
+		"alternatives": [
+			"A:a imagem confirmava o artigo da declaração, que consa- grava o princípio da igualdade diante da lei.",
+			"B:a filosofia iluminista criticava os ideais expressos no artigo da declaração e a situação mostrada na imagem.",
+			"C:o artigo da declaração opunha-se à imagem, que ilustrava os privilégios de nascimento na sociedade.",
+			"D:a imagem e o artigo da declaração baseavam-se no racionalismo e no socialismo dominantes na época."
+		],
+		"answer": "C",
+		"topic": "Geografia"
+	},
+	{
+		"number": 50,
+		"initialText": "“Cinquenta anos em cinco” foi slogan de Juscelino Kubitschek desde o início da campanha eleitoral. Logo após tomar posse, o presidente reuniu o ministério para apresentar seu Plano de Metas. O orçamento do país, inclusive os empréstimos obtidos no exterior, seria integral- mente investido na aplicação do plano em cinco setores: o ramo energético ficaria com 43%, o de transportes com 29% e a indústria de base com 20%; 4% para a educação e 3% para a alimentação. Com o incentivo governamental, entre 1956 e 1961, entraram no Brasil cerca de 2,18 bilhões de dólares e 95% dessa verba foi aplicada em iniciativas estabelecidas no Plano de Metas.",
+		"images": "",
+		"subtitle": "",
+		"questionText": "Conclui-se que esse processo de desenvolvimento econômico",
+		"alternatives": [
+			"A:contou com a participação do capital estrangeiro e conso- lidou o setor secundário.",
+			"B:dinamizou a agricultura de subsistência e diminuiu as diferenças entre as regiões do país.",
+			"C:priorizou as empresas nacionais e melhorou a distribui- ção de renda nas áreas rurais.",
+			"D:destinou os investimentos sobretudo à área social e ampliou o mercado consumidor."
+		],
+		"answer": "A",
+		"topic": "Geografia"
+	},
+]
